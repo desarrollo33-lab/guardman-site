@@ -1,39 +1,40 @@
+import { BrandDNA } from './brand-dna';
+
+// Re-export BrandDNA for backwards compatibility and easy access
+export { BrandDNA };
+
+// Site configuration using BrandDNA values
 export const siteConfig = {
-  name: 'GuardMan Chile',
-  url: 'https://guardman.cl',
-  phone: '+56 2 2400 6000',
-  phoneTel: '+56224006000',
-  email: 'info@guardman.cl',
-  address: 'Santiago, Chile',
+  name: BrandDNA.identity.companyName,
+  url: BrandDNA.social.website,
+  phone: BrandDNA.contact.primaryPhone,
+  phoneTel: BrandDNA.contact.primaryPhone.replace(/[^0-9+]/g, ''),
+  whatsapp: BrandDNA.contact.whatsappNumber,
+  email: BrandDNA.contact.supportEmail,
+  address: BrandDNA.location.headquartersAddress,
   openingHoursSchema: 'Mo-Su 00:00-24:00',
-  latitude: -33.4489,
-  longitude: -70.6693,
+  latitude: BrandDNA.location.latitude,
+  longitude: BrandDNA.location.longitude,
   aboutText: 'GuardMan Chile es una empresa lider en servicios de seguridad privada en Santiago de Chile.',
-  brandVoice: 'Profesional pero accesible.',
-  hours: [
-    { day: 'Lunes', hours: '24 horas' },
-    { day: 'Martes', hours: '24 horas' },
-    { day: 'Miércoles', hours: '24 horas' },
-    { day: 'Jueves', hours: '24 horas' },
-    { day: 'Viernes', hours: '24 horas' },
-    { day: 'Sábado', hours: '24 horas' },
-    { day: 'Domingo', hours: '24 horas' },
-  ],
-  usps: [
-    { title: 'Cobertura Metropolitana', description: 'Servicio en toda la Region Metropolitana' },
-    { title: 'Personal 100% Certificado', description: 'Guardias certificados segun normativas chilenas' },
-    { title: 'Tecnologia de Vanguardia', description: 'CCTV, control de accesos biometrico' },
-    { title: 'Respuesta Inmediata', description: 'Centro de operaciones 24/7' },
-    { title: 'Transparencia Total', description: 'Informes periodicos detallados' },
-  ],
+  brandVoice: BrandDNA.voice.description,
+  hours: BrandDNA.businessHours.map(h => ({
+    day: h.day,
+    hours: h.closed ? 'Cerrado' : '24 horas',
+  })),
+  usps: BrandDNA.differentiators
+    .filter(d => d.featured)
+    .map(d => ({
+      title: d.title,
+      description: d.description,
+    })),
   social: {
-    instagram: 'https://www.instagram.com/grupo_guardman',
-    youtube: 'https://youtu.be/mqpLsKrwjAI',
+    instagram: BrandDNA.social.instagram,
+    youtube: BrandDNA.social.youtube,
   },
   stats: {
-    guards: '500+',
-    clients: '200+',
-    locations: '14',
-    years: '8+',
+    guards: BrandDNA.stats.guards,
+    clients: BrandDNA.stats.clients,
+    locations: BrandDNA.stats.locations,
+    years: BrandDNA.stats.years,
   },
 } as const;
