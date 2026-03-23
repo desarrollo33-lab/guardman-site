@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { services } from '../../data/services';
+---
+
+<BaseLayout title="Servicios de Seguridad en Santiago" description="Conoce todos nuestros servicios de seguridad privada: guardias, CCTV, control de accesos, monitoreo 24/7 y mas.">
+  <!-- Hero -->
+  <section class="bg-primary-600 text-white py-16 lg:py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Servicios de Seguridad</h1>
+      <p class="text-xl text-white/90 max-w-2xl mx-auto">
+        Soluciones integrales de seguridad para empresas, residencias y eventos en toda la Region Metropolitana
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map(service => (
+          <a href={`/servicios/${service.slug}`} class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-xl transition-all">
+            <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
+              <svg class="w-16 h-16 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors">
+                {service.name}
+              </h2>
+              <p class="text-neutral-600 text-sm mb-4 line-clamp-3">{service.description}</p>
+              <div class="flex items-center text-primary-600 font-medium text-sm">
+                Ver detalles
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 bg-neutral-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-neutral-900 mb-4">No sabes que servicio necesitas?</h2>
+      <p class="text-neutral-600 mb-6">Nuestro equipo te ayudara a encontrar la mejor solucion para tu caso.</p>
+      <a href="/contacto" class="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+        Contactar a un experto
+      </a>
+    </div>
+  </section>
+</BaseLayout>

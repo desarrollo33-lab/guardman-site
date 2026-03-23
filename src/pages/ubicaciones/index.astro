@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { locations } from '../../data/locations';
+---
+
+<BaseLayout title="Seguridad Privada en Santiago - Cobertura" description="Coverage de seguridad privada en todas las comunas de la Region Metropolitana de Santiago.">
+  <!-- Hero -->
+  <section class="bg-primary-600 text-white py-16 lg:py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Cobertura en toda la Region</h1>
+      <p class="text-xl text-white/90 max-w-2xl mx-auto">
+        Protegemos empresas y residencias en las principales comunas de Santiago y zona valparaiso
+      </p>
+    </div>
+  </section>
+
+  <!-- Locations Grid by Zone -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- Norte -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-3">
+          <span class="w-8 h-8 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm">N</span>
+          Zona Norte
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {locations.filter(l => l.zone === 'Norte').map(location => (
+            <a href={`/ubicaciones/${location.slug}`} class="bg-neutral-50 hover:bg-primary-50 rounded-xl p-5 hover:shadow-md transition-all group">
+              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">{location.name}</h3>
+              <p class="text-sm text-neutral-500 mt-1 line-clamp-2">{location.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Oriente -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-3">
+          <span class="w-8 h-8 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm">O</span>
+          Zona Oriente
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {locations.filter(l => l.zone === 'Oriente').map(location => (
+            <a href={`/ubicaciones/${location.slug}`} class="bg-neutral-50 hover:bg-primary-50 rounded-xl p-5 hover:shadow-md transition-all group">
+              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">{location.name}</h3>
+              <p class="text-sm text-neutral-500 mt-1 line-clamp-2">{location.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Centro -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-3">
+          <span class="w-8 h-8 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm">C</span>
+          Zona Centro
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {locations.filter(l => l.zone === 'Centro').map(location => (
+            <a href={`/ubicaciones/${location.slug}`} class="bg-neutral-50 hover:bg-primary-50 rounded-xl p-5 hover:shadow-md transition-all group">
+              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">{location.name}</h3>
+              <p class="text-sm text-neutral-500 mt-1 line-clamp-2">{location.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Poniente -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-3">
+          <span class="w-8 h-8 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm">P</span>
+          Zona Poniente
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {locations.filter(l => l.zone === 'Poniente').map(location => (
+            <a href={`/ubicaciones/${location.slug}`} class="bg-neutral-50 hover:bg-primary-50 rounded-xl p-5 hover:shadow-md transition-all group">
+              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">{location.name}</h3>
+              <p class="text-sm text-neutral-500 mt-1 line-clamp-2">{location.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Sur -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-3">
+          <span class="w-8 h-8 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm">S</span>
+          Zona Sur
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {locations.filter(l => l.zone === 'Sur').map(location => (
+            <a href={`/ubicaciones/${location.slug}`} class="bg-neutral-50 hover:bg-primary-50 rounded-xl p-5 hover:shadow-md transition-all group">
+              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">{location.name}</h3>
+              <p class="text-sm text-neutral-500 mt-1 line-clamp-2">{location.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Valparaiso -->
+      <div>
+        <h2 class="text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-3">
+          <span class="w-8 h-8 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm">V</span>
+          Region de Valparaiso
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {locations.filter(l => l.zone === 'Valparaiso').map(location => (
+            <a href={`/ubicaciones/${location.slug}`} class="bg-neutral-50 hover:bg-primary-50 rounded-xl p-5 hover:shadow-md transition-all group">
+              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">{location.name}</h3>
+              <p class="text-sm text-neutral-500 mt-1 line-clamp-2">{location.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 bg-neutral-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-neutral-900 mb-4">No encuentras tu comuna?</h2>
+      <p class="text-neutral-600 mb-6">Contactanos y evaluaremos cubrir tu zona.</p>
+      <a href="/contacto" class="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+        Contactar
+      </a>
+    </div>
+  </section>
+</BaseLayout>

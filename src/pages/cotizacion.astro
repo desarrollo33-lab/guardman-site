@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { services } from '../data/services';
+import { locations } from '../data/locations';
+---
+
+<BaseLayout title="Cotizacion | GuardMan Chile" description="Solicita una cotizacion gratis para servicios de seguridad privada en Santiago.">
+  <!-- Hero -->
+  <section class="bg-primary-600 text-white py-16 lg:py-20">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Solicita tu Cotizacion</h1>
+      <p class="text-xl text-white/90">
+        Completa el formulario y te contactaremos en menos de 24 horas
+      </p>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <form id="quote-form" class="space-y-6">
+        <div class="bg-neutral-50 rounded-2xl p-8">
+          <h2 class="text-xl font-bold text-neutral-900 mb-6">Informacion de contacto</h2>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-neutral-700 mb-1">Nombre completo *</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-neutral-700 mb-1">Email *</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none">
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-neutral-700 mb-1">Telefono *</label>
+              <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none">
+            </div>
+            <div>
+              <label for="company" class="block text-sm font-medium text-neutral-700 mb-1">Empresa (opcional)</label>
+              <input type="text" id="company" name="company" class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none">
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-50 rounded-2xl p-8">
+          <h2 class="text-xl font-bold text-neutral-900 mb-6">Detalles del servicio</h2>
+          <div class="space-y-4">
+            <div>
+              <label for="service" class="block text-sm font-medium text-neutral-700 mb-1">Servicio requerido *</label>
+              <select id="service" name="service" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none">
+                <option value="">Seleccionar servicio</option>
+                {services.map(s => (
+                  <option value={s.slug}>{s.name}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label for="location" class="block text-sm font-medium text-neutral-700 mb-1">Ubicacion *</label>
+              <select id="location" name="location" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none">
+                <option value="">Seleccionar ubicacion</option>
+                {locations.map(l => (
+                  <option value={l.slug}>{l.name}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-neutral-700 mb-1">Describe tus necesidades</label>
+              <textarea id="message" name="message" rows="4" placeholder="Cuentanos que tipo de propiedad necesitas proteger, metros cuadrados approximados, si tienes sistemas existentes, etc." class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none resize-none"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full bg-primary-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-primary-700 transition-colors">
+          Solicitar cotizacion gratis
+        </button>
+        <p class="text-center text-sm text-neutral-500">
+          Al enviar aceptas nuestra politica de privacidad. Te contactaremos en menos de 24 horas.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Trust indicators -->
+  <section class="py-12 bg-neutral-50">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-neutral-900">Respuesta rapida</h3>
+          <p class="text-sm text-neutral-600">Menos de 24 horas</p>
+        </div>
+        <div>
+          <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-neutral-900">Sin compromiso</h3>
+          <p class="text-sm text-neutral-600">Cotizacion 100% gratuita</p>
+        </div>
+        <div>
+          <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-neutral-900">Mejor precio</h3>
+          <p class="text-sm text-neutral-600">Garantizado</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('quote-form');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form as HTMLFormElement);
+    const data = Object.fromEntries(formData);
+    console.log('Quote requested:', data);
+    alert('Gracias por tu solicitud de cotizacion. Te contactaremos en menos de 24 horas.');
+    (form as HTMLFormElement).reset();
+  });
+</script>

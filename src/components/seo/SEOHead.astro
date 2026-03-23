@@ -1,0 +1,34 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  noIndex?: boolean;
+}
+
+const { title, description, image, noIndex = false } = Astro.props;
+const siteUrl = 'https://guardman.cl';
+const fullTitle = title.includes('GuardMan') ? title : `${title} | GuardMan Chile`;
+const defaultImage = `${siteUrl}/images/og-default.jpg`;
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description || 'GuardMan Chile - Seguridad privada profesional en Santiago'} />
+{noIndex && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url.href} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description || 'GuardMan Chile - Seguridad privada profesional en Santiago'} />
+<meta property="og:image" content={image || defaultImage} />
+<meta property="og:locale" content="es_CL" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description || 'GuardMan Chile - Seguridad privada profesional en Santiago'} />
+<meta name="twitter:image" content={image || defaultImage} />
+
+<!-- Canonical -->
+<link rel="canonical" href={Astro.url.href} />

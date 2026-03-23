@@ -1,0 +1,35 @@
+---
+import { siteConfig } from '../../data/site';
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": siteConfig.name,
+  "url": siteConfig.url,
+  "telephone": siteConfig.phone,
+  "email": siteConfig.email,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Santiago",
+    "addressRegion": "Metropolitana",
+    "addressCountry": "CL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": siteConfig.latitude,
+    "longitude": siteConfig.longitude
+  },
+  "openingHoursSpecification": siteConfig.hours.map(h => ({
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": h.day,
+    "opens": "00:00",
+    "closes": "23:59"
+  })),
+  "priceRange": "$$$",
+  "areaServed": [
+    { "@type": "City", "name": "Las Condes" },
+    { "@type": "City", "name": "Vitacura" },
+    { "@type": "City", "name": "Santiago" }
+  ]
+})} />

@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../data/site';
+---
+
+<BaseLayout title="Nosotros | GuardMan Chile" description="Conoce a GuardMan Chile - empresa lider en seguridad privada con anos de experiencia en el mercado chileno.">
+  <!-- Hero -->
+  <section class="bg-primary-600 text-white py-16 lg:py-20">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Sobre Nosotros</h1>
+      <p class="text-xl text-white/90 max-w-2xl">
+        Protegiendo Santiago desde hace mas de 8 anos con profesionalismo y compromiso
+      </p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-neutral-900 mb-6">Nuestra Historia</h2>
+          <div class="prose prose-lg text-neutral-600">
+            <p>
+              {siteConfig.aboutText}
+            </p>
+            <p>
+              Contamos con un equipo de mas de {siteConfig.stats.guards} guardias en terreno, {siteConfig.stats.clients} clientes activos y cobertura en {siteConfig.stats.locations} comunas de la Region Metropolitana.
+            </p>
+            <p>
+              Nuestra vision es ser la empresa de seguridad privada mas confiable y profesional de Chile, ofreciendo soluciones innovadoras y un servicio excepcional.
+            </p>
+          </div>
+        </div>
+        <div class="bg-neutral-100 rounded-2xl p-8">
+          <h3 class="text-2xl font-bold text-neutral-900 mb-6">Lo que nos diferencia</h3>
+          <div class="space-y-4">
+            {siteConfig.usps.map(usp => (
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-neutral-900">{usp.title}</h4>
+                  <p class="text-neutral-600 text-sm">{usp.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-16 bg-neutral-800 text-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{siteConfig.stats.guards}</div>
+          <div class="text-neutral-300">Guardias en terreno</div>
+        </div>
+        <div>
+          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{siteConfig.stats.clients}</div>
+          <div class="text-neutral-300">Clientes activos</div>
+        </div>
+        <div>
+          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{siteConfig.stats.locations}</div>
+          <div class="text-neutral-300">Comunas coverage</div>
+        </div>
+        <div>
+          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{siteConfig.stats.years}</div>
+          <div class="text-neutral-300">Anos de experiencia</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Trabaja con nosotros</h2>
+      <p class="text-lg text-white/90 mb-8">Si eres guardia de seguridad certificado, contactanos.</p>
+      <a href="/contacto" class="inline-flex items-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+        Contactar RH
+      </a>
+    </div>
+  </section>
+</BaseLayout>
