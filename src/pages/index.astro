@@ -56,6 +56,37 @@ import { siteConfig } from '../data/site';
     </div>
   </section>
 
+  <!-- Services Section -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Nuestros Servicios</h2>
+        <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+          Soluciones integrales de seguridad adaptadas a tus necesidades especificas
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {services.map(service => (
+          <a href={`/servicios/${service.slug}`} class="group bg-neutral-50 rounded-xl p-6 hover:shadow-lg transition-all hover:-translate-y-1">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-600 transition-colors">
+              <svg class="w-6 h-6 text-primary-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-neutral-900 mb-2">{service.name}</h3>
+            <p class="text-neutral-600 text-sm line-clamp-2">{service.short_description}</p>
+            <div class="mt-4 text-primary-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+              Conocer mas
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- GuardPod Featured Section -->
   <section class="py-16 lg:py-20 bg-gradient-to-br from-primary-700 to-primary-800 text-white">
     <div class="container mx-auto px-4">
@@ -65,7 +96,7 @@ import { siteConfig } from '../data/site';
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
             </svg>
-            Nuevo: Tecnologia Propia
+            Tecnologia Propia
           </div>
           <h2 class="text-3xl lg:text-4xl font-bold mb-4">Guard Pod</h2>
           <p class="text-xl text-white/80 mb-6">
@@ -117,37 +148,6 @@ import { siteConfig } from '../data/site';
             15 meses de I+D
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="py-16 lg:py-24 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Nuestros Servicios</h2>
-        <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
-          Soluciones integrales de seguridad adaptadas a tus necesidades especificas
-        </p>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {services.map(service => (
-          <a href={`/servicios/${service.slug}`} class="group bg-neutral-50 rounded-xl p-6 hover:shadow-lg transition-all hover:-translate-y-1">
-            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-600 transition-colors">
-              <svg class="w-6 h-6 text-primary-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-              </svg>
-            </div>
-            <h3 class="text-lg font-semibold text-neutral-900 mb-2">{service.name}</h3>
-            <p class="text-neutral-600 text-sm line-clamp-2">{service.short_description}</p>
-            <div class="mt-4 text-primary-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-              Conocer mas
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </div>
-          </a>
-        ))}
       </div>
     </div>
   </section>
