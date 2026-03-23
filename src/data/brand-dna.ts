@@ -19,8 +19,9 @@ export const BrandDNA = {
   // CONTACT
   // ============================================
   contact: {
-    primaryPhone: '+56 2 2400 6000',
-    whatsappNumber: '+56 9 3000 0010',
+    primaryPhone: '+56 9 300 000 10',
+    whatsappNumber: '+56 9 300 000 10',
+    officePhone: '+56 2 2400 6000',
     supportEmail: 'info@guardman.cl',
     commercialEmail: 'ventas@guardman.cl',
   },
