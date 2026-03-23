@@ -128,6 +128,20 @@ export const BrandDNA = {
   },
 
   // ============================================
+  // CLIENTS (from guardman.cl)
+  // ============================================
+  clients: [
+    { name: 'Courtyard by Marriott', industry: 'Hotelería', services: ['Guardias de Seguridad'] },
+    { name: 'Hamptons', industry: 'Inmobiliario', services: ['Guardias de Seguridad', 'Aseo'] },
+    { name: 'Kavak', industry: 'Automotriz', services: ['Guardias de Seguridad'] },
+    { name: 'Hoy Estoril', industry: 'Inmobiliario', services: ['Guardias de Seguridad', 'Aseo'] },
+    { name: 'Embajadas', industry: 'Diplomático', services: ['Seguridad para Embajadas'] },
+    { name: 'Work Center', industry: 'Oficinas', services: ['Control de Accesos'] },
+    { name: 'Avanza Park', industry: 'Inmobiliario', services: ['Control de Accesos'] },
+    { name: 'Condominios', industry: 'Residencial', services: ['Guardias de Seguridad', 'Patrullas'] },
+  ],
+
+  // ============================================
   // BUSINESS HOURS
   // ============================================
   businessHours: [

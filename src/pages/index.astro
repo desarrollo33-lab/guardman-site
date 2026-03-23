@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { services } from '../data/services';
 import { locations } from '../data/locations';
 import { siteConfig } from '../data/site';
+import { featuredClients } from '../data/clients';
 ---
 
 <BaseLayout title="Seguridad Privada en Santiago, Chile" description="GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.">
@@ -35,15 +36,13 @@ import { siteConfig } from '../data/site';
   <!-- Clients Section -->
   <section class="py-12 bg-white border-b border-neutral-100">
     <div class="container mx-auto px-4">
-      <p class="text-center text-sm text-neutral-500 mb-8 uppercase tracking-wider">Empresas que confian en nosotros</p>
-      <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-16">
-        <!-- Client logos as text placeholders (replace with actual logos) -->
-        <div class="text-xl font-bold text-neutral-300 hover:text-primary-600 transition-colors">Ripley</div>
-        <div class="text-xl font-bold text-neutral-300 hover:text-primary-600 transition-colors">Cencosud</div>
-        <div class="text-xl font-bold text-neutral-300 hover:text-primary-600 transition-colors">Falabella</div>
-        <div class="text-xl font-bold text-neutral-300 hover:text-primary-600 transition-colors">CMPC</div>
-        <div class="text-xl font-bold text-neutral-300 hover:text-primary-600 transition-colors">Sodimac</div>
-        <div class="text-xl font-bold text-neutral-300 hover:text-primary-600 transition-colors">Tottus</div>
+      <p class="text-center text-sm text-neutral-500 mb-8 uppercase tracking-wider">Algunos de nuestros clientes</p>
+      <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
+        {featuredClients.map((client) => (
+          <div class="text-lg font-bold text-neutral-300 hover:text-primary-600 transition-colors whitespace-nowrap">
+            {client}
+          </div>
+        ))}
       </div>
     </div>
   </section>
