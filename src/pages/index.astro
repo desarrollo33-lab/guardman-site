@@ -159,7 +159,7 @@ const featuredClients = clients.map(c => c.name);
         {sectors.map(sector => (
           <a href={`/sectores/${sector.slug}`} class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
             <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
-              {sector.image ? (
+              {sector.image && (
                 <img 
                   src={`/images/${sector.image}`}
                   alt={sector.name}
@@ -168,12 +168,6 @@ const featuredClients = clients.map(c => c.name);
                   height="450"
                   loading="lazy"
                 />
-              ) : (
-                <div class="w-full h-full flex items-center justify-center">
-                  <span class="text-6xl">
-                    {sector.icon === 'hotel' ? '🏨' : sector.icon === 'business' ? '🏢' : sector.icon === 'home' ? '🏠' : sector.icon === 'factory' ? '🏭' : sector.icon === 'car' ? '🚗' : '🏛️'}
-                  </span>
-                </div>
               )}
               <div class="absolute inset-0 bg-gradient-to-t from-primary-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>

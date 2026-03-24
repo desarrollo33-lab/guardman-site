@@ -3,15 +3,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSectors } from '../../data/directus';
 
 const sectors = getSectors();
-
-const iconMap: Record<string, string> = {
-  hotel: '🏨',
-  business: '🏢',
-  home: '🏠',
-  factory: '🏭',
-  car: '🚗',
-  embassy: '🏛️',
-};
 ---
 
 <BaseLayout title="Sectores que Atendemos | GuardMan Chile" description="GuardMan ofrece servicios de seguridad para Hotelería, Corporativo, Residencial, Industrial, Automotriz y Diplomático en Santiago.">
@@ -31,8 +22,8 @@ const iconMap: Record<string, string> = {
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {sectors.map(sector => (
           <a href={`/sectores/${sector.slug}`} class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-xl transition-all">
-            <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center relative overflow-hidden">
-              {sector.image ? (
+            <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
+              {sector.image && (
                 <img 
                   src={`/images/${sector.image}`}
                   alt={sector.name}
@@ -41,8 +32,6 @@ const iconMap: Record<string, string> = {
                   height="450"
                   loading="lazy"
                 />
-              ) : (
-                <span class="text-6xl">{iconMap[sector.icon] || '🏢'}</span>
               )}
               <div class="absolute inset-0 bg-gradient-to-t from-primary-800/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
