@@ -93,6 +93,28 @@ const locationFAQs = [
     </div>
   </section>
 
+  <!-- Stats Bar -->
+  {(location.stats) && (
+    <section class="py-8 bg-neutral-50 border-b border-neutral-200">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-3 gap-8 text-center">
+          <div>
+            <div class="text-3xl lg:text-4xl font-bold text-primary-600">{location.stats.empresas}</div>
+            <div class="text-sm text-neutral-500 mt-1">Empresas protegidas</div>
+          </div>
+          <div>
+            <div class="text-3xl lg:text-4xl font-bold text-primary-600">{location.stats.guardias}</div>
+            <div class="text-sm text-neutral-500 mt-1">Guardias en la zona</div>
+          </div>
+          <div>
+            <div class="text-3xl lg:text-4xl font-bold text-primary-600">{location.stats.experiencia}</div>
+            <div class="text-sm text-neutral-500 mt-1">Experiencia local</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
   <!-- Main Content -->
   <section class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4">

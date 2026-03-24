@@ -50,6 +50,7 @@ export interface Location {
   description: string;
   neighborhoods: string[];
   landmarks?: string[];
+  stats?: { empresas: string; guardias: string; experiencia: string };
   priority_score: number;
   latitude: number;
   longitude: number;
