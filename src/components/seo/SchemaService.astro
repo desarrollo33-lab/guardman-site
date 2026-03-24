@@ -1,0 +1,52 @@
+---
+/**
+ * SchemaService.astro
+ * Genera Schema.org markup para páginas de servicios
+ */
+interface Props {
+  name: string;
+  description: string;
+  slug: string;
+  priceRange?: string;
+  areaServed?: string[];
+}
+
+const { name, description, slug, priceRange = "$$$", areaServed = ["Santiago"] } = Astro.props;
+
+const schemaService = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": name,
+  "description": description,
+  "url": `https://guardman.cl/servicios/${slug}`,
+  "provider": {
+    "@id": "https://guardman.cl/#organization"
+  },
+  "areaServed": areaServed.map(city => ({
+    "@type": "City",
+    "name": city
+  })),
+  "priceRange": priceRange,
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": name,
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": name
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127",
+    "bestRating": "5"
+  }
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaService)} />

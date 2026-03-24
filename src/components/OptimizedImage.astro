@@ -1,0 +1,42 @@
+---
+/**
+ * OptimizedImage.astro
+ * Componente para imágenes optimizadas con lazy loading y dimensiones
+ */
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  width?: number;
+  height?: number;
+  priority?: boolean;
+}
+
+const { 
+  src, 
+  alt, 
+  class: className = '', 
+  loading = 'lazy',
+  width,
+  height,
+  priority = false
+} = Astro.props;
+
+// Determine loading strategy
+const loadingStrategy = priority ? 'eager' : loading;
+
+// Default dimensions if not provided (will be auto if not known)
+const imgWidth = width || 800;
+const imgHeight = height || 600;
+---
+
+<img 
+  src={src}
+  alt={alt}
+  class={className}
+  loading={loadingStrategy}
+  width={imgWidth}
+  height={imgHeight}
+  decoding={priority ? 'sync' : 'async'}
+/>

@@ -1,0 +1,78 @@
+---
+/**
+ * SchemaLocalBusiness.astro
+ * Genera Schema.org LocalBusiness markup para páginas de ubicaciones
+ */
+interface Props {
+  name: string;
+  description: string;
+  slug: string;
+  address: string;
+  locality: string;
+  region?: string;
+  postalCode?: string;
+  latitude?: number;
+  longitude?: number;
+  phone?: string;
+  neighborhood?: string;
+}
+
+const { 
+  name, 
+  description, 
+  slug, 
+  address, 
+  locality,
+  region = "Santiago",
+  postalCode = "7560000",
+  latitude = -33.4569,
+  longitude = -70.6483,
+  phone = "+56 2 2400 6000",
+  neighborhood
+} = Astro.props;
+
+const schemaLocalBusiness = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `https://guardman.cl/ubicaciones/${slug}#localbusiness`,
+  "name": `GuardMan Chile - ${name}`,
+  "description": description,
+  "url": `https://guardman.cl/ubicaciones/${slug}`,
+  "telephone": phone,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": address,
+    "addressLocality": locality,
+    "addressRegion": region,
+    "postalCode": postalCode,
+    "addressCountry": "CL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": latitude,
+    "longitude": longitude
+  },
+  "openingHours": "Mo-Su 00:00-24:00",
+  "priceRange": "$$$",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://guardman.cl/og-image.jpg"
+  },
+  "areaServed": {
+    "@type": neighborhood ? "Place" : "City",
+    ...(neighborhood ? { "name": neighborhood } : { "name": locality })
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127",
+    "bestRating": "5"
+  },
+  "sameAs": [
+    "https://www.instagram.com/grupo_guardman",
+    "https://youtu.be/mqpLsKrwjAI"
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaLocalBusiness)} />

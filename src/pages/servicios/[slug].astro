@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getServices, getLocations } from '../../data/directus';
+import SchemaService from '../../components/seo/SchemaService.astro';
+import SchemaFAQ from '../../components/seo/SchemaFAQ.astro';
 
 export function getStaticPaths() {
   const services = getServices();
@@ -14,9 +16,46 @@ const { service } = Astro.props;
 const locations = getLocations();
 const relatedServices = getServices();
 const topLocations = locations.slice(0, 10);
+
+// FAQs genéricas para servicios
+const serviceFAQs = [
+  {
+    question: `¿Cuánto cuesta el servicio de ${service.name} en Santiago?`,
+    answer: `El precio del servicio de ${service.name} varía según la ubicación, dimensiones del terreno y necesidades específicas. Solicita una cotización gratuita y te entregamos un presupuesto personalizado en menos de 24 horas.`
+  },
+  {
+    question: `¿Los guardias están certificados?`,
+    answer: `Sí, todos nuestros guardias cuentan con certificación OS-10 vigente y están capacitados según la Ley 21.659 de Seguridad Privada. Además, reciben entrenamiento continuo en emergencias y protocolos de seguridad.`
+  },
+  {
+    question: `¿Puedo contratar el servicio solo para eventos puntuales?`,
+    answer: `Sí, ofrecemos servicios tanto permanentes como temporales. Para eventos específicos, diseñamos un plan de seguridad adaptado a tus necesidades y número de asistentes esperados.`
+  },
+  {
+    question: `¿Qué incluye el servicio de ${service.name}?`,
+    answer: `Nuestro servicio incluye personal capacitado, supervisión 24/7, coordinación con autoridades locales, informes periódicos y soporte técnico. Los detalles específicos varían según el servicio contratado.`
+  },
+  {
+    question: `¿Cómo contrato el servicio de ${service.name}?`,
+    answer: `Puedes solicitar tu cotización gratis a través de nuestro formulario online, llamándonos al +56 2 2400 6000 o escribiendo a info@guardman.cl. Te respondemos en menos de 24 horas.`
+  }
+];
+
+// Área servida para schema
+const areaServed = locations.map(l => l.name);
 ---
 
 <BaseLayout title={service.meta_title} description={service.meta_description}>
+  <!-- Schema Markup -->
+  <SchemaService 
+    name={service.name}
+    description={service.description}
+    slug={service.slug}
+    priceRange={service.price_range}
+    areaServed={areaServed}
+  />
+  <SchemaFAQ faqs={serviceFAQs} />
+  
   <!-- Breadcrumb -->
   <div class="bg-neutral-100 py-3">
     <div class="container mx-auto px-4">
@@ -38,6 +77,10 @@ const topLocations = locations.slice(0, 10);
           src={`/images/${service.image}`}
           alt={service.name}
           class="w-full h-full object-cover opacity-30"
+          width="1920"
+          height="1080"
+          loading="eager"
+          fetchpriority="high"
         />
       </div>
     )}
@@ -106,13 +149,31 @@ const topLocations = locations.slice(0, 10);
           )}
 
           <!-- Locations -->
-          <div>
+          <div class="mb-12">
             <h2 class="text-2xl font-bold text-neutral-900 mb-6">Disponible en estas ubicaciones</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
               {topLocations.map(location => (
                 <a href={`/ubicaciones/${location.slug}`} class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-3 text-center text-sm text-neutral-700 hover:text-primary-700 transition-all">
                   {location.name}
                 </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-neutral-900 mb-6">Preguntas Frecuentes</h2>
+            <div class="space-y-4">
+              {serviceFAQs.map((faq, index) => (
+                <div class="bg-neutral-50 rounded-lg p-6">
+                  <h3 class="font-semibold text-neutral-900 mb-2 flex items-start gap-2">
+                    <svg class="w-5 h-5 text-primary-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    {faq.question}
+                  </h3>
+                  <p class="text-neutral-600 pl-7">{faq.answer}</p>
+                </div>
               ))}
             </div>
           </div>

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getLocations, getServices } from '../../data/directus';
+import SchemaLocalBusiness from '../../components/seo/SchemaLocalBusiness.astro';
+import SchemaFAQ from '../../components/seo/SchemaFAQ.astro';
 
 export function getStaticPaths() {
   const locations = getLocations();
@@ -15,9 +17,46 @@ const allLocations = getLocations();
 const allServices = getServices();
 const availableServices = allServices.slice(0, 6);
 const nearbyLocations = allLocations.filter(l => l.id !== location.id && l.zone === location.zone).slice(0, 3);
+
+// FAQs locales específicas por ubicación
+const locationFAQs = [
+  {
+    question: `¿Cuánto cuesta contratar guardias de seguridad en ${location.name}?`,
+    answer: `El precio varía según el tipo de servicio, número de guardias y horarios requeridos. En ${location.name}, ofrecemos tarifas competitivas debido a nuestra cercanía con la zona. Solicita tu cotización gratuita y te entregamos un presupuesto personalizado en menos de 24 horas.`
+  },
+  {
+    question: `¿Qué servicios de seguridad ofrecen en ${location.name}?`,
+    answer: `En ${location.name} ofrecemos guardias de seguridad, CCTV, control de accesos, monitoreo 24/7, seguridad para eventos y más. Tenemos experiencia en diferentes sectores como residencial, comercial e industrial de la zona.`
+  },
+  {
+    question: `¿Tienen guardias disponibles las 24 horas en ${location.name}?`,
+    answer: `Sí, nuestro centro de operaciones opera 24/7 y tenemos guardias disponibles para atención permanente o temporal en ${location.name} y toda la Región Metropolitana.`
+  },
+  {
+    question: `¿Cómo solicito una cotización de seguridad para mi empresa en ${location.name}?`,
+    answer: `Puedes solicitar tu cotización gratis completando nuestro formulario online, llamándonos al +56 2 2400 6000, o visitándonos en Av. Americo Vespucio Norte 1980, Providencia. Atendemos ${location.name} y comunas aledañas.`
+  },
+  {
+    question: `¿Qué documentos deben tener los guardias de seguridad en Chile?`,
+    answer: `Todos nuestros guardias cuentan con certificación OS-10 vigente, formación según la Ley 21.659 de Seguridad Privada, revisión de antecedentes y capacitación continua en protocolos de emergencia.`
+  }
+];
 ---
 
 <BaseLayout title={location.meta_title || `Seguridad Privada en ${location.name} | GuardMan Chile`} description={location.meta_description || `Servicios de seguridad en ${location.name}. Guardias, CCTV, control de accesos y monitoreo 24/7.`}>
+  <!-- Schema Markup -->
+  <SchemaLocalBusiness 
+    name={location.name}
+    description={location.description}
+    slug={location.slug}
+    address="Av. Americo Vespucio Norte 1980"
+    locality={location.name}
+    latitude={location.latitude}
+    longitude={location.longitude}
+    neighborhood={location.neighborhoods?.[0]}
+  />
+  <SchemaFAQ faqs={locationFAQs} />
+  
   <!-- Breadcrumb -->
   <div class="bg-neutral-100 py-3">
     <div class="container mx-auto px-4">
@@ -69,6 +108,24 @@ const nearbyLocations = allLocations.filter(l => l.id !== location.id && l.zone 
               </div>
             </div>
           )}
+
+          <!-- FAQs -->
+          <div class="mt-12">
+            <h2 class="text-2xl font-bold text-neutral-900 mb-6">Preguntas Frecuentes sobre seguridad en {location.name}</h2>
+            <div class="space-y-4">
+              {locationFAQs.map((faq) => (
+                <div class="bg-neutral-50 rounded-lg p-6">
+                  <h3 class="font-semibold text-neutral-900 mb-2 flex items-start gap-2">
+                    <svg class="w-5 h-5 text-primary-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    {faq.question}
+                  </h3>
+                  <p class="text-neutral-600 pl-7">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <!-- Sidebar -->

@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getServices, getLocations, getServiceBySlug, getLocationBySlug, getSiteConfig } from '../../../data/directus';
+import SchemaService from '../../../components/seo/SchemaService.astro';
+import SchemaLocalBusiness from '../../../components/seo/SchemaLocalBusiness.astro';
+import SchemaFAQ from '../../../components/seo/SchemaFAQ.astro';
 
 export function getStaticPaths() {
   const services = getServices();
@@ -53,9 +56,52 @@ const siteConfig = {
 // Generate meta title and description
 const metaTitle = `${service.name} en ${location.name} | GuardMan Chile`;
 const metaDescription = `Servicio de ${service.name.toLowerCase()} en ${location.name}. ${service.short_description} Atención 24/7 en toda la Region Metropolitana. Solicita tu cotización hoy.`;
+
+// Combo FAQs
+const comboFAQs = [
+  {
+    question: `¿Cuánto cuesta el servicio de ${service.name} en ${location.name}?`,
+    answer: `El precio del servicio de ${service.name} en ${location.name} varía según las necesidades específicas de tu propiedad o empresa. Solicita tu cotización gratuita y te entregamos un presupuesto personalizado en menos de 24 horas.`
+  },
+  {
+    question: `¿Tienen guardias disponibles en ${location.name}?`,
+    answer: `Sí, tenemos guardias disponibles en ${location.name} y toda la zona de ${location.zone}. Nuestro equipo está disponible 24/7 para atenderte.`
+  },
+  {
+    question: `¿Qué incluye el servicio de ${service.name}?`,
+    answer: `Nuestro servicio incluye personal certificado OS-10, supervisión continua, informes periódicos y coordinación 24/7. Los detalles específicos dependen del plan que elijas.`
+  },
+  {
+    question: `¿Cómo contrato ${service.name} en ${location.name}?`,
+    answer: `Puedes solicitar tu cotización a través de nuestro formulario online, llamándonos al ${siteConfig.phone} o escribiéndonos a info@guardman.cl. Respondemos en menos de 24 horas.`
+  }
+];
+
+// Area served for schema
+const areaServed = [location.name];
 ---
 
 <BaseLayout title={metaTitle} description={metaDescription}>
+  <!-- Schema Markup -->
+  <SchemaService 
+    name={`${service.name} en ${location.name}`}
+    description={service.description}
+    slug={`${service.slug}/${location.slug}`}
+    priceRange={service.price_range}
+    areaServed={areaServed}
+  />
+  <SchemaLocalBusiness 
+    name={location.name}
+    description={`${service.name} en ${location.name}`}
+    slug={`${service.slug}/${location.slug}`}
+    address="Av. Americo Vespucio Norte 1980"
+    locality={location.name}
+    latitude={location.latitude}
+    longitude={location.longitude}
+    neighborhood={location.neighborhoods?.[0]}
+  />
+  <SchemaFAQ faqs={comboFAQs} />
+  
   <!-- Breadcrumb -->
   <div class="bg-neutral-100 py-3">
     <div class="container mx-auto px-4">
@@ -79,6 +125,10 @@ const metaDescription = `Servicio de ${service.name.toLowerCase()} en ${location
           src={`/images/${service.image}`}
           alt={service.name}
           class="w-full h-full object-cover opacity-30"
+          width="1920"
+          height="1080"
+          loading="eager"
+          fetchpriority="high"
         />
       </div>
     )}
@@ -161,6 +211,24 @@ const metaDescription = `Servicio de ${service.name.toLowerCase()} en ${location
                   <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors text-sm">{s.name}</h4>
                   <p class="text-neutral-600 text-xs mt-1 line-clamp-2">{s.short_description}</p>
                 </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-neutral-900 mb-4">Preguntas Frecuentes</h3>
+            <div class="space-y-4">
+              {comboFAQs.map((faq) => (
+                <div class="bg-neutral-50 rounded-lg p-5">
+                  <h4 class="font-semibold text-neutral-900 mb-2 flex items-start gap-2">
+                    <svg class="w-5 h-5 text-primary-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    {faq.question}
+                  </h4>
+                  <p class="text-neutral-600 text-sm pl-7">{faq.answer}</p>
+                </div>
               ))}
             </div>
           </div>

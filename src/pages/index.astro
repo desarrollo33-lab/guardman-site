@@ -37,6 +37,10 @@ const featuredClients = clients.map(c => c.name);
           src={`/images/${config.hero_image}`}
           alt="GuardMan Chile - Seguridad Privada"
           class="w-full h-full object-cover"
+          width="1920"
+          height="1080"
+          loading="eager"
+          fetchpriority="high"
         />
       )}
       <div class="absolute inset-0 bg-gradient-to-r from-primary-800/95 to-primary-600/70"></div>
@@ -120,6 +124,9 @@ const featuredClients = clients.map(c => c.name);
                   src={`/images/${service.image}`}
                   alt={service.name}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="800"
+                  height="450"
+                  loading="lazy"
                 />
               ) : (
                 <div class="w-full h-full flex items-center justify-center">
@@ -157,6 +164,9 @@ const featuredClients = clients.map(c => c.name);
                   src={`/images/${sector.image}`}
                   alt={sector.name}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="800"
+                  height="450"
+                  loading="lazy"
                 />
               ) : (
                 <div class="w-full h-full flex items-center justify-center">

@@ -28,6 +28,9 @@ const services = getServices();
                   src={`/images/${service.image}`}
                   alt={service.name}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="800"
+                  height="450"
+                  loading="lazy"
                 />
               ) : (
                 <svg class="w-16 h-16 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

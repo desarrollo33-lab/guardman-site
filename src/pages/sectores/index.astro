@@ -37,6 +37,9 @@ const iconMap: Record<string, string> = {
                   src={`/images/${sector.image}`}
                   alt={sector.name}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="800"
+                  height="450"
+                  loading="lazy"
                 />
               ) : (
                 <span class="text-6xl">{iconMap[sector.icon] || '🏢'}</span>
