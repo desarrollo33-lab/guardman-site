@@ -9,16 +9,11 @@ export function getStaticPaths() {
   const services = getServices();
   const locations = getLocations();
   
-  // Top 5 services (featured)
-  const topServices = services.filter(s => s.featured).slice(0, 5);
-  // Top 10 locations (featured)
-  const topLocations = locations.filter(l => l.featured).slice(0, 10);
-  
-  // Generate combo pages only for top services x top locations
+  // Generate ALL combo pages: all services x all locations
   const paths: { params: { slug: string; location: string }; props: { service: any; location: any } }[] = [];
   
-  for (const service of topServices) {
-    for (const location of topLocations) {
+  for (const service of services) {
+    for (const location of locations) {
       paths.push({
         params: { slug: service.slug, location: location.slug },
         props: { service, location },
