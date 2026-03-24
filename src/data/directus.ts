@@ -49,6 +49,7 @@ export interface Location {
   zone: string;
   description: string;
   neighborhoods: string[];
+  landmarks?: string[];
   priority_score: number;
   latitude: number;
   longitude: number;
