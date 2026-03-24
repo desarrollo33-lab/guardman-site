@@ -1,74 +1,98 @@
 [
   {
     "id": 1,
+    "name": "Hotelería",
+    "slug": "hoteleria",
     "icon": "hotel",
     "description": "Hoteles, resorts y establecimientos de alojamiento turistico. Proteccion para huespedes, empleados y activos.",
     "hero_title": "Seguridad para Hoteles y Resorts",
     "hero_subtitle": "Proteccion integral para hoteles, resorts y establecimientos de alojamiento. Garantizamos la seguridad de tus huespedes y colaboradores.",
+    "challenges": [],
     "meta_title": "Seguridad para Hoteles | GuardMan Chile",
     "meta_description": "Servicios de seguridad especializados para hoteles en Santiago. Guardias, CCTV y monitoreo 24/7.",
+    "featured": true,
+    "image": "326b2748-8ede-40e0-8b23-bb2f53388cc3",
     "status": "published",
-    "sort": 1,
-    "challenges": []
+    "sort": 1
   },
   {
     "id": 2,
+    "name": "Corporativo",
+    "slug": "corporativo",
     "icon": "business",
     "description": "Oficinas, centros comerciales y empresas. Soluciones que protejen activos sin interrumpir operaciones.",
     "hero_title": "Seguridad para Empresas y Oficinas",
     "hero_subtitle": "Proteccion integral para centros comerciales, edificios corporativos y oficinas. Control de accesos y vigilancia profesional.",
+    "challenges": [],
     "meta_title": "Seguridad Corporativa | GuardMan Chile",
     "meta_description": "Servicios de seguridad para oficinas y empresas en Santiago. Control de accesos, CCTV y guardias.",
+    "featured": true,
+    "image": "41016082-8a03-4c02-b310-ac123bb4295f",
     "status": "published",
-    "sort": 2,
-    "challenges": []
+    "sort": 2
   },
   {
     "id": 3,
+    "name": "Residencial",
+    "slug": "residencial",
     "icon": "home",
     "description": "Condominios, casas y comunidades. Tranquilidad para familias y comunidades.",
     "hero_title": "Seguridad para Condominios y Casas",
     "hero_subtitle": "Protege tu hogar y comunidad con guardias certificados, vigilancia las 24 horas y sistemas de control de accesos.",
+    "challenges": [],
     "meta_title": "Seguridad Residencial | GuardMan Chile",
     "meta_description": "Seguridad para condominios, casas y comunidades en Santiago. Guardias y vigilancia 24/7.",
+    "featured": true,
+    "image": "b890b039-7993-4da5-a93a-bb496f3e1dc4",
     "status": "published",
-    "sort": 3,
-    "challenges": []
+    "sort": 3
   },
   {
     "id": 4,
+    "name": "Industrial",
+    "slug": "industrial",
     "icon": "factory",
     "description": "Fabricas, bodegas y centros logisticos. Proteccion de inventario y activos industriales.",
     "hero_title": "Seguridad Industrial y Logistica",
     "hero_subtitle": "Proteccion para fabricas, bodegas y centros de distribucion. Vigilancia perimetral y control de vehiculos.",
+    "challenges": [],
     "meta_title": "Seguridad Industrial | GuardMan Chile",
     "meta_description": "Seguridad para fabricas, bodegas y centros logisticos en Santiago.",
+    "featured": false,
+    "image": "187fd8ec-fca0-4abc-adff-0c118a4cf8b7",
     "status": "published",
-    "sort": 4,
-    "challenges": []
+    "sort": 4
   },
   {
     "id": 5,
+    "name": "Automotriz",
+    "slug": "automotriz",
     "icon": "car",
     "description": "Concesionarias, talleres y centros de servicio automotriz. Vigilancia para vehiculos de alto valor.",
     "hero_title": "Seguridad para el Sector Automotriz",
     "hero_subtitle": "Proteccion para concessionarias, talleres y centros de servicio. Vehiculos de alto valor bajo vigilancia constante.",
+    "challenges": [],
     "meta_title": "Seguridad Automotriz | GuardMan Chile",
     "meta_description": "Seguridad para concessionarias y talleres en Santiago.",
+    "featured": false,
+    "image": "01275c9a-1a55-48ab-b2f5-b3569c5bc9d8",
     "status": "published",
-    "sort": 5,
-    "challenges": []
+    "sort": 5
   },
   {
     "id": 6,
+    "name": "Diplomático",
+    "slug": "diplomatico",
     "icon": "embassy",
     "description": "Embajadas, consulados y representaciones diplomaticas. Protocolos de seguridad de alto nivel.",
     "hero_title": "Seguridad para Embajadas y Consulados",
     "hero_subtitle": "Proteccion especializada para representaciones diplomaticas, embajadores y personal consular.",
+    "challenges": [],
     "meta_title": "Seguridad Diplomática | GuardMan Chile",
     "meta_description": "Seguridad para embajadas y consulados en Santiago.",
+    "featured": false,
+    "image": "651d98af-0f23-440d-93ec-f8aebcd3ab5c",
     "status": "published",
-    "sort": 6,
-    "challenges": []
+    "sort": 6
   }
 ]

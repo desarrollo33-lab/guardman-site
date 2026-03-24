@@ -1,8 +1,10 @@
 [
   {
     "id": 1,
+    "name": "Carlos Mendez",
     "role": "Gerente de Operaciones",
     "company": "Hotel Marriott Santiago",
+    "quote": "Desde que contratamos a GuardMan, la seguridad de nuestro hotel mejoro significativamente. Los guardias son profesionales y el monitoreo 24/7 nos da tranquilidad total.",
     "rating": 5,
     "sector": "hoteleria",
     "featured": true,
@@ -11,8 +13,10 @@
   },
   {
     "id": 2,
+    "name": "Maria Elena Rodriguez",
     "role": "Administradora",
     "company": "Condominio Los Jardines",
+    "quote": "Encontramos en GuardMan un socio confiable para proteger nuestro condominio. La respuesta es inmediata y el personal siempre esta bien capacitado.",
     "rating": 5,
     "sector": "residencial",
     "featured": true,
@@ -21,8 +25,10 @@
   },
   {
     "id": 3,
+    "name": "Roberto Sanchez",
     "role": "Director de Logistica",
     "company": "Centro Logistico Norte",
+    "quote": "GuardMan nos ayuda a proteger我们的 centros logisticos con eficiencia. Su sistema de CCTV y el monitoreo remoto han reducido nuestros incidentes en un 80%.",
     "rating": 5,
     "sector": "industrial",
     "featured": true,

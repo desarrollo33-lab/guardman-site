@@ -1,9 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { locations } from '../../data/locations';
-import { services } from '../../data/services';
+import { getLocations, getServices } from '../../data/directus';
 
 export function getStaticPaths() {
+  const locations = getLocations();
   return locations.map(location => ({
     params: { slug: location.slug },
     props: { location },
@@ -11,8 +11,10 @@ export function getStaticPaths() {
 }
 
 const { location } = Astro.props;
-const availableServices = services.slice(0, 6);
-const nearbyLocations = locations.filter(l => l.id !== location.id && l.zone === location.zone).slice(0, 3);
+const allLocations = getLocations();
+const allServices = getServices();
+const availableServices = allServices.slice(0, 6);
+const nearbyLocations = allLocations.filter(l => l.id !== location.id && l.zone === location.zone).slice(0, 3);
 ---
 
 <BaseLayout title={location.meta_title || `Seguridad Privada en ${location.name} | GuardMan Chile`} description={location.meta_description || `Servicios de seguridad en ${location.name}. Guardias, CCTV, control de accesos y monitoreo 24/7.`}>

@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSectors, getServices } from '../../data/directus';
+
+export function getStaticPaths() {
+  const sectors = getSectors();
+  return sectors.map(sector => ({
+    params: { slug: sector.slug },
+    props: { sector },
+  }));
+}
+
+const { sector } = Astro.props;
+const allServices = getServices();
+
+// Filter services related to this sector
+const sectorServiceMap: Record<string, string[]> = {
+  hoteleria: ['guardias-de-seguridad', 'monitoreo-24-7', 'cctv-videovigilancia', 'control-de-accesos', 'seguridad-eventos'],
+  corporativo: ['guardias-de-seguridad', 'cctv-videovigilancia', 'control-de-accesos', 'monitoreo-24-7', 'auditoria-seguridad'],
+  residencial: ['guardias-de-seguridad', 'cctv-videovigilancia', 'control-de-accesos', 'monitoreo-24-7'],
+  industrial: ['seguridad-industrial', 'guard-pod', 'cctv-videovigilancia', 'control-de-accesos', 'monitoreo-24-7'],
+  automotriz: ['guardias-de-seguridad', 'cctv-videovigilancia', 'control-de-accesos', 'monitoreo-24-7'],
+  diplomatico: ['escoltas-privados', 'guardias-de-seguridad', 'cctv-videovigilancia', 'control-de-accesos', 'monitoreo-24-7'],
+};
+
+const relatedServices = allServices.filter(s => 
+  sectorServiceMap[sector.slug]?.includes(s.slug) || false
+);
+
+const iconMap: Record<string, string> = {
+  hotel: '🏨',
+  business: '🏢',
+  home: '🏠',
+  factory: '🏭',
+  car: '🚗',
+  embassy: '🏛️',
+};
+---
+
+<BaseLayout title={sector.meta_title} description={sector.meta_description}>
+  <!-- Breadcrumb -->
+  <div class="bg-neutral-100 py-3">
+    <div class="container mx-auto px-4">
+      <nav class="flex text-sm text-neutral-600">
+        <a href="/" class="hover:text-primary-600">Inicio</a>
+        <span class="mx-2">/</span>
+        <a href="/sectores" class="hover:text-primary-600">Sectores</a>
+        <span class="mx-2">/</span>
+        <span class="text-neutral-900">{sector.name}</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative bg-primary-600 text-white py-16 lg:py-20 overflow-hidden">
+    {sector.image && (
+      <div class="absolute inset-0">
+        <img 
+          src={`http://64.176.16.231:8055/assets/${sector.image}`}
+          alt={sector.name}
+          class="w-full h-full object-cover opacity-30"
+        />
+      </div>
+    )}
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-800/90 to-primary-600/70"></div>
+    <div class="container mx-auto px-4 relative z-10">
+      <span class="inline-block text-4xl mb-4">{iconMap[sector.icon] || '🏢'}</span>
+      <h1 class="text-3xl lg:text-5xl font-bold mb-4">{sector.hero_title}</h1>
+      <p class="text-xl text-white/90 max-w-3xl">{sector.hero_subtitle}</p>
+    </div>
+  </section>
+
+  <!-- Description -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl">
+        <h2 class="text-2xl font-bold text-neutral-900 mb-4">Sobre seguridad en {sector.name.toLowerCase()}</h2>
+        <p class="text-lg text-neutral-600">{sector.description}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  {relatedServices.length > 0 && (
+    <section class="py-16 bg-neutral-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-neutral-900 mb-8 text-center">Servicios para {sector.name.toLowerCase()}</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {relatedServices.map(service => (
+            <a href={`/servicios/${service.slug}`} class="group bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all">
+              <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
+                {service.image ? (
+                  <img 
+                    src={`http://64.176.16.231:8055/assets/${service.image}`}
+                    alt={service.name}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center">
+                    <svg class="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                  </div>
+                )}
+              </div>
+              <div class="p-4">
+                <h3 class="font-semibold text-neutral-900 mb-1">{service.name}</h3>
+                <p class="text-neutral-600 text-sm line-clamp-2">{service.short_description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Protege tu {sector.name.toLowerCase()} con GuardMan</h2>
+      <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+        Contactanos para una evaluacion personalizada de seguridad
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/cotizacion" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+          Solicitar cotizacion
+        </a>
+        <a href="/contacto" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+          Hablar con un experto
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

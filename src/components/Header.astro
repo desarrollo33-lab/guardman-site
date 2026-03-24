@@ -1,7 +1,16 @@
 ---
-import { services } from '../data/services';
-import { locations } from '../data/locations';
-import { siteConfig } from '../data/site';
+import { getServices, getLocations, getSiteConfig } from '../data/directus';
+
+// Get data from CMS (synchronous - data is pre-loaded at build time)
+const services = getServices();
+const locations = getLocations();
+const config = getSiteConfig();
+
+// Build site config for template
+const siteConfig = {
+  phone: config?.phone || '+56930000010',
+  phoneTel: (config?.phone || '+56930000010').replace(/[^0-9+]/g, ''),
+};
 ---
 
 <header class="bg-white shadow-sm sticky top-0 z-50">
@@ -56,8 +65,6 @@ import { siteConfig } from '../data/site';
             </div>
           </div>
         </div>
-
-        <a href="/nosotros" class="text-neutral-700 hover:text-primary-600 font-medium">Nosotros</a>
 
         <!-- Sectores Dropdown -->
         <div class="relative group">
@@ -120,7 +127,6 @@ import { siteConfig } from '../data/site';
       <div class="flex flex-col gap-2">
         <a href="/servicios" class="px-4 py-2 text-neutral-700 hover:bg-neutral-50 rounded-lg">Servicios</a>
         <a href="/ubicaciones" class="px-4 py-2 text-neutral-700 hover:bg-neutral-50 rounded-lg">Ubicaciones</a>
-        <a href="/nosotros" class="px-4 py-2 text-neutral-700 hover:bg-neutral-50 rounded-lg">Nosotros</a>
         <a href="/sectores" class="px-4 py-2 text-neutral-700 hover:bg-neutral-50 rounded-lg">Sectores</a>
         <a href="/contacto" class="px-4 py-2 text-neutral-700 hover:bg-neutral-50 rounded-lg">Contacto</a>
         <a href="/cotizacion" class="mt-2 bg-primary-600 text-white text-center px-4 py-2.5 rounded-lg font-semibold">Cotizar</a>

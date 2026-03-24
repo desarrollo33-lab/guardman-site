@@ -1,22 +1,105 @@
 {
-  "id": null,
+  "site_name": "GuardMan Chile",
+  "legal_name": "GuardMan Seguridad Privada SpA",
+  "rut": "76.123.456-7",
   "tagline": "Protegemos lo que mas te importa",
-  "description": "",
-  "phone": "",
-  "phone_display": "",
-  "whatsapp": "",
-  "email": "",
-  "address": "",
-  "latitude": 0,
-  "longitude": 0,
-  "social_instagram": "",
-  "social_youtube": "",
+  "description": "Empresa lider en servicios de seguridad privada en Santiago. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.",
+  "about_text": "GuardMan Chile es una empresa lider en servicios de seguridad privada en Santiago de Chile. Con mas de 8 anos de experiencia, ofrecemos soluciones integrales de seguridad para empresas, condominos, eventos y residencias particulares. Contamos con un equipo de mas de 500 guardias certificados y un centro de monitoreo propio operate 24/7.",
+  "phone": "+56 2 2400 6000",
+  "phone_display": "+56 9 300 000 10",
+  "whatsapp": "+56 9 3000 0010",
+  "email": "info@guardman.cl",
+  "commercial_email": "ventas@guardman.cl",
+  "address": "Av. Americo Vespucio Norte 1980, Providencia, Santiago, Chile",
+  "latitude": -33.4569,
+  "longitude": -70.6483,
+  "site_url": "https://guardman.cl",
+  "social_instagram": "https://www.instagram.com/grupo_guardman",
+  "social_youtube": "https://youtu.be/mqpLsKrwjAI",
   "stats_guards": "500+",
   "stats_clients": "200+",
   "stats_locations": "14",
   "stats_years": "8+",
-  "legal_name": "",
-  "legal_rut": "",
-  "seo_title": "",
-  "seo_description": ""
+  "seo_title": "GuardMan Chile - Seguridad Privada en Santiago",
+  "seo_description": "Empresa lider en servicios de seguridad privada en Santiago. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.",
+  "hero_image": null,
+  "hours": [
+    {
+      "day": "Lunes",
+      "hours": "24 horas"
+    },
+    {
+      "day": "Martes",
+      "hours": "24 horas"
+    },
+    {
+      "day": "Miercoles",
+      "hours": "24 horas"
+    },
+    {
+      "day": "Jueves",
+      "hours": "24 horas"
+    },
+    {
+      "day": "Viernes",
+      "hours": "24 horas"
+    },
+    {
+      "day": "Sabado",
+      "hours": "24 horas"
+    },
+    {
+      "day": "Domingo",
+      "hours": "24 horas"
+    }
+  ],
+  "usps": [
+    {
+      "title": "GuardPod V1",
+      "description": "Unidad Autonoma de Vigilancia 24/7 - 15 meses de desarrollo propio",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Supervision Nocturna Preventiva",
+      "description": "Monitoreo proactivo de conductas sospechosas",
+      "icon": "eye"
+    },
+    {
+      "title": "Respuesta Inmediata Certificada",
+      "description": "Tiempos de respuesta garantizados contractualmente",
+      "icon": "clock"
+    },
+    {
+      "title": "Personal Certificacion OS-10",
+      "description": "Todos nuestros guardias cuentan con certificacion OS-10 vigente",
+      "icon": "badge-check"
+    },
+    {
+      "title": "Centro de Monitoreo Propio",
+      "description": "Con redundancia y supervision 24/7",
+      "icon": "monitor"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Autorizacion Laboral",
+      "description": "Autorizacion de la Autoridad Administrativa Laboral (Chile) para servicios de seguridad privada"
+    },
+    {
+      "name": "Seguro RC",
+      "description": "Seguro de responsabilidad civil obligatorio"
+    },
+    {
+      "name": "Certificacion OS-10",
+      "description": "Personal con certificacion OS-10 vigente"
+    },
+    {
+      "name": "Verificacion Antecedentes",
+      "description": "Verificacion de antecedentes para todo el personal"
+    },
+    {
+      "name": "Protocolos Carabineros",
+      "description": "Protocolos de seguridad certificados por Carabineros de Chile"
+    }
+  ]
 }

@@ -1,82 +1,102 @@
 [
   {
     "id": 1,
+    "name": "Courtyard by Marriott",
     "industry": "Hotelería",
+    "services": [],
     "logo_url": "",
     "featured": true,
     "status": "published",
-    "sort": 1,
-    "name": "Courtyard by Marriott",
-    "services": []
+    "sort": 1
   },
   {
     "id": 2,
+    "name": "Hamptons",
     "industry": "Inmobiliario",
+    "services": [],
     "logo_url": "",
     "featured": true,
     "status": "published",
-    "sort": 2,
-    "name": "Hamptons",
-    "services": []
+    "sort": 2
   },
   {
     "id": 3,
+    "name": "Kavak",
     "industry": "Automotriz",
+    "services": [],
     "logo_url": "",
     "featured": true,
     "status": "published",
-    "sort": 3,
-    "name": "Kavak",
-    "services": []
+    "sort": 3
   },
   {
     "id": 4,
+    "name": "Hoy Estoril",
     "industry": "Inmobiliario",
+    "services": [],
     "logo_url": "",
     "featured": true,
     "status": "published",
-    "sort": 4,
-    "name": "Hoy Estoril",
-    "services": []
+    "sort": 4
   },
   {
     "id": 5,
+    "name": "Embajadas",
     "industry": "Diplomático",
+    "services": [],
     "logo_url": "",
     "featured": true,
     "status": "published",
-    "sort": 5,
-    "name": "Embajadas",
-    "services": []
+    "sort": 5
   },
   {
     "id": 6,
+    "name": "Work Center",
     "industry": "Oficinas",
+    "services": [],
     "logo_url": "",
     "featured": true,
     "status": "published",
-    "sort": 6,
-    "name": "Work Center",
-    "services": []
+    "sort": 6
   },
   {
     "id": 7,
+    "name": "Avanza Park",
     "industry": "Inmobiliario",
+    "services": [],
     "logo_url": "",
     "featured": true,
     "status": "published",
-    "sort": 7,
-    "name": "Avanza Park",
-    "services": []
+    "sort": 7
   },
   {
     "id": 8,
+    "name": "Condominios",
     "industry": "Residencial",
+    "services": [],
     "logo_url": "",
     "featured": true,
     "status": "published",
-    "sort": 8,
-    "name": "Condominios",
-    "services": []
+    "sort": 8
+  },
+  {
+    "id": 9,
+    "name": "Falabella",
+    "industry": "Retail",
+    "services": [],
+    "logo_url": "",
+    "featured": true,
+    "status": "published",
+    "sort": 9
+  },
+  {
+    "id": 10,
+    "name": "Ripley",
+    "industry": "Retail",
+    "services": [],
+    "logo_url": "",
+    "featured": true,
+    "status": "published",
+    "sort": 10
   }
 ]

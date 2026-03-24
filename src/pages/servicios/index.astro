@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getServices } from '../../data/directus';
 
-const services = await getServices();
+const services = getServices();
 ---
 
 <BaseLayout title="Servicios de Seguridad en Santiago" description="Conoce todos nuestros servicios de seguridad privada: guardias, CCTV, control de accesos, monitoreo 24/7 y mas.">
@@ -20,12 +20,20 @@ const services = await getServices();
   <section class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map(service => (
+        {services.filter(s => s.slug !== 'guard-pod').map(service => (
           <a href={`/servicios/${service.slug}`} class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-xl transition-all">
-            <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-              <svg class="w-16 h-16 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-              </svg>
+            <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center overflow-hidden">
+              {service.image ? (
+                <img 
+                  src={`http://64.176.16.231:8055/assets/${service.image}`}
+                  alt={service.name}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              ) : (
+                <svg class="w-16 h-16 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              )}
             </div>
             <div class="p-6">
               <h2 class="text-xl font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors">

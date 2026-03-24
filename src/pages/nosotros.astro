@@ -1,6 +1,43 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { siteConfig } from '../data/site';
+import { getSiteConfig } from '../data/directus';
+
+// Get data from CMS (synchronous - data is pre-loaded at build time)
+const config = getSiteConfig();
+
+// Build site config for template with fallbacks
+const siteConfig = {
+  name: config?.site_name || 'GuardMan Chile',
+  aboutText: config?.about_text || 'GuardMan Chile es una empresa lider en servicios de seguridad privada en Santiago de Chile.',
+  email: config?.email || 'info@guardman.cl',
+  phone: config?.phone || '+56930000010',
+  phoneTel: (config?.phone || '+56930000010').replace(/[^0-9+]/g, ''),
+  address: config?.address || '',
+  hours: config?.hours || [],
+  social: {
+    instagram: config?.social_instagram || '',
+    youtube: config?.social_youtube || '',
+  },
+  stats: {
+    guards: config?.stats_guards || '500+',
+    clients: config?.stats_clients || '200+',
+    locations: config?.stats_locations || '14',
+    years: config?.stats_years || '8+',
+  },
+  // USPs from differentiators (if available in config)
+  usps: config?.usps || [
+    { title: 'GuardPod V1', description: 'Unidad Autonoma de Vigilancia 24/7' },
+    { title: 'Supervision Nocturna', description: 'Monitoreo proactivo de conductas sospechosas' },
+    { title: 'Respuesta Inmediata', description: 'Tiempos de respuesta garantizados' },
+    { title: 'Personal OS-10', description: 'Guardias con certificacion OS-10 vigente' },
+  ],
+};
+
+// Get stats values for template
+const statsGuards = siteConfig.stats.guards;
+const statsClients = siteConfig.stats.clients;
+const statsLocations = siteConfig.stats.locations;
+const statsYears = siteConfig.stats.years;
 ---
 
 <BaseLayout title="Nosotros | GuardMan Chile" description="Conoce a GuardMan Chile - empresa lider en seguridad privada con anos de experiencia en el mercado chileno.">
@@ -21,21 +58,15 @@ import { siteConfig } from '../data/site';
         <div>
           <h2 class="text-3xl font-bold text-neutral-900 mb-6">Nuestra Historia</h2>
           <div class="prose prose-lg text-neutral-600">
-            <p>
-              {siteConfig.aboutText}
-            </p>
-            <p>
-              Contamos con un equipo de mas de {siteConfig.stats.guards} guardias en terreno, {siteConfig.stats.clients} clientes activos y cobertura en {siteConfig.stats.locations} comunas de la Region Metropolitana.
-            </p>
-            <p>
-              Nuestra vision es ser la empresa de seguridad privada mas confiable y profesional de Chile, ofreciendo soluciones innovadoras y un servicio excepcional.
-            </p>
+            <p>{siteConfig.aboutText}</p>
+            <p>Contamos con un equipo de mas de {statsGuards} guardias en terreno, {statsClients} clientes activos y cobertura en {statsLocations} comunas de la Region Metropolitana.</p>
+            <p>Nuestra vision es ser la empresa de seguridad privada mas confiable y profesional de Chile, ofreciendo soluciones innovadoras y un servicio excepcional.</p>
           </div>
         </div>
         <div class="bg-neutral-100 rounded-2xl p-8">
           <h3 class="text-2xl font-bold text-neutral-900 mb-6">Lo que nos diferencia</h3>
           <div class="space-y-4">
-            {siteConfig.usps.map(usp => (
+            {siteConfig.usps.map((usp, index) => (
               <div class="flex gap-4">
                 <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
                   <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,19 +90,19 @@ import { siteConfig } from '../data/site';
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         <div>
-          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{siteConfig.stats.guards}</div>
+          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{statsGuards}</div>
           <div class="text-neutral-300">Guardias en terreno</div>
         </div>
         <div>
-          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{siteConfig.stats.clients}</div>
+          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{statsClients}</div>
           <div class="text-neutral-300">Clientes activos</div>
         </div>
         <div>
-          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{siteConfig.stats.locations}</div>
+          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{statsLocations}</div>
           <div class="text-neutral-300">Comunas coverage</div>
         </div>
         <div>
-          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{siteConfig.stats.years}</div>
+          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{statsYears}</div>
           <div class="text-neutral-300">Anos de experiencia</div>
         </div>
       </div>

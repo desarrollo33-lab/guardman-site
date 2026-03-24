@@ -1,21 +1,5 @@
 [
   {
-    "id": 24,
-    "name": "Guardias de Seguridad",
-    "slug": "guardias-de-seguridad",
-    "description": "Servicio de guardias de seguridad profesionales para la proteccion de personas, bienes y propiedades en toda la Region Metropolitana.",
-    "short_description": "Guardias de Seguridad",
-    "hero_heading": "Guardias de Seguridad",
-    "meta_title": "Guardias de Seguridad | GuardMan Chile",
-    "meta_description": "Servicio de guardias de seguridad profesionales para la proteccion de personas, bienes y propiedades...",
-    "price_range": "$$$",
-    "status": "published",
-    "sort": 1,
-    "features": [],
-    "process": [],
-    "common_issues": []
-  },
-  {
     "id": 32,
     "name": "Guardias de Seguridad",
     "slug": "guardias-de-seguridad",
@@ -25,8 +9,6 @@
     "meta_title": "Guardias de Seguridad en Santiago | GuardMan Chile",
     "meta_description": "Contrata guardias de seguridad profesionales en Santiago. Personal con certificacion OS-10 vigente, disponible 24/7.",
     "price_range": "$$$",
-    "status": "published",
-    "sort": 1,
     "features": [
       "Personal con certificacion OS-10 vigente",
       "Disponibles 24 horas, 7 dias a la semana",
@@ -53,23 +35,11 @@
       "Accesos no controlados",
       "Robos en empresas",
       "Falta de supervision en areas comunes"
-    ]
-  },
-  {
-    "id": 25,
-    "name": "CCTV y Videovigilancia",
-    "slug": "cctv-videovigilancia",
-    "description": "Instalacion y monitoreo de sistemas de camaras de seguridad (CCTV) de ultima generacion.",
-    "short_description": "CCTV y Videovigilancia",
-    "hero_heading": "CCTV y Videovigilancia",
-    "meta_title": "CCTV y Videovigilancia | GuardMan Chile",
-    "meta_description": "Instalacion y monitoreo de sistemas de camaras de seguridad (CCTV) de ultima generacion....",
-    "price_range": "$$$$",
+    ],
+    "featured": true,
     "status": "published",
-    "sort": 2,
-    "features": [],
-    "process": [],
-    "common_issues": []
+    "sort": 1,
+    "image": "a6ef6c6d-4e25-4068-805a-366efb21b96a"
   },
   {
     "id": 33,
@@ -81,8 +51,6 @@
     "meta_title": "CCTV en Santiago | Camaras de Seguridad | GuardMan",
     "meta_description": "Instalacion de camaras CCTV en Santiago. Acceso remoto, monitoreo en la nube y grabacion de alta definicion.",
     "price_range": "$$$$",
-    "status": "published",
-    "sort": 2,
     "features": [
       "Camaras IP de alta definicion",
       "Acceso remoto desde celular o computador",
@@ -113,23 +81,11 @@
       "Camaras danadas o obsoletas",
       "Sin acceso remoto",
       "Grabacion deficiente o sin respaldo"
-    ]
-  },
-  {
-    "id": 26,
-    "name": "Control de Accesos",
-    "slug": "control-de-accesos",
-    "description": "Sistemas electronicos de control de accesos para edificios y empresas.",
-    "short_description": "Control de Accesos",
-    "hero_heading": "Control de Accesos",
-    "meta_title": "Control de Accesos | GuardMan Chile",
-    "meta_description": "Sistemas electronicos de control de accesos para edificios y empresas....",
-    "price_range": "$$$",
+    ],
+    "featured": true,
     "status": "published",
-    "sort": 3,
-    "features": [],
-    "process": [],
-    "common_issues": []
+    "sort": 2,
+    "image": "409313f1-32c7-408c-9f2e-50edee982696"
   },
   {
     "id": 34,
@@ -141,8 +97,6 @@
     "meta_title": "Control de Accesos Santiago | GuardMan",
     "meta_description": "Sistemas de control de accesos con tecnologia biometrica, tarjetas RFID y registro completo de ingresos.",
     "price_range": "$$$",
-    "status": "published",
-    "sort": 3,
     "features": [
       "Lectores biometricos (huella, rostro)",
       "Tarjetas RFID y tags",
@@ -169,23 +123,11 @@
       "Llaves perdidas o复制",
       "Accesos no autorizados",
       "Falta de control sobre quien entra y sale"
-    ]
-  },
-  {
-    "id": 27,
-    "name": "Escoltas Privados",
-    "slug": "escoltas-privados",
-    "description": "Servicio de escolta personal para ejecutivos y celebridades.",
-    "short_description": "Escoltas Privados",
-    "hero_heading": "Escoltas Privados",
-    "meta_title": "Escoltas Privados | GuardMan Chile",
-    "meta_description": "Servicio de escolta personal para ejecutivos y celebridades....",
-    "price_range": "$$$$",
+    ],
+    "featured": true,
     "status": "published",
-    "sort": 4,
-    "features": [],
-    "process": [],
-    "common_issues": []
+    "sort": 3,
+    "image": "dcc39547-b1bb-4d15-8831-25aa4872dba2"
   },
   {
     "id": 35,
@@ -197,8 +139,6 @@
     "meta_title": "Escoltas Privados Santiago | Proteccion Ejecutiva | GuardMan",
     "meta_description": "Servicio de escoltas privados en Santiago. Escoltas certificados con evaluacion de riesgo previa.",
     "price_range": "$$$$",
-    "status": "published",
-    "sort": 4,
     "features": [
       "Evaluacion de riesgo previa",
       "Planificacion de rutas seguras",
@@ -225,23 +165,11 @@
       "Amenazas de seguridad",
       "Riesgo por exposicion publica",
       "Necesidad de proteccion en viajes"
-    ]
-  },
-  {
-    "id": 28,
-    "name": "Monitoreo 24/7",
-    "slug": "monitoreo-24-7",
-    "description": "Centro de operaciones con monitoreo remoto las 24 horas.",
-    "short_description": "Monitoreo 24/7",
-    "hero_heading": "Monitoreo 24/7",
-    "meta_title": "Monitoreo 24/7 | GuardMan Chile",
-    "meta_description": "Centro de operaciones con monitoreo remoto las 24 horas....",
-    "price_range": "$$$",
+    ],
+    "featured": false,
     "status": "published",
-    "sort": 5,
-    "features": [],
-    "process": [],
-    "common_issues": []
+    "sort": 4,
+    "image": "976a5dca-96c2-4b14-a9e5-b37f3915204d"
   },
   {
     "id": 36,
@@ -253,8 +181,6 @@
     "meta_title": "Monitoreo 24/7 Santiago | Centro de Control | GuardMan",
     "meta_description": "Monitoreo de camaras y alarmas las 24 horas desde nuestro centro de control propio.",
     "price_range": "$$$",
-    "status": "published",
-    "sort": 5,
     "features": [
       "Centro de control propio y dedicado",
       "Operadores capacitados 24/7",
@@ -285,23 +211,11 @@
       "Alarmas sin respuesta",
       "Emergencias sin coordinacion",
       "Falta de supervision fuera de horario"
-    ]
-  },
-  {
-    "id": 29,
-    "name": "Seguridad para Eventos",
-    "slug": "seguridad-eventos",
-    "description": "Servicio especializado para eventos corporativos, sociales y masivos.",
-    "short_description": "Seguridad para Eventos",
-    "hero_heading": "Seguridad para Eventos",
-    "meta_title": "Seguridad para Eventos | GuardMan Chile",
-    "meta_description": "Servicio especializado para eventos corporativos, sociales y masivos....",
-    "price_range": "$$$$",
+    ],
+    "featured": true,
     "status": "published",
-    "sort": 6,
-    "features": [],
-    "process": [],
-    "common_issues": []
+    "sort": 5,
+    "image": "a884b694-da62-4994-8f32-8c0326d0d779"
   },
   {
     "id": 37,
@@ -313,8 +227,6 @@
     "meta_title": "Seguridad para Eventos Santiago | GuardMan",
     "meta_description": "Seguridad para eventos corporativos y sociales. Control de invitados y gestion de masas.",
     "price_range": "$$$$",
-    "status": "published",
-    "sort": 6,
     "features": [
       "Planificacion previa con productores",
       "Control de accesos e invitaciones",
@@ -345,7 +257,11 @@
       "Control de invitados",
       "Gestion de masas",
       "Seguridad VIP para speakers"
-    ]
+    ],
+    "featured": false,
+    "status": "published",
+    "sort": 6,
+    "image": "b92640af-4e10-4ddc-b2b6-92fce7c96559"
   },
   {
     "id": 38,
@@ -357,8 +273,6 @@
     "meta_title": "Seguridad Industrial Santiago | GuardMan",
     "meta_description": "Seguridad industrial y vigilancia perimetral para fabricas, bodegas y centros logisticos.",
     "price_range": "$$$",
-    "status": "published",
-    "sort": 7,
     "features": [
       "Vigilancia perimetral continua",
       "Control de vehiculos de carga",
@@ -389,39 +303,11 @@
       "Robos en bodegas",
       "Acceso no autorizado a zonas peligrosas",
       "Falta de control en zonas perimetricas"
-    ]
-  },
-  {
-    "id": 30,
-    "name": "Seguridad Industrial",
-    "slug": "seguridad-industrial",
-    "description": "Proteccion especializada para instalaciones industriales, bodegas y obras.",
-    "short_description": "Seguridad Industrial",
-    "hero_heading": "Seguridad Industrial",
-    "meta_title": "Seguridad Industrial | GuardMan Chile",
-    "meta_description": "Proteccion especializada para instalaciones industriales, bodegas y obras....",
-    "price_range": "$$$",
+    ],
+    "featured": false,
     "status": "published",
     "sort": 7,
-    "features": [],
-    "process": [],
-    "common_issues": []
-  },
-  {
-    "id": 31,
-    "name": "Auditoria de Seguridad",
-    "slug": "auditoria-seguridad",
-    "description": "Evaluacion profesional de las necesidades de seguridad.",
-    "short_description": "Auditoria de Seguridad",
-    "hero_heading": "Auditoria de Seguridad",
-    "meta_title": "Auditoria de Seguridad | GuardMan Chile",
-    "meta_description": "Evaluacion profesional de las necesidades de seguridad....",
-    "price_range": "$$",
-    "status": "published",
-    "sort": 8,
-    "features": [],
-    "process": [],
-    "common_issues": []
+    "image": "94b5db9c-87a3-4d4e-be6d-3b191439bcd5"
   },
   {
     "id": 39,
@@ -433,8 +319,6 @@
     "meta_title": "Auditoria de Seguridad Santiago | GuardMan",
     "meta_description": "Auditoria de seguridad profesional. Visita tecnica gratuita y plan de recomendaciones.",
     "price_range": "$$",
-    "status": "published",
-    "sort": 8,
     "features": [
       "Visita tecnica gratuita",
       "Analisis de vulnerabilidades",
@@ -465,7 +349,11 @@
       "No saber que necesita realmente",
       "Inversion incorrecta en seguridad",
       "Falta de normativa compliant"
-    ]
+    ],
+    "featured": false,
+    "status": "published",
+    "sort": 8,
+    "image": "756cee66-ebe0-44f4-bf76-2838dbee756f"
   },
   {
     "id": 40,
@@ -477,8 +365,6 @@
     "meta_title": "Guard Pod en Santiago | Unidad Movil de Seguridad | GuardMan",
     "meta_description": "Guard Pod: unidad movil de vigilancia autonoma. Ideal para obras, eventos y zonas remotas sin infraestructura.",
     "price_range": "$$$$",
-    "status": "published",
-    "sort": 9,
     "features": [
       "Modulo prefabricado autonomo",
       "Energia solar con baterias de respaldo",
@@ -511,6 +397,10 @@
       "Obras sin vigilancia",
       "Zonas sin electricidad",
       "Eventos temporales sin infraestructura"
-    ]
+    ],
+    "featured": true,
+    "status": "published",
+    "sort": 9,
+    "image": null
   }
 ]

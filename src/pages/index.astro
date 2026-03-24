@@ -2,14 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getServices, getLocations, getSectors, getFeaturedClients, getSiteConfig } from '../data/directus';
 
-// Fetch from CMS
-const [services, locations, sectors, clients, config] = await Promise.all([
-  getServices(),
-  getLocations(),
-  getSectors(),
-  getFeaturedClients(),
-  getSiteConfig()
-]);
+// Get data from CMS (synchronous - data is pre-loaded at build time)
+const services = getServices();
+const locations = getLocations();
+const sectors = getSectors();
+const clients = getFeaturedClients();
+const config = getSiteConfig();
 
 // Fallback values if CMS is empty
 const siteConfig = {
@@ -33,7 +31,16 @@ const featuredClients = clients.map(c => c.name);
   
   <!-- Hero Section -->
   <section class="relative bg-primary-600 text-white overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-primary-700/90 to-primary-600/80"></div>
+    <div class="absolute inset-0">
+      {config?.hero_image && (
+        <img 
+          src={`http://64.176.16.231:8055/assets/${config.hero_image}`}
+          alt="GuardMan Chile - Seguridad Privada"
+          class="w-full h-full object-cover"
+        />
+      )}
+      <div class="absolute inset-0 bg-gradient-to-r from-primary-800/95 to-primary-600/70"></div>
+    </div>
     <div class="container mx-auto px-4 py-20 lg:py-28 relative z-10">
       <div class="max-w-3xl">
         <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
@@ -105,23 +112,72 @@ const featuredClients = clients.map(c => c.name);
         </p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {services.map(service => (
-          <a href={`/servicios/${service.slug}`} class="group bg-neutral-50 rounded-xl p-6 hover:shadow-lg transition-all hover:-translate-y-1">
-            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-600 transition-colors">
-              <svg class="w-6 h-6 text-primary-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-              </svg>
+        {services.filter(s => s.slug !== 'guard-pod').map(service => (
+          <a href={`/servicios/${service.slug}`} class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
+            <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
+              {service.image ? (
+                <img 
+                  src={`http://64.176.16.231:8055/assets/${service.image}`}
+                  alt={service.name}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center">
+                  <svg class="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  </svg>
+                </div>
+              )}
             </div>
-            <h3 class="text-lg font-semibold text-neutral-900 mb-2">{service.name}</h3>
-            <p class="text-neutral-600 text-sm line-clamp-2">{service.short_description}</p>
-            <div class="mt-4 text-primary-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-              Conocer mas
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-neutral-900 mb-1">{service.name}</h3>
+              <p class="text-neutral-600 text-sm line-clamp-2">{service.short_description}</p>
             </div>
           </a>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Sectors Section -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Soluciones por sector</h2>
+        <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+          Adaptamos nuestros servicios a las necesidades especificas de cada industria en Santiago
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {sectors.map(sector => (
+          <a href={`/sectores/${sector.slug}`} class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
+            <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
+              {sector.image ? (
+                <img 
+                  src={`http://64.176.16.231:8055/assets/${sector.image}`}
+                  alt={sector.name}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center">
+                  <span class="text-6xl">
+                    {sector.icon === 'hotel' ? '🏨' : sector.icon === 'business' ? '🏢' : sector.icon === 'home' ? '🏠' : sector.icon === 'factory' ? '🏭' : sector.icon === 'car' ? '🚗' : '🏛️'}
+                  </span>
+                </div>
+              )}
+              <div class="absolute inset-0 bg-gradient-to-t from-primary-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">{sector.name}</h3>
+              <p class="text-neutral-600 text-sm line-clamp-2 mt-1">{sector.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/sectores" class="text-primary-600 font-medium hover:text-primary-700 transition-colors">
+          Ver todos los sectores →
+        </a>
       </div>
     </div>
   </section>
@@ -188,43 +244,6 @@ const featuredClients = clients.map(c => c.name);
               15 meses de I+D
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- Sectors Section -->
-  {sectors.length > 0 && (
-    <section class="py-16 lg:py-24 bg-neutral-50">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Sectores que protegemos</h2>
-          <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Cada industria tiene necesidades unicas. Contamos con experiencia en hotels, empresas, residenciales y mas.
-          </p>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {sectors.map(sector => (
-            <a href={`/sectores/${sector.slug}`} class="bg-white rounded-xl p-4 text-center hover:shadow-lg transition-all hover:-translate-y-1 group">
-              <div class="text-4xl mb-2">
-                {sector.icon === 'hotel' && '🏨'}
-                {sector.icon === 'business' && '🏢'}
-                {sector.icon === 'home' && '🏠'}
-                {sector.icon === 'factory' && '🏭'}
-                {sector.icon === 'car' && '🚗'}
-                {sector.icon === 'embassy' && '🏛️'}
-              </div>
-              <div class="font-medium text-neutral-900 group-hover:text-primary-600">{sector.name}</div>
-            </a>
-          ))}
-        </div>
-        <div class="text-center mt-8">
-          <a href="/sectores" class="text-primary-600 font-medium hover:text-primary-700 inline-flex items-center gap-1">
-            Ver todos los sectores
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </a>
         </div>
       </div>
     </section>

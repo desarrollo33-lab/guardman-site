@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { locations } from '../../data/locations';
+import { getLocations } from '../../data/directus';
+
+const locations = getLocations();
 ---
 
 <BaseLayout title="Seguridad Privada en Santiago - Cobertura" description="Coverage de seguridad privada en todas las comunas de la Region Metropolitana de Santiago.">

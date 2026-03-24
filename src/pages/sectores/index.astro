@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSectors } from '../../data/directus';
+
+const sectors = getSectors();
+
+const iconMap: Record<string, string> = {
+  hotel: '🏨',
+  business: '🏢',
+  home: '🏠',
+  factory: '🏭',
+  car: '🚗',
+  embassy: '🏛️',
+};
+---
+
+<BaseLayout title="Sectores que Atendemos | GuardMan Chile" description="GuardMan ofrece servicios de seguridad para Hotelería, Corporativo, Residencial, Industrial, Automotriz y Diplomático en Santiago.">
+  <!-- Hero -->
+  <section class="bg-primary-600 text-white py-16 lg:py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Sectores que Atendemos</h1>
+      <p class="text-xl text-white/90 max-w-2xl mx-auto">
+        Soluciones de seguridad adaptadas a las necesidades especificas de cada industria en Santiago
+      </p>
+    </div>
+  </section>
+
+  <!-- Sectors Grid -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {sectors.map(sector => (
+          <a href={`/sectores/${sector.slug}`} class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-xl transition-all">
+            <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center relative overflow-hidden">
+              {sector.image ? (
+                <img 
+                  src={`http://64.176.16.231:8055/assets/${sector.image}`}
+                  alt={sector.name}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              ) : (
+                <span class="text-6xl">{iconMap[sector.icon] || '🏢'}</span>
+              )}
+              <div class="absolute inset-0 bg-gradient-to-t from-primary-800/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors">
+                {sector.name}
+              </h2>
+              <p class="text-neutral-600 text-sm line-clamp-3">{sector.description}</p>
+              <div class="mt-4 flex items-center text-primary-600 font-medium text-sm">
+                Conocer mas
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 bg-neutral-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-neutral-900 mb-4">No sabes que sector es el tuyo?</h2>
+      <p class="text-neutral-600 mb-6">Nuestro equipo te ayudara a encontrar la mejor solucion para tu caso.</p>
+      <a href="/contacto" class="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+        Contactar a un experto
+      </a>
+    </div>
+  </section>
+</BaseLayout>

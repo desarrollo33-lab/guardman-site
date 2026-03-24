@@ -1,10 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { siteConfig } from '../data/site';
+import { getSiteConfig } from '../data/directus';
+
+const config = getSiteConfig();
+
+const siteConfig = {
+  phone: config?.phone || '+56930000010',
+  phoneTel: (config?.phone || '+56930000010').replace(/[^0-9+]/g, ''),
+  phone_display: config?.phone_display || '',
+  email: config?.email || 'info@guardman.cl',
+  address: config?.address || '',
+};
 ---
 
 <BaseLayout title="Contacto | GuardMan Chile" description="Contacta a GuardMan Chile para cotizar servicios de seguridad privada en Santiago.">
-  <!-- Hero -->
   <section class="bg-primary-600 text-white py-16 lg:py-20">
     <div class="container mx-auto px-4">
       <h1 class="text-4xl lg:text-5xl font-bold mb-4">Contacto</h1>
@@ -14,11 +23,9 @@ import { siteConfig } from '../data/site';
     </div>
   </section>
 
-  <!-- Contact Content -->
   <section class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4">
       <div class="grid lg:grid-cols-2 gap-12">
-        <!-- Contact Info -->
         <div>
           <h2 class="text-2xl font-bold text-neutral-900 mb-6">Informacion de contacto</h2>
           <div class="space-y-6">
@@ -77,7 +84,6 @@ import { siteConfig } from '../data/site';
           </div>
         </div>
 
-        <!-- Contact Form -->
         <div class="bg-neutral-50 rounded-2xl p-8">
           <h2 class="text-2xl font-bold text-neutral-900 mb-6">Envianos un mensaje</h2>
           <form class="space-y-4" id="contact-form">
