@@ -7,9 +7,10 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/fetch-cms-data.mjs && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "fetch:data": "node scripts/fetch-cms-data.mjs",
     "sync": "node scripts/sync-directus.mjs",
     "sync:dev": "node scripts/sync-directus.mjs && astro dev"
   },

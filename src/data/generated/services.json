@@ -1,0 +1,516 @@
+[
+  {
+    "id": 24,
+    "name": "Guardias de Seguridad",
+    "slug": "guardias-de-seguridad",
+    "description": "Servicio de guardias de seguridad profesionales para la proteccion de personas, bienes y propiedades en toda la Region Metropolitana.",
+    "short_description": "Guardias de Seguridad",
+    "hero_heading": "Guardias de Seguridad",
+    "meta_title": "Guardias de Seguridad | GuardMan Chile",
+    "meta_description": "Servicio de guardias de seguridad profesionales para la proteccion de personas, bienes y propiedades...",
+    "price_range": "$$$",
+    "status": "published",
+    "sort": 1,
+    "features": [],
+    "process": [],
+    "common_issues": []
+  },
+  {
+    "id": 32,
+    "name": "Guardias de Seguridad",
+    "slug": "guardias-de-seguridad",
+    "description": "Servicio de guardias de seguridad profesionales para la proteccion de personas, bienes y propiedades en toda la Region Metropolitana. Personal uniformado y capacitado disponible 24/7.",
+    "short_description": "Guardias certificados y uniformados disponibles 24/7",
+    "hero_heading": "Guardias de Seguridad Profesionales en Santiago",
+    "meta_title": "Guardias de Seguridad en Santiago | GuardMan Chile",
+    "meta_description": "Contrata guardias de seguridad profesionales en Santiago. Personal con certificacion OS-10 vigente, disponible 24/7.",
+    "price_range": "$$$",
+    "status": "published",
+    "sort": 1,
+    "features": [
+      "Personal con certificacion OS-10 vigente",
+      "Disponibles 24 horas, 7 dias a la semana",
+      "Uniformados con identificacion completa",
+      "Capacitados en primeros auxilios y emergencia",
+      "Control de accesos y registro de visitas",
+      "Reporte diario de novedades"
+    ],
+    "process": [
+      {
+        "step": "Consulta",
+        "description": "Evaluamos tus necesidades de seguridad"
+      },
+      {
+        "step": "Propuesta",
+        "description": "Disenamos un plan a tu medida"
+      },
+      {
+        "step": "Implementacion",
+        "description": "Iniciamos el servicio con personal capacitado"
+      }
+    ],
+    "common_issues": [
+      "Accesos no controlados",
+      "Robos en empresas",
+      "Falta de supervision en areas comunes"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "CCTV y Videovigilancia",
+    "slug": "cctv-videovigilancia",
+    "description": "Instalacion y monitoreo de sistemas de camaras de seguridad (CCTV) de ultima generacion.",
+    "short_description": "CCTV y Videovigilancia",
+    "hero_heading": "CCTV y Videovigilancia",
+    "meta_title": "CCTV y Videovigilancia | GuardMan Chile",
+    "meta_description": "Instalacion y monitoreo de sistemas de camaras de seguridad (CCTV) de ultima generacion....",
+    "price_range": "$$$$",
+    "status": "published",
+    "sort": 2,
+    "features": [],
+    "process": [],
+    "common_issues": []
+  },
+  {
+    "id": 33,
+    "name": "CCTV y Videovigilancia",
+    "slug": "cctv-videovigilancia",
+    "description": "Instalacion y monitoreo de sistemas de camaras de seguridad (CCTV) de ultima generacion. Acceso remoto en tiempo real desde tu celular o computador.",
+    "short_description": "Camaras de ultima generacion con acceso remoto 24/7",
+    "hero_heading": "Sistemas de CCTV y Videovigilancia",
+    "meta_title": "CCTV en Santiago | Camaras de Seguridad | GuardMan",
+    "meta_description": "Instalacion de camaras CCTV en Santiago. Acceso remoto, monitoreo en la nube y grabacion de alta definicion.",
+    "price_range": "$$$$",
+    "status": "published",
+    "sort": 2,
+    "features": [
+      "Camaras IP de alta definicion",
+      "Acceso remoto desde celular o computador",
+      "Grabacion en la nube con backup",
+      "Vision nocturna infrarroja",
+      "Monitoreo 24/7 desde nuestro centro de control",
+      "Notificaciones por movimiento"
+    ],
+    "process": [
+      {
+        "step": "Visita tecnica",
+        "description": "Evaluamos las areas a vigilar"
+      },
+      {
+        "step": "Propuesta",
+        "description": "Disenamos el sistema optimal"
+      },
+      {
+        "step": "Instalacion",
+        "description": "Implementamos con tecnicos certificados"
+      },
+      {
+        "step": "Capacitacion",
+        "description": "Te ensenamos a usar el sistema"
+      }
+    ],
+    "common_issues": [
+      "Camaras danadas o obsoletas",
+      "Sin acceso remoto",
+      "Grabacion deficiente o sin respaldo"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Control de Accesos",
+    "slug": "control-de-accesos",
+    "description": "Sistemas electronicos de control de accesos para edificios y empresas.",
+    "short_description": "Control de Accesos",
+    "hero_heading": "Control de Accesos",
+    "meta_title": "Control de Accesos | GuardMan Chile",
+    "meta_description": "Sistemas electronicos de control de accesos para edificios y empresas....",
+    "price_range": "$$$",
+    "status": "published",
+    "sort": 3,
+    "features": [],
+    "process": [],
+    "common_issues": []
+  },
+  {
+    "id": 34,
+    "name": "Control de Accesos",
+    "slug": "control-de-accesos",
+    "description": "Sistemas electronicos de control de accesos para edificios, empresas y residenciales. Tarjetas, biometricos y cerraduras electronicas.",
+    "short_description": "Control total de accesos con tecnologia biometrica",
+    "hero_heading": "Control de Accesos Profesional",
+    "meta_title": "Control de Accesos Santiago | GuardMan",
+    "meta_description": "Sistemas de control de accesos con tecnologia biometrica, tarjetas RFID y registro completo de ingresos.",
+    "price_range": "$$$",
+    "status": "published",
+    "sort": 3,
+    "features": [
+      "Lectores biometricos (huella, rostro)",
+      "Tarjetas RFID y tags",
+      "Cerraduras electronicas inteligentes",
+      "Registro completo de ingresos y salidas",
+      "Alertas de acceso no autorizado",
+      "Integracion con CCTV"
+    ],
+    "process": [
+      {
+        "step": "Analisis",
+        "description": "Evaluamos puntos de acceso criticos"
+      },
+      {
+        "step": "Instalacion",
+        "description": "Implementacion por tecnicos especializados"
+      },
+      {
+        "step": "Soporte",
+        "description": "Mantenimiento y soporte continuo"
+      }
+    ],
+    "common_issues": [
+      "Llaves perdidas o复制",
+      "Accesos no autorizados",
+      "Falta de control sobre quien entra y sale"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Escoltas Privados",
+    "slug": "escoltas-privados",
+    "description": "Servicio de escolta personal para ejecutivos y celebridades.",
+    "short_description": "Escoltas Privados",
+    "hero_heading": "Escoltas Privados",
+    "meta_title": "Escoltas Privados | GuardMan Chile",
+    "meta_description": "Servicio de escolta personal para ejecutivos y celebridades....",
+    "price_range": "$$$$",
+    "status": "published",
+    "sort": 4,
+    "features": [],
+    "process": [],
+    "common_issues": []
+  },
+  {
+    "id": 35,
+    "name": "Escoltas Privados",
+    "slug": "escoltas-privados",
+    "description": "Servicio de escolta personal para ejecutivos, celebridades y personas que requieren proteccion especial. Evaluacion de riesgo previa y planification de rutas seguras.",
+    "short_description": "Proteccion personalizada para executives y personalidades",
+    "hero_heading": "Servicio de Escoltas Privados",
+    "meta_title": "Escoltas Privados Santiago | Proteccion Ejecutiva | GuardMan",
+    "meta_description": "Servicio de escoltas privados en Santiago. Escoltas certificados con evaluacion de riesgo previa.",
+    "price_range": "$$$$",
+    "status": "published",
+    "sort": 4,
+    "features": [
+      "Evaluacion de riesgo previa",
+      "Planificacion de rutas seguras",
+      "Escoltas bilingues disponibles",
+      "Cobertura 24/7",
+      "Proteccion en viajes y eventos",
+      "Coordinacion con autoridades"
+    ],
+    "process": [
+      {
+        "step": "Consulta confidencial",
+        "description": "Evaluamos necesidades de proteccion"
+      },
+      {
+        "step": "Plan de seguridad",
+        "description": "Estrategia personalizada"
+      },
+      {
+        "step": "Implementacion",
+        "description": "Asignamos escoltas certificados"
+      }
+    ],
+    "common_issues": [
+      "Amenazas de seguridad",
+      "Riesgo por exposicion publica",
+      "Necesidad de proteccion en viajes"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Monitoreo 24/7",
+    "slug": "monitoreo-24-7",
+    "description": "Centro de operaciones con monitoreo remoto las 24 horas.",
+    "short_description": "Monitoreo 24/7",
+    "hero_heading": "Monitoreo 24/7",
+    "meta_title": "Monitoreo 24/7 | GuardMan Chile",
+    "meta_description": "Centro de operaciones con monitoreo remoto las 24 horas....",
+    "price_range": "$$$",
+    "status": "published",
+    "sort": 5,
+    "features": [],
+    "process": [],
+    "common_issues": []
+  },
+  {
+    "id": 36,
+    "name": "Monitoreo 24/7",
+    "slug": "monitoreo-24-7",
+    "description": "Centro de operaciones con monitoreo remoto las 24 horas. Supervision constante de camaras, alarmas y sensores. Respuesta inmediata ante cualquier evento.",
+    "short_description": "Centro de control con vigilancia las 24 horas",
+    "hero_heading": "Monitoreo y Vigilancia las 24 Horas",
+    "meta_title": "Monitoreo 24/7 Santiago | Centro de Control | GuardMan",
+    "meta_description": "Monitoreo de camaras y alarmas las 24 horas desde nuestro centro de control propio.",
+    "price_range": "$$$",
+    "status": "published",
+    "sort": 5,
+    "features": [
+      "Centro de control propio y dedicado",
+      "Operadores capacitados 24/7",
+      "Monitoreo de camaras y alarmas",
+      "Respuesta inmediata ante eventos",
+      "Coordinacion con Carabineros",
+      "Alertas por SMS y telefono"
+    ],
+    "process": [
+      {
+        "step": "Instalacion",
+        "description": "Conectamos sistemas al centro de control"
+      },
+      {
+        "step": "Configuracion",
+        "description": "Personalizamos alertas y protocolos"
+      },
+      {
+        "step": "Monitoreo",
+        "description": "Supervision continua 24/7"
+      },
+      {
+        "step": "Respuesta",
+        "description": "Protocolo ante cualquier alerta"
+      }
+    ],
+    "common_issues": [
+      "Alarmas sin respuesta",
+      "Emergencias sin coordinacion",
+      "Falta de supervision fuera de horario"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Seguridad para Eventos",
+    "slug": "seguridad-eventos",
+    "description": "Servicio especializado para eventos corporativos, sociales y masivos.",
+    "short_description": "Seguridad para Eventos",
+    "hero_heading": "Seguridad para Eventos",
+    "meta_title": "Seguridad para Eventos | GuardMan Chile",
+    "meta_description": "Servicio especializado para eventos corporativos, sociales y masivos....",
+    "price_range": "$$$$",
+    "status": "published",
+    "sort": 6,
+    "features": [],
+    "process": [],
+    "common_issues": []
+  },
+  {
+    "id": 37,
+    "name": "Seguridad para Eventos",
+    "slug": "seguridad-eventos",
+    "description": "Servicio especializado para eventos corporativos, sociales y masivos. Control de accesos, gestion de multitudes y proteccion VIP.",
+    "short_description": "Seguridad profesional para todo tipo de eventos",
+    "hero_heading": "Seguridad para Eventos Corporativos",
+    "meta_title": "Seguridad para Eventos Santiago | GuardMan",
+    "meta_description": "Seguridad para eventos corporativos y sociales. Control de invitados y gestion de masas.",
+    "price_range": "$$$$",
+    "status": "published",
+    "sort": 6,
+    "features": [
+      "Planificacion previa con productores",
+      "Control de accesos e invitaciones",
+      "Gestion de multitudes",
+      "Proteccion VIP",
+      "Personal uniformado y identificado",
+      "Coordinacion con servicios de emergencia"
+    ],
+    "process": [
+      {
+        "step": "Reunion",
+        "description": "Entendemos las necesidades del evento"
+      },
+      {
+        "step": "Planificacion",
+        "description": "Disenamos el dispositif de seguridad"
+      },
+      {
+        "step": "Despliegue",
+        "description": "Personal en puntos estrategicos"
+      },
+      {
+        "step": "Coordinacion",
+        "description": "Comunicacion constante durante el evento"
+      }
+    ],
+    "common_issues": [
+      "Control de invitados",
+      "Gestion de masas",
+      "Seguridad VIP para speakers"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Seguridad Industrial",
+    "slug": "seguridad-industrial",
+    "description": "Proteccion especializada para instalaciones industriales, bodegas, centros logisticos y obras en construccion. Vigilancia perimetral y control de vehiculos.",
+    "short_description": "Proteccion para industrias, bodegas y obras",
+    "hero_heading": "Seguridad Industrial y Obras",
+    "meta_title": "Seguridad Industrial Santiago | GuardMan",
+    "meta_description": "Seguridad industrial y vigilancia perimetral para fabricas, bodegas y centros logisticos.",
+    "price_range": "$$$",
+    "status": "published",
+    "sort": 7,
+    "features": [
+      "Vigilancia perimetral continua",
+      "Control de vehiculos de carga",
+      "Prevencion de robos de mercaderia",
+      "Reportes de rondas en tiempo real",
+      "Integracion con sistemas existentes",
+      "Personal capacitado en zonas industriales"
+    ],
+    "process": [
+      {
+        "step": "Visita tecnica",
+        "description": "Evaluamos la instalacion"
+      },
+      {
+        "step": "Analisis",
+        "description": "Identificamos vulnerabilidades"
+      },
+      {
+        "step": "Propuesta",
+        "description": "Plan de seguridad detallado"
+      },
+      {
+        "step": "Monitoreo",
+        "description": "Supervision continua"
+      }
+    ],
+    "common_issues": [
+      "Robos en bodegas",
+      "Acceso no autorizado a zonas peligrosas",
+      "Falta de control en zonas perimetricas"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Seguridad Industrial",
+    "slug": "seguridad-industrial",
+    "description": "Proteccion especializada para instalaciones industriales, bodegas y obras.",
+    "short_description": "Seguridad Industrial",
+    "hero_heading": "Seguridad Industrial",
+    "meta_title": "Seguridad Industrial | GuardMan Chile",
+    "meta_description": "Proteccion especializada para instalaciones industriales, bodegas y obras....",
+    "price_range": "$$$",
+    "status": "published",
+    "sort": 7,
+    "features": [],
+    "process": [],
+    "common_issues": []
+  },
+  {
+    "id": 31,
+    "name": "Auditoria de Seguridad",
+    "slug": "auditoria-seguridad",
+    "description": "Evaluacion profesional de las necesidades de seguridad.",
+    "short_description": "Auditoria de Seguridad",
+    "hero_heading": "Auditoria de Seguridad",
+    "meta_title": "Auditoria de Seguridad | GuardMan Chile",
+    "meta_description": "Evaluacion profesional de las necesidades de seguridad....",
+    "price_range": "$$",
+    "status": "published",
+    "sort": 8,
+    "features": [],
+    "process": [],
+    "common_issues": []
+  },
+  {
+    "id": 39,
+    "name": "Auditoria de Seguridad",
+    "slug": "auditoria-seguridad",
+    "description": "Evaluacion profesional de las necesidades de seguridad de tu empresa o residencia. Visita tecnica gratuita y analisis de vulnerabilidades.",
+    "short_description": "Evaluacion profesional de vulnerabilidades",
+    "hero_heading": "Auditoria de Seguridad Profesional",
+    "meta_title": "Auditoria de Seguridad Santiago | GuardMan",
+    "meta_description": "Auditoria de seguridad profesional. Visita tecnica gratuita y plan de recomendaciones.",
+    "price_range": "$$",
+    "status": "published",
+    "sort": 8,
+    "features": [
+      "Visita tecnica gratuita",
+      "Analisis de vulnerabilidades",
+      "Plan documentado con recomendaciones",
+      "Priorizacion de inversiones",
+      "Seguimiento post-auditoria",
+      "Asesoria en normativas vigentes"
+    ],
+    "process": [
+      {
+        "step": "Solicitud",
+        "description": "Contactanos y agendamos visita"
+      },
+      {
+        "step": "Visita tecnica",
+        "description": "Inspeccionamos sin costo"
+      },
+      {
+        "step": "Informe",
+        "description": "Entregamos analisis detallado"
+      },
+      {
+        "step": "Seguimiento",
+        "description": "Asesoria continua"
+      }
+    ],
+    "common_issues": [
+      "No saber que necesita realmente",
+      "Inversion incorrecta en seguridad",
+      "Falta de normativa compliant"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Guard Pod",
+    "slug": "guard-pod",
+    "description": "Unidades moviles de vigilancia autonomas y desplegables en menos de 2 horas. Ideal para obras, eventos temporales y zonas sin infraestructura electrica.",
+    "short_description": "Unidades moviles de vigilancia 24/7 con tecnologia avanzada",
+    "hero_heading": "Guard Pod - Vigilancia Movil Autonoma",
+    "meta_title": "Guard Pod en Santiago | Unidad Movil de Seguridad | GuardMan",
+    "meta_description": "Guard Pod: unidad movil de vigilancia autonoma. Ideal para obras, eventos y zonas remotas sin infraestructura.",
+    "price_range": "$$$$",
+    "status": "published",
+    "sort": 9,
+    "features": [
+      "Modulo prefabricado autonomo",
+      "Energia solar con baterias de respaldo",
+      "Camaras PTZ 360 grados",
+      "Sensor de movimiento y termico",
+      "Conectividad 4G/LTE",
+      "Alarma sonora y luces estroboscopicas",
+      "Monitoreo remoto 24/7",
+      "Instalacion en menos de 2 horas"
+    ],
+    "process": [
+      {
+        "step": "Solicitud",
+        "description": "Evaluamos necesidades y ubicacion"
+      },
+      {
+        "step": "Propuesta",
+        "description": "Disenamos solucion personalizada"
+      },
+      {
+        "step": "Entrega",
+        "description": "Instalamos Guard Pod en sitio"
+      },
+      {
+        "step": "Monitoreo",
+        "description": "Supervision remota continua"
+      }
+    ],
+    "common_issues": [
+      "Obras sin vigilancia",
+      "Zonas sin electricidad",
+      "Eventos temporales sin infraestructura"
+    ]
+  }
+]

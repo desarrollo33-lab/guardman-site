@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "industry": "Hotelería",
+    "logo_url": "",
+    "featured": true,
+    "status": "published",
+    "sort": 1,
+    "name": "Courtyard by Marriott",
+    "services": []
+  },
+  {
+    "id": 2,
+    "industry": "Inmobiliario",
+    "logo_url": "",
+    "featured": true,
+    "status": "published",
+    "sort": 2,
+    "name": "Hamptons",
+    "services": []
+  },
+  {
+    "id": 3,
+    "industry": "Automotriz",
+    "logo_url": "",
+    "featured": true,
+    "status": "published",
+    "sort": 3,
+    "name": "Kavak",
+    "services": []
+  },
+  {
+    "id": 4,
+    "industry": "Inmobiliario",
+    "logo_url": "",
+    "featured": true,
+    "status": "published",
+    "sort": 4,
+    "name": "Hoy Estoril",
+    "services": []
+  },
+  {
+    "id": 5,
+    "industry": "Diplomático",
+    "logo_url": "",
+    "featured": true,
+    "status": "published",
+    "sort": 5,
+    "name": "Embajadas",
+    "services": []
+  },
+  {
+    "id": 6,
+    "industry": "Oficinas",
+    "logo_url": "",
+    "featured": true,
+    "status": "published",
+    "sort": 6,
+    "name": "Work Center",
+    "services": []
+  },
+  {
+    "id": 7,
+    "industry": "Inmobiliario",
+    "logo_url": "",
+    "featured": true,
+    "status": "published",
+    "sort": 7,
+    "name": "Avanza Park",
+    "services": []
+  },
+  {
+    "id": 8,
+    "industry": "Residencial",
+    "logo_url": "",
+    "featured": true,
+    "status": "published",
+    "sort": 8,
+    "name": "Condominios",
+    "services": []
+  }
+]

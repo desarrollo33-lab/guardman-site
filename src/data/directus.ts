@@ -1,5 +1,17 @@
-const DIRECTUS_URL = 'http://64.176.16.231:8055';
+/**
+ * Directus CMS Data Layer
+ * Reads pre-fetched JSON data from src/data/generated/
+ * Data is fetched at build time via scripts/fetch-cms-data.mjs
+ */
 
+import servicesData from './generated/services.json';
+import locationsData from './generated/locations.json';
+import sectorsData from './generated/sectors.json';
+import clientsData from './generated/clients.json';
+import testimonialsData from './generated/testimonials.json';
+import siteConfigData from './generated/site-config.json';
+
+// Types
 export interface Service {
   id: number;
   name: string;
@@ -33,22 +45,30 @@ export interface Location {
   sort: number;
 }
 
-export interface SiteConfig {
-  site_name: string;
-  site_url: string;
-  phone: string;
-  phone_tel: string;
-  email: string;
-  address: string;
-  opening_hours_schema: string;
-  latitude: number;
-  longitude: number;
-  about_text: string;
-  brand_voice: string;
-  hours: { day: string; hours: string }[];
-  usps: { title: string; description: string }[];
-  social_links: { instagram?: string; youtube?: string };
-  stats: { guards: string; clients: string; locations: string; years: string };
+export interface Sector {
+  id: number;
+  name: string;
+  slug: string;
+  icon: string;
+  description: string;
+  hero_title: string;
+  hero_subtitle: string;
+  challenges: { title: string; description: string }[];
+  meta_title: string;
+  meta_description: string;
+  status: string;
+  sort: number;
+}
+
+export interface Client {
+  id: number;
+  name: string;
+  industry: string;
+  services: string[];
+  logo_url: string;
+  featured: boolean;
+  status: string;
+  sort: number;
 }
 
 export interface Testimonial {
@@ -58,47 +78,100 @@ export interface Testimonial {
   company: string;
   quote: string;
   rating: number;
-  location: string;
+  sector: string;
+  featured: boolean;
+  status: string;
+  sort: number;
 }
 
-// Fetch all published services
+export interface SiteConfig {
+  site_name: string;
+  tagline: string;
+  description: string;
+  phone: string;
+  phone_display: string;
+  whatsapp: string;
+  email: string;
+  address: string;
+  latitude: number;
+  longitude: number;
+  hours: { day: string; hours: string }[];
+  social_instagram: string;
+  social_youtube: string;
+  stats_guards: string;
+  stats_clients: string;
+  stats_locations: string;
+  stats_years: string;
+  legal_name: string;
+  legal_rut: string;
+  seo_title: string;
+  seo_description: string;
+}
+
+// Use imported JSON data
+const services = (servicesData as any[]).map(item => ({
+  ...item,
+  features: item.features || [],
+  process: item.process || [],
+  common_issues: item.common_issues || [],
+})) as Service[];
+
+const locations = (locationsData as any[]).map(item => ({
+  ...item,
+  neighborhoods: item.neighborhoods || [],
+})) as Location[];
+
+const sectors = (sectorsData as any[]).map(item => ({
+  ...item,
+  challenges: item.challenges || [],
+})) as Sector[];
+
+const clients = (clientsData as any[]).map(item => ({
+  ...item,
+  services: item.services || [],
+})) as Client[];
+
+const testimonials = testimonialsData as Testimonial[];
+
+const siteConfig = siteConfigData as SiteConfig | null;
+
+// API functions that return the cached data
 export async function getServices(): Promise<Service[]> {
-  const res = await fetch(`${DIRECTUS_URL}/items/services?filter={"status":{"_eq":"published"}}&sort=sort&limit=-1`);
-  const data = await res.json();
-  return data.data || [];
+  return services;
 }
 
-// Fetch all published locations
-export async function getLocations(): Promise<Location[]> {
-  const res = await fetch(`${DIRECTUS_URL}/items/locations?filter={"status":{"_eq":"published"}}&sort=sort&limit=-1`);
-  const data = await res.json();
-  return data.data || [];
-}
-
-// Fetch single service by slug
 export async function getServiceBySlug(slug: string): Promise<Service | null> {
-  const res = await fetch(`${DIRECTUS_URL}/items/services?filter={"slug":{"_eq":"${slug}"},"status":{"_eq":"published"}}&limit=1`);
-  const data = await res.json();
-  return data.data?.[0] || null;
+  return services.find(s => s.slug === slug) || null;
 }
 
-// Fetch single location by slug
+export async function getLocations(): Promise<Location[]> {
+  return locations;
+}
+
 export async function getLocationBySlug(slug: string): Promise<Location | null> {
-  const res = await fetch(`${DIRECTUS_URL}/items/locations?filter={"slug":{"_eq":"${slug}"},"status":{"_eq":"published"}}&limit=1`);
-  const data = await res.json();
-  return data.data?.[0] || null;
+  return locations.find(l => l.slug === slug) || null;
 }
 
-// Fetch testimonials
+export async function getSectors(): Promise<Sector[]> {
+  return sectors;
+}
+
+export async function getSectorBySlug(slug: string): Promise<Sector | null> {
+  return sectors.find(s => s.slug === slug) || null;
+}
+
+export async function getFeaturedClients(): Promise<Client[]> {
+  return clients;
+}
+
+export async function getClients(): Promise<Client[]> {
+  return clients;
+}
+
 export async function getTestimonials(): Promise<Testimonial[]> {
-  const res = await fetch(`${DIRECTUS_URL}/items/testimonials?filter={"status":{"_eq":"published"}}&sort=sort&limit=10`);
-  const data = await res.json();
-  return data.data || [];
+  return testimonials;
 }
 
-// Fetch site config (singleton)
 export async function getSiteConfig(): Promise<SiteConfig | null> {
-  const res = await fetch(`${DIRECTUS_URL}/items/site_config?limit=1`);
-  const data = await res.json();
-  return data.data?.[0] || null;
+  return siteConfig;
 }

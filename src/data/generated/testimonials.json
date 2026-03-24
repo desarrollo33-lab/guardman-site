@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "role": "Gerente de Operaciones",
+    "company": "Hotel Marriott Santiago",
+    "rating": 5,
+    "sector": "hoteleria",
+    "featured": true,
+    "status": "published",
+    "sort": 1
+  },
+  {
+    "id": 2,
+    "role": "Administradora",
+    "company": "Condominio Los Jardines",
+    "rating": 5,
+    "sector": "residencial",
+    "featured": true,
+    "status": "published",
+    "sort": 2
+  },
+  {
+    "id": 3,
+    "role": "Director de Logistica",
+    "company": "Centro Logistico Norte",
+    "rating": 5,
+    "sector": "industrial",
+    "featured": true,
+    "status": "published",
+    "sort": 3
+  }
+]

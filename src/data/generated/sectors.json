@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "icon": "hotel",
+    "description": "Hoteles, resorts y establecimientos de alojamiento turistico. Proteccion para huespedes, empleados y activos.",
+    "hero_title": "Seguridad para Hoteles y Resorts",
+    "hero_subtitle": "Proteccion integral para hoteles, resorts y establecimientos de alojamiento. Garantizamos la seguridad de tus huespedes y colaboradores.",
+    "meta_title": "Seguridad para Hoteles | GuardMan Chile",
+    "meta_description": "Servicios de seguridad especializados para hoteles en Santiago. Guardias, CCTV y monitoreo 24/7.",
+    "status": "published",
+    "sort": 1,
+    "challenges": []
+  },
+  {
+    "id": 2,
+    "icon": "business",
+    "description": "Oficinas, centros comerciales y empresas. Soluciones que protejen activos sin interrumpir operaciones.",
+    "hero_title": "Seguridad para Empresas y Oficinas",
+    "hero_subtitle": "Proteccion integral para centros comerciales, edificios corporativos y oficinas. Control de accesos y vigilancia profesional.",
+    "meta_title": "Seguridad Corporativa | GuardMan Chile",
+    "meta_description": "Servicios de seguridad para oficinas y empresas en Santiago. Control de accesos, CCTV y guardias.",
+    "status": "published",
+    "sort": 2,
+    "challenges": []
+  },
+  {
+    "id": 3,
+    "icon": "home",
+    "description": "Condominios, casas y comunidades. Tranquilidad para familias y comunidades.",
+    "hero_title": "Seguridad para Condominios y Casas",
+    "hero_subtitle": "Protege tu hogar y comunidad con guardias certificados, vigilancia las 24 horas y sistemas de control de accesos.",
+    "meta_title": "Seguridad Residencial | GuardMan Chile",
+    "meta_description": "Seguridad para condominios, casas y comunidades en Santiago. Guardias y vigilancia 24/7.",
+    "status": "published",
+    "sort": 3,
+    "challenges": []
+  },
+  {
+    "id": 4,
+    "icon": "factory",
+    "description": "Fabricas, bodegas y centros logisticos. Proteccion de inventario y activos industriales.",
+    "hero_title": "Seguridad Industrial y Logistica",
+    "hero_subtitle": "Proteccion para fabricas, bodegas y centros de distribucion. Vigilancia perimetral y control de vehiculos.",
+    "meta_title": "Seguridad Industrial | GuardMan Chile",
+    "meta_description": "Seguridad para fabricas, bodegas y centros logisticos en Santiago.",
+    "status": "published",
+    "sort": 4,
+    "challenges": []
+  },
+  {
+    "id": 5,
+    "icon": "car",
+    "description": "Concesionarias, talleres y centros de servicio automotriz. Vigilancia para vehiculos de alto valor.",
+    "hero_title": "Seguridad para el Sector Automotriz",
+    "hero_subtitle": "Proteccion para concessionarias, talleres y centros de servicio. Vehiculos de alto valor bajo vigilancia constante.",
+    "meta_title": "Seguridad Automotriz | GuardMan Chile",
+    "meta_description": "Seguridad para concessionarias y talleres en Santiago.",
+    "status": "published",
+    "sort": 5,
+    "challenges": []
+  },
+  {
+    "id": 6,
+    "icon": "embassy",
+    "description": "Embajadas, consulados y representaciones diplomaticas. Protocolos de seguridad de alto nivel.",
+    "hero_title": "Seguridad para Embajadas y Consulados",
+    "hero_subtitle": "Proteccion especializada para representaciones diplomaticas, embajadores y personal consular.",
+    "meta_title": "Seguridad Diplomática | GuardMan Chile",
+    "meta_description": "Seguridad para embajadas y consulados en Santiago.",
+    "status": "published",
+    "sort": 6,
+    "challenges": []
+  }
+]

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { services } from '../../data/services';
+import { getServices } from '../../data/directus';
+
+const services = await getServices();
 ---
 
 <BaseLayout title="Servicios de Seguridad en Santiago" description="Conoce todos nuestros servicios de seguridad privada: guardias, CCTV, control de accesos, monitoreo 24/7 y mas.">
