@@ -39,7 +39,7 @@
     "featured": true,
     "status": "published",
     "sort": 1,
-    "image": "a6ef6c6d-4e25-4068-805a-366efb21b96a"
+    "image": "service-guardias-de-seguridad.png"
   },
   {
     "id": 33,
@@ -85,7 +85,7 @@
     "featured": true,
     "status": "published",
     "sort": 2,
-    "image": "409313f1-32c7-408c-9f2e-50edee982696"
+    "image": "service-cctv-videovigilancia.png"
   },
   {
     "id": 34,
@@ -127,7 +127,7 @@
     "featured": true,
     "status": "published",
     "sort": 3,
-    "image": "dcc39547-b1bb-4d15-8831-25aa4872dba2"
+    "image": "service-control-de-accesos.png"
   },
   {
     "id": 35,
@@ -169,7 +169,7 @@
     "featured": false,
     "status": "published",
     "sort": 4,
-    "image": "976a5dca-96c2-4b14-a9e5-b37f3915204d"
+    "image": "service-escoltas-privados.png"
   },
   {
     "id": 36,
@@ -215,7 +215,7 @@
     "featured": true,
     "status": "published",
     "sort": 5,
-    "image": "a884b694-da62-4994-8f32-8c0326d0d779"
+    "image": "service-monitoreo-24-7.png"
   },
   {
     "id": 37,
@@ -261,7 +261,7 @@
     "featured": false,
     "status": "published",
     "sort": 6,
-    "image": "b92640af-4e10-4ddc-b2b6-92fce7c96559"
+    "image": "service-seguridad-eventos.png"
   },
   {
     "id": 38,
@@ -307,7 +307,7 @@
     "featured": false,
     "status": "published",
     "sort": 7,
-    "image": "94b5db9c-87a3-4d4e-be6d-3b191439bcd5"
+    "image": "service-seguridad-industrial.png"
   },
   {
     "id": 39,
@@ -353,7 +353,7 @@
     "featured": false,
     "status": "published",
     "sort": 8,
-    "image": "756cee66-ebe0-44f4-bf76-2838dbee756f"
+    "image": "service-auditoria-seguridad.png"
   },
   {
     "id": 40,

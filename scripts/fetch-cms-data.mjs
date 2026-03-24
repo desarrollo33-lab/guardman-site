@@ -6,13 +6,14 @@
  * Data is pre-fetched at build time for static site generation
  */
 
-import { writeFileSync, mkdirSync } from 'fs';
+import { writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = join(__dirname, '..');
 const DATA_DIR = join(ROOT, 'src', 'data', 'generated');
+const IMAGES_DIR = join(ROOT, 'public', 'images');
 
 const DIRECTUS_URL = 'http://64.176.16.231:8055';
 
@@ -110,11 +111,52 @@ function parseJsonField(value) {
   return value || [];
 }
 
+// Download image from Directus and save locally
+async function downloadImage(token, imageId, filename) {
+  if (!imageId) return null;
+  
+  const localPath = `/images/${filename}`;
+  const fullPath = join(IMAGES_DIR, filename);
+  
+  // Skip if already exists
+  if (existsSync(fullPath)) {
+    return localPath;
+  }
+  
+  try {
+    const res = await fetch(`${DIRECTUS_URL}/assets/${imageId}?access_token=${token}`);
+    if (!res.ok) {
+      console.warn(`  ⚠️ Failed to download image ${imageId}`);
+      return null;
+    }
+    
+    const buffer = await res.arrayBuffer();
+    writeFileSync(fullPath, Buffer.from(buffer));
+    return localPath;
+  } catch (error) {
+    console.warn(`  ⚠️ Error downloading image ${imageId}: ${error.message}`);
+    return null;
+  }
+}
+
+// Get list of all files in Directus
+async function getDirectusFiles(token) {
+  try {
+    const res = await fetch(`${DIRECTUS_URL}/files?access_token=${token}&limit=-1`);
+    const data = await res.json();
+    return data.data || [];
+  } catch (error) {
+    console.warn(`⚠️ Failed to fetch files list:`, error.message);
+    return [];
+  }
+}
+
 async function main() {
   console.log('🔄 Fetching data from Directus CMS...\n');
   
-  // Ensure directory exists
+  // Ensure directories exist
   mkdirSync(DATA_DIR, { recursive: true });
+  mkdirSync(IMAGES_DIR, { recursive: true });
   
   const token = await login();
   
@@ -138,6 +180,67 @@ async function main() {
       fetchData(token, '/items/site_config?limit=1'),
     ]);
     
+    // Get file metadata from Directus for naming
+    const files = await getDirectusFiles(token);
+    const fileMap = {};
+    files.forEach(f => { fileMap[f.id] = f; });
+    
+    // Site config is a singleton, so it's an object not an array
+    const siteConfigData = siteConfig;
+    
+    // Download images
+    console.log('📥 Downloading images from Directus...\n');
+    
+    // Create image name mapping (Directus ID -> local filename)
+    const imageNameMap = {};
+    
+    // Services images
+    for (const s of services) {
+      if (s.image && fileMap[s.image]) {
+        const ext = fileMap[s.image].type === 'image/png' ? 'png' : 'jpg';
+        const filename = `service-${s.slug}.${ext}`;
+        imageNameMap[s.image] = filename;
+      }
+    }
+    
+    // Sectors images
+    for (const s of sectors) {
+      if (s.image && fileMap[s.image]) {
+        const ext = fileMap[s.image].type === 'image/png' ? 'png' : 'jpg';
+        const filename = `sector-${s.slug}.${ext}`;
+        imageNameMap[s.image] = filename;
+      }
+    }
+    
+    // Locations images
+    for (const l of locations) {
+      if (l.image && fileMap[l.image]) {
+        const ext = fileMap[l.image].type === 'image/png' ? 'png' : 'jpg';
+        const filename = `location-${l.slug}.${ext}`;
+        imageNameMap[l.image] = filename;
+      }
+    }
+    
+    // Hero image from site_config (singleton - object, not array)
+    if (siteConfigData && siteConfigData.hero_image) {
+      const heroImageId = siteConfigData.hero_image;
+      if (fileMap[heroImageId]) {
+        const ext = fileMap[heroImageId].type === 'image/png' ? 'png' : 'jpg';
+        imageNameMap[heroImageId] = `hero-home.${ext}`;
+      }
+    }
+    
+    // Download all images
+    let downloadedCount = 0;
+    for (const [imageId, filename] of Object.entries(imageNameMap)) {
+      const localPath = await downloadImage(token, imageId, filename);
+      if (localPath) {
+        downloadedCount++;
+        console.log(`  ✓ ${filename}`);
+      }
+    }
+    console.log(`  → ${downloadedCount} images downloaded\n`);
+    
     // Process and save services
     const processedServices = services.map(s => ({
       id: s.id,
@@ -155,7 +258,7 @@ async function main() {
       featured: s.featured || false,
       status: s.status,
       sort: s.sort || 0,
-      image: s.image || null,
+      image: s.image ? imageNameMap[s.image] || s.image : null,
     }));
     writeFileSync(join(DATA_DIR, 'services.json'), JSON.stringify(processedServices, null, 2));
     console.log(`✓ Services: ${processedServices.length} records`);
@@ -174,7 +277,7 @@ async function main() {
       meta_title: l.meta_title || `Seguridad en ${l.name} | GuardMan`,
       meta_description: l.meta_description || l.description || '',
       featured: l.featured || false,
-      image: l.image || null,
+      image: l.image ? imageNameMap[l.image] || l.image : null,
       status: l.status,
       sort: l.sort || 0,
     }));
@@ -194,7 +297,7 @@ async function main() {
       meta_title: s.meta_title || `${s.name} | GuardMan Chile`,
       meta_description: s.meta_description || s.description || '',
       featured: s.featured || false,
-      image: s.image || null,
+      image: s.image ? imageNameMap[s.image] || s.image : null,
       status: s.status,
       sort: s.sort || 0,
     }));
@@ -232,15 +335,22 @@ async function main() {
     console.log(`✓ Testimonials: ${processedTestimonials.length} records`);
     
     // Process and save site config (merge with defaults to ensure all fields exist)
+    // Note: siteConfig from Directus singleton is an object, not an array
     let configData = {};
-    if (siteConfig && siteConfig.length > 0) {
+    if (siteConfigData && Object.keys(siteConfigData).length > 0) {
+      // Convert hero_image ID to local path if it exists
+      const heroImageLocal = siteConfigData.hero_image && imageNameMap[siteConfigData.hero_image] 
+        ? imageNameMap[siteConfigData.hero_image] 
+        : (siteConfigData.hero_image || null);
+      
       configData = {
         ...DEFAULT_SITE_CONFIG,
-        ...siteConfig[0],
+        ...siteConfigData,
+        hero_image: heroImageLocal,
         // Ensure nested arrays are properly parsed
-        hours: parseJsonField(siteConfig[0].hours).length > 0 ? parseJsonField(siteConfig[0].hours) : DEFAULT_SITE_CONFIG.hours,
-        usps: parseJsonField(siteConfig[0].usps).length > 0 ? parseJsonField(siteConfig[0].usps) : DEFAULT_SITE_CONFIG.usps,
-        certifications: parseJsonField(siteConfig[0].certifications).length > 0 ? parseJsonField(siteConfig[0].certifications) : DEFAULT_SITE_CONFIG.certifications,
+        hours: parseJsonField(siteConfigData.hours).length > 0 ? parseJsonField(siteConfigData.hours) : DEFAULT_SITE_CONFIG.hours,
+        usps: parseJsonField(siteConfigData.usps).length > 0 ? parseJsonField(siteConfigData.usps) : DEFAULT_SITE_CONFIG.usps,
+        certifications: parseJsonField(siteConfigData.certifications).length > 0 ? parseJsonField(siteConfigData.certifications) : DEFAULT_SITE_CONFIG.certifications,
       };
     } else {
       configData = DEFAULT_SITE_CONFIG;
