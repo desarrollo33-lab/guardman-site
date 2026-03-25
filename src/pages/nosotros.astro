@@ -112,14 +112,30 @@ const featuredClientNames = featuredClients.map(c => c.name);
     </div>
   </section>
 
+  <!-- Empresas que confian -->
+  {featuredClientNames.length > 0 && (
+    <section class="py-16 bg-neutral-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6 text-center">Empresas que confian en GuardMan</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          {featuredClientNames.map((client) => (
+            <div class="bg-white px-6 py-3 rounded-lg shadow-sm">
+              <span class="text-lg font-bold text-neutral-400">{client}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   <!-- Testimonios -->
   {featuredTestimonials.length > 0 && (
-    <section class="py-16 lg:py-24 bg-neutral-50">
+    <section class="py-16 lg:py-24 bg-white">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Lo que dicen nuestros clientes</h2>
           <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Empresas líderes confían en GuardMan Chile para proteger sus activos más importantes
+            Conoce las experiencias de empresas que confian en nosotros
           </p>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
