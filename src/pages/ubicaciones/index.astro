@@ -7,8 +7,19 @@ const locations = getLocations();
 
 <BaseLayout title="Ubicaciones con Guardia de Seguridad | GuardMan Chile" description="Guardias de seguridad disponibles en todas las comunas de Santiago y zona de Los Andes. Cobertura 24/7 en Región Metropolitana.">
   <!-- Hero -->
-  <section class="bg-primary-600 text-white py-16 lg:py-20">
-    <div class="container mx-auto px-4 text-center">
+  <section class="relative bg-primary-600 text-white py-16 lg:py-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <img 
+        src="/images/cobertura_zonas.png"
+        alt="Mapa de cobertura de seguridad GuardMan en la Region Metropolitana"
+        class="w-full h-full object-cover opacity-30"
+        width="1920"
+        height="1080"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-primary-800/95 to-primary-600/70"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10 text-center">
       <h1 class="text-4xl lg:text-5xl font-bold mb-4">Ubicaciones con Guardia de Seguridad</h1>
       <p class="text-xl text-white/90 max-w-2xl mx-auto">
         Protegemos empresas y residencias en las principales comunas de Santiago y zona valparaiso
