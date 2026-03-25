@@ -499,21 +499,15 @@ const featuredClients = clients.map(c => c.name);
           </p>
         </div>
         <div class="relative">
-          <div class="rounded-2xl aspect-video overflow-hidden border border-white/20 bg-black/20">
-            <!-- Placeholder para imagen de cobertura - reemplazar con imagen real -->
-            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary-600/40 to-primary-800/40">
-              <svg class="w-24 h-24 text-white/40" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
-                <circle cx="50" cy="50" r="25" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
-                <circle cx="50" cy="50" r="10" fill="currentColor"/>
-                <!-- Puntos de ubicacion -->
-                <circle cx="30" cy="35" r="3" fill="currentColor"/>
-                <circle cx="70" cy="40" r="3" fill="currentColor"/>
-                <circle cx="45" cy="70" r="3" fill="currentColor"/>
-                <circle cx="65" cy="65" r="3" fill="currentColor"/>
-                <circle cx="35" cy="55" r="3" fill="currentColor"/>
-              </svg>
-            </div>
+          <div class="rounded-2xl aspect-video overflow-hidden border border-white/20">
+            <img 
+              src="/images/cobertura_zonas.png"
+              alt="Mapa de cobertura de seguridad GuardMan en la Region Metropolitana"
+              class="w-full h-full object-cover"
+              width="800"
+              height="450"
+              loading="lazy"
+            />
           </div>
           <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
             14 Comunas
