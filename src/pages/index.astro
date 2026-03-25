@@ -27,7 +27,7 @@ const siteConfig = {
 };
 
 const guardPodService = services.find(s => s.slug === 'guard-pod');
-const featuredClients = clients.map(c => c.name);
+const featuredClients = clients.filter(c => c.featured && c.logo_url);
 ---
 
 <BaseLayout title="Seguridad Privada en Santiago | GuardMan Chile" description={config?.seo_description || 'GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.'} image={optimizeImageUrl(`/images/${config?.hero_image}`)}>
@@ -466,10 +466,15 @@ const featuredClients = clients.map(c => c.name);
     <section class="py-16 lg:py-24 bg-white border-t border-neutral-200">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-8 text-center">Empresas que confian en GuardMan</h2>
-        <div class="flex flex-wrap justify-center gap-4">
+        <div class="flex flex-wrap justify-center gap-8 items-center">
           {featuredClients.map((client) => (
-            <div class="bg-neutral-50 px-6 py-4 rounded-lg border border-neutral-200">
-              <span class="text-lg font-semibold text-neutral-600">{client}</span>
+            <div class="bg-white px-8 py-6 rounded-xl border border-neutral-200 hover:shadow-md transition-shadow">
+              <img 
+                src={client.logo_url}
+                alt={`Logo de ${client.name}`}
+                class="h-16 w-auto object-contain"
+                loading="lazy"
+              />
             </div>
           ))}
         </div>
