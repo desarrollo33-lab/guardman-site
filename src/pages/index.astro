@@ -474,11 +474,11 @@ const featuredClients = clients.filter(c => c.featured && c.logo_url);
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {featuredClients.map((client) => (
             <div class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
-              <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
+              <div class="h-32 bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden flex items-center justify-center">
                 <img 
                   src={client.logo_url}
                   alt={`Logo de ${client.name}`}
-                  class="w-full h-full object-contain p-4"
+                  class="w-full h-full object-contain p-3"
                   loading="lazy"
                 />
               </div>
