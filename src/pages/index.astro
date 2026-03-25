@@ -514,30 +514,43 @@ const featuredClients = clients.map(c => c.name);
   )}
 
   <!-- 7. Ubicaciones Section -->
-  <section class="py-16 lg:py-24 bg-neutral-50">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-8">
-        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Cobertura en toda la Region Metropolitana</h2>
-        <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
-          Protegemos empresas y residencias en las principales comunas de Santiago y la zona de Los Andes y San Felipe.
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-primary-700 to-primary-800 text-white relative overflow-hidden" aria-labelledby="ubicaciones-section-title">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="mb-8">
+        <div class="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <span>Cobertura Nacional</span>
+        </div>
+        <h2 id="ubicaciones-section-title" class="text-3xl lg:text-4xl font-bold mb-4">
+          Protegemos en toda la Region Metropolitana
+        </h2>
+        <p class="text-lg text-white/80 max-w-xl">
+          Presencia en las principales comunas de Santiago y la zona de Los Andes y San Felipe.
         </p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3">
+
+      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 mb-8">
         {locations.map(location => (
-          <a href={`/ubicaciones/${location.slug}`} class="bg-white rounded-lg p-3 text-center hover:shadow-md transition-all hover:border-primary-500 border-2 border-transparent group">
-            <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors text-sm">{location.name}</h3>
-            <span class="text-xs text-neutral-500">{location.zone}</span>
+          <a href={`/ubicaciones/${location.slug}`} class="bg-white/10 backdrop-blur rounded-lg p-3 text-center hover:bg-white/20 transition-colors border border-white/10 hover:border-white/30 group">
+            <h3 class="font-semibold text-white group-hover:text-white/90 text-sm">{location.name}</h3>
+            <span class="text-xs text-white/60">{location.zone}</span>
           </a>
         ))}
       </div>
-      <div class="text-center mt-8">
-        <a href="/ubicaciones" class="inline-flex items-center gap-2 border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors">
-          Ver todas las ubicaciones
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-          </svg>
-        </a>
-      </div>
+
+      <a href="/ubicaciones" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+        Ver todas las ubicaciones
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
     </div>
   </section>
 
