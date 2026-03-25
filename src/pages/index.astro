@@ -293,50 +293,49 @@ const featuredClients = clients.map(c => c.name);
     </div>
   </section>
 
-  <!-- 6. Clientes + Ubicaciones Section -->
-  <section class="py-16 lg:py-24 bg-white border-t border-neutral-200">
-    <div class="container mx-auto px-4">
-      <!-- Clientes -->
-      {featuredClients.length > 0 && (
-        <div class="mb-12">
-          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-8 text-center">Empresas que confian en GuardMan</h2>
-          <div class="flex flex-wrap justify-center gap-4">
-            {featuredClients.map((client) => (
-              <div class="bg-neutral-50 px-6 py-4 rounded-lg border border-neutral-200">
-                <span class="text-lg font-semibold text-neutral-600">{client}</span>
-              </div>
-            ))}
-          </div>
-          <p class="text-center mt-6 text-neutral-500">
-            <a href="/nosotros" class="text-primary-600 hover:text-primary-700 font-medium">Conoce mas sobre nosotros</a>
-          </p>
-        </div>
-      )}
-
-      <!-- Ubicaciones -->
-      <div>
-        <div class="text-center mb-8">
-          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Cobertura en toda la Region Metropolitana</h2>
-          <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Protegemos empresas y residencias en las principales comunas de Santiago y la zona de Los Andes y San Felipe.
-          </p>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3">
-          {locations.map(location => (
-            <a href={`/ubicaciones/${location.slug}`} class="bg-neutral-50 rounded-lg p-3 text-center hover:shadow-md transition-all hover:border-primary-500 border-2 border-transparent group">
-              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors text-sm">{location.name}</h3>
-              <span class="text-xs text-neutral-500">{location.zone}</span>
-            </a>
+  <!-- 6. Clientes Section -->
+  {featuredClients.length > 0 && (
+    <section class="py-16 lg:py-24 bg-white border-t border-neutral-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-8 text-center">Empresas que confian en GuardMan</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          {featuredClients.map((client) => (
+            <div class="bg-neutral-50 px-6 py-4 rounded-lg border border-neutral-200">
+              <span class="text-lg font-semibold text-neutral-600">{client}</span>
+            </div>
           ))}
         </div>
-        <div class="text-center mt-8">
-          <a href="/ubicaciones" class="inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors">
-            Ver todas las ubicaciones
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
+        <p class="text-center mt-6 text-neutral-500">
+          <a href="/nosotros" class="text-primary-600 hover:text-primary-700 font-medium">Conoce mas sobre nosotros</a>
+        </p>
+      </div>
+    </section>
+  )}
+
+  <!-- 7. Ubicaciones Section -->
+  <section class="py-16 lg:py-24 bg-neutral-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Cobertura en toda la Region Metropolitana</h2>
+        <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+          Protegemos empresas y residencias en las principales comunas de Santiago y la zona de Los Andes y San Felipe.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3">
+        {locations.map(location => (
+          <a href={`/ubicaciones/${location.slug}`} class="bg-white rounded-lg p-3 text-center hover:shadow-md transition-all hover:border-primary-500 border-2 border-transparent group">
+            <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors text-sm">{location.name}</h3>
+            <span class="text-xs text-neutral-500">{location.zone}</span>
           </a>
-        </div>
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/ubicaciones" class="inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors">
+          Ver todas las ubicaciones
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
