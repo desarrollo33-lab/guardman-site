@@ -75,62 +75,81 @@ const featuredClients = clients.map(c => c.name);
   <!-- 2. Quienes Somos Section -->
   <section class="py-16 lg:py-24 bg-white border-b border-neutral-200">
     <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center mb-8">
-        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
-          {siteConfig.name} - Seguridad privada profesional en Santiago
-        </h2>
-        <p class="text-lg text-neutral-600 leading-relaxed max-w-2xl mx-auto">
-          Mas de {siteConfig.stats.years} anos de experiencia protegiendo lo que mas te importa. Guardias certificados OS-10 y tecnologia de vanguardia para un servicio integral y confiable.
-        </p>
-      </div>
-
-      <!-- Certificaciones -->
-      <div class="flex flex-wrap justify-center gap-4 mb-8">
-        <div class="flex items-center gap-3 bg-neutral-50 rounded-full px-5 py-3 border border-neutral-200">
-          <div class="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center shrink-0">
-            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-          </div>
-          <div>
-            <span class="font-semibold text-neutral-900">OS-10</span>
-            <span class="text-neutral-500 text-sm ml-1">Certificacion vigente</span>
-          </div>
-        </div>
-
-        <div class="flex items-center gap-3 bg-neutral-50 rounded-full px-5 py-3 border border-neutral-200">
-          <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center shrink-0">
-            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"/>
             </svg>
+            Sobre Nosotros
           </div>
-          <div>
-            <span class="font-semibold text-neutral-900">Ley 21.659</span>
-            <span class="text-neutral-500 text-sm ml-1">Cumplimiento legal</span>
-          </div>
-        </div>
-
-        <div class="flex items-center gap-3 bg-neutral-50 rounded-full px-5 py-3 border border-neutral-200">
-          <div class="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center shrink-0">
-            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-neutral-900">
+            {siteConfig.name} - Seguridad privada profesional en Santiago
+          </h2>
+          <p class="text-lg text-neutral-600 mb-6 max-w-xl">
+            Mas de {siteConfig.stats.years} anos de experiencia protegiendo lo que mas te importa. Guardias certificados OS-10 y tecnologia de vanguardia para un servicio integral y confiable.
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-primary-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-neutral-700">Guardias certificados OS-10 vigentes</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-primary-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-neutral-700">Cumplimiento Ley 21.659</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-primary-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-neutral-700">Atencion 24/7 los 365 dias</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-primary-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-neutral-700">Centro de monitoreo propio</span>
+            </li>
+          </ul>
+          <a href="/nosotros" class="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+            Conoce mas sobre nosotros
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
+          </a>
+        </div>
+        <div class="relative">
+          <div class="bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl aspect-video flex items-center justify-center border-2 border-primary-200">
+            <div class="text-center">
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="bg-white/80 rounded-xl p-4">
+                  <div class="text-3xl font-bold text-primary-600">{siteConfig.stats.guards}</div>
+                  <div class="text-sm text-neutral-600">Guardias</div>
+                </div>
+                <div class="bg-white/80 rounded-xl p-4">
+                  <div class="text-3xl font-bold text-primary-600">{siteConfig.stats.clients}</div>
+                  <div class="text-sm text-neutral-600">Clientes</div>
+                </div>
+                <div class="bg-white/80 rounded-xl p-4">
+                  <div class="text-3xl font-bold text-primary-600">{siteConfig.stats.locations}</div>
+                  <div class="text-sm text-neutral-600">Comunas</div>
+                </div>
+                <div class="bg-white/80 rounded-xl p-4">
+                  <div class="text-3xl font-bold text-primary-600">{siteConfig.stats.years}</div>
+                  <div class="text-sm text-neutral-600">Anos</div>
+                </div>
+              </div>
+              <p class="text-primary-700 font-medium">Resultados que hablan por si solos</p>
+            </div>
           </div>
-          <div>
-            <span class="font-semibold text-neutral-900">24/7</span>
-            <span class="text-neutral-500 text-sm ml-1">Atencion permanente</span>
+          <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
+            Trayectoria comprobada
           </div>
         </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="text-center">
-        <a href="/nosotros" class="inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors">
-          Conoce mas sobre nosotros
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-          </svg>
-        </a>
       </div>
     </div>
   </section>
