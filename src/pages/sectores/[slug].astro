@@ -29,7 +29,7 @@ const relatedServices = allServices.filter(s =>
 );
 ---
 
-<BaseLayout title={sector.meta_title} description={sector.meta_description}>
+<BaseLayout title={sector.meta_title} description={sector.meta_description} image={optimizeImageUrl(`/images/${sector.image}`)}>
   <!-- Schema markup for sector page -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",

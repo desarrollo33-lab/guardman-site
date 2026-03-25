@@ -45,7 +45,7 @@ const serviceFAQs = [
 const areaServed = locations.map(l => l.name);
 ---
 
-<BaseLayout title={service.meta_title} description={service.meta_description}>
+<BaseLayout title={service.meta_title} description={service.meta_description} image={optimizeImageUrl(`/images/${service.image}`)}>
   <!-- Schema Markup -->
   <SchemaService 
     name={service.name}

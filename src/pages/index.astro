@@ -29,7 +29,7 @@ const guardPodService = services.find(s => s.slug === 'guard-pod');
 const featuredTestimonials = getTestimonials().filter(t => t.featured).slice(0, 3);
 ---
 
-<BaseLayout title="Seguridad Privada en Santiago | GuardMan Chile" description={config?.seo_description || 'GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.'}>
+<BaseLayout title="Seguridad Privada en Santiago | GuardMan Chile" description={config?.seo_description || 'GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.'} image={optimizeImageUrl(`/images/${config?.hero_image}`)}>
   <!-- Schema Markup for Homepage -->
   <SchemaWebSite />
   <SchemaOrganization />
