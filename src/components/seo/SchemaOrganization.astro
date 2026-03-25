@@ -31,6 +31,8 @@ const siteConfig = {
     locations: config?.stats_locations || '14',
     years: config?.stats_years || '8+',
   },
+  ratingValue: config?.aggregate_rating_value || '4.8',
+  ratingCount: config?.aggregate_rating_count || '127',
 };
 
 // Map day names to English for Schema.org
@@ -98,6 +100,10 @@ const schemaData = {
         siteConfig.social.instagram,
         siteConfig.social.youtube
       ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteConfig.url}/images/logo.png`
+      },
       "image": {
         "@type": "ImageObject",
         "url": `${siteConfig.url}/og-image.jpg`
@@ -146,8 +152,8 @@ const schemaData = {
       "areaServed": areaServed,
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "127"
+        "ratingValue": siteConfig.ratingValue,
+        "reviewCount": siteConfig.ratingCount
       }
     }
   ]

@@ -15,6 +15,8 @@ interface Props {
   longitude?: number;
   phone?: string;
   neighborhood?: string;
+  ratingValue?: string;
+  reviewCount?: string;
 }
 
 const { 
@@ -28,7 +30,9 @@ const {
   latitude = -33.4569,
   longitude = -70.6483,
   phone = "+56 2 2400 6000",
-  neighborhood
+  neighborhood,
+  ratingValue = "4.8",
+  reviewCount = "127"
 } = Astro.props;
 
 const schemaLocalBusiness = {
@@ -58,14 +62,19 @@ const schemaLocalBusiness = {
     "@type": "ImageObject",
     "url": "https://guardman.cl/og-image.jpg"
   },
-  "areaServed": {
-    "@type": neighborhood ? "Place" : "City",
-    ...(neighborhood ? { "name": neighborhood } : { "name": locality })
-  },
+  "areaServed": neighborhood 
+    ? {
+        "@type": "Place",
+        "name": neighborhood
+      }
+    : {
+        "@type": "City",
+        "name": locality
+      },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "127",
+    "ratingValue": ratingValue,
+    "reviewCount": reviewCount,
     "bestRating": "5"
   },
   "sameAs": [

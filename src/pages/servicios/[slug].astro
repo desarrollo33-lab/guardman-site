@@ -17,29 +17,31 @@ const locations = getLocations();
 const relatedServices = getServices();
 const topLocations = locations.slice(0, 10);
 
-// FAQs genéricas para servicios
-const serviceFAQs = [
-  {
-    question: `¿Cuánto cuesta el servicio de ${service.name} en Santiago?`,
-    answer: `El precio del servicio de ${service.name} varía según la ubicación, dimensiones del terreno y necesidades específicas. Solicita una cotización gratuita y te entregamos un presupuesto personalizado en menos de 24 horas.`
-  },
-  {
-    question: `¿Los guardias están certificados?`,
-    answer: `Sí, todos nuestros guardias cuentan con certificación OS-10 vigente y están capacitados según la Ley 21.659 de Seguridad Privada. Además, reciben entrenamiento continuo en emergencias y protocolos de seguridad.`
-  },
-  {
-    question: `¿Puedo contratar el servicio solo para eventos puntuales?`,
-    answer: `Sí, ofrecemos servicios tanto permanentes como temporales. Para eventos específicos, diseñamos un plan de seguridad adaptado a tus necesidades y número de asistentes esperados.`
-  },
-  {
-    question: `¿Qué incluye el servicio de ${service.name}?`,
-    answer: `Nuestro servicio incluye personal capacitado, supervisión 24/7, coordinación con autoridades locales, informes periódicos y soporte técnico. Los detalles específicos varían según el servicio contratado.`
-  },
-  {
-    question: `¿Cómo contrato el servicio de ${service.name}?`,
-    answer: `Puedes solicitar tu cotización gratis a través de nuestro formulario online, llamándonos al +56 2 2400 6000 o escribiendo a info@guardman.cl. Te respondemos en menos de 24 horas.`
-  }
-];
+// Usar FAQs del CMS si existen, si no usar genéricas
+const serviceFAQs = service.faqs && service.faqs.length > 0 
+  ? service.faqs 
+  : [
+      {
+        question: `¿Cuánto cuesta el servicio de ${service.name} en Santiago?`,
+        answer: `El precio del servicio de ${service.name} varía según la ubicación, dimensiones del terreno y necesidades específicas. Solicita una cotización gratuita y te entregamos un presupuesto personalizado en menos de 24 horas.`
+      },
+      {
+        question: `¿Los guardias están certificados?`,
+        answer: `Sí, todos nuestros guardias cuentan con certificación OS-10 vigente y están capacitados según la Ley 21.659 de Seguridad Privada. Además, reciben entrenamiento continuo en emergencias y protocolos de seguridad.`
+      },
+      {
+        question: `¿Puedo contratar el servicio solo para eventos puntuales?`,
+        answer: `Sí, ofrecemos servicios tanto permanentes como temporales. Para eventos específicos, diseñamos un plan de seguridad adaptado a tus necesidades y número de asistentes esperados.`
+      },
+      {
+        question: `¿Qué incluye el servicio de ${service.name}?`,
+        answer: `Nuestro servicio incluye personal capacitado, supervisión 24/7, coordinación con autoridades locales, informes periódicos y soporte técnico. Los detalles específicos varían según el servicio contratado.`
+      },
+      {
+        question: `¿Cómo contrato el servicio de ${service.name}?`,
+        answer: `Puedes solicitar tu cotización gratis a través de nuestro formulario online, llamándonos al +56 2 2400 6000 o escribiendo a info@guardman.cl. Te respondemos en menos de 24 horas.`
+      }
+    ];
 
 // Área servida para schema
 const areaServed = locations.map(l => l.name);

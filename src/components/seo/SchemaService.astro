@@ -9,9 +9,19 @@ interface Props {
   slug: string;
   priceRange?: string;
   areaServed?: string[];
+  ratingValue?: string;
+  reviewCount?: string;
 }
 
-const { name, description, slug, priceRange = "$$$", areaServed = ["Santiago"] } = Astro.props;
+const { 
+  name, 
+  description, 
+  slug, 
+  priceRange = "$$$", 
+  areaServed = ["Santiago"],
+  ratingValue = "4.8",
+  reviewCount = "127"
+} = Astro.props;
 
 const schemaService = {
   "@context": "https://schema.org",
@@ -22,10 +32,15 @@ const schemaService = {
   "provider": {
     "@id": "https://guardman.cl/#organization"
   },
-  "areaServed": areaServed.map(city => ({
-    "@type": "City",
-    "name": city
-  })),
+  "areaServed": areaServed.length > 0 
+    ? areaServed.map(city => ({
+        "@type": "City",
+        "name": city
+      }))
+    : {
+        "@type": "Country",
+        "name": "Chile"
+      },
   "priceRange": priceRange,
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -42,8 +57,8 @@ const schemaService = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "127",
+    "ratingValue": ratingValue,
+    "reviewCount": reviewCount,
     "bestRating": "5"
   }
 };

@@ -16,6 +16,7 @@ const siteConfig = {
   phoneTel: (config?.phone || '+56930000010').replace(/[^0-9+]/g, ''),
   tagline: config?.tagline || 'Protegemos lo que mas te importa',
   email: config?.email || 'info@guardman.cl',
+  heroImage: config?.hero_image ? optimizeImageUrl(`/images/${config.hero_image}`) : null,
   stats: {
     guards: config?.stats_guards || '500+',
     clients: config?.stats_clients || '200+',
@@ -36,9 +37,9 @@ const featuredClients = clients.map(c => c.name);
   <!-- 1. Hero Section -->
   <section class="relative bg-primary-600 text-white overflow-hidden">
     <div class="absolute inset-0">
-      {config?.hero_image && (
+      {siteConfig.heroImage && (
         <img 
-          src={optimizeImageUrl(`/images/${config.hero_image}`)}
+          src={siteConfig.heroImage}
           alt="GuardMan Chile - Seguridad Privada"
           class="w-full h-full object-cover"
           width="1920"
@@ -52,7 +53,7 @@ const featuredClients = clients.map(c => c.name);
     <div class="container mx-auto px-4 py-20 lg:py-28 relative z-10">
       <div class="max-w-3xl">
         <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
-          {siteConfig.tagline}
+          Seguridad Privada en Santiago, Chile
         </h1>
         <p class="text-xl lg:text-2xl text-white/90 mb-8">
           {config?.description || 'Empresa lider en servicios de seguridad privada en Santiago. Guardias certificados, tecnologia de vanguardia y atencion personalizada.'}

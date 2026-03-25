@@ -53,10 +53,11 @@ export interface Service {
   features: string[];
   process: { step: string; description: string }[];
   common_issues: string[];
+  faqs: { question: string; answer: string }[];
   featured: boolean;
   status: string;
   sort: number;
-  image: string;
+  image: string | null;
 }
 
 export interface Location {
@@ -68,11 +69,13 @@ export interface Location {
   neighborhoods: string[];
   landmarks?: string[];
   stats?: { empresas: string; guardias: string; experiencia: string };
+  why_this_zone?: string;
   priority_score: number;
   latitude: number;
   longitude: number;
   meta_title: string;
   meta_description: string;
+  faqs?: { question: string; answer: string }[];
   featured: boolean;
   image: string | null;
   status: string;
@@ -142,6 +145,8 @@ export interface SiteConfig {
   stats_clients: string;
   stats_locations: string;
   stats_years: string;
+  aggregate_rating_value: string;
+  aggregate_rating_count: string;
   seo_title: string;
   seo_description: string;
   hero_image: string | null;
@@ -156,12 +161,15 @@ const services = (servicesData as any[]).map(item => ({
   features: item.features || [],
   process: item.process || [],
   common_issues: item.common_issues || [],
+  faqs: item.faqs || [],
   featured: item.featured || false,
 })) as Service[];
 
 const locations = (locationsData as any[]).map(item => ({
   ...item,
   neighborhoods: item.neighborhoods || [],
+  landmarks: item.landmarks || [],
+  faqs: item.faqs || [],
   featured: item.featured || false,
 })) as Location[];
 

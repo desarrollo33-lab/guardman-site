@@ -31,28 +31,31 @@ const zoneContext: Record<string, { focus: string; commonNeeds: string }> = {
 
 const ctx = zoneContext[location.zone] || { focus: 'residencial y comercial', commonNeeds: 'seguridad general' };
 
-const locationFAQs = [
-  {
-    question: `¿Cuánto cuesta el servicio de guardias de seguridad en ${location.name}?`,
-    answer: `El precio varía según el tipo de servicio, número de guardias y horarios. En ${location.name} (zona ${location.zone}), nos enfocamos en ${ctx.focus}. Ofrecemos tarifas competitivas por nuestra cobertura en ${location.zone}. Solicita tu cotización gratuita y personalizada.`
-  },
-  {
-    question: `¿Qué servicios de seguridad son más demandados en ${location.name}?`,
-    answer: `En ${location.name} la necesidad más frecuente es ${ctx.commonNeeds}. Contamos con guardias certificados OS-10 disponibles 24/7 para atender las características específicas de ${location.zone}.`
-  },
-  {
-    question: `¿Tienen guardias disponibles las 24 horas en ${location.name} y ${location.zone}?`,
-    answer: `Sí, nuestro centro de operaciones opera 24/7. Tenemos guardias disponibles para atención permanente o temporal en ${location.name}, toda la zona de ${location.zone} y la Región Metropolitana.`
-  },
-  {
-    question: `¿Cuáles son los barrios y sectores de ${location.name} que cubren?`,
-    answer: `Cubrimos todos los sectores de ${location.name}, incluyendo: ${(location.neighborhoods || []).slice(0, 4).join(', ')}. También protegemos ubicaciones cerca de ${(location.landmarks || []).slice(0, 3).join(', ')}.`
-  },
-  {
-    question: `¿Cómo contrato servicios de seguridad en ${location.name}?`,
-    answer: `Puedes solicitar tu cotización gratis a través de nuestro formulario online, llamándonos al +56 2 2400 6000, o escribiéndonos a info@guardman.cl. Atendemos ${location.name}, ${location.zone} y toda la Región Metropolitana.`
-  }
-];
+// Usar FAQs del CMS si existen, si no usar genéricas
+const locationFAQs = (location.faqs && location.faqs.length > 0)
+  ? location.faqs
+  : [
+      {
+        question: `¿Cuánto cuesta el servicio de guardias de seguridad en ${location.name}?`,
+        answer: `El precio varía según el tipo de servicio, número de guardias y horarios. En ${location.name} (zona ${location.zone}), nos enfocamos en ${ctx.focus}. Ofrecemos tarifas competitivas por nuestra cobertura en ${location.zone}. Solicita tu cotización gratuita y personalizada.`
+      },
+      {
+        question: `¿Qué servicios de seguridad son más demandados en ${location.name}?`,
+        answer: `En ${location.name} la necesidad más frecuente es ${ctx.commonNeeds}. Contamos con guardias certificados OS-10 disponibles 24/7 para atender las características específicas de ${location.zone}.`
+      },
+      {
+        question: `¿Tienen guardias disponibles las 24 horas en ${location.name} y ${location.zone}?`,
+        answer: `Sí, nuestro centro de operaciones opera 24/7. Tenemos guardias disponibles para atención permanente o temporal en ${location.name}, toda la zona de ${location.zone} y la Región Metropolitana.`
+      },
+      {
+        question: `¿Cuáles son los barrios y sectores de ${location.name} que cubren?`,
+        answer: `Cubrimos todos los sectores de ${location.name}, incluyendo: ${(location.neighborhoods || []).slice(0, 4).join(', ')}. También protegemos ubicaciones cerca de ${(location.landmarks || []).slice(0, 3).join(', ')}.`
+      },
+      {
+        question: `¿Cómo contrato servicios de seguridad en ${location.name}?`,
+        answer: `Puedes solicitar tu cotización gratis a través de nuestro formulario online, llamándonos al +56 2 2400 6000, o escribiéndonos a info@guardman.cl. Atendemos ${location.name}, ${location.zone} y toda la Región Metropolitana.`
+      }
+    ];
 ---
 
 <BaseLayout title={location.meta_title || `Seguridad Privada en ${location.name} | GuardMan Chile`} description={location.meta_description || `Servicios de seguridad en ${location.name}. Guardias, CCTV, control de accesos y monitoreo 24/7.`}>
