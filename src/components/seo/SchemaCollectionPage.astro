@@ -1,0 +1,37 @@
+---
+/**
+ * SchemaCollectionPage.astro
+ * Genera Schema.org CollectionPage markup para páginas de listado
+ */
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+  itemListElement?: { name: string; url: string }[];
+}
+
+const { name, description, url, itemListElement = [] } = Astro.props;
+
+const schemaCollectionPage = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": name,
+  "description": description,
+  "url": url,
+  "publisher": {
+    "@id": "https://guardman.cl/#organization"
+  },
+  ...(itemListElement.length > 0 && {
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": itemListElement.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "url": item.url
+      }))
+    }
+  })
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaCollectionPage)} />

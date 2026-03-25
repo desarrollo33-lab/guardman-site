@@ -1,11 +1,24 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SchemaCollectionPage from '../../components/seo/SchemaCollectionPage.astro';
 import { getSectors } from '../../data/directus';
 
 const sectors = getSectors();
+const siteUrl = 'https://guardman.cl';
+
+const itemListElement = sectors.map(sector => ({
+  name: sector.name,
+  url: `${siteUrl}/sectores/${sector.slug}`
+}));
 ---
 
 <BaseLayout title="Sectores que Atendemos | GuardMan Chile" description="GuardMan ofrece servicios de seguridad para Hotelería, Corporativo, Residencial, Industrial, Automotriz y Diplomático en Santiago.">
+  <SchemaCollectionPage 
+    name="Sectores que Atendemos - GuardMan Chile"
+    description="Soluciones de seguridad adaptadas a las necesidades específicas de cada industria en Santiago"
+    url={`${siteUrl}/sectores`}
+    itemListElement={itemListElement}
+  />
   <!-- Hero -->
   <section class="bg-primary-600 text-white py-16 lg:py-20">
     <div class="container mx-auto px-4 text-center">

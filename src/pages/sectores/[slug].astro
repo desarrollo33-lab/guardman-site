@@ -12,6 +12,7 @@ export function getStaticPaths() {
 
 const { sector } = Astro.props;
 const allServices = getServices();
+const siteUrl = 'https://guardman.cl';
 
 // Filter services related to this sector
 const sectorServiceMap: Record<string, string[]> = {
@@ -29,6 +30,26 @@ const relatedServices = allServices.filter(s =>
 ---
 
 <BaseLayout title={sector.meta_title} description={sector.meta_description}>
+  <!-- Schema markup for sector page -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemPage",
+    "name": sector.hero_title,
+    "description": sector.description,
+    "url": `${siteUrl}/sectores/${sector.slug}`,
+    "publisher": {
+      "@id": `${siteUrl}/#organization`
+    },
+    "mainEntity": {
+      "@type": "Service",
+      "name": `Seguridad para ${sector.name}`,
+      "description": sector.description,
+      "provider": {
+        "@id": `${siteUrl}/#organization`
+      }
+    }
+  })} />
+  
   <!-- Breadcrumb -->
   <div class="bg-neutral-100 py-3">
     <div class="container mx-auto px-4">

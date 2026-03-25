@@ -1,0 +1,29 @@
+---
+/**
+ * SchemaWebSite.astro
+ * Genera Schema.org WebSite markup para homepage
+ */
+const siteUrl = 'https://guardman.cl';
+
+const schemaWebSite = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  "url": siteUrl,
+  "name": "GuardMan Chile - Seguridad Privada",
+  "description": "Empresa líder en servicios de seguridad privada en Santiago. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7.",
+  "publisher": {
+    "@id": `${siteUrl}/#organization`
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${siteUrl}/?s={search_term_string}`
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaWebSite)} />

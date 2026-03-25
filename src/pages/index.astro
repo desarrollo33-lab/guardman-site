@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SchemaWebSite from '../components/seo/SchemaWebSite.astro';
+import SchemaOrganization from '../components/seo/SchemaOrganization.astro';
 import { getServices, getLocations, getSectors, getFeaturedClients, getSiteConfig } from '../data/directus';
 
 const services = getServices();
@@ -27,7 +29,9 @@ const guardPodService = services.find(s => s.slug === 'guard-pod');
 ---
 
 <BaseLayout title="Seguridad Privada en Santiago | GuardMan Chile" description={config?.seo_description || 'GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.'}>
-  
+  <!-- Schema Markup for Homepage -->
+  <SchemaWebSite />
+  <SchemaOrganization />
   <!-- 1. Hero Section -->
   <section class="relative bg-primary-600 text-white overflow-hidden">
     <div class="absolute inset-0">
