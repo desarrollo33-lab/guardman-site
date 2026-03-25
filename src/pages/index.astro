@@ -75,8 +75,9 @@ const featuredClients = clients.map(c => c.name);
   <!-- 2. Quienes Somos Section -->
   <section class="py-16 lg:py-24 bg-white relative overflow-hidden" aria-labelledby="nosotros-section-title">
     <div class="container mx-auto px-4 relative z-10">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
+      <!-- Header row: badge + title + paragraph + image -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-8">
+        <div class="order-1">
           <div class="inline-flex items-center gap-2 bg-neutral-100 text-neutral-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"/>
@@ -86,64 +87,11 @@ const featuredClients = clients.map(c => c.name);
           <h2 id="nosotros-section-title" class="text-3xl lg:text-4xl font-bold mb-4 text-neutral-900">
             {siteConfig.name} - Seguridad privada profesional en Santiago
           </h2>
-          <p class="text-lg text-neutral-600 mb-6 max-w-xl">
+          <p class="text-lg text-neutral-600 max-w-xl">
             Mas de 8 anos de experiencia protegiendo lo que mas te importa. Guardias certificados OS-10 y tecnologia de vanguardia para un servicio integral y confiable.
           </p>
-          <div class="space-y-4 mb-8">
-            <article class="flex gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-primary-500 hover:shadow-md transition-all">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-semibold mb-1 text-neutral-900">Guardias certificados OS-10 vigentes</h3>
-                <p class="text-neutral-600 text-sm">Personal capacitado y certificado para maxima proteccion.</p>
-              </div>
-            </article>
-            <article class="flex gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-primary-500 hover:shadow-md transition-all">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-semibold mb-1 text-neutral-900">Cumplimiento Ley 21.659</h3>
-                <p class="text-neutral-600 text-sm">Operamos dentro de todas las normativas legales vigentes.</p>
-              </div>
-            </article>
-            <article class="flex gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-primary-500 hover:shadow-md transition-all">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-semibold mb-1 text-neutral-900">Atencion 24/7 los 365 dias</h3>
-                <p class="text-neutral-600 text-sm">Respuesta inmediata en cualquier momento del ano.</p>
-              </div>
-            </article>
-            <article class="flex gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-primary-500 hover:shadow-md transition-all">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-semibold mb-1 text-neutral-900">Centro de monitoreo propio</h3>
-                <p class="text-neutral-600 text-sm">Supervision continua desde nuestras instalaciones.</p>
-              </div>
-            </article>
-          </div>
-          <a href="/nosotros" class="inline-flex items-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-            Conoce mas sobre nosotros
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </a>
         </div>
-        <div class="relative">
+        <div class="order-2 relative">
           <div class="rounded-2xl aspect-video overflow-hidden border-2 border-primary-200 bg-primary-50">
             <iframe
               class="w-full h-full"
@@ -160,6 +108,60 @@ const featuredClients = clients.map(c => c.name);
           </div>
         </div>
       </div>
+      <!-- Features row -->
+      <div class="space-y-4 mb-8">
+        <article class="flex gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-primary-500 hover:shadow-md transition-all">
+          <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1 text-neutral-900">Guardias certificados OS-10 vigentes</h3>
+            <p class="text-neutral-600 text-sm">Personal capacitado y certificado para maxima proteccion.</p>
+          </div>
+        </article>
+        <article class="flex gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-primary-500 hover:shadow-md transition-all">
+          <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1 text-neutral-900">Cumplimiento Ley 21.659</h3>
+            <p class="text-neutral-600 text-sm">Operamos dentro de todas las normativas legales vigentes.</p>
+          </div>
+        </article>
+        <article class="flex gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-primary-500 hover:shadow-md transition-all">
+          <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1 text-neutral-900">Atencion 24/7 los 365 dias</h3>
+            <p class="text-neutral-600 text-sm">Respuesta inmediata en cualquier momento del ano.</p>
+          </div>
+        </article>
+        <article class="flex gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-primary-500 hover:shadow-md transition-all">
+          <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1 text-neutral-900">Centro de monitoreo propio</h3>
+            <p class="text-neutral-600 text-sm">Supervision continua desde nuestras instalaciones.</p>
+          </div>
+        </article>
+      </div>
+      <a href="/nosotros" class="inline-flex items-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+        Conoce mas sobre nosotros
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
     </div>
   </section>
       </div>
@@ -222,8 +224,9 @@ const featuredClients = clients.map(c => c.name);
       <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
 
       <div class="container mx-auto px-4 relative z-10">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+        <!-- Header row: badge + title + paragraph + image -->
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-8">
+          <div class="order-1">
             <div class="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
@@ -231,63 +234,11 @@ const featuredClients = clients.map(c => c.name);
               <span>Tecnologia Propia GuardMan</span>
             </div>
             <h2 id="guardpod-section-title" class="text-3xl lg:text-4xl font-bold mb-4">Guard Pod</h2>
-            <p class="text-lg text-white/80 mb-6 max-w-xl">
+            <p class="text-lg text-white/80 max-w-xl">
               Vigilancia autonoma para obras, eventos y zonas sin infraestructura. Energia solar, camaras PTZ y monitoreo remoto en una unidad desplegable en menos de 2 horas.
             </p>
-            <div class="space-y-4 mb-8">
-              <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-                <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold mb-1">Despliegue en menos de 2 horas</h3>
-                  <p class="text-white/70 text-sm">Unidad autonoma lista para operar inmediatamente en cualquier ubicacion.</p>
-                </div>
-              </article>
-              <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-                <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold mb-1">Energia solar, funciona sin red electrica</h3>
-                  <p class="text-white/70 text-sm">Sistema energetico independiente ideal para zonas remotas.</p>
-                </div>
-              </article>
-              <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-                <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold mb-1">Camaras PTZ 360° con vision nocturna</h3>
-                  <p class="text-white/70 text-sm">Cobertura total y grabacion las 24 horas del dia.</p>
-                </div>
-              </article>
-              <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-                <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold mb-1">15 meses de desarrollo propio</h3>
-                  <p class="text-white/70 text-sm">Tecnologia 100% diseñada y fabricada por GuardMan Chile.</p>
-                </div>
-              </article>
-            </div>
-            <a href="/servicios/guard-pod" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
-              Conocer Guard Pod
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
           </div>
-          <div class="relative">
+          <div class="order-2 relative">
             <div class="rounded-2xl aspect-video overflow-hidden border border-white/20">
               <img 
                 src="/images/s4-thumbnail.webp"
@@ -303,6 +254,59 @@ const featuredClients = clients.map(c => c.name);
             </div>
           </div>
         </div>
+        <!-- Features row -->
+        <div class="space-y-4 mb-8">
+          <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
+            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-1">Despliegue en menos de 2 horas</h3>
+              <p class="text-white/70 text-sm">Unidad autonoma lista para operar inmediatamente en cualquier ubicacion.</p>
+            </div>
+          </article>
+          <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
+            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-1">Energia solar, funciona sin red electrica</h3>
+              <p class="text-white/70 text-sm">Sistema energetico independiente ideal para zonas remotas.</p>
+            </div>
+          </article>
+          <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
+            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-1">Camaras PTZ 360° con vision nocturna</h3>
+              <p class="text-white/70 text-sm">Cobertura total y grabacion las 24 horas del dia.</p>
+            </div>
+          </article>
+          <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
+            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-1">15 meses de desarrollo propio</h3>
+              <p class="text-white/70 text-sm">Tecnologia 100% diseñada y fabricada por GuardMan Chile.</p>
+            </div>
+          </article>
+        </div>
+        <a href="/servicios/guard-pod" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+          Conocer Guard Pod
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
       </div>
     </section>
   )}
@@ -357,8 +361,9 @@ const featuredClients = clients.map(c => c.name);
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
 
     <div class="container mx-auto px-4 relative z-10">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
+      <!-- Header row: badge + title + paragraph + image -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-8">
+        <div class="order-1">
           <div class="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
@@ -368,11 +373,29 @@ const featuredClients = clients.map(c => c.name);
           <h2 id="ajax-section-title" class="text-3xl lg:text-4xl font-bold mb-4">
             Tecnologia de clase mundial para tu seguridad
           </h2>
-          <p class="text-lg text-white/80 mb-6 max-w-xl">
+          <p class="text-lg text-white/80 max-w-xl">
             Somos distribuidores oficiales de Ajax Systems, la empresa lider mundial en sistemas de alarmas inteligentes con mas de 4.5 millones de usuarios protegidos en 187 paises.
           </p>
-          <div class="space-y-4">
-            <!-- Grade 3 -->
+        </div>
+        <div class="order-2 relative">
+          <div class="rounded-2xl aspect-video overflow-hidden border border-white/20">
+            <img 
+              src="/images/Ajax-systems-header.jpg"
+              alt="Sistema de alarma Ajax Systems con hub central y sensores conectados"
+              class="w-full h-full object-cover"
+              width="800"
+              height="450"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
+            Distribuidor Oficial
+          </div>
+        </div>
+      </div>
+      <!-- Features row -->
+      <div class="space-y-4 mb-8">
+        <!-- Grade 3 -->
             <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
               <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -425,27 +448,12 @@ const featuredClients = clients.map(c => c.name);
               </div>
             </article>
           </div>
-          <a href="/contacto" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors mt-8">
+          <a href="/contacto" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
             Conocer Ajax Systems
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
           </a>
-        </div>
-        <div class="relative">
-          <div class="rounded-2xl aspect-video overflow-hidden border border-white/20">
-            <img 
-              src="/images/Ajax-systems-header.jpg"
-              alt="Sistema de alarma Ajax Systems con hub central y sensores conectados"
-              class="w-full h-full object-cover"
-              width="800"
-              height="450"
-              loading="lazy"
-            />
-          </div>
-          <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
-            Distribuidor Oficial
-          </div>
         </div>
       </div>
     </div>
