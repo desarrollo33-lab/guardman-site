@@ -482,7 +482,7 @@ const featuredClients = clients.map(c => c.name);
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
 
     <div class="container mx-auto px-4 relative z-10">
-      <div class="mb-8">
+      <div class="text-center mb-8">
         <div class="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
@@ -493,7 +493,7 @@ const featuredClients = clients.map(c => c.name);
         <h2 id="ubicaciones-section-title" class="text-3xl lg:text-4xl font-bold mb-4">
           Protegemos en toda la Region Metropolitana
         </h2>
-        <p class="text-lg text-white/80 max-w-xl">
+        <p class="text-lg text-white/80 max-w-2xl mx-auto">
           Presencia en las principales comunas de Santiago y la zona de Los Andes y San Felipe.
         </p>
       </div>
@@ -507,12 +507,14 @@ const featuredClients = clients.map(c => c.name);
         ))}
       </div>
 
-      <a href="/ubicaciones" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
-        Ver todas las ubicaciones
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-        </svg>
-      </a>
+      <div class="text-center">
+        <a href="/ubicaciones" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+          Ver todas las ubicaciones
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
