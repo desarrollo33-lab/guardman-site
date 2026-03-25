@@ -24,8 +24,8 @@ const siteConfig = {
   }
 };
 
-const featuredClients = clients.map(c => c.name);
 const guardPodService = services.find(s => s.slug === 'guard-pod');
+const featuredClients = clients.map(c => c.name);
 ---
 
 <BaseLayout title="Seguridad Privada en Santiago | GuardMan Chile" description={config?.seo_description || 'GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.'} image={optimizeImageUrl(`/images/${config?.hero_image}`)}>
@@ -174,6 +174,11 @@ const guardPodService = services.find(s => s.slug === 'guard-pod');
           </a>
         ))}
       </div>
+      <div class="text-center mt-8">
+        <a href="/servicios" class="text-primary-600 font-medium hover:text-primary-700 transition-colors">
+          Ver todos los servicios →
+        </a>
+      </div>
     </div>
   </section>
 
@@ -298,6 +303,9 @@ const guardPodService = services.find(s => s.slug === 'guard-pod');
               </div>
             ))}
           </div>
+          <p class="text-center mt-4 text-neutral-500 text-sm">
+            <a href="/nosotros" class="text-primary-600 hover:text-primary-700 font-medium">Conoce más sobre nosotros →</a>
+          </p>
         </div>
       )}
 

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getSiteConfig, getTestimonials } from '../data/directus';
+import { getSiteConfig, getTestimonials, getFeaturedClients } from '../data/directus';
 
 // Get data from CMS (synchronous - data is pre-loaded at build time)
 const config = getSiteConfig();
@@ -39,6 +39,8 @@ const statsClients = siteConfig.stats.clients;
 const statsLocations = siteConfig.stats.locations;
 const statsYears = siteConfig.stats.years;
 const featuredTestimonials = getTestimonials().filter(t => t.featured);
+const featuredClients = getFeaturedClients();
+const featuredClientNames = featuredClients.map(c => c.name);
 ---
 
 <BaseLayout title="Nosotros | GuardMan Chile" description="Conoce a GuardMan Chile - empresa lider en seguridad privada con anos de experiencia en el mercado chileno.">
