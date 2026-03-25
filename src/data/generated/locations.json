@@ -4,12 +4,13 @@
     "name": "Santiago Centro",
     "slug": "santiago-centro",
     "zone": "Centro",
-    "description": "El coraz�n financiero y comercial de Santiago.",
+    "description": "El corazon financiero y comercial de Chile.",
     "neighborhoods": [
-      "Centro",
-      "Pururo",
+      "Alameda",
       "Plaza de Armas",
-      "Mercado Central"
+      "Mercado Central",
+      "Santa Lucia",
+      "Paseo Ahumada"
     ],
     "priority_score": 95,
     "latitude": -33.4489,
@@ -26,8 +27,11 @@
     "name": "Las Condes",
     "slug": "las-condes",
     "zone": "Oriente",
-    "description": "Sector premium.",
+    "description": "Sector financiero mas importante de Santiago.",
     "neighborhoods": [
+      "Sanhattan",
+      "Parque Arauco",
+      "Alto Las Condes",
       "El Golf",
       "Apumanque"
     ],
@@ -46,9 +50,12 @@
     "name": "Vitacura",
     "slug": "vitacura",
     "zone": "Oriente",
-    "description": "Zona residencial.",
+    "description": "Sector de alto poder adquisitivo con embajadas y residenciales premium.",
     "neighborhoods": [
-      "Bcerrcano"
+      "Boa Vista",
+      "Cerro Alto",
+      "Taboela",
+      "La Cerro"
     ],
     "priority_score": 97,
     "latitude": -33.3889,
@@ -65,9 +72,11 @@
     "name": "Huechuraba",
     "slug": "huechuraba",
     "zone": "Norte",
-    "description": "Sector empresas.",
+    "description": "Polo tecnologico con Ciudad Empresarial y parques industriales.",
     "neighborhoods": [
-      "Ciudad Empresarial"
+      "Ciudad Empresarial",
+      "Parque Empresarial",
+      "Santa Marta"
     ],
     "priority_score": 85,
     "latitude": -33.3542,
@@ -84,9 +93,11 @@
     "name": "Quilicura",
     "slug": "quilicura",
     "zone": "Norte",
-    "description": "Zona industrial.",
+    "description": "Principal polo logistico e industrial del norte de Santiago.",
     "neighborhoods": [
-      "Quilicura Centro"
+      "Quilicura Centro",
+      "Zona Industrial",
+      "El Montijo"
     ],
     "priority_score": 82,
     "latitude": -33.3678,
@@ -103,9 +114,11 @@
     "name": "Lo Barnechea",
     "slug": "lo-barnechea",
     "zone": "Oriente",
-    "description": "Sector lujo.",
+    "description": "Comuna exclusiva al pie de monte andino.",
     "neighborhoods": [
-      "La Dehesa"
+      "La Dehesa",
+      "Campos de Golf",
+      "Pie de Monte"
     ],
     "priority_score": 96,
     "latitude": -33.3417,
@@ -126,7 +139,8 @@
     "neighborhoods": [
       "Santa Rosa de Lima",
       "Las Parcelas",
-      "La Reina Alta"
+      "La Reina Alta",
+      "Santo Domingo"
     ],
     "priority_score": 6,
     "latitude": -33.4522,
@@ -143,7 +157,7 @@
     "name": "Renca",
     "slug": "renca",
     "zone": "Poniente",
-    "description": "Comuna en desarrollo con sectores industriales y residenciales en crecimiento.",
+    "description": "Comuna en desarrollo con sectores industriales y residenciales.",
     "neighborhoods": [
       "Renca Centro",
       "Los Heroes",
@@ -164,7 +178,7 @@
     "name": "Pudahuel",
     "slug": "pudahuel",
     "zone": "Poniente",
-    "description": "Sector poniente con area residencial, industrial y proximidad al aeropuerto.",
+    "description": "Comuna estrategica con Aeropuerto Internacional.",
     "neighborhoods": [
       "Aeropuerto",
       "Loma Colorada",
@@ -185,10 +199,11 @@
     "name": "La Pintana",
     "slug": "la-pintana",
     "zone": "Sur",
-    "description": "Comuna residencial al sur de Santiago con alta densidad poblacional.",
+    "description": "Comuna residencial al sur con alta densidad poblacional.",
     "neighborhoods": [
       "La Pintana Centro",
-      "Santa Adriana"
+      "Santa Adriana",
+      "Los Boss"
     ],
     "priority_score": 4,
     "latitude": -33.5833,
@@ -205,11 +220,12 @@
     "name": "Lampa",
     "slug": "lampa",
     "zone": "Norte",
-    "description": "Comuna rural-industrial al norte de Santiago en rapide crecimiento.",
+    "description": "Comuna rural-industrial en constante crecimiento.",
     "neighborhoods": [
       "Lampa Centro",
       "Zona Industrial",
-      "Chicahue"
+      "Polpaico",
+      "Chicureo"
     ],
     "priority_score": 4,
     "latitude": -33.2833,
@@ -247,7 +263,7 @@
     "name": "Los Andes",
     "slug": "los-andes",
     "zone": "Valparaiso",
-    "description": "Ciudad gateway en la ruta internacional Los Libertadores con actividad comercial y agricola.",
+    "description": "Ciudad gateway en ruta internacional Los Libertadores.",
     "neighborhoods": [
       "Centro Los Andes",
       "Zona Industrial",
