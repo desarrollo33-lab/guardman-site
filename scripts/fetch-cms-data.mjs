@@ -305,12 +305,21 @@ async function main() {
     console.log(`✓ Sectors: ${processedSectors.length} records`);
     
     // Process and save clients
+    // Map client logos from local optimized files
+    const clientLogoMap = {
+      'Courtyard by Marriott': '/images/client-courtyardmarriot.webp',
+      'Hamptons': '/images/client-hamptons.webp',
+      'Kavak': '/images/client-kavak.webp',
+      'Work Center': '/images/client-workcenter.webp',
+      'Avanza Park': '/images/client-avanzapark.webp',
+    };
+    
     const processedClients = clients.map(c => ({
       id: c.id,
       name: c.name,
       industry: c.industry || '',
       services: parseJsonField(c.services),
-      logo_url: c.logo_url || '',
+      logo_url: clientLogoMap[c.name] || c.logo_url || '',
       featured: c.featured || false,
       status: c.status,
       sort: c.sort || 0,

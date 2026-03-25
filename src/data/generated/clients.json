@@ -4,7 +4,7 @@
     "name": "Courtyard by Marriott",
     "industry": "Hotelería",
     "services": [],
-    "logo_url": "",
+    "logo_url": "/images/client-courtyardmarriot.webp",
     "featured": true,
     "status": "published",
     "sort": 1
@@ -14,7 +14,7 @@
     "name": "Hamptons",
     "industry": "Inmobiliario",
     "services": [],
-    "logo_url": "",
+    "logo_url": "/images/client-hamptons.webp",
     "featured": true,
     "status": "published",
     "sort": 2
@@ -24,7 +24,7 @@
     "name": "Kavak",
     "industry": "Automotriz",
     "services": [],
-    "logo_url": "",
+    "logo_url": "/images/client-kavak.webp",
     "featured": true,
     "status": "published",
     "sort": 3
@@ -54,7 +54,7 @@
     "name": "Work Center",
     "industry": "Oficinas",
     "services": [],
-    "logo_url": "",
+    "logo_url": "/images/client-workcenter.webp",
     "featured": true,
     "status": "published",
     "sort": 6
@@ -64,7 +64,7 @@
     "name": "Avanza Park",
     "industry": "Inmobiliario",
     "services": [],
-    "logo_url": "",
+    "logo_url": "/images/client-avanzapark.webp",
     "featured": true,
     "status": "published",
     "sort": 7
