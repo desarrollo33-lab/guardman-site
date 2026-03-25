@@ -300,27 +300,15 @@ const featuredClients = clients.map(c => c.name);
             </a>
           </div>
           <div class="relative">
-            <div class="bg-gradient-to-br from-primary-600/40 to-primary-800/40 rounded-2xl aspect-video flex items-center justify-center border border-white/20 overflow-hidden">
-              <div class="text-center p-8" role="img" aria-label="Ilustracion del Guard Pod - unidad de vigilancia autonoma con panel solar y camaras PTZ">
-                <svg class="w-24 h-24 text-white/60 mx-auto mb-4" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                  <!-- Base del Guard Pod -->
-                  <rect x="20" y="60" width="60" height="30" rx="4" stroke="currentColor" stroke-width="2"/>
-                  <!-- Panel solar -->
-                  <polygon points="25,60 50,35 75,60" stroke="currentColor" stroke-width="2" fill="none"/>
-                  <!-- Camara PTZ -->
-                  <circle cx="50" cy="45" r="8" stroke="currentColor" stroke-width="2"/>
-                  <circle cx="50" cy="45" r="3" fill="currentColor"/>
-                  <!-- Lineas deVision -->
-                  <line x1="50" y1="45" x2="70" y2="25" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
-                  <line x1="50" y1="45" x2="75" y2="40" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
-                  <line x1="50" y1="45" x2="30" y2="20" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
-                  <!-- Indicadores LED -->
-                  <circle cx="30" cy="75" r="2" fill="currentColor" opacity="0.7"/>
-                  <circle cx="40" cy="75" r="2" fill="currentColor" opacity="0.7"/>
-                  <circle cx="50" cy="75" r="2" fill="currentColor" opacity="0.7"/>
-                </svg>
-                <p class="text-white/50 text-sm">Unidad de Vigilancia Guard Pod</p>
-              </div>
+            <div class="rounded-2xl aspect-video overflow-hidden border border-white/20">
+              <img 
+                src="/images/s4-thumbnail.webp"
+                alt="Guard Pod - unidad de vigilancia autonoma con panel solar y camaras PTZ"
+                class="w-full h-full object-cover"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
             </div>
             <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
               15 meses de I+D
