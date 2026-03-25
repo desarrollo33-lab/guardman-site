@@ -4,6 +4,7 @@ import { getServices, getLocations, getServiceBySlug, getLocationBySlug, getSite
 import SchemaService from '../../../components/seo/SchemaService.astro';
 import SchemaLocalBusiness from '../../../components/seo/SchemaLocalBusiness.astro';
 import SchemaFAQ from '../../../components/seo/SchemaFAQ.astro';
+import SchemaBreadcrumb from '../../../components/seo/SchemaBreadcrumb.astro';
 
 export function getStaticPaths() {
   const services = getServices();
@@ -48,32 +49,53 @@ const siteConfig = {
   phoneTel: (config?.phone || '+56 2 2400 6000').replace(/[^0-9+]/g, ''),
 };
 
-// Generate meta title and description
-const metaTitle = `${service.name} en ${location.name} | GuardMan Chile`;
-const metaDescription = `Servicio de ${service.name.toLowerCase()} en ${location.name}. ${service.short_description} Atención 24/7 en toda la Region Metropolitana. Solicita tu cotización hoy.`;
+// SEO-friendly meta title (max 60 chars) following TEMPLATE-STANDARDS.md
+const metaTitle = `${service.name} en ${location.name} - GuardMan`;
+const metaDescription = `${service.name} profesional en ${location.name} (${location.zone}). ${service.short_description} Atención 24/7. Solicita tu cotización.`;
 
-// Combo FAQs
+// Context by zone for localized FAQs
+const zoneContext: Record<string, { challenges: string; focus: string }> = {
+  'Oriente': { challenges: 'embajadas, residenciales de lujo y oficinas corporativas', focus: 'control de accesos VIP y monitoreo perimetral' },
+  'Centro': { challenges: 'comercios, hoteles y oficinas públicas', focus: 'control de flujos y CCTV comercial' },
+  'Norte': { challenges: 'industrias, bodegas y centros logísticos', focus: 'vigilancia perimetral y control vehicular' },
+  'Suroriente': { challenges: 'residenciales, condominos y barrios privados', focus: 'vigilancia vecinal y rondas preventivas' },
+  'Poniente': { challenges: 'industrias, comércio y aeropuertos', focus: 'seguridad para carga aérea y monitoreo industrial' },
+  'Sur': { challenges: 'residencial popular y comercio local', focus: 'seguridad comunitaria y prevención' },
+  'Valparaiso': { challenges: 'agricultura, comercio regional y turismo', focus: 'seguridad para packing y bodegas agrícolas' },
+};
+
+const ctx = zoneContext[location.zone] || { challenges: 'residencial y comercial', focus: 'seguridad general' };
+
+// Combo FAQs con contexto de zona
 const comboFAQs = [
   {
     question: `¿Cuánto cuesta el servicio de ${service.name} en ${location.name}?`,
-    answer: `El precio del servicio de ${service.name} en ${location.name} varía según las necesidades específicas de tu propiedad o empresa. Solicita tu cotización gratuita y te entregamos un presupuesto personalizado en menos de 24 horas.`
+    answer: `El precio de ${service.name} en ${location.name} varía según el tipo de propiedad y horarios requeridos. En ${location.zone}, nos especializamos en proteger ${ctx.challenges}. Solicita tu cotización gratuita y te entregamos un presupuesto personalizado en menos de 24 horas.`
   },
   {
-    question: `¿Tienen guardias disponibles en ${location.name}?`,
-    answer: `Sí, tenemos guardias disponibles en ${location.name} y toda la zona de ${location.zone}. Nuestro equipo está disponible 24/7 para atenderte.`
+    question: `¿Tienen guardias disponibles las 24 horas en ${location.name}?`,
+    answer: `Sí, tenemos cobertura 24/7 en ${location.name} y toda la zona de ${location.zone}. Nuestro centro de operaciones monitorea ${ctx.focus} para clientes residenciales y corporativos.`
   },
   {
-    question: `¿Qué incluye el servicio de ${service.name}?`,
-    answer: `Nuestro servicio incluye personal certificado OS-10, supervisión continua, informes periódicos y coordinación 24/7. Los detalles específicos dependen del plan que elijas.`
+    question: `¿Qué incluye el servicio de ${service.name} en ${location.zone}?`,
+    answer: `Nuestro servicio incluye personal certificado OS-10, supervisión continua, informes periódicos y coordinación con Carabineros. En ${location.name}, nos enfocamos en ${ctx.focus}.`
   },
   {
     question: `¿Cómo contrato ${service.name} en ${location.name}?`,
-    answer: `Puedes solicitar tu cotización a través de nuestro formulario online, llamándonos al ${siteConfig.phone} o escribiéndonos a info@guardman.cl. Respondemos en menos de 24 horas.`
+    answer: `Solicita tu cotización gratis llamando al ${siteConfig.phone}, escribiendo a info@guardman.cl o a través de nuestro formulario. Atendemos ${location.name} y toda ${location.zone}.`
   }
 ];
 
 // Area served for schema
 const areaServed = [location.name];
+
+// Breadcrumb items for Schema
+const breadcrumbItems = [
+  { name: 'Inicio', url: 'https://guardman.cl' },
+  { name: 'Servicios', url: 'https://guardman.cl/servicios' },
+  { name: service.name, url: `https://guardman.cl/servicios/${service.slug}` },
+  { name: location.name, url: `https://guardman.cl/servicios/${service.slug}/${location.slug}` },
+];
 ---
 
 <BaseLayout title={metaTitle} description={metaDescription}>
@@ -96,6 +118,7 @@ const areaServed = [location.name];
     neighborhood={location.neighborhoods?.[0]}
   />
   <SchemaFAQ faqs={comboFAQs} />
+  <SchemaBreadcrumb items={breadcrumbItems} />
   
   <!-- Breadcrumb -->
   <div class="bg-neutral-100 py-3">
