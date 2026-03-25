@@ -312,6 +312,144 @@ const featuredClients = clients.map(c => c.name);
     </div>
   </section>
 
+  <!-- 5.5 Tecnologia Ajax Section -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <!-- Header con badge de distribuidor oficial -->
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          Distribuidor Oficial Ajax Systems
+        </div>
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+          Tecnologia de clase mundial para tu seguridad
+        </h2>
+        <p class="text-lg text-white/80 max-w-2xl mx-auto">
+          Somos distribuidores oficiales de Ajax Systems, la empresa lider mundial en sistemas de alarmas inteligentes con mas de 4.5 millones de usuarios protegidos en 187 paises.
+        </p>
+      </div>
+
+      <!-- Grid de contenido: imagen + caracteristicas -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
+        <!-- Lado izquierdo: imagen -->
+        <div class="relative">
+          <div class="bg-gradient-to-br from-primary-600/30 to-primary-800/30 rounded-2xl aspect-video flex items-center justify-center border border-white/10 overflow-hidden">
+            <img 
+              src="/images/ajax-systems.jpg" 
+              alt="Sistema de alarma Ajax Systems" 
+              class="w-full h-full object-contain p-4"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
+            Distribuidor Oficial
+          </div>
+        </div>
+
+        <!-- Lado derecho: caracteristicas -->
+        <div class="space-y-4">
+          <!-- Grade 3 -->
+          <div class="flex gap-4 p-4 bg-white/5 backdrop-blur rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Certificacion Grade 3 Professional</h3>
+              <p class="text-white/70 text-sm">El maximo nivel internacional de seguridad para instalaciones residenciales y comerciales de alto riesgo.</p>
+            </div>
+          </div>
+
+          <!-- Jeweller Protocol -->
+          <div class="flex gap-4 p-4 bg-white/5 backdrop-blur rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.24-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Protocolo Jeweller</h3>
+              <p class="text-white/70 text-sm">Comunicacion radio encriptada de largo alcance (hasta 2km), inmune a jamming, con verificacion constante del sistema.</p>
+            </div>
+          </div>
+
+          <!-- Monitoreo 24/7 -->
+          <div class="flex gap-4 p-4 bg-white/5 backdrop-blur rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Monitoreo y Video Verificacion 24/7</h3>
+              <p class="text-white/70 text-sm">Centro de monitoreo propio con verificacion visual de alarmas en tiempo real y respuesta inmediata.</p>
+            </div>
+          </div>
+
+          <!-- App Ajax -->
+          <div class="flex gap-4 p-4 bg-white/5 backdrop-blur rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">App Ajax - Control Total</h3>
+              <p class="text-white/70 text-sm">Armado, camaras, automatizacion y notificaciones en tiempo real desde tu smartphone iOS y Android.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estadisticas Ajax -->
+      <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 mb-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">4.5M+</div>
+            <div class="text-white/70">Usuarios Globales</div>
+          </div>
+          <div>
+            <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">187</div>
+            <div class="text-white/70">Paises</div>
+          </div>
+          <div>
+            <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">100+</div>
+            <div class="text-white/70">Dispositivos</div>
+          </div>
+          <div>
+            <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">Grade 3</div>
+            <div class="text-white/70">Certificacion</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center">
+        <p class="text-lg text-white/90 mb-6">
+          Proteccion integral: guardias profesionales + tecnologia Ajax Systems
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/cotizacion" class="bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-accent-hover transition-colors">
+            Solicitar cotizacion con Ajax
+          </a>
+          <a href="/contacto" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+            Hablar con un experto
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 6. Clientes Section -->
   {featuredClients.length > 0 && (
     <section class="py-16 lg:py-24 bg-white border-t border-neutral-200">
