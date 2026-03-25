@@ -2,10 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getSiteConfig, getTestimonials, getFeaturedClients } from '../data/directus';
 
-// Get data from CMS (synchronous - data is pre-loaded at build time)
 const config = getSiteConfig();
 
-// Build site config for template with fallbacks
 const siteConfig = {
   name: config?.site_name || 'GuardMan Chile',
   aboutText: config?.about_text || 'GuardMan Chile es una empresa lider en servicios de seguridad privada en Santiago de Chile.',
@@ -24,7 +22,6 @@ const siteConfig = {
     locations: config?.stats_locations || '14',
     years: config?.stats_years || '8+',
   },
-  // USPs from differentiators (if available in config)
   usps: config?.usps || [
     { title: 'GuardPod V1', description: 'Unidad Autonoma de Vigilancia 24/7' },
     { title: 'Supervision Nocturna', description: 'Monitoreo proactivo de conductas sospechosas' },
@@ -33,7 +30,6 @@ const siteConfig = {
   ],
 };
 
-// Get stats values for template
 const statsGuards = siteConfig.stats.guards;
 const statsClients = siteConfig.stats.clients;
 const statsLocations = siteConfig.stats.locations;
@@ -44,32 +40,33 @@ const featuredClientNames = featuredClients.map(c => c.name);
 ---
 
 <BaseLayout title="Nosotros | GuardMan Chile" description="Conoce a GuardMan Chile - empresa lider en seguridad privada con anos de experiencia en el mercado chileno.">
-  <!-- Hero -->
+  
+  <!-- Hero Section -->
   <section class="bg-primary-600 text-white py-16 lg:py-20">
     <div class="container mx-auto px-4">
       <h1 class="text-4xl lg:text-5xl font-bold mb-4">Sobre Nosotros</h1>
-      <p class="text-xl text-white/90 max-w-2xl">
+      <p class="text-lg text-white/90 max-w-2xl">
         Protegiendo Santiago desde hace mas de 8 anos con profesionalismo y compromiso
       </p>
     </div>
   </section>
 
-  <!-- About Content -->
+  <!-- Historia + Diferenciadores Section -->
   <section class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl font-bold text-neutral-900 mb-6">Nuestra Historia</h2>
-          <div class="prose prose-lg text-neutral-600">
-            <p>{siteConfig.aboutText}</p>
-            <p>Contamos con un equipo de mas de {statsGuards} guardias en terreno, {statsClients} clientes activos y cobertura en {statsLocations} comunas de la Region Metropolitana.</p>
-            <p>Nuestra vision es ser la empresa de seguridad privada mas confiable y profesional de Chile, ofreciendo soluciones innovadoras y un servicio excepcional.</p>
+          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6">Nuestra Historia</h2>
+          <div class="space-y-4 text-neutral-600">
+            <p class="text-lg">{siteConfig.aboutText}</p>
+            <p class="text-lg">Contamos con un equipo de mas de {statsGuards} guardias en terreno, {statsClients} clientes activos y cobertura en {statsLocations} comunas de la Region Metropolitana.</p>
+            <p class="text-lg">Nuestra vision es ser la empresa de seguridad privada mas confiable y profesional de Chile, ofreciendo soluciones innovadoras y un servicio excepcional.</p>
           </div>
         </div>
-        <div class="bg-neutral-100 rounded-2xl p-8">
-          <h3 class="text-2xl font-bold text-neutral-900 mb-6">Lo que nos diferencia</h3>
+        <div class="bg-neutral-50 rounded-2xl p-8 border border-neutral-200">
+          <h3 class="text-2xl lg:text-3xl font-bold text-neutral-900 mb-6">Lo que nos diferencia</h3>
           <div class="space-y-4">
-            {siteConfig.usps.map((usp, index) => (
+            {siteConfig.usps.map((usp) => (
               <div class="flex gap-4">
                 <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
                   <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,8 +85,8 @@ const featuredClientNames = featuredClients.map(c => c.name);
     </div>
   </section>
 
-  <!-- Stats -->
-  <section class="py-16 bg-neutral-800 text-white">
+  <!-- Estadisticas Section -->
+  <section class="py-16 lg:py-24 bg-neutral-800 text-white">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         <div>
@@ -102,7 +99,7 @@ const featuredClientNames = featuredClients.map(c => c.name);
         </div>
         <div>
           <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{statsLocations}</div>
-          <div class="text-neutral-300">Comunas coverage</div>
+          <div class="text-neutral-300">Comunas con cobertura</div>
         </div>
         <div>
           <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{statsYears}</div>
@@ -112,15 +109,15 @@ const featuredClientNames = featuredClients.map(c => c.name);
     </div>
   </section>
 
-  <!-- Empresas que confian -->
+  <!-- Empresas que confian Section -->
   {featuredClientNames.length > 0 && (
-    <section class="py-16 bg-neutral-50">
+    <section class="py-16 lg:py-24 bg-neutral-50">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6 text-center">Empresas que confian en GuardMan</h2>
         <div class="flex flex-wrap justify-center gap-4">
           {featuredClientNames.map((client) => (
-            <div class="bg-white px-6 py-3 rounded-lg shadow-sm">
-              <span class="text-lg font-bold text-neutral-400">{client}</span>
+            <div class="bg-white px-6 py-3 rounded-lg border border-neutral-200">
+              <span class="text-lg font-semibold text-neutral-600">{client}</span>
             </div>
           ))}
         </div>
@@ -128,7 +125,7 @@ const featuredClientNames = featuredClients.map(c => c.name);
     </section>
   )}
 
-  <!-- Testimonios -->
+  <!-- Testimonios Section -->
   {featuredTestimonials.length > 0 && (
     <section class="py-16 lg:py-24 bg-white">
       <div class="container mx-auto px-4">
@@ -140,7 +137,7 @@ const featuredClientNames = featuredClients.map(c => c.name);
         </div>
         <div class="grid md:grid-cols-3 gap-6">
           {featuredTestimonials.map((testimonial) => (
-            <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="bg-neutral-50 rounded-xl p-6 border border-neutral-200">
               <div class="flex items-center gap-1 mb-4">
                 {[...Array(testimonial.rating)].map(() => (
                   <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
@@ -149,7 +146,7 @@ const featuredClientNames = featuredClients.map(c => c.name);
                 ))}
               </div>
               <blockquote class="text-neutral-600 mb-4 italic">"{testimonial.quote}"</blockquote>
-              <div class="border-t pt-4">
+              <div class="border-t border-neutral-200 pt-4">
                 <p class="font-semibold text-neutral-900">{testimonial.name}</p>
                 <p class="text-sm text-neutral-500">{testimonial.role}</p>
                 <p class="text-sm text-primary-600 font-medium">{testimonial.company}</p>
@@ -161,14 +158,19 @@ const featuredClientNames = featuredClients.map(c => c.name);
     </section>
   )}
 
-  <!-- CTA -->
-  <section class="py-16 bg-primary-600 text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">Trabaja con nosotros</h2>
-      <p class="text-lg text-white/90 mb-8">Si eres guardia de seguridad certificado, contactanos.</p>
-      <a href="/contacto" class="inline-flex items-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
-        Contactar RH
-      </a>
+  <!-- CTA Section -->
+  <section class="py-16 lg:py-24 bg-primary-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-700 to-primary-900"></div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">Trabaja con nosotros</h2>
+        <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+          Si eres guardia de seguridad certificado, contactanos y unete a nuestro equipo.
+        </p>
+        <a href="/contacto" class="inline-flex items-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+          Contactar RH
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>

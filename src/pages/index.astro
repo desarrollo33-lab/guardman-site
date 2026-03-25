@@ -32,6 +32,7 @@ const featuredClients = clients.map(c => c.name);
   <!-- Schema Markup for Homepage -->
   <SchemaWebSite />
   <SchemaOrganization />
+  
   <!-- 1. Hero Section -->
   <section class="relative bg-primary-600 text-white overflow-hidden">
     <div class="absolute inset-0">
@@ -71,21 +72,20 @@ const featuredClients = clients.map(c => c.name);
     </div>
   </section>
 
-  <!-- 2. Quienes Somos + Certificaciones Section -->
+  <!-- 2. Quienes Somos Section -->
   <section class="py-16 lg:py-24 bg-white border-b border-neutral-200">
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto text-center mb-8">
         <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
           {siteConfig.name} - Seguridad privada profesional en Santiago
         </h2>
-        <p class="text-lg text-neutral-600 leading-relaxed">
+        <p class="text-lg text-neutral-600 leading-relaxed max-w-2xl mx-auto">
           Mas de {siteConfig.stats.years} anos de experiencia protegiendo lo que mas te importa. Guardias certificados OS-10 y tecnologia de vanguardia para un servicio integral y confiable.
         </p>
       </div>
 
-      <!-- Certificaciones Compactas -->
+      <!-- Certificaciones -->
       <div class="flex flex-wrap justify-center gap-4 mb-8">
-        <!-- OS-10 -->
         <div class="flex items-center gap-3 bg-neutral-50 rounded-full px-5 py-3 border border-neutral-200">
           <div class="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center shrink-0">
             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,7 +98,6 @@ const featuredClients = clients.map(c => c.name);
           </div>
         </div>
 
-        <!-- Ley 21.659 -->
         <div class="flex items-center gap-3 bg-neutral-50 rounded-full px-5 py-3 border border-neutral-200">
           <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center shrink-0">
             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,7 +110,6 @@ const featuredClients = clients.map(c => c.name);
           </div>
         </div>
 
-        <!-- 24/7 -->
         <div class="flex items-center gap-3 bg-neutral-50 rounded-full px-5 py-3 border border-neutral-200">
           <div class="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center shrink-0">
             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -137,7 +135,7 @@ const featuredClients = clients.map(c => c.name);
     </div>
   </section>
 
-  <!-- 3. Services Section -->
+  <!-- 3. Servicios Section -->
   <section class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
@@ -167,24 +165,27 @@ const featuredClients = clients.map(c => c.name);
                 </div>
               )}
             </div>
-            <div class="p-4">
-              <h3 class="text-lg font-semibold text-neutral-900 mb-1">{service.name}</h3>
+            <div class="p-6">
+              <h3 class="text-lg font-semibold text-neutral-900 mb-2">{service.name}</h3>
               <p class="text-neutral-600 text-sm line-clamp-2">{service.short_description}</p>
             </div>
           </a>
         ))}
       </div>
       <div class="text-center mt-8">
-        <a href="/servicios" class="text-primary-600 font-medium hover:text-primary-700 transition-colors">
-          Ver todos los servicios →
+        <a href="/servicios" class="inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors">
+          Ver todos los servicios
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- 4. Guard Pod Featured Section -->
+  <!-- 4. Guard Pod Section -->
   {guardPodService && (
-    <section class="py-16 lg:py-20 bg-gradient-to-br from-primary-700 to-primary-800 text-white">
+    <section class="py-16 lg:py-24 bg-gradient-to-br from-primary-700 to-primary-800 text-white">
       <div class="container mx-auto px-4">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -195,30 +196,30 @@ const featuredClients = clients.map(c => c.name);
               Tecnologia Propia
             </div>
             <h2 class="text-3xl lg:text-4xl font-bold mb-4">Guard Pod</h2>
-            <p class="text-xl text-white/80 mb-6">
+            <p class="text-lg text-white/80 mb-6 max-w-xl">
               Vigilancia autonoma para obras, eventos y zonas sin infraestructura. Energia solar, camaras PTZ y monitoreo remoto en una unidad desplegable en menos de 2 horas.
             </p>
             <ul class="space-y-3 mb-8">
               <li class="flex items-center gap-3">
-                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
                 <span>Despliegue en menos de 2 horas</span>
               </li>
               <li class="flex items-center gap-3">
-                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
                 <span>Energia solar, funciona sin red electrica</span>
               </li>
               <li class="flex items-center gap-3">
-                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
                 <span>Camaras PTZ 360° con vision nocturna</span>
               </li>
               <li class="flex items-center gap-3">
-                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
                 <span>15 meses de desarrollo propio</span>
@@ -249,7 +250,7 @@ const featuredClients = clients.map(c => c.name);
     </section>
   )}
 
-  <!-- 5. Sectors Section -->
+  <!-- 5. Sectores Section -->
   <section class="py-16 lg:py-24 bg-neutral-50">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
@@ -274,23 +275,26 @@ const featuredClients = clients.map(c => c.name);
               )}
               <div class="absolute inset-0 bg-gradient-to-t from-primary-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
-            <div class="p-4">
-              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">{sector.name}</h3>
-              <p class="text-neutral-600 text-sm line-clamp-2 mt-1">{sector.description}</p>
+            <div class="p-6">
+              <h3 class="text-lg font-semibold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors">{sector.name}</h3>
+              <p class="text-neutral-600 text-sm line-clamp-2">{sector.description}</p>
             </div>
           </a>
         ))}
       </div>
       <div class="text-center mt-8">
-        <a href="/sectores" class="text-primary-600 font-medium hover:text-primary-700 transition-colors">
-          Ver todos los sectores →
+        <a href="/sectores" class="inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors">
+          Ver todos los sectores
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- 6. Clientes + Locations -->
-  <section class="py-16 lg:py-24 bg-neutral-50 border-t border-neutral-100">
+  <!-- 6. Clientes + Ubicaciones Section -->
+  <section class="py-16 lg:py-24 bg-white border-t border-neutral-200">
     <div class="container mx-auto px-4">
       <!-- Clientes -->
       {featuredClients.length > 0 && (
@@ -298,18 +302,18 @@ const featuredClients = clients.map(c => c.name);
           <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6 text-center">Empresas que confian en GuardMan</h2>
           <div class="flex flex-wrap justify-center gap-4">
             {featuredClients.map((client) => (
-              <div class="bg-white px-6 py-3 rounded-lg shadow-sm">
-                <span class="text-lg font-bold text-neutral-400">{client}</span>
+              <div class="bg-neutral-50 px-6 py-3 rounded-lg border border-neutral-200">
+                <span class="text-lg font-semibold text-neutral-600">{client}</span>
               </div>
             ))}
           </div>
           <p class="text-center mt-4 text-neutral-500 text-sm">
-            <a href="/nosotros" class="text-primary-600 hover:text-primary-700 font-medium">Conoce más sobre nosotros →</a>
+            <a href="/nosotros" class="text-primary-600 hover:text-primary-700 font-medium">Conoce mas sobre nosotros</a>
           </p>
         </div>
       )}
 
-      <!-- Locations Grid -->
+      <!-- Ubicaciones -->
       <div>
         <div class="text-center mb-8">
           <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Cobertura en toda la Region Metropolitana</h2>
@@ -319,39 +323,42 @@ const featuredClients = clients.map(c => c.name);
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3">
           {locations.map(location => (
-            <a href={`/ubicaciones/${location.slug}`} class="bg-white rounded-lg p-3 text-center hover:shadow-md transition-all hover:border-primary-500 border-2 border-transparent group">
+            <a href={`/ubicaciones/${location.slug}`} class="bg-neutral-50 rounded-lg p-3 text-center hover:shadow-md transition-all hover:border-primary-500 border-2 border-transparent group">
               <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors text-sm">{location.name}</h3>
               <span class="text-xs text-neutral-500">{location.zone}</span>
             </a>
           ))}
         </div>
-        <div class="text-center mt-6">
-          <a href="/ubicaciones" class="text-primary-600 font-medium hover:text-primary-700 transition-colors">
-            Ver todas las ubicaciones →
+        <div class="text-center mt-8">
+          <a href="/ubicaciones" class="inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors">
+            Ver todas las ubicaciones
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 7. CTA Final Mejorado -->
-  <section class="py-20 lg:py-28 bg-primary-600 text-white relative overflow-hidden">
+  <!-- 7. CTA Final Section -->
+  <section class="py-16 lg:py-24 bg-primary-600 text-white relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-primary-700 to-primary-900"></div>
     <div class="container mx-auto px-4 relative z-10">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl lg:text-5xl font-bold mb-6">Protege lo que mas te importa</h2>
-        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">Protege lo que mas te importa</h2>
+        <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
           Cuentanos sobre tus necesidades y diseñamos una solucion de seguridad a tu medida. Sin compromiso.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-          <a href="/cotizacion" class="bg-white text-primary-600 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-neutral-100 transition-colors">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <a href="/cotizacion" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-center hover:bg-neutral-100 transition-colors">
             Solicitar cotizacion gratis
           </a>
-          <a href="/contacto" class="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
+          <a href="/contacto" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-center hover:bg-white/10 transition-colors">
             Hablar con un experto
           </a>
         </div>
-        <div class="flex flex-wrap justify-center gap-8 text-sm text-white/70">
+        <div class="flex flex-wrap justify-center gap-6 text-sm text-white/70">
           <span class="flex items-center gap-2">
             <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
