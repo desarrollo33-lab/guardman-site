@@ -1,175 +1,147 @@
 # Prompts para Imágenes de Ubicaciones - GuardMan Chile
 
-Guía de estilo: Sony A7 IV, 24-70mm f/2.8, f/5.6, ISO 100-200, luz natural Santiago, tonos cool profesionales, Navy #1A2744 como dominante.
+Estilo unificado: Mapa tecnológico futurista con elementos holográficos, cobertura de seguridad y estética cyber.
 
 ---
 
 ## 1. Las Condes
 **Prompt:**
 ```
-Professional wide shot of Las Condes Santiago skyline showing modern corporate buildings and skyscrapers on Apoquindo Avenue with clear blue Santiago sky and Andes mountains visible in the background. Clean urban professional atmosphere with well-lit office buildings and commercial areas. 
+Sophisticated composite image of Las Condes district in Santiago de Chile as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting the area. Subtle holographic markers indicate security guard posts. Wireframe grid overlay suggests surveillance network. Modern corporate buildings rendered as clean geometric silhouettes. The Andes mountains silhouette visible in the eastern backdrop. Cyan (#06B6D4) accent lighting for tech elements. Clean futuristic aesthetic conveying premium security coverage for corporate and residential zones.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 24-28mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue (#1A2744) accents, steel gray buildings, white contrasts, Santiago blue sky (#87CEEB)
-Professional corporate security overview, no faces visible, no competitor logos.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers, white accents.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Corporate security tech presentation, no faces, no competitor logos.
 ```
 
 ## 2. Vitacura
 **Prompt:**
 ```
-Professional shot of Vitacura Santiago residential neighborhood showing elegant modern houses and tree-lined streets with contemporary architecture. Clear Santiago sky with Andes mountains as backdrop. Upscale residential area conveying premium security protection.
+Sophisticated composite image of Vitacura district in Santiago de Chile as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting the upscale residential area. Subtle holographic markers indicate security monitoring points. Wireframe grid overlay suggests surveillance network. Elegant residential buildings rendered as clean geometric silhouettes with luxury home indicators. The Andes mountains silhouette visible in the eastern backdrop. Cyan (#06B6D4) accent lighting for premium security elements. Clean futuristic aesthetic conveying luxury residential protection.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 35mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue (#1A2744), steel gray, white contrasts, Santiago blue sky
-Premium residential security overview, no faces visible.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Luxury residential security tech presentation, no faces, no competitor logos.
 ```
 
 ## 3. Santiago Centro
 **Prompt:**
 ```
-Professional wide shot of Santiago Centro showing government buildings, Plaza de Armas area, and historic architecture with modern commercial buildings. Santiago Metropolitan Cathedral visible. Clear blue sky with Andes mountains backdrop.
+Sophisticated composite image of Santiago Centro district as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting the historic downtown area. Subtle holographic markers indicate security checkpoints. Wireframe grid overlay suggests comprehensive surveillance network. Government buildings and Plaza de Armas rendered as clean geometric silhouettes. The Andes mountains silhouette visible in the eastern backdrop. Cyan (#06B6D4) accent lighting for security elements. Clean futuristic aesthetic conveying central business district protection.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 24-28mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue, steel gray buildings, white, Santiago sky blue
-Historic urban center security overview, no faces visible.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Urban center security tech presentation, no faces, no competitor logos.
 ```
 
-## 4. Huechuraba (Ciudad Empresarial)
+## 4. Huechuraba
 **Prompt:**
 ```
-Professional shot of Huechuraba industrial and business park area showing modern warehouses, logistics centers, and industrial facilities. Clean organized industrial zone with Santiago skyline in background and Andes mountains visible.
+Sophisticated composite image of Huechuraba industrial and business park zone as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting industrial facilities. Subtle holographic markers indicate security guard posts at warehouses and logistics centers. Wireframe grid overlay suggests perimeter surveillance network. Industrial buildings and warehouses rendered as clean geometric silhouettes. Santiago skyline visible in background. Cyan (#06B6D4) accent lighting for industrial security elements. Clean futuristic aesthetic conveying industrial and logistics protection.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 24-28mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue, steel gray, industrial white, Santiago sky blue
-Industrial security overview, no faces visible, no competitor logos.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Industrial security tech presentation, no faces, no competitor logos.
 ```
 
 ## 5. Quilicura
 **Prompt:**
 ```
-Professional shot of Quilicura industrial and logistics zone showing warehouses, distribution centers, and commercial facilities. Clean modern industrial area with Santiago cityscape in background.
+Sophisticated composite image of Quilicura logistics zone as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting distribution centers and warehouses. Subtle holographic markers indicate security monitoring points. Wireframe grid overlay suggests supply chain surveillance network. Industrial facilities rendered as clean geometric silhouettes. Santiago metropolitan area visible in background. Cyan (#06B6D4) accent lighting for logistics security elements. Clean futuristic aesthetic conveying warehouse and distribution protection.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 24-28mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue, steel gray, white, Santiago sky blue
-Logistics and industrial security overview, no faces visible.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Logistics security tech presentation, no faces, no competitor logos.
 ```
 
 ## 6. Lo Barnechea
 **Prompt:**
 ```
-Professional shot of Lo Barnechea luxury residential area showing modern hillside homes with the Andes mountains as dramatic backdrop. Upscale residential neighborhood with clear Santiago sky and mountain views.
+Sophisticated composite image of Lo Barnechea luxury hillside residential area as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting the exclusive neighborhood. Subtle holographic markers indicate security patrol routes. Wireframe grid overlay suggests perimeter surveillance network. Luxury homes and condominiums rendered as clean geometric silhouettes on hillside. Dramatic Andes mountains silhouette as backdrop. Cyan (#06B6D4) accent lighting for premium security elements. Clean futuristic aesthetic conveying luxury hillside protection.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 35-50mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue (#1A2744), steel gray, white contrasts, Santiago sky blue
-Luxury residential security overview, dramatic mountain backdrop, no faces visible.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Luxury residential security tech presentation, no faces, no competitor logos.
 ```
 
 ## 7. La Reina
 **Prompt:**
 ```
-Professional shot of La Reina quiet residential neighborhood showing suburban houses, tree-lined streets, and peaceful residential atmosphere. Clear Santiago sky with partial Andes views.
+Sophisticated composite image of La Reina suburban residential area as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting the peaceful neighborhood. Subtle holographic markers indicate community security points. Wireframe grid overlay suggests neighborhood surveillance network. Residential houses and tree-lined streets rendered as clean geometric silhouettes. Urban Santiago backdrop visible. Cyan (#06B6D4) accent lighting for community security elements. Clean futuristic aesthetic conveying family residential protection.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 35mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue, steel gray, white, Santiago sky blue
-Tranquil residential security overview, no faces visible.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Residential community security tech presentation, no faces, no competitor logos.
 ```
 
 ## 8. Renca
 **Prompt:**
 ```
-Professional shot of Renca industrial and commercial mixed zone showing industrial facilities, warehouses, and commercial buildings. Modern industrial district with Santiago urban backdrop and clear sky.
+Sophisticated composite image of Renca industrial commercial mixed zone as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting industrial and commercial areas. Subtle holographic markers indicate security posts at facilities. Wireframe grid overlay suggests industrial surveillance network. Warehouses and commercial buildings rendered as clean geometric silhouettes. Santiago skyline in background. Cyan (#06B6D4) accent lighting for industrial security elements. Clean futuristic aesthetic conveying mixed industrial commercial protection.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 24-28mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue, steel gray industrial, white accents, Santiago sky blue
-Industrial commercial security overview, no faces visible.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Industrial commercial security tech presentation, no faces, no competitor logos.
 ```
 
 ## 9. Pudahuel
 **Prompt:**
 ```
-Professional shot of Pudahuel area showing industrial facilities, commercial zones, and residential areas near Arturo Merino Benitez airport. Modern infrastructure with Santiago skyline in distance.
+Sophisticated composite image of Pudahuel zone near airport as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting industrial and airport adjacent areas. Subtle holographic markers indicate security monitoring points. Wireframe grid overlay suggests infrastructure surveillance network. Industrial facilities and airport infrastructure rendered as clean geometric silhouettes. Santiago metropolitan backdrop visible. Cyan (#06B6D4) accent lighting for transportation security elements. Clean futuristic aesthetic conveying airport zone and industrial protection.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 24-28mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue, steel gray, white, Santiago sky blue
-Industrial airport zone security overview, no faces visible.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Airport industrial security tech presentation, no faces, no competitor logos.
 ```
 
 ## 10. La Pintana
 **Prompt:**
 ```
-Professional shot of La Pintana residential area showing suburban houses, community spaces, and residential streets. Clear Santiago sky with urban residential atmosphere.
+Sophisticated composite image of La Pintana residential southern area as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting the residential neighborhood. Subtle holographic markers indicate community security points. Wireframe grid overlay suggests residential surveillance network. Houses and community buildings rendered as clean geometric silhouettes. Urban southern Santiago backdrop. Cyan (#06B6D4) accent lighting for community security elements. Clean futuristic aesthetic conveying residential community protection.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 35mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue, steel gray, white residential, Santiago sky blue
-Residential community security overview, no faces visible.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Residential community security tech presentation, no faces, no competitor logos.
 ```
 
 ## 11. Lampa
 **Prompt:**
 ```
-Professional shot of Lampa rural industrial zone showing industrial facilities, agricultural areas, and rural countryside with Santiago metropolitan area in background. Andes mountains visible on horizon.
+Sophisticated composite image of Lampa rural northern zone as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting the rural industrial area. Subtle holographic markers indicate remote security monitoring points. Wireframe grid overlay suggests extensive perimeter surveillance network. Industrial facilities and agricultural zones rendered as clean geometric silhouettes. Andes mountains visible on horizon. Santiago metropolitan area in distant background. Cyan (#06B6D4) accent lighting for rural security elements. Clean futuristic aesthetic conveying rural industrial protection.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 24-28mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue, steel gray, green agricultural tones, Santiago sky blue
-Rural industrial security overview, no faces visible.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Rural industrial security tech presentation, no faces, no competitor logos.
 ```
 
 ## 12. Conchalí
 **Prompt:**
 ```
-Professional shot of Conchali mixed-use neighborhood showing residential buildings, commercial areas, and community spaces. Clear Santiago sky with urban residential atmosphere.
+Sophisticated composite image of Conchali mixed-use neighborhood as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting the mixed residential commercial area. Subtle holographic markers indicate security checkpoints. Wireframe grid overlay suggests urban surveillance network. Residential and commercial buildings rendered as clean geometric silhouettes. Santiago northern urban backdrop. Cyan (#06B6D4) accent lighting for neighborhood security elements. Clean futuristic aesthetic conveying mixed-use urban protection.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 35mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue, steel gray, white, Santiago sky blue
-Mixed residential commercial security overview, no faces visible.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Mixed urban security tech presentation, no faces, no competitor logos.
 ```
 
 ## 13. Los Andes
 **Prompt:**
 ```
-Professional shot of Los Andes city in the Aconcagua Valley showing urban center, main plaza area, and surrounding mountains. Clear sky with dramatic Andean mountain backdrop. Aconcagua mountain visible.
+Sophisticated composite image of Los Andes city in the Aconcagua Valley as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting the urban center. Subtle holographic markers indicate city security monitoring points. Wireframe grid overlay suggests urban surveillance network. City buildings and central plaza rendered as clean geometric silhouettes. Dramatic Aconcagua and Andes mountain range silhouette as backdrop. Cyan (#06B6D4) accent lighting for city security elements. Clean futuristic aesthetic conveying Aconcagua valley urban protection.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 24-28mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue, steel gray, white urban, Santiago sky blue, mountain tones
-Los Andes urban security overview, dramatic mountain backdrop, no faces visible.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Valley urban security tech presentation, no faces, no competitor logos.
 ```
 
 ## 14. San Felipe
 **Prompt:**
 ```
-Professional shot of San Felipe valley showing urban center, agricultural valley landscape, and surrounding mountains. Clear sky with Andes mountain range backdrop. Aconcagua valley area.
+Sophisticated composite image of San Felipe in the Aconcagua Valley as a futuristic security technology visualization. Dark navy blue (#1A2744) base map with glowing electric blue (#3B82F6) coverage zones highlighting the agricultural valley urban center. Subtle holographic markers indicate regional security monitoring points. Wireframe grid overlay suggests valley surveillance network. City buildings and agricultural facilities rendered as clean geometric silhouettes. Surrounding mountain ranges forming the valley backdrop. Cyan (#06B6D4) accent lighting for regional security elements. Clean futuristic aesthetic conveying agricultural valley protection.
 
-Camera: Sony A7 IV with 24-70mm f/2.8 GM II
-Focal length: 24-28mm
-Aperture: f/5.6, ISO: 100-200
-Color palette: Navy blue, steel gray, white urban, green agricultural, Santiago sky blue
-San Felipe valley security overview, agricultural valley atmosphere, no faces visible.
+Color palette: Navy blue (#1A2744) base, electric blue (#3B82F6) coverage zones, cyan (#06B6D4) markers.
+Treatment: Futuristic tech visualization, clean lines, subtle glow effects, high contrast, holographic feel.
+Style: Valley regional security tech presentation, no faces, no competitor logos.
 ```
 
 ---
@@ -178,4 +150,12 @@ San Felipe valley security overview, agricultural valley atmosphere, no faces vi
 - **Dimensiones:** 1920×1080px (16:9)
 - **Formato:** WebP
 - **Nomenclatura:** `area-[comuna].webp` (ej: `area-las-condes.webp`)
-- **Hero images:** 1920×1080px
+
+## Resumen de Estilo Unificado
+- Mapa base oscuro navy (#1A2744)
+- Zonas de cobertura en azul eléctrico (#3B82F6)
+- Markers holográficos en cyan (#06B6D4)
+- Grid wireframe de vigilancia
+- Elementos holográficos sutiles
+- Estética futurista cyber
+- Sin rostros, sin logos de competidores
