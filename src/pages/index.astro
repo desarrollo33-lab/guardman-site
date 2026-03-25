@@ -73,70 +73,74 @@ const featuredClients = clients.map(c => c.name);
   </section>
 
   <!-- 2. Quienes Somos Section -->
-  <section class="py-16 lg:py-24 bg-white relative overflow-hidden" aria-labelledby="nosotros-section-title">
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-primary-700 to-primary-800 text-white relative overflow-hidden" aria-labelledby="nosotros-section-title">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
+
     <div class="container mx-auto px-4 relative z-10">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <div class="inline-flex items-center gap-2 bg-neutral-100 text-neutral-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div class="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"/>
             </svg>
             <span>Sobre Nosotros</span>
           </div>
-          <h2 id="nosotros-section-title" class="text-3xl lg:text-4xl font-bold mb-4 text-neutral-900">
+          <h2 id="nosotros-section-title" class="text-3xl lg:text-4xl font-bold mb-4">
             {siteConfig.name} - Seguridad privada profesional en Santiago
           </h2>
-          <p class="text-lg text-neutral-600 mb-6 max-w-xl">
-            Mas de {siteConfig.stats.years} anos de experiencia protegiendo lo que mas te importa. Guardias certificados OS-10 y tecnologia de vanguardia para un servicio integral y confiable.
+          <p class="text-lg text-white/80 mb-6 max-w-xl">
+            Mas de 8 anos de experiencia protegiendo lo que mas te importa. Guardias certificados OS-10 y tecnologia de vanguardia para un servicio integral y confiable.
           </p>
           <div class="space-y-4 mb-8">
-            <article class="flex gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-primary-500 hover:shadow-md transition-all">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
+              <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold mb-1 text-neutral-900">Guardias certificados OS-10 vigentes</h3>
-                <p class="text-neutral-600 text-sm">Personal capacitado y certificado para maxima proteccion.</p>
+                <h3 class="font-semibold mb-1">Guardias certificados OS-10 vigentes</h3>
+                <p class="text-white/70 text-sm">Personal capacitado y certificado para maxima proteccion.</p>
               </div>
             </article>
-            <article class="flex gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-primary-500 hover:shadow-md transition-all">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
+              <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold mb-1 text-neutral-900">Cumplimiento Ley 21.659</h3>
-                <p class="text-neutral-600 text-sm">Operamos dentro de todas las normativas legales vigentes.</p>
+                <h3 class="font-semibold mb-1">Cumplimiento Ley 21.659</h3>
+                <p class="text-white/70 text-sm">Operamos dentro de todas las normativas legales vigentes.</p>
               </div>
             </article>
-            <article class="flex gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-primary-500 hover:shadow-md transition-all">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
+              <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold mb-1 text-neutral-900">Atencion 24/7 los 365 dias</h3>
-                <p class="text-neutral-600 text-sm">Respuesta inmediata en cualquier momento del ano.</p>
+                <h3 class="font-semibold mb-1">Atencion 24/7 los 365 dias</h3>
+                <p class="text-white/70 text-sm">Respuesta inmediata en cualquier momento del ano.</p>
               </div>
             </article>
-            <article class="flex gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-primary-500 hover:shadow-md transition-all">
-              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
+              <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold mb-1 text-neutral-900">Centro de monitoreo propio</h3>
-                <p class="text-neutral-600 text-sm">Supervision continua desde nuestras instalaciones.</p>
+                <h3 class="font-semibold mb-1">Centro de monitoreo propio</h3>
+                <p class="text-white/70 text-sm">Supervision continua desde nuestras instalaciones.</p>
               </div>
             </article>
           </div>
-          <a href="/nosotros" class="inline-flex items-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+          <a href="/nosotros" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
             Conoce mas sobre nosotros
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -144,31 +148,19 @@ const featuredClients = clients.map(c => c.name);
           </a>
         </div>
         <div class="relative">
-          <div class="bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl aspect-video flex items-center justify-center border-2 border-primary-200 overflow-hidden">
-            <div class="text-center p-8">
-              <div class="grid grid-cols-2 gap-4 mb-4">
-                <div class="bg-white rounded-xl p-4 shadow-sm">
-                  <div class="text-3xl font-bold text-primary-600">{siteConfig.stats.guards}</div>
-                  <div class="text-sm text-neutral-600">Guardias</div>
-                </div>
-                <div class="bg-white rounded-xl p-4 shadow-sm">
-                  <div class="text-3xl font-bold text-primary-600">{siteConfig.stats.clients}</div>
-                  <div class="text-sm text-neutral-600">Clientes</div>
-                </div>
-                <div class="bg-white rounded-xl p-4 shadow-sm">
-                  <div class="text-3xl font-bold text-primary-600">{siteConfig.stats.locations}</div>
-                  <div class="text-sm text-neutral-600">Comunas</div>
-                </div>
-                <div class="bg-white rounded-xl p-4 shadow-sm">
-                  <div class="text-3xl font-bold text-primary-600">{siteConfig.stats.years}</div>
-                  <div class="text-sm text-neutral-600">Anos</div>
-                </div>
-              </div>
-              <p class="text-primary-700 font-medium">Resultados que hablan por si solos</p>
-            </div>
+          <div class="rounded-2xl aspect-video overflow-hidden border border-white/20 bg-black/20">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/mqpLsKrwjAI"
+              title="GuardMan Chile - Video institucional"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
           </div>
           <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
-            Trayectoria comprobada
+            Conoce GuardMan
           </div>
         </div>
       </div>
