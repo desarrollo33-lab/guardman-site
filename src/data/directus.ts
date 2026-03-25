@@ -22,6 +22,23 @@ export function getImageUrl(assetId: string | null | undefined): string | null {
   return `${DIRECTUS_URL}/assets/${assetId}`;
 }
 
+/**
+ * Convert image paths to WebP format for optimization
+ * Falls back to original path if WebP doesn't exist
+ */
+export function optimizeImageUrl(imagePath: string | null | undefined): string | null {
+  if (!imagePath) return null;
+  
+  // If it's already WebP or external URL, return as-is
+  if (imagePath.endsWith('.webp') || imagePath.startsWith('http')) {
+    return imagePath;
+  }
+  
+  // Convert PNG/JPG/etc to WebP
+  const basePath = imagePath.replace(/\.(png|jpg|jpeg|gif)$/i, '.webp');
+  return basePath;
+}
+
 // Types
 export interface Service {
   id: number;

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getServices } from '../../data/directus';
+import { getServices, optimizeImageUrl } from '../../data/directus';
 
 const services = getServices();
 ---
@@ -25,7 +25,7 @@ const services = getServices();
             <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center overflow-hidden">
               {service.image ? (
                 <img 
-                  src={`/images/${service.image}`}
+                  src={optimizeImageUrl(`/images/${service.image}`)}
                   alt={service.name}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   width="800"

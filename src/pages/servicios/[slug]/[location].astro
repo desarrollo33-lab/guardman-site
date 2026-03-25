@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getServices, getLocations, getServiceBySlug, getLocationBySlug, getSiteConfig } from '../../../data/directus';
+import { getServices, getLocations, getServiceBySlug, getLocationBySlug, getSiteConfig, optimizeImageUrl } from '../../../data/directus';
 import SchemaService from '../../../components/seo/SchemaService.astro';
 import SchemaLocalBusiness from '../../../components/seo/SchemaLocalBusiness.astro';
 import SchemaFAQ from '../../../components/seo/SchemaFAQ.astro';
@@ -140,7 +140,7 @@ const breadcrumbItems = [
     {service.image && (
       <div class="absolute inset-0">
         <img 
-          src={`/images/${service.image}`}
+          src={optimizeImageUrl(`/images/${service.image}`)}
           alt={service.name}
           class="w-full h-full object-cover opacity-30"
           width="1920"

@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SchemaWebSite from '../components/seo/SchemaWebSite.astro';
 import SchemaOrganization from '../components/seo/SchemaOrganization.astro';
-import { getServices, getLocations, getSectors, getFeaturedClients, getSiteConfig } from '../data/directus';
+import { getServices, getLocations, getSectors, getFeaturedClients, getSiteConfig, optimizeImageUrl } from '../data/directus';
 
 const services = getServices();
 const locations = getLocations();
@@ -37,7 +37,7 @@ const guardPodService = services.find(s => s.slug === 'guard-pod');
     <div class="absolute inset-0">
       {config?.hero_image && (
         <img 
-          src={`/images/${config.hero_image}`}
+          src={optimizeImageUrl(`/images/${config.hero_image}`)}
           alt="GuardMan Chile - Seguridad Privada"
           class="w-full h-full object-cover"
           width="1920"
@@ -152,7 +152,7 @@ const guardPodService = services.find(s => s.slug === 'guard-pod');
             <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
               {service.image ? (
                 <img 
-                  src={`/images/${service.image}`}
+                  src={optimizeImageUrl(`/images/${service.image}`)}
                   alt={service.name}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   width="800"
@@ -259,7 +259,7 @@ const guardPodService = services.find(s => s.slug === 'guard-pod');
             <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
               {sector.image && (
                 <img 
-                  src={`/images/${sector.image}`}
+                  src={optimizeImageUrl(`/images/${sector.image}`)}
                   alt={sector.name}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   width="800"

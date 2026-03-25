@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SchemaCollectionPage from '../../components/seo/SchemaCollectionPage.astro';
-import { getSectors } from '../../data/directus';
+import { getSectors, optimizeImageUrl } from '../../data/directus';
 
 const sectors = getSectors();
 const siteUrl = 'https://guardman.cl';
@@ -38,7 +38,7 @@ const itemListElement = sectors.map(sector => ({
             <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
               {sector.image && (
                 <img 
-                  src={`/images/${sector.image}`}
+                  src={optimizeImageUrl(`/images/${sector.image}`)}
                   alt={sector.name}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   width="800"
