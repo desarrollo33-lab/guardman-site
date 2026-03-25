@@ -11,7 +11,7 @@
     "meta_title": "Seguridad para Hoteles | GuardMan Chile",
     "meta_description": "Servicios de seguridad especializados para hoteles en Santiago. Guardias, CCTV y monitoreo 24/7.",
     "featured": true,
-    "image": "sector-hoteleria.webp",
+    "image": "sector-hoteleria.png",
     "status": "published",
     "sort": 1
   },
@@ -27,7 +27,7 @@
     "meta_title": "Seguridad Corporativa | GuardMan Chile",
     "meta_description": "Servicios de seguridad para oficinas y empresas en Santiago. Control de accesos, CCTV y guardias.",
     "featured": true,
-    "image": "sector-corporativo.webp",
+    "image": "sector-corporativo.png",
     "status": "published",
     "sort": 2
   },
@@ -43,7 +43,7 @@
     "meta_title": "Seguridad Residencial | GuardMan Chile",
     "meta_description": "Seguridad para condominios, casas y comunidades en Santiago. Guardias y vigilancia 24/7.",
     "featured": true,
-    "image": "sector-residencial.webp",
+    "image": "sector-residencial.png",
     "status": "published",
     "sort": 3
   },
@@ -59,7 +59,7 @@
     "meta_title": "Seguridad Industrial | GuardMan Chile",
     "meta_description": "Seguridad para fabricas, bodegas y centros logisticos en Santiago.",
     "featured": false,
-    "image": "sector-industrial.webp",
+    "image": "sector-industrial.png",
     "status": "published",
     "sort": 4
   },
@@ -75,7 +75,7 @@
     "meta_title": "Seguridad Automotriz | GuardMan Chile",
     "meta_description": "Seguridad para concessionarias y talleres en Santiago.",
     "featured": false,
-    "image": "sector-automotriz.webp",
+    "image": "sector-automotriz.png",
     "status": "published",
     "sort": 5
   },
@@ -91,7 +91,7 @@
     "meta_title": "Seguridad Diplomática | GuardMan Chile",
     "meta_description": "Seguridad para embajadas y consulados en Santiago.",
     "featured": false,
-    "image": "sector-diplomatico.webp",
+    "image": "sector-diplomatico.png",
     "status": "published",
     "sort": 6
   }
