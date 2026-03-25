@@ -45,8 +45,8 @@ const relatedServices = allServices
 // Build site config
 const siteConfig = {
   name: config?.site_name || 'GuardMan Chile',
-  phone: config?.phone || '+56 2 2400 6000',
-  phoneTel: (config?.phone || '+56 2 2400 6000').replace(/[^0-9+]/g, ''),
+  phone: config?.phone || '+56 9 300 000 10',
+  phoneTel: (config?.phone || '+56 9 300 000 10').replace(/[^0-9+]/g, ''),
 };
 
 // SEO-friendly meta title (max 60 chars) following TEMPLATE-STANDARDS.md
@@ -111,7 +111,7 @@ const breadcrumbItems = [
     name={location.name}
     description={`${service.name} en ${location.name}`}
     slug={`${service.slug}/${location.slug}`}
-    address="Av. Americo Vespucio Norte 1980"
+    address="Av. Américo Vespucio Norte 1980"
     locality={location.name}
     latitude={location.latitude}
     longitude={location.longitude}

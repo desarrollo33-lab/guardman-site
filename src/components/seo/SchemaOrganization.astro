@@ -7,9 +7,9 @@ const siteConfig = {
   name: config?.site_name || 'GuardMan Chile',
   alternateName: 'GuardMan Seguridad Privada',
   url: config?.site_url || 'https://guardman.cl',
-  phone: config?.phone || '+56 2 2400 6000',
+  phone: config?.phone || '+56 9 300 000 10',
   email: config?.email || 'info@guardman.cl',
-  address: config?.address || 'Av. Americo Vespucio Norte 1980, Providencia, Santiago, Chile',
+  address: config?.address || 'Av. Américo Vespucio Norte 1980, Providencia, Santiago, Chile',
   latitude: config?.latitude ?? -33.4569,
   longitude: config?.longitude ?? -70.6483,
   hours: config?.hours || [
@@ -58,7 +58,7 @@ const areaServed = [
   { "@type": "City", "name": "Pudahuel" },
   { "@type": "City", "name": "La Pintana" },
   { "@type": "City", "name": "Lampa" },
-  { "@type": "City", "name": "Conchali" },
+  { "@type": "City", "name": "Conchalí" },
   { "@type": "City", "name": "Los Andes" },
   { "@type": "City", "name": "San Felipe" },
 ];
@@ -66,7 +66,7 @@ const areaServed = [
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
-    // Organization Schema
+    // Organization Schema (ProfessionalService)
     {
       "@type": "ProfessionalService",
       "@id": "https://guardman.cl/#organization",
@@ -77,7 +77,7 @@ const schemaData = {
       "email": siteConfig.email,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Av. Americo Vespucio Norte 1980",
+        "streetAddress": "Av. Américo Vespucio Norte 1980",
         "addressLocality": "Providencia",
         "addressRegion": "Santiago",
         "postalCode": "7560000",
@@ -123,37 +123,6 @@ const schemaData = {
           "urlTemplate": `${siteConfig.url}/servicios?q={search_term_string}`
         },
         "query-input": "required name=search_term_string"
-      }
-    },
-    // LocalBusiness for homepage
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://guardman.cl/#localbusiness",
-      "name": siteConfig.name,
-      "description": "Empresa lider en servicios de seguridad privada en Santiago. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7.",
-      "url": siteConfig.url,
-      "telephone": siteConfig.phone,
-      "email": siteConfig.email,
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. Americo Vespucio Norte 1980",
-        "addressLocality": "Providencia",
-        "addressRegion": "Santiago",
-        "postalCode": "7560000",
-        "addressCountry": "CL"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": siteConfig.latitude,
-        "longitude": siteConfig.longitude
-      },
-      "openingHours": "Mo-Su 00:00-24:00",
-      "priceRange": "$$$",
-      "areaServed": areaServed,
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": siteConfig.ratingValue,
-        "reviewCount": siteConfig.ratingCount
       }
     }
   ]

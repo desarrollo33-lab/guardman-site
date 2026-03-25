@@ -30,7 +30,7 @@ export const BrandDNA = {
   // LOCATION
   // ============================================
   location: {
-    headquartersAddress: 'Av. Americo Vespucio Norte 1980, Providencia, Santiago, Chile',
+    headquartersAddress: 'Av. Américo Vespucio Norte 1980, Providencia, Santiago, Chile',
     latitude: -33.4569,
     longitude: -70.6483,
   },

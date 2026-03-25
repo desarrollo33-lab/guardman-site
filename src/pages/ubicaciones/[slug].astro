@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getLocations, getServices } from '../../data/directus';
 import SchemaLocalBusiness from '../../components/seo/SchemaLocalBusiness.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
 import SchemaFAQ from '../../components/seo/SchemaFAQ.astro';
 
 export function getStaticPaths() {
@@ -13,6 +14,11 @@ export function getStaticPaths() {
 }
 
 const { location } = Astro.props;
+const breadcrumbItems = [
+  { name: 'Inicio', url: 'https://guardman.cl' },
+  { name: 'Ubicaciones', url: 'https://guardman.cl/ubicaciones' },
+  { name: location.name, url: `https://guardman.cl/ubicaciones/${location.slug}` }
+];
 const allLocations = getLocations();
 const allServices = getServices();
 const availableServices = allServices.slice(0, 6);
@@ -64,12 +70,13 @@ const locationFAQs = (location.faqs && location.faqs.length > 0)
     name={location.name}
     description={location.description}
     slug={location.slug}
-    address="Av. Americo Vespucio Norte 1980"
+    address="Av. Américo Vespucio Norte 1980"
     locality={location.name}
     latitude={location.latitude}
     longitude={location.longitude}
     neighborhood={location.neighborhoods?.[0]}
   />
+  <SchemaBreadcrumb items={breadcrumbItems} />
   <SchemaFAQ faqs={locationFAQs} />
   
   <!-- Breadcrumb -->
