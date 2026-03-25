@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SchemaWebSite from '../components/seo/SchemaWebSite.astro';
 import SchemaOrganization from '../components/seo/SchemaOrganization.astro';
-import { getServices, getLocations, getSectors, getFeaturedClients, getSiteConfig, getTestimonials, optimizeImageUrl } from '../data/directus';
+import { getServices, getLocations, getSectors, getFeaturedClients, getSiteConfig, optimizeImageUrl } from '../data/directus';
 
 const services = getServices();
 const locations = getLocations();
@@ -26,7 +26,6 @@ const siteConfig = {
 
 const featuredClients = clients.map(c => c.name);
 const guardPodService = services.find(s => s.slug === 'guard-pod');
-const featuredTestimonials = getTestimonials().filter(t => t.featured).slice(0, 3);
 ---
 
 <BaseLayout title="Seguridad Privada en Santiago | GuardMan Chile" description={config?.seo_description || 'GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.'} image={optimizeImageUrl(`/images/${config?.hero_image}`)}>
@@ -296,32 +295,6 @@ const featuredTestimonials = getTestimonials().filter(t => t.featured).slice(0, 
             {featuredClients.map((client) => (
               <div class="bg-white px-6 py-3 rounded-lg shadow-sm">
                 <span class="text-lg font-bold text-neutral-400">{client}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      <!-- Testimonios -->
-      {featuredTestimonials.length > 0 && (
-        <div class="mb-12">
-          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6 text-center">Lo que dicen nuestros clientes</h2>
-          <div class="grid md:grid-cols-3 gap-6">
-            {featuredTestimonials.map((testimonial) => (
-              <div class="bg-white rounded-xl p-6 shadow-sm">
-                <div class="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map(() => (
-                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                    </svg>
-                  ))}
-                </div>
-                <blockquote class="text-neutral-600 mb-4 italic">"{testimonial.quote}"</blockquote>
-                <div class="border-t pt-4">
-                  <p class="font-semibold text-neutral-900">{testimonial.name}</p>
-                  <p class="text-sm text-neutral-500">{testimonial.role}</p>
-                  <p class="text-sm text-primary-600 font-medium">{testimonial.company}</p>
-                </div>
               </div>
             ))}
           </div>

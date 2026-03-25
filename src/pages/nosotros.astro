@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getSiteConfig } from '../data/directus';
+import { getSiteConfig, getTestimonials } from '../data/directus';
 
 // Get data from CMS (synchronous - data is pre-loaded at build time)
 const config = getSiteConfig();
@@ -38,6 +38,7 @@ const statsGuards = siteConfig.stats.guards;
 const statsClients = siteConfig.stats.clients;
 const statsLocations = siteConfig.stats.locations;
 const statsYears = siteConfig.stats.years;
+const featuredTestimonials = getTestimonials().filter(t => t.featured);
 ---
 
 <BaseLayout title="Nosotros | GuardMan Chile" description="Conoce a GuardMan Chile - empresa lider en seguridad privada con anos de experiencia en el mercado chileno.">
@@ -108,6 +109,39 @@ const statsYears = siteConfig.stats.years;
       </div>
     </div>
   </section>
+
+  <!-- Testimonios -->
+  {featuredTestimonials.length > 0 && (
+    <section class="py-16 lg:py-24 bg-neutral-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Lo que dicen nuestros clientes</h2>
+          <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+            Empresas líderes confían en GuardMan Chile para proteger sus activos más importantes
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          {featuredTestimonials.map((testimonial) => (
+            <div class="bg-white rounded-xl p-6 shadow-sm">
+              <div class="flex items-center gap-1 mb-4">
+                {[...Array(testimonial.rating)].map(() => (
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                ))}
+              </div>
+              <blockquote class="text-neutral-600 mb-4 italic">"{testimonial.quote}"</blockquote>
+              <div class="border-t pt-4">
+                <p class="font-semibold text-neutral-900">{testimonial.name}</p>
+                <p class="text-sm text-neutral-500">{testimonial.role}</p>
+                <p class="text-sm text-primary-600 font-medium">{testimonial.company}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- CTA -->
   <section class="py-16 bg-primary-600 text-white">
