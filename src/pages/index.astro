@@ -482,20 +482,43 @@ const featuredClients = clients.map(c => c.name);
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
 
     <div class="container mx-auto px-4 relative z-10">
-      <div class="text-center mb-8">
-        <div class="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-          </svg>
-          <span>Cobertura Nacional</span>
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>Cobertura Nacional</span>
+          </div>
+          <h2 id="ubicaciones-section-title" class="text-3xl lg:text-4xl font-bold mb-4">
+            Protegemos en toda la Region Metropolitana
+          </h2>
+          <p class="text-lg text-white/80 max-w-xl">
+            Presencia en las principales comunas de Santiago y la zona de Los Andes y San Felipe.
+          </p>
         </div>
-        <h2 id="ubicaciones-section-title" class="text-3xl lg:text-4xl font-bold mb-4">
-          Protegemos en toda la Region Metropolitana
-        </h2>
-        <p class="text-lg text-white/80 max-w-2xl mx-auto">
-          Presencia en las principales comunas de Santiago y la zona de Los Andes y San Felipe.
-        </p>
+        <div class="relative">
+          <div class="rounded-2xl aspect-video overflow-hidden border border-white/20 bg-black/20">
+            <!-- Placeholder para imagen de cobertura - reemplazar con imagen real -->
+            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary-600/40 to-primary-800/40">
+              <svg class="w-24 h-24 text-white/40" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+                <circle cx="50" cy="50" r="25" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+                <circle cx="50" cy="50" r="10" fill="currentColor"/>
+                <!-- Puntos de ubicacion -->
+                <circle cx="30" cy="35" r="3" fill="currentColor"/>
+                <circle cx="70" cy="40" r="3" fill="currentColor"/>
+                <circle cx="45" cy="70" r="3" fill="currentColor"/>
+                <circle cx="65" cy="65" r="3" fill="currentColor"/>
+                <circle cx="35" cy="55" r="3" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
+            14 Comunas
+          </div>
+        </div>
       </div>
 
       <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 mb-8">
@@ -507,14 +530,12 @@ const featuredClients = clients.map(c => c.name);
         ))}
       </div>
 
-      <div class="text-center">
-        <a href="/ubicaciones" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
-          Ver todas las ubicaciones
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-          </svg>
-        </a>
-      </div>
+      <a href="/ubicaciones" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+        Ver todas las ubicaciones
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
     </div>
   </section>
 
