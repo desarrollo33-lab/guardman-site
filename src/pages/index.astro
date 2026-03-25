@@ -381,7 +381,7 @@ const featuredClients = clients.map(c => c.name);
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
 
     <div class="container mx-auto px-4 relative z-10">
-      <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <div class="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -395,36 +395,6 @@ const featuredClients = clients.map(c => c.name);
           <p class="text-lg text-white/80 mb-6 max-w-xl">
             Somos distribuidores oficiales de Ajax Systems, la empresa lider mundial en sistemas de alarmas inteligentes con mas de 4.5 millones de usuarios protegidos en 187 paises.
           </p>
-        <div class="relative">
-          <div class="bg-gradient-to-br from-primary-600/40 to-primary-800/40 rounded-2xl aspect-video flex items-center justify-center border border-white/20 overflow-hidden">
-            <div class="text-center p-8" role="img" aria-label="Ilustracion del sistema de alarma Ajax Systems con hub central y sensores conectados">
-              <svg class="w-24 h-24 text-white/60 mx-auto mb-4" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                <!-- Hub central -->
-                <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="2"/>
-                <circle cx="50" cy="50" r="12" stroke="currentColor" stroke-width="2"/>
-                <circle cx="50" cy="50" r="4" fill="currentColor"/>
-                <!-- Ondas de senal -->
-                <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
-                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity="0.3"/>
-                <!-- Dispositivos conectados -->
-                <circle cx="50" cy="10" r="4" fill="currentColor" opacity="0.7"/>
-                <circle cx="90" cy="50" r="4" fill="currentColor" opacity="0.7"/>
-                <circle cx="50" cy="90" r="4" fill="currentColor" opacity="0.7"/>
-                <circle cx="10" cy="50" r="4" fill="currentColor" opacity="0.7"/>
-                <!-- Lineas de conexion -->
-                <line x1="50" y1="30" x2="50" y2="14" stroke="currentColor" stroke-width="1" opacity="0.5"/>
-                <line x1="70" y1="50" x2="86" y2="50" stroke="currentColor" stroke-width="1" opacity="0.5"/>
-                <line x1="50" y1="70" x2="50" y2="86" stroke="currentColor" stroke-width="1" opacity="0.5"/>
-                <line x1="30" y1="50" x2="14" y2="50" stroke="currentColor" stroke-width="1" opacity="0.5"/>
-              </svg>
-              <p class="text-white/50 text-sm">Sistema de alarma Ajax</p>
-            </div>
-          </div>
-          <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
-            Distribuidor Oficial
-          </div>
-        </div>
-        <div>
           <div class="space-y-4">
             <!-- Grade 3 -->
             <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
@@ -479,15 +449,43 @@ const featuredClients = clients.map(c => c.name);
               </div>
             </article>
           </div>
-          <a href="/contacto" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+          <a href="/contacto" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors mt-8">
             Conocer Ajax Systems
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
           </a>
         </div>
+        <div class="relative">
+          <div class="bg-gradient-to-br from-primary-600/40 to-primary-800/40 rounded-2xl aspect-video flex items-center justify-center border border-white/20 overflow-hidden">
+            <div class="text-center p-8" role="img" aria-label="Ilustracion del sistema de alarma Ajax Systems con hub central y sensores conectados">
+              <svg class="w-24 h-24 text-white/60 mx-auto mb-4" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+                <!-- Hub central -->
+                <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="2"/>
+                <circle cx="50" cy="50" r="12" stroke="currentColor" stroke-width="2"/>
+                <circle cx="50" cy="50" r="4" fill="currentColor"/>
+                <!-- Ondas de senal -->
+                <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity="0.3"/>
+                <!-- Dispositivos conectados -->
+                <circle cx="50" cy="10" r="4" fill="currentColor" opacity="0.7"/>
+                <circle cx="90" cy="50" r="4" fill="currentColor" opacity="0.7"/>
+                <circle cx="50" cy="90" r="4" fill="currentColor" opacity="0.7"/>
+                <circle cx="10" cy="50" r="4" fill="currentColor" opacity="0.7"/>
+                <!-- Lineas de conexion -->
+                <line x1="50" y1="30" x2="50" y2="14" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                <line x1="70" y1="50" x2="86" y2="50" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                <line x1="50" y1="70" x2="50" y2="86" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                <line x1="30" y1="50" x2="14" y2="50" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+              </svg>
+              <p class="text-white/50 text-sm">Sistema de alarma Ajax</p>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
+            Distribuidor Oficial
+          </div>
+        </div>
       </div>
-
     </div>
   </section>
 
