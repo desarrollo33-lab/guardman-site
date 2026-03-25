@@ -2,14 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getServices, getLocations, getSectors, getFeaturedClients, getSiteConfig } from '../data/directus';
 
-// Get data from CMS (synchronous - data is pre-loaded at build time)
 const services = getServices();
 const locations = getLocations();
 const sectors = getSectors();
 const clients = getFeaturedClients();
 const config = getSiteConfig();
 
-// Fallback values if CMS is empty
 const siteConfig = {
   name: config?.site_name || 'GuardMan Chile',
   phone: config?.phone || '+56930000010',
@@ -25,11 +23,12 @@ const siteConfig = {
 };
 
 const featuredClients = clients.map(c => c.name);
+const guardPodService = services.find(s => s.slug === 'guard-pod');
 ---
 
 <BaseLayout title="Seguridad Privada en Santiago | GuardMan Chile" description={config?.seo_description || 'GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.'}>
   
-  <!-- Hero Section -->
+  <!-- 1. Hero Section -->
   <section class="relative bg-primary-600 text-white overflow-hidden">
     <div class="absolute inset-0">
       {config?.hero_image && (
@@ -68,45 +67,50 @@ const featuredClients = clients.map(c => c.name);
     </div>
   </section>
 
-  <!-- Trust Bar -->
-  <section class="py-10 bg-white border-b border-neutral-100">
+  <!-- 2. Quienes Somos Section -->
+  <section class="py-12 lg:py-16 bg-neutral-50 border-b border-neutral-200">
     <div class="container mx-auto px-4">
-      {featuredClients.length > 0 && (
-        <>
-          <p class="text-center text-sm text-neutral-500 mb-6 uppercase tracking-wider">Empresas que confian en GuardMan</p>
-          <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-16 mb-8">
-            {featuredClients.map((client) => (
-              <div class="text-lg font-bold text-neutral-300 hover:text-primary-600 transition-colors whitespace-nowrap">
-                {client}
-              </div>
-            ))}
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-2xl lg:text-3xl font-bold text-neutral-900 mb-4">
+            {siteConfig.name} - Seguridad privada profesional en Santiago
+          </h2>
+          <p class="text-neutral-600 leading-relaxed mb-4">
+            Con mas de {siteConfig.stats.years} anos de experiencia, protegemos lo que mas te importa. Nuestro equipo de {siteConfig.stats.guards} guardias certificados OS-10 y tecnologia de vanguardia nos permiten ofrecer un servicio integral y confiable.
+          </p>
+          <p class="text-neutral-600 leading-relaxed mb-6">
+            Desde guardias de seguridad hasta nuestro Guard Pod de vigilancia autonoma, combinamos personal profesional con tecnologia propia para garantizar tu tranquilidad las 24 horas.
+          </p>
+          <a href="/nosotros" class="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+            Conoce mas sobre nosotros
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="text-3xl font-bold text-primary-600 mb-2">{siteConfig.stats.guards}</div>
+            <div class="text-sm text-neutral-600">Guardias certificados</div>
           </div>
-        </>
-      )}
-      <div class="flex flex-wrap justify-center gap-6 text-sm text-neutral-500">
-        <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-          </svg>
-          Certificacion OS-10 vigente
-        </span>
-        <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-          </svg>
-          Ley 21.659 de Seguridad Privada
-        </span>
-        <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-          </svg>
-          Atencion 24/7
-        </span>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="text-3xl font-bold text-primary-600 mb-2">{siteConfig.stats.years}</div>
+            <div class="text-sm text-neutral-600">Anos de experiencia</div>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="text-3xl font-bold text-primary-600 mb-2">{siteConfig.stats.clients}</div>
+            <div class="text-sm text-neutral-600">Clientes activos</div>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="text-3xl font-bold text-primary-600 mb-2">{siteConfig.stats.locations}</div>
+            <div class="text-sm text-neutral-600">Comunas cobertura</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- 3. Services Section -->
   <section class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
@@ -146,48 +150,8 @@ const featuredClients = clients.map(c => c.name);
     </div>
   </section>
 
-  <!-- Sectors Section -->
-  <section class="py-16 lg:py-24 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Soluciones por sector</h2>
-        <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
-          Adaptamos nuestros servicios a las necesidades especificas de cada industria en Santiago
-        </p>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sectors.map(sector => (
-          <a href={`/sectores/${sector.slug}`} class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
-            <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
-              {sector.image && (
-                <img 
-                  src={`/images/${sector.image}`}
-                  alt={sector.name}
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-              )}
-              <div class="absolute inset-0 bg-gradient-to-t from-primary-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </div>
-            <div class="p-4">
-              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">{sector.name}</h3>
-              <p class="text-neutral-600 text-sm line-clamp-2 mt-1">{sector.description}</p>
-            </div>
-          </a>
-        ))}
-      </div>
-      <div class="text-center mt-8">
-        <a href="/sectores" class="text-primary-600 font-medium hover:text-primary-700 transition-colors">
-          Ver todos los sectores →
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- GuardPod Featured Section -->
-  {services.find(s => s.slug === 'guard-pod') && (
+  <!-- 4. Guard Pod Featured Section -->
+  {guardPodService && (
     <section class="py-16 lg:py-20 bg-gradient-to-br from-primary-700 to-primary-800 text-white">
       <div class="container mx-auto px-4">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -253,40 +217,153 @@ const featuredClients = clients.map(c => c.name);
     </section>
   )}
 
-  <!-- Locations Section -->
-  <section class="py-16 lg:py-24 bg-white">
+  <!-- 5. Sectors Section -->
+  <section class="py-16 lg:py-24 bg-neutral-50">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Cobertura en toda la Region Metropolitana</h2>
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Soluciones por sector</h2>
         <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
-          Protegemos empresas y residencias en las principales comunas de Santiago y la zona de Los Andes y San Felipe.
+          Adaptamos nuestros servicios a las necesidades especificas de cada industria en Santiago
         </p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {locations.map(location => (
-          <a href={`/ubicaciones/${location.slug}`} class="bg-neutral-50 rounded-lg p-4 text-center hover:shadow-md transition-all hover:border-primary-500 border-2 border-transparent">
-            <h3 class="font-semibold text-neutral-900">{location.name}</h3>
-            <span class="text-xs text-neutral-500">{location.zone}</span>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {sectors.map(sector => (
+          <a href={`/sectores/${sector.slug}`} class="group bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
+            <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
+              {sector.image && (
+                <img 
+                  src={`/images/${sector.image}`}
+                  alt={sector.name}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                />
+              )}
+              <div class="absolute inset-0 bg-gradient-to-t from-primary-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">{sector.name}</h3>
+              <p class="text-neutral-600 text-sm line-clamp-2 mt-1">{sector.description}</p>
+            </div>
           </a>
         ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/sectores" class="text-primary-600 font-medium hover:text-primary-700 transition-colors">
+          Ver todos los sectores →
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-16 lg:py-20 bg-primary-600 text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl lg:text-4xl font-bold mb-4">Protege lo que mas te importa</h2>
-      <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-        Cuentanos sobre tus necesidades y diseñamos una solucion de seguridad a tu medida. Sin compromiso.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/cotizacion" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
-          Solicitar cotizacion gratis
-        </a>
-        <a href="/contacto" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-          Hablar con un experto
-        </a>
+  <!-- 6. Trust Bar + Locations (Fusionados) -->
+  <section class="py-16 lg:py-20 bg-white border-t border-neutral-100">
+    <div class="container mx-auto px-4">
+      <!-- Certificaciones y Cobertura -->
+      <div class="grid lg:grid-cols-2 gap-12 mb-12">
+        <!-- Certificaciones -->
+        <div>
+          <h2 class="text-2xl lg:text-3xl font-bold text-neutral-900 mb-6">Certificaciones y cobertura</h2>
+          <div class="flex flex-wrap gap-4 mb-6">
+            <span class="flex items-center gap-2 bg-success/10 text-success px-4 py-2 rounded-full text-sm font-medium">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Certificacion OS-10
+            </span>
+            <span class="flex items-center gap-2 bg-success/10 text-success px-4 py-2 rounded-full text-sm font-medium">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Ley 21.659
+            </span>
+            <span class="flex items-center gap-2 bg-success/10 text-success px-4 py-2 rounded-full text-sm font-medium">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Atencion 24/7
+            </span>
+          </div>
+        </div>
+        
+        <!-- Clientes -->
+        {featuredClients.length > 0 && (
+          <div>
+            <h2 class="text-2xl lg:text-3xl font-bold text-neutral-900 mb-6">Empresas que confian en GuardMan</h2>
+            <div class="flex flex-wrap gap-4">
+              {featuredClients.map((client) => (
+                <div class="bg-neutral-50 px-6 py-3 rounded-lg">
+                  <span class="text-lg font-bold text-neutral-400">{client}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <!-- Locations Grid -->
+      <div class="border-t border-neutral-100 pt-12">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl lg:text-3xl font-bold text-neutral-900 mb-4">Cobertura en toda la Region Metropolitana</h2>
+          <p class="text-neutral-600 max-w-2xl mx-auto">
+            Protegemos empresas y residencias en las principales comunas de Santiago y la zona de Los Andes y San Felipe.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3">
+          {locations.map(location => (
+            <a href={`/ubicaciones/${location.slug}`} class="bg-neutral-50 rounded-lg p-3 text-center hover:shadow-md transition-all hover:border-primary-500 border-2 border-transparent group">
+              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors text-sm">{location.name}</h3>
+              <span class="text-xs text-neutral-500">{location.zone}</span>
+            </a>
+          ))}
+        </div>
+        <div class="text-center mt-6">
+          <a href="/ubicaciones" class="text-primary-600 font-medium hover:text-primary-700 transition-colors">
+            Ver todas las ubicaciones →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CTA Final Mejorado -->
+  <section class="py-20 lg:py-28 bg-primary-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-700 to-primary-900"></div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-4xl lg:text-5xl font-bold mb-6">Protege lo que mas te importa</h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Cuentanos sobre tus necesidades y diseñamos una solucion de seguridad a tu medida. Sin compromiso.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+          <a href="/cotizacion" class="bg-white text-primary-600 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-neutral-100 transition-colors">
+            Solicitar cotizacion gratis
+          </a>
+          <a href="/contacto" class="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
+            Hablar con un experto
+          </a>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8 text-sm text-white/70">
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Respuesta en menos de 24 horas
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Evaluacion gratuita
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Sin compromiso
+          </span>
+        </div>
       </div>
     </div>
   </section>
