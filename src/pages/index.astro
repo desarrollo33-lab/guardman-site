@@ -465,20 +465,30 @@ const featuredClients = clients.filter(c => c.featured && c.logo_url);
   {featuredClients.length > 0 && (
     <section class="py-16 lg:py-24 bg-white border-t border-neutral-200">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-8 text-center">Empresas que confian en GuardMan</h2>
-        <div class="flex flex-wrap justify-center gap-8 items-center">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Empresas que confian en GuardMan</h2>
+          <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+            Confian en nosotros las principales empresas de Santiago
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {featuredClients.map((client) => (
-            <div class="bg-white px-8 py-6 rounded-xl border border-neutral-200 hover:shadow-md transition-shadow">
-              <img 
-                src={client.logo_url}
-                alt={`Logo de ${client.name}`}
-                class="h-16 w-auto object-contain"
-                loading="lazy"
-              />
+            <div class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
+              <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden flex items-center justify-center p-6">
+                <img 
+                  src={client.logo_url}
+                  alt={`Logo de ${client.name}`}
+                  class="w-full h-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4 text-center">
+                <span class="text-sm font-semibold text-neutral-700">{client.name}</span>
+              </div>
             </div>
           ))}
         </div>
-        <div class="text-center mt-6">
+        <div class="text-center mt-8">
           <a href="/nosotros" class="inline-flex items-center justify-center gap-2 border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors">
             Conoce mas sobre nosotros
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
