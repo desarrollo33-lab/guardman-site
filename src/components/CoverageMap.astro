@@ -28,12 +28,24 @@ const { locations } = Astro.props;
 </div>
 
 <script define:vars={{ locations }}>
+  // Brand colors
+  const FILL_DEFAULT = 'rgba(59, 130, 246, 0.15)';
+  const FILL_HOVER = 'rgba(59, 130, 246, 0.45)';
+  const STROKE_DEFAULT = 'rgba(59, 130, 246, 0.5)';
+  const STROKE_HOVER = 'rgba(255, 255, 255, 0.9)';
+  const WEIGHT_DEFAULT = 1.5;
+  const WEIGHT_HOVER = 2.5;
+
+  let map = null;
+  let geoLayers = {}; // slug -> L.geoJSON layer
+  let activeSlug = null;
+
   function initCoverageMap() {
     const container = document.getElementById('coverage-map');
     if (!container || window.__coverageMapLoaded) return;
     window.__coverageMapLoaded = true;
 
-    // Load Leaflet CSS + JS dynamically
+    // Load Leaflet
     const css = document.createElement('link');
     css.rel = 'stylesheet';
     css.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
@@ -41,18 +53,22 @@ const { locations } = Astro.props;
 
     const script = document.createElement('script');
     script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-    script.onload = () => buildMap(container, locations);
+    script.onload = () => loadBoundaries(container);
     document.head.appendChild(script);
   }
 
-  function buildMap(container, locations) {
-    // GuardMan brand colors
-    const BRAND_DARK = '#1e3a5f';
-    const BRAND_PRIMARY = '#1e40af';
-    const BRAND_WHITE = '#ffffff';
+  async function loadBoundaries(container) {
+    try {
+      const res = await fetch('/data/commune-boundaries.json');
+      const geojson = await res.json();
+      buildMap(container, geojson);
+    } catch (e) {
+      console.warn('Could not load commune boundaries:', e);
+    }
+  }
 
-    // Center on Santiago metro area
-    const map = L.map(container, {
+  function buildMap(container, geojson) {
+    map = L.map(container, {
       center: [-33.42, -70.63],
       zoom: 10,
       zoomControl: false,
@@ -62,53 +78,124 @@ const { locations } = Astro.props;
       tap: true,
     });
 
-    // Zoom control bottom-right
     L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-    // Dark tile layer for brand consistency
+    // Dark tiles
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
       subdomains: 'abcd',
       maxZoom: 18,
     }).addTo(map);
 
-    // Custom icon
-    const icon = L.divIcon({
-      className: '',
-      html: `<svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M14 0C6.268 0 0 6.268 0 14c0 10.5 14 22 14 22s14-11.5 14-22C28 6.268 21.732 0 14 0z" fill="${BRAND_PRIMARY}"/>
-        <circle cx="14" cy="14" r="6" fill="${BRAND_WHITE}"/>
-      </svg>`,
-      iconSize: [28, 36],
-      iconAnchor: [14, 36],
-      popupAnchor: [0, -36],
+    // Add commune polygons
+    let allBounds = [];
+    geojson.features.forEach(feature => {
+      const slug = feature.properties.slug;
+      const name = feature.properties.name;
+
+      const layer = L.geoJSON(feature, {
+        style: {
+          fillColor: FILL_DEFAULT,
+          fillOpacity: 1,
+          color: STROKE_DEFAULT,
+          weight: WEIGHT_DEFAULT,
+        },
+        onEachFeature: (feat, lyr) => {
+          // Hover on map polygon
+          lyr.on('mouseover', () => highlight(slug));
+          lyr.on('mouseout', () => unhighlight(slug));
+
+          // Click -> go to location page
+          lyr.on('click', () => {
+            window.location.href = '/ubicaciones/' + slug;
+          });
+
+          // Tooltip
+          lyr.bindTooltip(name, {
+            direction: 'top',
+            offset: [0, -10],
+            className: 'gm-tooltip',
+          });
+        },
+      }).addTo(map);
+
+      geoLayers[slug] = layer;
+      try {
+        allBounds.push(layer.getBounds());
+      } catch (e) {}
     });
 
-    // Add markers
-    locations.forEach(loc => {
-      if (!loc.latitude || !loc.longitude) return;
+    // Fit to all communes
+    if (allBounds.length) {
+      const combined = L.latLngBounds(allBounds);
+      map.fitBounds(combined.pad(0.1));
+    }
 
-      L.marker([loc.latitude, loc.longitude], { icon })
-        .addTo(map)
-        .bindPopup(
-          `<div style="text-align:center;font-family:system-ui,-apple-system,sans-serif;min-width:140px;">
-            <strong style="font-size:14px;color:#1e3a5f;">${loc.name}</strong><br>
-            <a href="/ubicaciones/${loc.slug}" style="color:#1e40af;font-size:12px;font-weight:600;text-decoration:none;">Ver servicios →</a>
-          </div>`,
-          { closeButton: false, className: 'gm-popup' }
-        );
-    });
-
-    // Fit bounds to show all markers with padding
-    const bounds = L.latLngBounds(locations.filter(l => l.latitude && l.longitude).map(l => [l.latitude, l.longitude]));
-    map.fitBounds(bounds.pad(0.15));
-
-    // Remove the loading placeholder
+    // Remove loading placeholder
     const placeholder = container.querySelector('.flex');
     if (placeholder) placeholder.remove();
+
+    // Setup grid hover listeners
+    setupGridListeners();
   }
 
-  // Lazy load with Intersection Observer
+  function highlight(slug) {
+    if (!geoLayers[slug]) return;
+    activeSlug = slug;
+    geoLayers[slug].setStyle({
+      fillColor: FILL_HOVER,
+      fillOpacity: 1,
+      color: STROKE_HOVER,
+      weight: WEIGHT_HOVER,
+    });
+    geoLayers[slug].bringToFront();
+  }
+
+  function unhighlight(slug) {
+    if (!geoLayers[slug]) return;
+    activeSlug = null;
+    geoLayers[slug].setStyle({
+      fillColor: FILL_DEFAULT,
+      fillOpacity: 1,
+      color: STROKE_DEFAULT,
+      weight: WEIGHT_DEFAULT,
+    });
+  }
+
+  function setupGridListeners() {
+    // Link each commune badge in the grid to the map
+    locations.forEach(loc => {
+      const slug = loc.slug;
+      // Find the <a> link in the grid that points to this slug
+      const link = document.querySelector(`a[data-commune-slug="${slug}"]`);
+      if (!link) return;
+
+      link.addEventListener('mouseenter', () => {
+        highlight(slug);
+        // Pan map to this commune
+        if (geoLayers[slug] && map) {
+          try {
+            map.flyToBounds(geoLayers[slug].getBounds().pad(0.3), { duration: 0.6 });
+          } catch (e) {}
+        }
+      });
+
+      link.addEventListener('mouseleave', () => {
+        unhighlight(slug);
+        // Reset map view
+        if (map) {
+          const allBounds = Object.values(geoLayers)
+            .map(l => { try { return l.getBounds(); } catch(e) { return null; } })
+            .filter(Boolean);
+          if (allBounds.length) {
+            map.flyToBounds(L.latLngBounds(allBounds).pad(0.1), { duration: 0.6 });
+          }
+        }
+      });
+    });
+  }
+
+  // Lazy load
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
@@ -126,18 +213,20 @@ const { locations } = Astro.props;
 </script>
 
 <style is:global>
-  .gm-popup .leaflet-popup-content-wrapper {
-    border-radius: 12px !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
-    padding: 8px 12px !important;
+  .gm-tooltip {
+    background: rgba(30, 58, 95, 0.95) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 6px 12px !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
   }
-  .gm-popup .leaflet-popup-content {
-    margin: 6px 8px !important;
+  .gm-tooltip::before {
+    border-top-color: rgba(30, 58, 95, 0.95) !important;
   }
-  .gm-popup .leaflet-popup-tip {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
-  }
-  /* Hide default Leaflet link on dark theme */
   .leaflet-control-attribution {
     background: rgba(0, 0, 0, 0.5) !important;
     color: rgba(255, 255, 255, 0.6) !important;
@@ -164,5 +253,9 @@ const { locations } = Astro.props;
     border-radius: 8px !important;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+  }
+  /* Cursor on polygons */
+  .leaflet-interactive {
+    cursor: pointer !important;
   }
 </style>
