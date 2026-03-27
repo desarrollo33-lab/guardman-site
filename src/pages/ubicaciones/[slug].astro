@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getLocations, getServices } from '../../data/directus';
+import { mdToHtml, mdToPlainText } from '../../lib/markdown';
 import SchemaLocalBusiness from '../../components/seo/SchemaLocalBusiness.astro';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
 import SchemaFAQ from '../../components/seo/SchemaFAQ.astro';
@@ -99,7 +100,7 @@ const locationFAQs = (location.faqs && location.faqs.length > 0)
         <span class="bg-white/20 px-3 py-1 rounded-full">{location.zone}</span>
       </div>
       <h1 class="text-3xl lg:text-5xl font-bold mb-4">Seguridad en {location.name}</h1>
-      <p class="text-xl text-white/90 max-w-3xl">{location.description}</p>
+      <p class="text-xl text-white/90 max-w-3xl">{mdToPlainText(location.description, 250)}</p>
     </div>
   </section>
 
@@ -139,6 +140,11 @@ const locationFAQs = (location.faqs && location.faqs.length > 0)
                 <p class="text-sm text-neutral-600 mt-1 line-clamp-2">{service.short_description}</p>
               </a>
             ))}
+          </div>
+
+          <!-- Location Description (rendered from Markdown) -->
+          <div class="mt-12 prose prose-neutral max-w-none">
+            <Fragment set:html={mdToHtml(location.description)} />
           </div>
 
           <!-- Neighborhoods -->

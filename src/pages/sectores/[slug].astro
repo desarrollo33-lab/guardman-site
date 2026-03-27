@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSectors, getServices, optimizeImageUrl } from '../../data/directus';
+import { mdToHtml } from '../../lib/markdown';
 
 export function getStaticPaths() {
   const sectors = getSectors();
@@ -90,7 +91,9 @@ const relatedServices = allServices.filter(s =>
     <div class="container mx-auto px-4">
       <div class="max-w-3xl">
         <h2 class="text-2xl font-bold text-neutral-900 mb-4">Sobre seguridad en {sector.name.toLowerCase()}</h2>
-        <p class="text-lg text-neutral-600">{sector.description}</p>
+        <div class="text-lg text-neutral-600 prose prose-neutral max-w-none">
+          <Fragment set:html={mdToHtml(sector.description)} />
+        </div>
       </div>
     </div>
   </section>
