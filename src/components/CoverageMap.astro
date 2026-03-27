@@ -1,0 +1,168 @@
+---
+interface Location {
+  slug: string;
+  name: string;
+  latitude: number;
+  longitude: number;
+}
+
+interface Props {
+  locations: Location[];
+}
+
+const { locations } = Astro.props;
+---
+
+<div 
+  id="coverage-map" 
+  class="rounded-2xl aspect-video bg-neutral-800 overflow-hidden"
+  role="img"
+  aria-label="Mapa de cobertura de GuardMan Chile en 14 comunas de la Región Metropolitana"
+>
+  <div class="w-full h-full flex items-center justify-center text-white/40">
+    <svg class="w-8 h-8 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+    </svg>
+  </div>
+</div>
+
+<script define:vars={{ locations }}>
+  function initCoverageMap() {
+    const container = document.getElementById('coverage-map');
+    if (!container || window.__coverageMapLoaded) return;
+    window.__coverageMapLoaded = true;
+
+    // Load Leaflet CSS + JS dynamically
+    const css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+    document.head.appendChild(css);
+
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    script.onload = () => buildMap(container, locations);
+    document.head.appendChild(script);
+  }
+
+  function buildMap(container, locations) {
+    // GuardMan brand colors
+    const BRAND_DARK = '#1e3a5f';
+    const BRAND_PRIMARY = '#1e40af';
+    const BRAND_WHITE = '#ffffff';
+
+    // Center on Santiago metro area
+    const map = L.map(container, {
+      center: [-33.42, -70.63],
+      zoom: 10,
+      zoomControl: false,
+      attributionControl: true,
+      scrollWheelZoom: false,
+      dragging: true,
+      tap: true,
+    });
+
+    // Zoom control bottom-right
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+    // Dark tile layer for brand consistency
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+      subdomains: 'abcd',
+      maxZoom: 18,
+    }).addTo(map);
+
+    // Custom icon
+    const icon = L.divIcon({
+      className: '',
+      html: `<svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 0C6.268 0 0 6.268 0 14c0 10.5 14 22 14 22s14-11.5 14-22C28 6.268 21.732 0 14 0z" fill="${BRAND_PRIMARY}"/>
+        <circle cx="14" cy="14" r="6" fill="${BRAND_WHITE}"/>
+      </svg>`,
+      iconSize: [28, 36],
+      iconAnchor: [14, 36],
+      popupAnchor: [0, -36],
+    });
+
+    // Add markers
+    locations.forEach(loc => {
+      if (!loc.latitude || !loc.longitude) return;
+
+      L.marker([loc.latitude, loc.longitude], { icon })
+        .addTo(map)
+        .bindPopup(
+          `<div style="text-align:center;font-family:system-ui,-apple-system,sans-serif;min-width:140px;">
+            <strong style="font-size:14px;color:#1e3a5f;">${loc.name}</strong><br>
+            <a href="/ubicaciones/${loc.slug}" style="color:#1e40af;font-size:12px;font-weight:600;text-decoration:none;">Ver servicios →</a>
+          </div>`,
+          { closeButton: false, className: 'gm-popup' }
+        );
+    });
+
+    // Fit bounds to show all markers with padding
+    const bounds = L.latLngBounds(locations.filter(l => l.latitude && l.longitude).map(l => [l.latitude, l.longitude]));
+    map.fitBounds(bounds.pad(0.15));
+
+    // Remove the loading placeholder
+    const placeholder = container.querySelector('.flex');
+    if (placeholder) placeholder.remove();
+  }
+
+  // Lazy load with Intersection Observer
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          initCoverageMap();
+          observer.disconnect();
+        }
+      });
+    },
+    { rootMargin: '300px' }
+  );
+
+  const mapEl = document.getElementById('coverage-map');
+  if (mapEl) observer.observe(mapEl);
+</script>
+
+<style is:global>
+  .gm-popup .leaflet-popup-content-wrapper {
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+    padding: 8px 12px !important;
+  }
+  .gm-popup .leaflet-popup-content {
+    margin: 6px 8px !important;
+  }
+  .gm-popup .leaflet-popup-tip {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  }
+  /* Hide default Leaflet link on dark theme */
+  .leaflet-control-attribution {
+    background: rgba(0, 0, 0, 0.5) !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 10px !important;
+    border-radius: 4px 0 0 0 !important;
+  }
+  .leaflet-control-attribution a {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+  .leaflet-control-zoom a {
+    background: rgba(30, 64, 175, 0.9) !important;
+    color: white !important;
+    border: none !important;
+    width: 32px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    font-size: 16px !important;
+  }
+  .leaflet-control-zoom a:hover {
+    background: rgba(30, 64, 175, 1) !important;
+  }
+  .leaflet-control-zoom {
+    border: none !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+  }
+</style>

@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SchemaWebSite from '../components/seo/SchemaWebSite.astro';
 import SchemaOrganization from '../components/seo/SchemaOrganization.astro';
+import CoverageMap from '../components/CoverageMap.astro';
 import { getServices, getLocations, getSectors, getFeaturedClients, getSiteConfig, optimizeImageUrl } from '../data/directus';
 
 const services = getServices();
@@ -520,16 +521,7 @@ const featuredClients = clients.filter(c => c.featured && c.logo_url);
           </p>
         </div>
         <div class="relative">
-          <div class="rounded-2xl aspect-video overflow-hidden border border-white/20">
-            <img 
-              src="/images/cobertura_zonas.png"
-              alt="Mapa de cobertura de seguridad GuardMan en la Region Metropolitana"
-              class="w-full h-full object-cover"
-              width="800"
-              height="450"
-              loading="lazy"
-            />
-          </div>
+          <CoverageMap locations={locations.map(l => ({ slug: l.slug, name: l.name, latitude: l.latitude, longitude: l.longitude }))} />
           <div class="absolute -bottom-4 -right-4 bg-primary-600 text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
             14 Comunas
           </div>
