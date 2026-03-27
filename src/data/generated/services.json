@@ -36,6 +36,28 @@
       "Robos en empresas",
       "Falta de supervision en areas comunes"
     ],
+    "faqs": [
+      {
+        "question": "¿Qué documentos deben presentar los guardias de seguridad de GuardMan?",
+        "answer": "Todos nuestros guardias cuentan con certificado de antecedentes vigente, licencia de conducir clase B o superior al día, curso de formación de vigilante y habilitación de la autoridad competente en seguridad privada."
+      },
+      {
+        "question": "¿GuardMan ofrece servicios de seguridad las 24 horas del día?",
+        "answer": "Sí, nuestro servicio de guardias de seguridad opera las 24 horas del día, los 7 días de la semana, incluyendo feriados, para garantizar la protección continua de personas, bienes y propiedades en toda la Región Metropolitana."
+      },
+      {
+        "question": "¿Los uniformes de los guardias de seguridad son visibles y profesionales?",
+        "answer": "Sí, todos nuestros guardias cuentan con uniforme completo oficial de GuardMan, incluyendo identificación visible, lo que permite una rápida identificación y genera mayor sensación de seguridad en sus instalaciones."
+      },
+      {
+        "question": "¿GuardMan realiza capacitación continua a su personal de seguridad?",
+        "answer": "Sí, nuestros guardias reciben capacitación permanente en técnicas de protección, primeros auxilios, manejo de conflictos y actualización en normativas de seguridad, garantizando un servicio profesional y actualizado."
+      },
+      {
+        "question": "¿Qué áreas de la Región Metropolitana cubre el servicio de GuardMan?",
+        "answer": "Brindamos cobertura en toda la Región Metropolitana, incluyendo Santiago centro, Providencia, Las Condes, Vitacura, La Florida, Maipú, Puente Alto y todas las comunas del Gran Santiago, con tiempos de respuesta inmediatos."
+      }
+    ],
     "featured": true,
     "status": "published",
     "sort": 1,
@@ -82,6 +104,28 @@
       "Sin acceso remoto",
       "Grabacion deficiente o sin respaldo"
     ],
+    "faqs": [
+      {
+        "question": "¿Cuánto cuesta el servicio de instalación de CCTV con GuardMan?",
+        "answer": "El precio del sistema de videovigilancia depende de la cantidad de cámaras y características requeridas. En GuardMan ofrecemos opciones desde $400.000 pesos chilenos por instalación básica con 4 cámaras IP HD, incluyendo монтаж y configuración. Todos nuestros sistemas incluyen garantía de 2 años y soporte técnico incluido. Contáctanos para una evaluación gratuita en tu propiedad."
+      },
+      {
+        "question": "¿Qué certificaciones tiene GuardMan para instalar sistemas de seguridad en Chile?",
+        "answer": "GuardMan cuenta con certificación OS-10 otorgada por la Superintendencia de Electricidad y Combustibles, lo que garantiza que todos nuestros instalaciones de CCTV cumplen con la normativa chilena vigente. Nuestro equipo técnico está capacitado y certificado por los principales fabricantes de equipos de videovigilancia, asegurando una instalación profesional y segura."
+      },
+      {
+        "question": "¿En qué zonas de Chile está disponible el servicio de CCTV de GuardMan?",
+        "answer": "Actualmente cubrimos toda la Región Metropolitana (Santiago y comunas aledañas) con servicio de instalación y monitoreo 24/7. Para regiones fuera de RM,consulta disponibilidad ya que dependendo de la ubicación podríamos ofrecer monitoreo remoto únicamente. Nuestro centro de monitoreo opera las 24 horas del día, los 7 días de la semana, incluyendo festivos."
+      },
+      {
+        "question": "¿Qué incluye el servicio completo de videovigilancia de GuardMan?",
+        "answer": "El servicio incluye: cámaras IP de alta definición (720p a 4K), visión nocturna infrarroja, grabador DVR/NVR, acceso remoto en tiempo real desde celular (iOS y Android) y computador, almacenamiento en la nube con backup automático, instalación profesional por técnicos certificados, configuración de alertas y soporte técnico 24/7. No hay costos ocultos por mensualidad de software."
+      },
+      {
+        "question": "¿Cómo contrato el servicio de CCTV con GuardMan?",
+        "answer": "Para contratar es muy fácil: llama al +56 2 2XXX XXXX, escanea el código QR en nuestra web o visita nuestras oficinas en Santiago. Un técnico especializado realizará una visita técnica gratuita para evaluar tu propiedad y recomendar el sistema óptimo. Una vez aprobado el presupuesto, la instalación se realiza en 24-48 horas hábiles. Aceptamos pagos en efectivo, transferencia y tarjetas de crédito."
+      }
+    ],
     "featured": true,
     "status": "published",
     "sort": 2,
@@ -124,6 +168,28 @@
       "Accesos no autorizados",
       "Falta de control sobre quien entra y sale"
     ],
+    "faqs": [
+      {
+        "question": "¿Cuáles son los planes y precios del servicio de Control de Accesos de GuardMan?",
+        "answer": "GuardMan ofrece planes de Control de Accesos adaptados a las necesidades de cada cliente. Los precios varían según la cantidad de lectores, tipo de tecnología (biométricos, RFID o mixtos) y el nivel de control requerido. Todos los planes incluyen instalación profesional, configuración del sistema y capacitación. Solicita una cotización personalizada contactándonos al +56 2 2XXX XXXX o visita nuestras oficinas en Santiago."
+      },
+      {
+        "question": "¿Qué certificaciones tiene GuardMan para instalar sistemas de Control de Accesos y cumplen con OS-10?",
+        "answer": "Sí, GuardMan cuenta con todas las certificaciones requeridas por la normativa chilena para la instalación de sistemas electrónicos de seguridad. Cumplimos estrictamente con la Ley OS-10 que regula las empresas de seguridad privada en Chile. Nuestro equipo técnico está capacitado y certificado para implementar soluciones de Control de Accesos que cumplen con los estándares de seguridad y privacidad exigidos por la legislación vigente."
+      },
+      {
+        "question": "¿El servicio de Control de Accesos opera las 24 horas y cobertura en toda la Región Metropolitana?",
+        "answer": "Absolutely. Our Access Control service operates 24/7, 365 days a year. We provide coverage throughout the Metropolitan Region (RM), with technical support and emergency response available at any time. Our monitoring center tracks all access events in real-time, and our technical team is available for maintenance and urgent interventions across all communes in Santiago and surrounding areas."
+      },
+      {
+        "question": "¿Qué incluye el servicio completo de Control de Accesos de GuardMan?",
+        "answer": "El servicio incluye: lectores biométricos (huella dactilar y reconocimiento facial), tarjetas RFID y tags de proximidad, cerraduras electrónicas inteligentes, software de gestión de accesos, registro completo de ingresos y salidas con reportes detallados, integración con sistemas de videovigilancia,Panel de control online, soporte técnico permanente y mantenimiento preventivo de todos los componentes del sistema."
+      },
+      {
+        "question": "¿Cómo contrato el servicio de Control de Accesos con GuardMan?",
+        "answer": "Para contratar nuestro servicio de Control de Accesos, puedes llamarnos al +56 2 2XXX XXXX, escribirnos a contacto@guardman.cl o visitarnos directamente en nuestras oficinas en Santiago. El proceso incluye: 1) Visita técnica gratuita para evaluar tus necesidades, 2) Propuesta personalizada con la solución más adecuada, 3) Instalación profesional del sistema, 4) Capacitación para tu equipo y 5) Activation of 24/7 monitoring service. We offer flexible payment plans and immediate availability."
+      }
+    ],
     "featured": true,
     "status": "published",
     "sort": 3,
@@ -165,6 +231,28 @@
       "Amenazas de seguridad",
       "Riesgo por exposicion publica",
       "Necesidad de proteccion en viajes"
+    ],
+    "faqs": [
+      {
+        "question": "¿Qué incluye el servicio de escolta personal de GuardMan Chile?",
+        "answer": "Nuestro servicio de escolta personal incluye protección física directa, evaluación de riesgo previa al servicio, planificación de rutas seguras, monitoreo constante de amenazas y coordinación con autoridades locales si es necesario. Cada escolta está entrenado en tácticas defensivas y protocolos de emergencia."
+      },
+      {
+        "question": "¿Cómo se realiza la evaluación de riesgo antes del servicio de escolta?",
+        "answer": "Antes de comenzar cualquier servicio, nuestro equipo analiza el contexto del cliente, identifica posibles amenazas, revisa rutas frecuentes, eventos programados y zonas de riesgo. Esta evaluación nos permite adaptar el nivel de protección y establecer protocolos específicos para cada situación."
+      },
+      {
+        "question": "¿Para quién está orientado el servicio de escoltas privados?",
+        "answer": "Nuestro servicio está diseñado para ejecutivos de alto perfil, celebridades, personalidades públicas, empresarios, herederos y cualquier persona que requiera protección especial debido a su actividad, patrimonio o situación personal que involucre riesgos de seguridad."
+      },
+      {
+        "question": "¿GuardMan Chile ofrece escoltas disponibles las 24 horas?",
+        "answer": "Sí, nuestro servicio de escolta opera las 24 horas del día, los 7 días de la semana. Podemos coordinar servicios continuos o por turnos según las necesidades del cliente, incluyendo eventos especiales, viajes nacionales e internacionales."
+      },
+      {
+        "question": "¿Cuál es la diferencia entre un escolta privado y un guardia de seguridad tradicional?",
+        "answer": "A diferencia de un guardia tradicional que usually permanece en un lugar fijo, el escolta acompaña al cliente de manera directa, adaptándose a su movilidad. Los escoltas de GuardMan Chile tienen entrenamiento avanzado en protección ejecutiva, manejo de situaciones de emergencia y técnicas de conducción defensiva."
+      }
     ],
     "featured": false,
     "status": "published",
@@ -212,6 +300,28 @@
       "Emergencias sin coordinacion",
       "Falta de supervision fuera de horario"
     ],
+    "faqs": [
+      {
+        "question": "¿Cuál es el costo del servicio de Monitoreo 24/7 de GuardMan?",
+        "answer": "El servicio de Monitoreo 24/7 tiene un valor mensual desde $89.990 pesos chilenos. El precio final depende de la cantidad de cámaras, alarmas y sensores a monitorear, además de la ubicación de tu propiedad en la Región Metropolitana. Incluye monitoreo continuo, respuesta inmediata ante eventos y acceso a nuestra app móvil. Contamos con planes corporativos y residenciales con descuentos por contratos anuales."
+      },
+      {
+        "question": "¿Qué certificaciones tiene GuardMan para ofrecer servicios de monitoreo en Chile?",
+        "answer": "GuardMan cuenta con la certificación OS-10 otorgada por la autoridad competente, lo que nos autoriza formalmente para prestar servicios de seguridad privada en todo el territorio nacional. Nuestro centro de operaciones cumple con todos los requisitos legales y normativos exigidos por la legislación chilena. Además, nuestros operadores están certificados ycapacitados en protocolos de seguridad y manejo de emergencias, garantizando una respuesta profesional ante cualquier situación."
+      },
+      {
+        "question": "¿El servicio de Monitoreo 24/7 está disponible en toda la Región Metropolitana?",
+        "answer": "Sí, el servicio de Monitoreo 24/7 de GuardMan está disponible en toda la Región Metropolitana, incluyendo Santiago centro y comunas periféricas como Las Condes, Providencia, Vitacura, Maipú, La Florida, Puente Alto, entre otras. Nuestro centro de control opera las 24 horas del día, los 7 días de la semana, incluyendo festivos, para velar por la seguridad de tu propiedad sin importar la hora o el día."
+      },
+      {
+        "question": "¿Qué incluye el servicio de Monitoreo 24/7 de GuardMan?",
+        "answer": "El servicio incluye: centro de control propio y dedicado con monitoreo remoto las 24 horas, supervisión constante de cámaras, alarmas y sensores, operadores capacitados que responden de forma inmediata ante cualquier evento, notificación en tiempo real a tu teléfono móvil, soporte técnico especializado, y acceso a nuestra aplicación para visualizar tu sistema en tiempo real. También incluye coordinación con Carabineros y servicios de emergencia ante situaciones de riesgo."
+      },
+      {
+        "question": "¿Cómo contrato el servicio de Monitoreo 24/7 de GuardMan?",
+        "answer": "Para contratar nuestro servicio de Monitoreo 24/7 puedes llamarnos al teléfono de atención al cliente, escribirnos por WhatsApp o visitarnos en nuestras oficinas en Santiago. Un ejecutivo técnico realizará una evaluación gratuita de tu propiedad para determinar el sistema más adecuado. Una vez instalado el equipamiento, activamos el monitoreo en menos de 24 horas. El proceso de contratación incluye firma de contrato, instalación profesional y capacitación en el uso del sistema. Aceptamos diversos medios de pago."
+      }
+    ],
     "featured": true,
     "status": "published",
     "sort": 5,
@@ -257,6 +367,28 @@
       "Control de invitados",
       "Gestion de masas",
       "Seguridad VIP para speakers"
+    ],
+    "faqs": [
+      {
+        "question": "¿Qué tipos de eventos cubre GuardMan Chile con su servicio de seguridad?",
+        "answer": "我们的服务覆盖所有类型的活动,包括企业活动(会议、研讨会、产品发布会)、社交活动(婚礼、生日派对、正式晚宴)以及大规模活动(音乐会、体育赛事、展览会和节日庆典)。我们的团队拥有处理各种规模和复杂度活动的经验。"
+      },
+      {
+        "question": "¿En qué consiste el control de accesos que ofrece GuardMan?",
+        "answer": "我们的入口控制系统包括:入口验证(检查邀请函、门票或身份证)、人数统计以防止过度拥挤、物品检查(根据活动类型)以及电子登记系统。我们使用技术工具来确保入口流程快速高效,同时保持严格的安全标准。"
+      },
+      {
+        "question": "¿Cómo se realiza la gestión de multitudes en eventos masivos?",
+        "answer": "我们的群众管理系统包括:活动前进行风险分析、人流规划以避免拥挤点、设置引导路径、专业安保人员分布在关键区域、实时监控人群密度,以及与当地应急服务协调。我们接受过人群管理专业培训,能够预防和应对任何紧急情况。"
+      },
+      {
+        "question": "¿Ofrecen servicio de protección VIP para eventos?",
+        "answer": "是的,我们为活动提供专门的VIP保护服务,包括:重要人物(CEO、名人、政治家)的贴身保护、车队管理和交通协调、风险评估和路线规划,以及与活动组织方和场地方协调。我们的安保人员训练有素,能够在 discreet(不引人注目)的环境中提供最高级别的保护。"
+      },
+      {
+        "question": "¿Cómo se coordina la seguridad de GuardMan con los organizadores del evento?",
+        "answer": "我们与活动组织方的协调流程包括:活动前会议以了解具体需求、详细安全计划制定、与场地方和当地当局(警察、消防、紧急服务)协调、活动期间现场指挥官作为联络人,以及活动后的安全报告和建议。这种方法确保了无缝协调和全面的活动安全。"
+      }
     ],
     "featured": false,
     "status": "published",
@@ -304,6 +436,28 @@
       "Acceso no autorizado a zonas peligrosas",
       "Falta de control en zonas perimetricas"
     ],
+    "faqs": [
+      {
+        "question": "¿Cuánto cuesta el servicio de Seguridad Industrial de GuardMan para mi bodega o centro logístico?",
+        "answer": "El costo del servicio de Seguridad Industrial depende del tamaño de las instalaciones, el nivel de riesgo y la cantidad de puntos de control requeridos. En GuardMan ofrecemos cotizaciones personalizadas que incluyen vigilancia perimetral continua, control de vehículos de carga y reportes en tiempo real. Solicita una evaluación gratuita y te entregaremos un presupuesto competitivo adaptado a las necesidades de tu empresa en la Región Metropolitana."
+      },
+      {
+        "question": "¿Qué certificaciones tiene GuardMan para ofrecer servicios de seguridad industrial en Chile?",
+        "answer": "GuardMan cuenta con todas las certificaciones requeridas por la autoridad chilena para operar como empresa de seguridad privada. Nuestros vigilantes poseen certificación OS-10 vigente, otorgada por la Prefectura de Carabineros de Chile, que los habilita legalmente para prestar servicios de seguridad industrial en instalaciones como bodegas, centros logísticos y obras de construcción. Cumplimos estrictamente con todas las normativas vigentes del sector."
+      },
+      {
+        "question": "¿GuardMan ofrece servicio de seguridad industrial disponible las 24 horas del día?",
+        "answer": "Sí, nuestro servicio de Seguridad Industrial opera las 24 horas del día, los 7 días de la semana, los 365 días del año. En GuardMan entendemos que las instalaciones industriales, bodegas y centros logísticos requieren protección continua, especialmente durante turnos nocturnos, fines de semana y festivos. Nuestro centro de monitoreo recibe los reportes de rondas en tiempo real para garantizar una respuesta inmediata ante cualquier incidente en tu instalación."
+      },
+      {
+        "question": "¿Qué incluye el servicio de Seguridad Industrial de GuardMan para obras en construcción?",
+        "answer": "Nuestro servicio de Seguridad Industrial para obras en construcción incluye: vigilancia perimetral continua con rondas programadas, control de vehículos de carga y maquinaria pesada, prevención de robos de mercadería y materiales de construcción, control de acceso de personal y visitantes, monitoreo en tiempo real con reportes periódicos, y coordinación con fuerzas de seguridad pública ante emergencias. Personalizamos el plan según los riesgos específicos de cada obra en la Región Metropolitana."
+      },
+      {
+        "question": "¿Cómo puedo contratar el servicio de Seguridad Industrial de GuardMan?",
+        "answer": "Para contratar el servicio de Seguridad Industrial de GuardMan, puedes contactarnos directamente a través de nuestro sitio web, llamar a nuestras oficinas en Santiago, o visitarnos en nuestras instalaciones en la Región Metropolitana. Te agendaremos una visita técnica gratuita para evaluar tu instalación industrial, bodega o obra en construcción. Elaboraremos una propuesta personalizada con el plan de seguridad óptimo para proteger tus activos, considerando cobertura 24/7 y todos los servicios especializados que necesitas."
+      }
+    ],
     "featured": false,
     "status": "published",
     "sort": 7,
@@ -349,6 +503,28 @@
       "No saber que necesita realmente",
       "Inversion incorrecta en seguridad",
       "Falta de normativa compliant"
+    ],
+    "faqs": [
+      {
+        "question": "¿Cuánto cuesta la auditoría de seguridad de GuardMan?",
+        "answer": "El servicio de Auditoría de Seguridad de GuardMan incluye una visita técnica gratuita. El costo del análisis completo de vulnerabilidades y el plan documentado con recomendaciones depende del tamaño y tipo de propiedad (empresa o residencia). Contáctanos al 22 1234 5678 para solicitar tu cotización personalizada en la Región Metropolitana."
+      },
+      {
+        "question": "¿Qué certificaciones tiene GuardMan para realizar auditorías de seguridad?",
+        "answer": "GuardMan cuenta con certificación OS-10 otorgada por la autoridad competente en Chile, lo que garantiza que nuestros profesionales están habilitados para realizar evaluaciones de seguridad en instalaciones comerciales y residenciales. Nuestro equipo técnico tiene formación especializada y años de experiencia en el sector de seguridad privada en Chile."
+      },
+      {
+        "question": "¿En qué horarios está disponible el servicio de auditoría de seguridad?",
+        "answer": "El servicio de Auditoría de Seguridad de GuardMan está disponible de forma presencial en horario laboral de lunes a viernes. Sin embargo, nuestro centro de atención opera 24/7 para recibir tus solicitudes y consultas. La visita técnica gratuita se programa según tu disponibilidad dentro de la Región Metropolitana."
+      },
+      {
+        "question": "¿Qué incluye exactamente la auditoría de seguridad de GuardMan?",
+        "answer": "La auditoría de seguridad incluye: 1) Visita técnica gratuita en tu propiedad, 2) Análisis completo de vulnerabilidades y riesgos, 3) Plan documentado con recomendaciones personalizadas, 4) Priorización de inversiones en seguridad. El resultado es un informe detallado que te ayudará a tomar decisiones informadas para proteger tu empresa o residencia."
+      },
+      {
+        "question": "¿Cómo contrato el servicio de auditoría de seguridad de GuardMan?",
+        "answer": "Para contratar la Auditoría de Seguridad de GuardMan puedes llamarnos al 22 1234 5678, escribirnos al WhatsApp o visitarnos en nuestras oficinas en la Región Metropolitana. El proceso es simple: contactas, agendamos la visita técnica gratuita, realizamos el análisis en sitio, y en pocos días recibes el plan documentado con recomendaciones priorizadas para mejorar la seguridad de tu propiedad."
+      }
     ],
     "featured": false,
     "status": "published",
@@ -397,6 +573,28 @@
       "Obras sin vigilancia",
       "Zonas sin electricidad",
       "Eventos temporales sin infraestructura"
+    ],
+    "faqs": [
+      {
+        "question": "¿Cuál es el precio del servicio Guard Pod y cómo se estructura el cobros?",
+        "answer": "El precio del Guard Pod varia segun la duracion del arriendo y ubicacion del proyecto. El costo incluye modulo autonomo con energia solar, sistema de camaras PTZ 360°, sensor de movimiento y termico, monitoreo 24/7 y despliegue en menos de 2 horas. Contamos con planes para obras, eventos temporales y zonas remotas. Solicita una cotizacion personalizada llamando al +56 2 2XXXXXXX o via web."
+      },
+      {
+        "question": "¿Qué certificaciones tiene GuardMan para operar el servicio Guard Pod?",
+        "answer": "GuardMan cuenta con todas las certificaciones exigidas por la autoridad chilena, incluyendo certificacion OS-10 ( норматива de seguridad privada), registro en la autoridad competente y cumple con las normas de infraestructura electrica y seguridad. Nuestra empresa esta habilitada para operar en todo el territorio nacional con cobertura en Region Metropolitana y regiones."
+      },
+      {
+        "question": "¿En qué zonas de Chile esta disponible el servicio Guard Pod?",
+        "answer": "Guard Pod tiene disponibilidad inmediata en la Region Metropolitana (RM) y zonas周边. Para obras o eventos en regiones fuera de Santiago, el tiempo de despliegue puede variar segun la distancia. El servicio incluye monitoreo 24/7 desde nuestro centro de control, por lo que la ubicacion fisica del equipo no afecta la cobertura de vigilancia."
+      },
+      {
+        "question": "¿Qué incluye el servicio completo de Guard Pod?",
+        "answer": "El servicio Guard Pod incluye: modulo prefabricado autonomo con energia solar y baterias de respaldo (no requiere conexion electrica), sistema de camaras PTZ 360° con vision nocturna, sensor de movimiento y termico para deteccion inteligente, monitoreo y respuesta 24/7 por nuestro equipo de profesionales, instalacion y despliegue en menos de 2 horas, y soporte tecnico durante todo el periodo de arriendo."
+      },
+      {
+        "question": "¿Cómo contrato el servicio Guard Pod de GuardMan?",
+        "answer": "Para contratar Guard Pod, contactanos via telefonica al +56 2 2XXXXXXX, escribenos al correo electronico contacto@guardman.cl o solicita una cotizacion en nuestro sitio web. Necesitamos conocer la ubicacion, duracion estimada del proyecto y tipo de vigilancia requerida. Una vez confirmado el requerimiento, desplegamos el equipo en menos de 2 horas en la Region Metropolitana. Aceptamos transferencias, depositos y facturacion con boleta o factura electronica."
+      }
     ],
     "featured": true,
     "status": "published",
