@@ -1,7 +1,9 @@
 /**
- * Directus CMS Data Layer
- * Reads pre-fetched JSON data from src/data/generated/
- * Data is fetched at build time via scripts/fetch-cms-data.mjs
+ * Static Data Layer - GuardMan Chile
+ * 
+ * This module provides static data for the site.
+ * All data is stored as JSON files in src/data/generated/
+ * No external CMS or database required.
  */
 
 import servicesData from './generated/services.json';
@@ -9,35 +11,8 @@ import locationsData from './generated/locations.json';
 import sectorsData from './generated/sectors.json';
 import clientsData from './generated/clients.json';
 import testimonialsData from './generated/testimonials.json';
+import blogData from './generated/blog.json';
 import siteConfigData from './generated/site-config.json';
-
-// Directus URL for asset URLs
-const DIRECTUS_URL = 'http://64.176.16.231:8055';
-
-/**
- * Get the full URL for a Directus asset
- */
-export function getImageUrl(assetId: string | null | undefined): string | null {
-  if (!assetId) return null;
-  return `${DIRECTUS_URL}/assets/${assetId}`;
-}
-
-/**
- * Convert image paths to WebP format for optimization
- * Falls back to original path if WebP doesn't exist
- */
-export function optimizeImageUrl(imagePath: string | null | undefined): string | null {
-  if (!imagePath) return null;
-  
-  // If it's already WebP or external URL, return as-is
-  if (imagePath.endsWith('.webp') || imagePath.startsWith('http')) {
-    return imagePath;
-  }
-  
-  // Convert PNG/JPG/etc to WebP
-  const basePath = imagePath.replace(/\.(png|jpg|jpeg|gif)$/i, '.webp');
-  return basePath;
-}
 
 // Types
 export interface Service {
@@ -123,6 +98,24 @@ export interface Testimonial {
   sort: number;
 }
 
+export interface BlogPost {
+  id: number;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  meta_title: string;
+  meta_description: string;
+  category: string;
+  tags: string[];
+  reading_time: number;
+  date: string;
+  author: string;
+  featured_image: string | null;
+  status: string;
+  sort: number;
+}
+
 export interface SiteConfig {
   site_name: string;
   legal_name: string;
@@ -155,90 +148,140 @@ export interface SiteConfig {
   certifications: { name: string; description: string }[];
 }
 
-// Use imported JSON data with defaults
-const services = (servicesData as any[]).map(item => ({
-  ...item,
-  features: item.features || [],
-  process: item.process || [],
-  common_issues: item.common_issues || [],
-  faqs: item.faqs || [],
-  featured: item.featured || false,
-})) as Service[];
+/**
+ * Convert image paths to WebP format for optimization
+ */
+export function optimizeImageUrl(imagePath: string | null | undefined): string | null {
+  if (!imagePath) return null;
+  
+  // If it's already WebP or external URL, return as-is
+  if (imagePath.endsWith('.webp') || imagePath.startsWith('http')) {
+    return imagePath;
+  }
+  
+  // Convert PNG/JPG/etc to WebP
+  const basePath = imagePath.replace(/\.(png|jpg|jpeg|gif)$/i, '.webp');
+  return basePath;
+}
 
-const locations = (locationsData as any[]).map(item => ({
-  ...item,
-  neighborhoods: item.neighborhoods || [],
-  landmarks: item.landmarks || [],
-  faqs: item.faqs || [],
-  featured: item.featured || false,
-})) as Location[];
+// Data - typed and normalized
+const services = servicesData as Service[];
+const locations = locationsData as Location[];
+const sectors = sectorsData as Sector[];
+const clients = clientsData as Client[];
+const testimonials = testimonialsData as Testimonial[];
+const blog = blogData as BlogPost[];
+const siteConfig = siteConfigData as SiteConfig;
 
-const sectors = (sectorsData as any[]).map(item => ({
-  ...item,
-  challenges: item.challenges || [],
-  featured: item.featured || false,
-})) as Sector[];
-
-const clients = (clientsData as any[]).map(item => ({
-  ...item,
-  services: item.services || [],
-})) as Client[];
-
-const testimonials = (testimonialsData as any[]).map(item => ({
-  ...item,
-})) as Testimonial[];
-
-const siteConfig = siteConfigData as SiteConfig | null;
-
-// API functions that return the cached data (synchronous - data is pre-loaded at build time)
+// API Functions
 export function getServices(): Service[] {
-  return services;
+  return services.filter(s => s.status === 'published').sort((a, b) => a.sort - b.sort);
 }
 
 export function getServiceBySlug(slug: string): Service | null {
-  return services.find(s => s.slug === slug) || null;
+  return services.find(s => s.slug === slug && s.status === 'published') || null;
 }
 
 export function getFeaturedServices(): Service[] {
-  return services.filter(s => s.featured);
+  return services.filter(s => s.featured && s.status === 'published');
 }
 
 export function getLocations(): Location[] {
-  return locations;
+  return locations.filter(l => l.status === 'published').sort((a, b) => b.priority_score - a.priority_score);
 }
 
 export function getLocationBySlug(slug: string): Location | null {
-  return locations.find(l => l.slug === slug) || null;
+  return locations.find(l => l.slug === slug && l.status === 'published') || null;
 }
 
 export function getFeaturedLocations(): Location[] {
-  return locations.filter(l => l.featured);
+  return locations.filter(l => l.featured && l.status === 'published');
 }
 
 export function getSectors(): Sector[] {
-  return sectors;
+  return sectors.filter(s => s.status === 'published').sort((a, b) => a.sort - b.sort);
 }
 
 export function getSectorBySlug(slug: string): Sector | null {
-  return sectors.find(s => s.slug === slug) || null;
+  return sectors.find(s => s.slug === slug && s.status === 'published') || null;
 }
 
 export function getFeaturedSectors(): Sector[] {
-  return sectors.filter(s => s.featured);
+  return sectors.filter(s => s.featured && s.status === 'published');
 }
 
 export function getFeaturedClients(): Client[] {
-  return clients.filter(c => c.featured);
+  return clients.filter(c => c.featured && c.status === 'published').sort((a, b) => a.sort - b.sort);
 }
 
 export function getClients(): Client[] {
-  return clients;
+  return clients.filter(c => c.status === 'published');
 }
 
 export function getTestimonials(): Testimonial[] {
-  return testimonials;
+  return testimonials.filter(t => t.status === 'published').sort((a, b) => a.sort - b.sort);
 }
 
-export function getSiteConfig(): SiteConfig | null {
+export function getSiteConfig(): SiteConfig {
   return siteConfig;
+}
+
+export function getBlogPosts(): BlogPost[] {
+  return blog.filter(p => p.status === 'published').sort((a, b) => b.sort - a.sort);
+}
+
+export function getBlogPostBySlug(slug: string): BlogPost | null {
+  return blog.find(p => p.slug === slug && p.status === 'published') || null;
+}
+
+export function getRelatedPosts(currentSlug: string, limit = 3): BlogPost[] {
+  const current = blog.find(p => p.slug === currentSlug);
+  if (!current) return blog.slice(0, limit);
+  
+  // Prioritize same category, then most recent
+  const sameCategory = blog
+    .filter(p => p.slug !== currentSlug && p.category === current.category && p.status === 'published')
+    .slice(0, limit);
+  
+  if (sameCategory.length >= limit) return sameCategory;
+  
+  const others = blog
+    .filter(p => p.slug !== currentSlug && p.category !== current.category && p.status === 'published')
+    .slice(0, limit - sameCategory.length);
+  
+  return [...sameCategory, ...others];
+}
+
+export function getBlogCategories(): { slug: string; name: string }[] {
+  const categoryMap: Record<string, string> = {
+    legislacion: 'Legislación',
+    guias: 'Guías',
+    consejos: 'Consejos',
+    empresa: 'Empresa',
+    tecnologia: 'Tecnología',
+  };
+  
+  const categories = [...new Set(blog.map(p => p.category))];
+  return categories
+    .map(slug => ({ slug, name: categoryMap[slug] || slug }))
+    .filter(c => c.slug);
+}
+
+// Combinations: service + location pages
+export function getServiceLocationPairs(): { serviceSlug: string; locationSlug: string }[] {
+  const publishedServices = getServices();
+  const publishedLocations = getLocations();
+  
+  const pairs: { serviceSlug: string; locationSlug: string }[] = [];
+  
+  for (const service of publishedServices) {
+    for (const location of publishedLocations) {
+      pairs.push({
+        serviceSlug: service.slug,
+        locationSlug: location.slug,
+      });
+    }
+  }
+  
+  return pairs;
 }

@@ -18,7 +18,10 @@ const siteConfig = {
   tagline: config?.tagline || 'Protegemos lo que mas te importa',
   email: config?.email || 'info@guardman.cl',
   // Use WebP version of hero image (optimized from PNG)
-  heroImage: config?.hero_image ? optimizeImageUrl(`/images/${config.hero_image.replace('.png', '.webp')}`) : null,
+  // Fallback to hero-home.webp if not set in CMS
+  heroImage: config?.hero_image 
+    ? optimizeImageUrl(`/images/${config.hero_image.replace('.png', '.webp')}`) 
+    : '/images/hero-home.webp',
   stats: {
     guards: config?.stats_guards || '500+',
     clients: config?.stats_clients || '200+',
@@ -39,17 +42,15 @@ const featuredClients = clients.filter(c => c.featured && c.logo_url);
   <!-- 1. Hero Section -->
   <section class="relative bg-primary-600 text-white overflow-hidden">
     <div class="absolute inset-0">
-      {siteConfig.heroImage && (
-        <img 
-          src={siteConfig.heroImage}
-          alt="GuardMan Chile - Seguridad Privada"
-          class="w-full h-full object-cover"
-          width="1920"
-          height="1080"
-          loading="eager"
-          fetchpriority="high"
-        />
-      )}
+      <img 
+        src={siteConfig.heroImage}
+        alt="GuardMan Chile - Seguridad Privada"
+        class="w-full h-full object-cover"
+        width="1920"
+        height="1080"
+        loading="eager"
+        fetchpriority="high"
+      />
       <div class="absolute inset-0 bg-gradient-to-r from-primary-800/95 to-primary-600/70"></div>
     </div>
     <div class="container mx-auto px-4 py-20 lg:py-28 relative z-10">
@@ -58,7 +59,7 @@ const featuredClients = clients.filter(c => c.featured && c.logo_url);
           Seguridad Privada en Santiago, Chile
         </h1>
         <p class="text-xl lg:text-2xl text-white/90 mb-8">
-          {config?.description || 'Empresa lider en servicios de seguridad privada en Santiago. Guardias certificados, tecnologia de vanguardia y atencion personalizada.'}
+          {config?.description || 'Empresa líder en servicios de seguridad privada en Santiago. Guardias certificados, tecnología de vanguardia y atención personalizada.'}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 items-center">
           <img 
@@ -95,7 +96,7 @@ const featuredClients = clients.filter(c => c.featured && c.logo_url);
             {siteConfig.name} - Seguridad privada profesional en Santiago
           </h2>
           <p class="text-lg text-white/80 max-w-xl">
-            Mas de 8 anos de experiencia protegiendo lo que mas te importa. Guardias certificados OS-10 y tecnologia de vanguardia para un servicio integral y confiable.
+            Mas de 8 años de experiencia protegiendo lo que más te importa. Guardias certificados OS-10 y tecnología de vanguardia para un servicio integral y confiable.
           </p>
         </div>
         <div class="order-2 relative">
@@ -179,7 +180,7 @@ const featuredClients = clients.filter(c => c.featured && c.logo_url);
       <div class="text-center mb-12">
         <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Soluciones de seguridad para cada necesidad</h2>
         <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
-          Desde guardias de seguridad hasta tecnologia de vigilancia avanzada, adaptamos nuestros servicios a las caracteristicas de tu empresa o residencia.
+          Desde guardias de seguridad hasta tecnología de vigilancia avanzada, adaptamos nuestros servicios a las características de tu empresa o residencia.
         </p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -233,18 +234,18 @@ const featuredClients = clients.filter(c => c.featured && c.logo_url);
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-8">
           <div class="order-1">
             <div class="inline-flex bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <span>Tecnologia Propia GuardMan</span>
+              <span>Tecnología Propia GuardMan</span>
             </div>
             <h2 id="guardpod-section-title" class="text-3xl lg:text-4xl font-bold mb-4">Guard Pod</h2>
             <p class="text-lg text-white/80 max-w-xl">
-              Vigilancia autonoma para obras, eventos y zonas sin infraestructura. Energia solar, camaras PTZ y monitoreo remoto en una unidad desplegable en menos de 2 horas.
+              Vigilancia autónoma para obras, eventos y zonas sin infraestructura. Energía solar, cámaras PTZ y monitoreo remoto en una unidad desplegable en menos de 2 horas.
             </p>
           </div>
           <div class="order-2 relative">
             <div class="rounded-2xl aspect-video overflow-hidden border border-white/20">
               <img 
                 src="/images/s4-thumbnail.webp"
-                alt="Guard Pod - unidad de vigilancia autonoma con panel solar y camaras PTZ"
+                alt="Guard Pod - unidad de vigilancia autónoma con panel solar y cámaras PTZ"
                 class="w-full h-full object-cover"
                 width="800"
                 height="450"
@@ -266,7 +267,7 @@ const featuredClients = clients.filter(c => c.featured && c.logo_url);
             </div>
             <div>
               <h3 class="font-semibold mb-1">Despliegue en menos de 2 horas</h3>
-              <p class="text-white/70 text-sm">Unidad autonoma lista para operar inmediatamente en cualquier ubicacion.</p>
+              <p class="text-white/70 text-sm">Unidad autónoma lista para operar inmediatamente en cualquier ubicación.</p>
             </div>
           </article>
           <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
@@ -445,7 +446,7 @@ const featuredClients = clients.filter(c => c.featured && c.logo_url);
               </div>
               <div>
                 <h3 class="font-semibold mb-1">App Ajax - Control Total</h3>
-                <p class="text-white/70 text-sm">Armado, camaras, automatizacion y notificaciones en tiempo real desde tu smartphone iOS y Android.</p>
+                <p class="text-white/70 text-sm">Armado, cámaras, automatización y notificaciones en tiempo real desde tu smartphone iOS y Android.</p>
               </div>
             </article>
           </div>
@@ -566,7 +567,7 @@ const featuredClients = clients.filter(c => c.featured && c.logo_url);
           Proteccion profesional para tu tranquilidad
         </h2>
         <p class="text-lg text-neutral-600 mb-8 max-w-2xl mx-auto">
-          Mas de 8 anos protegiendo empresas y residencias con guardias certificados, tecnologia de vanguardia y atencion personalizada.
+          Mas de 8 años protegiendo empresas y residencias con guardias certificados, tecnología de vanguardia y atención personalizada.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
           <a href="/contacto" class="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">

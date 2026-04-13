@@ -70,13 +70,13 @@ export const BrandDNA = {
     {
       id: 1,
       title: 'GuardPod V1',
-      description: 'Unidad Autonoma de Vigilancia 24/7 - 15 meses de desarrollo propio',
+      description: 'Unidad Autónoma de Vigilancia 24/7 - 15 meses de desarrollo propio',
       icon: 'shield-check',
       featured: true,
     },
     {
       id: 2,
-      title: 'Supervision Nocturna Preventiva',
+      title: 'Supervisión Nocturna Preventiva',
       description: 'Monitoreo proactivo de conductas sospechosas',
       icon: 'eye',
       featured: true,
@@ -90,15 +90,15 @@ export const BrandDNA = {
     },
     {
       id: 4,
-      title: 'Personal Certificacion OS-10',
-      description: 'Todos nuestros guardias cuentan con certificacion OS-10 vigente',
+      title: 'Personal Certificación OS-10',
+      description: 'Todos nuestros guardias cuentan con certificación OS-10 vigente',
       icon: 'badge-check',
       featured: true,
     },
     {
       id: 5,
       title: 'Centro de Monitoreo Propio',
-      description: 'Con redundancia y supervision 24/7',
+      description: 'Con redundancia y supervisión 24/7',
       icon: 'monitor',
       featured: false,
     },
@@ -108,11 +108,11 @@ export const BrandDNA = {
   // CONTENT RULES
   // ============================================
   contentRules: [
-    { rule: 'Siempre mencionar: Guardias con certificacion OS-10 vigente', priority: 'high' },
+    { rule: 'Siempre mencionar: Guardias con certificación OS-10 vigente', priority: 'high' },
     { rule: 'Referenciar cumplimiento de Ley 21.659 de Seguridad Privada', priority: 'high' },
     { rule: 'Nunca usar lenguaje alarmista o catastrofista', priority: 'high' },
     { rule: 'Enfatizar prevencion y tranquilidad, no reaccion', priority: 'high' },
-    { rule: 'Mencionar certificaciones y anos de experiencia', priority: 'medium' },
+    { rule: 'Mencionar certificaciones y años de experiencia', priority: 'medium' },
     { rule: 'Usar datos concretos y verificables', priority: 'medium' },
   ],
 
@@ -160,20 +160,20 @@ export const BrandDNA = {
   // ============================================
   certifications: [
     {
-      name: 'Autorizacion Laboral',
-      description: 'Autorizacion de la Autoridad Administrativa Laboral (Chile) para servicios de seguridad privada',
+      name: 'Autorización Laboral',
+      description: 'Autorización de la Autoridad Administrativa Laboral (Chile) para servicios de seguridad privada',
     },
     {
       name: 'Seguro RC',
       description: 'Seguro de responsabilidad civil obligatorio',
     },
     {
-      name: 'Certificacion OS-10',
-      description: 'Personal con certificacion OS-10 vigente',
+      name: 'Certificación OS-10',
+      description: 'Personal con certificación OS-10 vigente',
     },
     {
-      name: 'Verificacion Antecedentes',
-      description: 'Verificacion de antecedentes para todo el personal',
+      name: 'Verificación Antecedentes',
+      description: 'Verificación de antecedentes para todo el personal',
     },
     {
       name: 'Protocolos Carabineros',
@@ -191,43 +191,43 @@ export const BrandDNA = {
       benefit: 'Tranquilidad y prevencion de incidentes',
     },
     'cctv-videovigilancia': {
-      pain: 'Camaras danadas, sin acceso remoto, grabacion deficiente',
-      solution: 'Camaras IP de ultima generacion con monitoreo en la nube',
+      pain: 'Cámaras dañadas, sin acceso remoto, grabación deficiente',
+      solution: 'Cámaras IP de última generación con monitoreo en la nube',
       benefit: 'Visualizacion remota y evidencia en caso de incidentes',
     },
     'guard-pod': {
       pain: 'Obras sin vigilancia, zonas sin electricidad, eventos temporales',
-      solution: 'Unidad autonoma con energia solar, camaras PTZ y 4G',
+      solution: 'Unidad autónoma con energía solar, cámaras PTZ y 4G',
       benefit: 'Vigilancia inmediata sin infraestructura',
     },
     'monitoreo-24-7': {
-      pain: 'Alarmas sin respuesta, emergencias sin coordinacion',
+      pain: 'Alarmas sin respuesta, emergencias sin coordinación',
       solution: 'Centro de control propio con operadores 24/7',
-      benefit: 'Respuesta inmediata y coordinacion con autoridades',
+      benefit: 'Respuesta inmediata y coordinación con autoridades',
     },
     'control-de-accesos': {
       pain: 'Llaves perdidas, accesos no autorizados, falta de control',
-      solution: 'Sistemas biometricos y RFID con registro completo',
+      solution: 'Sistemas biométricos y RFID con registro completo',
       benefit: 'Control total y registro de ingresos',
     },
     'escoltas-privados': {
-      pain: 'Amenazas de seguridad, riesgo por exposicion',
-      solution: 'Escoltas certificados con evaluacion de riesgo previa',
-      benefit: 'Proteccion personalizada y tranquilidad total',
+      pain: 'Amenazas de seguridad, riesgo por exposición',
+      solution: 'Escoltas certificados con evaluación de riesgo previa',
+      benefit: 'Protección personalizada y tranquilidad total',
     },
     'seguridad-eventos': {
-      pain: 'Control de invitados, gestion de masas, seguridad VIP',
-      solution: 'Planificacion previa y personal especializado',
+      pain: 'Control de invitados, gestión de masas, seguridad VIP',
+      solution: 'Planificación previa y personal especializado',
       benefit: 'Evento seguro y controlado',
     },
     'seguridad-industrial': {
       pain: 'Robos en bodegas, acceso no autorizado a obras',
-      solution: 'Vigilancia perimetral y control de vehiculos',
-      benefit: 'Proteccion de activos y prevencion de perdidas',
+      solution: 'Vigilancia perimetral y control de vehículos',
+      benefit: 'Protección de activos y prevención de pérdidas',
     },
     'auditoria-seguridad': {
-      pain: 'No saber que necesita, inversion incorrecta',
-      solution: 'Visita tecnica gratuita y analisis de vulnerabilidades',
+      pain: 'No saber qué necesita, inversión incorrecta',
+      solution: 'Visita técnica gratuita y análisis de vulnerabilidades',
       benefit: 'Plan documentado con recomendaciones claras',
     },
   },

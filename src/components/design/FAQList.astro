@@ -1,0 +1,48 @@
+---
+/**
+ * FAQList.astro - Lista de Preguntas Frecuentes estandarizada
+ * 
+ * Usar en todas las páginas de detalle (N2 y N3)
+ */
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  faqs: FAQ[];
+  title?: string;
+}
+
+const { faqs, title = 'Preguntas Frecuentes' } = Astro.props;
+---
+
+<section class="space-y-4">
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">{title}</h2>
+  
+  <div class="space-y-4">
+    {faqs.map((faq, index) => (
+      <details class="group bg-neutral-50 rounded-lg overflow-hidden">
+        <summary class="flex items-center gap-3 p-6 cursor-pointer list-none">
+          <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center shrink-0">
+            <span class="text-primary-600 font-bold text-sm">{index + 1}</span>
+          </div>
+          <span class="font-semibold text-neutral-900 flex-1 group-hover:text-primary-600 transition-colors">
+            {faq.question}
+          </span>
+          <svg 
+            class="w-5 h-5 text-neutral-400 shrink-0 transition-transform group-open:rotate-180" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </summary>
+        <div class="px-6 pb-6 pl-14 text-neutral-600">
+          {faq.answer}
+        </div>
+      </details>
+    ))}
+  </div>
+</section>

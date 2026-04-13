@@ -1,9 +1,15 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getServices, getLocations, optimizeImageUrl } from '../../data/directus';
+import { getServices, getLocations, getServices as getAllServices, optimizeImageUrl } from '../../data/directus';
 import { mdToHtml, mdToPlainText } from '../../lib/markdown';
 import SchemaService from '../../components/seo/SchemaService.astro';
 import SchemaFAQ from '../../components/seo/SchemaFAQ.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import PageCTA from '../../components/design/PageCTA.astro';
+
+// Design components
+import FAQList from '../../components/design/FAQList.astro';
+import SidebarCTA from '../../components/design/SidebarCTA.astro';
 
 export function getStaticPaths() {
   const services = getServices();
@@ -15,11 +21,19 @@ export function getStaticPaths() {
 
 const { service } = Astro.props;
 const locations = getLocations();
-const relatedServices = getServices();
+const allServices = getAllServices();
 const topLocations = locations.slice(0, 10);
+const relatedServices = allServices.filter(s => s.id !== service.id).slice(0, 3);
 
-// Usar FAQs del CMS si existen, si no usar genéricas
-const serviceFAQs = service.faqs && service.faqs.length > 0 
+// Breadcrumb
+const breadcrumbItems = [
+  { name: 'Inicio', url: 'https://guardman.cl' },
+  { name: 'Servicios', url: 'https://guardman.cl/servicios' },
+  { name: service.name, url: `https://guardman.cl/servicios/${service.slug}` }
+];
+
+// FAQs
+const serviceFAQs = (service.faqs && service.faqs.length > 0) 
   ? service.faqs 
   : [
       {
@@ -44,11 +58,15 @@ const serviceFAQs = service.faqs && service.faqs.length > 0
       }
     ];
 
-// Área servida para schema
+// Area served for schema
 const areaServed = locations.map(l => l.name);
 ---
 
-<BaseLayout title={service.meta_title} description={service.meta_description} image={optimizeImageUrl(`/images/${service.image}`)}>
+<BaseLayout 
+  title={service.meta_title} 
+  description={service.meta_description} 
+  image={optimizeImageUrl(`/images/${service.image}`)}
+>
   <!-- Schema Markup -->
   <SchemaService 
     name={service.name}
@@ -57,23 +75,28 @@ const areaServed = locations.map(l => l.name);
     priceRange={service.price_range}
     areaServed={areaServed}
   />
+  <SchemaBreadcrumb items={breadcrumbItems} />
   <SchemaFAQ faqs={serviceFAQs} />
   
-  <!-- Breadcrumb -->
+  <!-- Breadcrumb Visual -->
   <div class="bg-neutral-100 py-3">
     <div class="container mx-auto px-4">
-      <nav class="flex text-sm text-neutral-600">
+      <nav class="flex text-sm text-neutral-600" aria-label="Breadcrumb">
         <a href="/" class="hover:text-primary-600">Inicio</a>
-        <span class="mx-2">/</span>
+        <span class="mx-2" aria-hidden="true">/</span>
         <a href="/servicios" class="hover:text-primary-600">Servicios</a>
-        <span class="mx-2">/</span>
-        <span class="text-neutral-900">{service.name}</span>
+        <span class="mx-2" aria-hidden="true">/</span>
+        <span class="text-neutral-900 font-medium">{service.name}</span>
       </nav>
     </div>
   </div>
 
   <!-- Hero -->
   <section class="relative bg-primary-600 text-white py-16 lg:py-20 overflow-hidden">
+    <!-- Background elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
+    
     {service.image && (
       <div class="absolute inset-0">
         <img 
@@ -87,6 +110,7 @@ const areaServed = locations.map(l => l.name);
         />
       </div>
     )}
+    
     <div class="container mx-auto px-4 relative z-10">
       <h1 class="text-3xl lg:text-5xl font-bold mb-4">{service.hero_heading}</h1>
       <p class="text-xl text-white/90 max-w-3xl">{mdToPlainText(service.description, 250)}</p>
@@ -97,9 +121,10 @@ const areaServed = locations.map(l => l.name);
   <section class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4">
       <div class="grid lg:grid-cols-3 gap-12">
-        <!-- Content -->
+        <!-- Column 1-2: Content -->
         <div class="lg:col-span-2">
-          <!-- Service Description (rendered from Markdown) -->
+          
+          <!-- Description -->
           <div class="mb-12 prose prose-neutral max-w-none">
             <Fragment set:html={mdToHtml(service.description)} />
           </div>
@@ -107,11 +132,11 @@ const areaServed = locations.map(l => l.name);
           <!-- Features -->
           {service.features && service.features.length > 0 && (
             <div class="mb-12">
-              <h2 class="text-2xl font-bold text-neutral-900 mb-6">Que incluye el servicio</h2>
+              <h2 class="text-2xl font-bold text-neutral-900 mb-6">Qué incluye el servicio</h2>
               <div class="grid sm:grid-cols-2 gap-4">
                 {service.features.map(feature => (
-                  <div class="flex items-start gap-3 bg-neutral-50 rounded-lg p-4">
-                    <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div class="flex items-start gap-3 bg-neutral-50 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                     </svg>
                     <span class="text-neutral-700">{feature}</span>
@@ -128,10 +153,10 @@ const areaServed = locations.map(l => l.name);
               <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {service.process.map((step, index) => (
                   <div class="text-center">
-                    <div class="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">
+                    <div class="w-14 h-14 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4 shadow-lg">
                       {index + 1}
                     </div>
-                    <h3 class="font-semibold text-neutral-900 mb-1">{step.step}</h3>
+                    <h3 class="font-semibold text-neutral-900 mb-2">{step.step}</h3>
                     <p class="text-sm text-neutral-600">{step.description}</p>
                   </div>
                 ))}
@@ -145,11 +170,11 @@ const areaServed = locations.map(l => l.name);
               <h2 class="text-2xl font-bold text-neutral-900 mb-6">Problemas que solucionamos</h2>
               <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {service.common_issues.map(issue => (
-                  <div class="flex items-start gap-3 bg-warning-light border border-warning/30 rounded-lg p-4">
-                    <svg class="w-5 h-5 text-warning shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div class="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-lg p-4">
+                    <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                     </svg>
-                    <span class="text-neutral-700 text-sm">{issue}</span>
+                    <span class="text-neutral-700 text-sm font-medium">{issue}</span>
                   </div>
                 ))}
               </div>
@@ -161,48 +186,36 @@ const areaServed = locations.map(l => l.name);
             <h2 class="text-2xl font-bold text-neutral-900 mb-6">Disponible en estas ubicaciones</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
               {topLocations.map(location => (
-                <a href={`/ubicaciones/${location.slug}`} class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-3 text-center text-sm text-neutral-700 hover:text-primary-700 transition-all">
+                <a 
+                  href={`/ubicaciones/${location.slug}`} 
+                  class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-3 text-center text-sm text-neutral-700 hover:text-primary-700 transition-all font-medium"
+                >
                   {location.name}
                 </a>
               ))}
             </div>
+            <div class="mt-4 text-center">
+              <a href="/ubicaciones" class="text-primary-600 hover:text-primary-700 font-medium text-sm inline-flex items-center gap-1">
+                Ver todas las ubicaciones
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
           </div>
 
           <!-- FAQs -->
-          <div class="mb-12">
-            <h2 class="text-2xl font-bold text-neutral-900 mb-6">Preguntas Frecuentes</h2>
-            <div class="space-y-4">
-              {serviceFAQs.map((faq, index) => (
-                <div class="bg-neutral-50 rounded-lg p-6">
-                  <h3 class="font-semibold text-neutral-900 mb-2 flex items-start gap-2">
-                    <svg class="w-5 h-5 text-primary-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    {faq.question}
-                  </h3>
-                  <p class="text-neutral-600 pl-7">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
+          <div class="mb-8">
+            <FAQList 
+              faqs={serviceFAQs} 
+              title="Preguntas Frecuentes"
+            />
           </div>
         </div>
 
-        <!-- Sidebar -->
+        <!-- Column 3: Sidebar -->
         <div class="lg:col-span-1">
-          <div class="bg-neutral-50 rounded-xl p-6 sticky top-24">
-            <h3 class="text-xl font-bold text-neutral-900 mb-4">Cotizar {service.name}</h3>
-            <div class="space-y-4">
-              <a href="/cotizacion" class="block w-full bg-primary-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                Solicitar cotizacion
-              </a>
-              <a href="tel:+56930000010" class="block w-full border-2 border-primary-600 text-primary-600 text-center py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors">
-                Llamar ahora
-              </a>
-              <p class="text-center text-sm text-neutral-500">
-                Cotizacion gratuita y sin compromiso
-              </p>
-            </div>
-          </div>
+          <SidebarCTA title={`Cotizar ${service.name}`} service={service.name} />
         </div>
       </div>
     </div>
@@ -211,11 +224,16 @@ const areaServed = locations.map(l => l.name);
   <!-- Related Services -->
   <section class="py-12 bg-neutral-50">
     <div class="container mx-auto px-4">
-      <h2 class="text-2xl font-bold text-neutral-900 mb-6">Tambien te puede interesar</h2>
+      <h2 class="text-2xl font-bold text-neutral-900 mb-6">También te puede interesar</h2>
       <div class="grid md:grid-cols-3 gap-6">
-        {relatedServices.filter(s => s.id !== service.id).slice(0, 3).map(s => (
-          <a href={`/servicios/${s.slug}`} class="bg-white rounded-xl p-6 hover:shadow-lg transition-all group">
-            <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">{s.name}</h3>
+        {relatedServices.map(s => (
+          <a 
+            href={`/servicios/${s.slug}`} 
+            class="bg-white rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all group"
+          >
+            <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+              {s.name}
+            </h3>
             <p class="text-sm text-neutral-600 line-clamp-2">{s.short_description}</p>
           </a>
         ))}
@@ -224,13 +242,14 @@ const areaServed = locations.map(l => l.name);
   </section>
 
   <!-- CTA -->
-  <section class="py-16 bg-primary-600 text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">Contrata {service.name} hoy</h2>
-      <p class="text-lg text-white/90 mb-8">Nuestro equipo esta listo para proteger tu propiedad.</p>
-      <a href="/cotizacion" class="inline-flex items-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
-        Solicitar cotizacion gratis
-      </a>
-    </div>
-  </section>
+  <PageCTA 
+    title={`Contrata ${service.name} hoy`}
+    description="Nuestro equipo está listo para proteger tu propiedad."
+    primaryText="Solicitar Cotización"
+    primaryHref="/cotizacion"
+    secondaryText="Hablar con un experto"
+    secondaryHref="/contacto"
+    variant="primary"
+    showPhone={true}
+  />
 </BaseLayout>

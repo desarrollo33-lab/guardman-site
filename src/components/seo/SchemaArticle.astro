@@ -1,0 +1,46 @@
+---
+/**
+ * SchemaArticle.astro
+ * Genera Schema.org Article markup para páginas de blog
+ * Cumple TEMPLATE-STANDARDS.md: Schema markup obligatorio por página
+ */
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  date: string;
+  author?: string;
+  image?: string | null;
+}
+
+const { title, description, slug, date, author = 'GuardMan Chile', image } = Astro.props;
+const siteUrl = 'https://guardman.cl';
+
+const schemaArticle = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "url": `${siteUrl}/blog/${slug}`,
+  "datePublished": date,
+  "dateModified": date,
+  "author": {
+    "@type": "Organization",
+    "name": author,
+    "url": siteUrl
+  },
+  "publisher": {
+    "@id": `${siteUrl}/#organization`
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `${siteUrl}/blog/${slug}`
+  }
+};
+
+if (image) {
+  schemaArticle.image = `${siteUrl}${image}`;
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaArticle)} />

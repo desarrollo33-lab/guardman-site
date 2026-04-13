@@ -1,0 +1,93 @@
+---
+/**
+ * PageHero.astro - Componente de Hero estandarizado
+ * 
+ * Usar en: Homepage (N0), Colecciones (N1), Detalles (N2)
+ * 
+ * Props:
+ * - title: string (requerido)
+ * - subtitle: string (opcional)
+ * - badge: string (opcional, texto pequeno)
+ * - image: string (opcional, URL de imagen de fondo)
+ * - variant: 'default' | 'centered' | 'overlay' (default: 'default')
+ */
+interface Props {
+  title: string;
+  subtitle?: string;
+  badge?: string;
+  image?: string;
+  variant?: 'default' | 'centered' | 'overlay';
+  compact?: boolean;
+}
+
+const { 
+  title, 
+  subtitle, 
+  badge, 
+  image, 
+  variant = 'default',
+  compact = false 
+} = Astro.props;
+---
+
+<section class:list={[
+  "relative bg-primary-600 text-white overflow-hidden",
+  compact ? "py-12 lg:py-16" : "py-16 lg:py-20"
+]}>
+  {/* Background Image */}
+  {image && (
+    <div class="absolute inset-0">
+      <img 
+        src={image}
+        alt=""
+        class="w-full h-full object-cover opacity-30"
+        loading="eager"
+        width="1920"
+        height="1080"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-primary-800/95 to-primary-600/70"></div>
+    </div>
+  )}
+  
+  {/* Decorative elements */}
+  <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
+  
+  <div class:list={[
+    "container mx-auto px-4 relative z-10",
+    variant === 'centered' ? "text-center" : ""
+  ]}>
+    {/* Badge */}
+    {badge && (
+      <div class:list={[
+        "inline-flex bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6",
+        variant === 'centered' ? "mx-auto" : ""
+      ]}>
+        <span>{badge}</span>
+      </div>
+    )}
+    
+    {/* Title */}
+    <h1 class:list={[
+      "font-bold text-white",
+      compact ? "text-2xl lg:text-4xl" : "text-3xl lg:text-5xl",
+      "mb-4"
+    ]}>
+      {title}
+    </h1>
+    
+    {/* Subtitle */}
+    {subtitle && (
+      <p class:list={[
+        "text-white/90",
+        compact ? "text-lg max-w-xl" : "text-xl max-w-2xl",
+        variant === 'centered' ? "mx-auto" : ""
+      ]}>
+        {subtitle}
+      </p>
+    )}
+    
+    {/* Slot para contenido adicional */}
+    <slot />
+  </div>
+</section>

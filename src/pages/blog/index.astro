@@ -1,0 +1,223 @@
+---
+/**
+ * /blog/index.astro — Blog listing page
+ * 
+ * TEMPLATE-STANDARDS compliance:
+ * - Exactly ONE h1 ✓
+ * - Meta title ≤ 60 chars ✓
+ * - Meta description ≤ 160 chars ✓
+ * - Schema markup (CollectionPage) ✓
+ * - Internal links (min 3) ✓
+ * - CTA claro ✓
+ * - Cards con hover/shadow ✓
+ * - Buttons: primary style ✓
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import SchemaCollectionPage from '../../components/seo/SchemaCollectionPage.astro';
+import { getBlogPosts, getBlogCategories, getServices } from '../../data/directus';
+
+const posts = getBlogPosts();
+const categories = getBlogCategories();
+const services = getServices();
+const siteUrl = 'https://guardman.cl';
+
+// Category label map
+const categoryLabels: Record<string, string> = {
+  legislacion: 'Legislación',
+  guias: 'Guías',
+  consejos: 'Consejos',
+  empresa: 'Empresa',
+  tecnologia: 'Tecnología',
+};
+
+// Group posts by category
+const postsByCategory = categories.map(cat => ({
+  ...cat,
+  posts: posts.filter(p => p.category === cat.slug),
+}));
+---
+
+<BaseLayout 
+  title="Blog de Seguridad Privada en Chile" 
+  description="Artículos sobre seguridad privada, legislación OS-10, Ley 21.659 y consejos para proteger tu empresa en Chile."
+>
+  <!-- Schema -->
+  <SchemaBreadcrumb items={[
+    { name: 'Inicio', url: `${siteUrl}/` },
+    { name: 'Blog', url: `${siteUrl}/blog` },
+  ]} />
+  <SchemaCollectionPage 
+    name="Blog de Seguridad Privada"
+    description="Artículos y guías sobre seguridad privada en Chile"
+    url={`${siteUrl}/blog`}
+  />
+
+  <!-- Hero -->
+  <section class="relative bg-primary-600 text-white py-16 lg:py-20 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-800 to-primary-600"></div>
+    <div class="container mx-auto px-4 relative z-10">
+      <h1 class="text-3xl lg:text-5xl font-bold mb-4">Blog de Seguridad Privada</h1>
+      <p class="text-xl text-white/90 max-w-2xl">
+        Guías, legislación y consejos de seguridad para empresas y comunidades en Chile.
+      </p>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section class="bg-white border-b border-neutral-200 sticky top-16 lg:top-20 z-30">
+    <div class="container mx-auto px-4">
+      <nav class="flex gap-6 overflow-x-auto py-4 text-sm font-medium" aria-label="Categorías del blog">
+        <a href="/blog" class="text-primary-600 border-b-2 border-primary-600 pb-1 whitespace-nowrap">
+          Todos
+        </a>
+        {categories.map(cat => (
+          <a 
+            href={`#${cat.slug}`} 
+            class="text-neutral-600 hover:text-primary-600 pb-1 whitespace-nowrap transition-colors"
+          >
+            {cat.name}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </section>
+
+  <!-- Featured Post (first) -->
+  {posts.length > 0 && (
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <a href={`/blog/${posts[0].slug}`} class="group block">
+          <article class="grid lg:grid-cols-2 gap-8 bg-neutral-50 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <div class="aspect-video lg:aspect-auto bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-16 h-16 text-primary-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+                </svg>
+                <span class="text-primary-600 font-medium">Artículo destacado</span>
+              </div>
+            </div>
+            <div class="p-6 lg:p-8 flex flex-col justify-center">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  {categoryLabels[posts[0].category] || posts[0].category}
+                </span>
+                <span class="text-neutral-500 text-sm">
+                  {posts[0].reading_time} min de lectura
+                </span>
+              </div>
+              <h2 class="text-2xl lg:text-3xl font-bold text-neutral-900 group-hover:text-primary-600 transition-colors mb-3">
+                {posts[0].title}
+              </h2>
+              <p class="text-neutral-600 mb-4 line-clamp-3">
+                {posts[0].excerpt}
+              </p>
+              <span class="text-primary-600 font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                Leer artículo
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </article>
+        </a>
+      </div>
+    </section>
+  )}
+
+  <!-- Posts by Category -->
+  {postsByCategory.map(category => (
+    <section id={category.slug} class="py-12 {category === postsByCategory[0] ? 'bg-neutral-50' : 'bg-white'}">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-neutral-900 mb-8">
+          {category.name}
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {category.posts.map(post => (
+            <a href={`/blog/${post.slug}`} class="group">
+              <article class="bg-white rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all h-full flex flex-col">
+                <!-- Card image placeholder -->
+                <div class="aspect-video bg-gradient-to-br from-primary-50 to-primary-100 rounded-t-xl flex items-center justify-center">
+                  <svg class="w-10 h-10 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+                  </svg>
+                </div>
+                <!-- Card body -->
+                <div class="p-6 flex flex-col flex-1">
+                  <div class="flex items-center gap-3 mb-3 text-sm text-neutral-500">
+                    <time datetime={post.date}>
+                      {new Date(post.date).toLocaleDateString('es-CL', { day: 'numeric', month: 'short', year: 'numeric' })}
+                    </time>
+                    <span>·</span>
+                    <span>{post.reading_time} min</span>
+                  </div>
+                  <h3 class="text-lg font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2 line-clamp-2">
+                    {post.title}
+                  </h3>
+                  <p class="text-neutral-600 text-sm line-clamp-3 mb-4 flex-1">
+                    {post.excerpt}
+                  </p>
+                  <span class="text-primary-600 font-medium text-sm inline-flex items-center gap-1">
+                    Leer más
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </span>
+                </div>
+              </article>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Related Services -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-neutral-900 mb-8 text-center">
+        Nuestros Servicios de Seguridad
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.slice(0, 6).map(service => (
+          <a href={`/servicios/${service.slug}`} class="group bg-white rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all border border-neutral-200">
+            <div class="p-6">
+              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+                {service.name}
+              </h3>
+              <p class="text-neutral-600 text-sm line-clamp-2">
+                {service.short_description}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/servicios" class="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+          Ver todos los servicios
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">¿Necesitas seguridad profesional?</h2>
+      <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+        Solicita una cotización gratuita y recibe una propuesta personalizada para tu empresa o comunidad.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/cotizacion" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+          Solicitar cotización
+        </a>
+        <a href="/contacto" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+          Contactar
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

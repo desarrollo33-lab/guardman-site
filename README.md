@@ -1,13 +1,35 @@
 # GuardMan Chile - Sitio Web
 
-Sitio web estatico para GuardMan Chile - empresa de seguridad privada en Santiago.
+Sitio web estático para GuardMan Chile - empresa de seguridad privada en Santiago.
 
 ## Stack
 
 - **Framework:** Astro 5 (static site)
 - **Styling:** Tailwind CSS v4
-- **CMS:** Directus (opcional, los datos staticos estan en `src/data/`)
+- **Data:** JSON estático en `src/data/generated/`
 - **Deploy:** Cloudflare Pages
+- **API:** Cloudflare Workers + D1 (opcional)
+
+## Arquitectura 100% Cloudflare
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                      Cloudflare                              │
+├─────────────────────────────────────────────────────────────┤
+│  Cloudflare Pages ──────► Static Site (dist/)               │
+│       │                                                      │
+│       └──► Cloudflare Workers + D1 (API opcional)           │
+│                    (worker/)                                │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│                     Local Development                        │
+├─────────────────────────────────────────────────────────────┤
+│  src/data/generated/*.json  ───►  Static Data               │
+│       │                                                      │
+│       └──► npm run validate  ───►  Data Validation           │
+└─────────────────────────────────────────────────────────────┘
+```
 
 ## Desarrollo Local
 
@@ -18,20 +40,14 @@ npm install
 # Iniciar servidor de desarrollo
 npm run dev
 
-# Build para produccion
+# Validar datos estáticos
+npm run validate
+
+# Build para producción
 npm run build
 
 # Preview del build
 npm run preview
-```
-
-## Sincronizar desde Directus (opcional)
-
-```bash
-# Login al admin de Directus y obtener un static token
-# Luego ejecutar:
-
-DIRECTUS_TOKEN=tu-token npm run sync
 ```
 
 ## Estructura del Proyecto
@@ -40,19 +56,49 @@ DIRECTUS_TOKEN=tu-token npm run sync
 guardman-site/
 ├── src/
 │   ├── components/     # Componentes Astro/React
-│   ├── data/           # Datos staticos (services.ts, locations.ts)
+│   ├── data/           # Datos estáticos (JSON)
+│   │   └── generated/  # *.json files
 │   ├── layouts/        # Layouts base
 │   ├── pages/          # Páginas Astro
 │   │   ├── servicios/  # Detalle de servicios
 │   │   ├── ubicaciones/# Detalle de ubicaciones
+│   │   ├── sectores/   # Sectores
+│   │   ├── blog/       # Blog
 │   │   ├── contacto.astro
 │   │   ├── cotizacion.astro
 │   │   ├── nosotros.astro
 │   │   └── ...
 │   └── styles/         # Tailwind + custom CSS
-├── public/             # Assets publicos
-├── scripts/            # Scripts de build/sync
-└── dist/               # Build output
+├── worker/             # Cloudflare Worker (API opcional)
+│   ├── index.ts         # Worker principal
+│   └── sql/            # DDL para D1
+├── public/              # Assets públicos
+├── scripts/             # Scripts de validación
+├── dist/                # Build output
+└── wrangler.toml        # Configuración Worker
+```
+
+## Datos Estáticos
+
+Todo el contenido del sitio está almacenado como archivos JSON en `src/data/generated/`:
+
+| Archivo | Descripción |
+|---------|-------------|
+| `services.json` | 9 servicios de seguridad |
+| `locations.json` | 14 comunas de cobertura |
+| `sectors.json` | 6 sectores industriales |
+| `clients.json` | Clientes destacados |
+| `testimonials.json` | Testimonios |
+| `blog.json` | Artículos del blog |
+| `site-config.json` | Configuración general |
+
+### Editar Contenido
+
+Para actualizar el contenido, edita los archivos JSON directamente:
+
+```bash
+# Validar cambios
+npm run validate
 ```
 
 ## Páginas
@@ -62,14 +108,19 @@ guardman-site/
 | `/` | Homepage |
 | `/servicios` | Lista de servicios |
 | `/servicios/[slug]` | Detalle de servicio |
+| `/servicios/[slug]/[location]` | Servicio + ubicación |
 | `/ubicaciones` | Lista de ubicaciones |
 | `/ubicaciones/[slug]` | Detalle de ubicacion |
+| `/sectores` | Sectores industriales |
+| `/sectores/[slug]` | Detalle de sector |
+| `/blog` | Blog |
+| `/blog/[slug]` | Artículo |
 | `/nosotros` | Sobre nosotros |
 | `/contacto` | Formulario de contacto |
-| `/cotizacion` | Solicitud de cotizacion |
-| `/privacidad` | Politica de privacidad |
-| `/terminos` | Terminos de servicio |
-| `/404` | Pagina no encontrada |
+| `/cotizacion` | Solicitud de cotización |
+| `/privacidad` | Política de privacidad |
+| `/terminos` | Términos de servicio |
+| `/404` | Página no encontrada |
 
 ## Deployment a Cloudflare Pages
 
@@ -81,23 +132,30 @@ guardman-site/
    - **Build output directory:** `dist`
 5. Click Deploy
 
-## Directus CMS (opcional)
+## API Worker (Opcional)
 
-El sitio funciona con datos staticos en `src/data/`. Si quieres usar Directus:
+El sitio funciona 100% estático sin necesidad del Worker.
+El Worker (`worker/`) es opcional para:
 
-1. Configurar Directus en `http://64.176.16.231:8055`
-2. Crear un Static Token en Directus Admin
-3. Ejecutar `npm run sync` para baixar los datos
-4. Los datos se guardaran como JSON en `src/data/`
+- API REST con datos de D1
+- Formularios dinámicos
+- Integraciones externas
 
-## Colecciones Directus esperadas
+### Deploy Worker
 
-- `services` - 8 servicios de seguridad
-- `locations` - 14 comunas
-- `testimonials` - Testimonios de clientes
-- `site_config` - Configuracion del sitio
+```bash
+npx wrangler deploy --config wrangler.toml
+```
+
+### Endpoints del Worker
+
+- `GET /health` - Health check
+- `POST /api/seed` - Poblar D1 con datos
+- `GET /api/services` - Lista servicios
+- `GET /api/locations` - Lista ubicaciones
+- `GET /api/sectors` - Lista sectores
+- `GET /api/config` - Configuración
 
 ## Contacto
 
-- **Sitio actual:** https://guardman.cl
-- **Admin Directus:** http://64.176.16.231:8055/admin
+- **Sitio:** https://guardman.cl

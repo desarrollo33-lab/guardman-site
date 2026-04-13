@@ -1,0 +1,121 @@
+---
+/**
+ * ContentCard.astro - Tarjeta de contenido estandarizada
+ * 
+ * Usar para: servicios, ubicaciones, sectores, posts de blog
+ * 
+ * Variantes:
+ * - grid: Para grids de 3+ items
+ * - list: Para listas simples
+ */
+interface Props {
+  href: string;
+  title: string;
+  description?: string;
+  badge?: string;
+  image?: string;
+  icon?: 'shield' | 'map-pin' | 'building' | 'blog';
+  variant?: 'grid' | 'list';
+  showArrow?: boolean;
+}
+
+const { 
+  href, 
+  title, 
+  description, 
+  badge, 
+  image,
+  icon = 'shield',
+  variant = 'grid',
+  showArrow = true
+} = Astro.props;
+
+const iconSvgs = {
+  shield: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>`,
+  'map-pin': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>`,
+  building: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>`,
+  blog: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>`
+};
+---
+
+<a 
+  href={href} 
+  class:list={[
+    "group block rounded-xl overflow-hidden transition-all hover:-translate-y-1",
+    variant === 'grid' ? "bg-neutral-50 hover:shadow-xl" : "bg-white hover:shadow-md border border-neutral-200"
+  ]}
+>
+  {/* Image Area */}
+  <div class:list={[
+    "relative overflow-hidden",
+    variant === 'grid' ? "aspect-video bg-gradient-to-br from-primary-100 to-primary-200" : "w-24 h-24 shrink-0 rounded-lg bg-primary-50"
+  ]}>
+    {image ? (
+      <img 
+        src={image}
+        alt={title}
+        class:list={[
+          "w-full h-full object-cover transition-transform duration-300 group-hover:scale-105",
+          variant === 'grid' ? "" : "rounded-lg"
+        ]}
+        loading="lazy"
+        width="800"
+        height="450"
+      />
+    ) : (
+      <div class="w-full h-full flex items-center justify-center">
+        <svg 
+          class:list={[
+            variant === 'grid' ? "w-12 h-12" : "w-8 h-8",
+            "text-primary-600"
+          ]}
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          set:html={iconSvgs[icon]}
+        />
+      </div>
+    )}
+    
+    {/* Badge overlay */}
+    {badge && (
+      <div class="absolute top-3 left-3">
+        <span class="bg-white/90 text-primary-700 text-xs font-semibold px-2 py-1 rounded-full">
+          {badge}
+        </span>
+      </div>
+    )}
+  </div>
+  
+  {/* Content */}
+  <div class:list={[
+    variant === 'grid' ? "p-6" : "p-4 flex-1"
+  ]}>
+    <h3 class:list={[
+      "font-semibold group-hover:text-primary-600 transition-colors mb-2",
+      variant === 'grid' ? "text-lg text-neutral-900" : "text-base text-neutral-800"
+    ]}>
+      {title}
+    </h3>
+    
+    {description && (
+      <p class:list={[
+        "text-neutral-600 text-sm line-clamp-2",
+        variant === 'grid' ? "" : "mt-1"
+      ]}>
+        {description}
+      </p>
+    )}
+    
+    {/* Arrow indicator */}
+    {showArrow && variant === 'grid' && (
+      <div class="mt-4 flex items-center text-primary-600 font-medium text-sm">
+        <span>Ver detalles</span>
+        <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </div>
+    )}
+  </div>
+</a>

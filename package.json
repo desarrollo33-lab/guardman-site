@@ -7,12 +7,11 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/fetch-cms-data.mjs && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fetch:data": "node scripts/fetch-cms-data.mjs",
-    "sync": "node scripts/sync-directus.mjs",
-    "sync:dev": "node scripts/sync-directus.mjs && astro dev"
+    "validate": "node scripts/fetch-cms-data.mjs",
+    "validate:data": "node scripts/fetch-cms-data.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",

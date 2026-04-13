@@ -1,0 +1,120 @@
+---
+/**
+ * PageCTA.astro - Sección de Llamada a la Acción estandarizada
+ * 
+ * Usar al final de cada página
+ */
+interface Props {
+  title: string;
+  description?: string;
+  primaryText?: string;
+  primaryHref?: string;
+  secondaryText?: string;
+  secondaryHref?: string;
+  variant?: 'light' | 'primary' | 'dark';
+  showPhone?: boolean;
+}
+
+const { 
+  title, 
+  description,
+  primaryText = 'Solicitar Cotización',
+  primaryHref = '/cotizacion',
+  secondaryText = 'Contactar',
+  secondaryHref = '/contacto',
+  variant = 'primary',
+  showPhone = false
+} = Astro.props;
+---
+
+<section class:list={[
+  "py-16 lg:py-20 relative overflow-hidden",
+  variant === 'light' ? "bg-neutral-50" : "",
+  variant === 'primary' ? "bg-primary-600 text-white" : "",
+  variant === 'dark' ? "bg-neutral-900 text-white" : ""
+]}>
+  {/* Background decorative */}
+  <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
+  
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-3xl mx-auto text-center">
+      {/* Icono de certificación si es primary */}
+      {variant === 'primary' && (
+        <div class="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          <span>Certificación OS-10 y Ley 21.659</span>
+        </div>
+      )}
+      
+      <h2 class:list={[
+        "font-bold mb-4",
+        variant === 'light' ? "text-2xl lg:text-3xl text-neutral-900" : "text-3xl lg:text-4xl text-white"
+      ]}>
+        {title}
+      </h2>
+      
+      {description && (
+        <p class:list={[
+          "mb-8 max-w-2xl mx-auto",
+          variant === 'light' ? "text-neutral-600 text-lg" : "text-white/90 text-lg"
+        ]}>
+          {description}
+        </p>
+      )}
+      
+      {/* Botones */}
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+        <a 
+          href={primaryHref}
+          class:list={[
+            "px-8 py-4 rounded-lg font-semibold transition-colors",
+            variant === 'light' 
+              ? "bg-primary-600 text-white hover:bg-primary-700" 
+              : "bg-white text-primary-600 hover:bg-neutral-100"
+          ]}
+        >
+          {primaryText}
+        </a>
+        
+        <a 
+          href={secondaryHref}
+          class:list={[
+            "px-8 py-4 rounded-lg font-semibold transition-colors border-2",
+            variant === 'light'
+              ? "border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white"
+              : "border-white text-white hover:bg-white/10"
+          ]}
+        >
+          {secondaryText}
+        </a>
+      </div>
+      
+      {/* Teléfono */}
+      {showPhone && (
+        <div class="mt-6">
+          <a 
+            href="tel:+56930000010" 
+            class:list={[
+              "inline-flex items-center gap-2 font-medium",
+              variant === 'light' ? "text-primary-600" : "text-white/90"
+            ]}
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            +56 9 3000 0010
+          </a>
+          <span class:list={[
+            "ml-4 text-sm",
+            variant === 'light' ? "text-neutral-500" : "text-white/60"
+          ]}>
+            o llama directamente
+          </span>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
