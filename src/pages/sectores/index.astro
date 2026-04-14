@@ -8,6 +8,17 @@ import { readFileSync, existsSync, readdirSync } from 'fs';
 
 const CMS_DIR = 'src/data/cms';
 
+// Mapeo de imágenes por sector
+const SECTOR_IMAGES: Record<string, string> = {
+  'comercial': '/images/s4-thumbnail.webp',
+  'industrial': '/images/sector-industrial.webp',
+  'residencial': '/images/sector-residencial.webp',
+  'salud': '/images/nosotros_seccion.webp',
+  'educacion': '/images/hero-home.webp',
+  'eventos': '/images/s4-thumbnail.webp',
+  'construccion': '/images/sector-industrial.webp',
+};
+
 // Load all sectors from local JSON files
 const sectorFiles = readdirSync(CMS_DIR)
   .filter(f => f.startsWith('sector-') && f.endsWith('.json'))
@@ -21,10 +32,11 @@ const sectors = sectorFiles.map(slug => {
       slug,
       name: data.sections?.hero?.heading || slug.charAt(0).toUpperCase() + slug.slice(1),
       description: data.sections?.hero?.subheading || '',
-      sections: data.sections || {}
+      sections: data.sections || {},
+      image: SECTOR_IMAGES[slug] || '/images/s4-thumbnail.webp'
     };
   }
-  return { slug, name: slug, description: '', sections: {} };
+  return { slug, name: slug, description: '', sections: {}, image: '/images/s4-thumbnail.webp' };
 });
 ---
 
@@ -32,13 +44,51 @@ const sectors = sectorFiles.map(slug => {
   title="Sectores | GuardMan Chile" 
   description="Soluciones de seguridad adaptadas a cada sector: comercial, industrial, residencial, salud, educación y más."
 >
-  <!-- Hero -->
-  <section class="bg-primary-600 text-white py-16 lg:py-20">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Seguridad por Sector</h1>
-      <p class="text-xl text-white/90 max-w-2xl mx-auto">
-        Soluciones de seguridad adaptadas a las necesidades específicas de cada industria y sector en Santiago
-      </p>
+  <!-- Hero Mejorado -->
+  <section class="relative bg-primary-600 text-white overflow-hidden">
+    <div class="absolute inset-0">
+      <img 
+        src="/images/hero-home.webp" 
+        alt="GuardMan Chile - Seguridad por Sector" 
+        class="w-full h-full object-cover opacity-30"
+        width="1920"
+        height="1080"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-primary-800/95 to-primary-600/80"></div>
+    </div>
+    <div class="container mx-auto px-4 py-16 lg:py-20 relative z-10">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-4">Seguridad por Sector</h1>
+        <p class="text-xl text-white/90 mb-6">
+          Soluciones de seguridad adaptadas a las necesidades específicas de cada industria y sector en Santiago. Más de 8 años protegiendo empresas de todos los tamaños.
+        </p>
+        <div class="flex flex-wrap gap-6 text-white/90">
+          <div>
+            <div class="text-2xl font-bold">200+</div>
+            <div class="text-sm text-white/70">Empresas protegidas</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold">14</div>
+            <div class="text-sm text-white/70">Comunas cobertura</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold">8+</div>
+            <div class="text-sm text-white/70">Años experiencia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Text -->
+  <section class="py-12 bg-neutral-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-lg text-neutral-700">
+          Cada sector tiene desafíos únicos de seguridad. En GuardMan Chile diseñamos soluciones personalizadas que se adaptan a las características de tu industria, desde retail y restaurantes hasta minería y construcción.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -55,21 +105,24 @@ const sectors = sectorFiles.map(slug => {
               class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1"
             >
               <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="text-center p-6">
-                    <h2 class="text-xl font-bold text-primary-700 mb-2">{hero.heading || sector.name}</h2>
-                  </div>
+                <img 
+                  src={sector.image}
+                  alt={hero.heading || sector.name}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-primary-800/70 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h2 class="text-lg font-bold text-white">{hero.heading || sector.name}</h2>
                 </div>
-                <div class="absolute inset-0 bg-gradient-to-t from-primary-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
               <div class="p-6">
-                <h2 class="text-lg font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors">
-                  {hero.heading || sector.name}
-                </h2>
-                <p class="text-neutral-600 text-sm line-clamp-3">
-                  {hero.subheading || sector.description || ''}
+                <p class="text-neutral-600 text-sm line-clamp-3 mb-4">
+                  {hero.subheading || sector.description || 'Protección especializada para ' + sector.name.toLowerCase()}
                 </p>
-                <div class="mt-4 flex items-center text-primary-600 font-medium text-sm">
+                <div class="flex items-center text-primary-600 font-medium text-sm">
                   Conocer más
                   <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -83,18 +136,54 @@ const sectors = sectorFiles.map(slug => {
     </div>
   </section>
 
+  <!-- Sectores Populares -->
+  <section class="py-16 lg:py-24 bg-neutral-900 text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl lg:text-3xl font-bold text-center mb-12">Los sectores más demandados</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-xl mb-2">Industrial</h3>
+          <p class="text-white/70 text-sm">Fábricas, bodegas y centros logísticos</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-xl mb-2">Comercial</h3>
+          <p class="text-white/70 text-sm">Tiendas, oficinas y centros comerciales</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-xl mb-2">Construcción</h3>
+          <p class="text-white/70 text-sm">Obras y proyectos en desarrollo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
-  <section class="py-12 bg-neutral-100">
+  <section class="py-12 bg-primary-600 text-white">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-2xl font-bold text-neutral-900 mb-4">¿No encuentras tu sector?</h2>
-      <p class="text-neutral-600 mb-6">
+      <h2 class="text-2xl lg:text-3xl font-bold mb-4">¿No encuentras tu sector?</h2>
+      <p class="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
         Contáctanos y diseñamos una solución a medida para tu industria.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/cotizacion" class="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+        <a href="/cotizacion" class="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
           Solicitar Cotización
         </a>
-        <a href="/contacto" class="inline-block border-2 border-primary-600 text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors">
+        <a href="/contacto" class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
           Llamar ahora
         </a>
       </div>
