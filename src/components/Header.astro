@@ -1,15 +1,31 @@
 ---
-import { getServices, getLocations, getSiteConfig } from '../data/directus';
+import { getServicesList, getLocationsList } from '../data/cms';
+import { readdirSync, existsSync, readFileSync } from 'fs';
 
-// Get data from CMS (synchronous - data is pre-loaded at build time)
-const services = getServices();
-const locations = getLocations();
-const config = getSiteConfig();
+// Get data from CMS
+const services = getServicesList();
+const locations = getLocationsList();
 
-// Build site config for template
+// Load sectors from CMS JSON files
+const sectorFiles = readdirSync('src/data/cms')
+  .filter(f => f.startsWith('sector-') && f.endsWith('.json'));
+
+const sectors = sectorFiles.map(f => {
+  const data = JSON.parse(readFileSync(`src/data/cms/${f}`, 'utf-8'));
+  return {
+    slug: data.sectorSlug || f.replace('sector-', '').replace('.json', ''),
+    name: data.sections?.hero?.heading || '',
+  };
+}).filter(s => s.name);
+
+// Load config for phone
+const configData = existsSync('src/data/cms/config.json') 
+  ? JSON.parse(readFileSync('src/data/cms/config.json', 'utf-8'))
+  : {};
+
 const siteConfig = {
-  phone: config?.phone || '+56930000010',
-  phoneTel: (config?.phone || '+56930000010').replace(/[^0-9+]/g, ''),
+  phone: configData.phone || '+56930000010',
+  phoneTel: (configData.phone || '+56930000010').replace(/[^0-9+]/g, ''),
 };
 ---
 
@@ -76,24 +92,11 @@ const siteConfig = {
           </button>
           <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
             <div class="p-2">
-              <a href="/sectores/hoteleria" class="flex items-center gap-3 px-4 py-2 text-neutral-700 hover:text-primary-600 hover:bg-neutral-50 rounded-md">
-                Hotelería
-              </a>
-              <a href="/sectores/corporativo" class="flex items-center gap-3 px-4 py-2 text-neutral-700 hover:text-primary-600 hover:bg-neutral-50 rounded-md">
-                Corporativo
-              </a>
-              <a href="/sectores/residencial" class="flex items-center gap-3 px-4 py-2 text-neutral-700 hover:text-primary-600 hover:bg-neutral-50 rounded-md">
-                Residencial
-              </a>
-              <a href="/sectores/industrial" class="flex items-center gap-3 px-4 py-2 text-neutral-700 hover:text-primary-600 hover:bg-neutral-50 rounded-md">
-                Industrial
-              </a>
-              <a href="/sectores/automotriz" class="flex items-center gap-3 px-4 py-2 text-neutral-700 hover:text-primary-600 hover:bg-neutral-50 rounded-md">
-                Automotriz
-              </a>
-              <a href="/sectores/diplomatico" class="flex items-center gap-3 px-4 py-2 text-neutral-700 hover:text-primary-600 hover:bg-neutral-50 rounded-md">
-                Diplomático
-              </a>
+              {sectors.map(sector => (
+                <a href={`/sectores/${sector.slug}`} class="flex items-center gap-3 px-4 py-2 text-neutral-700 hover:text-primary-600 hover:bg-neutral-50 rounded-md">
+                  {sector.name}
+                </a>
+              ))}
             </div>
           </div>
         </div>
