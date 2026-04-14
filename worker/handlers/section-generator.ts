@@ -698,3 +698,348 @@ export const LOCATION_SECTION_ORDER = [
   SECTION_KEYS.FAQS,
   SECTION_KEYS.CTA
 ];
+
+// ============================================
+// CONTENT POR SECCIÓN - SECTORES
+// ============================================
+
+const SECTOR_COMERCIAL = {
+  hero: {
+    heading: 'Seguridad Comercial',
+    subheading: 'Protección especializada para tiendas, oficinas, centros comerciales y empresas en Santiago.',
+    cta_text: 'Cotiza Seguridad Comercial'
+  },
+  intro: {
+    paragraphs: [
+      'En GuardMan Chile entendemos que cada negocio tiene necesidades únicas de seguridad. Nuestro servicio de seguridad comercial está diseñado para proteger tu local, oficina o empresa las 24 horas.',
+      'Contamos con guardias capacitados en prevención de robos, control de accesos y manejo de situaciones de emergencia. La presencia de nuestros profesionales genera un ambiente seguro tanto para tus empleados como para tus clientes.',
+      'Somos distribuidores oficiales de Ajax Systems, lo que nos permite integrar tecnología de vanguardia con nuestro servicio de vigilancia humana.'
+    ]
+  },
+  features: [
+    'Guardias certificados OS-10 para protección continua',
+    'Control de accesos y registro de visitantes',
+    'Rondas preventivas programadas',
+    'Monitoreo 24/7 desde nuestro centro de control',
+    'Integración con sistemas Ajax de alarmas',
+    'Reportes diarios de novedades y métricas'
+  ],
+  issues: [
+    'Robos y hurtos en locales comerciales',
+    'Acceso no autorizado a áreas restringidas',
+    'Vandalismo y deterioro de infraestructura',
+    'Necesidad de controlar flujos de clientes y empleados'
+  ],
+  stats: [
+    { label: 'Clientes comerciales', value: '150+' },
+    { label: 'Locales protegidos', value: '200+' },
+    { label: 'Años experiencia', value: '8+' }
+  ],
+  faqs: [
+    { question: '¿Cuánto cuesta la seguridad comercial?', answer: 'El precio depende del tamaño del local, horarios y nivel de riesgo. Ofrecemos planes desde $450.000 mensuales para comercios pequeños.' },
+    { question: '¿Pueden instalar cámaras y alarmas?', answer: 'Sí, somos distribuidores oficiales de Ajax Systems y ofrecemos instalación profesional de sistemas de alarma y videovigilancia.' },
+    { question: '¿Los guardias manejan sistemas de alarma?', answer: 'Sí, nuestros guardias están capacitados para monitorear y responder ante alarmas, coordinar con Carabineros si es necesario.' }
+  ],
+  cta: {
+    title: 'Protege tu negocio hoy',
+    description: 'Solicita una cotización personalizada para tu comercio.',
+    button: 'Solicitar Cotización'
+  }
+};
+
+const SECTOR_INDUSTRIAL = {
+  hero: {
+    heading: 'Seguridad Industrial',
+    subheading: 'Vigilancia para fábricas, bodegas, centros logísticos y zonas industriales.',
+    cta_text: 'Cotiza Seguridad Industrial'
+  },
+  intro: {
+    paragraphs: [
+      'La seguridad industrial requiere un enfoque especializado debido a los riesgos particulares de cada tipo de instalación. En GuardMan Chile protegemos fábricas, bodegas y centros logísticos en toda la Región Metropolitana.',
+      'Nuestros guardias industriales están entrenados en prevención de accidentes, control vehicular y manejo de materiales peligrosos. Trabajamos bajo estrictos protocolos de seguridad ocupacional.',
+      'Ofrecemos soluciones integrales que incluyen vigilancia perimetral, control de acceso de contratistas y monitoreo de puntos críticos las 24 horas.'
+    ]
+  },
+  features: [
+    'Vigilancia perimetral con rondas programadas',
+    'Control de acceso vehicular y peatónal',
+    'Registro de contratistas con photo ID',
+    'Monitoreo de zonas de carga y descarga',
+    'Control de horario de turnos',
+    'Reporte fotográfico de novedades'
+  ],
+  issues: [
+    'Robos de materiales y equipos de alto valor',
+    'Acceso no autorizado de personas ajenas',
+    'Falta de control sobre contratistas y visitas',
+    'Seguridad perimetral en zonas extensas'
+  ],
+  stats: [
+    { label: 'Plantas industriales', value: '40+' },
+    { label: 'Bodegas aseguradas', value: '60+' },
+    { label: 'Horas sin incidentes', value: '500,000+' }
+  ],
+  faqs: [
+    { question: '¿Cubren turnos nocturnos?', answer: 'Sí, ofrecemos cobertura 24/7 con guardias especializados en cada turno, incluyendo noches, fines de semana y festivos.' },
+    { question: '¿Controlan el acceso de vehículos de carga?', answer: 'Sí, nuestras garitas incluyen lectura de patentes, registro de vehículos autorizados y verificación de documentación.' },
+    { question: '¿Pueden integrarse con mis cámaras existentes?', answer: 'Sí, monitoreamos sus cámaras desde nuestro centro de operaciones y coordinamos con los guardias en terreno.' }
+  ],
+  cta: {
+    title: 'Protege tu operación industrial',
+    description: 'Contáctanos para una evaluación de seguridad.',
+    button: 'Solicitar Cotización'
+  }
+};
+
+const SECTOR_RESIDENCIAL = {
+  hero: {
+    heading: 'Seguridad Residencial',
+    subheading: 'Protección para condominos, edificios y residencias particulares en Santiago.',
+    cta_text: 'Cotiza Seguridad Residencial'
+  },
+  intro: {
+    paragraphs: [
+      'La seguridad residencial busca proteger a las familias y sus hogares. En GuardMan Chile ofrecemos soluciones adaptadas para condominos, edificios y residences particulares en toda la Región Metropolitana.',
+      'Nuestros guardias están entrenados para gestionar accesos, interactuar cordialmente con residentes y visitantes, y actuar con profesionalismo ante cualquier situación.',
+      'Contamos con tecnología de respaldo que incluye centros de monitoreo propio y sistemas de comunicación directa para coordinación inmediata.'
+    ]
+  },
+  features: [
+    'Control de accesos y registro de visitas',
+    'Rondas preventivas en áreas comunes',
+    'Vigilancia en horarios programados',
+    'Coordinación con sistemas de cámaras existentes',
+    'Monitoreo 24/7 desde centro propio',
+    'Comunicación directa con residentes'
+  ],
+  issues: [
+    'Robos en viviendas y vehículos en estacionamiento',
+    'Acceso no autorizado a condominos',
+    'Vandalismo en áreas comunes',
+    'Falta de iluminación en zonas comunes'
+  ],
+  stats: [
+    { label: 'Residencias protegidas', value: '300+' },
+    { label: 'Condominos atendidos', value: '150+' },
+    { label: 'Años experiencia', value: '8+' }
+  ],
+  faqs: [
+    { question: '¿Pueden cuidar edificios con piscina y áreas comunes?', answer: 'Sí, nuestros guardias vigilan todas las áreas comunes incluyendo piscina, gimnasio, salón multiuso y estacionamientos.' },
+    { question: '¿Los guardias hablan inglés?', answer: 'Disponemos de guardias bilingües para condominos y edificios con residentes extranjeros.' },
+    { question: '¿Cómo報告o novedades?', answer: 'Recibir un reporte diario por email con fotografías de novedades, conteo de visitas y estado general de la seguridad.' }
+  ],
+  cta: {
+    title: 'Protege tu hogar y familia',
+    description: 'Solicita una evaluación de seguridad para tu residence.',
+    button: 'Solicitar Cotización'
+  }
+};
+
+const SECTOR_SALUD = {
+  hero: {
+    heading: 'Seguridad para Clínicas y Hospitales',
+    subheading: 'Protección especializada para centros de salud, clínicas y hospitales.',
+    cta_text: 'Cotiza Seguridad Hospitalaria'
+  },
+  intro: {
+    paragraphs: [
+      'Los centros de salud requieren protocolos de seguridad especializados que protejan pacientes, personal médico y visitantes. En GuardMan Chile tenemos experiencia protegiendo clínicas y hospitales en Santiago.',
+      'Nuestros guardias están entrenados en manejo de situaciones críticas, coordinación con equipos de emergencia y respeto por la privacidad de los pacientes.',
+      'Implementamos sistemas de control de accesos específicos para áreas de urgencia, UCI y farmacias.'
+    ]
+  },
+  features: [
+    'Control de accesos en áreas restringidas',
+    'Vigilancia en urgencias y salas de espera',
+    'Coordinación con equipo de seguridad del hospital',
+    'Manejo de situaciones de violencia',
+    'Control de estacionamiento y ambulancias',
+    'Reporte de incidentes especializado'
+  ],
+  issues: [
+    'Situaciones de violencia o aggression',
+    'Acceso no autorizado a áreas críticas',
+    'Control de visitantes en horarios especiales',
+    'Protección de farmacias y stock de medicamentos'
+  ],
+  stats: [
+    { label: 'Centros de salud', value: '15+' },
+    { label: 'Guardias capacitados', value: '80+' },
+    { label: 'Años experiencia', value: '6+' }
+  ],
+  faqs: [
+    { question: '¿Los guardias tienen capacitación médica?', answer: 'No brindamos atención médica, pero están entrenados en primeros auxilios y coordinación con equipos de emergencia.' },
+    { question: '¿Cómo manejan situaciones de violencia?', answer: 'Tenemos protocolos específicos para desescalada, contención verbal y comunicación con Carabineros.' },
+    { question: '¿Cubren las 24 horas?', answer: 'Sí, ofrecemos cobertura continua con personal especializado en cada turno.' }
+  ],
+  cta: {
+    title: 'Protege tu centro de salud',
+    description: 'Solicita una cotización para tu clínica u hospital.',
+    button: 'Solicitar Cotización'
+  }
+};
+
+const SECTOR_EDUCACION = {
+  hero: {
+    heading: 'Seguridad para Colegios y Universidades',
+    subheading: 'Protección para instituciones educativas, colegios y universidades.',
+    cta_text: 'Cotiza Seguridad Educativa'
+  },
+  intro: {
+    paragraphs: [
+      'La seguridad en instituciones educativas debe equilibrar la protección con un ambiente acogedor para estudiantes. En GuardMan Chile protegemos colegios y universidades en Santiago.',
+      'Nuestros guardias están entrenados en manejo de jóvenes, coordinación con équipes directivos y protocolos de emergencia escolar.',
+      'Implementamos sistemas de control de accesos para padres, visitantes y contratistas.'
+    ]
+  },
+  features: [
+    'Control de accesos en ingreso principal',
+    'Vigilancia en perímetros y zonas deportivas',
+    'Coordinación con equipo directivo',
+    'Manejo de emergencias escolares',
+    'Control de visitantes y padres',
+    'Monitoreo de estacionamiento'
+  ],
+  issues: [
+    'Acceso no autorizado de personas externas',
+    'Protección de estudiantes en recreation',
+    'Control de vehículos en horarios de entrada/salida',
+    'Vandalismo en instalaciones'
+  ],
+  stats: [
+    { label: 'Instituciones educativas', value: '25+' },
+    { label: 'Estudiantes protegidos', value: '15,000+' },
+    { label: 'Años experiencia', value: '5+' }
+  ],
+  faqs: [
+    { question: '¿Los guardias están entrenados para trabajar con niños?', answer: 'Sí, reciben capacitación específica en manejo de menores y coordinación con equipos educativos.' },
+    { question: '¿Cómo manejan emergencias escolares?', answer: 'Tenemos protocolos coordinados con SAMU, Carabineros y equipo directivo para evacuación y containment.' },
+    { question: '¿Cubren actividades extraescolares?', answer: 'Sí, ofrecemos cobertura adicional para eventos, fiestas escolares y actividades deportivas.' }
+  ],
+  cta: {
+    title: 'Protege tu institución educativa',
+    description: 'Solicita una cotización para tu colegio o universidad.',
+    button: 'Solicitar Cotización'
+  }
+};
+
+const SECTOR_EVENTOS = {
+  hero: {
+    heading: 'Seguridad para Eventos Masivos',
+    subheading: 'Protección profesional para conciertos, festivales y eventos corporativos.',
+    cta_text: 'Cotiza Seguridad para Eventos'
+  },
+  intro: {
+    paragraphs: [
+      'La seguridad en eventos masivos requiere planificación meticulosa y coordinación con autoridades. En GuardMan Chile protegemos eventos de todo tipo y tamaño en Santiago.',
+      'Contamos con coordinadores certificados que diseñan el plan de seguridad según el tipo de evento, cantidad esperada de asistentes y nivel de riesgo.',
+      'Todos nuestros guardias para eventos tienen certificación OS-10 y capacitación en control masivo.'
+    ]
+  },
+  features: [
+    'Coordinadores de seguridad certificados',
+    'Guardias OS-10 para control masivo',
+    'Arcos detectores de metales',
+    'Postes de control de accesos',
+    'Comunicación radial y coordinación con Carabineros',
+    'Servicio de primeros auxilios'
+  ],
+  issues: [
+    'Control de multitudes en ingresos',
+    'Prevención de入口 no autorizadas',
+    'Gestión de emergencias durante el evento',
+    'Protección de artistas y speakers VIP'
+  ],
+  stats: [
+    { label: 'Eventos protegidos', value: '300+' },
+    { label: 'Asistentes asegurados', value: '50,000+' },
+    { label: 'Eventos masivos', value: '50+' }
+  ],
+  faqs: [
+    { question: '¿Con cuánta anticipación debo contratar?', answer: 'Recomendamos mínimo 2 semanas para eventos pequeños y 1 mes para eventos masivos.' },
+    { question: '¿Incluyen equipo de comunicaciones?', answer: 'Sí, radios de comunicación y coordinación radial están incluidos.' },
+    { question: '¿Cuántos guardias necesito?', answer: 'La regla general es 1 guardia cada 100 personas para eventos sociales, 1 cada 50 para corporativos.' }
+  ],
+  cta: {
+    title: 'Protege tu próximo evento',
+    description: 'Solicita una cotización para tu evento.',
+    button: 'Solicitar Cotización'
+  }
+};
+
+const SECTOR_CONSTRUCCION = {
+  hero: {
+    heading: 'Seguridad para Construcción',
+    subheading: 'Protección para obras, proyectos de construcción y demolición.',
+    cta_text: 'Cotiza Seguridad para Obras'
+  },
+  intro: {
+    paragraphs: [
+      'Las obras de construcción son targets frecuentes de robo debido al alto valor de materiales y equipos. En GuardMan Chile ofrecemos soluciones de seguridad especializadas para el sector construcción.',
+      'Ofrecemos vigilancia perimetral, control de ingreso de materiales y monitoreo las 24 horas. También tenemos Guard Pod, nuestra unidad móvil de vigilancia autónoma.',
+      'Según la Cámara Chilena de la Construcción, el 40% de las obras sufren algún tipo de robo. Nuestras soluciones reducen drásticamente ese riesgo.'
+    ]
+  },
+  features: [
+    'Vigilancia perimetral con rondas',
+    'Control de ingreso de materiales',
+    'Guard Pod - unidad móvil de vigilancia',
+    'Monitoreo 24/7 con verificación visual',
+    'Coordinación con empresas de vigilancia',
+    'Reporte fotográfico diario'
+  ],
+  issues: [
+    'Robo de materiales de construcción',
+    'Vandalismo de herramientas y equipos',
+    'Acceso no autorizado de terceros',
+    'Seguridad en zonas sin infraestructura'
+  ],
+  stats: [
+    { label: 'Obras protegidas', value: '50+' },
+    { label: 'Materiales asegurados', value: 'USD 10M+' },
+    { label: 'Robos prevenidos', value: '100+' }
+  ],
+  faqs: [
+    { question: '¿Qué es el Guard Pod para obras?', answer: 'Es nuestra unidad móvil de vigilancia autónoma con paneles solares, cámaras PTZ y comunicación celular. Se despliega en menos de 2 horas.' },
+    { question: '¿Cómo controlan el ingreso de materiales?', answer: 'Nuestras garitas registran cada vehículo, verifican guía de despacho y fotografían la carga.' },
+    { question: '¿Hay contrato mínimo?', answer: 'No, ofrecemos flexibilidad por semana o mes según la duración de la obra.' }
+  ],
+  cta: {
+    title: 'Protege tu obra de construcción',
+    description: 'Solicita una cotización para tu proyecto.',
+    button: 'Solicitar Cotización'
+  }
+};
+
+// ============================================
+// MAPA DE SECTORES A SECCIONES
+// ============================================
+export const SECTOR_SECTIONS_MAP: Record<string, any> = {
+  'comercial': SECTOR_COMERCIAL,
+  'industrial': SECTOR_INDUSTRIAL,
+  'residencial': SECTOR_RESIDENCIAL,
+  'salud': SECTOR_SALUD,
+  'educacion': SECTOR_EDUCACION,
+  'eventos': SECTOR_EVENTOS,
+  'construccion': SECTOR_CONSTRUCCION
+};
+
+// ============================================
+// GENERADORES DE SECTORES
+// ============================================
+
+export function generateSectorSections(sectorSlug: string, sectorName: string): any {
+  const sections = SECTOR_SECTIONS_MAP[sectorSlug];
+  if (!sections) {
+    return {
+      hero: { heading: sectorName, subheading: `Seguridad profesional para ${sectorName.toLowerCase()}`, cta_text: `Cotiza ${sectorName}` },
+      intro: { paragraphs: [`Servicio de seguridad especializado para el sector ${sectorName.toLowerCase()}.`, 'Personal certificado y disponible 24/7.', 'Contáctenos para más información.'] },
+      features: [],
+      issues: [],
+      stats: [],
+      faqs: [],
+      cta: { title: `Cotiza ${sectorName}`, description: 'Solicite su cotización', button: 'Cotizar' }
+    };
+  }
+  return sections;
+}

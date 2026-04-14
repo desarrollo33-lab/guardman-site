@@ -107,3 +107,41 @@ CREATE INDEX IF NOT EXISTS idx_location_sections_slug ON location_sections(locat
 CREATE INDEX IF NOT EXISTS idx_combo_sections_combo ON combo_sections(service_slug, location_slug);
 CREATE INDEX IF NOT EXISTS idx_keywords_service ON keywords(service_slug);
 CREATE INDEX IF NOT EXISTS idx_keywords_easy ON keywords(is_easy_win) WHERE is_easy_win = 1;
+-- ============================================
+-- SECCIONES DE SECTORES
+-- ============================================
+CREATE TABLE IF NOT EXISTS sectors (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    slug TEXT UNIQUE NOT NULL,
+    name TEXT NOT NULL,
+    description TEXT,
+    status TEXT DEFAULT 'draft',
+    sort INTEGER DEFAULT 0,
+    created_at TEXT DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS sector_sections (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    sector_slug TEXT NOT NULL,
+    section_key TEXT NOT NULL,
+    section_order INTEGER DEFAULT 0,
+    heading TEXT,
+    subheading TEXT,
+    content_json TEXT,
+    status TEXT DEFAULT 'draft',
+    word_count INTEGER DEFAULT 0,
+    generated_at TEXT DEFAULT (datetime('now')),
+    UNIQUE(sector_slug, section_key)
+);
+
+-- Seed sectors
+INSERT OR IGNORE INTO sectors (slug, name, description, sort) VALUES
+('comercial', 'Comercial', 'Seguridad para locales comerciales, tiendas y oficinas', 1),
+('industrial', 'Industrial', 'Seguridad para fábricas, bodegas y centros logísticos', 2),
+('residencial', 'Residencial', 'Seguridad para condominos, edificios y residencias', 3),
+('salud', 'Salud', 'Seguridad para clínicas y hospitales', 4),
+('educacion', 'Educación', 'Seguridad para colegios y universidades', 5),
+('eventos', 'Eventos', 'Seguridad para eventos masivos', 6),
+('construccion', 'Construcción', 'Seguridad para obras de construcción', 7);
+
+CREATE INDEX IF NOT EXISTS idx_sector_sections_slug ON sector_sections(sector_slug);

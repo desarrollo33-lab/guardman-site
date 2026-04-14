@@ -1,103 +1,83 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getSectors, getServices, optimizeImageUrl } from '../../data/directus';
-import { mdToHtml } from '../../lib/markdown';
-import PageCTA from '../../components/design/PageCTA.astro';
-import SidebarCTA from '../../components/design/SidebarCTA.astro';
+/**
+ * Sector Page - Usa contenido del CMS (secciones)
+ */
 
-export function getStaticPaths() {
-  const sectors = getSectors();
-  return sectors.map(sector => ({
-    params: { slug: sector.slug },
-    props: { sector },
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSectorSections, getServicesList } from '../../data/cms';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+
+export async function getStaticPaths() {
+  // Static paths - will be loaded from CMS
+  const sectorSlugs = ['comercial', 'industrial', 'residencial', 'salud', 'educacion', 'eventos', 'construccion'];
+  
+  return sectorSlugs.map(slug => ({
+    params: { slug },
+    props: { sectorSlug: slug }
   }));
 }
 
-const { sector } = Astro.props;
-const allServices = getServices();
-const siteUrl = 'https://guardman.cl';
+const { slug } = Astro.params;
+
+// Load from local JSON (exported from D1)
+import { readFileSync, existsSync } from 'fs';
+
+const sectorFile = `src/data/cms/sector-${slug}.json`;
+let sectionData = { sections: {} };
+
+if (existsSync(sectorFile)) {
+  sectionData = JSON.parse(readFileSync(sectorFile, 'utf-8'));
+}
+
+const sections = sectionData.sections || {};
+
+// Get services for cross-linking
+const services = getServicesList();
+const relevantServices = services.slice(0, 4);
+
+// Hero data
+const hero = sections?.hero || { 
+  heading: slug.charAt(0).toUpperCase() + slug.slice(1),
+  subheading: 'Contenido del sector' 
+};
 
 // Breadcrumb
 const breadcrumbItems = [
-  { name: 'Inicio', url: `${siteUrl}/` },
-  { name: 'Sectores', url: `${siteUrl}/sectores` },
-  { name: sector.name, url: `${siteUrl}/sectores/${sector.slug}` }
+  { name: 'Inicio', url: 'https://guardman.cl' },
+  { name: 'Sectores', url: 'https://guardman.cl/sectores' },
+  { name: hero.heading, url: `https://guardman.cl/sectores/${slug}` }
 ];
-
-// Map services to sectors
-const sectorServiceMap: Record<string, string[]> = {
-  hoteleria: ['guardias-de-seguridad', 'monitoreo-24-7', 'cctv-videovigilancia', 'control-de-accesos', 'seguridad-eventos'],
-  corporativo: ['guardias-de-seguridad', 'cctv-videovigilancia', 'control-de-accesos', 'monitoreo-24-7', 'auditoria-seguridad'],
-  residencial: ['guardias-de-seguridad', 'cctv-videovigilancia', 'control-de-accesos', 'monitoreo-24-7'],
-  industrial: ['seguridad-industrial', 'guard-pod', 'cctv-videovigilancia', 'control-de-accesos', 'monitoreo-24-7'],
-  automotriz: ['guardias-de-seguridad', 'cctv-videovigilancia', 'control-de-accesos', 'monitoreo-24-7'],
-  diplomatico: ['escoltas-privados', 'guardias-de-seguridad', 'cctv-videovigilancia', 'control-de-accesos', 'monitoreo-24-7'],
-};
-
-const relatedServices = allServices.filter(s => 
-  sectorServiceMap[sector.slug]?.includes(s.slug) || false
-);
 ---
 
 <BaseLayout 
-  title={sector.meta_title} 
-  description={sector.meta_description} 
-  image={optimizeImageUrl(`/images/${sector.image}`)}
+  title={`${hero.heading} | GuardMan Chile`}
+  description={hero.subheading}
 >
-  <!-- Schema markup -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "ItemPage",
-    "name": sector.hero_title,
-    "description": sector.description,
-    "url": `${siteUrl}/sectores/${sector.slug}`,
-    "publisher": { "@id": `${siteUrl}/#organization` },
-    "mainEntity": {
-      "@type": "Service",
-      "name": `Seguridad para ${sector.name}`,
-      "description": sector.description,
-      "provider": { "@id": `${siteUrl}/#organization` }
-    }
-  })} />
-  
+  <SchemaBreadcrumb items={breadcrumbItems} />
+
   <!-- Breadcrumb Visual -->
   <div class="bg-neutral-100 py-3">
     <div class="container mx-auto px-4">
-      <nav class="flex text-sm text-neutral-600" aria-label="Breadcrumb">
+      <nav class="flex text-sm text-neutral-600">
         <a href="/" class="hover:text-primary-600">Inicio</a>
-        <span class="mx-2" aria-hidden="true">/</span>
+        <span class="mx-2">/</span>
         <a href="/sectores" class="hover:text-primary-600">Sectores</a>
-        <span class="mx-2" aria-hidden="true">/</span>
-        <span class="text-neutral-900 font-medium">{sector.name}</span>
+        <span class="mx-2">/</span>
+        <span class="text-neutral-900 font-medium">{hero.heading}</span>
       </nav>
     </div>
   </div>
 
   <!-- Hero -->
   <section class="relative bg-primary-600 text-white py-16 lg:py-20 overflow-hidden">
-    <!-- Decorative elements -->
     <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
     
-    {sector.image && (
-      <div class="absolute inset-0">
-        <img 
-          src={optimizeImageUrl(`/images/${sector.image}`)}
-          alt={sector.name}
-          class="w-full h-full object-cover opacity-30"
-          width="1920"
-          height="1080"
-          loading="eager"
-          fetchpriority="high"
-        />
-      </div>
-    )}
-    
-    <div class="absolute inset-0 bg-gradient-to-r from-primary-800/90 to-primary-600/70" aria-hidden="true"></div>
-    
     <div class="container mx-auto px-4 relative z-10">
-      <h1 class="text-3xl lg:text-5xl font-bold mb-4">{sector.hero_title}</h1>
-      <p class="text-xl text-white/90 max-w-3xl">{sector.hero_subtitle}</p>
+      <h1 class="text-3xl lg:text-5xl font-bold mb-4">{hero.heading}</h1>
+      {hero.subheading && (
+        <p class="text-xl text-white/90 max-w-3xl">{hero.subheading}</p>
+      )}
     </div>
   </section>
 
@@ -107,86 +87,170 @@ const relatedServices = allServices.filter(s =>
       <div class="grid lg:grid-cols-3 gap-12">
         <!-- Column 1-2: Content -->
         <div class="lg:col-span-2">
-          <!-- Description -->
-          <div class="mb-12">
-            <h2 class="text-2xl font-bold text-neutral-900 mb-6">Sobre seguridad en {sector.name.toLowerCase()}</h2>
-            <div class="prose prose-neutral max-w-none text-lg text-neutral-600">
-              <Fragment set:html={mdToHtml(sector.description)} />
+          
+          <!-- Intro -->
+          {sections?.intro?.paragraphs && (
+            <div class="mb-12 prose prose-neutral max-w-none">
+              {sections.intro.paragraphs.map((p: string) => (
+                <p>{p}</p>
+              ))}
             </div>
-          </div>
+          )}
 
-          <!-- Related Services -->
-          {relatedServices.length > 0 && (
-            <div class="mb-8">
-              <h2 class="text-2xl font-bold text-neutral-900 mb-6">Servicios para {sector.name.toLowerCase()}</h2>
-              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {relatedServices.map(service => (
-                  <a 
-                    href={`/servicios/${service.slug}`} 
-                    class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all"
-                  >
-                    <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
-                      {service.image ? (
-                        <img 
-                          src={optimizeImageUrl(`/images/${service.image}`)}
-                          alt={service.name}
-                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          width="800"
-                          height="450"
-                          loading="lazy"
-                        />
-                      ) : (
-                        <div class="w-full h-full flex items-center justify-center">
-                          <svg class="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                          </svg>
-                        </div>
-                      )}
-                      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary-800/60 to-transparent p-4">
-                        <h3 class="font-semibold text-white">{service.name}</h3>
-                      </div>
+          <!-- Features -->
+          {sections?.features && (
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-neutral-900 mb-6">
+                {sections.features.heading || 'Qué incluye el servicio'}
+              </h2>
+              <div class="grid sm:grid-cols-2 gap-4">
+                {Object.entries(sections.features)
+                  .filter(([key]) => !isNaN(Number(key)))
+                  .map(([_, feature]) => (
+                    <div class="flex items-start gap-3 bg-neutral-50 rounded-lg p-4">
+                      <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span class="text-neutral-700">{feature}</span>
                     </div>
-                    <div class="p-4">
-                      <p class="text-neutral-600 text-sm line-clamp-2">{service.short_description}</p>
-                      <div class="mt-3 flex items-center text-primary-600 font-medium text-sm group-hover:gap-2 transition-all">
-                        <span>Ver detalles</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </a>
-                ))}
+                  ))
+                }
               </div>
             </div>
           )}
+
+          <!-- Issues -->
+          {sections?.issues && (
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-neutral-900 mb-6">
+                {sections.issues.heading || 'Problemas que solucionamos'}
+              </h2>
+              <div class="grid sm:grid-cols-2 gap-4">
+                {Object.entries(sections.issues)
+                  .filter(([key]) => !isNaN(Number(key)))
+                  .map(([_, issue]) => (
+                    <div class="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-lg p-4">
+                      <svg class="w-5 h-5 text-amber-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                      </svg>
+                      <span class="text-neutral-700">{issue}</span>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          )}
+
+          <!-- Stats -->
+          {sections?.stats && (
+            <div class="mb-12 bg-primary-700 text-white rounded-xl p-8">
+              <h2 class="text-2xl font-bold text-center mb-8">
+                {sections.stats.heading || 'Números que nos respaldan'}
+              </h2>
+              <div class="grid grid-cols-3 gap-8 text-center">
+                {Object.entries(sections.stats)
+                  .filter(([key]) => !isNaN(Number(key)))
+                  .map(([_, stat]: [string, any]) => (
+                    <div>
+                      <div class="text-4xl lg:text-5xl font-bold mb-2">{stat.value}</div>
+                      <div class="text-white/80">{stat.label}</div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          )}
+
+          <!-- FAQs -->
+          {sections?.faqs && (
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-neutral-900 mb-6">
+                {sections.faqs.heading || 'Preguntas Frecuentes'}
+              </h2>
+              <div class="space-y-4">
+                {Object.entries(sections.faqs)
+                  .filter(([key]) => !isNaN(Number(key)))
+                  .map(([_, faq]: [string, any]) => (
+                    <details class="group bg-neutral-50 rounded-lg">
+                      <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-neutral-900">
+                        {faq.question}
+                        <svg class="w-5 h-5 text-neutral-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                      </summary>
+                      <div class="px-4 pb-4 text-neutral-600">
+                        {faq.answer}
+                      </div>
+                    </details>
+                  ))
+                }
+              </div>
+            </div>
+          )}
+
+          <!-- Related Services -->
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold text-neutral-900 mb-6">
+              Servicios relacionados
+            </h2>
+            <div class="grid sm:grid-cols-2 gap-4">
+              {relevantServices.map((service: any) => (
+                <a 
+                  href={`/servicios/${service.slug}`}
+                  class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-4 transition-all group"
+                >
+                  <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-2">
+                    {service.name}
+                  </h3>
+                  <p class="text-sm text-neutral-600 line-clamp-2">
+                    {service.short_description || ''}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
 
         <!-- Column 3: Sidebar -->
         <div class="lg:col-span-1">
-          <SidebarCTA title={`Cotizar para ${sector.name}`} />
-          
-          <!-- Other sectors -->
-          <div class="mt-8 pt-8 border-t border-neutral-200">
-            <h3 class="font-semibold text-neutral-900 mb-4 flex items-center gap-2">
-              <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-              </svg>
-              Otros sectores
+          <div class="bg-neutral-50 rounded-xl p-6 sticky top-8">
+            <h3 class="text-xl font-bold text-neutral-900 mb-4">
+              {sections?.cta?.heading || hero.heading}
             </h3>
-            <div class="space-y-3">
-              {allServices.filter(s => {
-                const sectorSlugs = Object.keys(sectorServiceMap);
-                return !sectorSlugs.includes(s.slug) || s.slug !== sector.slug;
-              }).slice(0, 5).map(() => null)}
-              <a href="/sectores" class="flex items-center justify-between bg-neutral-50 hover:bg-primary-50 rounded-lg p-3 transition-colors group">
-                <span class="text-neutral-700 group-hover:text-primary-600 font-medium">
-                  Ver todos los sectores
-                </span>
-                <svg class="w-4 h-4 text-neutral-400 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
+            
+            {sections?.cta?.description && (
+              <p class="text-neutral-600 mb-6">
+                {sections.cta.description}
+              </p>
+            )}
+            
+            <a 
+              href="/cotizacion" 
+              class="block w-full bg-primary-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+            >
+              {sections?.cta?.button || 'Solicitar Cotización'}
+            </a>
+            
+            <a 
+              href="/contacto" 
+              class="block w-full border border-primary-600 text-primary-600 text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors mt-3"
+            >
+              Llamar ahora
+            </a>
+
+            <div class="mt-6 pt-6 border-t border-neutral-200">
+              <h4 class="text-sm font-semibold text-neutral-700 mb-3">Otros sectores</h4>
+              {['comercial', 'industrial', 'residencial', 'salud', 'educacion', 'eventos', 'construccion']
+                .filter(s => s !== slug)
+                .map(s => (
+                  <a 
+                    href={`/sectores/${s}`}
+                    class="block py-2 text-sm text-neutral-600 hover:text-primary-600 border-b border-neutral-100 last:border-0 capitalize"
+                  >
+                    {s}
+                  </a>
+                ))
+              }
             </div>
           </div>
         </div>
@@ -194,15 +258,21 @@ const relatedServices = allServices.filter(s =>
     </div>
   </section>
 
-  <!-- CTA -->
-  <PageCTA 
-    title={`Protege tu ${sector.name.toLowerCase()} con GuardMan`}
-    description="Contactanos para una evaluación personalizada de seguridad."
-    primaryText="Solicitar Cotización"
-    primaryHref="/cotizacion"
-    secondaryText="Hablar con un experto"
-    secondaryHref="/contacto"
-    variant="primary"
-    showPhone={true}
-  />
+  <!-- CTA Final -->
+  {sections?.cta && (
+    <section class="py-12 bg-primary-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl lg:text-3xl font-bold mb-4">{sections.cta.heading}</h2>
+        <p class="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
+          {sections.cta.description}
+        </p>
+        <a 
+          href="/cotizacion" 
+          class="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors"
+        >
+          {sections.cta.button || 'Solicitar Cotización'}
+        </a>
+      </div>
+    </section>
+  )}
 </BaseLayout>

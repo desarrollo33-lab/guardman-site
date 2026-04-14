@@ -6,9 +6,11 @@ import type { Env } from '../index';
 import { 
   generateServiceSectionsHandler,
   generateLocationSectionsHandler,
+  generateSectorSectionsHandler,
   generateComboSectionsHandler,
   getServiceSections,
   getLocationSections,
+  getSectorSections,
   getComboSections
 } from './section-handler';
 
@@ -51,6 +53,20 @@ export async function handleSections(
     return Response.json({ locationSlug, sections });
   }
 
+  // POST /api/sections/sector/:slug - Generate sector sections
+  if (path.match(/^\/api\/sections\/sector\/([^/]+)$/) && request.method === 'POST') {
+    const sectorSlug = path.split('/')[4];
+    const result = await generateSectorSectionsHandler(sectorSlug, env);
+    return Response.json(result);
+  }
+
+  // GET /api/sections/sector/:slug - Get sector sections
+  if (path.match(/^\/api\/sections\/sector\/([^/]+)$/) && request.method === 'GET') {
+    const sectorSlug = path.split('/')[4];
+    const sections = await getSectorSections(sectorSlug, env);
+    return Response.json({ sectorSlug, sections });
+  }
+
   // POST /api/sections/combo - Generate combo sections
   if (path === '/api/sections/combo' && request.method === 'POST') {
     const { serviceSlug, locationSlug } = await request.json();
@@ -76,9 +92,9 @@ export async function handleSections(
 
   // POST /api/sections/batch - Generate all sections
   if (path === '/api/sections/batch' && request.method === 'POST') {
-    const { type } = await request.json(); // 'services', 'locations', 'combos', 'all'
+    const { type } = await request.json();
     
-    const results: any = { services: 0, locations: 0, combos: 0 };
+    const results: any = { services: 0, locations: 0, sectors: 0, combos: 0 };
     const errors: string[] = [];
 
     // Generate all services
@@ -101,6 +117,16 @@ export async function handleSections(
       }
     }
 
+    // Generate all sectors
+    if (!type || type === 'all' || type === 'sectors') {
+      const sectors = await env.DB.prepare(`SELECT slug FROM sectors`).all() as any;
+      for (const s of sectors.results || []) {
+        const r = await generateSectorSectionsHandler(s.slug, env);
+        if (r.success) results.sectors++;
+        else errors.push(`${s.slug}: ${r.errors.join(', ')}`);
+      }
+    }
+
     return Response.json({
       success: errors.length === 0,
       generated: results,
@@ -115,6 +141,8 @@ export async function handleSections(
       'GET /api/sections/service/:slug - Get service sections',
       'POST /api/sections/location/:slug - Generate location sections',
       'GET /api/sections/location/:slug - Get location sections',
+      'POST /api/sections/sector/:slug - Generate sector sections',
+      'GET /api/sections/sector/:slug - Get sector sections',
       'POST /api/sections/combo - Generate combo sections',
       'GET /api/sections/combo?service=X&location=Y - Get combo sections',
       'POST /api/sections/batch - Generate all sections'
