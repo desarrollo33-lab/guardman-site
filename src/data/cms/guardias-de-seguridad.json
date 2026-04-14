@@ -1,1 +1,112 @@
-{"serviceSlug":"guardias-de-seguridad","sections":{"hero":{"heading":"Guardias de Seguridad","subheading":"Protección profesional con guardias certificados OS-10 y respaldo de centro de monitoreo propio las 24 horas.","cta_text":"Cotiza Guardias de Seguridad"},"intro":{"heading":"Introducción","subheading":"","paragraphs":["En GuardMan Chile somos la empresa líder en guardias de seguridad en Santiago. Con más de 8 años de trayectoria y más de 500 guardias certificados OS-10, ofrecemos protección profesional para empresas, condominos y residencias.","Nuestro enfoque se centra en la prevención activa. Trabajamos para que los incidentes de seguridad nunca ocurran, no para reaccionar después. La presencia visible y disuasoria de nuestros guardias uniformados genera un ambiente de tranquilidad.","Cada guardia cuenta con el respaldo de nuestro centro de monitoreo propio, operativo 24/7. Esta sinergia entre presencia física y tecnología eleva sustancialmente la capacidad preventiva del servicio."]},"features":{"0":"Personal con certificación OS-10 vigente y registro actualizado","1":"Disponibles 24 horas, 7 días a la semana, 365 días al año","2":"Uniformados con identificación oficial visible","3":"Capacitados en primeros auxilios y manejo de emergencias","4":"Control de accesos y registro detallado de visitas","5":"Reporte diario de novedades y métricas de seguridad","heading":"Qué incluye el servicio","subheading":""},"process":{"0":{"step":"Evaluación","description":"Visitamos su propiedad para identificar puntos críticos"},"1":{"step":"Propuesta","description":"Diseñamos un esquema personalizado con guardias y tecnología"},"2":{"step":"Implementación","description":"Desplegamos al personal capacitado y configuramos protocolos"},"3":{"step":"Seguimiento","description":"Supervisión continua y reportes periódicos"},"heading":"Nuestro proceso","subheading":""},"issues":{"0":"Accesos no controlados que permiten entrada de personas no autorizadas","1":"Robos y hurtos en empresas, bodegas y residencias","2":"Falta de supervisión en áreas comunes y perimetrales","3":"Incidentes que escalan por falta de respuesta inmediata","heading":"Problemas que solucionamos","subheading":""},"stats":{"0":{"label":"Guardias activos","value":"500+"},"1":{"label":"Clientes atendidos","value":"200+"},"2":{"label":"Años experiencia","value":"8+"},"3":{"label":"Comunas cobertura","value":"14"},"heading":"Números que nos respaldan","subheading":""},"faqs":{"0":{"question":"¿Qué documentos deben presentar los guardias de seguridad de GuardMan?","answer":"Todos nuestros guardias cuentan con certificado de antecedentes vigente, curso de vigilante certificado, registro en Senapred y habilitación de la autoridad competente."},"1":{"question":"¿GuardMan ofrece servicios de seguridad las 24 horas?","answer":"Sí, nuestro servicio opera las 24 horas del día, los 7 días de la semana, incluyendo feriados, con guardias de relevo que garantizan cobertura continua."},"2":{"question":"¿Los guardias tienen uniforme profesional?","answer":"Sí, todos nuestros guardias usan uniforme completo oficial de GuardMan Chile con identificación visible, lo que genera mayor confianza y efecto disuasorio."},"3":{"question":"¿Cómo se supervisan los guardias?","answer":"Cada turno cuenta con supervisor en terreno y respaldo del centro de monitoreo. Realizamos rondas sorpresa y auditorías mensuales."},"4":{"question":"¿Cubren toda la Región Metropolitana?","answer":"Sí, cubrimos las 14 comunas de nuestra zona de cobertura con tiempos de respuesta inferiores a 30 minutos."},"heading":"Preguntas Frecuentes","subheading":""},"cta":{"heading":"Contrata Guardias de Seguridad hoy","subheading":"","description":"Nuestro equipo está listo para proteger tu propiedad.","button":"Solicitar Cotización"}}}
+{
+  "slug": "guardias-de-seguridad",
+  "name": "Guardias de Seguridad",
+  "short_description": "Protección profesional con guardias certificados las 24 horas",
+  "price_range": "$$$",
+  "featured": 0,
+  "sort": 0,
+  "sections": {
+    "hero": {
+      "heading": "Guardias de Seguridad",
+      "subheading": "Protección profesional con guardias certificados OS-10 y respaldo de centro de monitoreo propio las 24 horas.",
+      "cta_text": "Cotiza Guardias de Seguridad"
+    },
+    "intro": {
+      "heading": "Introducción",
+      "subheading": "",
+      "paragraphs": [
+        "En GuardMan Chile somos la empresa líder en guardias de seguridad en Santiago. Con más de 8 años de trayectoria y más de 500 guardias certificados OS-10, ofrecemos protección profesional para empresas, condominos y residencias.",
+        "Nuestro enfoque se centra en la prevención activa. Trabajamos para que los incidentes de seguridad nunca ocurran, no para reaccionar después. La presencia visible y disuasoria de nuestros guardias uniformados genera un ambiente de tranquilidad.",
+        "Cada guardia cuenta con el respaldo de nuestro centro de monitoreo propio, operativo 24/7. Esta sinergia entre presencia física y tecnología eleva sustancialmente la capacidad preventiva del servicio."
+      ]
+    },
+    "features": {
+      "0": "Personal con certificación OS-10 vigente y registro actualizado",
+      "1": "Disponibles 24 horas, 7 días a la semana, 365 días al año",
+      "2": "Uniformados con identificación oficial visible",
+      "3": "Capacitados en primeros auxilios y manejo de emergencias",
+      "4": "Control de accesos y registro detallado de visitas",
+      "5": "Reporte diario de novedades y métricas de seguridad",
+      "heading": "Qué incluye",
+      "subheading": ""
+    },
+    "process": {
+      "0": {
+        "step": "Evaluación",
+        "description": "Visitamos su propiedad para identificar puntos críticos"
+      },
+      "1": {
+        "step": "Propuesta",
+        "description": "Diseñamos un esquema personalizado con guardias y tecnología"
+      },
+      "2": {
+        "step": "Implementación",
+        "description": "Desplegamos al personal capacitado y configuramos protocolos"
+      },
+      "3": {
+        "step": "Seguimiento",
+        "description": "Supervisión continua y reportes periódicos"
+      },
+      "heading": "Nuestro proceso",
+      "subheading": ""
+    },
+    "issues": {
+      "0": "Accesos no controlados que permiten entrada de personas no autorizadas",
+      "1": "Robos y hurtos en empresas, bodegas y residencias",
+      "2": "Falta de supervisión en áreas comunes y perimetrales",
+      "3": "Incidentes que escalan por falta de respuesta inmediata",
+      "heading": "Problemas que solucionamos",
+      "subheading": ""
+    },
+    "stats": {
+      "0": {
+        "label": "Guardias activos",
+        "value": "500+"
+      },
+      "1": {
+        "label": "Clientes atendidos",
+        "value": "200+"
+      },
+      "2": {
+        "label": "Años experiencia",
+        "value": "8+"
+      },
+      "3": {
+        "label": "Comunas cobertura",
+        "value": "14"
+      },
+      "heading": "Números que nos respaldan",
+      "subheading": ""
+    },
+    "faqs": {
+      "0": {
+        "question": "¿Qué documentos deben presentar los guardias de seguridad de GuardMan?",
+        "answer": "Todos nuestros guardias cuentan con certificado de antecedentes vigente, curso de vigilante certificado, registro en Senapred y habilitación de la autoridad competente."
+      },
+      "1": {
+        "question": "¿GuardMan ofrece servicios de seguridad las 24 horas?",
+        "answer": "Sí, nuestro servicio opera las 24 horas del día, los 7 días de la semana, incluyendo feriados, con guardias de relevo que garantizan cobertura continua."
+      },
+      "2": {
+        "question": "¿Los guardias tienen uniforme profesional?",
+        "answer": "Sí, todos nuestros guardias usan uniforme completo oficial de GuardMan Chile con identificación visible, lo que genera mayor confianza y efecto disuasorio."
+      },
+      "3": {
+        "question": "¿Cómo se supervisan los guardias?",
+        "answer": "Cada turno cuenta con supervisor en terreno y respaldo del centro de monitoreo. Realizamos rondas sorpresa y auditorías mensuales."
+      },
+      "4": {
+        "question": "¿Cubren toda la Región Metropolitana?",
+        "answer": "Sí, cubrimos las 14 comunas de nuestra zona de cobertura con tiempos de respuesta inferiores a 30 minutos."
+      },
+      "heading": "Preguntas Frecuentes",
+      "subheading": ""
+    },
+    "cta": {
+      "heading": "Contrata Guardias de Seguridad hoy",
+      "subheading": "Nuestro equipo está listo para proteger tu propiedad.",
+      "description": "Nuestro equipo está listo para proteger tu propiedad.",
+      "button": "Solicitar Cotización"
+    }
+  }
+}

@@ -13,11 +13,12 @@ export async function getStaticPaths() {
   const locations = getLocationsList();
   return locations.map((location: any) => ({
     params: { slug: location.slug },
-    props: { locationSlug: location.slug, locationName: location.name }
+    props: { slug: location.slug, name: location.name, zone: location.zone }
   }));
 }
 
-const { slug, locationName } = Astro.props as { slug: string; locationName: string };
+const { slug, name, zone } = Astro.props as { slug: string; name: string; zone: string };
+const locationName = name;
 
 // Get CMS sections
 const sections = getLocationSections(slug);
@@ -28,7 +29,7 @@ const services = getServicesList();
 const location = locations.find((l: any) => l.slug === slug) || { 
   slug, 
   name: locationName,
-  zone: 'Centro'
+  zone: zone || 'Centro'
 };
 
 // Get nearby locations in same zone
@@ -68,8 +69,8 @@ const zoneContext: Record<string, { focus: string; commonNeeds: string }> = {
   },
 };
 
-const zone = location.zone || 'Centro';
-const context = zoneContext[zone] || zoneContext['Centro'];
+const locationZone = location.zone || 'Centro';
+const context = zoneContext[locationZone] || zoneContext['Centro'];
 ---
 
 <BaseLayout 

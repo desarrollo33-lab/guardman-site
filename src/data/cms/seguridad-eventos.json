@@ -1,1 +1,107 @@
-{"serviceSlug":"seguridad-eventos","sections":{"hero":{"heading":"Seguridad para Eventos","subheading":"Protección profesional para eventos corporativos, sociales y masivos.","cta_text":"Cotiza Seguridad para Eventos"},"intro":{"heading":"Introducción","subheading":"","paragraphs":["GuardMan Chile ofrece servicio de seguridad para eventos corporativos, sociales y masivos en toda la Región Metropolitana. Contamos con personal entrenado para manejar desde reuniones íntimas hasta eventos con más de 5,000 asistentes.","La seguridad en eventos requiere planificación previa, evaluación de riesgos y coordinación con autoridades. Nuestro equipo incluye coordinadores de seguridad certificados que diseñan el plan según el tipo de evento.","Todos nuestros efectivos para eventos cuentan con certificación OS-10 vigente y han sido capacitados en manejo de multitudes, primeros auxilios y protocolos de evacuación."]},"features":{"0":"Coordinadores de seguridad certificados para planificar el evento","1":"Guardias OS-10 capacitados en control masivo","2":"Escoltas VIP discretos para invitados especiales","3":"Postes de control y arcos detectores de metales","4":"Comunicación radial y coordinación con Carabineros","5":"Servicio de primeros auxilios con botiquín completo","heading":"Qué incluye el servicio","subheading":""},"process":{"0":{"step":"Reunión inicial","description":"Entendemos el tipo de evento, cantidad esperada y nivel de riesgo"},"1":{"step":"Planificación","description":"Diseñamos el esquema de seguridad con puestos y recursos"},"2":{"step":"Coordinación","description":"Contactamos a Carabineros y otros servicios si es necesario"},"3":{"step":"Ejecución","description":"Desplegamos el personal y supervisamos durante todo el evento"},"heading":"Nuestro proceso","subheading":""},"issues":{"0":"Eventos sin control de accesos que permiten entrada de personas no autorizadas","1":"Multitudes que se descontrolan por falta de personal capacitado","2":"Robos durante eventos por falta en la seguridad perimetral","heading":"Problemas que solucionamos","subheading":""},"stats":{"0":{"label":"Eventos atendidos","value":"300+"},"1":{"label":"Asistentes protegidos","value":"50,000+"},"2":{"label":"Eventos masivos (>1000)","value":"50+"},"heading":"Números que nos respaldan","subheading":""},"faqs":{"0":{"question":"¿Con cuánta anticipación debo contratar seguridad para mi evento?","answer":"Recomendamos contactar con al menos 2 semanas de anticipación. Para eventos masivos (>1,000 personas) necesitamos 1 mes."},"1":{"question":"¿Cuántos guardias necesito para mi evento?","answer":"La cantidad depende del tipo de evento y número esperado. Por regla general: 1 guardia cada 100 personas para eventos sociales, 1 cada 50 para corporativos."},"2":{"question":"¿Incluyen arcos detectores y postes de seguridad?","answer":"Sí, ofrecemos el equipamiento necesario como parte del servicio. Incluye arcos, postes, detectores de metales portátiles y equipos de comunicación."},"3":{"question":"¿Pueden coordinar con Carabineros?","answer":"Sí, gestionamos los permisos necesarios ante Carabineros y coordinamos la presencia de efectivo público si el evento lo requiere."},"4":{"question":"¿Qué pasa si hay una emergencia durante el evento?","answer":"Nuestros guardias están entrenados en primeros auxilios y evacuación. Activan protocolos de emergencia y contactan a servicios profesionales inmediatamente."},"heading":"Preguntas Frecuentes","subheading":""},"cta":{"heading":"Cotiza Seguridad para Eventos","subheading":"","description":"Protección profesional para tu próximo evento.","button":"Solicitar Cotización"}}}
+{
+  "slug": "seguridad-eventos",
+  "name": "Seguridad para Eventos",
+  "short_description": "Seguridad profesional para todo tipo de eventos",
+  "price_range": "$$$$",
+  "featured": 0,
+  "sort": 0,
+  "sections": {
+    "hero": {
+      "heading": "Seguridad para Eventos",
+      "subheading": "Protección profesional para eventos corporativos, sociales y masivos.",
+      "cta_text": "Cotiza Seguridad para Eventos"
+    },
+    "intro": {
+      "heading": "Introducción",
+      "subheading": "",
+      "paragraphs": [
+        "GuardMan Chile ofrece servicio de seguridad para eventos corporativos, sociales y masivos en toda la Región Metropolitana. Contamos con personal entrenado para manejar desde reuniones íntimas hasta eventos con más de 5,000 asistentes.",
+        "La seguridad en eventos requiere planificación previa, evaluación de riesgos y coordinación con autoridades. Nuestro equipo incluye coordinadores de seguridad certificados que diseñan el plan según el tipo de evento.",
+        "Todos nuestros efectivos para eventos cuentan con certificación OS-10 vigente y han sido capacitados en manejo de multitudes, primeros auxilios y protocolos de evacuación."
+      ]
+    },
+    "features": {
+      "0": "Coordinadores de seguridad certificados para planificar el evento",
+      "1": "Guardias OS-10 capacitados en control masivo",
+      "2": "Escoltas VIP discretos para invitados especiales",
+      "3": "Postes de control y arcos detectores de metales",
+      "4": "Comunicación radial y coordinación con Carabineros",
+      "5": "Servicio de primeros auxilios con botiquín completo",
+      "heading": "Qué incluye",
+      "subheading": ""
+    },
+    "process": {
+      "0": {
+        "step": "Reunión inicial",
+        "description": "Entendemos el tipo de evento, cantidad esperada y nivel de riesgo"
+      },
+      "1": {
+        "step": "Planificación",
+        "description": "Diseñamos el esquema de seguridad con puestos y recursos"
+      },
+      "2": {
+        "step": "Coordinación",
+        "description": "Contactamos a Carabineros y otros servicios si es necesario"
+      },
+      "3": {
+        "step": "Ejecución",
+        "description": "Desplegamos el personal y supervisamos durante todo el evento"
+      },
+      "heading": "Nuestro proceso",
+      "subheading": ""
+    },
+    "issues": {
+      "0": "Eventos sin control de accesos que permiten entrada de personas no autorizadas",
+      "1": "Multitudes que se descontrolan por falta de personal capacitado",
+      "2": "Robos durante eventos por falta en la seguridad perimetral",
+      "heading": "Problemas que solucionamos",
+      "subheading": ""
+    },
+    "stats": {
+      "0": {
+        "label": "Eventos atendidos",
+        "value": "300+"
+      },
+      "1": {
+        "label": "Asistentes protegidos",
+        "value": "50,000+"
+      },
+      "2": {
+        "label": "Eventos masivos (>1000)",
+        "value": "50+"
+      },
+      "heading": "Números que nos respaldan",
+      "subheading": ""
+    },
+    "faqs": {
+      "0": {
+        "question": "¿Con cuánta anticipación debo contratar seguridad para mi evento?",
+        "answer": "Recomendamos contactar con al menos 2 semanas de anticipación. Para eventos masivos (>1,000 personas) necesitamos 1 mes."
+      },
+      "1": {
+        "question": "¿Cuántos guardias necesito para mi evento?",
+        "answer": "La cantidad depende del tipo de evento y número esperado. Por regla general: 1 guardia cada 100 personas para eventos sociales, 1 cada 50 para corporativos."
+      },
+      "2": {
+        "question": "¿Incluyen arcos detectores y postes de seguridad?",
+        "answer": "Sí, ofrecemos el equipamiento necesario como parte del servicio. Incluye arcos, postes, detectores de metales portátiles y equipos de comunicación."
+      },
+      "3": {
+        "question": "¿Pueden coordinar con Carabineros?",
+        "answer": "Sí, gestionamos los permisos necesarios ante Carabineros y coordinamos la presencia de efectivo público si el evento lo requiere."
+      },
+      "4": {
+        "question": "¿Qué pasa si hay una emergencia durante el evento?",
+        "answer": "Nuestros guardias están entrenados en primeros auxilios y evacuación. Activan protocolos de emergencia y contactan a servicios profesionales inmediatamente."
+      },
+      "heading": "Preguntas Frecuentes",
+      "subheading": ""
+    },
+    "cta": {
+      "heading": "Cotiza Seguridad para Eventos",
+      "subheading": "Protección profesional para tu próximo evento.",
+      "description": "Protección profesional para tu próximo evento.",
+      "button": "Solicitar Cotización"
+    }
+  }
+}

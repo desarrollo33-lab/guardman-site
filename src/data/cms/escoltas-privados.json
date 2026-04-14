@@ -1,1 +1,107 @@
-{"serviceSlug":"escoltas-privados","sections":{"hero":{"heading":"Escoltas Privados","subheading":"Protección personal para ejecutivos y personalidades con guardias OS-10.","cta_text":"Cotiza Escoltas"},"intro":{"heading":"Introducción","subheading":"","paragraphs":["GuardMan Chile ofrece servicio de escoltas privados para ejecutivos, familias y personas que requieren protección personal. Nuestros escoltas son ex miembros de fuerzas armadas y Carabineros, entrenados en protección ejecutiva.","El servicio de escoltas está diseñado para personas que enfrentan riesgos específicos: ejecutivos de empresas, celebridades, testigos protegidos, víctimas de amenazas o familias que necesitan protección cerca de menores.","Cada escolta cuenta con curso de protección ejecutiva, primeros auxilios avanzados, manejo defensivo de vehículos y protocolos de respuesta ante emergencias."]},"features":{"0":"Ex袈s y Carabineros con experiencia en protección","1":"Capacitación en protección ejecutiva y manejo defensivo","2":"Vehículos equipados para protección móvil","3":"Comunicación directa con centro de monitoreo 24/7","4":"Evaluación de riesgos antes de iniciar el servicio","5":"Protocolos de respuesta ante emergencias personalizados","heading":"Qué incluye el servicio","subheading":""},"process":{"0":{"step":"Evaluación de riesgo","description":"Analizamos la situación y nivel de amenaza"},"1":{"step":"Selección","description":"Elegimos al escolta con el perfil adecuado"},"2":{"step":"Briefing","description":"Capacitamos al cliente sobre protocolos y comunicación"},"3":{"step":"Despliegue","description":"Iniciamos el servicio con cobertura acordada"},"heading":"Nuestro proceso","subheading":""},"issues":{"0":"Amenazas específicas que requieren protección personal","1":"Eventos públicos donde la seguridad personal es prioritaria","2":"Viajes a zonas de riesgo que requieren cobertura especializada","heading":"Problemas que solucionamos","subheading":""},"stats":{"0":{"label":"Escoltas disponibles","value":"50+"},"1":{"label":"Clientes en protección","value":"25+"},"2":{"label":"Años experiencia promedio","value":"12+"},"heading":"Números que nos respaldan","subheading":""},"faqs":{"0":{"question":"¿Los escoltas están armados?","answer":"No, nuestros escoltas operan sin armas de fuego, siguiendo la normativa chilena. Su protección se basa en prevención, disuasión y respuesta defensiva no letal."},"1":{"question":"¿Puedo contratar escoltas solo para eventos específicos?","answer":"Sí, ofrecemos servicio por evento para reuniones, presentaciones, eventos corporativos y cualquier situación que requiera protección temporal."},"2":{"question":"¿Los escoltas manejan vehículos?","answer":"Sí, todos nuestros escoltas tienen licencia de conducir avanzada y están entrenados en manejo defensivo para proteger al protegido."},"3":{"question":"¿Qué pasa si hay una emergencia?","answer":"El escolta tiene comunicación directa con nuestro centro de monitoreo y conoce los protocolos de evacuación y contacto con Carabineros."},"4":{"question":"¿Cómo inicio el servicio de escoltas?","answer":"Llámenos al +56 9 3000 0010 para una evaluación confidencial. El servicio puede iniciarse en menos de 24 horas."},"heading":"Preguntas Frecuentes","subheading":""},"cta":{"heading":"Cotiza Escoltas Privados","subheading":"","description":"Protección personal con profesionales certificados.","button":"Solicitar Cotización"}}}
+{
+  "slug": "escoltas-privados",
+  "name": "Escoltas Privados",
+  "short_description": "Protección personalizada para executives",
+  "price_range": "$$$$",
+  "featured": 0,
+  "sort": 0,
+  "sections": {
+    "hero": {
+      "heading": "Escoltas Privados",
+      "subheading": "Protección personal para ejecutivos y personalidades con guardias OS-10.",
+      "cta_text": "Cotiza Escoltas"
+    },
+    "intro": {
+      "heading": "Introducción",
+      "subheading": "",
+      "paragraphs": [
+        "GuardMan Chile ofrece servicio de escoltas privados para ejecutivos, familias y personas que requieren protección personal. Nuestros escoltas son ex miembros de fuerzas armadas y Carabineros, entrenados en protección ejecutiva.",
+        "El servicio de escoltas está diseñado para personas que enfrentan riesgos específicos: ejecutivos de empresas, celebridades, testigos protegidos, víctimas de amenazas o familias que necesitan protección cerca de menores.",
+        "Cada escolta cuenta con curso de protección ejecutiva, primeros auxilios avanzados, manejo defensivo de vehículos y protocolos de respuesta ante emergencias."
+      ]
+    },
+    "features": {
+      "0": "Ex袈s y Carabineros con experiencia en protección",
+      "1": "Capacitación en protección ejecutiva y manejo defensivo",
+      "2": "Vehículos equipados para protección móvil",
+      "3": "Comunicación directa con centro de monitoreo 24/7",
+      "4": "Evaluación de riesgos antes de iniciar el servicio",
+      "5": "Protocolos de respuesta ante emergencias personalizados",
+      "heading": "Qué incluye",
+      "subheading": ""
+    },
+    "process": {
+      "0": {
+        "step": "Evaluación de riesgo",
+        "description": "Analizamos la situación y nivel de amenaza"
+      },
+      "1": {
+        "step": "Selección",
+        "description": "Elegimos al escolta con el perfil adecuado"
+      },
+      "2": {
+        "step": "Briefing",
+        "description": "Capacitamos al cliente sobre protocolos y comunicación"
+      },
+      "3": {
+        "step": "Despliegue",
+        "description": "Iniciamos el servicio con cobertura acordada"
+      },
+      "heading": "Nuestro proceso",
+      "subheading": ""
+    },
+    "issues": {
+      "0": "Amenazas específicas que requieren protección personal",
+      "1": "Eventos públicos donde la seguridad personal es prioritaria",
+      "2": "Viajes a zonas de riesgo que requieren cobertura especializada",
+      "heading": "Problemas que solucionamos",
+      "subheading": ""
+    },
+    "stats": {
+      "0": {
+        "label": "Escoltas disponibles",
+        "value": "50+"
+      },
+      "1": {
+        "label": "Clientes en protección",
+        "value": "25+"
+      },
+      "2": {
+        "label": "Años experiencia promedio",
+        "value": "12+"
+      },
+      "heading": "Números que nos respaldan",
+      "subheading": ""
+    },
+    "faqs": {
+      "0": {
+        "question": "¿Los escoltas están armados?",
+        "answer": "No, nuestros escoltas operan sin armas de fuego, siguiendo la normativa chilena. Su protección se basa en prevención, disuasión y respuesta defensiva no letal."
+      },
+      "1": {
+        "question": "¿Puedo contratar escoltas solo para eventos específicos?",
+        "answer": "Sí, ofrecemos servicio por evento para reuniones, presentaciones, eventos corporativos y cualquier situación que requiera protección temporal."
+      },
+      "2": {
+        "question": "¿Los escoltas manejan vehículos?",
+        "answer": "Sí, todos nuestros escoltas tienen licencia de conducir avanzada y están entrenados en manejo defensivo para proteger al protegido."
+      },
+      "3": {
+        "question": "¿Qué pasa si hay una emergencia?",
+        "answer": "El escolta tiene comunicación directa con nuestro centro de monitoreo y conoce los protocolos de evacuación y contacto con Carabineros."
+      },
+      "4": {
+        "question": "¿Cómo inicio el servicio de escoltas?",
+        "answer": "Llámenos al +56 9 3000 0010 para una evaluación confidencial. El servicio puede iniciarse en menos de 24 horas."
+      },
+      "heading": "Preguntas Frecuentes",
+      "subheading": ""
+    },
+    "cta": {
+      "heading": "Cotiza Escoltas Privados",
+      "subheading": "Protección personal con profesionales certificados.",
+      "description": "Protección personal con profesionales certificados.",
+      "button": "Solicitar Cotización"
+    }
+  }
+}

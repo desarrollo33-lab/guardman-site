@@ -30,10 +30,10 @@ async function exportAllSections() {
   console.log('🚀 Exporting D1 sections to JSON files...\n');
 
   // Get all services
-  const services = await queryD1('SELECT slug, name, short_description, price_range, image, featured, sort FROM services ORDER BY sort');
+  const services = await queryD1('SELECT slug, name, short_description, price_range, featured, sort FROM services ORDER BY sort');
   
   // Get all locations  
-  const locations = await queryD1('SELECT slug, name, zone FROM locations ORDER BY sort');
+  const locations = await queryD1('SELECT slug, name, zone FROM locations ORDER BY id');
 
   // Export service sections
   const servicesDir = 'src/data/cms';

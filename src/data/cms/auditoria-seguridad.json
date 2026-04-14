@@ -1,1 +1,107 @@
-{"serviceSlug":"auditoria-seguridad","sections":{"hero":{"heading":"Auditoría de Seguridad","subheading":"Evaluación profesional de vulnerabilidades y plan de mejoras.","cta_text":"Cotiza Auditoría"},"intro":{"heading":"Introducción","subheading":"","paragraphs":["GuardMan Chile ofrece servicios de auditoría y consultoría de seguridad para empresas que quieren evaluar sus vulnerabilidades y diseñar mejoras. Nuestros auditores tienen más de 10 años de experiencia en seguridad privada y pública.","La auditoría de seguridad es el primer paso para proteger su empresa. Analizamos puntos débiles, evaluamos la competencia de su personal actual y recomendamos mejoras basadas en estándares internacionales.","Nuestro servicio incluye evaluación física, evaluación documental y evaluación tecnológica. Al finalizar, entregamos un informe detallado con hallazgos, nivel de riesgo y plan de mejoras priorizadas."]},"features":{"0":"Evaluación de seguridad física: accesos, cerraduras, iluminación","1":"Revisión de sistemas de alarma y videovigilancia","2":"Auditoría de personal de seguridad y sus certificaciones","3":"Análisis de vulnerabilidades y nivel de riesgo","4":"Plan de mejoras priorizadas por urgencia","5":"Informe ejecutivo con recomendaciones","heading":"Qué incluye el servicio","subheading":""},"process":{"0":{"step":"Levantamiento","description":"Visitamos su empresa y documentamos el estado actual de seguridad"},"1":{"step":"Análisis","description":"Evaluamos cada punto con checklists internacionales"},"2":{"step":"Informe","description":"Entregamos documento detallado con hallazgos y recomendaciones"},"3":{"step":"Seguimiento","description":"Opcional: acompañamos la implementación de mejoras"},"heading":"Nuestro proceso","subheading":""},"issues":{"0":"Seguridad improvisada sin evaluación profesional","1":"Sistemas de seguridad sin mantenimiento ni actualización","2":"Personal de seguridad sin certificaciones ni entrenamiento","heading":"Problemas que solucionamos","subheading":""},"stats":{"0":{"label":"Auditorías realizadas","value":"100+"},"1":{"label":"Empresas evaluadas","value":"80+"},"2":{"label":"Vulnerabilidades detectadas","value":"500+"},"heading":"Números que nos respaldan","subheading":""},"faqs":{"0":{"question":"¿Cuánto cuesta una auditoría de seguridad?","answer":"El valor depende del tamaño de la empresa y alcance de la auditoría. Para empresas pequeñas (hasta 500m²) el valor parte desde $350.000. Solicite cotización."},"1":{"question":"¿Cuánto tiempo toma la auditoría?","answer":"Para empresas medianas, la auditoría toma entre 2 y 5 días hábiles de trabajo en terreno, más 1 semana para elaborar el informe."},"2":{"question":"¿La auditoría incluye pruebas técnicas?","answer":"Sí, probamos los sistemas de alarma, cámaras y control de accesos para verificar que funcionen correctamente."},"3":{"question":"¿El informe es confidencial?","answer":"Sí, el informe es propiedad del cliente y no compartimos información con terceros. Guardamos confidencialidad absoluta."},"4":{"question":"¿Pueden implementar las recomendaciones ustedes mismos?","answer":"Sí, ofrecemos servicio de implementación de mejoras después de la auditoría, pero el cliente tiene total libertad de contratar a otros proveedores."},"heading":"Preguntas Frecuentes","subheading":""},"cta":{"heading":"Cotiza Auditoría de Seguridad","subheading":"","description":"Conoce las vulnerabilidades de tu empresa.","button":"Solicitar Cotización"}}}
+{
+  "slug": "auditoria-seguridad",
+  "name": "Auditoría de Seguridad",
+  "short_description": "Evaluación profesional de vulnerabilidades",
+  "price_range": "$$",
+  "featured": 0,
+  "sort": 0,
+  "sections": {
+    "hero": {
+      "heading": "Auditoría de Seguridad",
+      "subheading": "Evaluación profesional de vulnerabilidades y plan de mejoras.",
+      "cta_text": "Cotiza Auditoría"
+    },
+    "intro": {
+      "heading": "Introducción",
+      "subheading": "",
+      "paragraphs": [
+        "GuardMan Chile ofrece servicios de auditoría y consultoría de seguridad para empresas que quieren evaluar sus vulnerabilidades y diseñar mejoras. Nuestros auditores tienen más de 10 años de experiencia en seguridad privada y pública.",
+        "La auditoría de seguridad es el primer paso para proteger su empresa. Analizamos puntos débiles, evaluamos la competencia de su personal actual y recomendamos mejoras basadas en estándares internacionales.",
+        "Nuestro servicio incluye evaluación física, evaluación documental y evaluación tecnológica. Al finalizar, entregamos un informe detallado con hallazgos, nivel de riesgo y plan de mejoras priorizadas."
+      ]
+    },
+    "features": {
+      "0": "Evaluación de seguridad física: accesos, cerraduras, iluminación",
+      "1": "Revisión de sistemas de alarma y videovigilancia",
+      "2": "Auditoría de personal de seguridad y sus certificaciones",
+      "3": "Análisis de vulnerabilidades y nivel de riesgo",
+      "4": "Plan de mejoras priorizadas por urgencia",
+      "5": "Informe ejecutivo con recomendaciones",
+      "heading": "Qué incluye",
+      "subheading": ""
+    },
+    "process": {
+      "0": {
+        "step": "Levantamiento",
+        "description": "Visitamos su empresa y documentamos el estado actual de seguridad"
+      },
+      "1": {
+        "step": "Análisis",
+        "description": "Evaluamos cada punto con checklists internacionales"
+      },
+      "2": {
+        "step": "Informe",
+        "description": "Entregamos documento detallado con hallazgos y recomendaciones"
+      },
+      "3": {
+        "step": "Seguimiento",
+        "description": "Opcional: acompañamos la implementación de mejoras"
+      },
+      "heading": "Nuestro proceso",
+      "subheading": ""
+    },
+    "issues": {
+      "0": "Seguridad improvisada sin evaluación profesional",
+      "1": "Sistemas de seguridad sin mantenimiento ni actualización",
+      "2": "Personal de seguridad sin certificaciones ni entrenamiento",
+      "heading": "Problemas que solucionamos",
+      "subheading": ""
+    },
+    "stats": {
+      "0": {
+        "label": "Auditorías realizadas",
+        "value": "100+"
+      },
+      "1": {
+        "label": "Empresas evaluadas",
+        "value": "80+"
+      },
+      "2": {
+        "label": "Vulnerabilidades detectadas",
+        "value": "500+"
+      },
+      "heading": "Números que nos respaldan",
+      "subheading": ""
+    },
+    "faqs": {
+      "0": {
+        "question": "¿Cuánto cuesta una auditoría de seguridad?",
+        "answer": "El valor depende del tamaño de la empresa y alcance de la auditoría. Para empresas pequeñas (hasta 500m²) el valor parte desde $350.000. Solicite cotización."
+      },
+      "1": {
+        "question": "¿Cuánto tiempo toma la auditoría?",
+        "answer": "Para empresas medianas, la auditoría toma entre 2 y 5 días hábiles de trabajo en terreno, más 1 semana para elaborar el informe."
+      },
+      "2": {
+        "question": "¿La auditoría incluye pruebas técnicas?",
+        "answer": "Sí, probamos los sistemas de alarma, cámaras y control de accesos para verificar que funcionen correctamente."
+      },
+      "3": {
+        "question": "¿El informe es confidencial?",
+        "answer": "Sí, el informe es propiedad del cliente y no compartimos información con terceros. Guardamos confidencialidad absoluta."
+      },
+      "4": {
+        "question": "¿Pueden implementar las recomendaciones ustedes mismos?",
+        "answer": "Sí, ofrecemos servicio de implementación de mejoras después de la auditoría, pero el cliente tiene total libertad de contratar a otros proveedores."
+      },
+      "heading": "Preguntas Frecuentes",
+      "subheading": ""
+    },
+    "cta": {
+      "heading": "Cotiza Auditoría de Seguridad",
+      "subheading": "Conoce las vulnerabilidades de tu empresa.",
+      "description": "Conoce las vulnerabilidades de tu empresa.",
+      "button": "Solicitar Cotización"
+    }
+  }
+}

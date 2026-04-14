@@ -1,1 +1,74 @@
-{"locationSlug":"la-pintana","sections":{"hero":{"heading":"Seguridad Privada en La Pintana","subheading":"Empresa líder con guardias OS-10 en La Pintana. Cobertura 24/7.","cta_text":"Cotiza en La Pintana"},"intro":{"heading":"Por qué La Pintana","subheading":"","paragraphs":["La Pintana requiere atención especial en seguridad por su densidad poblacional. Ofrecemos soluciones adaptadas a las necesidades del sector sur.","La seguridad en zonas residenciales requiere un enfoque preventivo y comunitario.","Contamos con guardias que conocen las dinámicas locales y pueden establecer relaciones de confianza con los residentes."]},"coverage":{"0":"Guardias disponibles 24/7","1":"Tiempo de respuesta < 30 minutos","2":"Centro de monitoreo propio","3":"Reportes diarios de novedades","heading":"Cobertura en La Pintana","subheading":""},"issues":{"0":"Robos en viviendas y vehículos","1":"Accesos no controlados en poblaciones","2":"Falta de iluminación en ciertas calles","heading":"Seguridad en La Pintana","subheading":""},"stats":{"0":{"label":"Empresas protegidas","value":"20+"},"1":{"label":"Guardias en zona","value":"30+"},"2":{"label":"Tiempo respuesta","value":"< 30 min"},"heading":"Números en La Pintana","subheading":""},"faqs":{"0":{"question":"¿Hay disponibilidad de guardias en La Pintana?","answer":"Sí, tenemos guardias disponibles desplegados en La Pintana listos para comenzar el servicio."},"1":{"question":"¿Cuál es el tiempo de respuesta en La Pintana?","answer":"Nuestro tiempo de respuesta en La Pintana es inferior a 30 minutos desde cualquier punto de la comuna."},"2":{"question":"¿Qué tipos de propiedades protegen?","answer":"Protegemos empresas, condominos, residencias, obras y cualquier tipo de propiedad que necesite seguridad."},"heading":"Preguntas Frecuentes","subheading":""},"cta":{"heading":"Protege tu propiedad en La Pintana","subheading":"","description":"Contáctanos para una cotización personalizada.","button":"Solicitar Cotización"}}}
+{
+  "slug": "la-pintana",
+  "name": "La Pintana",
+  "zone": "Sur",
+  "sections": {
+    "hero": {
+      "heading": "Seguridad Privada en La Pintana",
+      "subheading": "Empresa líder con guardias OS-10 en La Pintana. Cobertura 24/7.",
+      "cta_text": "Cotiza en La Pintana"
+    },
+    "intro": {
+      "heading": "Introducción",
+      "subheading": "",
+      "paragraphs": [
+        "La Pintana requiere atención especial en seguridad por su densidad poblacional. Ofrecemos soluciones adaptadas a las necesidades del sector sur.",
+        "La seguridad en zonas residenciales requiere un enfoque preventivo y comunitario.",
+        "Contamos con guardias que conocen las dinámicas locales y pueden establecer relaciones de confianza con los residentes."
+      ]
+    },
+    "coverage": {
+      "0": "Guardias disponibles 24/7",
+      "1": "Tiempo de respuesta < 30 minutos",
+      "2": "Centro de monitoreo propio",
+      "3": "Reportes diarios de novedades",
+      "heading": "Cobertura en La Pintana",
+      "subheading": ""
+    },
+    "issues": {
+      "0": "Robos en viviendas y vehículos",
+      "1": "Accesos no controlados en poblaciones",
+      "2": "Falta de iluminación en ciertas calles",
+      "heading": "Problemas que solucionamos",
+      "subheading": ""
+    },
+    "stats": {
+      "0": {
+        "label": "Empresas protegidas",
+        "value": "20+"
+      },
+      "1": {
+        "label": "Guardias en zona",
+        "value": "30+"
+      },
+      "2": {
+        "label": "Tiempo respuesta",
+        "value": "< 30 min"
+      },
+      "heading": "Números que nos respaldan",
+      "subheading": ""
+    },
+    "faqs": {
+      "0": {
+        "question": "¿Hay disponibilidad de guardias en La Pintana?",
+        "answer": "Sí, tenemos guardias disponibles desplegados en La Pintana listos para comenzar el servicio."
+      },
+      "1": {
+        "question": "¿Cuál es el tiempo de respuesta en La Pintana?",
+        "answer": "Nuestro tiempo de respuesta en La Pintana es inferior a 30 minutos desde cualquier punto de la comuna."
+      },
+      "2": {
+        "question": "¿Qué tipos de propiedades protegen?",
+        "answer": "Protegemos empresas, condominos, residencias, obras y cualquier tipo de propiedad que necesite seguridad."
+      },
+      "heading": "Preguntas Frecuentes",
+      "subheading": ""
+    },
+    "cta": {
+      "heading": "Protege tu propiedad en La Pintana",
+      "subheading": "Contáctanos para una cotización personalizada.",
+      "description": "Contáctanos para una cotización personalizada.",
+      "button": "Solicitar Cotización"
+    }
+  }
+}

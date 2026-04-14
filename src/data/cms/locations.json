@@ -1,1 +1,142 @@
-{"results":[{"slug":"las-condes","name":"Las Condes","zone":"Oriente"},{"slug":"vitacura","name":"Vitacura","zone":"Oriente"},{"slug":"santiago-centro","name":"Santiago Centro","zone":"Centro"},{"slug":"huechuraba","name":"Huechuraba","zone":"Norte"},{"slug":"quilicura","name":"Quilicura","zone":"Norte"},{"slug":"lo-barnechea","name":"Lo Barnechea","zone":"Oriente"},{"slug":"la-reina","name":"La Reina","zone":"Oriente"},{"slug":"renca","name":"Renca","zone":"Poniente"},{"slug":"pudahuel","name":"Pudahuel","zone":"Poniente"},{"slug":"la-pintana","name":"La Pintana","zone":"Sur"},{"slug":"lampa","name":"Lampa","zone":"Norte"},{"slug":"conchali","name":"Conchalí","zone":"Poniente"},{"slug":"los-andes","name":"Los Andes","zone":"Valparaíso"},{"slug":"san-felipe","name":"San Felipe","zone":"Valparaíso"}],"meta":{"count":14,"duration":0.1423}}
+[
+  {
+    "slug": "las-condes",
+    "name": "Las Condes",
+    "zone": "Oriente",
+    "hero": {
+      "heading": "Seguridad Privada en Las Condes",
+      "subheading": "Empresa líder con guardias OS-10 en Las Condes. Cobertura 24/7.",
+      "cta_text": "Cotiza en Las Condes"
+    }
+  },
+  {
+    "slug": "vitacura",
+    "name": "Vitacura",
+    "zone": "Oriente",
+    "hero": {
+      "heading": "Seguridad Privada en Vitacura",
+      "subheading": "Empresa líder con guardias OS-10 en Vitacura. Cobertura 24/7.",
+      "cta_text": "Cotiza en Vitacura"
+    }
+  },
+  {
+    "slug": "santiago-centro",
+    "name": "Santiago Centro",
+    "zone": "Centro",
+    "hero": {
+      "heading": "Seguridad Privada en Santiago Centro",
+      "subheading": "Empresa líder con guardias OS-10 en Santiago Centro. Cobertura 24/7.",
+      "cta_text": "Cotiza en Santiago Centro"
+    }
+  },
+  {
+    "slug": "huechuraba",
+    "name": "Huechuraba",
+    "zone": "Norte",
+    "hero": {
+      "heading": "Seguridad Privada en Huechuraba",
+      "subheading": "Empresa líder con guardias OS-10 en Huechuraba. Cobertura 24/7.",
+      "cta_text": "Cotiza en Huechuraba"
+    }
+  },
+  {
+    "slug": "quilicura",
+    "name": "Quilicura",
+    "zone": "Norte",
+    "hero": {
+      "heading": "Seguridad Privada en Quilicura",
+      "subheading": "Empresa líder con guardias OS-10 en Quilicura. Cobertura 24/7.",
+      "cta_text": "Cotiza en Quilicura"
+    }
+  },
+  {
+    "slug": "lo-barnechea",
+    "name": "Lo Barnechea",
+    "zone": "Oriente",
+    "hero": {
+      "heading": "Seguridad Privada en Lo Barnechea",
+      "subheading": "Empresa líder con guardias OS-10 en Lo Barnechea. Cobertura 24/7.",
+      "cta_text": "Cotiza en Lo Barnechea"
+    }
+  },
+  {
+    "slug": "la-reina",
+    "name": "La Reina",
+    "zone": "Oriente",
+    "hero": {
+      "heading": "Seguridad Privada en La Reina",
+      "subheading": "Empresa líder con guardias OS-10 en La Reina. Cobertura 24/7.",
+      "cta_text": "Cotiza en La Reina"
+    }
+  },
+  {
+    "slug": "renca",
+    "name": "Renca",
+    "zone": "Poniente",
+    "hero": {
+      "heading": "Seguridad Privada en Renca",
+      "subheading": "Empresa líder con guardias OS-10 en Renca. Cobertura 24/7.",
+      "cta_text": "Cotiza en Renca"
+    }
+  },
+  {
+    "slug": "pudahuel",
+    "name": "Pudahuel",
+    "zone": "Poniente",
+    "hero": {
+      "heading": "Seguridad Privada en Pudahuel",
+      "subheading": "Empresa líder con guardias OS-10 en Pudahuel. Cobertura 24/7.",
+      "cta_text": "Cotiza en Pudahuel"
+    }
+  },
+  {
+    "slug": "la-pintana",
+    "name": "La Pintana",
+    "zone": "Sur",
+    "hero": {
+      "heading": "Seguridad Privada en La Pintana",
+      "subheading": "Empresa líder con guardias OS-10 en La Pintana. Cobertura 24/7.",
+      "cta_text": "Cotiza en La Pintana"
+    }
+  },
+  {
+    "slug": "lampa",
+    "name": "Lampa",
+    "zone": "Norte",
+    "hero": {
+      "heading": "Seguridad Privada en Lampa",
+      "subheading": "Empresa líder con guardias OS-10 en Lampa. Cobertura 24/7.",
+      "cta_text": "Cotiza en Lampa"
+    }
+  },
+  {
+    "slug": "conchali",
+    "name": "Conchalí",
+    "zone": "Poniente",
+    "hero": {
+      "heading": "Seguridad Privada en Conchalí",
+      "subheading": "Empresa líder con guardias OS-10 en Conchalí. Cobertura 24/7.",
+      "cta_text": "Cotiza en Conchalí"
+    }
+  },
+  {
+    "slug": "los-andes",
+    "name": "Los Andes",
+    "zone": "Valparaíso",
+    "hero": {
+      "heading": "Seguridad Privada en Los Andes",
+      "subheading": "Empresa líder con guardias OS-10 en Los Andes. Cobertura 24/7.",
+      "cta_text": "Cotiza en Los Andes"
+    }
+  },
+  {
+    "slug": "san-felipe",
+    "name": "San Felipe",
+    "zone": "Valparaíso",
+    "hero": {
+      "heading": "Seguridad Privada en San Felipe",
+      "subheading": "Empresa líder con guardias OS-10 en San Felipe. Cobertura 24/7.",
+      "cta_text": "Cotiza en San Felipe"
+    }
+  }
+]

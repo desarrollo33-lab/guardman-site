@@ -1,1 +1,74 @@
-{"locationSlug":"vitacura","sections":{"hero":{"heading":"Seguridad Privada en Vitacura","subheading":"Empresa líder con guardias OS-10 en Vitacura. Cobertura 24/7.","cta_text":"Cotiza en Vitacura"},"intro":{"heading":"Por qué Vitacura","subheading":"","paragraphs":["En GuardMan Chile entendemos las necesidades específicas de seguridad en Vitacura. Esta zona premium requiere soluciones de seguridad sofisticadas y discretas.","Contamos con guardias experimentados que conocen las dinámicas del sector Oriente de Santiago.","Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos para esta zona."]},"coverage":{"0":"Guardias disponibles 24/7","1":"Tiempo de respuesta < 30 minutos","2":"Centro de monitoreo propio","3":"Reportes diarios de novedades","heading":"Cobertura en Vitacura","subheading":""},"issues":{"0":"Robos a viviendas y vehículos en zonas residenciales","1":"Acceso no autorizado a condominos y edificios","2":"Necesidad de seguridad discreta pero efectiva","heading":"Seguridad en Vitacura","subheading":""},"stats":{"0":{"label":"Empresas protegidas","value":"20+"},"1":{"label":"Guardias en zona","value":"30+"},"2":{"label":"Tiempo respuesta","value":"< 30 min"},"heading":"Números en Vitacura","subheading":""},"faqs":{"0":{"question":"¿Hay disponibilidad de guardias en Vitacura?","answer":"Sí, tenemos guardias disponibles desplegados en Vitacura listos para comenzar el servicio."},"1":{"question":"¿Cuál es el tiempo de respuesta en Vitacura?","answer":"Nuestro tiempo de respuesta en Vitacura es inferior a 30 minutos desde cualquier punto de la comuna."},"2":{"question":"¿Qué tipos de propiedades protegen?","answer":"Protegemos empresas, condominos, residencias, obras y cualquier tipo de propiedad que necesite seguridad."},"heading":"Preguntas Frecuentes","subheading":""},"cta":{"heading":"Protege tu propiedad en Vitacura","subheading":"","description":"Contáctanos para una cotización personalizada.","button":"Solicitar Cotización"}}}
+{
+  "slug": "vitacura",
+  "name": "Vitacura",
+  "zone": "Oriente",
+  "sections": {
+    "hero": {
+      "heading": "Seguridad Privada en Vitacura",
+      "subheading": "Empresa líder con guardias OS-10 en Vitacura. Cobertura 24/7.",
+      "cta_text": "Cotiza en Vitacura"
+    },
+    "intro": {
+      "heading": "Introducción",
+      "subheading": "",
+      "paragraphs": [
+        "En GuardMan Chile entendemos las necesidades específicas de seguridad en Vitacura. Esta zona premium requiere soluciones de seguridad sofisticadas y discretas.",
+        "Contamos con guardias experimentados que conocen las dinámicas del sector Oriente de Santiago.",
+        "Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos para esta zona."
+      ]
+    },
+    "coverage": {
+      "0": "Guardias disponibles 24/7",
+      "1": "Tiempo de respuesta < 30 minutos",
+      "2": "Centro de monitoreo propio",
+      "3": "Reportes diarios de novedades",
+      "heading": "Cobertura en Vitacura",
+      "subheading": ""
+    },
+    "issues": {
+      "0": "Robos a viviendas y vehículos en zonas residenciales",
+      "1": "Acceso no autorizado a condominos y edificios",
+      "2": "Necesidad de seguridad discreta pero efectiva",
+      "heading": "Problemas que solucionamos",
+      "subheading": ""
+    },
+    "stats": {
+      "0": {
+        "label": "Empresas protegidas",
+        "value": "20+"
+      },
+      "1": {
+        "label": "Guardias en zona",
+        "value": "30+"
+      },
+      "2": {
+        "label": "Tiempo respuesta",
+        "value": "< 30 min"
+      },
+      "heading": "Números que nos respaldan",
+      "subheading": ""
+    },
+    "faqs": {
+      "0": {
+        "question": "¿Hay disponibilidad de guardias en Vitacura?",
+        "answer": "Sí, tenemos guardias disponibles desplegados en Vitacura listos para comenzar el servicio."
+      },
+      "1": {
+        "question": "¿Cuál es el tiempo de respuesta en Vitacura?",
+        "answer": "Nuestro tiempo de respuesta en Vitacura es inferior a 30 minutos desde cualquier punto de la comuna."
+      },
+      "2": {
+        "question": "¿Qué tipos de propiedades protegen?",
+        "answer": "Protegemos empresas, condominos, residencias, obras y cualquier tipo de propiedad que necesite seguridad."
+      },
+      "heading": "Preguntas Frecuentes",
+      "subheading": ""
+    },
+    "cta": {
+      "heading": "Protege tu propiedad en Vitacura",
+      "subheading": "Contáctanos para una cotización personalizada.",
+      "description": "Contáctanos para una cotización personalizada.",
+      "button": "Solicitar Cotización"
+    }
+  }
+}

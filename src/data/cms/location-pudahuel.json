@@ -1,1 +1,74 @@
-{"locationSlug":"pudahuel","sections":{"hero":{"heading":"Seguridad Privada en Pudahuel","subheading":"Empresa líder con guardias OS-10 en Pudahuel. Cobertura 24/7.","cta_text":"Cotiza en Pudahuel"},"intro":{"heading":"Por qué Pudahuel","subheading":"","paragraphs":["Pudahuel concentra alta actividad comercial y empresarial. Nuestros servicios de seguridad ayudan a proteger locales comerciales, oficinas y edificios de departamentos.","La alta densidad de personas y vehículos requiere protocolos específicos de seguridad.","Contamos con personal desplegado en Pudahuel con tiempos de respuesta inferiores a 30 minutos."]},"coverage":{"0":"Guardias disponibles 24/7","1":"Tiempo de respuesta < 30 minutos","2":"Centro de monitoreo propio","3":"Reportes diarios de novedades","heading":"Cobertura en Pudahuel","subheading":""},"issues":{"0":"Alto flujo de personas que dificulta el control de accesos","1":"Robos en locales comerciales y oficinas","2":"Vandalismo y deterioro de espacios públicos","heading":"Seguridad en Pudahuel","subheading":""},"stats":{"0":{"label":"Empresas protegidas","value":"20+"},"1":{"label":"Guardias en zona","value":"30+"},"2":{"label":"Tiempo respuesta","value":"< 30 min"},"heading":"Números en Pudahuel","subheading":""},"faqs":{"0":{"question":"¿Hay disponibilidad de guardias en Pudahuel?","answer":"Sí, tenemos guardias disponibles desplegados en Pudahuel listos para comenzar el servicio."},"1":{"question":"¿Cuál es el tiempo de respuesta en Pudahuel?","answer":"Nuestro tiempo de respuesta en Pudahuel es inferior a 30 minutos desde cualquier punto de la comuna."},"2":{"question":"¿Qué tipos de propiedades protegen?","answer":"Protegemos empresas, condominos, residencias, obras y cualquier tipo de propiedad que necesite seguridad."},"heading":"Preguntas Frecuentes","subheading":""},"cta":{"heading":"Protege tu propiedad en Pudahuel","subheading":"","description":"Contáctanos para una cotización personalizada.","button":"Solicitar Cotización"}}}
+{
+  "slug": "pudahuel",
+  "name": "Pudahuel",
+  "zone": "Poniente",
+  "sections": {
+    "hero": {
+      "heading": "Seguridad Privada en Pudahuel",
+      "subheading": "Empresa líder con guardias OS-10 en Pudahuel. Cobertura 24/7.",
+      "cta_text": "Cotiza en Pudahuel"
+    },
+    "intro": {
+      "heading": "Introducción",
+      "subheading": "",
+      "paragraphs": [
+        "Pudahuel concentra alta actividad comercial y empresarial. Nuestros servicios de seguridad ayudan a proteger locales comerciales, oficinas y edificios de departamentos.",
+        "La alta densidad de personas y vehículos requiere protocolos específicos de seguridad.",
+        "Contamos con personal desplegado en Pudahuel con tiempos de respuesta inferiores a 30 minutos."
+      ]
+    },
+    "coverage": {
+      "0": "Guardias disponibles 24/7",
+      "1": "Tiempo de respuesta < 30 minutos",
+      "2": "Centro de monitoreo propio",
+      "3": "Reportes diarios de novedades",
+      "heading": "Cobertura en Pudahuel",
+      "subheading": ""
+    },
+    "issues": {
+      "0": "Alto flujo de personas que dificulta el control de accesos",
+      "1": "Robos en locales comerciales y oficinas",
+      "2": "Vandalismo y deterioro de espacios públicos",
+      "heading": "Problemas que solucionamos",
+      "subheading": ""
+    },
+    "stats": {
+      "0": {
+        "label": "Empresas protegidas",
+        "value": "20+"
+      },
+      "1": {
+        "label": "Guardias en zona",
+        "value": "30+"
+      },
+      "2": {
+        "label": "Tiempo respuesta",
+        "value": "< 30 min"
+      },
+      "heading": "Números que nos respaldan",
+      "subheading": ""
+    },
+    "faqs": {
+      "0": {
+        "question": "¿Hay disponibilidad de guardias en Pudahuel?",
+        "answer": "Sí, tenemos guardias disponibles desplegados en Pudahuel listos para comenzar el servicio."
+      },
+      "1": {
+        "question": "¿Cuál es el tiempo de respuesta en Pudahuel?",
+        "answer": "Nuestro tiempo de respuesta en Pudahuel es inferior a 30 minutos desde cualquier punto de la comuna."
+      },
+      "2": {
+        "question": "¿Qué tipos de propiedades protegen?",
+        "answer": "Protegemos empresas, condominos, residencias, obras y cualquier tipo de propiedad que necesite seguridad."
+      },
+      "heading": "Preguntas Frecuentes",
+      "subheading": ""
+    },
+    "cta": {
+      "heading": "Protege tu propiedad en Pudahuel",
+      "subheading": "Contáctanos para una cotización personalizada.",
+      "description": "Contáctanos para una cotización personalizada.",
+      "button": "Solicitar Cotización"
+    }
+  }
+}

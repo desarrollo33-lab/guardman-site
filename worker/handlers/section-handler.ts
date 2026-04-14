@@ -70,7 +70,7 @@ export async function generateServiceSectionsHandler(
       if (!sectionData) continue;
 
       try {
-        const { heading, subheading, contentJson, wordCount } = parseSection(sectionKey, sectionData, serviceName);
+        const { heading, subheading, contentJson, wordCount } = parseSection(sectionKey, sectionData, service.name);
 
         await env.DB.prepare(`
           INSERT OR REPLACE INTO service_sections 

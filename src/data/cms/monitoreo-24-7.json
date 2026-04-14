@@ -1,1 +1,107 @@
-{"serviceSlug":"monitoreo-24-7","sections":{"hero":{"heading":"Monitoreo 24/7","subheading":"Centro de monitoreo propio con operadores capacitados las 24 horas.","cta_text":"Cotiza Monitoreo"},"intro":{"heading":"Introducción","subheading":"","paragraphs":["GuardMan Chile cuenta con centro de monitoreo propio operativo las 24 horas, los 7 días de la semana. Más de 40 operadores trabajan en turnos para vigilar su propiedad y responder ante cualquier incidente en tiempo real.","Nuestro centro de monitoreo recibe señales de sensores de movimiento, alarmas, cámaras y botones de pánico. Cuando se detecta una anomalía, nuestros operadores verifican visualmente y coordinan la respuesta apropiada.","La tecnología de nuestro centro incluye videowall con más de 100 cámaras en pantalla, software de gestión de eventos desarrollado internamente, y conexiones redundantes con proveedores de internet y energía."]},"features":{"0":"Centro de monitoreo propio con más de 40 operadores","1":"Videowall con monitoreo en tiempo real de cámaras","2":"Respuesta ante emergencias en menos de 3 minutos","3":"Verificación visual de alarmas antes de contactar carabineros","4":"Notificaciones instantáneas vía SMS, email y app","5":"Respaldo eléctrico y de conectividad garantizado","heading":"Qué incluye el servicio","subheading":""},"process":{"0":{"step":"Conexión","description":"Instalamos el equipo de comunicación entre su sistema y nuestro centro"},"1":{"step":"Configuración","description":"Programamos zonas, horarios y contactos de notificación"},"2":{"step":"Prueba","description":"Realizamos pruebas de comunicación y respuesta"},"3":{"step":"Monitoreo","description":"Iniciamos la vigilancia 24/7 con operadores asignados"},"heading":"Nuestro proceso","subheading":""},"issues":{"0":"Alarmas que no son atendidas o verificadas por nadie","1":"Emergencias que no se reportan a tiempo porque no hay quien vigile","2":"Sistemas de seguridad sin monitoreo que no previenen nada","heading":"Problemas que solucionamos","subheading":""},"stats":{"0":{"label":"Propiedades monitoreadas","value":"500+"},"1":{"label":"Operadores en centro","value":"40+"},"2":{"label":"Tiempo respuesta promedio","value":"3 min"},"heading":"Números que nos respaldan","subheading":""},"faqs":{"0":{"question":"¿Qué pasa si se corta la luz o internet?","answer":"Nuestras instalaciones tienen UPS con 4 horas de autonomía y conectividad celular de respaldo. El centro sigue operando incluso en desastres."},"1":{"question":"¿Cómo sé que están vigilando?","answer":"Recibirá reportes mensuales con métricas: eventos detectados, respuestas activadas, tiempo promedio de respuesta y estado del sistema."},"2":{"question":"¿Puedo ver las cámaras desde la app de GuardMan?","answer":"Sí, nuestra app permite ver sus cámaras en vivo, recibir notificaciones de eventos y solicitar el historial de grabaciones."},"3":{"question":"¿Qué pasa si hay una intrusión?","answer":"El operador verifica visualmente, contacta al cliente para confirmar si es emergencia real, y si no responde, coordina con Carabineros directamente."},"4":{"question":"¿El servicio es solo para alarmas o también para cámaras?","answer":"Monitoreamos cualquier señal: alarmas de intrusión, cámaras, sensores ambientales, control de accesos y GPS vehicular."},"heading":"Preguntas Frecuentes","subheading":""},"cta":{"heading":"Cotiza Monitoreo 24/7","subheading":"","description":"Vigilancia profesional las 24 horas.","button":"Solicitar Cotización"}}}
+{
+  "slug": "monitoreo-24-7",
+  "name": "Monitoreo 24/7",
+  "short_description": "Centro de control con vigilancia las 24 horas",
+  "price_range": "$$$",
+  "featured": 0,
+  "sort": 0,
+  "sections": {
+    "hero": {
+      "heading": "Monitoreo 24/7",
+      "subheading": "Centro de monitoreo propio con operadores capacitados las 24 horas.",
+      "cta_text": "Cotiza Monitoreo"
+    },
+    "intro": {
+      "heading": "Introducción",
+      "subheading": "",
+      "paragraphs": [
+        "GuardMan Chile cuenta con centro de monitoreo propio operativo las 24 horas, los 7 días de la semana. Más de 40 operadores trabajan en turnos para vigilar su propiedad y responder ante cualquier incidente en tiempo real.",
+        "Nuestro centro de monitoreo recibe señales de sensores de movimiento, alarmas, cámaras y botones de pánico. Cuando se detecta una anomalía, nuestros operadores verifican visualmente y coordinan la respuesta apropiada.",
+        "La tecnología de nuestro centro incluye videowall con más de 100 cámaras en pantalla, software de gestión de eventos desarrollado internamente, y conexiones redundantes con proveedores de internet y energía."
+      ]
+    },
+    "features": {
+      "0": "Centro de monitoreo propio con más de 40 operadores",
+      "1": "Videowall con monitoreo en tiempo real de cámaras",
+      "2": "Respuesta ante emergencias en menos de 3 minutos",
+      "3": "Verificación visual de alarmas antes de contactar carabineros",
+      "4": "Notificaciones instantáneas vía SMS, email y app",
+      "5": "Respaldo eléctrico y de conectividad garantizado",
+      "heading": "Qué incluye",
+      "subheading": ""
+    },
+    "process": {
+      "0": {
+        "step": "Conexión",
+        "description": "Instalamos el equipo de comunicación entre su sistema y nuestro centro"
+      },
+      "1": {
+        "step": "Configuración",
+        "description": "Programamos zonas, horarios y contactos de notificación"
+      },
+      "2": {
+        "step": "Prueba",
+        "description": "Realizamos pruebas de comunicación y respuesta"
+      },
+      "3": {
+        "step": "Monitoreo",
+        "description": "Iniciamos la vigilancia 24/7 con operadores asignados"
+      },
+      "heading": "Nuestro proceso",
+      "subheading": ""
+    },
+    "issues": {
+      "0": "Alarmas que no son atendidas o verificadas por nadie",
+      "1": "Emergencias que no se reportan a tiempo porque no hay quien vigile",
+      "2": "Sistemas de seguridad sin monitoreo que no previenen nada",
+      "heading": "Problemas que solucionamos",
+      "subheading": ""
+    },
+    "stats": {
+      "0": {
+        "label": "Propiedades monitoreadas",
+        "value": "500+"
+      },
+      "1": {
+        "label": "Operadores en centro",
+        "value": "40+"
+      },
+      "2": {
+        "label": "Tiempo respuesta promedio",
+        "value": "3 min"
+      },
+      "heading": "Números que nos respaldan",
+      "subheading": ""
+    },
+    "faqs": {
+      "0": {
+        "question": "¿Qué pasa si se corta la luz o internet?",
+        "answer": "Nuestras instalaciones tienen UPS con 4 horas de autonomía y conectividad celular de respaldo. El centro sigue operando incluso en desastres."
+      },
+      "1": {
+        "question": "¿Cómo sé que están vigilando?",
+        "answer": "Recibirá reportes mensuales con métricas: eventos detectados, respuestas activadas, tiempo promedio de respuesta y estado del sistema."
+      },
+      "2": {
+        "question": "¿Puedo ver las cámaras desde la app de GuardMan?",
+        "answer": "Sí, nuestra app permite ver sus cámaras en vivo, recibir notificaciones de eventos y solicitar el historial de grabaciones."
+      },
+      "3": {
+        "question": "¿Qué pasa si hay una intrusión?",
+        "answer": "El operador verifica visualmente, contacta al cliente para confirmar si es emergencia real, y si no responde, coordina con Carabineros directamente."
+      },
+      "4": {
+        "question": "¿El servicio es solo para alarmas o también para cámaras?",
+        "answer": "Monitoreamos cualquier señal: alarmas de intrusión, cámaras, sensores ambientales, control de accesos y GPS vehicular."
+      },
+      "heading": "Preguntas Frecuentes",
+      "subheading": ""
+    },
+    "cta": {
+      "heading": "Cotiza Monitoreo 24/7",
+      "subheading": "Vigilancia profesional las 24 horas.",
+      "description": "Vigilancia profesional las 24 horas.",
+      "button": "Solicitar Cotización"
+    }
+  }
+}
