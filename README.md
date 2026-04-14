@@ -1,204 +1,172 @@
-# GuardMan Chile - Sitio Web con SEO Agent
+# GuardMan Chile - SEO Content Generation System
 
-Sitio web estático para GuardMan Chile + Sistema de generación SEO automatizado.
-
-## Stack
-
-- **Framework:** Astro 5 (static site)
-- **Styling:** Tailwind CSS v4
-- **Data:** JSON estático en `src/data/generated/`
-- **SEO Agent:** Cloudflare Workers + D1 + Durable Objects
-- **Deploy:** Cloudflare Pages
+Sistema completo de generación de contenido SEO para [guardman.cl](https://guardman.cl).
 
 ## Arquitectura
 
 ```
 ┌────────────────────────────────────────────────────────────────────┐
-│                      GUARDMAN SEO SYSTEM                             │
+│                    GUARDMAN SEO SYSTEM                               │
 ├────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  WORKER: https://guardman-agent.oficinadesarrollo33.workers.dev     │
+│  D1: guardman-seo                                                   │
 │                                                                     │
 │  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐         │
 │  │   SERPER     │───▶│  GUARDMAN   │───▶│     D1       │         │
-│  │   CLIENT     │    │   AGENT     │    │   DATABASE   │         │
-│  │  (Research)  │    │  (Durable   │    │  (Storage)   │         │
-│  │              │    │   Object)   │    │              │         │
+│  │   API        │    │   AGENT     │    │   DATABASE   │         │
 │  └──────────────┘    └──────────────┘    └──────────────┘         │
-│         │                   │                   │                    │
-│         │                   │                   ▼                    │
-│         │                   │    ┌──────────────────────────┐      │
-│         │                   │    │  STORED DATA             │      │
-│         │                   │    │  - Raw research          │      │
-│         │                   │    │  - Keywords + SDS         │      │
-│         │                   │    │  - FAQs                   │      │
-│         │                   │    │  - Competitors            │      │
-│         │                   │    │  - Generated content      │      │
-│         │                   │    │  - Agent knowledge        │      │
-│         │                   │    └──────────────────────────┘      │
-│         │                   │                   │                    │
-│         │                   ▼                   ▼                    │
-│         │          ┌──────────────────┐   ┌──────────────┐        │
-│         │          │  CONTENT ENGINE  │   │    ASTRO     │        │
-│         │          │  (AI Generated)   │   │   BUILD      │        │
-│         │          └──────────────────┘   └──────────────┘        │
-│         │                   │                   │                    │
-│         └───────────────────┴───────────────────┘                   │
-│                              │                                       │
-│                              ▼                                       │
-│                    ┌──────────────────┐                            │
-│                    │  CLOUDFLARE      │                            │
-│                    │  PAGES + WORKER   │                            │
-│                    └──────────────────┘                            │
 │                                                                     │
 └────────────────────────────────────────────────────────────────────┘
 ```
 
-## Quick Start
+## Componentes
+
+### Cloudflare Worker
+- **URL**: https://guardman-agent.oficinadesarrollo33.workers.dev
+- **Endpoints**: Research, Generate, D1, Deploy
+- **Schedule**: Daily cron job a las 3:00 AM
+
+### D1 Database
+- **Name**: guardman-seo
+- **Tables**: 18 tablas para SEO data
+- **Status**: 5,357 registros
+
+### Durable Object: GuardmanAgent
+- AI-powered content generation
+- Learning from corrections
+- Knowledge base management
+
+## API Endpoints
+
+### Research
+```bash
+# Single research
+curl -X POST https://guardman-agent.oficinadesarrollo33.workers.dev/api/research \
+  -H "Content-Type: application/json" \
+  -d '{"serviceSlug": "guardias-de-seguridad", "locationSlug": "las-condes"}'
+
+# Batch research
+curl -X POST https://guardman-agent.oficinadesarrollo33.workers.dev/api/batch-research \
+  -H "Content-Type: application/json" \
+  -d '{"combinations": [{"serviceSlug":"guard-pod","locationSlug":"las-condes"}]}'
+```
+
+### Generate
+```bash
+# Service content
+curl -X POST https://guardman-agent.oficinadesarrollo33.workers.dev/api/generate \
+  -d '{"type":"service","slug":"guardias-de-seguridad"}'
+
+# Location content
+curl -X POST https://guardman-agent.oficinadesarrollo33.workers.dev/api/generate \
+  -d '{"type":"location","slug":"las-condes"}'
+
+# Combo content
+curl -X POST https://guardman-agent.oficinadesarrollo33.workers.dev/api/generate \
+  -d '{"type":"combo","slug":"guard-pod","locationSlug":"las-condes"}'
+```
+
+### Status
+```bash
+curl https://guardman-agent.oficinadesarrollo33.workers.dev/api/d1/status
+curl https://guardman-agent.oficinadesarrollo33.workers.dev/api/guardman/status
+```
+
+## D1 Tables
+
+| Table | Rows | Description |
+|-------|------|-------------|
+| services | 9 | Servicios de seguridad |
+| locations | 14 | Comunas de cobertura |
+| keywords | 1,268 | Keywords con SDS score |
+| competitors | 2,602 | Competidores por dominio |
+| service_content | 9 | Contenido generado |
+| location_content | 14 | Contenido generado |
+| combo_content | 14 | Contenido generado |
+| agent_knowledge | 29 | Base de conocimiento |
+
+## Scripts
 
 ```bash
-# 1. Install dependencies
-npm install
+# Run full pipeline
+npm run pipeline
 
-# 2. Setup D1 database
-npm run d1:local
+# Export D1 content to JSON
+npm run export
 
-# 3. Check status
-npm run seo:status
-
-# 4. Run research (collect keywords, FAQs, competitors)
-npm run seo:research
-
-# 5. Deploy worker
+# Deploy worker
 npm run worker:deploy
 
-# 6. Generate content
-npm run seo:generate
-
-# 7. Build site
-npm run build
-
-# 8. Deploy to Pages
-npx wrangler pages deploy dist --project-name=guardman-site
-```
-
-## SEO Pipeline Commands
-
-```bash
-npm run seo:status    # Check D1 status
-npm run seo:setup     # Setup D1 database
-npm run seo:research  # Research with Serper
-npm run seo:generate  # Generate content
-npm run seo:full      # Full pipeline
-```
-
-## Worker API Endpoints
-
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/health` | GET | Health check |
-| `/api/research` | GET | Research status |
-| `/api/research` | POST | Research single combo |
-| `/api/generate/service` | POST | Generate service content |
-| `/api/generate/location` | POST | Generate location content |
-| `/api/generate/combo` | POST | Generate combo content |
-| `/api/guardman/status` | GET | Agent status |
-| `/api/guardman/learn` | POST | Teach agent |
-| `/api/d1/status` | GET | D1 status |
-| `/api/deploy` | POST | Trigger deploy |
-
-## D1 Database Schema
-
-### Research Tables
-- `services` - 9 servicios de seguridad
-- `locations` - 14 comunas de cobertura
-- `serper_queries` - Queries ejecutadas
-- `serper_results` - Resultados SERP
-- `keywords` - Keywords con SDS
-- `competitors` - Competidores analizados
-- `faqs` - FAQs de PAA
-
-### Generated Content Tables
-- `service_content` - Contenido para servicios
-- `location_content` - Contenido para ubicaciones
-- `combo_content` - Contenido para combinaciones
-
-### Agent Tables
-- `agent_knowledge` - Base de conocimiento
-- `agent_corrections` - Correcciones humanas
-- `guardman_history` - Historial de generaciones
-
-## Guardman Agent
-
-El agente es un Durable Object que:
-1. Genera contenido SEO basado en research
-2. Aprende de correcciones humanas
-3. Mantiene base de conocimiento
-4. Optimiza contenido para rankings
-
-### Knowledge Categories
-- `security_patterns` - Patrones de seguridad
-- `industry_regulations` - Normativas (OS-10, Ley 21.659)
-- `client_intent` - Intenciones de búsqueda
-- `competitive_moats` - Ventajas competitivas
-- `regional_patterns` - Patrones por zona
-- `content_templates` - Templates de contenido
-- `exclusion_rules` - Qué NO decir
-
-## Desarrollo
-
-```bash
 # Development
-npm run dev              # Astro dev
-npm run worker:dev       # Worker dev
-
-# Build
-npm run build            # Astro build
-
-# Validation
-npm run validate         # Validate JSON data
+npm run dev
 ```
 
-## Deployment
+## SDS Score (SEO Difficulty Score)
 
-### Worker
-```bash
-npx wrangler deploy --config wrangler.toml
+| Tier | Score | Description |
+|------|-------|-------------|
+| Easy | < 25 | Rápido de posicionar |
+| Moderate | 25-40 | Requiere esfuerzo |
+| Competitive | 40-60 | Competencia alta |
+| Hard | 60+ | Authority required |
+
+## Keywords Easy Win
+
+| Keyword | SDS | Servicio | Ubicación |
+|---------|-----|----------|-----------|
+| Guard Pod Las Condes | 20 | guard-pod | las-condes |
+| Guard Pod Santiago Centro | 20 | guard-pod | santiago-centro |
+| Guard Pod Lampa | 20 | guard-pod | lampa |
+| Guard Pod Los Andes | 20 | guard-pod | los-andes |
+| Guard Pod San Felipe | 23 | guard-pod | san-felipe |
+
+## Services
+
+1. guardias-de-seguridad
+2. cctv-videovigilancia
+3. control-de-accesos
+4. escoltas-privados
+5. monitoreo-24-7
+6. seguridad-eventos
+7. seguridad-industrial
+8. auditoria-seguridad
+9. guard-pod
+
+## Locations
+
+1. santiago-centro
+2. las-condes
+3. vitacura
+4. huechuraba
+5. quilicura
+6. lo-barnechea
+7. la-reina
+8. renca
+9. pudahuel
+10. la-pintana
+11. lampa
+12. conchali
+13. los-andes
+14. san-felipe
+
+## Environment Variables
+
+```
+SERPER_API_KEY=560f82db098446d04e390640882b3a4313ffd39b
+AUTH_PASSWORD=guardman-seo-2024
+ENVIRONMENT=production
 ```
 
-### Pages
-```bash
-npx wrangler pages deploy dist --project-name=guardman-site
-```
+## Tech Stack
 
-## Estructura del Proyecto
+- **Frontend**: Astro 5 + Tailwind v4
+- **Backend**: Cloudflare Workers + Durable Objects
+- **Database**: Cloudflare D1
+- **AI**: Workers AI (Llama 3.1 8B)
+- **Research**: Serper.dev API
+- **Hosting**: Cloudflare Pages
 
-```
-guardman-site/
-├── src/                    # Astro site
-│   ├── components/
-│   ├── data/generated/     # JSON data
-│   ├── layouts/
-│   ├── pages/
-│   └── styles/
-├── worker/                 # Cloudflare Worker
-│   ├── agents/
-│   │   └── guardman.ts     # Guardman Agent (Durable Object)
-│   ├── handlers/
-│   │   ├── research.ts     # Serper research
-│   │   ├── generate.ts     # Content generation
-│   │   ├── d1.ts          # D1 queries
-│   │   └── deploy.ts       # Deployment
-│   ├── serper.ts           # Serper client
-│   ├── auth.ts             # Auth middleware
-│   ├── router.ts           # Router
-│   └── index.ts           # Worker entry
-├── scripts/
-│   ├── run-pipeline.mjs    # Pipeline CLI
-│   └── fetch-cms-data.mjs  # Data validation
-├── worker/sql/
-│   └── schema.sql          # D1 schema
-└── wrangler.toml           # Worker config
-```
+---
 
-## Contacto
-
-- **Sitio:** https://guardman.cl
+Last updated: 2026-04-13

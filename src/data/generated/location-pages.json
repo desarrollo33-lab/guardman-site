@@ -1,0 +1,268 @@
+[
+  {
+    "slug": "santiago-centro",
+    "name": "Santiago Centro",
+    "zone": "Centro",
+    "meta_title": "Seguridad Privada en Santiago Centro | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en Santiago Centro. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en Santiago Centro",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en Santiago Centro. La diversidad de clientes en esta zona requiere adaptarnos a condominos, empresas y comercios.\n\nCon cobertura en Santiago Centro y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de Santiago Centro, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "Santiago Centro centro",
+      "Santiago Centro sur",
+      "Santiago Centro norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  },
+  {
+    "slug": "las-condes",
+    "name": "Las Condes",
+    "zone": "Oriente",
+    "meta_title": "Seguridad Privada en Las Condes | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en Las Condes. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en Las Condes",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en Las Condes. Esta zona premium requiere soluciones de seguridad sofisticadas y discretas.\n\nCon cobertura en Las Condes y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de Las Condes, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "Las Condes centro",
+      "Las Condes sur",
+      "Las Condes norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  },
+  {
+    "slug": "vitacura",
+    "name": "Vitacura",
+    "zone": "Oriente",
+    "meta_title": "Seguridad Privada en Vitacura | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en Vitacura. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en Vitacura",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en Vitacura. Esta zona premium requiere soluciones de seguridad sofisticadas y discretas.\n\nCon cobertura en Vitacura y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de Vitacura, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "Vitacura centro",
+      "Vitacura sur",
+      "Vitacura norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  },
+  {
+    "slug": "huechuraba",
+    "name": "Huechuraba",
+    "zone": "Norte",
+    "meta_title": "Seguridad Privada en Huechuraba | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en Huechuraba. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en Huechuraba",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en Huechuraba. La diversidad de clientes en esta zona requiere adaptarnos a condominos, empresas y comercios.\n\nCon cobertura en Huechuraba y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de Huechuraba, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "Huechuraba centro",
+      "Huechuraba sur",
+      "Huechuraba norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  },
+  {
+    "slug": "quilicura",
+    "name": "Quilicura",
+    "zone": "Norte",
+    "meta_title": "Seguridad Privada en Quilicura | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en Quilicura. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en Quilicura",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en Quilicura. La diversidad de clientes en esta zona requiere adaptarnos a condominos, empresas y comercios.\n\nCon cobertura en Quilicura y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de Quilicura, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "Quilicura centro",
+      "Quilicura sur",
+      "Quilicura norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  },
+  {
+    "slug": "lo-barnechea",
+    "name": "Lo Barnechea",
+    "zone": "Oriente",
+    "meta_title": "Seguridad Privada en Lo Barnechea | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en Lo Barnechea. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en Lo Barnechea",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en Lo Barnechea. Esta zona premium requiere soluciones de seguridad sofisticadas y discretas.\n\nCon cobertura en Lo Barnechea y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de Lo Barnechea, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "Lo Barnechea centro",
+      "Lo Barnechea sur",
+      "Lo Barnechea norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  },
+  {
+    "slug": "la-reina",
+    "name": "La Reina",
+    "zone": "Suroriente",
+    "meta_title": "Seguridad Privada en La Reina | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en La Reina. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en La Reina",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en La Reina. Esta zona premium requiere soluciones de seguridad sofisticadas y discretas.\n\nCon cobertura en La Reina y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de La Reina, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "La Reina centro",
+      "La Reina sur",
+      "La Reina norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  },
+  {
+    "slug": "renca",
+    "name": "Renca",
+    "zone": "Poniente",
+    "meta_title": "Seguridad Privada en Renca | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en Renca. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en Renca",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en Renca. La diversidad de clientes en esta zona requiere adaptarnos a condominos, empresas y comercios.\n\nCon cobertura en Renca y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de Renca, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "Renca centro",
+      "Renca sur",
+      "Renca norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  },
+  {
+    "slug": "pudahuel",
+    "name": "Pudahuel",
+    "zone": "Poniente",
+    "meta_title": "Seguridad Privada en Pudahuel | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en Pudahuel. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en Pudahuel",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en Pudahuel. La diversidad de clientes en esta zona requiere adaptarnos a condominos, empresas y comercios.\n\nCon cobertura en Pudahuel y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de Pudahuel, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "Pudahuel centro",
+      "Pudahuel sur",
+      "Pudahuel norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  },
+  {
+    "slug": "la-pintana",
+    "name": "La Pintana",
+    "zone": "Sur",
+    "meta_title": "Seguridad Privada en La Pintana | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en La Pintana. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en La Pintana",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en La Pintana. La diversidad de clientes en esta zona requiere adaptarnos a condominos, empresas y comercios.\n\nCon cobertura en La Pintana y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de La Pintana, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "La Pintana centro",
+      "La Pintana sur",
+      "La Pintana norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  },
+  {
+    "slug": "lampa",
+    "name": "Lampa",
+    "zone": "Norte",
+    "meta_title": "Seguridad Privada en Lampa | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en Lampa. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en Lampa",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en Lampa. La diversidad de clientes en esta zona requiere adaptarnos a condominos, empresas y comercios.\n\nCon cobertura en Lampa y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de Lampa, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "Lampa centro",
+      "Lampa sur",
+      "Lampa norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  },
+  {
+    "slug": "conchali",
+    "name": "Conchal�",
+    "zone": "Norte",
+    "meta_title": "Seguridad Privada en Conchalí | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en Conchalí. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en Conchalí",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en Conchalí. La diversidad de clientes en esta zona requiere adaptarnos a condominos, empresas y comercios.\n\nCon cobertura en Conchalí y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de Conchalí, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "Conchalí centro",
+      "Conchalí sur",
+      "Conchalí norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  },
+  {
+    "slug": "los-andes",
+    "name": "Los Andes",
+    "zone": "Valparaiso",
+    "meta_title": "Seguridad Privada en Los Andes | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en Los Andes. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en Los Andes",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en Los Andes. La diversidad de clientes en esta zona requiere adaptarnos a condominos, empresas y comercios.\n\nCon cobertura en Los Andes y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de Los Andes, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "Los Andes centro",
+      "Los Andes sur",
+      "Los Andes norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  },
+  {
+    "slug": "san-felipe",
+    "name": "San Felipe",
+    "zone": "Valparaiso",
+    "meta_title": "Seguridad Privada en San Felipe | GuardMan Chile",
+    "meta_description": "Empresa líder con guardias OS-10 en San Felipe. Cobertura 24/7, centros comerciales, edificios y residencias. Cotiza gratis.",
+    "h1": "Seguridad Privada en San Felipe",
+    "intro": "En GuardMan Chile entendemos las necesidades específicas de seguridad en San Felipe. La diversidad de clientes en esta zona requiere adaptarnos a condominos, empresas y comercios.\n\nCon cobertura en San Felipe y comunas aledañas, podemos desplegar guardias en menos de 30 minutos desde cualquier punto de la comuna. Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos.\n\nTodos nuestros guardias conocen las dinámicas locales de San Felipe, incluyendo horarios de mayor actividad, zonas de riesgo y puntos de acceso principales.",
+    "landmarks": [
+      "San Felipe centro",
+      "San Felipe sur",
+      "San Felipe norte"
+    ],
+    "stats": {
+      "empresas": "200+",
+      "guardias": "50+",
+      "experiencia": "8+ años"
+    }
+  }
+]

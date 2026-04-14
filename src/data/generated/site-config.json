@@ -101,5 +101,10 @@
       "name": "Protocolos Carabineros",
       "description": "Protocolos de seguridad certificados por Carabineros de Chile"
     }
-  ]
+  ],
+  "seo": {
+    "keywords": 37,
+    "totalPages": 65,
+    "generatedAt": "2026-04-14T00:47:28.958Z"
+  }
 }
