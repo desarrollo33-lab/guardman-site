@@ -1,15 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getSiteConfig } from '../data/directus';
+import { readFileSync, existsSync } from 'fs';
 
-const config = getSiteConfig();
+// Load config from CMS
+const configData = existsSync('src/data/cms/config.json') 
+  ? JSON.parse(readFileSync('src/data/cms/config.json', 'utf-8'))
+  : {};
 
 const siteConfig = {
-  phone: config?.phone || '+56930000010',
-  phoneTel: (config?.phone || '+56930000010').replace(/[^0-9+]/g, ''),
-  phone_display: config?.phone_display || '',
-  email: config?.email || 'info@guardman.cl',
-  address: config?.address || '',
+  phone: configData.phone || '+56930000010',
+  phoneTel: (configData.phone || '+56930000010').replace(/[^0-9+]/g, ''),
+  email: configData.email || 'info@guardman.cl',
+  address: configData.address || 'Santiago, Chile',
 };
 ---
 

@@ -4,38 +4,53 @@ import SchemaWebSite from '../components/seo/SchemaWebSite.astro';
 import SchemaOrganization from '../components/seo/SchemaOrganization.astro';
 import CoverageMap from '../components/CoverageMap.astro';
 import { getServiceSections, getServicesList, getLocationsList } from '../data/cms';
-import { getSectors, getFeaturedClients, getSiteConfig, optimizeImageUrl } from '../data/directus';
+import { optimizeImageUrl } from '../data/directus';
+import { readdirSync, existsSync, readFileSync } from 'fs';
 
 const services = getServicesList();
 const locations = getLocationsList();
-const sectors = getSectors();
-const clients = getFeaturedClients();
-const config = getSiteConfig();
+
+// Load sectors from CMS JSON files
+const sectorFiles = readdirSync('src/data/cms')
+  .filter(f => f.startsWith('sector-') && f.endsWith('.json'));
+
+const sectors = sectorFiles.map(f => {
+  const data = JSON.parse(readFileSync(`src/data/cms/${f}`, 'utf-8'));
+  return {
+    slug: data.sectorSlug || f.replace('sector-', '').replace('.json', ''),
+    name: data.sections?.hero?.heading || '',
+    description: data.sections?.hero?.subheading || ''
+  };
+}).filter(s => s.name);
+
+// Load config from CMS JSON
+const configData = existsSync('src/data/cms/config.json') 
+  ? JSON.parse(readFileSync('src/data/cms/config.json', 'utf-8'))
+  : {};
 
 const siteConfig = {
-  name: config?.site_name || 'GuardMan Chile',
-  phone: config?.phone || '+56930000010',
-  phoneTel: (config?.phone || '+56930000010').replace(/[^0-9+]/g, ''),
-  tagline: config?.tagline || 'Protegemos lo que mas te importa',
-  email: config?.email || 'info@guardman.cl',
-  // Use WebP version of hero image (optimized from PNG)
-  // Fallback to hero-home.webp if not set in CMS
-  heroImage: config?.hero_image 
-    ? optimizeImageUrl(`/images/${config.hero_image.replace('.png', '.webp')}`) 
+  name: configData.site_name || 'GuardMan Chile',
+  phone: configData.phone || '+56930000010',
+  phoneTel: (configData.phone || '+56930000010').replace(/[^0-9+]/g, ''),
+  tagline: configData.tagline || 'Protegemos lo que mas te importa',
+  email: configData.email || 'info@guardman.cl',
+  heroImage: configData.hero_image 
+    ? optimizeImageUrl(`/images/${configData.hero_image.replace('.png', '.webp')}`) 
     : '/images/hero-home.webp',
   stats: {
-    guards: config?.stats_guards || '500+',
-    clients: config?.stats_clients || '200+',
-    locations: config?.stats_locations || '14',
-    years: config?.stats_years || '8+',
-  }
+    guards: configData.stats_guards || '500+',
+    clients: configData.stats_clients || '200+',
+    locations: configData.stats_locations || '14',
+    years: configData.stats_years || '8+',
+  },
+  seo_description: configData.seo_description || ''
 };
 
 const guardPodService = services.find(s => s.slug === 'guard-pod');
-const featuredClients = clients.filter(c => c.featured && c.logo_url);
+const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
 ---
 
-<BaseLayout title="Seguridad Privada en Santiago | GuardMan Chile" description={config?.seo_description || 'GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.'} image={optimizeImageUrl(`/images/${config?.hero_image}`)}>
+<BaseLayout title="Seguridad Privada en Santiago | GuardMan Chile" description={siteConfig.seo_description || 'GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.'} image={optimizeImageUrl(`/images/${configData.hero_image || 'hero-home.png'}`)}>
   <!-- Schema Markup for Homepage -->
   <SchemaWebSite />
   <SchemaOrganization />
@@ -60,7 +75,7 @@ const featuredClients = clients.filter(c => c.featured && c.logo_url);
           Seguridad Privada en Santiago, Chile
         </h1>
         <p class="text-xl lg:text-2xl text-white/90 mb-8">
-          {config?.description || 'Empresa líder en servicios de seguridad privada en Santiago. Guardias certificados, tecnología de vanguardia y atención personalizada.'}
+          {siteConfig.tagline}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 items-center">
           <img 
@@ -73,7 +88,7 @@ const featuredClients = clients.filter(c => c.featured && c.logo_url);
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
             </svg>
-            {config?.phone_display || siteConfig.phone}
+            {siteConfig.phone}
           </a>
         </div>
       </div>

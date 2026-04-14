@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getServices, getLocations } from '../data/directus';
+import { getServicesList, getLocationsList } from '../data/cms';
 
 // Get data from CMS (synchronous - data is pre-loaded at build time)
-const services = getServices();
-const locations = getLocations();
+const services = getServicesList();
+const locations = getLocationsList();
 ---
 
 <BaseLayout title="Cotizacion | GuardMan Chile" description="Solicita una cotizacion gratis para servicios de seguridad privada en Santiago.">
