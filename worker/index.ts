@@ -7,6 +7,7 @@ import { handleGenerate } from './handlers/generate';
 import { handleD1Status, handleD1Query } from './handlers/d1';
 import { handleGuardmanAgent } from './handlers/guardman';
 import { handleDeploy } from './handlers/deploy';
+import { handleSections } from './handlers/sections-api';
 
 export { GuardmanAgent } from './agents/guardman';
 
@@ -75,6 +76,9 @@ export default {
         
       } else if (path === '/api/deploy') {
         response = await handleDeploy(request, env, ctx);
+        
+      } else if (path.startsWith('/api/sections')) {
+        response = await handleSections(request, env, ctx);
         
       } else {
         response = new Response(JSON.stringify({ error: 'Not found' }), {

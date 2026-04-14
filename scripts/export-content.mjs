@@ -1,9 +1,9 @@
 /**
  * Export D1 content to JSON files for Astro
- * Runs after research and generation complete
+ * SOLO actualiza metadata - NO toca description para evitar duplicación
  */
 
-import { readFileSync, writeFileSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 
 const WORKER_URL = 'https://guardman-agent.oficinadesarrollo33.workers.dev';
 
@@ -17,9 +17,9 @@ async function queryD1(sql) {
 }
 
 async function exportContent() {
-  console.log('🚀 Exporting D1 content to JSON files...\n');
+  console.log('🚀 Exporting SEO metadata to JSON files...\n');
 
-  // Load existing services
+  // Load existing services - NO los modify description
   const servicesPath = 'src/data/generated/services.json';
   const services = JSON.parse(readFileSync(servicesPath, 'utf-8'));
 
@@ -28,50 +28,33 @@ async function exportContent() {
   const locationContent = await queryD1('SELECT * FROM location_content');
   const comboContent = await queryD1('SELECT * FROM combo_content');
 
-  // Enrich services with generated content
+  // Create content map
   const contentMap = new Map(
     serviceContent.results.map(c => [c.service_slug, c])
   );
 
+  // Update ONLY metadata fields, keep original description intact
   for (const service of services) {
     const content = contentMap.get(service.slug);
     if (content) {
-      // Update meta fields
+      // Update meta fields ONLY
       service.meta_title = content.seo_title;
       service.meta_description = content.meta_description;
       service.hero_heading = content.h1;
       service.hero_subtitle = content.hero_subtitle;
       
-      // Update description with generated content
-      service.description = `${content.intro_paragraph}
-
-## Características del Servicio
-
-${(JSON.parse(content.features_json) || []).map(f => `- ${f}`).join('\n')}
-
-## Proceso de Trabajo
-
-${(JSON.parse(content.process_json) || []).map(p => `### ${p.step}\n${p.description}`).join('\n\n')}
-
-## Preguntas Frecuentes
-
-${(JSON.parse(content.common_issues_json) || []).map(i => `- ${i}`).join('\n')}
-
-${(JSON.parse(content.stats_json) || []).map(s => `- **${s.label}**: ${s.value}`).join('\n\n')}
-
-${service.faqs?.map(f => `### ${f.question}\n${f.answer}`).join('\n\n') || ''}
-
-## Cotiza ${service.name}
-
-${content.cta_text}`;
+      // DO NOT change description - page layout uses features, process, etc. separately
+      // The description field is just for schema/metadata, not for display
+      
+      console.log(`  Updated: ${service.slug}`);
     }
   }
 
-  // Save enriched services
+  // Save services with updated metadata
   writeFileSync(servicesPath, JSON.stringify(services, null, 2));
-  console.log(`✅ Updated ${services.length} services`);
+  console.log(`\n✅ Updated ${services.length} services (metadata only)`);
 
-  // Generate service pages JSON for static generation
+  // Generate service pages JSON
   const servicePages = services.map(s => ({
     slug: s.slug,
     name: s.name,
@@ -115,9 +98,9 @@ ${content.cta_text}`;
   );
   console.log(`✅ Generated location-pages.json`);
 
-  // Generate combo pages (service × location)
+  // Generate combo pages
   const comboPages = [];
-  for (const service of services.slice(0, 3)) { // Top 3 services for demo
+  for (const service of services.slice(0, 3)) {
     for (const location of locations) {
       const content = comboContent.results.find(
         c => c.service_slug === service.slug && c.location_slug === location.slug
@@ -137,13 +120,13 @@ ${content.cta_text}`;
   );
   console.log(`✅ Generated combo-pages.json (${comboPages.length} pages)`);
 
-  // Update site-config with SEO stats
+  // Update site-config
   const configPath = 'src/data/generated/site-config.json';
   const config = JSON.parse(readFileSync(configPath, 'utf-8'));
   
   config.seo = {
     ...config.seo,
-    keywords: serviceContent.results.length + locationContent.results.length + comboContent.results.length,
+    keywords: serviceContent.results.length,
     totalPages: services.length + locations.length + comboPages.length,
     generatedAt: new Date().toISOString()
   };
@@ -152,10 +135,8 @@ ${content.cta_text}`;
   console.log(`✅ Updated site-config.json`);
 
   console.log('\n✨ Export complete!');
-  console.log(`   Services: ${services.length}`);
-  console.log(`   Locations: ${locations.length}`);
-  console.log(`   Combo pages: ${comboPages.length}`);
-  console.log(`   Total pages: ${services.length + locations.length + comboPages.length}`);
+  console.log('   - Metadata updated (meta_title, meta_description, h1, hero_subtitle)');
+  console.log('   - Description fields LEFT INTACT (layout uses features, process, FAQs separately)');
 }
 
 exportContent().catch(console.error);

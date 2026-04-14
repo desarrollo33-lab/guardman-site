@@ -1,0 +1,191 @@
+---
+/**
+ * SectionRenderer - Renderiza secciones del CMS
+ * Cada sección mapea a un componente específico del layout
+ */
+
+interface SectionProps {
+  sections: any;
+  serviceName?: string;
+}
+
+const { sections, serviceName } = Astro.props as SectionProps;
+
+// Destructure sections
+const {
+  hero = {},
+  intro = {},
+  features = [],
+  process = [],
+  issues = [],
+  stats = [],
+  faqs = [],
+  cta = {}
+} = sections;
+
+// Helper para verificar si features es array o objeto
+const featuresArray = Array.isArray(features) ? features : [];
+const featuresItems = featuresArray.filter((_, i) => typeof i === 'string').map((_, i) => features[i]);
+const processSteps = Array.isArray(process) ? process : [];
+const statsArray = Array.isArray(stats) ? stats : [];
+const faqsArray = Array.isArray(faqs) ? faqs : [];
+---
+
+<!-- HERO SECTION -->
+{hero.heading && (
+  <section class="relative bg-primary-600 text-white py-16 lg:py-20 overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <h1 class="text-3xl lg:text-5xl font-bold mb-4">{hero.heading}</h1>
+      {hero.subheading && (
+        <p class="text-xl text-white/90 max-w-3xl">{hero.subheading}</p>
+      )}
+    </div>
+  </section>
+)}
+
+<!-- INTRO SECTION -->
+{intro.paragraphs && Array.isArray(intro.paragraphs) && (
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto prose prose-neutral">
+        {intro.paragraphs.map((paragraph: string) => (
+          <p>{paragraph}</p>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- FEATURES SECTION -->
+{featuresArray.length > 0 && featuresItems.length > 0 && (
+  <section class="py-12 bg-neutral-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-neutral-900 mb-6">
+        {features.heading || 'Qué incluye el servicio'}
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {featuresItems.map((feature: string) => (
+          <div class="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+            <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-neutral-700">{feature}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- PROCESS SECTION -->
+{processSteps.length > 0 && (
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-neutral-900 mb-6">
+        {process.heading || 'Nuestro proceso'}
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {processSteps.map((step: any, index: number) => (
+          <div class="text-center">
+            <div class="w-14 h-14 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4 shadow-lg">
+              {index + 1}
+            </div>
+            <h3 class="font-semibold text-neutral-900 mb-2">{step.step || step}</h3>
+            {step.description && (
+              <p class="text-sm text-neutral-600">{step.description}</p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- ISSUES SECTION -->
+{issues.length > 0 && (
+  <section class="py-12 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-neutral-900 mb-6">
+        {issues.heading || 'Problemas que solucionamos'}
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {issues.filter((_, i) => typeof i === 'string').map((issue: string) => (
+          <div class="flex items-start gap-3 bg-white border border-amber-200 rounded-lg p-4">
+            <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <span class="text-neutral-700 text-sm font-medium">{issue}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- STATS SECTION -->
+{statsArray.length > 0 && (
+  <section class="py-12 bg-primary-700 text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-8">
+        {stats.heading || 'Números que nos respaldan'}
+      </h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        {statsArray.filter((_, i) => typeof i === 'string').map((stat: any) => (
+          <div>
+            <div class="text-4xl lg:text-5xl font-bold mb-2">{stat.value || stat}</div>
+            <div class="text-white/80">{stat.label || ''}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- FAQS SECTION -->
+{faqsArray.length > 0 && (
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-neutral-900 mb-6">
+        {faqs.heading || 'Preguntas Frecuentes'}
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {faqsArray.filter((_, i) => typeof i === 'string').map((faq: any) => (
+          <details class="group bg-neutral-50 rounded-lg">
+            <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-neutral-900">
+              {faq.question || faq}
+              <svg class="w-5 h-5 text-neutral-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+            <div class="px-4 pb-4 text-neutral-600">
+              {faq.answer || ''}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- CTA SECTION -->
+{cta.heading && (
+  <section class="py-12 bg-primary-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl lg:text-3xl font-bold mb-4">{cta.heading}</h2>
+      {cta.description && (
+        <p class="text-lg text-white/90 mb-6 max-w-2xl mx-auto">{cta.description}</p>
+      )}
+      {cta.button && (
+        <a 
+          href="/cotizacion" 
+          class="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors"
+        >
+          {cta.button}
+        </a>
+      )}
+    </div>
+  </section>
+)}
