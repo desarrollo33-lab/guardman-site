@@ -1,27 +1,25 @@
 ---
+/**
+ * Service + Location Combo Page - Usa contenido del CMS
+ */
+
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getServices, getLocations, getSiteConfig, optimizeImageUrl } from '../../../data/directus';
+import { getServiceSections, getLocationSections, getServicesList, getLocationsList } from '../../../data/cms';
 import SchemaService from '../../../components/seo/SchemaService.astro';
 import SchemaLocalBusiness from '../../../components/seo/SchemaLocalBusiness.astro';
-import SchemaFAQ from '../../../components/seo/SchemaFAQ.astro';
 import SchemaBreadcrumb from '../../../components/seo/SchemaBreadcrumb.astro';
-import PageCTA from '../../../components/design/PageCTA.astro';
 
-// Design components
-import FAQList from '../../../components/design/FAQList.astro';
-import SidebarCTA from '../../../components/design/SidebarCTA.astro';
-
-export function getStaticPaths() {
-  const services = getServices();
-  const locations = getLocations();
+export async function getStaticPaths() {
+  const services = getServicesList();
+  const locations = getLocationsList();
   
-  const paths: { params: { slug: string; location: string }; props: { service: any; location: any } }[] = [];
+  const paths: { params: { slug: string; location: string }; props: any }[] = [];
   
   for (const service of services) {
     for (const location of locations) {
       paths.push({
         params: { slug: service.slug, location: location.slug },
-        props: { service, location },
+        props: { serviceSlug: service.slug, serviceName: service.name, locationSlug: location.slug, locationName: location.name }
       });
     }
   }
@@ -29,88 +27,55 @@ export function getStaticPaths() {
   return paths;
 }
 
-const { service, location } = Astro.props;
-const config = getSiteConfig();
+const { serviceSlug, serviceName, locationSlug, locationName } = Astro.props;
 
-// All services and locations
-const allServices = getServices();
-const allLocations = getLocations();
+// Get all services and locations
+const services = getServicesList();
+const locations = getLocationsList();
 
-// Nearby locations in same zone
-const nearbyLocations = allLocations
-  .filter(l => l.slug !== location.slug && l.zone === location.zone)
-  .slice(0, 3);
+// Get sections from CMS
+const serviceSections = getServiceSections(serviceSlug);
+const locationSections = getLocationSections(locationSlug);
 
-// Related services for same location
-const relatedServices = allServices
-  .filter(s => s.slug !== service.slug)
-  .slice(0, 3);
+// Find current service and location
+const service = services.find((s: any) => s.slug === serviceSlug) || { slug: serviceSlug, name: serviceName };
+const location = locations.find((l: any) => l.slug === locationSlug) || { slug: locationSlug, name: locationName, zone: 'Centro' };
 
-// Site config
-const siteConfig = {
-  name: config?.site_name || 'GuardMan Chile',
-  phone: config?.phone || '+56 9 300 000 10',
-  phoneTel: (config?.phone || '+56 9 300 000 10').replace(/[^0-9+]/g, ''),
+// Get related services and locations
+const relatedServices = services.filter((s: any) => s.slug !== serviceSlug).slice(0, 3);
+const nearbyLocations = locations.filter((l: any) => l.slug !== locationSlug && l.zone === location.zone).slice(0, 3);
+
+// Zone context for localized content
+const zoneContext: Record<string, { challenges: string; focus: string }> = {
+  'Oriente': { challenges: 'residencias de lujo, embajadas y oficinas corporativas', focus: 'control de accesos VIP y monitoreo perimetral' },
+  'Centro': { challenges: 'comercios, hoteles y oficinas públicas', focus: 'control de flujos y CCTV comercial' },
+  'Norte': { challenges: 'industrias, bodegas y centros logísticos', focus: 'vigilancia perimetral y control vehicular' },
 };
+
+const ctx = zoneContext[location.zone] || { challenges: 'residencial y comercial', focus: 'seguridad general' };
 
 // SEO meta
-const metaTitle = `${service.name} en ${location.name} - GuardMan`;
-const metaDescription = `${service.name} profesional en ${location.name} (${location.zone}). ${service.short_description} Atención 24/7. Solicita tu cotización.`;
-
-// Zone context for localized FAQs
-const zoneContext: Record<string, { challenges: string; focus: string }> = {
-  'Oriente': { 
-    challenges: 'embajadas, residenciales de lujo y oficinas corporativas', 
-    focus: 'control de accesos VIP y monitoreo perimetral' 
-  },
-  'Centro': { 
-    challenges: 'comercios, hoteles y oficinas públicas', 
-    focus: 'control de flujos y CCTV comercial' 
-  },
-  'Norte': { 
-    challenges: 'industrias, bodegas y centros logísticos', 
-    focus: 'vigilancia perimetral y control vehicular' 
-  },
-  'Suroriente': { 
-    challenges: 'residenciales, condominos y barrios privados', 
-    focus: 'vigilancia vecinal y rondas preventivas' 
-  },
-  'Poniente': { 
-    challenges: 'industrias, comércio y aeropuertos', 
-    focus: 'seguridad para carga aérea y monitoreo industrial' 
-  },
-  'Sur': { 
-    challenges: 'residencial popular y comercio local', 
-    focus: 'seguridad comunitaria y prevención' 
-  },
-  'Valparaiso': { 
-    challenges: 'agricultura, comercio regional y turismo', 
-    focus: 'seguridad para packing y bodegas agrícolas' 
-  },
-};
-
-const ctx = zoneContext[location.zone] || { 
-  challenges: 'residencial y comercial', 
-  focus: 'seguridad general' 
-};
+const hero = serviceSections?.hero || { heading: serviceName, subheading: '' };
+const metaTitle = `${hero.heading} en ${locationName} | GuardMan`;
+const metaDescription = `Servicio de ${serviceName.toLowerCase()} profesional en ${locationName}. ${hero.subheading || serviceName}. Solicita tu cotización.`;
 
 // Combo FAQs
 const comboFAQs = [
   {
-    question: `¿Cuánto cuesta el servicio de ${service.name} en ${location.name}?`,
-    answer: `El precio de ${service.name} en ${location.name} varía según el tipo de propiedad y horarios requeridos. En ${location.zone}, nos especializamos en proteger ${ctx.challenges}. Solicita tu cotización gratuita y te entregamos un presupuesto personalizado en menos de 24 horas.`
+    question: `¿Cuánto cuesta el servicio de ${serviceName} en ${locationName}?`,
+    answer: `El precio de ${serviceName.toLowerCase()} en ${locationName} varía según el tipo de propiedad y horarios requeridos. En ${location.zone}, nos especializamos en proteger ${ctx.challenges}. Solicita tu cotización gratuita.`
   },
   {
-    question: `¿Tienen guardias disponibles las 24 horas en ${location.name}?`,
-    answer: `Sí, tenemos cobertura 24/7 en ${location.name} y toda la zona de ${location.zone}. Nuestro centro de operaciones monitorea ${ctx.focus} para clientes residenciales y corporativos.`
+    question: `¿Tienen guardias disponibles las 24 horas en ${locationName}?`,
+    answer: `Sí, tenemos cobertura 24/7 en ${locationName} y toda la zona de ${location.zone}.`
   },
   {
-    question: `¿Qué incluye el servicio de ${service.name} en ${location.zone}?`,
-    answer: `Nuestro servicio incluye personal certificado OS-10, supervisión continua, informes periódicos y coordinación con Carabineros. En ${location.name}, nos enfocamos en ${ctx.focus}.`
+    question: `¿Qué incluye el servicio de ${serviceName} en ${location.zone}?`,
+    answer: `Nuestro servicio incluye personal certificado OS-10, supervisión continua, informes periódicos y coordinación con Carabineros.`
   },
   {
-    question: `¿Cómo contrato ${service.name} en ${location.name}?`,
-    answer: `Solicita tu cotización gratis llamando al ${siteConfig.phone}, escribiendo a info@guardman.cl o a través de nuestro formulario. Atendemos ${location.name} y toda ${location.zone}.`
+    question: `¿Cómo contrato ${serviceName} en ${locationName}?`,
+    answer: `Solicita tu cotización gratis llamando al +56 9 3000 0010 o a través de nuestro formulario. Atendemos ${locationName} y toda ${location.zone}.`
   }
 ];
 
@@ -118,31 +83,25 @@ const comboFAQs = [
 const breadcrumbItems = [
   { name: 'Inicio', url: 'https://guardman.cl' },
   { name: 'Servicios', url: 'https://guardman.cl/servicios' },
-  { name: service.name, url: `https://guardman.cl/servicios/${service.slug}` },
-  { name: location.name, url: `https://guardman.cl/servicios/${service.slug}/${location.slug}` },
+  { name: serviceName, url: `https://guardman.cl/servicios/${serviceSlug}` },
+  { name: locationName, url: `https://guardman.cl/servicios/${serviceSlug}/${locationSlug}` },
 ];
 ---
 
 <BaseLayout title={metaTitle} description={metaDescription}>
-  <!-- Schema Markup -->
+  <!-- Schema -->
   <SchemaService 
-    name={`${service.name} en ${location.name}`}
-    description={service.description}
-    slug={`${service.slug}/${location.slug}`}
-    priceRange={service.price_range}
-    areaServed={[location.name]}
+    name={`${serviceName} en ${locationName}`}
+    description={hero.heading}
+    slug={`${serviceSlug}/${locationSlug}`}
+    priceRange={service.price_range || '$$$'}
+    areaServed={[locationName]}
   />
   <SchemaLocalBusiness 
-    name={location.name}
-    description={`${service.name} en ${location.name}`}
-    slug={`${service.slug}/${location.slug}`}
-    address="Av. Américo Vespucio Norte 1980"
-    locality={location.name}
-    latitude={location.latitude}
-    longitude={location.longitude}
-    neighborhood={location.neighborhoods?.[0]}
+    name={`GuardMan ${locationName}`}
+    address={locationName}
+    areaServed="Región Metropolitana"
   />
-  <SchemaFAQ faqs={comboFAQs} />
   <SchemaBreadcrumb items={breadcrumbItems} />
   
   <!-- Breadcrumb Visual -->
@@ -150,44 +109,27 @@ const breadcrumbItems = [
     <div class="container mx-auto px-4">
       <nav class="flex text-sm text-neutral-600" aria-label="Breadcrumb">
         <a href="/" class="hover:text-primary-600">Inicio</a>
-        <span class="mx-2" aria-hidden="true">/</span>
+        <span class="mx-2">/</span>
         <a href="/servicios" class="hover:text-primary-600">Servicios</a>
-        <span class="mx-2" aria-hidden="true">/</span>
-        <a href={`/servicios/${service.slug}`} class="hover:text-primary-600">{service.name}</a>
-        <span class="mx-2" aria-hidden="true">/</span>
-        <span class="text-neutral-900 font-medium">{location.name}</span>
+        <span class="mx-2">/</span>
+        <a href={`/servicios/${serviceSlug}`} class="hover:text-primary-600">{serviceName}</a>
+        <span class="mx-2">/</span>
+        <span class="text-neutral-900 font-medium">{locationName}</span>
       </nav>
     </div>
   </div>
 
   <!-- Hero -->
   <section class="relative bg-primary-600 text-white py-16 lg:py-20 overflow-hidden">
-    <!-- Decorative elements -->
     <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
-    
-    {service.image && (
-      <div class="absolute inset-0">
-        <img 
-          src={optimizeImageUrl(`/images/${service.image}`)}
-          alt={service.name}
-          class="w-full h-full object-cover opacity-30"
-          width="1920"
-          height="1080"
-          loading="eager"
-          fetchpriority="high"
-        />
-      </div>
-    )}
-    
-    <div class="absolute inset-0 bg-gradient-to-r from-primary-800/90 to-primary-600/70" aria-hidden="true"></div>
     
     <div class="container mx-auto px-4 relative z-10">
       <div class="flex items-center gap-2 text-white/80 text-sm mb-4">
         <span class="bg-white/20 px-3 py-1 rounded-full">{location.zone}</span>
       </div>
-      <h1 class="text-3xl lg:text-5xl font-bold mb-4">{service.name} en {location.name}</h1>
-      <p class="text-xl text-white/90 max-w-3xl">{service.short_description}</p>
+      <h1 class="text-3xl lg:text-5xl font-bold mb-4">{serviceName} en {locationName}</h1>
+      <p class="text-xl text-white/90 max-w-3xl">{hero.subheading}</p>
     </div>
   </section>
 
@@ -198,140 +140,240 @@ const breadcrumbItems = [
         <!-- Column 1-2: Content -->
         <div class="lg:col-span-2">
           
-          <!-- Service Introduction -->
-          <div class="mb-8">
-            <h2 class="text-2xl font-bold text-neutral-900 mb-4">Servicio de {service.name} en {location.name}</h2>
-            <p class="text-neutral-600 leading-relaxed text-lg">{service.description}</p>
-          </div>
-
-          <!-- Features -->
-          {service.features && service.features.length > 0 && (
+          <!-- Service Intro -->
+          {serviceSections?.intro?.paragraphs && (
             <div class="mb-8">
-              <h3 class="text-xl font-bold text-neutral-900 mb-4">Qué incluye el servicio</h3>
-              <div class="grid sm:grid-cols-2 gap-3">
-                {service.features.map(feature => (
-                  <div class="flex items-start gap-3 bg-neutral-50 rounded-lg p-4 hover:shadow-md transition-shadow">
-                    <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    <span class="text-neutral-700">{feature}</span>
-                  </div>
+              <h2 class="text-2xl font-bold text-neutral-900 mb-4">
+                Servicio de {serviceName} en {locationName}
+              </h2>
+              <div class="prose prose-neutral max-w-none">
+                {serviceSections.intro.paragraphs.map((p: string) => (
+                  <p>{p}</p>
                 ))}
               </div>
             </div>
           )}
 
-          <!-- Location Specific Content -->
-          <div class="mb-8 bg-primary-50 rounded-xl p-6">
-            <h3 class="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-2">
-              <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-              </svg>
-              Cobertura en {location.name}
-            </h3>
-            <p class="text-neutral-600 mb-4">{location.description}</p>
-            {location.neighborhoods && location.neighborhoods.length > 0 && (
-              <div class="flex flex-wrap gap-2">
-                {location.neighborhoods.map(n => (
-                  <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium">{n}</span>
-                ))}
+          <!-- Location Context -->
+          {locationSections?.intro?.paragraphs && (
+            <div class="mb-8 bg-primary-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                </svg>
+                Cobertura en {locationName}
+              </h3>
+              <p class="text-neutral-600 mb-4">
+                {locationName} se especializa en {ctx.challenges}. {ctx.focus}.
+              </p>
+            </div>
+          )}
+
+          <!-- Service Features -->
+          {serviceSections?.features && (
+            <div class="mb-8">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4">
+                {serviceSections.features.heading || 'Qué incluye el servicio'}
+              </h3>
+              <div class="grid sm:grid-cols-2 gap-3">
+                {Object.entries(serviceSections.features)
+                  .filter(([key]) => !isNaN(Number(key)))
+                  .map(([_, feature]) => (
+                    <div class="flex items-start gap-3 bg-neutral-50 rounded-lg p-4 hover:shadow-md transition-shadow">
+                      <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span class="text-neutral-700">{feature}</span>
+                    </div>
+                  ))
+                }
               </div>
-            )}
-          </div>
+            </div>
+          )}
 
           <!-- Process -->
-          {service.process && service.process.length > 0 && (
+          {serviceSections?.process && (
             <div class="mb-8">
-              <h3 class="text-xl font-bold text-neutral-900 mb-4">Nuestro proceso</h3>
+              <h3 class="text-xl font-bold text-neutral-900 mb-4">
+                {serviceSections.process.heading || 'Nuestro proceso'}
+              </h3>
               <div class="grid sm:grid-cols-4 gap-4">
-                {service.process.map((step, index) => (
-                  <div class="text-center">
-                    <div class="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-3 shadow-lg">
-                      {index + 1}
+                {Object.entries(serviceSections.process)
+                  .filter(([key]) => !isNaN(Number(key)))
+                  .map(([_, step]: [string, any], index: number) => (
+                    <div class="text-center">
+                      <div class="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-3 shadow-lg">
+                        {index + 1}
+                      </div>
+                      <h4 class="font-semibold text-neutral-900 text-sm">{step.step}</h4>
+                      <p class="text-neutral-600 text-xs mt-1">{step.description}</p>
                     </div>
-                    <h4 class="font-semibold text-neutral-900 text-sm">{step.step}</h4>
-                    <p class="text-neutral-600 text-xs mt-1">{step.description}</p>
-                  </div>
-                ))}
+                  ))
+                }
+              </div>
+            </div>
+          )}
+
+          <!-- Stats -->
+          {serviceSections?.stats && (
+            <div class="mb-8 bg-primary-700 text-white rounded-xl p-8">
+              <h3 class="text-xl font-bold text-center mb-6">
+                {serviceSections.stats.heading || 'Números que nos respaldan'}
+              </h3>
+              <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                {Object.entries(serviceSections.stats)
+                  .filter(([key]) => !isNaN(Number(key)))
+                  .map(([_, stat]: [string, any]) => (
+                    <div>
+                      <div class="text-3xl lg:text-4xl font-bold mb-1">{stat.value}</div>
+                      <div class="text-white/80 text-sm">{stat.label}</div>
+                    </div>
+                  ))
+                }
               </div>
             </div>
           )}
 
           <!-- Related Services -->
           <div class="mb-8">
-            <h3 class="text-xl font-bold text-neutral-900 mb-4">Otros servicios en {location.name}</h3>
+            <h3 class="text-xl font-bold text-neutral-900 mb-4">
+              Otros servicios en {locationName}
+            </h3>
             <div class="grid sm:grid-cols-3 gap-4">
-              {relatedServices.map(s => (
-                <a 
-                  href={`/servicios/${s.slug}/${location.slug}`} 
-                  class="bg-neutral-50 rounded-lg p-4 hover:shadow-lg hover:-translate-y-1 transition-all group"
-                >
-                  <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors text-sm mb-1">
-                    {s.name}
-                  </h4>
-                  <p class="text-neutral-600 text-xs line-clamp-2">{s.short_description}</p>
-                </a>
-              ))}
+              {relatedServices.map((s: any) => {
+                const sSections = getServiceSections(s.slug);
+                return (
+                  <a 
+                    href={`/servicios/${s.slug}/${locationSlug}`} 
+                    class="bg-neutral-50 rounded-lg p-4 hover:shadow-lg hover:-translate-y-1 transition-all group"
+                  >
+                    <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors text-sm mb-1">
+                      {sSections?.hero?.heading || s.name}
+                    </h4>
+                    <p class="text-neutral-600 text-xs line-clamp-2">
+                      {sSections?.hero?.subheading || s.short_description || ''}
+                    </p>
+                  </a>
+                );
+              })}
             </div>
           </div>
 
           <!-- FAQs -->
-          <div class="mb-8">
-            <FAQList 
-              faqs={comboFAQs} 
-              title="Preguntas Frecuentes"
-            />
-          </div>
-        </div>
-
-        <!-- Column 3: Sidebar -->
-        <div class="lg:col-span-1">
-          <SidebarCTA 
-            title={`Cotizar ${service.name}`}
-            service={service.name}
-            location={location.name}
-          />
-          
-          <!-- Nearby Locations -->
-          {nearbyLocations.length > 0 && (
-            <div class="mt-8 pt-8 border-t border-neutral-200">
-              <h3 class="font-semibold text-neutral-900 mb-4 flex items-center gap-2">
-                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                </svg>
-                También en {location.zone}
+          {comboFAQs.length > 0 && (
+            <div class="mb-8">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4">
+                Preguntas Frecuentes
               </h3>
-              <div class="space-y-3">
-                {nearbyLocations.map(l => (
-                  <a 
-                    href={`/servicios/${service.slug}/${l.slug}`} 
-                    class="flex items-center justify-between bg-neutral-50 hover:bg-primary-50 rounded-lg p-3 transition-colors group"
-                  >
-                    <span class="text-neutral-700 group-hover:text-primary-600 font-medium text-sm">
-                      {l.name}
-                    </span>
-                    <svg class="w-4 h-4 text-neutral-400 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                    </svg>
-                  </a>
+              <div class="space-y-4">
+                {comboFAQs.map((faq: any) => (
+                  <details class="group bg-neutral-50 rounded-lg">
+                    <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-neutral-900">
+                      {faq.question}
+                      <svg class="w-5 h-5 text-neutral-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </summary>
+                    <div class="px-4 pb-4 text-neutral-600">
+                      {faq.answer}
+                    </div>
+                  </details>
                 ))}
               </div>
             </div>
           )}
         </div>
+
+        <!-- Column 3: Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="bg-neutral-50 rounded-xl p-6 sticky top-8">
+            <h3 class="text-xl font-bold text-neutral-900 mb-4">
+              {serviceSections?.cta?.heading || `Cotiza ${serviceName}`}
+            </h3>
+            
+            {serviceSections?.cta?.description && (
+              <p class="text-neutral-600 mb-6">
+                {serviceSections.cta.description}
+              </p>
+            )}
+            
+            <a 
+              href="/cotizacion" 
+              class="block w-full bg-primary-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+            >
+              {serviceSections?.cta?.button || 'Solicitar Cotización'}
+            </a>
+            
+            <a 
+              href="/contacto" 
+              class="block w-full border border-primary-600 text-primary-600 text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors mt-3"
+            >
+              Llamar ahora
+            </a>
+
+            <!-- Nearby Locations -->
+            {nearbyLocations.length > 0 && (
+              <div class="mt-6 pt-6 border-t border-neutral-200">
+                <h4 class="text-sm font-semibold text-neutral-700 mb-3">
+                  También en {location.zone}
+                </h4>
+                {nearbyLocations.map((l: any) => (
+                  <a 
+                    href={`/servicios/${serviceSlug}/${l.slug}`}
+                    class="flex items-center justify-between py-2 text-sm text-neutral-600 hover:text-primary-600 border-b border-neutral-100 last:border-0"
+                  >
+                    <span>{l.name}</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                ))}
+              </div>
+            )}
+
+            <!-- All Services Links -->
+            <div class="mt-6 pt-6 border-t border-neutral-200">
+              <h4 class="text-sm font-semibold text-neutral-700 mb-3">
+                Más servicios
+              </h4>
+              {services.slice(0, 4).map((s: any) => (
+                <a 
+                  href={`/servicios/${s.slug}/${locationSlug}`}
+                  class="block py-2 text-sm text-neutral-600 hover:text-primary-600 border-b border-neutral-100 last:border-0"
+                >
+                  {s.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <PageCTA 
-    title={`Protege tu ${location.name.toLowerCase()} con GuardMan`}
-    description={`Contactanos para una evaluación personalizada de seguridad en ${location.name}.`}
-    primaryText="Solicitar Cotización"
-    primaryHref="/cotizacion"
-    secondaryText="Hablar con un experto"
-    secondaryHref="/contacto"
-    variant="primary"
-    showPhone={true}
-  />
+  <!-- CTA Final -->
+  <section class="py-12 bg-primary-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl lg:text-3xl font-bold mb-4">
+        Protege tu {locationName} con GuardMan
+      </h2>
+      <p class="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
+        Contactanos para una evaluación personalizada de seguridad en {locationName}.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="/cotizacion" 
+          class="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors"
+        >
+          Solicitar Cotización
+        </a>
+        <a 
+          href="/contacto" 
+          class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+        >
+          Hablar con un experto
+        </a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
