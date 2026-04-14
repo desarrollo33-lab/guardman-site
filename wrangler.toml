@@ -1,14 +1,30 @@
-name = "guardman-api"
+name = "guardman-agent"
 main = "worker/index.ts"
-compatibility_date = "2025-01-01"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
 
 [[d1_databases]]
 binding = "DB"
-database_name = "guardman-d1"
-database_id = "9bd733ce-2dae-4b51-b968-75f8f92e38d5"
+database_name = "guardman-seo"
+database_id = "aeaab85c-d4df-46c4-96b9-28d6a95aaec4"
+
+[ai]
+binding = "AI"
+remote = true
 
 [vars]
 ENVIRONMENT = "production"
 
 [triggers]
 crons = ["0 3 * * *"]
+
+# Secrets (set via: wrangler secret put SERPER_API_KEY)
+# SERPER_API_KEY=560f82db098446d04e390640882b3a4313ffd39b
+
+[[durable_objects.bindings]]
+name = "GUARDMAN"
+class_name = "GuardmanAgent"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["GuardmanAgent"]

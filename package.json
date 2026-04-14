@@ -1,7 +1,7 @@
 {
   "name": "guardman-site",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "node": ">=22.12.0"
   },
@@ -11,7 +11,19 @@
     "preview": "astro preview",
     "astro": "astro",
     "validate": "node scripts/fetch-cms-data.mjs",
-    "validate:data": "node scripts/fetch-cms-data.mjs"
+    "validate:data": "node scripts/fetch-cms-data.mjs",
+    
+    "seo:status": "node scripts/run-pipeline.mjs status",
+    "seo:setup": "node scripts/run-pipeline.mjs setup",
+    "seo:research": "node scripts/run-pipeline.mjs research",
+    "seo:generate": "node scripts/run-pipeline.mjs generate",
+    "seo:full": "node scripts/run-pipeline.mjs full",
+    
+    "worker:dev": "wrangler dev --config wrangler.toml",
+    "worker:deploy": "wrangler deploy --config wrangler.toml",
+    
+    "d1:local": "wrangler d1 execute guardman-seo --local --file=worker/sql/schema.sql",
+    "d1:remote": "wrangler d1 execute guardman-seo --remote --file=worker/sql/schema.sql"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
@@ -24,5 +36,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.4"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
   }
 }

@@ -1,5 +1,108 @@
-const services = [{id:1,title:'Guardias de Seguridad',slug:'guardias-de-seguridad',short:'Proteccion profesional con guardias certificados',desc:'Servicio de guardias de seguridad profesionales.',icon:'shield',min:450000,max:1500000,billing:'month',h:1,a:1,o:1},{id:2,title:'CCTV y Videovigilancia',slug:'cctv-videovigilancia',short:'Camaras de ultima generacion con monitoreo 24/7',desc:'Instalacion de sistemas de camaras de seguridad (CCTV).',icon:'video',min:150000,max:500000,billing:'month',h:1,a:1,o:2},{id:3,title:'Control de Accesos',slug:'control-de-accesos',short:'Control total de accesos con tecnologia biometrica',desc:'Sistemas electronicos de control de accesos.',icon:'key',min:200000,max:800000,billing:'month',h:0,a:1,o:3},{id:4,title:'Escoltas Privados',slug:'escoltas-privados',short:'Proteccion personalizada para executives',desc:'Servicio de escolta personal.',icon:'shield',min:300000,max:1000000,billing:'month',h:0,a:1,o:4},{id:5,title:'Monitoreo 24/7',slug:'monitoreo-24-7',short:'Centro de control con vigilancia las 24 horas',desc:'Centro de operaciones con monitoreo remoto.',icon:'eye',min:150000,max:500000,billing:'month',h:1,a:1,o:5},{id:6,title:'Seguridad para Eventos',slug:'seguridad-eventos',short:'Seguridad profesional para todo tipo de eventos',desc:'Servicio especializado para eventos.',icon:'calendar',min:200000,max:800000,billing:'event',h:0,a:1,o:6},{id:7,title:'Seguridad Industrial',slug:'seguridad-industrial',short:'Proteccion para industrias y bodegas',desc:'Proteccion para instalaciones industriales.',icon:'factory',min:400000,max:1200000,billing:'month',h:0,a:1,o:7},{id:8,title:'Auditoria de Seguridad',slug:'auditoria-seguridad',short:'Evaluacion profesional de vulnerabilidades',desc:'Evaluacion de necesidades de seguridad.',icon:'search',min:0,max:0,billing:'once',h:0,a:1,o:8},{id:9,title:'Guard Pod',slug:'guard-pod',short:'Unidades moviles de vigilancia 24/7',desc:'Unidades moviles de vigilancia autonomas.',icon:'mobile',min:500000,max:1500000,billing:'month',h:0,a:1,o:9}];
-const locations = [{id:1,name:'Las Condes',slug:'las-condes',region:'Metropolitana',zone:'Oriente',score:95,lat:-33.4017,lng:-70.5783},{id:2,name:'Vitacura',slug:'vitacura',region:'Metropolitana',zone:'Oriente',score:90,lat:-33.3892,lng:-70.5836},{id:3,name:'Santiago Centro',slug:'santiago-centro',region:'Metropolitana',zone:'Centro',score:85,lat:-33.4489,lng:-70.6693},{id:4,name:'Huechuraba',slug:'huechuraba',region:'Metropolitana',zone:'Norte',score:70,lat:-33.35,lng:-70.6833},{id:5,name:'Quilicura',slug:'quilicura',region:'Metropolitana',zone:'Norte',score:65,lat:-33.35,lng:-70.7333},{id:6,name:'Lo Barnechea',slug:'lo-barnechea',region:'Metropolitana',zone:'Oriente',score:80,lat:-33.3056,lng:-70.5186},{id:7,name:'La Reina',slug:'la-reina',region:'Metropolitana',zone:'Oriente',score:60,lat:-33.4522,lng:-70.595},{id:8,name:'Renca',slug:'renca',region:'Metropolitana',zone:'Poniente',score:55,lat:-33.4167,lng:-70.7},{id:9,name:'Pudahuel',slug:'pudahuel',region:'Metropolitana',zone:'Poniente',score:55,lat:-33.45,lng:-70.75},{id:10,name:'La Pintana',slug:'la-pintana',region:'Metropolitana',zone:'Sur',score:40,lat:-33.5833,lng:-70.65},{id:11,name:'Lampa',slug:'lampa',region:'Metropolitana',zone:'Norte',score:45,lat:-33.2833,lng:-70.75},{id:12,name:'Conchali',slug:'conchali',region:'Metropolitana',zone:'Poniente',score:45,lat:-33.3833,lng:-70.6833},{id:13,name:'Los Andes',slug:'los-andes',region:'Valparaiso',zone:'Valparaiso',score:35,lat:-32.8333,lng:-70.6},{id:14,name:'San Felipe',slug:'san-felipe',region:'Valparaiso',zone:'Valparaiso',score:30,lat:-32.75,lng:-70.7167}];
-const sectors = [{id:1,name:'Hoteleria',slug:'hoteleria',icon:'building',desc:'Servicios de seguridad para hoteles.',title:'Seguridad para Hoteleria',subtitle:'Proteccion integral',ch:'[{"t":"Alto flujo","d":"Control"}]',f:1,sort:1},{id:2,name:'Corporativo',slug:'corporativo',icon:'office',desc:'Seguridad empresarial para oficinas.',title:'Seguridad Corporativa',subtitle:'Proteccion para empresas',ch:'[{"t":"Control de accesos","d":"RFID"}]',f:1,sort:2},{id:3,name:'Residencial',slug:'residencial',icon:'home',desc:'Seguridad para condominos y residencias.',title:'Seguridad Residencial',subtitle:'Proteccion para condominos',ch:'[{"t":"Acceso perimetral","d":"Vigilancia"}]',f:1,sort:3},{id:4,name:'Industrial',slug:'industrial',icon:'factory',desc:'Seguridad para fabricas y bodegas.',title:'Seguridad Industrial',subtitle:'Proteccion para industrias',ch:'[{"t":"Vigilancia perimetral","d":"Control"}]',f:0,sort:4},{id:5,name:'Automotriz',slug:'automotriz',icon:'car',desc:'Seguridad para empresas automotrices.',title:'Seguridad Automotriz',subtitle:'Proteccion automotriz',ch:'[{"t":"Showrooms","d":"CCTV"}]',f:0,sort:5},{id:6,name:'Diplomatico',slug:'diplomatico',icon:'shield',desc:'Seguridad para embajadas.',title:'Seguridad Diplomatica',subtitle:'Proteccion de alto nivel',ch:'[{"t":"Acceso VIP","d":"Control estricto"}]',f:0,sort:6}];
-const j=(d,s=200)=>new Response(JSON.stringify(d),{status:s,headers:{'Content-Type':'application/json','Access-Control-Allow-Origin':'*'}});
-export default{async fetch(r,e){const u=new URL(r.url),p=u.pathname,m=r.method;if(m==='OPTIONS')return new Response(null,{status:204,headers:{'Access-Control-Allow-Origin':'*','Access-Control-Allow-Methods':'GET,POST','Access-Control-Allow-Headers':'Content-Type'}});if(p==='/health')return j({status:'ok',v:9,ts:new Date().toISOString()});if(p==='/api/seed'&&m==='POST'){try{await e.DB.exec('DELETE FROM services');for(const s of services){await e.DB.prepare('INSERT INTO services (id,title,slug,short_description,description,icon,price_range_min,price_range_max,price_range_billing_period,is_highlighted,is_active,"order") VALUES (?,?,?,?,?,?,?,?,?,?,?,?)').bind(s.id,s.title,s.slug,s.short,s.desc,s.icon,s.min,s.max,s.billing,s.h,s.a,s.o).run();}await e.DB.exec('DELETE FROM locations');for(const l of locations){await e.DB.prepare('INSERT INTO locations (id,name,slug,region,geo_zone,priority_score,is_active,coordinates_lat,coordinates_lng) VALUES (?,?,?,?,?,?,?,?,?)').bind(l.id,l.name,l.slug,l.region,l.zone,l.score,1,l.lat,l.lng).run();}await e.DB.exec('DELETE FROM sectors');for(const s of sectors){await e.DB.prepare('INSERT INTO sectors (id,name,slug,icon,description,hero_title,hero_subtitle,challenges,featured,status,sort) VALUES (?,?,?,?,?,?,?,?,?,?,?)').bind(s.id,s.name,s.slug,s.icon,s.desc,s.title,s.subtitle,s.ch,s.f,'published',s.sort).run();}return j({success:true,message:'All data seeded',counts:{services:services.length,locations:locations.length,sectors:sectors.length}});}catch(e){return j({error:e.message},500);}}if(p==='/api/services'&&m==='GET'){const t=u.searchParams.get('slug');if(t){const r=await e.DB.prepare('SELECT * FROM services WHERE slug=?').bind(t).first();return r?j(r):j({e:'not found'},404);}const r=await e.DB.prepare('SELECT * FROM services WHERE is_active=1 ORDER BY "order"').all();return j(r.results);}if(p==='/api/locations'&&m==='GET'){const t=u.searchParams.get('slug');if(t){const r=await e.DB.prepare('SELECT * FROM locations WHERE slug=?').bind(t).first();return r?j(r):j({e:'not found'},404);}const r=await e.DB.prepare('SELECT * FROM locations WHERE is_active=1 ORDER BY name').all();return j(r.results);}if(p==='/api/sectors'&&m==='GET'){const t=u.searchParams.get('slug');if(t){const r=await e.DB.prepare('SELECT * FROM sectors WHERE slug=?').bind(t).first();return r?j(r):j({e:'not found'},404);}const r=await e.DB.prepare('SELECT * FROM sectors WHERE status=? ORDER BY sort').bind('published').all();return j(r.results);}if(p==='/api/config'&&m==='GET'){const r=await e.DB.prepare('SELECT * FROM site_config WHERE id=1').first();return j(r||{site_name:'GuardMan Chile',phone:'+56930000010'});}return j({v:9,endpoints:['/health','/api/seed','/api/services','/api/locations','/api/sectors','/api/config']});}};
+/**
+ * Guardman Agent - Worker Principal
+ */
+
+import { handleResearch, handleBatchResearch } from './handlers/research';
+import { handleGenerate } from './handlers/generate';
+import { handleD1Status, handleD1Query } from './handlers/d1';
+import { handleGuardmanAgent } from './handlers/guardman';
+import { handleDeploy } from './handlers/deploy';
+
+export { GuardmanAgent } from './agents/guardman';
+
+export interface Env {
+  DB: D1Database;
+  AI: any;
+  GUARDMAN: DurableObjectNamespace;
+  AUTH_PASSWORD: string;
+  ENVIRONMENT: string;
+}
+
+export default {
+  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+    const url = new URL(request.url);
+    const path = url.pathname;
+
+    const corsHeaders = {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+    };
+
+    if (request.method === 'OPTIONS') {
+      return new Response(null, { status: 204, headers: corsHeaders });
+    }
+
+    // Health check
+    if (path === '/health') {
+      return new Response(JSON.stringify({
+        status: 'ok',
+        service: 'guardman-agent',
+        timestamp: new Date().toISOString()
+      }), { headers: { 'Content-Type': 'application/json', ...corsHeaders } });
+    }
+
+    let response: Response;
+
+    try {
+      if (path === '/') {
+        response = new Response(JSON.stringify({
+          service: 'Guardman Agent',
+          version: '1.0.0',
+          endpoints: {
+            research: '/api/research',
+            generate: '/api/generate',
+            d1: '/api/d1/status',
+            guardman: '/api/guardman/status',
+            deploy: '/api/deploy'
+          }
+        }), { headers: { 'Content-Type': 'application/json' } });
+
+      } else if (path === '/api/research') {
+        response = await handleResearch(request, env);
+        
+      } else if (path === '/api/batch-research') {
+        response = await handleBatchResearch(request, env);
+        
+      } else if (path.startsWith('/api/generate')) {
+        response = await handleGenerate(request, env, ctx);
+        
+      } else if (path === '/api/d1/status' || path === '/api/d1/query') {
+        response = await handleD1Query(request, env);
+        
+      } else if (path.startsWith('/api/guardman')) {
+        response = await handleGuardmanAgent(request, env, ctx);
+        
+      } else if (path === '/api/deploy') {
+        response = await handleDeploy(request, env, ctx);
+        
+      } else {
+        response = new Response(JSON.stringify({ error: 'Not found' }), {
+          status: 404,
+          headers: { 'Content-Type': 'application/json' }
+        });
+      }
+
+    } catch (error: any) {
+      console.error('Worker error:', error);
+      response = new Response(JSON.stringify({
+        error: 'Internal server error',
+        message: error.message
+      }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    // Add CORS headers
+    const headers = new Headers(response.headers);
+    for (const [key, value] of Object.entries(corsHeaders)) {
+      headers.set(key, value);
+    }
+
+    return new Response(response.body, {
+      status: response.status,
+      headers
+    });
+  }
+};

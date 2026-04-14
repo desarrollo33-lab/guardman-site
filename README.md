@@ -1,160 +1,203 @@
-# GuardMan Chile - Sitio Web
+# GuardMan Chile - Sitio Web con SEO Agent
 
-Sitio web estático para GuardMan Chile - empresa de seguridad privada en Santiago.
+Sitio web estático para GuardMan Chile + Sistema de generación SEO automatizado.
 
 ## Stack
 
 - **Framework:** Astro 5 (static site)
 - **Styling:** Tailwind CSS v4
 - **Data:** JSON estático en `src/data/generated/`
+- **SEO Agent:** Cloudflare Workers + D1 + Durable Objects
 - **Deploy:** Cloudflare Pages
-- **API:** Cloudflare Workers + D1 (opcional)
 
-## Arquitectura 100% Cloudflare
+## Arquitectura
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                      Cloudflare                              │
-├─────────────────────────────────────────────────────────────┤
-│  Cloudflare Pages ──────► Static Site (dist/)               │
-│       │                                                      │
-│       └──► Cloudflare Workers + D1 (API opcional)           │
-│                    (worker/)                                │
-└─────────────────────────────────────────────────────────────┘
-
-┌─────────────────────────────────────────────────────────────┐
-│                     Local Development                        │
-├─────────────────────────────────────────────────────────────┤
-│  src/data/generated/*.json  ───►  Static Data               │
-│       │                                                      │
-│       └──► npm run validate  ───►  Data Validation           │
-└─────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────┐
+│                      GUARDMAN SEO SYSTEM                             │
+├────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐         │
+│  │   SERPER     │───▶│  GUARDMAN   │───▶│     D1       │         │
+│  │   CLIENT     │    │   AGENT     │    │   DATABASE   │         │
+│  │  (Research)  │    │  (Durable   │    │  (Storage)   │         │
+│  │              │    │   Object)   │    │              │         │
+│  └──────────────┘    └──────────────┘    └──────────────┘         │
+│         │                   │                   │                    │
+│         │                   │                   ▼                    │
+│         │                   │    ┌──────────────────────────┐      │
+│         │                   │    │  STORED DATA             │      │
+│         │                   │    │  - Raw research          │      │
+│         │                   │    │  - Keywords + SDS         │      │
+│         │                   │    │  - FAQs                   │      │
+│         │                   │    │  - Competitors            │      │
+│         │                   │    │  - Generated content      │      │
+│         │                   │    │  - Agent knowledge        │      │
+│         │                   │    └──────────────────────────┘      │
+│         │                   │                   │                    │
+│         │                   ▼                   ▼                    │
+│         │          ┌──────────────────┐   ┌──────────────┐        │
+│         │          │  CONTENT ENGINE  │   │    ASTRO     │        │
+│         │          │  (AI Generated)   │   │   BUILD      │        │
+│         │          └──────────────────┘   └──────────────┘        │
+│         │                   │                   │                    │
+│         └───────────────────┴───────────────────┘                   │
+│                              │                                       │
+│                              ▼                                       │
+│                    ┌──────────────────┐                            │
+│                    │  CLOUDFLARE      │                            │
+│                    │  PAGES + WORKER   │                            │
+│                    └──────────────────┘                            │
+│                                                                     │
+└────────────────────────────────────────────────────────────────────┘
 ```
 
-## Desarrollo Local
+## Quick Start
 
 ```bash
-# Instalar dependencias
+# 1. Install dependencies
 npm install
 
-# Iniciar servidor de desarrollo
-npm run dev
+# 2. Setup D1 database
+npm run d1:local
 
-# Validar datos estáticos
-npm run validate
+# 3. Check status
+npm run seo:status
 
-# Build para producción
+# 4. Run research (collect keywords, FAQs, competitors)
+npm run seo:research
+
+# 5. Deploy worker
+npm run worker:deploy
+
+# 6. Generate content
+npm run seo:generate
+
+# 7. Build site
 npm run build
 
-# Preview del build
-npm run preview
+# 8. Deploy to Pages
+npx wrangler pages deploy dist --project-name=guardman-site
+```
+
+## SEO Pipeline Commands
+
+```bash
+npm run seo:status    # Check D1 status
+npm run seo:setup     # Setup D1 database
+npm run seo:research  # Research with Serper
+npm run seo:generate  # Generate content
+npm run seo:full      # Full pipeline
+```
+
+## Worker API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/health` | GET | Health check |
+| `/api/research` | GET | Research status |
+| `/api/research` | POST | Research single combo |
+| `/api/generate/service` | POST | Generate service content |
+| `/api/generate/location` | POST | Generate location content |
+| `/api/generate/combo` | POST | Generate combo content |
+| `/api/guardman/status` | GET | Agent status |
+| `/api/guardman/learn` | POST | Teach agent |
+| `/api/d1/status` | GET | D1 status |
+| `/api/deploy` | POST | Trigger deploy |
+
+## D1 Database Schema
+
+### Research Tables
+- `services` - 9 servicios de seguridad
+- `locations` - 14 comunas de cobertura
+- `serper_queries` - Queries ejecutadas
+- `serper_results` - Resultados SERP
+- `keywords` - Keywords con SDS
+- `competitors` - Competidores analizados
+- `faqs` - FAQs de PAA
+
+### Generated Content Tables
+- `service_content` - Contenido para servicios
+- `location_content` - Contenido para ubicaciones
+- `combo_content` - Contenido para combinaciones
+
+### Agent Tables
+- `agent_knowledge` - Base de conocimiento
+- `agent_corrections` - Correcciones humanas
+- `guardman_history` - Historial de generaciones
+
+## Guardman Agent
+
+El agente es un Durable Object que:
+1. Genera contenido SEO basado en research
+2. Aprende de correcciones humanas
+3. Mantiene base de conocimiento
+4. Optimiza contenido para rankings
+
+### Knowledge Categories
+- `security_patterns` - Patrones de seguridad
+- `industry_regulations` - Normativas (OS-10, Ley 21.659)
+- `client_intent` - Intenciones de búsqueda
+- `competitive_moats` - Ventajas competitivas
+- `regional_patterns` - Patrones por zona
+- `content_templates` - Templates de contenido
+- `exclusion_rules` - Qué NO decir
+
+## Desarrollo
+
+```bash
+# Development
+npm run dev              # Astro dev
+npm run worker:dev       # Worker dev
+
+# Build
+npm run build            # Astro build
+
+# Validation
+npm run validate         # Validate JSON data
+```
+
+## Deployment
+
+### Worker
+```bash
+npx wrangler deploy --config wrangler.toml
+```
+
+### Pages
+```bash
+npx wrangler pages deploy dist --project-name=guardman-site
 ```
 
 ## Estructura del Proyecto
 
 ```
 guardman-site/
-├── src/
-│   ├── components/     # Componentes Astro/React
-│   ├── data/           # Datos estáticos (JSON)
-│   │   └── generated/  # *.json files
-│   ├── layouts/        # Layouts base
-│   ├── pages/          # Páginas Astro
-│   │   ├── servicios/  # Detalle de servicios
-│   │   ├── ubicaciones/# Detalle de ubicaciones
-│   │   ├── sectores/   # Sectores
-│   │   ├── blog/       # Blog
-│   │   ├── contacto.astro
-│   │   ├── cotizacion.astro
-│   │   ├── nosotros.astro
-│   │   └── ...
-│   └── styles/         # Tailwind + custom CSS
-├── worker/             # Cloudflare Worker (API opcional)
-│   ├── index.ts         # Worker principal
-│   └── sql/            # DDL para D1
-├── public/              # Assets públicos
-├── scripts/             # Scripts de validación
-├── dist/                # Build output
-└── wrangler.toml        # Configuración Worker
+├── src/                    # Astro site
+│   ├── components/
+│   ├── data/generated/     # JSON data
+│   ├── layouts/
+│   ├── pages/
+│   └── styles/
+├── worker/                 # Cloudflare Worker
+│   ├── agents/
+│   │   └── guardman.ts     # Guardman Agent (Durable Object)
+│   ├── handlers/
+│   │   ├── research.ts     # Serper research
+│   │   ├── generate.ts     # Content generation
+│   │   ├── d1.ts          # D1 queries
+│   │   └── deploy.ts       # Deployment
+│   ├── serper.ts           # Serper client
+│   ├── auth.ts             # Auth middleware
+│   ├── router.ts           # Router
+│   └── index.ts           # Worker entry
+├── scripts/
+│   ├── run-pipeline.mjs    # Pipeline CLI
+│   └── fetch-cms-data.mjs  # Data validation
+├── worker/sql/
+│   └── schema.sql          # D1 schema
+└── wrangler.toml           # Worker config
 ```
-
-## Datos Estáticos
-
-Todo el contenido del sitio está almacenado como archivos JSON en `src/data/generated/`:
-
-| Archivo | Descripción |
-|---------|-------------|
-| `services.json` | 9 servicios de seguridad |
-| `locations.json` | 14 comunas de cobertura |
-| `sectors.json` | 6 sectores industriales |
-| `clients.json` | Clientes destacados |
-| `testimonials.json` | Testimonios |
-| `blog.json` | Artículos del blog |
-| `site-config.json` | Configuración general |
-
-### Editar Contenido
-
-Para actualizar el contenido, edita los archivos JSON directamente:
-
-```bash
-# Validar cambios
-npm run validate
-```
-
-## Páginas
-
-| Ruta | Descripcion |
-|------|-------------|
-| `/` | Homepage |
-| `/servicios` | Lista de servicios |
-| `/servicios/[slug]` | Detalle de servicio |
-| `/servicios/[slug]/[location]` | Servicio + ubicación |
-| `/ubicaciones` | Lista de ubicaciones |
-| `/ubicaciones/[slug]` | Detalle de ubicacion |
-| `/sectores` | Sectores industriales |
-| `/sectores/[slug]` | Detalle de sector |
-| `/blog` | Blog |
-| `/blog/[slug]` | Artículo |
-| `/nosotros` | Sobre nosotros |
-| `/contacto` | Formulario de contacto |
-| `/cotizacion` | Solicitud de cotización |
-| `/privacidad` | Política de privacidad |
-| `/terminos` | Términos de servicio |
-| `/404` | Página no encontrada |
-
-## Deployment a Cloudflare Pages
-
-1. Fork o clone este repositorio en GitHub
-2. Ir a [Cloudflare Dashboard](https://dash.cloudflare.com)
-3. Pages → Create a project → Connect to Git
-4. Configurar:
-   - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
-5. Click Deploy
-
-## API Worker (Opcional)
-
-El sitio funciona 100% estático sin necesidad del Worker.
-El Worker (`worker/`) es opcional para:
-
-- API REST con datos de D1
-- Formularios dinámicos
-- Integraciones externas
-
-### Deploy Worker
-
-```bash
-npx wrangler deploy --config wrangler.toml
-```
-
-### Endpoints del Worker
-
-- `GET /health` - Health check
-- `POST /api/seed` - Poblar D1 con datos
-- `GET /api/services` - Lista servicios
-- `GET /api/locations` - Lista ubicaciones
-- `GET /api/sectors` - Lista sectores
-- `GET /api/config` - Configuración
 
 ## Contacto
 
