@@ -1,1 +1,80 @@
-{"sectorSlug":"residencial","sections":{"hero":{"heading":"Seguridad Residencial","subheading":"Protección para condominos, edificios y residencias particulares en Santiago.","cta_text":"Cotiza Seguridad Residencial"},"intro":{"heading":"Introducción","subheading":"","paragraphs":["La seguridad residencial busca proteger a las familias y sus hogares. En GuardMan Chile ofrecemos soluciones adaptadas para condominos, edificios y residences particulares en toda la Región Metropolitana.","Nuestros guardias están entrenados para gestionar accesos, interactuar cordialmente con residentes y visitantes, y actuar con profesionalismo ante cualquier situación.","Contamos con tecnología de respaldo que incluye centros de monitoreo propio y sistemas de comunicación directa para coordinación inmediata."]},"features":{"0":"Control de accesos y registro de visitas","1":"Rondas preventivas en áreas comunes","2":"Vigilancia en horarios programados","3":"Coordinación con sistemas de cámaras existentes","4":"Monitoreo 24/7 desde centro propio","5":"Comunicación directa con residentes","heading":"Qué incluye","subheading":""},"issues":{"0":"Robos en viviendas y vehículos en estacionamiento","1":"Acceso no autorizado a condominos","2":"Vandalismo en áreas comunes","3":"Falta de iluminación en zonas comunes","heading":"Problemas que solucionamos","subheading":""},"stats":{"0":{"label":"Residencias protegidas","value":"300+"},"1":{"label":"Condominos atendidos","value":"150+"},"2":{"label":"Años experiencia","value":"8+"},"heading":"Números que nos respaldan","subheading":""},"faqs":{"0":{"question":"¿Pueden cuidar edificios con piscina y áreas comunes?","answer":"Sí, nuestros guardias vigilan todas las áreas comunes incluyendo piscina, gimnasio, salón multiuso y estacionamientos."},"1":{"question":"¿Los guardias hablan inglés?","answer":"Disponemos de guardias bilingües para condominos y edificios con residentes extranjeros."},"2":{"question":"¿Cómo報告o novedades?","answer":"Recibir un reporte diario por email con fotografías de novedades, conteo de visitas y estado general de la seguridad."},"heading":"Preguntas Frecuentes","subheading":""},"cta":{"heading":"Protege tu hogar y familia","subheading":"Solicita una evaluación de seguridad para tu residence.","description":"Solicita una evaluación de seguridad para tu residence.","button":"Solicitar Cotización"}}}
+{
+  "sections": {
+    "hero": {
+      "heading": "Seguridad Residencial en Santiago | GuardMan Chile",
+      "subheading": "Protegemos tu hogar y familia con guardias certificados y tecnología de monitoreo 24/7. Confianza que se demuestra.",
+      "image": "/images/sector-residencial.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Sectores",
+        "url": "/sectores"
+      },
+      {
+        "label": "Residencial",
+        "url": "/sectores/residencial"
+      }
+    ],
+    "intro": {
+      "title": "Seguridad Residencial de Alto Nivel para Tu Hogar",
+      "content": "En GuardMan Chile entendemos que tu hogar es tu refugio. Por eso ofrecemos servicios de seguridad residencial diseñados para proteger lo que más te importa: tu familia y tu patrimonio. Con más de 8 años de experiencia y presencia en 14 comunas de la Región Metropolitana, somos el socio de confianza para miles de familias chilenas.\n\nNuestro equipo de guardias OS-10 certificados trabaja coordinada mente con nuestro centro de monitoreo propio las 24 horas, garantizando una respuesta inmediata ante cualquier situación de riesgo. Desde condos y edificios hasta casas particulares, adaptamos nuestras soluciones a tus necesidades específicas.",
+      "image": "/images/sector-intro.jpg"
+    },
+    "features": {
+      "title": "¿Por Qué Elegir GuardMan Para Tu Hogar?",
+      "items": [
+        "Guardias certificados OS-10 con formación especializada en seguridad residencial",
+        "Centro de monitoreo propio 24/7 con respuesta inmediata ante emergencias",
+        "Cobertura en 14 comunas de la Región Metropolitana",
+        "Sistemas de CCTV y control de accesos integrados",
+        "Rondas preventivas personalizadas según tu sector y horario",
+        "Comunicación directa con Carabineros y servicios de emergencia"
+      ]
+    },
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años de experiencia"
+      },
+      {
+        "value": "500+",
+        "label": "Guardias OS-10 certificados"
+      },
+      {
+        "value": "14",
+        "label": "Comunas con cobertura"
+      },
+      {
+        "value": "2.500+",
+        "label": "Clientes residenciales satisfechos"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta contratar seguridad residencial en GuardMan Chile?",
+        "answer": "Los costos varían según el tipo de propiedad, extensión del sector a vigilar y horario requerido. En GuardMan ofrecemos cotizaciones personalizadas sin costo. Generalmente, los planes parten desde $350.000 mensuales para servicios básicos."
+      },
+      {
+        "question": "¿Qué es la certificación OS-10 y por qué es importante?",
+        "answer": "La certificación OS-10 es otorgada por la Autoridad Marítima y acredita que el guardia está habilitado para funciones de seguridad privada. Todos nuestros guardias cuentan con esta certificación, garantizando formación profesional y conocimiento legal."
+      },
+      {
+        "question": "¿Pueden vigilar solo ciertas horas de mi casa o condomio?",
+        "answer": "Sí, adaptamos los horarios según tus necesidades. Puedes elegir vigilancia full time las 24 horas, medios turnos de 12 horas, o servicios nocturnos y de fin de semana. También ofrecemos escoltas para momentos específicos."
+      },
+      {
+        "question": "¿En qué comunas de Santiago ofrecen servicios de seguridad residencial?",
+        "answer": "Cubrimos 14 comunas de la Región Metropolitana incluyendo Las Condes, Providencia, Vitacura, La Reina, Ñuñoa, Santiago Centro, Macul, Peñalolén, San Bernardo, La Florida, Puente Alto, entre otras. Consulta disponibilidad para tu sector."
+      }
+    ],
+    "cta": {
+      "headline": "Protege Tu Hogar Hoy con GuardMan Chile",
+      "button_text": "Agenda Tu Reunión Gratis",
+      "button_link": "/cotizacion"
+    }
+  }
+}

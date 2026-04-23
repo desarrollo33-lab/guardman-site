@@ -1,74 +1,80 @@
 {
-  "slug": "la-reina",
-  "name": "La Reina",
-  "zone": "Oriente",
   "sections": {
     "hero": {
-      "heading": "Seguridad Privada en La Reina",
-      "subheading": "Empresa líder con guardias OS-10 en La Reina. Cobertura 24/7.",
-      "cta_text": "Cotiza en La Reina"
+      "heading": "Seguridad Privada en La Reina | Guardias 24/7",
+      "subheading": "Protege tu hogar, empresa y familia con guardias certificados OS-10. Coverage total en todos los sectores de La Reina.",
+      "image": "/images/og-default.webp"
     },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Ubicaciones",
+        "url": "/ubicaciones"
+      },
+      {
+        "label": "La reina",
+        "url": "/ubicaciones/la-reina"
+      }
+    ],
     "intro": {
-      "heading": "Introducción",
-      "subheading": "",
-      "paragraphs": [
-        "En GuardMan Chile entendemos las necesidades específicas de seguridad en La Reina. Esta zona premium requiere soluciones de seguridad sofisticadas y discretas.",
-        "Contamos con guardias experimentados que conocen las dinámicas del sector Oriente de Santiago.",
-        "Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos para esta zona."
+      "title": "Protección Confiable en La Reina",
+      "content": "En GuardMan Chile somos la empresa de seguridad privada líder en La Reina, ofreciendo soluciones integrales para hogares, empresas y comunidades. Con más de 8 años de experiencia y 500+ guardias certificados OS-10, garantizamos tranquilidad las 24 horas del día.\n\nNuestro centro de monitoreo propio y respuesta inmediata nos permiten reaccionar ante cualquier incidente en el menor tiempo posible. Trabajamos en todos los sectores de La Reina: La Reina Alta, La Reina Baja, sector de Av. General Ossa, Av. Chile-España, Sector Osvaldo Marín y zonas aledañas.",
+      "image": "/images/location-intro.jpg"
+    },
+    "features": {
+      "title": "Nuestros Servicios en La Reina",
+      "items": [
+        "Guardias de seguridad las 24 horas para hogares y empresas",
+        "Instalación y monitoreo de CCTV con cámaras en tiempo real",
+        "Sistemas de control de accesos para residential y corporativo",
+        "Escoltas profesionales para transporte de valores y personas",
+        "Monitoreo remoto desde nuestro centro de operaciones 24/7",
+        "Seguridad para eventos y actividades especiales"
       ]
     },
-    "coverage": {
-      "0": "Guardias disponibles 24/7",
-      "1": "Tiempo de respuesta < 30 minutos",
-      "2": "Centro de monitoreo propio",
-      "3": "Reportes diarios de novedades",
-      "heading": "Cobertura en La Reina",
-      "subheading": ""
-    },
-    "issues": {
-      "0": "Robos a viviendas y vehículos en zonas residenciales",
-      "1": "Acceso no autorizado a condominos y edificios",
-      "2": "Necesidad de seguridad discreta pero efectiva",
-      "heading": "Problemas que solucionamos",
-      "subheading": ""
-    },
-    "stats": {
-      "0": {
-        "label": "Empresas protegidas",
-        "value": "20+"
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años en el mercado"
       },
-      "1": {
-        "label": "Guardias en zona",
-        "value": "30+"
+      {
+        "value": "500+",
+        "label": "Guardias certificados OS-10"
       },
-      "2": {
-        "label": "Tiempo respuesta",
-        "value": "< 30 min"
+      {
+        "value": "120+",
+        "label": "Clientes satisfechos en La Reina"
       },
-      "heading": "Números que nos respaldan",
-      "subheading": ""
-    },
-    "faqs": {
-      "0": {
-        "question": "¿Hay disponibilidad de guardias en La Reina?",
-        "answer": "Sí, tenemos guardias disponibles desplegados en La Reina listos para comenzar el servicio."
+      {
+        "value": "Inmediato",
+        "label": "Tiempo de respuesta"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cubren toda la comuna de La Reina?",
+        "answer": "Sí, cubrimos todos los sectores de La Reina incluyendo La Reina Alta, La Reina Baja, Sector Osvaldo Marín, sector de Av. General Ossa y zonas aledañas."
       },
-      "1": {
-        "question": "¿Cuál es el tiempo de respuesta en La Reina?",
-        "answer": "Nuestro tiempo de respuesta en La Reina es inferior a 30 minutos desde cualquier punto de la comuna."
+      {
+        "question": "¿Qué certificaciones tienen sus guardias?",
+        "answer": "Todos nuestros guardias están certificados OS-10, la certificación oficial requerida en Chile para guardias de seguridad privada."
       },
-      "2": {
-        "question": "¿Qué tipos de propiedades protegen?",
-        "answer": "Protegemos empresas, condominos, residencias, obras y cualquier tipo de propiedad que necesite seguridad."
+      {
+        "question": "¿Ofrecen planes para casas y departamentos?",
+        "answer": "Sí, tenemos planes personalizados para residences, comunidades de vecinos y empresas. Contáctanos para una cotización sin compromiso."
       },
-      "heading": "Preguntas Frecuentes",
-      "subheading": ""
-    },
+      {
+        "question": "¿Cuál es el tiempo de respuesta ante emergencias?",
+        "answer": "Contamos con tiempo de respuesta inmediata y centro de monitoreo 24/7 que gestiona cualquier incidente en el menor tiempo posible."
+      }
+    ],
     "cta": {
-      "heading": "Protege tu propiedad en La Reina",
-      "subheading": "Contáctanos para una cotización personalizada.",
-      "description": "Contáctanos para una cotización personalizada.",
-      "button": "Solicitar Cotización"
+      "headline": "¿Necesitas seguridad en La Reina?",
+      "button_text": "Solicitar Cotización",
+      "button_link": "/cotizacion"
     }
   }
 }

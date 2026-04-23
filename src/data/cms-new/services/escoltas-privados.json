@@ -1,0 +1,137 @@
+{
+  "slug": "escoltas-privados",
+  "type": "service",
+  "version": 1,
+  "last_modified": "2026-04-22T14:11:12.767Z",
+  "seo": {
+    "title": "Escoltas Privados Chile | Certificados OS-10 - GuardMan",
+    "description": "Contrata escoltas privados certificados OS-10 en Chile. Experiencia profesional, cobertura en 14 comunas. Precios desde $35.000/hr. Cotiza gratis con GuardMan Chile.",
+    "canonical": "https://guardman.cl/servicios/escoltas-privados"
+  },
+  "content": {
+    "hero": {
+      "heading": "Escoltas Privados en Chile: Protección Personal y Ejecutiva",
+      "subheading": "GuardMan Chile ofrece escoltas privados certificados OS-10 con experiencia verificada. Seguridad profesional para empresas, ejecutivos y familias en Santiago y 14 comunas.",
+      "image": "/images/service-escoltas-privados.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Escoltas Privados",
+        "url": "/servicios/escoltas-privados"
+      }
+    ],
+    "intro": {
+      "title": "Servicio de Escoltas Privados con Certificación y Experiencia",
+      "content": "En GuardMan Chile somos especialistas en escoltas privados con más de 8 años protegiendo a personas, familias y empresas en todo el país. Nuestros escoltas privados en Chile cuentan con certificación OS-10 vigente, entrenamiento táctico avanzado y amplia experiencia en protección personal y ejecutiva para diferentes niveles de riesgo.\nEntendemos que cada cliente tiene necesidades únicas de seguridad. Por eso diseñamos planes personalizados de escoltas privados profesionales que se adaptan a tu estilo de vida, ubicación y presupuesto. Ya sea que necesites protección temporal para un evento, cobertura diaria para ejecutivos o vigilancia permanente las 24 horas, tenemos la solución ideal.\nNuestro equipo de escoltas privados para empresas incluye profesionales con experiencia en seguridad corporativa, protección VIP, custodia de valores y acompañamientos especiales. Todos nuestros guardias pasan rigurosos controles de antecedentes y evaluaciones psicológicas para garantizar profesionalismo y confiabilidad absoluta.",
+      "image": "/images/service-intro.jpg"
+    },
+    "features": {
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Ex袈s y Carabineros con experiencia en protección",
+        "Capacitación en protección ejecutiva y manejo defensivo",
+        "Vehículos equipados para protección móvil",
+        "Comunicación directa con centro de monitoreo 24/7",
+        "Evaluación de riesgos antes de iniciar el servicio",
+        "Protocolos de respuesta ante emergencias personalizados"
+      ]
+    },
+    "issues": {
+      "title": "¿Por Qué Contratar Escoltas Privados con GuardMan?",
+      "items": [
+        "La seguridad personal se ha convertido en una prioridad para ejecutivos, empresarios y familias en Chile. Los índices de delitos contra personas y robos con violencia exigen contar con protección profesional especializada que solo escoltas privados certificados pueden ofrecer.",
+        "En GuardMan Chile garantizamos que todos nuestros escoltas privados tienen experiencia verificable en el rubro, certificación OS-10 vigente y entrenamiento continuo en técnicas de defensa personal, manejo de crisis y protocolos de emergencia.",
+        "A diferencia de contratar personal no certificado, nuestros escoltas privados para empresas cumplen con la normativa legal vigente y cuentan con seguros de responsabilidad civil que protegen tanto al cliente como al profesional.",
+        "Nuestro servicio incluye supervisión constante, respaldo de radiocomunicadores y conexión directa con nuestro centro de monitoreo 24/7, asegurando respuesta inmediata ante cualquier situación de riesgo."
+      ]
+    },
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años de experiencia en seguridad privada"
+      },
+      {
+        "value": "500+",
+        "label": "Guardias escoltas certificados OS-10"
+      },
+      {
+        "value": "2.500+",
+        "label": "Clientes satisfechos con nuestros servicios"
+      },
+      {
+        "value": "14",
+        "label": "Comunas cubiertas en la Región Metropolitana"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Los escoltas están armados?",
+        "answer": "No, nuestros escoltas operan sin armas de fuego, siguiendo la normativa chilena. Su protección se basa en prevención, disuasión y respuesta defensiva no letal."
+      },
+      {
+        "question": "¿Puedo contratar escoltas solo para eventos específicos?",
+        "answer": "Sí, ofrecemos servicio por evento para reuniones, presentaciones, eventos corporativos y cualquier situación que requiera protección temporal."
+      },
+      {
+        "question": "¿Los escoltas manejan vehículos?",
+        "answer": "Sí, todos nuestros escoltas tienen licencia de conducir avanzada y están entrenados en manejo defensivo para proteger al protegido."
+      },
+      {
+        "question": "¿Qué pasa si hay una emergencia?",
+        "answer": "El escolta tiene comunicación directa con nuestro centro de monitoreo y conoce los protocolos de evacuación y contacto con Carabineros."
+      },
+      {
+        "question": "¿Cómo inicio el servicio de escoltas?",
+        "answer": "Llámenos al +56 9 3000 0010 para una evaluación confidencial. El servicio puede iniciarse en menos de 24 horas."
+      }
+    ],
+    "cta": {
+      "headline": "Protege lo Que Más Importa con Escoltas Privados Profesionales",
+      "button_text": "Cotizar Escoltas Privados",
+      "button_link": "/cotizacion"
+    }
+  },
+  "related_content": {
+    "related_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/guardias-de-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "Cctv Videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "Control De Accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ],
+    "upsell_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 75,
+    "published": false
+  }
+}

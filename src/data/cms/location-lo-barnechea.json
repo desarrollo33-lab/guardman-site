@@ -1,74 +1,80 @@
 {
-  "slug": "lo-barnechea",
-  "name": "Lo Barnechea",
-  "zone": "Oriente",
   "sections": {
     "hero": {
-      "heading": "Seguridad Privada en Lo Barnechea",
-      "subheading": "Empresa líder con guardias OS-10 en Lo Barnechea. Cobertura 24/7.",
-      "cta_text": "Cotiza en Lo Barnechea"
+      "heading": "Seguridad Privada en Lo Barnechea | Guardias y Monitoreo 24/7",
+      "subheading": "Protegemos tu hogar, empresa o evento en Lo Barnechea con guardias certificados y tecnología de vanguardia.",
+      "image": "/images/og-default.webp"
     },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Ubicaciones",
+        "url": "/ubicaciones"
+      },
+      {
+        "label": "Lo barnechea",
+        "url": "/ubicaciones/lo-barnechea"
+      }
+    ],
     "intro": {
-      "heading": "Introducción",
-      "subheading": "",
-      "paragraphs": [
-        "En GuardMan Chile entendemos las necesidades específicas de seguridad en Lo Barnechea. Esta zona premium requiere soluciones de seguridad sofisticadas y discretas.",
-        "Contamos con guardias experimentados que conocen las dinámicas del sector Oriente de Santiago.",
-        "Nuestro conocimiento del territorio nos permite identificar puntos críticos y diseñar esquemas de seguridad efectivos para esta zona."
+      "title": "Guardia de Seguridad en Lo Barnechea con Certificación OS-10",
+      "content": "En GuardMan Chile somos la empresa de seguridad privada líder en Lo Barnechea. Contamos con más de 8 años de experiencia protegiendo familias, empresas y comunidades en esta exclusiva comuna de Santiago.\n\nCada guardia que desplegamos en Lo Barnechea está certificado con curso OS-10 y cuenta con formación especializada para résidentela vigilancia residencial, control de accesos en condominios y protección de zonas de alto tráfico. Nuestro compromiso es entregar tranquilidad real a cada cliente.",
+      "image": "/images/location-intro.jpg"
+    },
+    "features": {
+      "title": "¿Por Qué Elegir GuardMan en Lo Barnechea?",
+      "items": [
+        "Guardias certificados OS-10 con experiencia en vigilancia residencial y empresarial.",
+        "Centro de monitoreo 24/7 propio con respuesta inmediata ante emergencias.",
+        "Cobertura en toda la comuna: Ciudad Empresarial, portals, condominios y casas.",
+        "Sistemas de CCTV y control de accesos con tecnología de última generación.",
+        "Escoltas capacitados para protección personal y de ejecutivos.",
+        "Contratos flexibles adaptados a las necesidades de cada cliente."
       ]
     },
-    "coverage": {
-      "0": "Guardias disponibles 24/7",
-      "1": "Tiempo de respuesta < 30 minutos",
-      "2": "Centro de monitoreo propio",
-      "3": "Reportes diarios de novedades",
-      "heading": "Cobertura en Lo Barnechea",
-      "subheading": ""
-    },
-    "issues": {
-      "0": "Robos a viviendas y vehículos en zonas residenciales",
-      "1": "Acceso no autorizado a condominos y edificios",
-      "2": "Necesidad de seguridad discreta pero efectiva",
-      "heading": "Problemas que solucionamos",
-      "subheading": ""
-    },
-    "stats": {
-      "0": {
-        "label": "Empresas protegidas",
-        "value": "20+"
+    "stats": [
+      {
+        "value": "85+",
+        "label": "Clientes protegidos en la comuna"
       },
-      "1": {
-        "label": "Guardias en zona",
-        "value": "30+"
+      {
+        "value": "45+",
+        "label": "Guardias desplegados en Lo Barnechea"
       },
-      "2": {
-        "label": "Tiempo respuesta",
-        "value": "< 30 min"
+      {
+        "value": "8+",
+        "label": "Años de experiencia"
       },
-      "heading": "Números que nos respaldan",
-      "subheading": ""
-    },
-    "faqs": {
-      "0": {
-        "question": "¿Hay disponibilidad de guardias en Lo Barnechea?",
-        "answer": "Sí, tenemos guardias disponibles desplegados en Lo Barnechea listos para comenzar el servicio."
+      {
+        "value": "<5",
+        "label": "Tiempo de respuesta promedio (min)"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta un guardia de seguridad en Lo Barnechea?",
+        "answer": "El valor depende de la cantidad de guardias, horario y servicios adicionales como CCTV. Contáctanos para una cotización personalizada sin compromiso."
       },
-      "1": {
-        "question": "¿Cuál es el tiempo de respuesta en Lo Barnechea?",
-        "answer": "Nuestro tiempo de respuesta en Lo Barnechea es inferior a 30 minutos desde cualquier punto de la comuna."
+      {
+        "question": "¿Tienen cobertura en Ciudad Empresarial y portals de Lo Barnechea?",
+        "answer": "Sí, cubrimos toda la comuna incluyendo Ciudad Empresarial, portals comerciales, condominios residenciales y zonas rurales. Tenemos guardias disponibles para cada tipo de inmueble."
       },
-      "2": {
-        "question": "¿Qué tipos de propiedades protegen?",
-        "answer": "Protegemos empresas, condominos, residencias, obras y cualquier tipo de propiedad que necesite seguridad."
+      {
+        "question": "¿Puedo contratar solo monitoreo sin guardias físicos?",
+        "answer": "Claro, ofrecemos planes de monitoreo 24/7 independientes o combinados con vigilancia física. Tú eliges el nivel de protección que necesitas."
       },
-      "heading": "Preguntas Frecuentes",
-      "subheading": ""
-    },
+      {
+        "question": "¿Los guardias pueden trabajar en eventos puntuales?",
+        "answer": "Sí, disponibilizamos escoltas y guardias para eventos corporativos, matrimonios, lanzamientos y celebraciones. Contamos con experiencia en seguridad de eventos de alta concurrencia."
+      }
+    ],
     "cta": {
-      "heading": "Protege tu propiedad en Lo Barnechea",
-      "subheading": "Contáctanos para una cotización personalizada.",
-      "description": "Contáctanos para una cotización personalizada.",
-      "button": "Solicitar Cotización"
+      "headline": "Protege lo que más importa en Lo Barnechea",
+      "button_text": "Solicitar Cotización Gratuita",
+      "button_link": "/cotizacion"
     }
   }
 }

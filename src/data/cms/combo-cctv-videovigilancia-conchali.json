@@ -1,0 +1,96 @@
+{
+  "sections": {
+    "hero": {
+      "heading": "CCTV y Videovigilancia en Conchalí",
+      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector poniente de Santiago.",
+      "cta_text": "Cotizar en Conchalí",
+      "cta_link": "/cotizacion?service=cctv-videovigilancia&location=conchali",
+      "image": "/images/service-cctv-videovigilancia.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Cctv Videovigilancia",
+        "url": "/servicios/cctv-videovigilancia"
+      },
+      {
+        "label": "Conchali",
+        "url": "/servicios/cctv-videovigilancia/conchali"
+      }
+    ],
+    "intro": {
+      "title": "¿Por qué elegir CCTV y Videovigilancia en Conchalí?",
+      "content": "En GuardMan Chile somos especialistas en cctv y videovigilancia en Conchalí. Nuestra experiencia en el sector poniente de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Conchalí y toda la zona Poniente.",
+      "image": "/images/combo-intro.jpg"
+    },
+    "features": {
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Cámaras de alta definición con visión nocturna",
+        "Monitoreo remoto 24/7 desde nuestra central",
+        "Grabación en la nube con respaldo de 30 días",
+        "Detección de movimiento y alertas en tiempo real",
+        "Acceso desde cualquier dispositivo móvil",
+        "Instalación profesional y mantenimiento incluido"
+      ]
+    },
+    "zone_specific": {
+      "title": "Por qué Conchali",
+      "content": "",
+      "points": [
+        "establecimientos comerciales y residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de rondas preventivas, control vecinal y coordinación comunitaria es cada vez más urgente en el sector poniente de Santiago.",
+        " muchas empresas y residencias en Conchalí enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "issues": {
+      "title": "Desafíos de seguridad en Conchalí",
+      "items": [
+        "establecimientos comerciales y residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de rondas preventivas, control vecinal y coordinación comunitaria es cada vez más urgente en el sector poniente de Santiago.",
+        " muchas empresas y residencias en Conchalí enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "stats": [
+      {
+        "value": "< 30 min",
+        "label": "Tiempo de respuesta en Poniente"
+      },
+      {
+        "value": "Poniente",
+        "label": "Cobertura"
+      },
+      {
+        "value": "Disponibles",
+        "label": "Guardias OS-10"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Puedo ver las cámaras en mi celular?",
+        "answer": "Sí, todas nuestras cámaras incluyen acceso remoto desde la app móvil. Puedes ver en tiempo real desde cualquier dispositivo, en cualquier momento."
+      },
+      {
+        "question": "¿Por cuánto tiempo se graba?",
+        "answer": "Por defecto grabamos 30 días en la nube con respaldo automático. Podemos extender el período según tus necesidades de seguridad."
+      },
+      {
+        "question": "¿Qué pasa si hay una emergencia?",
+        "answer": "Nuestro equipo de monitoreo recibe las alertas inmediatamente y coordina la respuesta: contacto a Carabineros, notificación a tus contactos de emergencia y activación de sirena si está configurado."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu propiedad en Conchalí",
+      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
+      "button_text": "Cotizar en Conchalí",
+      "button_link": "/cotizacion?service=cctv-videovigilancia&location=conchali"
+    }
+  }
+}

@@ -1,1 +1,80 @@
-{"sectorSlug":"salud","sections":{"hero":{"heading":"Seguridad para Clínicas y Hospitales","subheading":"Protección especializada para centros de salud, clínicas y hospitales.","cta_text":"Cotiza Seguridad Hospitalaria"},"intro":{"heading":"Introducción","subheading":"","paragraphs":["Los centros de salud requieren protocolos de seguridad especializados que protejan pacientes, personal médico y visitantes. En GuardMan Chile tenemos experiencia protegiendo clínicas y hospitales en Santiago.","Nuestros guardias están entrenados en manejo de situaciones críticas, coordinación con equipos de emergencia y respeto por la privacidad de los pacientes.","Implementamos sistemas de control de accesos específicos para áreas de urgencia, UCI y farmacias."]},"features":{"0":"Control de accesos en áreas restringidas","1":"Vigilancia en urgencias y salas de espera","2":"Coordinación con equipo de seguridad del hospital","3":"Manejo de situaciones de violencia","4":"Control de estacionamiento y ambulancias","5":"Reporte de incidentes especializado","heading":"Qué incluye","subheading":""},"issues":{"0":"Situaciones de violencia o aggression","1":"Acceso no autorizado a áreas críticas","2":"Control de visitantes en horarios especiales","3":"Protección de farmacias y stock de medicamentos","heading":"Problemas que solucionamos","subheading":""},"stats":{"0":{"label":"Centros de salud","value":"15+"},"1":{"label":"Guardias capacitados","value":"80+"},"2":{"label":"Años experiencia","value":"6+"},"heading":"Números que nos respaldan","subheading":""},"faqs":{"0":{"question":"¿Los guardias tienen capacitación médica?","answer":"No brindamos atención médica, pero están entrenados en primeros auxilios y coordinación con equipos de emergencia."},"1":{"question":"¿Cómo manejan situaciones de violencia?","answer":"Tenemos protocolos específicos para desescalada, contención verbal y comunicación con Carabineros."},"2":{"question":"¿Cubren las 24 horas?","answer":"Sí, ofrecemos cobertura continua con personal especializado en cada turno."},"heading":"Preguntas Frecuentes","subheading":""},"cta":{"heading":"Protege tu centro de salud","subheading":"Solicita una cotización para tu clínica u hospital.","description":"Solicita una cotización para tu clínica u hospital.","button":"Solicitar Cotización"}}}
+{
+  "sections": {
+    "hero": {
+      "heading": "Seguridad para Clínicas y Hospitales en Chile | GuardMan",
+      "subheading": "Protección integral para centros de salud con guardias certificados OS-10 y tecnología de monitoreo 24/7.",
+      "image": "/images/sector-diplomatico.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Sectores",
+        "url": "/sectores"
+      },
+      {
+        "label": "Salud",
+        "url": "/sectores/salud"
+      }
+    ],
+    "intro": {
+      "title": "Seguridad Integral para el Sector Salud en Chile",
+      "content": "En GuardMan Chile entendemos que los centros de salud requieren protocolos de seguridad especiales. Nuestro equipo está preparado para proteger pacientes, personal médico y visitantes en clínicas, hospitales y consultorios de Santiago.\n\nCon más de 8 años de experiencia protegiendo instalaciones de salud, ofrecemos soluciones personalizadas que se adaptan a las necesidades específicas de cada centro médico, garantizando un ambiente seguro para todos.",
+      "image": "/images/sector-intro.jpg"
+    },
+    "features": {
+      "title": "¿Por qué elegir GuardMan para tu clínica u hospital?",
+      "items": [
+        "Guardias certificados OS-10 con formación en manejo de crisis sanitarias",
+        "Monitoreo 24/7 desde nuestro centro de operaciones propio",
+        "Sistemas de control de accesos para áreas restringidas",
+        "Protocolos específicos para emergencias médicas y evacuaciones",
+        "CCTV con cámaras de alta definición y análisis en tiempo real",
+        "Coordinación permanente con Carabineros y servicios de emergencia"
+      ]
+    },
+    "stats": [
+      {
+        "value": "45+",
+        "label": "Centros de salud protegidos"
+      },
+      {
+        "value": "500+",
+        "label": "Guardias disponibles 24/7"
+      },
+      {
+        "value": "8+",
+        "label": "Años de experiencia"
+      },
+      {
+        "value": "14",
+        "label": "Comunas con cobertura"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Qué tipo de guardias trabajan en centros de salud?",
+        "answer": "Nuestros guardias OS-10 reciben capacitación especial para entornos médicos, incluyendo manejo de situaciones de emergencia, primeros auxilios básicos y protocolo de relaciones con pacientes y familiares."
+      },
+      {
+        "question": "¿Cómo controlan el acceso a áreas restringidas del hospital?",
+        "answer": "Implementamos sistemas de control de accesos con tarjetas RFID, biometría y registro manual. Cada guardia está entrenado para verificar credenciales y gestionar visitas según los protocolos de cada institución."
+      },
+      {
+        "question": "¿Pueden coordinar con el personal de seguridad del hospital?",
+        "answer": "Sí, nos integramos completamente con los equipos internos de seguridad. Trabajamos de manera coordinada, respetando los protocolos internos y reportando directamente a la dirección del centro de salud."
+      },
+      {
+        "question": "¿Qué pasa en situaciones de emergencia médica?",
+        "answer": "Nuestros guardias están entrenados para facilitar el acceso de ambulancias, controlar flujo de personas y apoyar en evacuaciones. Además, notreten las instalaciones en todo momento ante emergencias."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu centro de salud con los mejores",
+      "button_text": "Pedir Cotización Ahora",
+      "button_link": "/cotizacion"
+    }
+  }
+}

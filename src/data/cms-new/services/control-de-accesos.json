@@ -1,0 +1,138 @@
+{
+  "slug": "control-de-accesos",
+  "type": "service",
+  "version": 1,
+  "last_modified": "2026-04-22T14:11:12.765Z",
+  "seo": {
+    "title": "Control de Accesos con Guardias OS-10 | GuardMan Chile",
+    "description": "Servicio profesional de control de accesos en Chile: guardias certificados OS-10, monitoreo 24/7 propio y más de 8 años de experiencia. Cotiza hoy.",
+    "canonical": "https://guardman.cl/servicios/control-de-accesos"
+  },
+  "content": {
+    "hero": {
+      "heading": "Control de Accesos con Guardias Certificados OS-10 | GuardMan Chile",
+      "subheading": "Seguridad 24/7 con guardias profesionales y monitoreo propio en toda la Región Metropolitana",
+      "image": "/images/service-control-de-accesos.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Control De Accesos",
+        "url": "/servicios/control-de-accesos"
+      }
+    ],
+    "intro": {
+      "title": "Control de Accesos Profesional: Más que Tecnología, es Gente Calificada",
+      "content": "En GuardMan Chile llevamos más de 8 años protegiendo empresas, edificios y condominios con servicios de control de accesos que combinan tecnología avanzada ypersonal de seguridad certificado OS-10. A diferencia de las empresas que solo instalan equipos, nosotros entregamos una solución integral con guardias capacitados que saben cómo actuar ante cualquier situación.\nNuestro monitoreo 24/7 propio nos permite reaccionar en tiempo real. Si alguien intenta ingresar fuera de horario, si hay una emergencia o si el sistema detecta algo sospechoso, nuestro equipo actúa inmediatamente. Eso es lo que marca la diferencia entre un sistema automático y un servicio de seguridad real.",
+      "image": "/images/service-intro.jpg"
+    },
+    "features": {
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Lectores biométricos de huella dactilar y reconocimiento facial",
+        "Tarjetas RFID y tags de proximidad compatibles",
+        "Cerraduras electromagnéticas y electroimanes de alta seguridad",
+        "Software de gestión con reportes de asistencia y accesos",
+        "Integración con sistemas de videovigilancia existentes",
+        "Acceso remoto para administradores desde cualquier dispositivo"
+      ]
+    },
+    "issues": {
+      "title": "Problemas que Enfrentan las Empresas con el Control de Accesos",
+      "items": [
+        "Sistemas de citófono o video portero sin vigilancia humana: Los equipos tecnológicos funcionan, pero no hay nadie que verifique quién entra realmente.",
+        "Empresas que solo venden tecnología sin servicio de guardias: Instalan torniquetes o lectores, pero cuando hay un problema no hay quien intervenga.",
+        "Personal sin certificación OS-10: Usar guardias sin la autorización oficial pone en riesgo la legalidad del servicio y la seguridad del lugar.",
+        "Monitoreo externalizado: Si el centro de monitoreo es de terceros, la respuesta ante emergencias puede tardar más de lo necesario.",
+        "Falta de control en horarios nocturnos o fines de semana: Los momentos de mayor vulnerabilidad suelen ser los peor atendidos."
+      ]
+    },
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años de experiencia en seguridad privada"
+      },
+      {
+        "value": "500+",
+        "label": "Guardias operativos certificados OS-10"
+      },
+      {
+        "value": "3",
+        "label": "Centros de monitoreo con operación propia"
+      },
+      {
+        "value": "15+",
+        "label": "Cobertura en comunas de la Región Metropolitana"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Qué incluye el servicio de Control de Accesos?",
+        "answer": "El servicio incluye: lectores biométricos o RFID, controlador central, software de gestión, instalación profesional, configuración de permisos, capacitación y 12 meses de soporte técnico."
+      },
+      {
+        "question": "¿Puedo controlar accesos desde mi celular?",
+        "answer": "Sí, nuestra plataforma permite administrar usuarios, crear reportes y recibir alertas de intentos de acceso fallidos desde cualquier dispositivo con internet."
+      },
+      {
+        "question": "¿Funciona sin energía eléctrica?",
+        "answer": "Nuestras cerraduras electromagnéticas incluyen batería de respaldo que mantiene el sistema operativo hasta 8 horas sin energía."
+      },
+      {
+        "question": "¿Cuántos usuarios puedo gestionar?",
+        "answer": "El sistema base soporta hasta 1,000 usuarios. Para instalaciones más grandes, ofrecemos soluciones empresariales con hasta 10,000 usuarios."
+      },
+      {
+        "question": "¿Ofrecen servicio de monitoreo 24/7?",
+        "answer": "Sí, todos nuestros sistemas de control de accesos pueden integrarse con nuestro centro de monitoreo para alertas en tiempo real."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu Edificio o Empresa con el Mejor Control de Accesos",
+      "button_text": "Cotizar Control de Accesos Ahora",
+      "button_link": "/cotizacion"
+    }
+  },
+  "related_content": {
+    "related_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/guardias-de-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "Cctv Videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "escoltas-privados",
+        "title": "Escoltas Privados",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/escoltas-privados.jpg"
+      }
+    ],
+    "upsell_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 75,
+    "published": false
+  }
+}

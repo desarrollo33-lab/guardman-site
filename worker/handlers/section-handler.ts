@@ -320,46 +320,47 @@ function parseSection(sectionKey: string, sectionData: any, entityName: string):
 // ============================================
 
 export async function getServiceSections(serviceSlug: string, env: Env): Promise<any> {
-  const rows = await env.DB.prepare(`
+  const result = await env.DB.prepare(`
     SELECT section_key, heading, subheading, content_json
     FROM service_sections
     WHERE service_slug = ? AND status = 'published'
     ORDER BY section_order
   `).bind(serviceSlug).all() as any;
 
-  return parseSectionsFromRows(rows.results || []);
+  return parseSectionsFromRows(result?.results || []);
 }
 
 export async function getLocationSections(locationSlug: string, env: Env): Promise<any> {
-  const rows = await env.DB.prepare(`
+  const result = await env.DB.prepare(`
     SELECT section_key, heading, subheading, content_json
     FROM location_sections
     WHERE location_slug = ? AND status = 'published'
     ORDER BY section_order
   `).bind(locationSlug).all() as any;
 
-  return parseSectionsFromRows(rows.results || []);
+  return parseSectionsFromRows(result?.results || []);
 }
 
 export async function getSectorSections(sectorSlug: string, env: Env): Promise<any> {
-  const rows = await env.DB.prepare(`
+  const result = await env.DB.prepare(`
     SELECT section_key, heading, subheading, content_json
     FROM sector_sections
     WHERE sector_slug = ? AND status = 'published'
     ORDER BY section_order
   `).bind(sectorSlug).all() as any;
 
-  return parseSectionsFromRows(rows.results || []);
+  return parseSectionsFromRows(result?.results || []);
 }
 
 export async function getComboSections(serviceSlug: string, locationSlug: string, env: Env): Promise<any> {
-  const rows = await env.DB.prepare(`
+  const result = await env.DB.prepare(`
     SELECT section_key, heading, content_json
     FROM combo_sections
     WHERE service_slug = ? AND location_slug = ? AND status = 'published'
     ORDER BY section_order
   `).bind(serviceSlug, locationSlug).all() as any;
 
+  const rows = result?.results || [];
   const sections: Record<string, any> = {};
   for (const row of rows) {
     const content = row.content_json ? JSON.parse(row.content_json) : {};

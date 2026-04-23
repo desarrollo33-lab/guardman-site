@@ -1,83 +1,112 @@
-[
-  {
-    "slug": "guardias-de-seguridad",
-    "name": "Guardias de Seguridad",
-    "hero": {
-      "heading": "Guardias de Seguridad",
-      "subheading": "Protección profesional con guardias certificados OS-10 y respaldo de centro de monitoreo propio las 24 horas.",
-      "cta_text": "Cotiza Guardias de Seguridad"
+{
+  "results": [
+    {
+      "id": 8,
+      "slug": "auditoria-seguridad",
+      "name": "Auditoría de Seguridad",
+      "short_description": "Evaluación profesional de vulnerabilidades",
+      "price_range": "$$",
+      "status": "completed",
+      "created_at": "2026-04-13 23:46:18",
+      "updated_at": "2026-04-14 00:59:21",
+      "featured": 0,
+      "sort": 0
+    },
+    {
+      "id": 2,
+      "slug": "cctv-videovigilancia",
+      "name": "CCTV y Videovigilancia",
+      "short_description": "Cámaras de última generación con monitoreo 24/7",
+      "price_range": "$$$$",
+      "status": "completed",
+      "created_at": "2026-04-13 23:46:18",
+      "updated_at": "2026-04-14 00:59:21",
+      "featured": 0,
+      "sort": 0
+    },
+    {
+      "id": 3,
+      "slug": "control-de-accesos",
+      "name": "Control de Accesos",
+      "short_description": "Control total de accesos con tecnología biométrica",
+      "price_range": "$$$",
+      "status": "completed",
+      "created_at": "2026-04-13 23:46:18",
+      "updated_at": "2026-04-14 00:59:21",
+      "featured": 0,
+      "sort": 0
+    },
+    {
+      "id": 4,
+      "slug": "escoltas-privados",
+      "name": "Escoltas Privados",
+      "short_description": "Protección personalizada para executives",
+      "price_range": "$$$$",
+      "status": "completed",
+      "created_at": "2026-04-13 23:46:18",
+      "updated_at": "2026-04-14 00:59:21",
+      "featured": 0,
+      "sort": 0
+    },
+    {
+      "id": 9,
+      "slug": "guard-pod",
+      "name": "Guard Pod",
+      "short_description": "Unidades móviles de vigilancia 24/7 con tecnología avanzada",
+      "price_range": "$$$$",
+      "status": "completed",
+      "created_at": "2026-04-13 23:46:18",
+      "updated_at": "2026-04-14 00:59:21",
+      "featured": 0,
+      "sort": 0
+    },
+    {
+      "id": 1,
+      "slug": "guardias-de-seguridad",
+      "name": "Guardias de Seguridad",
+      "short_description": "Protección profesional con guardias certificados las 24 horas",
+      "price_range": "$$$",
+      "status": "completed",
+      "created_at": "2026-04-13 23:46:18",
+      "updated_at": "2026-04-14 00:59:21",
+      "featured": 0,
+      "sort": 0
+    },
+    {
+      "id": 5,
+      "slug": "monitoreo-24-7",
+      "name": "Monitoreo 24/7",
+      "short_description": "Centro de control con vigilancia las 24 horas",
+      "price_range": "$$$",
+      "status": "completed",
+      "created_at": "2026-04-13 23:46:18",
+      "updated_at": "2026-04-14 00:59:21",
+      "featured": 0,
+      "sort": 0
+    },
+    {
+      "id": 7,
+      "slug": "seguridad-industrial",
+      "name": "Seguridad Industrial",
+      "short_description": "Protección para industrias, bodegas y obras",
+      "price_range": "$$$",
+      "status": "completed",
+      "created_at": "2026-04-13 23:46:18",
+      "updated_at": "2026-04-14 00:59:21",
+      "featured": 0,
+      "sort": 0
+    },
+    {
+      "id": 6,
+      "slug": "seguridad-eventos",
+      "name": "Seguridad para Eventos",
+      "short_description": "Seguridad profesional para todo tipo de eventos",
+      "price_range": "$$$$",
+      "status": "completed",
+      "created_at": "2026-04-13 23:46:18",
+      "updated_at": "2026-04-14 00:59:21",
+      "featured": 0,
+      "sort": 0
     }
-  },
-  {
-    "slug": "cctv-videovigilancia",
-    "name": "CCTV y Videovigilancia",
-    "hero": {
-      "heading": "CCTV y Videovigilancia",
-      "subheading": "Sistemas de cámaras de última generación con análisis de video con IA y monitoreo 24/7.",
-      "cta_text": "Cotiza CCTV"
-    }
-  },
-  {
-    "slug": "control-de-accesos",
-    "name": "Control de Accesos",
-    "hero": {
-      "heading": "Control de Accesos",
-      "subheading": "Sistemas biométricos y RFID para control de ingresos en empresas y condominos.",
-      "cta_text": "Cotiza Control de Accesos"
-    }
-  },
-  {
-    "slug": "escoltas-privados",
-    "name": "Escoltas Privados",
-    "hero": {
-      "heading": "Escoltas Privados",
-      "subheading": "Protección personal para ejecutivos y personalidades con guardias OS-10.",
-      "cta_text": "Cotiza Escoltas"
-    }
-  },
-  {
-    "slug": "monitoreo-24-7",
-    "name": "Monitoreo 24/7",
-    "hero": {
-      "heading": "Monitoreo 24/7",
-      "subheading": "Centro de monitoreo propio con operadores capacitados las 24 horas.",
-      "cta_text": "Cotiza Monitoreo"
-    }
-  },
-  {
-    "slug": "seguridad-eventos",
-    "name": "Seguridad para Eventos",
-    "hero": {
-      "heading": "Seguridad para Eventos",
-      "subheading": "Protección profesional para eventos corporativos, sociales y masivos.",
-      "cta_text": "Cotiza Seguridad para Eventos"
-    }
-  },
-  {
-    "slug": "seguridad-industrial",
-    "name": "Seguridad Industrial",
-    "hero": {
-      "heading": "Seguridad Industrial",
-      "subheading": "Vigilancia para fábricas, bodegas y centros logísticos.",
-      "cta_text": "Cotiza Seguridad Industrial"
-    }
-  },
-  {
-    "slug": "auditoria-seguridad",
-    "name": "Auditoría de Seguridad",
-    "hero": {
-      "heading": "Auditoría de Seguridad",
-      "subheading": "Evaluación profesional de vulnerabilidades y plan de mejoras.",
-      "cta_text": "Cotiza Auditoría"
-    }
-  },
-  {
-    "slug": "guard-pod",
-    "name": "Guard Pod",
-    "hero": {
-      "heading": "Guard Pod",
-      "subheading": "Unidades móviles de vigilancia autónoma para obras y eventos.",
-      "cta_text": "Cotiza Guard Pod"
-    }
-  }
-]
+  ]
+}

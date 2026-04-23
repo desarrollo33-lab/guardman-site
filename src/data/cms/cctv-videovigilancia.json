@@ -1,107 +1,95 @@
 {
-  "slug": "cctv-videovigilancia",
-  "name": "CCTV y Videovigilancia",
-  "short_description": "Cámaras de última generación con monitoreo 24/7",
-  "price_range": "$$$$",
-  "featured": 0,
-  "sort": 0,
   "sections": {
     "hero": {
-      "heading": "CCTV y Videovigilancia",
-      "subheading": "Sistemas de cámaras de última generación con análisis de video con IA y monitoreo 24/7.",
-      "cta_text": "Cotiza CCTV"
+      "heading": "CCTV y Videovigilancia en Santiago | Seguridad Profesional",
+      "subheading": "Monitoreo 24/7 con guardias OS-10 certificados. Protege tu empresa o hogar con 8 años de experiencia.",
+      "cta_text": "Cotizar Videovigilancia",
+      "image": "/images/service-cctv-videovigilancia.webp"
     },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Cctv Videovigilancia",
+        "url": "/servicios/cctv-videovigilancia"
+      }
+    ],
     "intro": {
-      "heading": "Introducción",
-      "subheading": "",
-      "paragraphs": [
-        "GuardMan Chile ofrece sistemas de CCTV y videovigilancia de última generación para proteger su empresa, condomino o residencia. Nuestras cámaras de alta definición permiten monitoreo en tiempo real desde cualquier lugar.",
-        "La videovigilancia moderna va más allá de grabar imágenes. Nuestros sistemas incluyen análisis de video con inteligencia artificial, detección de movimiento, notificaciones en tiempo real y almacenamiento en la nube.",
-        "Todos nuestros equipos son de marcas reconocidas como Hikvision, Dahua y Axis. Ofrecemos opciones desde 2MP hasta 4K, con visión nocturna y análisis de comportamiento."
-      ]
+      "title": "Sistema de CCTV y Videovigilancia en Santiago que realmente funciona",
+      "content": "En GuardMan Chile sabemos que las cámaras de seguridad no son solo equipos: son tu primera línea de defensa. Por eso diseñamos sistemas de videovigilancia profesional adaptados a cada cliente, combinando tecnología de alto rendimiento con monitoreo en vivo las 24 horas.\nA diferencia de las tiendas que solo venden equipos, nosotros somos una empresa de seguridad privada con certificación OS-10. Esto significa que nuestros guardias están entrenados para reaccionar ante cualquier situación que detecten las cámaras, no solo para grabar.",
+      "image": "/images/service-intro.jpg"
     },
     "features": {
-      "0": "Cámaras IP de alta definición (2MP a 4K)",
-      "1": "Visión nocturna por infrarrojo hasta 50 metros",
-      "2": "Análisis de video con IA (detección facial, movimiento)",
-      "3": "Monitoreo remoto desde smartphone y computadora",
-      "4": "Almacenamiento en la nube con respaldo automático",
-      "5": "Integración con acceso remoto y control de luces",
-      "heading": "Qué incluye",
-      "subheading": ""
-    },
-    "process": {
-      "0": {
-        "step": "Diagnóstico",
-        "description": "Evaluamos su propiedad y recomendamos las cámaras ideales"
-      },
-      "1": {
-        "step": "Cotización",
-        "description": "Presentamos opciones con diferentes rangos de precio"
-      },
-      "2": {
-        "step": "Instalación",
-        "description": "Técnicos certificados instalan y configuran el sistema"
-      },
-      "3": {
-        "step": "Capacitación",
-        "description": "Entrenamos a su equipo en el uso del sistema"
-      },
-      "heading": "Nuestro proceso",
-      "subheading": ""
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Cámaras IP de alta definición (2MP a 4K)",
+        "Visión nocturna por infrarrojo hasta 50 metros",
+        "Análisis de video con IA (detección facial, movimiento)",
+        "Monitoreo remoto desde smartphone y computadora",
+        "Almacenamiento en la nube con respaldo automático",
+        "Integración con acceso remoto y control de luces"
+      ]
     },
     "issues": {
-      "0": "Cámaras obsoletas que no permiten identificar rostros o patentes",
-      "1": "Sin monitoreo remoto: no puede ver su propiedad desde cualquier lugar",
-      "2": "Grabaciones perdidas por fallas en equipos o discos duros",
-      "heading": "Problemas que solucionamos",
-      "subheading": ""
+      "title": "Problemas que enfrentas con los servicios de videovigilancia actuales",
+      "items": [
+        "Cámaras compradas en retail que graban pero nadie observa: un intruso puede estar horas antes de que te des cuenta",
+        "Empresas que instalan equipos sin respaldo: cuando necesitas soporte, no responden o te cobran el doble",
+        "Sistemas sin certificación OS-10: tus cámaras están ahí pero no hay protocolo de reacción ante emergencias",
+        "Monitoreo subcontratado a empresas externas con operadores sobregirados que no conocen tu sector",
+        "Precios que incluyen equipos chinos de baja calidad que fallan a los pocos meses"
+      ]
     },
-    "stats": {
-      "0": {
-        "label": "Cámaras instaladas",
-        "value": "2,000+"
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años de experiencia en seguridad privada"
       },
-      "1": {
-        "label": "Clientes activos",
-        "value": "350+"
+      {
+        "value": "500+",
+        "label": "Guardias operativos con certificación OS-10"
       },
-      "2": {
-        "label": "Garantía equipos",
-        "value": "24 meses"
+      {
+        "value": "150+",
+        "label": "Clientes activos en la Región Metropolitana"
       },
-      "heading": "Números que nos respaldan",
-      "subheading": ""
-    },
-    "faqs": {
-      "0": {
+      {
+        "value": "2",
+        "label": "Centros de monitoreo propios"
+      }
+    ],
+    "faq": [
+      {
         "question": "¿Puedo ver las cámaras desde mi celular?",
         "answer": "Sí, todas nuestras instalaciones incluyen acceso remoto mediante aplicación gratuita para iOS y Android, con notificaciones de movimiento."
       },
-      "1": {
+      {
         "question": "¿Cuánto duran las grabaciones?",
         "answer": "Por defecto almacenamos 30 días de grabaciones. Ofrecemos planes desde 7 hasta 90 días según sus necesidades y presupuesto."
       },
-      "2": {
+      {
         "question": "¿Necesito internet para ver las cámaras?",
         "answer": "Sí, para acceso remoto se requiere conexión a internet. El sistema sigue grabando localmente aunque pierda conexión."
       },
-      "3": {
+      {
         "question": "¿Qué pasa si se corta la luz?",
         "answer": "Nuestras cámaras incluyen UPS integrado que permite hasta 4 horas de operación continua sin energía eléctrica."
       },
-      "4": {
+      {
         "question": "¿Ofrecen mantenimiento?",
         "answer": "Sí, tenemos planes de mantenimiento preventivo trimestral que incluyen limpieza de lentes, verificación de conexiones y actualización de firmware."
-      },
-      "heading": "Preguntas Frecuentes",
-      "subheading": ""
-    },
+      }
+    ],
     "cta": {
-      "heading": "Cotiza CCTV y Videovigilancia",
-      "subheading": "Protege tu propiedad con la mejor tecnología.",
-      "description": "Protege tu propiedad con la mejor tecnología.",
-      "button": "Solicitar Cotización"
+      "headline": "No dejes tu seguridad para después",
+      "button_text": "Solicitar Cotización Gratis",
+      "button_link": "/cotizacion"
     }
   }
 }

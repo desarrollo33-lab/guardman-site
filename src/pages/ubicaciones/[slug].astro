@@ -1,13 +1,16 @@
 ---
 /**
- * Location Page - Usa contenido del CMS (secciones)
+ * Location Page - MODIFICADO: Usa contenido del CMS (JSON con related_content)
  */
-
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getServiceSections, getLocationSections, getServicesList, getLocationsList } from '../../data/cms';
 import SchemaLocalBusiness from '../../components/seo/SchemaLocalBusiness.astro';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
 import { optimizeImageUrl } from '../../data/directus';
+import { readFileSync, existsSync } from 'fs';
+
+const CMS_DIR = 'src/data/cms';
+const NEW_CMS_DIR = 'src/data/cms-new';
 
 export async function getStaticPaths() {
   const locations = getLocationsList();
@@ -20,53 +23,65 @@ export async function getStaticPaths() {
 const { slug, name, zone } = Astro.props as { slug: string; name: string; zone: string };
 const locationName = name;
 
-// Get CMS sections
 const sections = getLocationSections(slug);
 const locations = getLocationsList();
 const services = getServicesList();
 
-// Find current location
-const location = locations.find((l: any) => l.slug === slug) || { 
-  slug, 
+const location = locations.find((l: any) => l.slug === slug) || {
+  slug,
   name: locationName,
   zone: zone || 'Centro'
 };
 
-// Get nearby locations in same zone
-const nearbyLocations = locations
-  .filter((l: any) => l.slug !== slug && l.zone === location.zone)
-  .slice(0, 3);
+// Load new CMS JSON format (with related_content)
+const newLocationPath = `${NEW_CMS_DIR}/locations/${slug}.json`;
+const legacyLocationPath = `${CMS_DIR}/location-${slug}.json`;
+let cmsLocationData: any = null;
 
-// Get available services
+if (existsSync(newLocationPath)) {
+  cmsLocationData = JSON.parse(readFileSync(newLocationPath, 'utf-8'));
+} else if (existsSync(legacyLocationPath)) {
+  const legacy = JSON.parse(readFileSync(legacyLocationPath, 'utf-8'));
+  cmsLocationData = { content: legacy.sections, related_content: {} };
+}
+
+// Use related_content from CMS JSON
+const relatedContentFromCMS = cmsLocationData?.related_content || {};
+const nearbyLocations = relatedContentFromCMS?.nearby_locations || locations.filter((l: any) => l.slug !== slug && l.zone === location.zone).slice(0, 3);
+
 const availableServices = services.slice(0, 6);
 
-// Hero data
-const hero = sections?.hero || { 
+const hero = sections?.hero || {
   heading: `Seguridad Privada en ${locationName}`,
   subheading: `Empresa líder con guardias OS-10 en ${locationName}. Cobertura 24/7.`
 };
 
-// Breadcrumb
+const heroImage = hero.image || null;
+const ogImage = sections?.meta?.ogImage || (heroImage ? `/cdn-cgi/image/width=1200,height=630,format=jpg,fit=cover/${heroImage}` : null);
+
 const breadcrumbItems = [
   { name: 'Inicio', url: 'https://guardman.cl' },
   { name: 'Ubicaciones', url: 'https://guardman.cl/ubicaciones' },
   { name: locationName, url: `https://guardman.cl/ubicaciones/${slug}` }
 ];
 
-// Zone context
 const zoneContext: Record<string, { focus: string; commonNeeds: string }> = {
-  'Oriente': { 
-    focus: 'residencias de lujo, embajadas y oficinas corporativas', 
-    commonNeeds: 'control de accesos residencial, escoltas VIP y monitoreo perimetral' 
+  'Oriente': {
+    focus: 'residencias de lujo, embajadas y oficinas corporativas',
+    commonNeeds: 'control de accesos residencial, escoltas VIP y monitoreo perimetral'
   },
-  'Centro': { 
-    focus: 'comercios, oficinas públicas y hoteles', 
-    commonNeeds: 'control de flujos de personas, seguridad para eventos y CCTV comercial' 
+  'Centro': {
+    focus: 'comercios, oficinas públicas y hoteles',
+    commonNeeds: 'control de flujos de personas, seguridad para eventos y CCTV comercial'
   },
-  'Norte': { 
-    focus: 'industrias, bodegas y centros logísticos', 
-    commonNeeds: 'vigilancia perimetral, control vehicular y seguridad industrial' 
+  'Norte': {
+    focus: 'industrias, bodegas y centros logísticos',
+    commonNeeds: 'vigilancia perimetral, control vehicular y seguridad industrial'
   },
+  'Sur': {
+    focus: 'residencial y comercial',
+    commonNeeds: 'seguridad general para hogares y negocios'
+  }
 };
 
 const locationZone = location.zone || 'Centro';
@@ -76,6 +91,7 @@ const context = zoneContext[locationZone] || zoneContext['Centro'];
 <BaseLayout 
   title={hero.heading}
   description={hero.subheading}
+  image={ogImage}
 >
   <!-- Schema -->
   <SchemaLocalBusiness 
@@ -207,7 +223,7 @@ const context = zoneContext[locationZone] || zoneContext['Centro'];
                 const serviceSections = getServiceSections(service.slug);
                 return (
                   <a 
-                    href={`/servicios/${service.slug}/?location=${slug}`}
+                    href={`/servicios/${service.slug}`}
                     class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-4 transition-all group"
                   >
                     <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-2">
@@ -290,11 +306,11 @@ const context = zoneContext[locationZone] || zoneContext['Centro'];
               <div class="mt-6 pt-6 border-t border-neutral-200">
                 <h4 class="text-sm font-semibold text-neutral-700 mb-3">Comunas cercanas</h4>
                 {nearbyLocations.map((l: any) => (
-                  <a 
+                  <a
                     href={`/ubicaciones/${l.slug}`}
                     class="block py-2 text-sm text-neutral-600 hover:text-primary-600 border-b border-neutral-100 last:border-0"
                   >
-                    {l.name}
+                    {l.title || l.name}
                   </a>
                 ))}
               </div>
@@ -307,7 +323,7 @@ const context = zoneContext[locationZone] || zoneContext['Centro'];
                 const serviceSections = getServiceSections(s.slug);
                 return (
                   <a 
-                    href={`/servicios/${s.slug}/?location=${slug}`}
+                    href={`/servicios/${s.slug}`}
                     class="block py-2 text-sm text-neutral-600 hover:text-primary-600 border-b border-neutral-100 last:border-0"
                   >
                     {serviceSections?.hero?.heading || s.name}

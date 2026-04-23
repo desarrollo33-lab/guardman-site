@@ -1,0 +1,103 @@
+{
+  "results": [
+    {
+      "id": 8,
+      "slug": "automotriz",
+      "name": "Automotriz",
+      "description": null,
+      "icon": null,
+      "status": "active",
+      "sort": 8,
+      "created_at": "2026-04-22 17:30:39",
+      "updated_at": "2026-04-22 17:30:39"
+    },
+    {
+      "id": 1,
+      "slug": "comercial",
+      "name": "Comercial",
+      "description": "Seguridad para tiendas, oficinas, centros comerciales y empresas.",
+      "icon": "building",
+      "status": "active",
+      "sort": 1,
+      "created_at": "2026-04-14 14:56:52",
+      "updated_at": "2026-04-14 14:56:52"
+    },
+    {
+      "id": 7,
+      "slug": "construccion",
+      "name": "Construcción",
+      "description": "Protección para obras, proyectos de construcción y demolición.",
+      "icon": "hard-hat",
+      "status": "active",
+      "sort": 7,
+      "created_at": "2026-04-14 14:56:52",
+      "updated_at": "2026-04-14 14:56:52"
+    },
+    {
+      "id": 5,
+      "slug": "educacion",
+      "name": "Educación",
+      "description": "Protección para instituciones educativas, colegios y universidades.",
+      "icon": "graduation-cap",
+      "status": "active",
+      "sort": 5,
+      "created_at": "2026-04-14 14:56:52",
+      "updated_at": "2026-04-14 14:56:52"
+    },
+    {
+      "id": 6,
+      "slug": "eventos",
+      "name": "Eventos",
+      "description": "Protección profesional para conciertos, festivales y eventos corporativos.",
+      "icon": "calendar",
+      "status": "active",
+      "sort": 6,
+      "created_at": "2026-04-14 14:56:52",
+      "updated_at": "2026-04-14 14:56:52"
+    },
+    {
+      "id": 9,
+      "slug": "hoteleria",
+      "name": "Hotelería",
+      "description": null,
+      "icon": null,
+      "status": "active",
+      "sort": 9,
+      "created_at": "2026-04-22 17:30:39",
+      "updated_at": "2026-04-22 17:30:39"
+    },
+    {
+      "id": 2,
+      "slug": "industrial",
+      "name": "Industrial",
+      "description": "Vigilancia para fábricas, bodegas, centros logísticos y zonas industriales.",
+      "icon": "factory",
+      "status": "active",
+      "sort": 2,
+      "created_at": "2026-04-14 14:56:52",
+      "updated_at": "2026-04-14 14:56:52"
+    },
+    {
+      "id": 3,
+      "slug": "residencial",
+      "name": "Residencial",
+      "description": "Protección para condominos, edificios y residencias particulares.",
+      "icon": "home",
+      "status": "active",
+      "sort": 3,
+      "created_at": "2026-04-14 14:56:52",
+      "updated_at": "2026-04-14 14:56:52"
+    },
+    {
+      "id": 4,
+      "slug": "salud",
+      "name": "Salud",
+      "description": "Protección especializada para centros de salud, clínicas y hospitales.",
+      "icon": "heart-pulse",
+      "status": "active",
+      "sort": 4,
+      "created_at": "2026-04-14 14:56:52",
+      "updated_at": "2026-04-14 14:56:52"
+    }
+  ]
+}

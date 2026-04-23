@@ -1,0 +1,150 @@
+{
+  "slug": "los-andes",
+  "type": "location",
+  "version": 1,
+  "last_modified": "2026-04-22T14:59:39.552Z",
+  "seo": {
+    "title": "Seguridad Privada Los Andes | GuardMan Chile",
+    "description": "Guardias de seguridad privados certificados OS-10 en Los Andes. Monitoreo 24/7, CCTV y control de accesos. Cotización gratis.",
+    "canonical": "https://guardman.cl/ubicaciones/los-andes"
+  },
+  "content": {
+    "hero": {
+      "heading": "Seguridad Privada en Los Andes | Guardias 24/7",
+      "subheading": "Protegemos hogares, empresas y comercio en Los Andes con guardias certificados OS-10 y monitoreo permanente.",
+      "image": "/images/og-default.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Ubicaciones",
+        "url": "/ubicaciones"
+      },
+      {
+        "label": "Los andes",
+        "url": "/ubicaciones/los-andes"
+      }
+    ],
+    "intro": {
+      "title": "Protección Confiable para Los Andes y su Entorno",
+      "content": "En GuardMan Chile entendemos las necesidades de seguridad de Los Andes, ciudad fronteriza con alto flujo comercial y turismo. Contamos con equipos de guardias privados certificados OS-10 disponibles las 24 horas para proteger tu familia, negocio o empresa.\n\nNuestra experiencia de más de 8 años en el rubro nos permite ofrecer soluciones de seguridad personalizadas para cada cliente, desde viviendas particulares hasta grandes empresas mineras y comerciales de la zona.",
+      "image": "/images/location-intro.jpg"
+    },
+    "features": {
+      "title": "¿Por Qué Elegir GuardMan en Los Andes?",
+      "items": [
+        "Guardias privados certificados OS-10 con entrenamiento especializado en control y prevención",
+        "Monitoreo remoto 24/7 desde nuestro centro de control propio",
+        "Cobertura estratégica en toda la provincia de Los Andes y rutas de acceso",
+        "Respuesta inmediata ante emergencias con protocolos de coordinación con Carabineros",
+        "Sistemas integrados de CCTV y control de accesos según tus necesidades",
+        "Evaluación de riesgos gratuita para cada propiedad o empresa"
+      ]
+    },
+    "stats": [
+      {
+        "value": "120+",
+        "label": "Guardias OS-10 desplegados en la zona"
+      },
+      {
+        "value": "250+",
+        "label": "Clientes satisfechos en Los Andes"
+      },
+      {
+        "value": "10 min",
+        "label": "Tiempo de respuesta promedio"
+      },
+      {
+        "value": "8+",
+        "label": "Años de experiencia protegiendo la zona"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta contratar guardias de seguridad en Los Andes?",
+        "answer": "Los costos varían según el tipo de servicio, cantidad de guardias y horarios requeridos. En GuardMan ofrecemos cotizaciones personalizadas gratuitas para cada cliente en Los Andes."
+      },
+      {
+        "question": "¿Los guardias pueden actuar en casos de emergencia?",
+        "answer": "Sí, nuestros guardias están capacitados para responder ante emergencias, coordinar con Carabineros y aplicar protocolos de seguridad para proteger personas y bienes."
+      },
+      {
+        "question": "¿Cubren zonas rurales o sectores alejados de Los Andes?",
+        "answer": "Contamos con cobertura en toda la provincia de Los Andes, incluyendo sectores rurales, rutas y localidades como Calle Larga, Rinconada y San Esteban."
+      },
+      {
+        "question": "¿Qué documentación deben tener los guardias?",
+        "answer": "Todos nuestros guardias poseen certificación OS-10 vigente, formación en seguridad privada y documentación al día según la normativa chilena vigente."
+      }
+    ],
+    "cta": {
+      "headline": "Protege lo que Más Importa en Los Andes",
+      "button_text": "Llámanos Ahora",
+      "button_link": "/cotizacion"
+    }
+  },
+  "related_content": {
+    "nearby_locations": [
+      {
+        "slug": "conchali",
+        "title": "Conchali",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/conchali.jpg"
+      },
+      {
+        "slug": "huechuraba",
+        "title": "Huechuraba",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/huechuraba.jpg"
+      },
+      {
+        "slug": "la-pintana",
+        "title": "La Pintana",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/la-pintana.jpg"
+      }
+    ],
+    "related_services": [
+      {
+        "slug": "auditoria-seguridad",
+        "title": "auditoria-seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/auditoria-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "cctv-videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "control-de-accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ],
+    "upsell_services": [
+      {
+        "slug": "auditoria-seguridad",
+        "title": "auditoria-seguridad",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "cctv-videovigilancia",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 0,
+    "published": false
+  }
+}

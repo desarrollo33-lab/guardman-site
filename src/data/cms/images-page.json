@@ -1,0 +1,76 @@
+[
+  {
+    "id": 13,
+    "slug": "cobertura-zonas",
+    "alt": "Cobertura de zonas GuardMan Chile",
+    "title": "Cobertura Zonas",
+    "description": "",
+    "entity_type": "page",
+    "entity_slug": "ubicaciones",
+    "filename": "cobertura-zonas",
+    "url": "/images/cobertura_zonas.png",
+    "path": "",
+    "dimensions": null,
+    "size_bytes": null,
+    "format": "png",
+    "usage_pages": [],
+    "is_hero": false,
+    "is_featured": false,
+    "status": "published",
+    "tags": [
+      "cobertura",
+      "mapa",
+      "zonas"
+    ],
+    "created_at": "2026-04-14 12:25:57"
+  },
+  {
+    "id": 2,
+    "slug": "hero-nosotros",
+    "alt": "Sobre GuardMan Chile",
+    "title": "Nosotros Sección",
+    "description": "",
+    "entity_type": "page",
+    "entity_slug": "nosotros",
+    "filename": "hero-nosotros",
+    "url": "/images/nosotros_seccion.webp",
+    "path": "",
+    "dimensions": null,
+    "size_bytes": null,
+    "format": "webp",
+    "usage_pages": [],
+    "is_hero": true,
+    "is_featured": false,
+    "status": "published",
+    "tags": [
+      "hero",
+      "nosotros"
+    ],
+    "created_at": "2026-04-14 12:25:49"
+  },
+  {
+    "id": 1,
+    "slug": "hero-home",
+    "alt": "GuardMan Chile - Seguridad Privada en Santiago",
+    "title": "Hero Home",
+    "description": "",
+    "entity_type": "page",
+    "entity_slug": "home",
+    "filename": "hero-home",
+    "url": "/images/hero-home.webp",
+    "path": "",
+    "dimensions": null,
+    "size_bytes": null,
+    "format": "webp",
+    "usage_pages": [],
+    "is_hero": true,
+    "is_featured": true,
+    "status": "published",
+    "tags": [
+      "hero",
+      "home",
+      "portada"
+    ],
+    "created_at": "2026-04-14 12:25:48"
+  }
+]

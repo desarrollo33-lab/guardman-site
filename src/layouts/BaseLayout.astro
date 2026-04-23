@@ -10,9 +10,19 @@ interface Props {
   description?: string;
   image?: string;
   noIndex?: boolean;
+  ogImage?: string;
 }
 
-const { title, description = 'GuardMan Chile - Seguridad privada profesional en Santiago', image, noIndex = false } = Astro.props;
+const { 
+  title, 
+  description = 'GuardMan Chile - Seguridad privada profesional en Santiago', 
+  image, 
+  ogImage,
+  noIndex = false 
+} = Astro.props;
+
+// Use ogImage prop if provided, otherwise use image prop
+const finalOgImage = ogImage || image;
 ---
 
 <!doctype html>
@@ -20,7 +30,7 @@ const { title, description = 'GuardMan Chile - Seguridad privada profesional en 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <SEOHead title={title} description={description} image={image} noIndex={noIndex} />
+    <SEOHead title={title} description={description} image={finalOgImage} noIndex={noIndex} />
     <SchemaOrganization />
     <!-- Google Fonts async (non-render-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

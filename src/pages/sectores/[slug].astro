@@ -1,47 +1,64 @@
 ---
 /**
- * Sector Page - Usa contenido del CMS (secciones)
+ * Sector Page - MODIFICADO: Usa contenido del CMS (JSON con related_content)
  */
-
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSectorSections, getServicesList } from '../../data/cms';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import { optimizeImageUrl } from '../../data/directus';
+import { readFileSync, existsSync } from 'fs';
+
+const CMS_DIR = 'src/data/cms';
+const NEW_CMS_DIR = 'src/data/cms-new';
+
+const SECTOR_IMAGES: Record<string, string> = {
+  'comercial': 's4-thumbnail.webp',
+  'industrial': 'sector-industrial.webp',
+  'residencial': 'sector-residencial.webp',
+  'salud': 'nosotros_seccion.webp',
+  'educacion': 'hero-home.webp',
+  'eventos': 's4-thumbnail.webp',
+  'construccion': 'sector-industrial.webp',
+  'automotriz': 's4-thumbnail.webp',
+  'hoteleria': 'hero-home.webp'
+};
 
 export async function getStaticPaths() {
-  // Static paths - will be loaded from CMS
-  const sectorSlugs = ['comercial', 'industrial', 'residencial', 'salud', 'educacion', 'eventos', 'construccion'];
-  
-  return sectorSlugs.map(slug => ({
-    params: { slug },
-    props: { sectorSlug: slug }
+  const { getSectorsList } = await import('../../data/cms');
+  const sectors = getSectorsList();
+
+  return sectors.map((s: any) => ({
+    params: { slug: s.slug },
+    props: { sectorSlug: s.slug }
   }));
 }
 
 const { slug } = Astro.params;
 
-// Load from local JSON (exported from D1)
-import { readFileSync, existsSync } from 'fs';
+// Load new CMS JSON format (with related_content)
+const newSectorPath = `${NEW_CMS_DIR}/sectors/${slug}.json`;
+const legacySectorPath = `${CMS_DIR}/sector-${slug}.json`;
+let cmsSectorData: any = null;
+let sectionData = { sections: {}, services: [], related_content: {} };
 
-const sectorFile = `src/data/cms/sector-${slug}.json`;
-let sectionData = { sections: {} };
-
-if (existsSync(sectorFile)) {
-  sectionData = JSON.parse(readFileSync(sectorFile, 'utf-8'));
+if (existsSync(newSectorPath)) {
+  cmsSectorData = JSON.parse(readFileSync(newSectorPath, 'utf-8'));
+  sectionData = { sections: cmsSectorData.content || cmsSectorData.sections || {}, services: [], related_content: cmsSectorData.related_content || {} };
+} else if (existsSync(legacySectorPath)) {
+  sectionData = JSON.parse(readFileSync(legacySectorPath, 'utf-8'));
+  sectionData.related_content = {};
 }
 
 const sections = sectionData.sections || {};
+const relatedContentFromCMS = sectionData.related_content || {};
+const relatedServices = relatedContentFromCMS.related_services || sectionData.services || [];
+const sectorServices = getServicesList();
 
-// Get services for cross-linking
-const services = getServicesList();
-const relevantServices = services.slice(0, 4);
-
-// Hero data
-const hero = sections?.hero || { 
+const hero = sections?.hero || {
   heading: slug.charAt(0).toUpperCase() + slug.slice(1),
-  subheading: 'Contenido del sector' 
+  subheading: 'Contenido del sector'
 };
 
-// Breadcrumb
 const breadcrumbItems = [
   { name: 'Inicio', url: 'https://guardman.cl' },
   { name: 'Sectores', url: 'https://guardman.cl/sectores' },
@@ -68,8 +85,22 @@ const breadcrumbItems = [
     </div>
   </div>
 
-  <!-- Hero -->
+  <!-- Hero with Background Image -->
   <section class="relative bg-primary-600 text-white py-16 lg:py-20 overflow-hidden">
+    {SECTOR_IMAGES[slug] && (
+      <div class="absolute inset-0 z-0">
+        <img 
+          src={optimizeImageUrl(`/images/${SECTOR_IMAGES[slug]}`)}
+          alt={hero.heading}
+          class="w-full h-full object-cover opacity-30"
+          width="1920"
+          height="1080"
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-800/95 to-primary-600/80"></div>
+      </div>
+    )}
+    
     <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
     
@@ -104,17 +135,22 @@ const breadcrumbItems = [
                 {sections.features.heading || 'Qué incluye el servicio'}
               </h2>
               <div class="grid sm:grid-cols-2 gap-4">
-                {Object.entries(sections.features)
-                  .filter(([key]) => !isNaN(Number(key)))
-                  .map(([_, feature]) => (
+                {(() => {
+                  // Handle both {0: 'item', 1: 'item'} and {items: ['item', 'item']}
+                  const items = sections.features.items 
+                    ? sections.features.items 
+                    : Object.entries(sections.features)
+                        .filter(([key]) => !isNaN(Number(key)))
+                        .map(([_, value]) => value);
+                  return items.map((feature, idx) => (
                     <div class="flex items-start gap-3 bg-neutral-50 rounded-lg p-4">
                       <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                       </svg>
                       <span class="text-neutral-700">{feature}</span>
                     </div>
-                  ))
-                }
+                  ));
+                })()}
               </div>
             </div>
           )}
@@ -127,8 +163,15 @@ const breadcrumbItems = [
               </h2>
               <div class="grid sm:grid-cols-2 gap-4">
                 {Object.entries(sections.issues)
-                  .filter(([key]) => !isNaN(Number(key)))
-                  .map(([_, issue]) => (
+                  .filter(([key]) => !isNaN(Number(key)) || key === 'items')
+                  .map(([key, value]) => {
+                    // Handle both {0: 'item', 1: 'item'} and {items: ['item', 'item']}
+                    if (key === 'items') return value;
+                    return value;
+                  })
+                  .flat()
+                  .filter(item => item && typeof item === 'string')
+                  .map((issue, idx) => (
                     <div class="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-lg p-4">
                       <svg class="w-5 h-5 text-amber-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
@@ -149,8 +192,14 @@ const breadcrumbItems = [
               </h2>
               <div class="grid grid-cols-3 gap-8 text-center">
                 {Object.entries(sections.stats)
-                  .filter(([key]) => !isNaN(Number(key)))
-                  .map(([_, stat]: [string, any]) => (
+                  .filter(([key]) => !isNaN(Number(key)) || key === 'items')
+                  .map(([key, value]) => {
+                    if (key === 'items') return value;
+                    return null;
+                  })
+                  .flat()
+                  .filter(item => item && typeof item === 'object')
+                  .map((stat, idx) => (
                     <div>
                       <div class="text-4xl lg:text-5xl font-bold mb-2">{stat.value}</div>
                       <div class="text-white/80">{stat.label}</div>
@@ -169,8 +218,14 @@ const breadcrumbItems = [
               </h2>
               <div class="space-y-4">
                 {Object.entries(sections.faqs)
-                  .filter(([key]) => !isNaN(Number(key)))
-                  .map(([_, faq]: [string, any]) => (
+                  .filter(([key]) => !isNaN(Number(key)) || key === 'items')
+                  .map(([key, value]) => {
+                    if (key === 'items') return value;
+                    return null;
+                  })
+                  .flat()
+                  .filter(item => item && typeof item === 'object')
+                  .map((faq, idx) => (
                     <details class="group bg-neutral-50 rounded-lg">
                       <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-neutral-900">
                         {faq.question}
@@ -188,27 +243,29 @@ const breadcrumbItems = [
             </div>
           )}
 
-          <!-- Related Services -->
-          <div class="mb-8">
-            <h2 class="text-2xl font-bold text-neutral-900 mb-6">
-              Servicios relacionados
-            </h2>
-            <div class="grid sm:grid-cols-2 gap-4">
-              {relevantServices.map((service: any) => (
-                <a 
-                  href={`/servicios/${service.slug}`}
-                  class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-4 transition-all group"
-                >
-                  <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-2">
-                    {service.name}
-                  </h3>
-                  <p class="text-sm text-neutral-600 line-clamp-2">
-                    {service.short_description || ''}
-                  </p>
-                </a>
-              ))}
+          <!-- Related Services (from service-sector relations) -->
+          {sectorServices.length > 0 && (
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-neutral-900 mb-6">
+                Servicios para este sector
+              </h2>
+              <div class="grid sm:grid-cols-2 gap-4">
+                {sectorServices.map((service: any) => (
+                  <a 
+                    href={`/servicios/${service.slug}`}
+                    class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-4 transition-all group"
+                  >
+                    <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-2">
+                      {service.name}
+                    </h3>
+                    <p class="text-sm text-neutral-600 line-clamp-2">
+                      {service.short_description || ''}
+                    </p>
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         <!-- Column 3: Sidebar -->

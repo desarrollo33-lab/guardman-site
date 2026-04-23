@@ -1,0 +1,96 @@
+{
+  "sections": {
+    "hero": {
+      "heading": "Auditoría de Seguridad en Lampa",
+      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector norte de Santiago.",
+      "cta_text": "Cotizar en Lampa",
+      "cta_link": "/cotizacion?service=auditoria-seguridad&location=lampa",
+      "image": "/images/service-auditoria-seguridad.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Auditoria Seguridad",
+        "url": "/servicios/auditoria-seguridad"
+      },
+      {
+        "label": "Lampa",
+        "url": "/servicios/auditoria-seguridad/lampa"
+      }
+    ],
+    "intro": {
+      "title": "¿Por qué elegir Auditoría de Seguridad en Lampa?",
+      "content": "En GuardMan Chile somos especialistas en auditoría de seguridad en Lampa. Nuestra experiencia en el sector norte de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Lampa y toda la zona Norte.",
+      "image": "/images/combo-intro.jpg"
+    },
+    "features": {
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Diagnóstico integral de vulnerabilidades",
+        "Evaluación de riesgos y amenazas",
+        "Diseño de plan de seguridad personalizado",
+        "Capacitación a personal de seguridad",
+        "Implementación de protocolos y procedimientos",
+        "Seguimiento y auditoría continua"
+      ]
+    },
+    "zone_specific": {
+      "title": "Por qué Lampa",
+      "content": "",
+      "points": [
+        "parques industriales y terrenos de expansión requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de vigilancia perimetral, control de accesos y rondas programadas es cada vez más urgente en el sector norte de Santiago.",
+        " muchas empresas y residencias en Lampa enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "issues": {
+      "title": "Desafíos de seguridad en Lampa",
+      "items": [
+        "parques industriales y terrenos de expansión requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de vigilancia perimetral, control de accesos y rondas programadas es cada vez más urgente en el sector norte de Santiago.",
+        " muchas empresas y residencias en Lampa enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "stats": [
+      {
+        "value": "< 30 min",
+        "label": "Tiempo de respuesta en Norte"
+      },
+      {
+        "value": "Norte",
+        "label": "Cobertura"
+      },
+      {
+        "value": "Disponibles",
+        "label": "Guardias OS-10"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Qué incluye una auditoría de seguridad?",
+        "answer": "Incluye evaluación de vulnerabilidades físicas y lógicas, análisis de riesgos, revisión de protocolos actuales, recomendaciones de mejora y plan de implementación."
+      },
+      {
+        "question": "¿Cuánto tiempo toma una auditoría?",
+        "answer": "Una auditoría completa toma entre 1 y 2 semanas dependiendo del tamaño de la instalación y la complejidad de los sistemas a evaluar."
+      },
+      {
+        "question": "¿Después de la auditoría ayudan a implementar?",
+        "answer": "Sí, ofrecemos servicios de implementación de mejoras, capacitación de personal y seguimiento para asegurar que las recomendaciones se ejecuten correctamente."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu propiedad en Lampa",
+      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
+      "button_text": "Cotizar en Lampa",
+      "button_link": "/cotizacion?service=auditoria-seguridad&location=lampa"
+    }
+  }
+}

@@ -1,1 +1,80 @@
-{"sectorSlug":"eventos","sections":{"hero":{"heading":"Seguridad para Eventos Masivos","subheading":"Protección profesional para conciertos, festivales y eventos corporativos.","cta_text":"Cotiza Seguridad para Eventos"},"intro":{"heading":"Introducción","subheading":"","paragraphs":["La seguridad en eventos masivos requiere planificación meticulosa y coordinación con autoridades. En GuardMan Chile protegemos eventos de todo tipo y tamaño en Santiago.","Contamos con coordinadores certificados que diseñan el plan de seguridad según el tipo de evento, cantidad esperada de asistentes y nivel de riesgo.","Todos nuestros guardias para eventos tienen certificación OS-10 y capacitación en control masivo."]},"features":{"0":"Coordinadores de seguridad certificados","1":"Guardias OS-10 para control masivo","2":"Arcos detectores de metales","3":"Postes de control de accesos","4":"Comunicación radial y coordinación con Carabineros","5":"Servicio de primeros auxilios","heading":"Qué incluye","subheading":""},"issues":{"0":"Control de multitudes en ingresos","1":"Prevención de入口 no autorizadas","2":"Gestión de emergencias durante el evento","3":"Protección de artistas y speakers VIP","heading":"Problemas que solucionamos","subheading":""},"stats":{"0":{"label":"Eventos protegidos","value":"300+"},"1":{"label":"Asistentes asegurados","value":"50,000+"},"2":{"label":"Eventos masivos","value":"50+"},"heading":"Números que nos respaldan","subheading":""},"faqs":{"0":{"question":"¿Con cuánta anticipación debo contratar?","answer":"Recomendamos mínimo 2 semanas para eventos pequeños y 1 mes para eventos masivos."},"1":{"question":"¿Incluyen equipo de comunicaciones?","answer":"Sí, radios de comunicación y coordinación radial están incluidos."},"2":{"question":"¿Cuántos guardias necesito?","answer":"La regla general es 1 guardia cada 100 personas para eventos sociales, 1 cada 50 para corporativos."},"heading":"Preguntas Frecuentes","subheading":""},"cta":{"heading":"Protege tu próximo evento","subheading":"Solicita una cotización para tu evento.","description":"Solicita una cotización para tu evento.","button":"Solicitar Cotización"}}}
+{
+  "sections": {
+    "hero": {
+      "heading": "Seguridad para Eventos en Chile | Guardias Certificados OS-10",
+      "subheading": "Protege tu evento con guardias certificados, tecnología de monitoreo en vivo y planificación de seguridad personalizada para festivales, weddings, corporativos y más.",
+      "image": "/images/sector-hoteleria.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Sectores",
+        "url": "/sectores"
+      },
+      {
+        "label": "Eventos",
+        "url": "/sectores/eventos"
+      }
+    ],
+    "intro": {
+      "title": "Seguridad Profesional para Todo Tipo de Eventos en Santiago",
+      "content": "En GuardMan Chile entendemos que cada evento es único y requiere una estrategia de seguridad a medida. Desde reuniones corporativas íntimas hasta festivales masivos con miles de asistentes, nuestro equipo de guardias OS-10 certificados se despliega con precisión para garantizar que todo transcurra sin incidentes.\n\nCon más de 500 guardias disponibles y un centro de monitoreo 24/7 propio, hemos protegido exitosamente eventos en las 14 comunas de la Región Metropolitana y otras regiones del país. Nuestra experiencia de 8+ años nos permite anticipar riesgos y actuar antes de que cualquier situación se complique.",
+      "image": "/images/sector-intro.jpg"
+    },
+    "features": {
+      "title": "Lo que incluye nuestro servicio de seguridad para eventos",
+      "items": [
+        "Guardias OS-10 certificados con formación en control de multitudes y manejo de emergencias",
+        "Diseño de plan de seguridad personalizado según tipo de evento, ubicación y cantidad estimada de asistentes",
+        "Control de accesos con verificación de invitados y gestión de acreditaciones",
+        "Monitoreo CCTV en vivo desde nuestro centro de operaciones las 24 horas",
+        "Coordinación con Carabineros y servicios de emergencia preconfigurada",
+        "Reportes en tiempo real y debriefing post-evento con recomendaciones"
+      ]
+    },
+    "stats": [
+      {
+        "value": "320+",
+        "label": "Eventos protegidos en 2024"
+      },
+      {
+        "value": "500+",
+        "label": "Guardias disponibles para desplegar"
+      },
+      {
+        "value": "8+",
+        "label": "Años de experiencia en el sector"
+      },
+      {
+        "value": "Menos del 1%",
+        "label": "Tasa de incidentes en eventos vigilados"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuántos guardias necesito para mi evento?",
+        "answer": "Depende del tipo y tamaño del evento. Como referencia general, para eventos corporativos pequeños usamos entre 3 a 5 guardias, mientras que para festivales o masivos recomendamos un guardia cada 100-150 asistentes. Evaluamos tu evento sin costo para darte una recomendación precisa."
+      },
+      {
+        "question": "¿Pueden actuar como controladores de acceso?",
+        "answer": "Sí, nuestros guardias están entrenados específicamente para control de accesos: verificación de invitaciones, registro de entrada, gestión de Acreditaciones y restricción de zonas. Podemos instalar arcos o puntos de control según tus necesidades."
+      },
+      {
+        "question": "¿Qué pasa si surge una emergencia durante el evento?",
+        "answer": "Todos nuestros guardias tienen protocolos de emergencia activados. Coordinan directamente con Carabineros, SAMU o Bomberos según el tipo de emergencia. Simultáneamente, nuestro centro de monitoreo recibe alertas en tiempo real para coordinar la respuesta."
+      },
+      {
+        "question": "¿Cómo funciona el servicio para eventos fuera de Santiago?",
+        "answer": "Disponemos de capacidad de despliegue nacional. Para eventos fuera de la Región Metropolitana, coordinamos logística de traslado y alojamiento si es necesario. Tenemos alianzas con empresas de seguridad regionales para garantizar cobertura extendida."
+      }
+    ],
+    "cta": {
+      "headline": "Planifica la seguridad de tu próximo evento con tiempo",
+      "button_text": "Cotizar seguridad para mi evento",
+      "button_link": "/cotizacion"
+    }
+  }
+}

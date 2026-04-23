@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "hero": {
+      "heading": "Seguridad para el Sector Automotriz",
+      "subheading": "Proteccion integral para concesionarias, talleres y centros de servicio en Chile.",
+      "image": "/images/s4-thumbnail.webp"
+    },
+    "intro": {
+      "title": "Seguridad Automotriz Integral en Chile",
+      "content": "En el competitivo sector automotriz chileno, la seguridad de sus instalaciones, vehiculos y personal es fundamental para mantener la operacion continua de su negocio."
+    },
+    "features": {
+      "items": [
+        "Vigilancia con guardias OS-10",
+        "Control de acceso y registro de visitantes",
+        "Sistema de CCTV con camaras de alta definicion",
+        "Monitoreo remoto 24/7",
+        "Patrullaje preventivo y rondas programadas",
+        "Reporting diario de incidentes"
+      ]
+    },
+    "faq": [
+      {
+        "question": "Que tipo de guardias proporcionan?",
+        "answer": "Guardias de seguridad OS-10 acreditados y capacitados para el sector automotriz."
+      },
+      {
+        "question": "Como protegen los vehiculos?",
+        "answer": "Vigilancia perimetral, CCTV, control de acceso e iluminacion disuasoria."
+      },
+      {
+        "question": "Ofrecen monitoreo 24 horas?",
+        "answer": "Si, nuestro centro de control opera 24/7, 365 dias al ano."
+      },
+      {
+        "question": "Tienen experiencia en talleres?",
+        "answer": "Amplia experiencia protegiendo talleres mecanicos, centros de diagnostico y empresas de repuestos."
+      },
+      {
+        "question": "Como solicitan cotizacion?",
+        "answer": "Complete el formulario en linea o contactenos por telefono."
+      },
+      {
+        "question": "Que medidas tienen contra robo de repuestos?",
+        "answer": "Control restrictivo a bodegas, inventario video controlado y coordinacion con Carabineros."
+      }
+    ],
+    "cta": {
+      "headline": "Proteja su Inversion Automotriz",
+      "button_text": "Solicitar Cotizacion Gratis"
+    }
+  }
+}

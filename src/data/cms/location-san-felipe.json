@@ -1,74 +1,80 @@
 {
-  "slug": "san-felipe",
-  "name": "San Felipe",
-  "zone": "Valparaíso",
   "sections": {
     "hero": {
-      "heading": "Seguridad Privada en San Felipe",
-      "subheading": "Empresa líder con guardias OS-10 en San Felipe. Cobertura 24/7.",
-      "cta_text": "Cotiza en San Felipe"
+      "heading": "Seguridad Privada en San Felipe | Guardias 24/7",
+      "subheading": "Protegemos tu hogar, negocio e industria con guardias certificados y tecnología de monitoreo avanzado.",
+      "image": "/images/og-default.webp"
     },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Ubicaciones",
+        "url": "/ubicaciones"
+      },
+      {
+        "label": "San felipe",
+        "url": "/ubicaciones/san-felipe"
+      }
+    ],
     "intro": {
-      "heading": "Introducción",
-      "subheading": "",
-      "paragraphs": [
-        "San Felipe concentra alta actividad comercial y empresarial. Nuestros servicios de seguridad ayudan a proteger locales comerciales, oficinas y edificios de departamentos.",
-        "La alta densidad de personas y vehículos requiere protocolos específicos de seguridad.",
-        "Contamos con personal desplegado en San Felipe con tiempos de respuesta inferiores a 30 minutos."
+      "title": "Guardias de Seguridad Certificados en San Felipe",
+      "content": "GuardMan Chile llega a San Felipe con la experiencia de más de 8 años protegiendo hogares, empresas y comunidades en toda la Región Metropolitana. Nuestro equipo de guardias certificados OS-10 trabaja las 24 horas para garantizar tu tranquilidad y la de tu familia.\n\nEntendemos las necesidades de seguridad de San Felipe, ciudad que crece constantemente gracias a su actividad agrícola, comercial e industrial. Por eso ofrecemos soluciones personalizadas que se adaptan a cada tipo de propiedad, desde parcelas rurales hasta locales comerciales en el centro.",
+      "image": "/images/location-intro.jpg"
+    },
+    "features": {
+      "title": "¿Por qué elegir GuardMan en San Felipe?",
+      "items": [
+        "Guardias certificados OS-10 con formación continua",
+        "Centro de monitoreo propio 24/7",
+        "Cobertura en toda San Felipe y zona rural",
+        "Respuesta inmediata ante emergencias",
+        "Sistemas de CCTV y control de accesos",
+        "Escoltas y seguridad para eventos"
       ]
     },
-    "coverage": {
-      "0": "Guardias disponibles 24/7",
-      "1": "Tiempo de respuesta < 30 minutos",
-      "2": "Centro de monitoreo propio",
-      "3": "Reportes diarios de novedades",
-      "heading": "Cobertura en San Felipe",
-      "subheading": ""
-    },
-    "issues": {
-      "0": "Alto flujo de personas que dificulta el control de accesos",
-      "1": "Robos en locales comerciales y oficinas",
-      "2": "Vandalismo y deterioro de espacios públicos",
-      "heading": "Problemas que solucionamos",
-      "subheading": ""
-    },
-    "stats": {
-      "0": {
-        "label": "Empresas protegidas",
-        "value": "20+"
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años de experiencia"
       },
-      "1": {
-        "label": "Guardias en zona",
-        "value": "30+"
+      {
+        "value": "500+",
+        "label": "Guardias certificados"
       },
-      "2": {
-        "label": "Tiempo respuesta",
-        "value": "< 30 min"
+      {
+        "value": "2.000+",
+        "label": "Clientes satisfechos"
       },
-      "heading": "Números que nos respaldan",
-      "subheading": ""
-    },
-    "faqs": {
-      "0": {
-        "question": "¿Hay disponibilidad de guardias en San Felipe?",
-        "answer": "Sí, tenemos guardias disponibles desplegados en San Felipe listos para comenzar el servicio."
+      {
+        "value": "14",
+        "label": "Comunas con cobertura"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta un guardia de seguridad en San Felipe?",
+        "answer": "El valor depende de las horas de servicio, tipo de vigilancia y características del inmueble. Contáctanos para una cotización personalizada sin compromiso.Ofrecemos planes flexibles para hogares y empresas."
       },
-      "1": {
-        "question": "¿Cuál es el tiempo de respuesta en San Felipe?",
-        "answer": "Nuestro tiempo de respuesta en San Felipe es inferior a 30 minutos desde cualquier punto de la comuna."
+      {
+        "question": "¿Pueden vigilar mi parcela o fundo agrícola?",
+        "answer": "Sí, cubrimos toda la zona rural de San Felipe, incluyendo parcelas, fundos y bodegas agrícolas. Contamos con guardias capacitados para trabajar en sectores apartados con supervisión remota."
       },
-      "2": {
-        "question": "¿Qué tipos de propiedades protegen?",
-        "answer": "Protegemos empresas, condominos, residencias, obras y cualquier tipo de propiedad que necesite seguridad."
+      {
+        "question": "¿Qué documentación deben tener los guardias?",
+        "answer": "Todos nuestros guardias cuentan con certificado OS-10 vigente, revisión de antecedentes y formación especializada. Además, cada guardia está respaldado por nuestra póliza colectiva de responsabilidad civil."
       },
-      "heading": "Preguntas Frecuentes",
-      "subheading": ""
-    },
+      {
+        "question": "¿Cómo funciona el monitoreo 24/7?",
+        "answer": "Nuestro centro de monitoreo opera las 24 horas con operadores capacitados que supervisan cámaras, sensores y alertas en tiempo real. Ante cualquier novedad, activamos el protocolo de respuesta inmediata."
+      }
+    ],
     "cta": {
-      "heading": "Protege tu propiedad en San Felipe",
-      "subheading": "Contáctanos para una cotización personalizada.",
-      "description": "Contáctanos para una cotización personalizada.",
-      "button": "Solicitar Cotización"
+      "headline": "Protege lo que más te importa en San Felipe",
+      "button_text": "Solicitar cotización gratuita",
+      "button_link": "/cotizacion"
     }
   }
 }

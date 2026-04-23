@@ -1,1 +1,80 @@
-{"sectorSlug":"construccion","sections":{"hero":{"heading":"Seguridad para Construcción","subheading":"Protección para obras, proyectos de construcción y demolición.","cta_text":"Cotiza Seguridad para Obras"},"intro":{"heading":"Introducción","subheading":"","paragraphs":["Las obras de construcción son targets frecuentes de robo debido al alto valor de materiales y equipos. En GuardMan Chile ofrecemos soluciones de seguridad especializadas para el sector construcción.","Ofrecemos vigilancia perimetral, control de ingreso de materiales y monitoreo las 24 horas. También tenemos Guard Pod, nuestra unidad móvil de vigilancia autónoma.","Según la Cámara Chilena de la Construcción, el 40% de las obras sufren algún tipo de robo. Nuestras soluciones reducen drásticamente ese riesgo."]},"features":{"0":"Vigilancia perimetral con rondas","1":"Control de ingreso de materiales","2":"Guard Pod - unidad móvil de vigilancia","3":"Monitoreo 24/7 con verificación visual","4":"Coordinación con empresas de vigilancia","5":"Reporte fotográfico diario","heading":"Qué incluye","subheading":""},"issues":{"0":"Robo de materiales de construcción","1":"Vandalismo de herramientas y equipos","2":"Acceso no autorizado de terceros","3":"Seguridad en zonas sin infraestructura","heading":"Problemas que solucionamos","subheading":""},"stats":{"0":{"label":"Obras protegidas","value":"50+"},"1":{"label":"Materiales asegurados","value":"USD 10M+"},"2":{"label":"Robos prevenidos","value":"100+"},"heading":"Números que nos respaldan","subheading":""},"faqs":{"0":{"question":"¿Qué es el Guard Pod para obras?","answer":"Es nuestra unidad móvil de vigilancia autónoma con paneles solares, cámaras PTZ y comunicación celular. Se despliega en menos de 2 horas."},"1":{"question":"¿Cómo controlan el ingreso de materiales?","answer":"Nuestras garitas registran cada vehículo, verifican guía de despacho y fotografían la carga."},"2":{"question":"¿Hay contrato mínimo?","answer":"No, ofrecemos flexibilidad por semana o mes según la duración de la obra."},"heading":"Preguntas Frecuentes","subheading":""},"cta":{"heading":"Protege tu obra de construcción","subheading":"Solicita una cotización para tu proyecto.","description":"Solicita una cotización para tu proyecto.","button":"Solicitar Cotización"}}}
+{
+  "sections": {
+    "hero": {
+      "heading": "Seguridad para Construcción en Chile | GuardMan Chile",
+      "subheading": "Protección integral para obras y proyectos de construcción en Santiago. Guardias OS-10 y monitoreo 24/7.",
+      "image": "/images/og-default.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Sectores",
+        "url": "/sectores"
+      },
+      {
+        "label": "Construccion",
+        "url": "/sectores/construccion"
+      }
+    ],
+    "intro": {
+      "title": "Seguridad para la industria de la construcción en Chile",
+      "content": "La industria de la construcción en Chile enfrenta desafíos únicos de seguridad. Con materiales costosos, equipos especializados y constante flujo de personal, las obras son objetivos frecuentes para robos, vandalismo y accidentes. Proteger tu proyecto no es opcional: es una inversión necesaria.\n\nGuardMan Chile ofrece soluciones de seguridad para construcción diseñadas especialmente para obras en Santiago. Contamos con guardias certificados OS-10, sistemas de CCTV y monitoreo en tiempo real para que tu proyecto avance sin interrupciones.",
+      "image": "/images/sector-intro.jpg"
+    },
+    "features": {
+      "title": "¿Qué incluye nuestro servicio de seguridad para construcción?",
+      "items": [
+        "Guardias de seguridad OS-10 certificados con experiencia en obras",
+        "Monitoreo remoto 24/7 desde nuestro centro de control propio",
+        "CCTV con cámaras para obras y control de acceso electrónico",
+        "Rondas preventivas y control perimetral durante toda la faena",
+        "Reducción de riesgos de accidentes y responsabilidad legal",
+        "Prevención de robo de materiales, herramientas y equipos"
+      ]
+    },
+    "stats": [
+      {
+        "value": "500+",
+        "label": "Guardias OS-10 certificados"
+      },
+      {
+        "value": "8+",
+        "label": "Años de experiencia en Chile"
+      },
+      {
+        "value": "14",
+        "label": "Comunas con cobertura en RM"
+      },
+      {
+        "value": "99,8%",
+        "label": "Tasa de resolución de incidentes"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta un servicio de seguridad para construcción?",
+        "answer": "El valor depende del tamaño de la obra, horarios requeridos y cantidad de guardias. En GuardMan ofrecemos cotizaciones personalizadas sin costo. Contáctanos y te armamos una propuesta según tus necesidades."
+      },
+      {
+        "question": "¿Cómo contrato seguridad para mi obra en Santiago?",
+        "answer": "El proceso es simple: nos contactas, evaluamos tu proyecto, definimos el plan de seguridad y en 48 horas tienes a los guardias funcionando en tu obra. Sin complicaciones ni trámites largos."
+      },
+      {
+        "question": "¿Los guardias trabajan las 24 horas en la obra?",
+        "answer": "Sí, adaptamos los turnos según tu faena. Trabajamos de lunes a domingo, días corridos, con horarios rotativos para garantizar cobertura constante y descanso adecuado del personal."
+      },
+      {
+        "question": "¿Qué pasa si ocurre un robo o incidente en mi obra?",
+        "answer": "Nuestro centro de monitoreo 24/7 recibe las alertas en tiempo real, coordina la respuesta inmediata con nuestros guardias en terreno y contacta a Carabineros si es necesario. Además generamos reportes completos del incidente."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu obra con GuardMan Chile",
+      "button_text": "Solicitar Cotización Gratis",
+      "button_link": "/cotizacion"
+    }
+  }
+}

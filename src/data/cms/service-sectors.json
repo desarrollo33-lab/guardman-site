@@ -1,0 +1,59 @@
+{
+  "auditoria-seguridad": [
+    "comercial",
+    "industrial",
+    "residencial",
+    "salud",
+    "educacion",
+    "eventos",
+    "construccion"
+  ],
+  "cctv-videovigilancia": [
+    "comercial",
+    "industrial",
+    "residencial",
+    "salud",
+    "educacion",
+    "eventos",
+    "construccion"
+  ],
+  "control-de-accesos": [
+    "comercial",
+    "industrial",
+    "residencial",
+    "salud",
+    "educacion"
+  ],
+  "escoltas-privados": [
+    "comercial",
+    "eventos"
+  ],
+  "guard-pod": [
+    "comercial",
+    "industrial",
+    "residencial",
+    "eventos",
+    "construccion"
+  ],
+  "guardias-de-seguridad": [
+    "comercial",
+    "industrial",
+    "residencial",
+    "salud",
+    "educacion",
+    "eventos",
+    "construccion"
+  ],
+  "monitoreo-24-7": [
+    "comercial",
+    "industrial",
+    "residencial"
+  ],
+  "seguridad-industrial": [
+    "industrial",
+    "construccion"
+  ],
+  "seguridad-eventos": [
+    "eventos"
+  ]
+}

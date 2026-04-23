@@ -1,107 +1,94 @@
 {
-  "slug": "control-de-accesos",
-  "name": "Control de Accesos",
-  "short_description": "Control total de accesos con tecnología biométrica",
-  "price_range": "$$$",
-  "featured": 0,
-  "sort": 0,
   "sections": {
     "hero": {
-      "heading": "Control de Accesos",
-      "subheading": "Sistemas biométricos y RFID para control de ingresos en empresas y condominos.",
-      "cta_text": "Cotiza Control de Accesos"
+      "heading": "Control de Accesos con Guardias Certificados OS-10 | GuardMan Chile",
+      "subheading": "Seguridad 24/7 con guardias profesionales y monitoreo propio en toda la Región Metropolitana",
+      "image": "/images/service-control-de-accesos.webp"
     },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Control De Accesos",
+        "url": "/servicios/control-de-accesos"
+      }
+    ],
     "intro": {
-      "heading": "Introducción",
-      "subheading": "",
-      "paragraphs": [
-        "En GuardMan Chile somos especialistas en sistemas de control de accesos para empresas, condominos y edificios. Nuestros lectores biométricos y tarjetas RFID le permiten saber quién entra y sale, cuándo y desde dónde.",
-        "Un sistema de control de accesos bien diseñado va más allá de abrir puertas. Registra cada ingreso, genera reportes de asistencia, limita horarios por empleado y alerta sobre intentos de acceso no autorizados.",
-        "Ofrecemos tecnología de punta: lectores de huella dactilar con precisión del 99.9%, tarjetas de proximidad, cerraduras electromagnéticas y software de gestión intuitivo."
-      ]
+      "title": "Control de Accesos Profesional: Más que Tecnología, es Gente Calificada",
+      "content": "En GuardMan Chile llevamos más de 8 años protegiendo empresas, edificios y condominios con servicios de control de accesos que combinan tecnología avanzada ypersonal de seguridad certificado OS-10. A diferencia de las empresas que solo instalan equipos, nosotros entregamos una solución integral con guardias capacitados que saben cómo actuar ante cualquier situación.\nNuestro monitoreo 24/7 propio nos permite reaccionar en tiempo real. Si alguien intenta ingresar fuera de horario, si hay una emergencia o si el sistema detecta algo sospechoso, nuestro equipo actúa inmediatamente. Eso es lo que marca la diferencia entre un sistema automático y un servicio de seguridad real.",
+      "image": "/images/service-intro.jpg"
     },
     "features": {
-      "0": "Lectores biométricos de huella dactilar y reconocimiento facial",
-      "1": "Tarjetas RFID y tags de proximidad compatibles",
-      "2": "Cerraduras electromagnéticas y electroimanes de alta seguridad",
-      "3": "Software de gestión con reportes de asistencia y accesos",
-      "4": "Integración con sistemas de videovigilancia existentes",
-      "5": "Acceso remoto para administradores desde cualquier dispositivo",
-      "heading": "Qué incluye",
-      "subheading": ""
-    },
-    "process": {
-      "0": {
-        "step": "Levantamiento",
-        "description": "Identificamos puertas, zonas críticas y cantidad de usuarios"
-      },
-      "1": {
-        "step": "Propuesta",
-        "description": "Diseñamos el sistema con la mejor relación precio-cobertura"
-      },
-      "2": {
-        "step": "Instalación",
-        "description": "Técnicos certificados instalan lectores, cableado y controlador"
-      },
-      "3": {
-        "step": "Configuración",
-        "description": "Programamos horarios, permisos y enseñamos a usar el software"
-      },
-      "heading": "Nuestro proceso",
-      "subheading": ""
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Lectores biométricos de huella dactilar y reconocimiento facial",
+        "Tarjetas RFID y tags de proximidad compatibles",
+        "Cerraduras electromagnéticas y electroimanes de alta seguridad",
+        "Software de gestión con reportes de asistencia y accesos",
+        "Integración con sistemas de videovigilancia existentes",
+        "Acceso remoto para administradores desde cualquier dispositivo"
+      ]
     },
     "issues": {
-      "0": "Llaves duplicadas que no se pueden controlar ni desactivar",
-      "1": "Sin registro de quién entra y sale de zonas restringidas",
-      "2": "Empleados que abren la puerta a personas no autorizadas",
-      "heading": "Problemas que solucionamos",
-      "subheading": ""
+      "title": "Problemas que Enfrentan las Empresas con el Control de Accesos",
+      "items": [
+        "Sistemas de citófono o video portero sin vigilancia humana: Los equipos tecnológicos funcionan, pero no hay nadie que verifique quién entra realmente.",
+        "Empresas que solo venden tecnología sin servicio de guardias: Instalan torniquetes o lectores, pero cuando hay un problema no hay quien intervenga.",
+        "Personal sin certificación OS-10: Usar guardias sin la autorización oficial pone en riesgo la legalidad del servicio y la seguridad del lugar.",
+        "Monitoreo externalizado: Si el centro de monitoreo es de terceros, la respuesta ante emergencias puede tardar más de lo necesario.",
+        "Falta de control en horarios nocturnos o fines de semana: Los momentos de mayor vulnerabilidad suelen ser los peor atendidos."
+      ]
     },
-    "stats": {
-      "0": {
-        "label": "Lectores instalados",
-        "value": "800+"
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años de experiencia en seguridad privada"
       },
-      "1": {
-        "label": "Empresas protegidas",
-        "value": "150+"
+      {
+        "value": "500+",
+        "label": "Guardias operativos certificados OS-10"
       },
-      "2": {
-        "label": "Tiempo instalación",
-        "value": "1-3 días"
+      {
+        "value": "3",
+        "label": "Centros de monitoreo con operación propia"
       },
-      "heading": "Números que nos respaldan",
-      "subheading": ""
-    },
-    "faqs": {
-      "0": {
+      {
+        "value": "15+",
+        "label": "Cobertura en comunas de la Región Metropolitana"
+      }
+    ],
+    "faq": [
+      {
         "question": "¿Qué incluye el servicio de Control de Accesos?",
         "answer": "El servicio incluye: lectores biométricos o RFID, controlador central, software de gestión, instalación profesional, configuración de permisos, capacitación y 12 meses de soporte técnico."
       },
-      "1": {
+      {
         "question": "¿Puedo controlar accesos desde mi celular?",
         "answer": "Sí, nuestra plataforma permite administrar usuarios, crear reportes y recibir alertas de intentos de acceso fallidos desde cualquier dispositivo con internet."
       },
-      "2": {
+      {
         "question": "¿Funciona sin energía eléctrica?",
         "answer": "Nuestras cerraduras electromagnéticas incluyen batería de respaldo que mantiene el sistema operativo hasta 8 horas sin energía."
       },
-      "3": {
+      {
         "question": "¿Cuántos usuarios puedo gestionar?",
         "answer": "El sistema base soporta hasta 1,000 usuarios. Para instalaciones más grandes, ofrecemos soluciones empresariales con hasta 10,000 usuarios."
       },
-      "4": {
+      {
         "question": "¿Ofrecen servicio de monitoreo 24/7?",
         "answer": "Sí, todos nuestros sistemas de control de accesos pueden integrarse con nuestro centro de monitoreo para alertas en tiempo real."
-      },
-      "heading": "Preguntas Frecuentes",
-      "subheading": ""
-    },
+      }
+    ],
     "cta": {
-      "heading": "Cotiza Control de Accesos",
-      "subheading": "Control total de quién accede a tu propiedad.",
-      "description": "Control total de quién accede a tu propiedad.",
-      "button": "Solicitar Cotización"
+      "headline": "Protege tu Edificio o Empresa con el Mejor Control de Accesos",
+      "button_text": "Cotizar Control de Accesos Ahora",
+      "button_link": "/cotizacion"
     }
   }
 }

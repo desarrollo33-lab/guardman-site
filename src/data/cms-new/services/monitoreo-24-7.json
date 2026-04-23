@@ -1,0 +1,139 @@
+{
+  "slug": "monitoreo-24-7",
+  "type": "service",
+  "version": 1,
+  "last_modified": "2026-04-22T14:11:12.768Z",
+  "seo": {
+    "title": "Monitoreo 24/7 | GuardMan Chile",
+    "description": "Servicio de monitoreo de cámaras y vigilancia 24/7 para empresas en Santiago. Respuesta inmediata, cobertura en 14 comunas. Cotiza gratis.",
+    "canonical": "https://guardman.cl/servicios/monitoreo-24-7"
+  },
+  "content": {
+    "hero": {
+      "heading": "Monitoreo 24/7: Protección Ininterrumpida para tu Negocio",
+      "subheading": "Centro de vigilancia propio con respuesta inmediata ante cualquier emergencia, los 365 días del año.",
+      "cta_text": "Solicitar Cotización Gratuita",
+      "image": "/images/service-monitoreo-24-7.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Monitoreo 24 7",
+        "url": "/servicios/monitoreo-24-7"
+      }
+    ],
+    "intro": {
+      "title": "Vigilancia Continua con Tecnología de Última Generación",
+      "content": "Nuestro servicio de Monitoreo 24/7 en GuardMan Chile utiliza sistemas de CCTV de alta definición conectados directamente a nuestro centro de operaciones. Con 8+ años de experiencia y más de 500 guardias certificados OS-10, garantizamos que cada evento sea detectado, evaluado y gestionado con la máxima eficiencia. Nuestra cobertura abarca 14 comunas en la Región Metropolitana, manteniendo supervisión permanente de tus instalaciones sin importar la hora.\nNo solo vigilamos, actuamos. Ante cualquier situación sospechosa, nuestro equipo coordina la respuesta con nuestros guardias en terreno y las autoridades en tiempo real, minimizando riesgos y protegiendo tus activos.",
+      "image": "/images/service-intro.jpg"
+    },
+    "features": {
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Centro de monitoreo propio con más de 40 operadores",
+        "Videowall con monitoreo en tiempo real de cámaras",
+        "Respuesta ante emergencias en menos de 3 minutos",
+        "Verificación visual de alarmas antes de contactar carabineros",
+        "Notificaciones instantáneas vía SMS, email y app",
+        "Respaldo eléctrico y de conectividad garantizado"
+      ]
+    },
+    "issues": {
+      "title": "Problemas que Resolvemos",
+      "items": [
+        "Robos y hurtos en locales comerciales y bodegas durante horarios no laborales",
+        "Vandalismo y daños a la propiedad por falta de supervisión constante",
+        "Accesos no autorizados y visitas no identificadas fuera de horario de atención",
+        "Pérdida de inventario por fallas en vigilancia tradicional y cámaras sin monitoreo",
+        "Incidentes de seguridad sin registro ni evidencia para investigaciones"
+      ]
+    },
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años de experiencia"
+      },
+      {
+        "value": "500+",
+        "label": "Guardias certificados OS-10"
+      },
+      {
+        "value": "14",
+        "label": "Comunas con cobertura"
+      },
+      {
+        "value": "2.500+",
+        "label": "Casos gestionados exitosamente"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Qué pasa si se corta la luz o internet?",
+        "answer": "Nuestras instalaciones tienen UPS con 4 horas de autonomía y conectividad celular de respaldo. El centro sigue operando incluso en desastres."
+      },
+      {
+        "question": "¿Cómo sé que están vigilando?",
+        "answer": "Recibirá reportes mensuales con métricas: eventos detectados, respuestas activadas, tiempo promedio de respuesta y estado del sistema."
+      },
+      {
+        "question": "¿Puedo ver las cámaras desde la app de GuardMan?",
+        "answer": "Sí, nuestra app permite ver sus cámaras en vivo, recibir notificaciones de eventos y solicitar el historial de grabaciones."
+      },
+      {
+        "question": "¿Qué pasa si hay una intrusión?",
+        "answer": "El operador verifica visualmente, contacta al cliente para confirmar si es emergencia real, y si no responde, coordina con Carabineros directamente."
+      },
+      {
+        "question": "¿El servicio es solo para alarmas o también para cámaras?",
+        "answer": "Monitoreamos cualquier señal: alarmas de intrusión, cámaras, sensores ambientales, control de accesos y GPS vehicular."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu Negocio AHORA",
+      "button_text": "Cotizar Monitoreo 24/7",
+      "button_link": "/cotizacion"
+    }
+  },
+  "related_content": {
+    "related_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/guardias-de-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "Cctv Videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "Control De Accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ],
+    "upsell_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 75,
+    "published": false
+  }
+}

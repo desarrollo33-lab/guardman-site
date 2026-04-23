@@ -1,74 +1,80 @@
 {
-  "slug": "huechuraba",
-  "name": "Huechuraba",
-  "zone": "Norte",
   "sections": {
     "hero": {
-      "heading": "Seguridad Privada en Huechuraba",
-      "subheading": "Empresa líder con guardias OS-10 en Huechuraba. Cobertura 24/7.",
-      "cta_text": "Cotiza en Huechuraba"
+      "heading": "Seguridad Privada en Huechuraba | Guardias 24/7",
+      "subheading": "Protege tu empresa, hogar y eventos con los mejores guardias certificados de la zona nororiente",
+      "image": "/images/og-default.webp"
     },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Ubicaciones",
+        "url": "/ubicaciones"
+      },
+      {
+        "label": "Huechuraba",
+        "url": "/ubicaciones/huechuraba"
+      }
+    ],
     "intro": {
-      "heading": "Introducción",
-      "subheading": "",
-      "paragraphs": [
-        "Huechuraba es una zona en constante crecimiento con proyectos inmobiliarios y comerciales. GuardMan ofrece soluciones de seguridad adaptadas a las necesidades de la zona norte.",
-        "La expansión de la zona requiere cobertura amplia y tiempos de respuesta óptimos.",
-        "Contamos con personal desplegado estratégicamente en la zona norte para garantizar cobertura."
+      "title": "Guardias de Seguridad Certificados en Huechuraba",
+      "content": "Huechuraba es una de las comunas con mayor crecimiento empresarial y comercial del sector nororiente de Santiago. Desde Ciudad Empresarial hasta el tradicional barrio de Santa Laura, las empresas y vecinos necesitan soluciones de seguridad confiables y profesionales.\n\nEn GuardMan Chile contamos con más de 8 años de experiencia protegiendo propiedades en Huechuraba. Nuestros 500+ guardias certificados OS-10 están disponibles las 24 horas para garantizar la seguridad de tu patrimonio, con monitoreo constante desde nuestro centro de operaciones.",
+      "image": "/images/location-intro.jpg"
+    },
+    "features": {
+      "title": "¿Por qué elegir GuardMan en Huechuraba?",
+      "items": [
+        "Guardias certificados OS-10 con entrenamiento especializado para zonas empresariales",
+        "Monitoreo 24/7 desde nuestro centro de control propio",
+        "Cobertura total en Ciudad Empresarial, Santa Laura y todo Huechuraba",
+        "Sistemas de CCTV y control de accesos con tecnología de última generación",
+        "Respuesta inmediata ante emergencias las 24 horas",
+        "Planes personalizados según las necesidades de tu empresa o hogar"
       ]
     },
-    "coverage": {
-      "0": "Guardias disponibles 24/7",
-      "1": "Tiempo de respuesta < 30 minutos",
-      "2": "Centro de monitoreo propio",
-      "3": "Reportes diarios de novedades",
-      "heading": "Cobertura en Huechuraba",
-      "subheading": ""
-    },
-    "issues": {
-      "0": "Obras y proyectos sin protección adecuada",
-      "1": "Robos en zonas residenciales en desarrollo",
-      "2": "Falta de infraestructura de seguridad en nuevas poblaciones",
-      "heading": "Problemas que solucionamos",
-      "subheading": ""
-    },
-    "stats": {
-      "0": {
-        "label": "Empresas protegidas",
-        "value": "20+"
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años de experiencia"
       },
-      "1": {
-        "label": "Guardias en zona",
-        "value": "30+"
+      {
+        "value": "120+",
+        "label": "Clientes satisfechos en Huechuraba"
       },
-      "2": {
-        "label": "Tiempo respuesta",
-        "value": "< 30 min"
+      {
+        "value": "85+",
+        "label": "Guardias operativos en la zona"
       },
-      "heading": "Números que nos respaldan",
-      "subheading": ""
-    },
-    "faqs": {
-      "0": {
-        "question": "¿Hay disponibilidad de guardias en Huechuraba?",
-        "answer": "Sí, tenemos guardias disponibles desplegados en Huechuraba listos para comenzar el servicio."
+      {
+        "value": "25+",
+        "label": "Centros empresariales protegidos"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta un guardia de seguridad en Huechuraba?",
+        "answer": "Los precios varían según las horas de servicio y el tipo de vigilancia requerida. En GuardMan ofrecemos cotizaciones personalizadas gratuitas con planes desde $800.000 mensuales para servicios básicos."
       },
-      "1": {
-        "question": "¿Cuál es el tiempo de respuesta en Huechuraba?",
-        "answer": "Nuestro tiempo de respuesta en Huechuraba es inferior a 30 minutos desde cualquier punto de la comuna."
+      {
+        "question": "¿Cubren todas las zonas de Huechuraba incluido Ciudad Empresarial?",
+        "answer": "Sí, tenemos cobertura total en toda la comuna incluyendo Ciudad Empresarial, Santa Laura, Pudahuel Este y todos los sectores residenciales y comerciales de Huechuraba."
       },
-      "2": {
-        "question": "¿Qué tipos de propiedades protegen?",
-        "answer": "Protegemos empresas, condominos, residencias, obras y cualquier tipo de propiedad que necesite seguridad."
+      {
+        "question": "¿Necesito autorización de la Subsecretaría de Prevención del Delito?",
+        "answer": "No, ese tramite es responsabilidad de la empresa de seguridad. En GuardMan gestionamos todos los permisos OS-10 ante la autoridad para que tú no te preocupes de nada."
       },
-      "heading": "Preguntas Frecuentes",
-      "subheading": ""
-    },
+      {
+        "question": "¿Tienen servicio de escoltas para ejecutivos en Huechuraba?",
+        "answer": "Sí, ofrecemos servicios de escoltas profesionales capacitados en protección personal, ideales para ejecutivos que se movilizan por la zona nororiente de Santiago."
+      }
+    ],
     "cta": {
-      "heading": "Protege tu propiedad en Huechuraba",
-      "subheading": "Contáctanos para una cotización personalizada.",
-      "description": "Contáctanos para una cotización personalizada.",
-      "button": "Solicitar Cotización"
+      "headline": "Protege lo que más Importa en Huechuraba",
+      "button_text": "Llamar Ahora",
+      "button_link": "/cotizacion"
     }
   }
 }

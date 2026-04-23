@@ -1,0 +1,133 @@
+{
+  "slug": "auditoria-seguridad",
+  "type": "service",
+  "version": 1,
+  "last_modified": "2026-04-22T14:11:12.774Z",
+  "seo": {
+    "title": "Auditoría de Seguridad en Santiago | GuardMan Chile - Informe Gratis",
+    "description": "Auditoría de seguridad profesional en Santiago y RM. Evaluamos vulnerabilidades, cumplimiento OS10 y sistemas de vigilancia. Cotiza gratis con GuardMan.",
+    "canonical": "https://guardman.cl/servicios/auditoria-seguridad"
+  },
+  "content": {
+    "hero": {
+      "heading": "Auditoría de Seguridad Profesional en Santiago | GuardMan Chile",
+      "subheading": "Evaluación integral de vulnerabilidades para empresas, edificios y condominios. Identificamos puntos débiles y diseñamos soluciones a medida con respaldo de 8+ años de experiencia.",
+      "image": "/images/service-auditoria-seguridad.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Auditoria Seguridad",
+        "url": "/servicios/auditoria-seguridad"
+      }
+    ],
+    "intro": {
+      "title": "¿Sabías que el 73% de las brechas de seguridad en empresas chilenas podrían prevenirse con una auditoría oportuna?",
+      "content": "En GuardMan Chile somos especialistas en auditoría de seguridad física y operacional. Nuestra metodología profesional permite evaluar de manera exhaustiva cada aspecto de tu infraestructura: accesos, cerraduras, sistemas de vigilancia, iluminación perimetral, ángulos ciegos y protocolos de respuesta ante emergencias.\nNuestro equipo de auditores certificados OS-10 visita tus instalaciones, documenta hallazgos con evidencia fotográfica y técnica, y entrega un informe detallado con recomendaciones priorizadas según nivel de riesgo. Ya sea que necesites una auditoría para cumplir normativas OS10, preparar licitaciones públicas, o simplemente optimizar tu inversión en seguridad, tenemos la experiencia para ayudarte.",
+      "image": "/images/service-intro.jpg"
+    },
+    "features": {
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Evaluación de seguridad física: accesos, cerraduras, iluminación",
+        "Revisión de sistemas de alarma y videovigilancia",
+        "Auditoría de personal de seguridad y sus certificaciones",
+        "Análisis de vulnerabilidades y nivel de riesgo",
+        "Plan de mejoras priorizadas por urgencia",
+        "Informe ejecutivo con recomendaciones"
+      ]
+    },
+    "issues": {
+      "title": "Señales de que tu empresa necesita una auditoría de seguridad",
+      "items": [
+        "No tienes registro actualizado de tus puntos de acceso ni control de visitas e ingresos",
+        "Los guardias de seguridad operan sin protocolos claros ni supervisión efectiva",
+        "Tu sistema de cámaras no cubre zonas críticas o tiene fallas de grabación frecuentes",
+        "Experimentas robos, hechos vandálicos o ingresos no autorizados de manera recurrente"
+      ]
+    },
+    "stats": [
+      {
+        "value": "+850",
+        "label": "Auditorías realizadas"
+      },
+      {
+        "value": "500+",
+        "label": "Empresas evaluadas"
+      },
+      {
+        "value": "3.200+",
+        "label": "Vulnerabilidades detectadas y resueltas"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta una auditoría de seguridad?",
+        "answer": "El valor depende del tamaño de la empresa y alcance de la auditoría. Para empresas pequeñas (hasta 500m²) el valor parte desde $350.000. Solicite cotización."
+      },
+      {
+        "question": "¿Cuánto tiempo toma la auditoría?",
+        "answer": "Para empresas medianas, la auditoría toma entre 2 y 5 días hábiles de trabajo en terreno, más 1 semana para elaborar el informe."
+      },
+      {
+        "question": "¿La auditoría incluye pruebas técnicas?",
+        "answer": "Sí, probamos los sistemas de alarma, cámaras y control de accesos para verificar que funcionen correctamente."
+      },
+      {
+        "question": "¿El informe es confidencial?",
+        "answer": "Sí, el informe es propiedad del cliente y no compartimos información con terceros. Guardamos confidencialidad absoluta."
+      },
+      {
+        "question": "¿Pueden implementar las recomendaciones ustedes mismos?",
+        "answer": "Sí, ofrecemos servicio de implementación de mejoras después de la auditoría, pero el cliente tiene total libertad de contratar a otros proveedores."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu negocio con una auditoría profesional",
+      "button_text": "Solicitar Auditoría Gratuita",
+      "button_link": "/cotizacion"
+    }
+  },
+  "related_content": {
+    "related_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/guardias-de-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "Cctv Videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "Control De Accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ],
+    "upsell_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 75,
+    "published": false
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "slug": "lo-barnechea",
+  "type": "location",
+  "version": 1,
+  "last_modified": "2026-04-22T14:59:39.550Z",
+  "seo": {
+    "title": "Seguridad Privada Lo Barnechea | GuardMan Chile",
+    "description": "Empresa de seguridad privada líder en Lo Barnechea. Guardias OS-10, monitoreo 24/7, CCTV y control de accesos. Cotiza gratis.",
+    "canonical": "https://guardman.cl/ubicaciones/lo-barnechea"
+  },
+  "content": {
+    "hero": {
+      "heading": "Seguridad Privada en Lo Barnechea | Guardias y Monitoreo 24/7",
+      "subheading": "Protegemos tu hogar, empresa o evento en Lo Barnechea con guardias certificados y tecnología de vanguardia.",
+      "image": "/images/og-default.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Ubicaciones",
+        "url": "/ubicaciones"
+      },
+      {
+        "label": "Lo barnechea",
+        "url": "/ubicaciones/lo-barnechea"
+      }
+    ],
+    "intro": {
+      "title": "Guardia de Seguridad en Lo Barnechea con Certificación OS-10",
+      "content": "En GuardMan Chile somos la empresa de seguridad privada líder en Lo Barnechea. Contamos con más de 8 años de experiencia protegiendo familias, empresas y comunidades en esta exclusiva comuna de Santiago.\n\nCada guardia que desplegamos en Lo Barnechea está certificado con curso OS-10 y cuenta con formación especializada para résidentela vigilancia residencial, control de accesos en condominios y protección de zonas de alto tráfico. Nuestro compromiso es entregar tranquilidad real a cada cliente.",
+      "image": "/images/location-intro.jpg"
+    },
+    "features": {
+      "title": "¿Por Qué Elegir GuardMan en Lo Barnechea?",
+      "items": [
+        "Guardias certificados OS-10 con experiencia en vigilancia residencial y empresarial.",
+        "Centro de monitoreo 24/7 propio con respuesta inmediata ante emergencias.",
+        "Cobertura en toda la comuna: Ciudad Empresarial, portals, condominios y casas.",
+        "Sistemas de CCTV y control de accesos con tecnología de última generación.",
+        "Escoltas capacitados para protección personal y de ejecutivos.",
+        "Contratos flexibles adaptados a las necesidades de cada cliente."
+      ]
+    },
+    "stats": [
+      {
+        "value": "85+",
+        "label": "Clientes protegidos en la comuna"
+      },
+      {
+        "value": "45+",
+        "label": "Guardias desplegados en Lo Barnechea"
+      },
+      {
+        "value": "8+",
+        "label": "Años de experiencia"
+      },
+      {
+        "value": "<5",
+        "label": "Tiempo de respuesta promedio (min)"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta un guardia de seguridad en Lo Barnechea?",
+        "answer": "El valor depende de la cantidad de guardias, horario y servicios adicionales como CCTV. Contáctanos para una cotización personalizada sin compromiso."
+      },
+      {
+        "question": "¿Tienen cobertura en Ciudad Empresarial y portals de Lo Barnechea?",
+        "answer": "Sí, cubrimos toda la comuna incluyendo Ciudad Empresarial, portals comerciales, condominios residenciales y zonas rurales. Tenemos guardias disponibles para cada tipo de inmueble."
+      },
+      {
+        "question": "¿Puedo contratar solo monitoreo sin guardias físicos?",
+        "answer": "Claro, ofrecemos planes de monitoreo 24/7 independientes o combinados con vigilancia física. Tú eliges el nivel de protección que necesitas."
+      },
+      {
+        "question": "¿Los guardias pueden trabajar en eventos puntuales?",
+        "answer": "Sí, disponibilizamos escoltas y guardias para eventos corporativos, matrimonios, lanzamientos y celebraciones. Contamos con experiencia en seguridad de eventos de alta concurrencia."
+      }
+    ],
+    "cta": {
+      "headline": "Protege lo que más importa en Lo Barnechea",
+      "button_text": "Solicitar Cotización Gratuita",
+      "button_link": "/cotizacion"
+    }
+  },
+  "related_content": {
+    "nearby_locations": [
+      {
+        "slug": "conchali",
+        "title": "Conchali",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/conchali.jpg"
+      },
+      {
+        "slug": "huechuraba",
+        "title": "Huechuraba",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/huechuraba.jpg"
+      },
+      {
+        "slug": "la-pintana",
+        "title": "La Pintana",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/la-pintana.jpg"
+      }
+    ],
+    "related_services": [
+      {
+        "slug": "auditoria-seguridad",
+        "title": "auditoria-seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/auditoria-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "cctv-videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "control-de-accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ],
+    "upsell_services": [
+      {
+        "slug": "auditoria-seguridad",
+        "title": "auditoria-seguridad",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "cctv-videovigilancia",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 0,
+    "published": false
+  }
+}

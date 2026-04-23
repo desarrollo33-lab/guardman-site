@@ -1,0 +1,163 @@
+{
+  "slug": "escoltas-privados/vitacura",
+  "type": "combo",
+  "service": "escoltas-privados",
+  "location": "vitacura",
+  "version": 1,
+  "last_modified": "2026-04-22T14:13:24.743Z",
+  "seo": {
+    "title": "Escoltas Privados en Vitacura",
+    "description": "Servicio de escoltas privados profesional en Vitacura. Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente premium.",
+    "keywords": [],
+    "canonical": "https://guardman.cl/servicios/escoltas-privados/vitacura"
+  },
+  "content": {
+    "hero": {
+      "heading": "Escoltas Privados en Vitacura",
+      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente premium.",
+      "cta_text": "Cotizar en Vitacura",
+      "cta_link": "/cotizacion?service=escoltas-privados&location=vitacura",
+      "image": "/images/service-escoltas-privados.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Escoltas Privados",
+        "url": "/servicios/escoltas-privados"
+      },
+      {
+        "label": "Vitacura",
+        "url": "/servicios/escoltas-privados/vitacura"
+      }
+    ],
+    "intro": {
+      "title": "¿Por qué elegir Escoltas Privados en Vitacura?",
+      "content": "En GuardMan Chile somos especialistas en escoltas privados en Vitacura. Nuestra experiencia en el sector oriente premium nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Vitacura y toda la zona Oriente.",
+      "image": "/images/combo-intro.jpg"
+    },
+    "features": {
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Escoltas certificados OS-10 con experiencia militar o policial",
+        "Evaluación de riesgos previa al servicio",
+        "Protección ejecutiva y familiar",
+        "Transporte seguro y ruta de evasión",
+        "Coordinación con autoridades de seguridad",
+        "Confidentialidad y discreción total"
+      ]
+    },
+    "zone_specific": {
+      "title": "Por qué Vitacura",
+      "content": "",
+      "points": [
+        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
+        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "issues": {
+      "title": "Desafíos de seguridad en Vitacura",
+      "items": [
+        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
+        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "stats": [
+      {
+        "value": "< 30 min",
+        "label": "Tiempo de respuesta en Oriente"
+      },
+      {
+        "value": "Oriente",
+        "label": "Cobertura"
+      },
+      {
+        "value": "Disponibles",
+        "label": "Guardias OS-10"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cómo contratan el servicio de escoltas?",
+        "answer": "Primero evaluamos tus necesidades específicas de seguridad. Luego seleccionamos el escolta adecuado según perfil, experiencia y requisitos particulares."
+      },
+      {
+        "question": "¿Los escoltas tienen formación legal?",
+        "answer": "Sí, todos nuestros escoltas tienen certificación OS-10 y formación en defensa personal, primeros auxilios y manejo de situaciones de crisis."
+      },
+      {
+        "question": "¿El servicio es confidencial?",
+        "answer": "Absolutamente. La confidencialidad es parte fundamental de nuestro servicio. No revelamos información de nuestros clientes ni de sus rutinas."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu propiedad en Vitacura",
+      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
+      "button_text": "Cotizar en Vitacura",
+      "button_link": "/cotizacion?service=escoltas-privados&location=vitacura"
+    }
+  },
+  "related_content": {
+    "related_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/guardias-de-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "Cctv Videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "Control De Accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ],
+    "nearby_locations": [
+      {
+        "slug": "seguridad-la-pintana",
+        "title": "Seguridad La Pintana",
+        "zone": "oriente",
+        "reason": "Zona oriente similar"
+      },
+      {
+        "slug": "seguridad-la-reina",
+        "title": "Seguridad La Reina",
+        "zone": "oriente",
+        "reason": "Zona oriente similar"
+      },
+      {
+        "slug": "seguridad-lampa",
+        "title": "Seguridad Lampa",
+        "zone": "oriente",
+        "reason": "Zona oriente similar"
+      }
+    ],
+    "upsell_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 80,
+    "published": false
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "slug": "vitacura",
+  "type": "location",
+  "version": 1,
+  "last_modified": "2026-04-22T14:59:39.560Z",
+  "seo": {
+    "title": "Seguridad Privada en Vitacura | GuardMan Chile OS-10",
+    "description": "Contrata seguridad privada en Vitacura. Guardias OS-10 certificados, cobertura 24/7. Cotiza gratis.",
+    "canonical": "https://guardman.cl/ubicaciones/vitacura"
+  },
+  "content": {
+    "hero": {
+      "heading": "Seguridad Privada en Vitacura",
+      "subheading": "Empresa lider con guardias OS-10 en Vitacura. Cobertura 24/7.",
+      "image": "/images/og-default.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Ubicaciones",
+        "url": "/ubicaciones"
+      },
+      {
+        "label": "Vitacura",
+        "url": "/ubicaciones/vitacura"
+      }
+    ],
+    "intro": {
+      "title": "Vitacura",
+      "content": "En GuardMan Chile entendemos las necesidades especificas de seguridad en Vitacura.\n\nContamos con guardias experimentados que conocen las dinamicas del sector.\n\nNuestro conocimiento del territorio nos permite identificar puntos criticos y disenar esquemas de seguridad efectivos.",
+      "image": "/images/location-intro.jpg"
+    },
+    "features": {
+      "title": "Cobertura en vitacura",
+      "items": []
+    },
+    "stats": [
+      {
+        "value": "20+",
+        "label": "Empresas protegidas"
+      },
+      {
+        "value": "30+",
+        "label": "Guardias en zona"
+      },
+      {
+        "value": "< 30 min",
+        "label": "Tiempo respuesta"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Hay disponibilidad de guardias en Vitacura?",
+        "answer": "Si, tenemos guardias disponibles desplegados en Vitacura listos para comenzar el servicio."
+      },
+      {
+        "question": "Cual es el tiempo de respuesta en Vitacura?",
+        "answer": "Nuestro tiempo de respuesta en Vitacura es inferior a 30 minutos."
+      },
+      {
+        "question": "Que tipos de propiedades protegen?",
+        "answer": "Protegemos empresas, condominios, residencias, obras y cualquier tipo de propiedad."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu propiedad en Vitacura",
+      "button_text": "Solicitar Cotizacion",
+      "button_link": "/cotizacion"
+    }
+  },
+  "related_content": {
+    "nearby_locations": [
+      {
+        "slug": "conchali",
+        "title": "Conchali",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/conchali.jpg"
+      },
+      {
+        "slug": "huechuraba",
+        "title": "Huechuraba",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/huechuraba.jpg"
+      },
+      {
+        "slug": "la-pintana",
+        "title": "La Pintana",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/la-pintana.jpg"
+      }
+    ],
+    "related_services": [
+      {
+        "slug": "auditoria-seguridad",
+        "title": "auditoria-seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/auditoria-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "cctv-videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "control-de-accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ],
+    "upsell_services": [
+      {
+        "slug": "auditoria-seguridad",
+        "title": "auditoria-seguridad",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "cctv-videovigilancia",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 0,
+    "published": false
+  }
+}

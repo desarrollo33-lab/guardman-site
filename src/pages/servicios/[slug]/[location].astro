@@ -1,6 +1,7 @@
 ---
 /**
- * Service + Location Combo Page - Usa contenido del CMS
+ * Service + Location Combo Page - Usa contenido del CMS (JSON con related_content)
+ * MODIFICADO: Lee related_content desde JSON en lugar de calcular dinámicamente
  */
 
 import BaseLayout from '../../../layouts/BaseLayout.astro';
@@ -8,13 +9,14 @@ import { getServiceSections, getLocationSections, getServicesList, getLocationsL
 import SchemaService from '../../../components/seo/SchemaService.astro';
 import SchemaLocalBusiness from '../../../components/seo/SchemaLocalBusiness.astro';
 import SchemaBreadcrumb from '../../../components/seo/SchemaBreadcrumb.astro';
+import { readFileSync, existsSync } from 'fs';
 
 export async function getStaticPaths() {
   const services = getServicesList();
   const locations = getLocationsList();
-  
+
   const paths: { params: { slug: string; location: string }; props: any }[] = [];
-  
+
   for (const service of services) {
     for (const location of locations) {
       paths.push({
@@ -23,44 +25,63 @@ export async function getStaticPaths() {
       });
     }
   }
-  
+
   return paths;
 }
 
 const { serviceSlug, serviceName, locationSlug, locationName } = Astro.props;
 
-// Get all services and locations
 const services = getServicesList();
 const locations = getLocationsList();
 
-// Get sections from CMS
 const serviceSections = getServiceSections(serviceSlug);
 const locationSections = getLocationSections(locationSlug);
 
-// Find current service and location
+// Load combo content from JSON (nuevo formato: src/data/cms/combos/{service}/{location}.json)
+const comboPath = `src/data/cms/combos/${serviceSlug}/${locationSlug}.json`;
+const legacyComboPath = `src/data/cms/combo-${serviceSlug}-${locationSlug}.json`;
+
+let comboContent: any = null;
+let comboSections: any = null;
+let relatedContentFromCMS: any = null;
+
+if (existsSync(comboPath)) {
+  // Nuevo formato: combos/{service}/{location}.json
+  comboContent = JSON.parse(readFileSync(comboPath, 'utf-8'));
+  comboSections = comboContent.content || comboContent.sections;
+  relatedContentFromCMS = comboContent.related_content;
+} else if (existsSync(legacyComboPath)) {
+  // Formato legacy: combo-{service}-{location}.json
+  const legacyData = JSON.parse(readFileSync(legacyComboPath, 'utf-8'));
+  comboSections = legacyData.sections;
+}
+
 const service = services.find((s: any) => s.slug === serviceSlug) || { slug: serviceSlug, name: serviceName };
 const location = locations.find((l: any) => l.slug === locationSlug) || { slug: locationSlug, name: locationName, zone: 'Centro' };
 
-// Get related services and locations
-const relatedServices = services.filter((s: any) => s.slug !== serviceSlug).slice(0, 3);
-const nearbyLocations = locations.filter((l: any) => l.slug !== locationSlug && l.zone === location.zone).slice(0, 3);
+// USE related_content FROM JSON (no más cálculo dinámico)
+const relatedServices = relatedContentFromCMS?.related_services || services.filter((s: any) => s.slug !== serviceSlug).slice(0, 3);
+const nearbyLocations = relatedContentFromCMS?.nearby_locations || locations.filter((l: any) => l.slug !== locationSlug && l.zone === location.zone).slice(0, 3);
+const upsellServices = relatedContentFromCMS?.upsell_services || [];
 
-// Zone context for localized content
+// Zone context
 const zoneContext: Record<string, { challenges: string; focus: string }> = {
   'Oriente': { challenges: 'residencias de lujo, embajadas y oficinas corporativas', focus: 'control de accesos VIP y monitoreo perimetral' },
   'Centro': { challenges: 'comercios, hoteles y oficinas públicas', focus: 'control de flujos y CCTV comercial' },
   'Norte': { challenges: 'industrias, bodegas y centros logísticos', focus: 'vigilancia perimetral y control vehicular' },
+  'Sur': { challenges: 'residenciales y comerciales', focus: 'seguridad general' },
 };
 
 const ctx = zoneContext[location.zone] || { challenges: 'residencial y comercial', focus: 'seguridad general' };
 
 // SEO meta
-const hero = serviceSections?.hero || { heading: serviceName, subheading: '' };
-const metaTitle = `${hero.heading} en ${locationName} | GuardMan`;
-const metaDescription = `Servicio de ${serviceName.toLowerCase()} profesional en ${locationName}. ${hero.subheading || serviceName}. Solicita tu cotización.`;
+const hero = comboSections?.hero || serviceSections?.hero || { heading: serviceName, subheading: '' };
+const metaTitle = comboSections?.meta?.title || comboContent?.seo?.title || `${hero.heading} en ${locationName} | GuardMan`;
+const metaDescription = comboSections?.meta?.description || comboContent?.seo?.description || `Servicio de ${serviceName.toLowerCase()} profesional en ${locationName}. ${hero.subheading || serviceName}. Solicita tu cotización.`;
 
-// Combo FAQs
-const comboFAQs = [
+// FAQs from CMS or fallback
+const faqsFromCMS = comboSections?.faq || comboContent?.content?.faq || [];
+const comboFAQs = faqsFromCMS.length > 0 ? faqsFromCMS : [
   {
     question: `¿Cuánto cuesta el servicio de ${serviceName} en ${locationName}?`,
     answer: `El precio de ${serviceName.toLowerCase()} en ${locationName} varía según el tipo de propiedad y horarios requeridos. En ${location.zone}, nos especializamos en proteger ${ctx.challenges}. Solicita tu cotización gratuita.`
@@ -79,7 +100,6 @@ const comboFAQs = [
   }
 ];
 
-// Breadcrumb
 const breadcrumbItems = [
   { name: 'Inicio', url: 'https://guardman.cl' },
   { name: 'Servicios', url: 'https://guardman.cl/servicios' },
@@ -89,22 +109,20 @@ const breadcrumbItems = [
 ---
 
 <BaseLayout title={metaTitle} description={metaDescription}>
-  <!-- Schema -->
-  <SchemaService 
+  <SchemaService
     name={`${serviceName} en ${locationName}`}
     description={hero.heading}
     slug={`${serviceSlug}/${locationSlug}`}
     priceRange={service.price_range || '$$$'}
     areaServed={[locationName]}
   />
-  <SchemaLocalBusiness 
+  <SchemaLocalBusiness
     name={`GuardMan ${locationName}`}
     address={locationName}
     areaServed="Región Metropolitana"
   />
   <SchemaBreadcrumb items={breadcrumbItems} />
-  
-  <!-- Breadcrumb Visual -->
+
   <div class="bg-neutral-100 py-3">
     <div class="container mx-auto px-4">
       <nav class="flex text-sm text-neutral-600" aria-label="Breadcrumb">
@@ -119,79 +137,76 @@ const breadcrumbItems = [
     </div>
   </div>
 
-  <!-- Hero -->
   <section class="relative bg-primary-600 text-white py-16 lg:py-20 overflow-hidden">
     <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
-    
+
     <div class="container mx-auto px-4 relative z-10">
       <div class="flex items-center gap-2 text-white/80 text-sm mb-4">
         <span class="bg-white/20 px-3 py-1 rounded-full">{location.zone}</span>
       </div>
       <h1 class="text-3xl lg:text-5xl font-bold mb-4">{serviceName} en {locationName}</h1>
-      <p class="text-xl text-white/90 max-w-3xl">{hero.subheading}</p>
+      <p class="text-xl text-white/90 max-w-3xl">{hero.subheading || comboSections?.hero?.subheading}</p>
     </div>
   </section>
 
-  <!-- Main Content -->
   <section class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4">
       <div class="grid lg:grid-cols-3 gap-12">
-        <!-- Column 1-2: Content -->
         <div class="lg:col-span-2">
-          
-          <!-- Service Intro -->
-          {serviceSections?.intro?.paragraphs && (
+
+          {(comboSections?.intro?.paragraphs || comboSections?.intro?.content || serviceSections?.intro?.paragraphs) && (
             <div class="mb-8">
               <h2 class="text-2xl font-bold text-neutral-900 mb-4">
-                Servicio de {serviceName} en {locationName}
+                {comboSections?.intro?.title || `Servicio de ${serviceName} en ${locationName}`}
               </h2>
               <div class="prose prose-neutral max-w-none">
-                {serviceSections.intro.paragraphs.map((p: string) => (
-                  <p>{p}</p>
-                ))}
+                {Array.isArray(comboSections?.intro?.paragraphs) ? (
+                  comboSections.intro.paragraphs.map((p: string) => <p>{p}</p>)
+                ) : (
+                  <p>{comboSections?.intro?.content || comboSections?.intro || serviceSections?.intro?.paragraphs || ''}</p>
+                )}
               </div>
             </div>
           )}
 
-          <!-- Location Context -->
-          {locationSections?.intro?.paragraphs && (
+          {(comboSections?.issues?.items || comboSections?.zone_specific?.points || locationSections?.intro?.paragraphs) && (
             <div class="mb-8 bg-primary-50 rounded-xl p-6">
               <h3 class="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-2">
                 <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                 </svg>
-                Cobertura en {locationName}
+                {comboSections?.issues?.title || comboSections?.zone_specific?.title || `Desafíos de seguridad en ${locationName}`}
               </h3>
-              <p class="text-neutral-600 mb-4">
-                {locationName} se especializa en {ctx.challenges}. {ctx.focus}.
-              </p>
-            </div>
-          )}
-
-          <!-- Service Features -->
-          {serviceSections?.features && (
-            <div class="mb-8">
-              <h3 class="text-xl font-bold text-neutral-900 mb-4">
-                {serviceSections.features.heading || 'Qué incluye el servicio'}
-              </h3>
-              <div class="grid sm:grid-cols-2 gap-3">
-                {Object.entries(serviceSections.features)
-                  .filter(([key]) => !isNaN(Number(key)))
-                  .map(([_, feature]) => (
-                    <div class="flex items-start gap-3 bg-neutral-50 rounded-lg p-4 hover:shadow-md transition-shadow">
-                      <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                      </svg>
-                      <span class="text-neutral-700">{feature}</span>
-                    </div>
-                  ))
-                }
+              <div class="space-y-2">
+                {(comboSections?.issues?.items || comboSections?.zone_specific?.points || []).map((item: string) => (
+                  <p class="text-neutral-600">{item}</p>
+                ))}
               </div>
             </div>
           )}
 
-          <!-- Process -->
+          {serviceSections?.features && (
+            <div class="mb-8">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4">
+                {serviceSections.features.title || 'Qué incluye el servicio'}
+              </h3>
+              <div class="grid sm:grid-cols-2 gap-3">
+                {(serviceSections.features.items || Object.entries(serviceSections.features).filter(([key]) => !isNaN(Number(key))).map(([_, v]) => v)).map((feature: any) => (
+                  <div class="flex items-start gap-3 bg-neutral-50 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <div>
+                      <span class="text-neutral-700 font-medium">{feature.title}</span>
+                      {feature.description && <p class="text-neutral-600 text-sm">{feature.description}</p>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {serviceSections?.process && (
             <div class="mb-8">
               <h3 class="text-xl font-bold text-neutral-900 mb-4">
@@ -205,7 +220,7 @@ const breadcrumbItems = [
                       <div class="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-3 shadow-lg">
                         {index + 1}
                       </div>
-                      <h4 class="font-semibold text-neutral-900 text-sm">{step.step}</h4>
+                      <h4 class="font-semibold text-neutral-900 text-sm">{step.step || step.title}</h4>
                       <p class="text-neutral-600 text-xs mt-1">{step.description}</p>
                     </div>
                   ))
@@ -214,16 +229,15 @@ const breadcrumbItems = [
             </div>
           )}
 
-          <!-- Stats -->
-          {serviceSections?.stats && (
+          {(serviceSections?.stats || comboSections?.stats) && (
             <div class="mb-8 bg-primary-700 text-white rounded-xl p-8">
               <h3 class="text-xl font-bold text-center mb-6">
-                {serviceSections.stats.heading || 'Números que nos respaldan'}
+                {(serviceSections?.stats || comboSections?.stats)?.heading || 'Números que nos respaldan'}
               </h3>
               <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-                {Object.entries(serviceSections.stats)
-                  .filter(([key]) => !isNaN(Number(key)))
-                  .map(([_, stat]: [string, any]) => (
+                {((serviceSections?.stats?.items || comboSections?.stats) || [])
+                  .filter((_: any, i: number) => !isNaN(i) || _.value)
+                  .map((stat: any) => (
                     <div>
                       <div class="text-3xl lg:text-4xl font-bold mb-1">{stat.value}</div>
                       <div class="text-white/80 text-sm">{stat.label}</div>
@@ -234,32 +248,64 @@ const breadcrumbItems = [
             </div>
           )}
 
-          <!-- Related Services -->
-          <div class="mb-8">
-            <h3 class="text-xl font-bold text-neutral-900 mb-4">
-              Otros servicios en {locationName}
-            </h3>
-            <div class="grid sm:grid-cols-3 gap-4">
-              {relatedServices.map((s: any) => {
-                const sSections = getServiceSections(s.slug);
-                return (
-                  <a 
-                    href={`/servicios/${s.slug}/${locationSlug}`} 
-                    class="bg-neutral-50 rounded-lg p-4 hover:shadow-lg hover:-translate-y-1 transition-all group"
-                  >
-                    <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors text-sm mb-1">
-                      {sSections?.hero?.heading || s.name}
-                    </h4>
-                    <p class="text-neutral-600 text-xs line-clamp-2">
-                      {sSections?.hero?.subheading || s.short_description || ''}
-                    </p>
-                  </a>
-                );
-              })}
+          {/* Related Services - USA related_content DEL JSON */}
+          {relatedServices && relatedServices.length > 0 && (
+            <div class="mb-8">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4">
+                Otros servicios en {locationName}
+              </h3>
+              <div class="grid sm:grid-cols-3 gap-4">
+                {relatedServices.map((s: any) => {
+                  const sSections = getServiceSections(s.slug);
+                  return (
+                    <a
+                      href={`/servicios/${s.slug}/${locationSlug}`}
+                      class="bg-neutral-50 rounded-lg p-4 hover:shadow-lg hover:-translate-y-1 transition-all group"
+                    >
+                      <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors text-sm mb-1">
+                        {s.title || sSections?.hero?.heading || s.name}
+                      </h4>
+                      <p class="text-neutral-600 text-xs line-clamp-2">
+                        {s.excerpt || sSections?.hero?.subheading || s.short_description || ''}
+                      </p>
+                    </a>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          )}
 
-          <!-- FAQs -->
+          {/* Upsell Services - NUEVO (del JSON) */}
+          {upsellServices && upsellServices.length > 0 && (
+            <div class="mb-8 bg-gradient-to-r from-primary-50 to-primary-100 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                </svg>
+                Mejora tu protección
+              </h3>
+              <div class="space-y-3">
+                {upsellServices.map((upsell: any) => (
+                  <a
+                    href={`/servicios/${upsell.slug}`}
+                    class="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <div>
+                      <span class="font-semibold text-neutral-900">{upsell.title}</span>
+                      <p class="text-neutral-600 text-xs">{upsell.reason}</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-primary-600 font-semibold text-sm">{upsell.price_range}</span>
+                      <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                      </svg>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
           {comboFAQs.length > 0 && (
             <div class="mb-8">
               <h3 class="text-xl font-bold text-neutral-900 mb-4">
@@ -284,45 +330,44 @@ const breadcrumbItems = [
           )}
         </div>
 
-        <!-- Column 3: Sidebar -->
         <div class="lg:col-span-1">
           <div class="bg-neutral-50 rounded-xl p-6 sticky top-8">
             <h3 class="text-xl font-bold text-neutral-900 mb-4">
-              {serviceSections?.cta?.heading || `Cotiza ${serviceName}`}
+              {comboSections?.cta?.headline || serviceSections?.cta?.heading || `Cotiza ${serviceName} en ${locationName}`}
             </h3>
-            
-            {serviceSections?.cta?.description && (
+
+            {(comboSections?.cta?.subheading || serviceSections?.cta?.description) && (
               <p class="text-neutral-600 mb-6">
-                {serviceSections.cta.description}
+                {comboSections?.cta?.subheading || serviceSections.cta.description}
               </p>
             )}
-            
-            <a 
-              href="/cotizacion" 
+
+            <a
+              href="/cotizacion"
               class="block w-full bg-primary-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
             >
-              {serviceSections?.cta?.button || 'Solicitar Cotización'}
+              {comboSections?.cta?.button_text || comboSections?.cta?.button || serviceSections?.cta?.button || 'Solicitar Cotización'}
             </a>
-            
-            <a 
-              href="/contacto" 
+
+            <a
+              href="/contacto"
               class="block w-full border border-primary-600 text-primary-600 text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors mt-3"
             >
               Llamar ahora
             </a>
 
-            <!-- Nearby Locations -->
-            {nearbyLocations.length > 0 && (
+            {/* Nearby Locations - USA nearby_locations DEL JSON */}
+            {nearbyLocations && nearbyLocations.length > 0 && (
               <div class="mt-6 pt-6 border-t border-neutral-200">
                 <h4 class="text-sm font-semibold text-neutral-700 mb-3">
                   También en {location.zone}
                 </h4>
                 {nearbyLocations.map((l: any) => (
-                  <a 
+                  <a
                     href={`/servicios/${serviceSlug}/${l.slug}`}
                     class="flex items-center justify-between py-2 text-sm text-neutral-600 hover:text-primary-600 border-b border-neutral-100 last:border-0"
                   >
-                    <span>{l.name}</span>
+                    <span>{l.title || l.name}</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                     </svg>
@@ -331,13 +376,12 @@ const breadcrumbItems = [
               </div>
             )}
 
-            <!-- All Services Links -->
             <div class="mt-6 pt-6 border-t border-neutral-200">
               <h4 class="text-sm font-semibold text-neutral-700 mb-3">
                 Más servicios
               </h4>
               {services.slice(0, 4).map((s: any) => (
-                <a 
+                <a
                   href={`/servicios/${s.slug}/${locationSlug}`}
                   class="block py-2 text-sm text-neutral-600 hover:text-primary-600 border-b border-neutral-100 last:border-0"
                 >
@@ -351,7 +395,6 @@ const breadcrumbItems = [
     </div>
   </section>
 
-  <!-- CTA Final -->
   <section class="py-12 bg-primary-600 text-white">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-2xl lg:text-3xl font-bold mb-4">
@@ -361,14 +404,14 @@ const breadcrumbItems = [
         Contactanos para una evaluación personalizada de seguridad en {locationName}.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a 
-          href="/cotizacion" 
+        <a
+          href="/cotizacion"
           class="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors"
         >
           Solicitar Cotización
         </a>
-        <a 
-          href="/contacto" 
+        <a
+          href="/contacto"
           class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
         >
           Hablar con un experto

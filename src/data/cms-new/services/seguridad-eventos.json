@@ -1,0 +1,139 @@
+{
+  "slug": "seguridad-eventos",
+  "type": "service",
+  "version": 1,
+  "last_modified": "2026-04-22T14:11:12.770Z",
+  "seo": {
+    "title": "Seguridad para Eventos | GuardMan Chile",
+    "description": "Empresa líder en seguridad para eventos en Chile. Guardias certificados OS-10, cobertura en 14 comunas RM. Cotiza gratis tu plan de seguridad.",
+    "canonical": "https://guardman.cl/servicios/seguridad-eventos"
+  },
+  "content": {
+    "hero": {
+      "heading": "Seguridad para Eventos en Chile | GuardMan Chile",
+      "subheading": "Protección profesional para eventos corporativos, masivos y privados",
+      "cta_text": "Cotizar Seguridad para Eventos",
+      "image": "/images/service-seguridad-eventos.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Seguridad Eventos",
+        "url": "/servicios/seguridad-eventos"
+      }
+    ],
+    "intro": {
+      "title": "Servicio Integral de Seguridad para Eventos en Santiago",
+      "content": "En GuardMan Chile somos especialistas en seguridad para eventos. Con más de 8 años de experiencia protegiendo eventos corporativos, masivos y privados en Santiago, hemos consolidado nuestra posición como la empresa líder en el sector. Nuestro equipo de guardias certificados OS-10 está preparado para garantizar la seguridad de tu evento desde la planificación hasta su finalización.\nEntendemos que cada evento es único, por eso desarrollamos planes de seguridad personalizados que se adaptan a las necesidades específicas de cada cliente. Trabajamos en las 14 comunas de la Región Metropolitana, ofreciendo un servicio integral que incluye control de accesos, vigilancia perimetral, monitoreo en tiempo real y coordinación con fuerzas de orden.",
+      "image": "/images/service-intro.jpg"
+    },
+    "features": {
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Coordinadores de seguridad certificados para planificar el evento",
+        "Guardias OS-10 capacitados en control masivo",
+        "Escoltas VIP discretos para invitados especiales",
+        "Postes de control y arcos detectores de metales",
+        "Comunicación radial y coordinación con Carabineros",
+        "Servicio de primeros auxilios con botiquín completo"
+      ]
+    },
+    "issues": {
+      "title": "Problemas que resolvemos para tu evento",
+      "items": [
+        "Control de accesos y prevención de ingresos no autorizados que pueden poner en riesgo a los asistentes",
+        "Gestión de multitudes y prevención de situaciones de hacinamiento o pánico en eventos masivos",
+        "Protección de activos, equipamiento y escenario ante posibles robos o daños materiales",
+        "Coordinación de seguridad para Speakers, VIPs y personalidades que asisten a tu evento corporativo",
+        "Vigilancia perimetral y respuesta inmediata ante intentos de ingreso irregular o incidentes de seguridad"
+      ]
+    },
+    "stats": [
+      {
+        "value": "850+",
+        "label": "Eventos protegidos exitosamente"
+      },
+      {
+        "value": "500+",
+        "label": "Guardias certificados desplegados"
+      },
+      {
+        "value": "8+",
+        "label": "Años de experiencia en eventos"
+      },
+      {
+        "value": "14",
+        "label": "Comunas con cobertura"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Con cuánta anticipación debo contratar seguridad para mi evento?",
+        "answer": "Recomendamos contactar con al menos 2 semanas de anticipación. Para eventos masivos (>1,000 personas) necesitamos 1 mes."
+      },
+      {
+        "question": "¿Cuántos guardias necesito para mi evento?",
+        "answer": "La cantidad depende del tipo de evento y número esperado. Por regla general: 1 guardia cada 100 personas para eventos sociales, 1 cada 50 para corporativos."
+      },
+      {
+        "question": "¿Incluyen arcos detectores y postes de seguridad?",
+        "answer": "Sí, ofrecemos el equipamiento necesario como parte del servicio. Incluye arcos, postes, detectores de metales portátiles y equipos de comunicación."
+      },
+      {
+        "question": "¿Pueden coordinar con Carabineros?",
+        "answer": "Sí, gestionamos los permisos necesarios ante Carabineros y coordinamos la presencia de efectivo público si el evento lo requiere."
+      },
+      {
+        "question": "¿Qué pasa si hay una emergencia durante el evento?",
+        "answer": "Nuestros guardias están entrenados en primeros auxilios y evacuación. Activan protocolos de emergencia y contactan a servicios profesionales inmediatamente."
+      }
+    ],
+    "cta": {
+      "headline": "¿Listo para asegurar el éxito de tu evento?",
+      "button_text": "Cotizar Ahora - Es Gratis",
+      "button_link": "/cotizacion"
+    }
+  },
+  "related_content": {
+    "related_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/guardias-de-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "Cctv Videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "Control De Accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ],
+    "upsell_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 75,
+    "published": false
+  }
+}

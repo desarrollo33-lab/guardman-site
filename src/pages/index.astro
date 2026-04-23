@@ -1,21 +1,66 @@
 ---
+/**
+ * Homepage - MODIFICADO: Lee contenido desde CMS JSON
+ */
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SchemaWebSite from '../components/seo/SchemaWebSite.astro';
 import SchemaOrganization from '../components/seo/SchemaOrganization.astro';
 import CoverageMap from '../components/CoverageMap.astro';
-import { getServiceSections, getServicesList, getLocationsList } from '../data/cms';
+import { getServiceSections, getServicesList, getLocationsList, getImage } from '../data/cms';
 import { optimizeImageUrl } from '../data/directus';
 import { readdirSync, existsSync, readFileSync } from 'fs';
+
+// CMS JSON paths
+const CMS_DIR = 'src/data/cms';
+const NEW_CMS_DIR = 'src/data/cms-new';
+
+let cmsHomepage: any = null;
+
+const homepagePath = existsSync(`${NEW_CMS_DIR}/homepage.json`) ? `${NEW_CMS_DIR}/homepage.json`
+  : existsSync(`${CMS_DIR}/homepage.json`) ? `${CMS_DIR}/homepage.json`
+  : existsSync('homepage.json') ? 'homepage.json'
+  : null;
+
+if (homepagePath) {
+  try {
+    cmsHomepage = JSON.parse(readFileSync(homepagePath, 'utf-8'));
+  } catch (e) {
+    console.error('Error loading homepage from CMS:', e);
+  }
+}
+
+const hp = cmsHomepage?.content || {};
+
+const SERVICE_IMAGES: Record<string, string> = {
+  'guardias-de-seguridad': 'service-guardias-de-seguridad.webp',
+  'cctv-videovigilancia': 'service-cctv-videovigilancia.webp',
+  'control-de-accesos': 'service-control-de-accesos.webp',
+  'escoltas-privados': 'service-escoltas-privados.webp',
+  'monitoreo-24-7': 'service-monitoreo-24-7.webp',
+  'seguridad-eventos': 'service-seguridad-eventos.webp',
+  'seguridad-industrial': 'service-seguridad-industrial.webp',
+  'auditoria-seguridad': 'service-auditoria-seguridad.webp',
+  'guard-pod': 's4-thumbnail.webp'
+};
+
+const SECTOR_IMAGES: Record<string, string> = {
+  'comercial': 's4-thumbnail.webp',
+  'industrial': 'sector-industrial.webp',
+  'residencial': 'sector-residencial.webp',
+  'salud': 'nosotros_seccion.webp',
+  'educacion': 'hero-home.webp',
+  'eventos': 's4-thumbnail.webp',
+  'construccion': 'sector-industrial.webp'
+};
 
 const services = getServicesList();
 const locations = getLocationsList();
 
-// Load sectors from CMS JSON files
-const sectorFiles = readdirSync('src/data/cms')
+const sectorFiles = readdirSync(CMS_DIR)
   .filter(f => f.startsWith('sector-') && f.endsWith('.json'));
 
 const sectors = sectorFiles.map(f => {
-  const data = JSON.parse(readFileSync(`src/data/cms/${f}`, 'utf-8'));
+  const data = JSON.parse(readFileSync(`${CMS_DIR}/${f}`, 'utf-8'));
   return {
     slug: data.sectorSlug || f.replace('sector-', '').replace('.json', ''),
     name: data.sections?.hero?.heading || '',
@@ -23,34 +68,37 @@ const sectors = sectorFiles.map(f => {
   };
 }).filter(s => s.name);
 
-// Load config from CMS JSON
-const configData = existsSync('src/data/cms/config.json') 
-  ? JSON.parse(readFileSync('src/data/cms/config.json', 'utf-8'))
+const configData = existsSync(`${CMS_DIR}/config.json`)
+  ? JSON.parse(readFileSync(`${CMS_DIR}/config.json`, 'utf-8'))
   : {};
+
+// Use CMS JSON sections if available, otherwise fallback
+const cmsSections = cmsHomepage?.sections || {};
 
 const siteConfig = {
   name: configData.site_name || 'GuardMan Chile',
-  phone: configData.phone || '+56930000010',
-  phoneTel: (configData.phone || '+56930000010').replace(/[^0-9+]/g, ''),
-  tagline: configData.tagline || 'Protegemos lo que mas te importa',
+  phone: hp.hero?.phone || configData.phone || '+56930000010',
+  phoneTel: (hp.hero?.phone || configData.phone || '+56930000010').replace(/[^0-9+]/g, ''),
+  tagline: hp.hero?.subheadline || configData.tagline || 'Protegemos lo que mas te importa',
   email: configData.email || 'info@guardman.cl',
-  heroImage: configData.hero_image 
-    ? optimizeImageUrl(`/images/${configData.hero_image.replace('.png', '.webp')}`) 
-    : '/images/hero-home.webp',
-  stats: {
+  heroImage: hp.hero?.background_image
+    ? optimizeImageUrl(hp.hero.background_image.replace('.png', '.webp'))
+    : (configData.hero_image ? optimizeImageUrl(`/images/${configData.hero_image.replace('.png', '.webp')}`) : '/images/hero-home.webp'),
+  seo_title: cmsHomepage?.seo?.title || 'Seguridad Privada en Santiago | GuardMan Chile',
+  seo_description: cmsHomepage?.seo?.description || configData.seo_description || 'GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.',
+  stats: hp.nosotros?.stats || {
     guards: configData.stats_guards || '500+',
     clients: configData.stats_clients || '200+',
     locations: configData.stats_locations || '14',
     years: configData.stats_years || '8+',
-  },
-  seo_description: configData.seo_description || ''
+  }
 };
 
 const guardPodService = services.find(s => s.slug === 'guard-pod');
-const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
+const featuredClients: any[] = [];
 ---
 
-<BaseLayout title="Seguridad Privada en Santiago | GuardMan Chile" description={siteConfig.seo_description || 'GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.'} image={optimizeImageUrl(`/images/${configData.hero_image || 'hero-home.png'}`)}>
+<BaseLayout title={siteConfig.seo_title} description={siteConfig.seo_description} image={siteConfig.heroImage}>
   <!-- Schema Markup for Homepage -->
   <SchemaWebSite />
   <SchemaOrganization />
@@ -72,14 +120,14 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
     <div class="container mx-auto px-4 py-20 lg:py-28 relative z-10">
       <div class="max-w-3xl">
         <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
-          Seguridad Privada en Santiago, Chile
+          {hp.hero?.headline || 'Seguridad Privada en Santiago, Chile'}
         </h1>
         <p class="text-xl lg:text-2xl text-white/90 mb-8">
           {siteConfig.tagline}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 items-center">
           <img 
-            src="/images/escudo-os10.webp"
+            src={hp.hero?.badge_image || '/images/escudo-os10.webp'}
             alt="Certificacion OS-10 - Carabineros de Chile Prefectura Seguridad Privada"
             class="h-20 lg:h-24 w-auto object-contain"
             loading="lazy"
@@ -106,19 +154,19 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
       <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-8">
         <div class="order-1">
           <div class="inline-flex bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <span>Grupo GuardMan Chile</span>
+            <span>{hp.nosotros?.badge || 'Grupo GuardMan Chile'}</span>
           </div>
           <h2 id="nosotros-section-title" class="text-3xl lg:text-4xl font-bold mb-4">
-            {siteConfig.name} - Seguridad privada profesional en Santiago
+            {hp.nosotros?.title || `${siteConfig.name} - Seguridad privada profesional en Santiago`}
           </h2>
           <p class="text-lg text-white/80 max-w-xl">
-            Mas de 8 años de experiencia protegiendo lo que más te importa. Guardias certificados OS-10 y tecnología de vanguardia para un servicio integral y confiable.
+            {hp.nosotros?.paragraph || 'Mas de 8 anos de experiencia protegiendo lo que mas te importa. Guardias certificados OS-10 y tecnologia de vanguardia para un servicio integral y confiable.'}
           </p>
         </div>
         <div class="order-2 relative">
           <div class="rounded-2xl aspect-video overflow-hidden border-2 border-white/20">
             <img 
-              src="/images/nosotros_seccion.webp"
+              src={hp.nosotros?.image || '/images/nosotros_seccion.webp'}
               alt="Equipo GuardMan Chile - Seguridad privada profesional"
               class="w-full h-full object-cover"
               width="800"
@@ -127,61 +175,40 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
             />
           </div>
           <div class="absolute -bottom-4 -right-4 bg-primary-600 text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
-            Conoce GuardMan
+            {hp.nosotros?.image_badge || 'Conoce GuardMan'}
           </div>
         </div>
       </div>
       <!-- Features row -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-        <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-          <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-semibold mb-1">Guardias certificados OS-10 vigentes</h3>
-            <p class="text-white/70 text-sm">Personal capacitado y certificado para maxima proteccion.</p>
-          </div>
-        </article>
-        <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-          <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-semibold mb-1">Cumplimiento Ley 21.659</h3>
-            <p class="text-white/70 text-sm">Operamos dentro de todas las normativas legales vigentes.</p>
-          </div>
-        </article>
-        <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-          <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-semibold mb-1">Atencion 24/7 los 365 dias</h3>
-            <p class="text-white/70 text-sm">Respuesta inmediata en cualquier momento del ano.</p>
-          </div>
-        </article>
-        <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-          <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-semibold mb-1">Centro de monitoreo propio</h3>
-            <p class="text-white/70 text-sm">Supervision continua desde nuestras instalaciones.</p>
-          </div>
-        </article>
+        {(hp.nosotros?.features || [
+          {title: 'Guardias certificados OS-10 vigentes', description: 'Personal capacitado y certificado para maxima proteccion.'},
+          {title: 'Cumplimiento Ley 21.659', description: 'Operamos dentro de todas las normativas legales vigentes.'},
+          {title: 'Atencion 24/7 los 365 dias', description: 'Respuesta inmediata en cualquier momento del ano.'},
+          {title: 'Centro de monitoreo propio', description: 'Supervision continua desde nuestras instalaciones.'}
+        ]).map((f: any, idx: number) => {
+          const icons = [
+            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>',
+            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>',
+            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>',
+            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>'
+          ];
+          return (
+            <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
+              <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" set:html={icons[idx % icons.length]} />
+              </div>
+              <div>
+                <h3 class="font-semibold mb-1">{f.title}</h3>
+                <p class="text-white/70 text-sm">{f.description}</p>
+              </div>
+            </article>
+          );
+        })}
       </div>
       <div class="text-center">
-        <a href="/nosotros" class="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
-          Conoce mas sobre nosotros
+        <a href={hp.nosotros?.cta_link || '/nosotros'} class="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+          {hp.nosotros?.cta_text || 'Conoce mas sobre nosotros'}
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
@@ -194,22 +221,23 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
   <section class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Soluciones de seguridad para cada necesidad</h2>
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">{hp.servicios?.title || 'Soluciones de seguridad para cada necesidad'}</h2>
         <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
-          Desde guardias de seguridad hasta tecnología de vigilancia avanzada, adaptamos nuestros servicios a las características de tu empresa o residencia.
+          {hp.servicios?.subtitle || 'Desde guardias de seguridad hasta tecnologia de vigilancia avanzada, adaptamos nuestros servicios a las caracteristicas de tu empresa o residencia.'}
         </p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {services.filter(s => s.slug !== 'guard-pod').map(service => {
           const sections = getServiceSections(service.slug);
           const hero = sections?.hero || {};
+          const serviceImage = SERVICE_IMAGES[service.slug] || null;
           
           return (
             <a href={`/servicios/${service.slug}`} class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
               <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
-                {service.image ? (
+                {serviceImage ? (
                   <img 
-                    src={optimizeImageUrl(`/images/${service.image}`)}
+                    src={optimizeImageUrl(`/images/${serviceImage}`)}
                     alt={service.name}
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     width="800"
@@ -217,9 +245,9 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
                     loading="lazy"
                   />
                 ) : (
-                  <div class="w-full h-full flex items-center justify-center">
+                  <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary-600 to-primary-700">
                     <div class="text-center p-4">
-                      <h3 class="text-lg font-semibold text-primary-700">{hero.heading || service.name}</h3>
+                      <h3 class="text-lg font-semibold text-white">{hero.heading || service.name}</h3>
                     </div>
                   </div>
                 )}
@@ -233,8 +261,8 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
         })}
       </div>
       <div class="text-center mt-8">
-        <a href="/servicios" class="inline-flex items-center justify-center gap-2 border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors">
-          Ver todos los servicios
+        <a href={hp.servicios?.cta_link || '/servicios'} class="inline-flex items-center justify-center gap-2 border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors">
+          {hp.servicios?.cta_text || 'Ver todos los servicios'}
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
@@ -255,18 +283,18 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-8">
           <div class="order-1">
             <div class="inline-flex bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <span>Tecnología Propia GuardMan</span>
+              <span>{hp.guardpod?.badge || 'Tecnologia Propia GuardMan'}</span>
             </div>
-            <h2 id="guardpod-section-title" class="text-3xl lg:text-4xl font-bold mb-4">Guard Pod</h2>
+            <h2 id="guardpod-section-title" class="text-3xl lg:text-4xl font-bold mb-4">{hp.guardpod?.title || 'Guard Pod'}</h2>
             <p class="text-lg text-white/80 max-w-xl">
-              Vigilancia autónoma para obras, eventos y zonas sin infraestructura. Energía solar, cámaras PTZ y monitoreo remoto en una unidad desplegable en menos de 2 horas.
+              {hp.guardpod?.paragraph || 'Vigilancia autonoma para obras, eventos y zonas sin infraestructura. Energia solar, camaras PTZ y monitoreo remoto en una unidad desplegable en menos de 2 horas.'}
             </p>
           </div>
           <div class="order-2 relative">
             <div class="rounded-2xl aspect-video overflow-hidden border border-white/20">
               <img 
-                src="/images/s4-thumbnail.webp"
-                alt="Guard Pod - unidad de vigilancia autónoma con panel solar y cámaras PTZ"
+                src={hp.guardpod?.image || '/images/s4-thumbnail.webp'}
+                alt="Guard Pod - unidad de vigilancia autonoma con panel solar y camaras PTZ"
                 class="w-full h-full object-cover"
                 width="800"
                 height="450"
@@ -274,60 +302,40 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
               />
             </div>
             <div class="absolute -bottom-4 -right-4 bg-primary-600 text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
-              15 meses de I+D
+              {hp.guardpod?.image_badge || '15 meses de I+D'}
             </div>
           </div>
         </div>
         <!-- Features row -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-semibold mb-1">Despliegue en menos de 2 horas</h3>
-              <p class="text-white/70 text-sm">Unidad autónoma lista para operar inmediatamente en cualquier ubicación.</p>
-            </div>
-          </article>
-          <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-semibold mb-1">Energia solar, funciona sin red electrica</h3>
-              <p class="text-white/70 text-sm">Sistema energetico independiente ideal para zonas remotas.</p>
-            </div>
-          </article>
-          <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-semibold mb-1">Camaras PTZ 360° con vision nocturna</h3>
-              <p class="text-white/70 text-sm">Cobertura total y grabacion las 24 horas del dia.</p>
-            </div>
-          </article>
-          <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-semibold mb-1">15 meses de desarrollo propio</h3>
-              <p class="text-white/70 text-sm">Tecnologia 100% diseñada y fabricada por GuardMan Chile.</p>
-            </div>
-          </article>
+          {(hp.guardpod?.features || [
+            {title: 'Despliegue en menos de 2 horas', description: 'Unidad autonoma lista para operar inmediatamente en cualquier ubicacion.'},
+            {title: 'Energia solar, funciona sin red electrica', description: 'Sistema energetico independiente ideal para zonas remotas.'},
+            {title: 'Camaras PTZ 360 con vision nocturna', description: 'Cobertura total y grabacion las 24 horas del dia.'},
+            {title: '15 meses de desarrollo propio', description: 'Tecnologia 100% disenada y fabricada por GuardMan Chile.'}
+          ]).map((f: any, idx: number) => {
+            const icons = [
+              '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>',
+              '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>',
+              '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>',
+              '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>'
+            ];
+            return (
+              <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
+                <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" set:html={icons[idx % icons.length]} />
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-1">{f.title}</h3>
+                  <p class="text-white/70 text-sm">{f.description}</p>
+                </div>
+              </article>
+            );
+          })}
         </div>
         <div class="text-center">
-          <a href="/servicios/guard-pod" class="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
-            Conocer Guard Pod
+          <a href={hp.guardpod?.cta_link || '/servicios/guard-pod'} class="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+            {hp.guardpod?.cta_text || 'Conocer Guard Pod'}
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
@@ -341,37 +349,39 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
   <section class="py-16 lg:py-24 bg-neutral-50">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Soluciones por sector</h2>
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">{hp.sectores?.title || 'Soluciones por sector'}</h2>
         <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
-          Adaptamos nuestros servicios a las necesidades especificas de cada industria en Santiago
+          {hp.sectores?.subtitle || 'Adaptamos nuestros servicios a las necesidades especificas de cada industria en Santiago'}
         </p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sectors.map(sector => (
-          <a href={`/sectores/${sector.slug}`} class="group bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
-            <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
-              {sector.image && (
+        {sectors.map(sector => {
+          const sectorImage = SECTOR_IMAGES[sector.slug] || 's4-thumbnail.webp';
+          
+          return (
+            <a href={`/sectores/${sector.slug}`} class="group bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
+              <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
                 <img 
-                  src={optimizeImageUrl(`/images/${sector.image}`)}
+                  src={optimizeImageUrl(`/images/${sectorImage}`)}
                   alt={sector.name}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   width="800"
                   height="450"
                   loading="lazy"
                 />
-              )}
-              <div class="absolute inset-0 bg-gradient-to-t from-primary-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-lg font-semibold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors">{sector.name}</h3>
-              <p class="text-neutral-600 text-sm line-clamp-2">{sector.description}</p>
-            </div>
-          </a>
-        ))}
+                <div class="absolute inset-0 bg-gradient-to-t from-primary-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors">{sector.name}</h3>
+                <p class="text-neutral-600 text-sm line-clamp-2">{sector.description}</p>
+              </div>
+            </a>
+          );
+        })}
       </div>
       <div class="text-center mt-8">
-        <a href="/sectores" class="inline-flex items-center justify-center gap-2 border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors">
-          Ver todos los sectores
+        <a href={hp.sectores?.cta_link || '/sectores'} class="inline-flex items-center justify-center gap-2 border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors">
+          {hp.sectores?.cta_text || 'Ver todos los sectores'}
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
@@ -391,19 +401,19 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
       <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-8">
         <div class="order-1">
           <div class="inline-flex bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <span>Distribuidor Oficial Ajax Systems</span>
+            <span>{hp.ajax?.badge || 'Distribuidor Oficial Ajax Systems'}</span>
           </div>
           <h2 id="ajax-section-title" class="text-3xl lg:text-4xl font-bold mb-4">
-            Tecnologia de clase mundial para tu seguridad
+            {hp.ajax?.title || 'Tecnologia de clase mundial para tu seguridad'}
           </h2>
           <p class="text-lg text-white/80 max-w-xl">
-            Somos distribuidores oficiales de Ajax Systems, la empresa lider mundial en sistemas de alarmas inteligentes con mas de 4.5 millones de usuarios protegidos en 187 paises.
+            {hp.ajax?.paragraph || 'Somos distribuidores oficiales de Ajax Systems, la empresa lider mundial en sistemas de alarmas inteligentes con mas de 4.5 millones de usuarios protegidos en 187 paises.'}
           </p>
         </div>
         <div class="order-2 relative">
           <div class="rounded-2xl aspect-video overflow-hidden border border-white/20">
             <img 
-              src="/images/Ajax-systems-header.jpg"
+              src={hp.ajax?.image || '/images/Ajax-systems-header.jpg'}
               alt="Sistema de alarma Ajax Systems con hub central y sensores conectados"
               class="w-full h-full object-cover"
               width="800"
@@ -412,68 +422,40 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
             />
           </div>
           <div class="absolute -bottom-4 -right-4 bg-primary-600 text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
-            Distribuidor Oficial
+            {hp.ajax?.image_badge || 'Distribuidor Oficial'}
           </div>
         </div>
       </div>
       <!-- Features row -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-        <!-- Grade 3 -->
+        {(hp.ajax?.features || [
+          {title: 'Certificacion Grade 3 Professional', description: 'El maximo nivel internacional de seguridad para instalaciones residenciales y comerciales de alto riesgo.'},
+          {title: 'Protocolo Jeweller', description: 'Comunicacion radio encriptada de largo alcance (hasta 2km), inmune a jamming, con verificacion constante del sistema.'},
+          {title: 'Monitoreo y Video Verificacion 24/7', description: 'Centro de monitoreo propio con verificacion visual de alarmas en tiempo real y respuesta inmediata.'},
+          {title: 'App Ajax - Control Total', description: 'Armado, camaras, automatizacion y notificaciones en tiempo real desde tu smartphone iOS y Android.'}
+        ]).map((f: any, idx: number) => {
+          const icons = [
+            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>',
+            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.24-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>',
+            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>',
+            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>'
+          ];
+          return (
             <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
               <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                </svg>
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" set:html={icons[idx % icons.length]} />
               </div>
               <div>
-                <h3 class="font-semibold mb-1">Certificacion Grade 3 Professional</h3>
-                <p class="text-white/70 text-sm">El maximo nivel internacional de seguridad para instalaciones residenciales y comerciales de alto riesgo.</p>
+                <h3 class="font-semibold mb-1">{f.title}</h3>
+                <p class="text-white/70 text-sm">{f.description}</p>
               </div>
             </article>
-
-            <!-- Jeweller Protocol -->
-            <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-              <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.24-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-semibold mb-1">Protocolo Jeweller</h3>
-                <p class="text-white/70 text-sm">Comunicacion radio encriptada de largo alcance (hasta 2km), inmune a jamming, con verificacion constante del sistema.</p>
-              </div>
-            </article>
-
-            <!-- Monitoreo 24/7 -->
-            <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-              <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-semibold mb-1">Monitoreo y Video Verificacion 24/7</h3>
-                <p class="text-white/70 text-sm">Centro de monitoreo propio con verificacion visual de alarmas en tiempo real y respuesta inmediata.</p>
-              </div>
-            </article>
-
-            <!-- App Ajax -->
-            <article class="flex gap-4 p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-              <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-semibold mb-1">App Ajax - Control Total</h3>
-                <p class="text-white/70 text-sm">Armado, cámaras, automatización y notificaciones en tiempo real desde tu smartphone iOS y Android.</p>
-              </div>
-            </article>
-          </div>
-          <div class="text-center">
-            <a href="/contacto" class="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
-              Conocer Ajax Systems
+          );
+        })}
+      </div>
+      <div class="text-center">
+        <a href={hp.ajax?.cta_link || '/contacto'} class="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+          {hp.ajax?.cta_text || 'Conocer Ajax Systems'}
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
@@ -489,9 +471,9 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
     <section class="py-16 lg:py-24 bg-white border-t border-neutral-200">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Empresas que confian en GuardMan</h2>
+          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">{hp.clientes?.title || 'Empresas que confian en GuardMan'}</h2>
           <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Confian en nosotros las principales empresas de Santiago
+            {hp.clientes?.subtitle || 'Confian en nosotros las principales empresas de Santiago'}
           </p>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -512,8 +494,8 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
           ))}
         </div>
         <div class="text-center mt-8">
-          <a href="/nosotros" class="inline-flex items-center justify-center gap-2 border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors">
-            Conoce mas sobre nosotros
+          <a href={hp.clientes?.cta_link || '/nosotros'} class="inline-flex items-center justify-center gap-2 border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors">
+            {hp.clientes?.cta_text || 'Conoce mas sobre nosotros'}
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
@@ -533,13 +515,13 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
       <div class="grid lg:grid-cols-2 gap-12 items-center mb-8">
         <div>
           <div class="inline-flex bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <span>Amplia Cobertura</span>
+            <span>{hp.ubicaciones?.badge || 'Amplia Cobertura'}</span>
           </div>
           <h2 id="ubicaciones-section-title" class="text-3xl lg:text-4xl font-bold mb-4">
-            Protegemos en toda la Region Metropolitana
+            {hp.ubicaciones?.title || 'Protegemos en toda la Region Metropolitana'}
           </h2>
           <p class="text-lg text-white/80 max-w-xl">
-            Presencia en las principales comunas de Santiago y la zona de Los Andes y San Felipe.
+            {hp.ubicaciones?.subtitle || 'Presencia en las principales comunas de Santiago y la zona de Los Andes y San Felipe.'}
           </p>
         </div>
         <div class="relative">
@@ -560,8 +542,8 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
       </div>
 
       <div class="text-center">
-        <a href="/ubicaciones" class="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
-          Ver todas las ubicaciones
+        <a href={hp.ubicaciones?.cta_link || '/ubicaciones'} class="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+          {hp.ubicaciones?.cta_text || 'Ver todas las ubicaciones'}
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
@@ -577,36 +559,36 @@ const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-50/50 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
 
     <div class="container mx-auto px-4 relative z-10">
-      <div class="max-w-3xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-          </svg>
-          <span>Certificacion OS-10 y Ley 21.659</span>
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            <span>{hp.cta_final?.badge || 'Certificacion OS-10 y Ley 21.659'}</span>
+          </div>
+          <h2 id="cta-final-title" class="text-3xl lg:text-4xl font-bold mb-4 text-neutral-900">
+            {hp.cta_final?.title || 'Proteccion profesional para tu tranquilidad'}
+          </h2>
+          <p class="text-lg text-neutral-600 mb-8 max-w-2xl mx-auto">
+            {hp.cta_final?.subtitle || 'Mas de 8 anos protegiendo empresas y residencias con guardias certificados, tecnologia de vanguardia y atencion personalizada.'}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a href={hp.cta_final?.cta1_link || '/contacto'} class="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+              {hp.cta_final?.cta1_text || 'Hablar con un experto'}
+            </a>
+            <a href={hp.cta_final?.cta2_link || '/nosotros'} class="inline-flex items-center justify-center gap-2 border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors">
+              {hp.cta_final?.cta2_text || 'Conoce nuestra trayectoria'}
+            </a>
+          </div>
+          <div class="flex justify-center">
+            <img 
+              src={hp.cta_final?.badge_image || '/images/escudo-os10.webp'}
+              alt="Certificacion OS-10 Carabineros de Chile"
+              class="h-24 w-auto object-contain"
+              loading="lazy"
+            />
+          </div>
         </div>
-        <h2 id="cta-final-title" class="text-3xl lg:text-4xl font-bold mb-4 text-neutral-900">
-          Proteccion profesional para tu tranquilidad
-        </h2>
-        <p class="text-lg text-neutral-600 mb-8 max-w-2xl mx-auto">
-          Mas de 8 años protegiendo empresas y residencias con guardias certificados, tecnología de vanguardia y atención personalizada.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <a href="/contacto" class="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-            Hablar con un experto
-          </a>
-          <a href="/nosotros" class="inline-flex items-center justify-center gap-2 border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors">
-            Conoce nuestra trayectoria
-          </a>
-        </div>
-        <div class="flex justify-center">
-          <img 
-            src="/images/escudo-os10.webp"
-            alt="Certificacion OS-10 Carabineros de Chile"
-            class="h-24 w-auto object-contain"
-            loading="lazy"
-          />
-        </div>
-      </div>
     </div>
   </section>
 </BaseLayout>

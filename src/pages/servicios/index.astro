@@ -1,47 +1,156 @@
 ---
 /**
  * Services Index - Lista todos los servicios desde CMS
+ * Con filtro por sector y badges de sectores
  */
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getServiceSections, getServicesList } from '../../data/cms';
+import { readFileSync, existsSync } from 'fs';
 
 const services = getServicesList();
+
+// Load service-sector relations
+const serviceSectorsPath = 'src/data/cms/service-sectors.json';
+let serviceSectors: Record<string, string[]> = {};
+
+if (existsSync(serviceSectorsPath)) {
+  serviceSectors = JSON.parse(readFileSync(serviceSectorsPath, 'utf-8'));
+}
+
+// Load sectors for filter
+const sectorsPath = 'src/data/cms/sectors.json';
+let sectors: any[] = [];
+
+if (existsSync(sectorsPath)) {
+  const sectorsData = JSON.parse(readFileSync(sectorsPath, 'utf-8'));
+  // Handle both direct array and { results: [...] } format
+  sectors = Array.isArray(sectorsData) ? sectorsData : (sectorsData.results || []);
+}
+
+// Color mapping for sectors
+const sectorColors: Record<string, string> = {
+  'comercial': 'bg-blue-100 text-blue-700 border-blue-200',
+  'industrial': 'bg-amber-100 text-amber-700 border-amber-200',
+  'residencial': 'bg-green-100 text-green-700 border-green-200',
+  'salud': 'bg-red-100 text-red-700 border-red-200',
+  'educacion': 'bg-purple-100 text-purple-700 border-purple-200',
+  'eventos': 'bg-pink-100 text-pink-700 border-pink-200',
+  'construccion': 'bg-orange-100 text-orange-700 border-orange-200',
+};
+
+// Get URL param for initial filter
+const url = Astro.url;
+const initialSector = url.searchParams.get('sector') || '';
 ---
 
 <BaseLayout title="Servicios de Seguridad Privada en Santiago | GuardMan Chile" description="Conoce todos nuestros servicios de seguridad privada en Santiago: guardias certificados OS-10, CCTV, control de accesos, monitoreo 24/7 y más.">
+  
   <!-- Hero -->
-  <section class="bg-primary-600 text-white py-16 lg:py-20">
+  <section class="bg-primary-600 text-white py-12 lg:py-16">
     <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Servicios de Seguridad Privada en Santiago</h1>
-      <p class="text-xl text-white/90 max-w-2xl mx-auto">
-        Soluciones integrales de seguridad para empresas, residencias y eventos en toda la Región Metropolitana
+      <h1 class="text-3xl lg:text-4xl font-bold mb-3">Servicios de Seguridad Privada en Santiago</h1>
+      <p class="text-lg text-white/90 max-w-2xl mx-auto">
+        Soluciones integrales para empresas, residencias y eventos en toda la Región Metropolitana
       </p>
     </div>
   </section>
 
+  <!-- Filter Bar -->
+  <section class="bg-neutral-50 border-b border-neutral-200 sticky top-0 z-10">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="text-sm font-medium text-neutral-600">Filtrar por sector:</span>
+        
+        <!-- All services button -->
+        <a 
+          href="/servicios" 
+          class:list={[
+            "px-3 py-1.5 rounded-full text-sm font-medium transition-all border",
+            !initialSector 
+              ? "bg-primary-600 text-white border-primary-600" 
+              : "bg-white text-neutral-600 border-neutral-300 hover:border-primary-400 hover:text-primary-600"
+          ]}
+        >
+          Todos los servicios
+        </a>
+        
+        <!-- Sector filter buttons -->
+        {sectors.map(sector => {
+          const count = Object.values(serviceSectors).filter(slugs => slugs.includes(sector.slug)).length;
+          if (count === 0) return null;
+          
+          return (
+            <a 
+              href={`/servicios?sector=${sector.slug}`}
+              class:list={[
+                "px-3 py-1.5 rounded-full text-sm font-medium transition-all border",
+                initialSector === sector.slug
+                  ? "bg-primary-600 text-white border-primary-600"
+                  : "bg-white text-neutral-600 border-neutral-300 hover:border-primary-400 hover:text-primary-600"
+              ]}
+            >
+              {sector.name} ({count})
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
   <!-- Services Grid -->
-  <section class="py-16 lg:py-24 bg-white">
+  <section class="py-12 lg:py-16 bg-white">
     <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <p class="text-neutral-500 text-sm mb-6">
+        Mostrando {services.length} servicios
+        {initialSector && ` para el sector "${sectors.find(s => s.slug === initialSector)?.name || initialSector}"`}
+      </p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map(service => {
           const sections = getServiceSections(service.slug);
           const hero = sections?.hero || {};
+          const serviceSectorList = serviceSectors[service.slug] || [];
+          
+          // Filter by sector if selected
+          if (initialSector && !serviceSectorList.includes(initialSector)) {
+            return null;
+          }
           
           return (
-            <a href={`/servicios/${service.slug}`} class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-xl transition-all">
+            <a href={`/servicios/${service.slug}`} class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-lg transition-all border border-neutral-200 hover:border-primary-300">
               <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center overflow-hidden">
                 <div class="text-center p-4">
                   <h2 class="text-lg font-bold text-primary-700">{hero.heading || service.name}</h2>
                 </div>
               </div>
-              <div class="p-6">
-                <h2 class="text-xl font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors">
+              <div class="p-5">
+                <h2 class="text-lg font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors">
                   {hero.heading || service.name}
                 </h2>
-                <p class="text-neutral-600 text-sm mb-4 line-clamp-3">
+                <p class="text-neutral-600 text-sm mb-4 line-clamp-2">
                   {hero.subheading || service.short_description || ''}
                 </p>
+                
+                <!-- Sector badges -->
+                {serviceSectorList.length > 0 && (
+                  <div class="flex flex-wrap gap-1.5 mb-3">
+                    {serviceSectorList.slice(0, 4).map(sectorSlug => {
+                      const sector = sectors.find(s => s.slug === sectorSlug);
+                      return sector ? (
+                        <span class={`text-xs px-2 py-0.5 rounded-full border ${sectorColors[sectorSlug] || 'bg-gray-100 text-gray-600 border-gray-200'}`}>
+                          {sector.name}
+                        </span>
+                      ) : null;
+                    })}
+                    {serviceSectorList.length > 4 && (
+                      <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 border border-gray-200">
+                        +{serviceSectorList.length - 4}
+                      </span>
+                    )}
+                  </div>
+                )}
+                
                 <div class="flex items-center text-primary-600 font-medium text-sm">
                   Ver detalles
                   <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,6 +162,17 @@ const services = getServicesList();
           );
         })}
       </div>
+      
+      {/* Empty state if filter returns no results */}
+      {services.filter(service => {
+        const serviceSectorList = serviceSectors[service.slug] || [];
+        return !initialSector || serviceSectorList.includes(initialSector);
+      }).length === 0 && (
+        <div class="text-center py-12">
+          <p class="text-neutral-500 mb-4">No hay servicios para este sector.</p>
+          <a href="/servicios" class="text-primary-600 hover:underline">Ver todos los servicios</a>
+        </div>
+      )}
     </div>
   </section>
 

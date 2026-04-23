@@ -1,0 +1,96 @@
+{
+  "sections": {
+    "hero": {
+      "heading": "Escoltas Privados en Quilicura",
+      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector norte de Santiago.",
+      "cta_text": "Cotizar en Quilicura",
+      "cta_link": "/cotizacion?service=escoltas-privados&location=quilicura",
+      "image": "/images/service-escoltas-privados.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Escoltas Privados",
+        "url": "/servicios/escoltas-privados"
+      },
+      {
+        "label": "Quilicura",
+        "url": "/servicios/escoltas-privados/quilicura"
+      }
+    ],
+    "intro": {
+      "title": "¿Por qué elegir Escoltas Privados en Quilicura?",
+      "content": "En GuardMan Chile somos especialistas en escoltas privados en Quilicura. Nuestra experiencia en el sector norte de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Quilicura y toda la zona Norte.",
+      "image": "/images/combo-intro.jpg"
+    },
+    "features": {
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Escoltas certificados OS-10 con experiencia militar o policial",
+        "Evaluación de riesgos previa al servicio",
+        "Protección ejecutiva y familiar",
+        "Transporte seguro y ruta de evasión",
+        "Coordinación con autoridades de seguridad",
+        "Confidentialidad y discreción total"
+      ]
+    },
+    "zone_specific": {
+      "title": "Por qué Quilicura",
+      "content": "",
+      "points": [
+        "industrias, bodegas y centros logísticos requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de vigilancia perimetral, control vehicular y seguridad industrial es cada vez más urgente en el sector norte de Santiago.",
+        " muchas empresas y residencias en Quilicura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "issues": {
+      "title": "Desafíos de seguridad en Quilicura",
+      "items": [
+        "industrias, bodegas y centros logísticos requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de vigilancia perimetral, control vehicular y seguridad industrial es cada vez más urgente en el sector norte de Santiago.",
+        " muchas empresas y residencias en Quilicura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "stats": [
+      {
+        "value": "< 30 min",
+        "label": "Tiempo de respuesta en Norte"
+      },
+      {
+        "value": "Norte",
+        "label": "Cobertura"
+      },
+      {
+        "value": "Disponibles",
+        "label": "Guardias OS-10"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cómo contratan el servicio de escoltas?",
+        "answer": "Primero evaluamos tus necesidades específicas de seguridad. Luego seleccionamos el escolta adecuado según perfil, experiencia y requisitos particulares."
+      },
+      {
+        "question": "¿Los escoltas tienen formación legal?",
+        "answer": "Sí, todos nuestros escoltas tienen certificación OS-10 y formación en defensa personal, primeros auxilios y manejo de situaciones de crisis."
+      },
+      {
+        "question": "¿El servicio es confidencial?",
+        "answer": "Absolutamente. La confidencialidad es parte fundamental de nuestro servicio. No revelamos información de nuestros clientes ni de sus rutinas."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu propiedad en Quilicura",
+      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
+      "button_text": "Cotizar en Quilicura",
+      "button_link": "/cotizacion?service=escoltas-privados&location=quilicura"
+    }
+  }
+}

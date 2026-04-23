@@ -1,0 +1,150 @@
+{
+  "slug": "quilicura",
+  "type": "location",
+  "version": 1,
+  "last_modified": "2026-04-22T14:59:39.554Z",
+  "seo": {
+    "title": "Seguridad Privada Quilicura | GuardMan Chile",
+    "description": "Empresa de seguridad líder en Quilicura. Guardias OS-10 certificados, monitoreo 24/7 y CCTV. Cotiza gratis hoy.",
+    "canonical": "https://guardman.cl/ubicaciones/quilicura"
+  },
+  "content": {
+    "hero": {
+      "heading": "Seguridad Privada en Quilicura | Guardias 24/7",
+      "subheading": "Protegemos tu hogar, empresa y comunidad con guardias certificados y tecnología de monitoreo las 24 horas.",
+      "image": "/images/og-default.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Ubicaciones",
+        "url": "/ubicaciones"
+      },
+      {
+        "label": "Quilicura",
+        "url": "/ubicaciones/quilicura"
+      }
+    ],
+    "intro": {
+      "title": "Tu empresa de seguridad de confianza en Quilicura",
+      "content": "GuardMan Chile es tu socio estratégico en seguridad privada en Quilicura. Con más de 8 años protegiendo hogares, empresas e industrias en la comuna, entendemos las necesidades únicas de esta zona residencial e industrial del sector norte de Santiago.\n\nNuestro equipo de guardias certificados OS-10 y sistemas de monitoreo 24/7 están diseñados para prevenir incidentes y responder de forma inmediata ante cualquier emergencia. Ya sea que necesites proteger tu parcela de agrado, tu empresa en el parque industrial o tu comunidad de vecinos, tenemos la solución perfecta.",
+      "image": "/images/location-intro.jpg"
+    },
+    "features": {
+      "title": "¿Por qué elegir GuardMan en Quilicura?",
+      "items": [
+        "Guardias de seguridad certificados OS-10 con experiencia en zona norte de Santiago",
+        "Monitoreo CCTV las 24 horas desde nuestro centro de control propio",
+        "Sistemas de control de accesos para comunidades y empresas",
+        "Escoltas profesionales para ejecutivos y transporte de valores",
+        "Respuesta inmediata ante emergencias con coordinación directa con Carabineros",
+        "Planes personalizados según las necesidades de tu hogar o empresa"
+      ]
+    },
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años protegiendo Chile"
+      },
+      {
+        "value": "150+",
+        "label": "Clientes satisfechos en Quilicura"
+      },
+      {
+        "value": "500+",
+        "label": "Guardias certificados OS-10"
+      },
+      {
+        "value": "14",
+        "label": "Comunas con cobertura en RM"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta un guardia de seguridad en Quilicura?",
+        "answer": "Los costos varían según el tipo de servicio, cantidad de guardias y horas requeridas. Te entregamos una cotización personalizada sin compromiso."
+      },
+      {
+        "question": "¿Tienen servicio de monitoreo 24 horas en Quilicura?",
+        "answer": "Sí, nuestro centro de monitoreo opera las 24 horas, los 365 días del año. Contamos con vigilancia permanente y respuesta inmediata."
+      },
+      {
+        "question": "¿Qué tipo de clientes atienden en la zona?",
+        "answer": "Atendemos empresas, industrias, comunidades residenciales, edificios y eventos en toda la comuna de Quilicura y alrededores."
+      },
+      {
+        "question": "¿Cómo contrato servicios de seguridad en Quilicura?",
+        "answer": "Contáctanos por teléfono o WhatsApp. Te asesoramos sin compromiso y armamos un plan de seguridad a tu medida."
+      }
+    ],
+    "cta": {
+      "headline": "Protege lo que más te importa en Quilicura",
+      "button_text": "Hablar con un experto en seguridad",
+      "button_link": "/cotizacion"
+    }
+  },
+  "related_content": {
+    "nearby_locations": [
+      {
+        "slug": "conchali",
+        "title": "Conchali",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/conchali.jpg"
+      },
+      {
+        "slug": "huechuraba",
+        "title": "Huechuraba",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/huechuraba.jpg"
+      },
+      {
+        "slug": "la-pintana",
+        "title": "La Pintana",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/la-pintana.jpg"
+      }
+    ],
+    "related_services": [
+      {
+        "slug": "auditoria-seguridad",
+        "title": "auditoria-seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/auditoria-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "cctv-videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "control-de-accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ],
+    "upsell_services": [
+      {
+        "slug": "auditoria-seguridad",
+        "title": "auditoria-seguridad",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "cctv-videovigilancia",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 0,
+    "published": false
+  }
+}

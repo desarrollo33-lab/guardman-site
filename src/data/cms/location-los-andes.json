@@ -1,74 +1,80 @@
 {
-  "slug": "los-andes",
-  "name": "Los Andes",
-  "zone": "Valparaíso",
   "sections": {
     "hero": {
-      "heading": "Seguridad Privada en Los Andes",
-      "subheading": "Empresa líder con guardias OS-10 en Los Andes. Cobertura 24/7.",
-      "cta_text": "Cotiza en Los Andes"
+      "heading": "Seguridad Privada en Los Andes | Guardias 24/7",
+      "subheading": "Protegemos hogares, empresas y comercio en Los Andes con guardias certificados OS-10 y monitoreo permanente.",
+      "image": "/images/og-default.webp"
     },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Ubicaciones",
+        "url": "/ubicaciones"
+      },
+      {
+        "label": "Los andes",
+        "url": "/ubicaciones/los-andes"
+      }
+    ],
     "intro": {
-      "heading": "Introducción",
-      "subheading": "",
-      "paragraphs": [
-        "Los Andes concentra alta actividad comercial y empresarial. Nuestros servicios de seguridad ayudan a proteger locales comerciales, oficinas y edificios de departamentos.",
-        "La alta densidad de personas y vehículos requiere protocolos específicos de seguridad.",
-        "Contamos con personal desplegado en Los Andes con tiempos de respuesta inferiores a 30 minutos."
+      "title": "Protección Confiable para Los Andes y su Entorno",
+      "content": "En GuardMan Chile entendemos las necesidades de seguridad de Los Andes, ciudad fronteriza con alto flujo comercial y turismo. Contamos con equipos de guardias privados certificados OS-10 disponibles las 24 horas para proteger tu familia, negocio o empresa.\n\nNuestra experiencia de más de 8 años en el rubro nos permite ofrecer soluciones de seguridad personalizadas para cada cliente, desde viviendas particulares hasta grandes empresas mineras y comerciales de la zona.",
+      "image": "/images/location-intro.jpg"
+    },
+    "features": {
+      "title": "¿Por Qué Elegir GuardMan en Los Andes?",
+      "items": [
+        "Guardias privados certificados OS-10 con entrenamiento especializado en control y prevención",
+        "Monitoreo remoto 24/7 desde nuestro centro de control propio",
+        "Cobertura estratégica en toda la provincia de Los Andes y rutas de acceso",
+        "Respuesta inmediata ante emergencias con protocolos de coordinación con Carabineros",
+        "Sistemas integrados de CCTV y control de accesos según tus necesidades",
+        "Evaluación de riesgos gratuita para cada propiedad o empresa"
       ]
     },
-    "coverage": {
-      "0": "Guardias disponibles 24/7",
-      "1": "Tiempo de respuesta < 30 minutos",
-      "2": "Centro de monitoreo propio",
-      "3": "Reportes diarios de novedades",
-      "heading": "Cobertura en Los Andes",
-      "subheading": ""
-    },
-    "issues": {
-      "0": "Alto flujo de personas que dificulta el control de accesos",
-      "1": "Robos en locales comerciales y oficinas",
-      "2": "Vandalismo y deterioro de espacios públicos",
-      "heading": "Problemas que solucionamos",
-      "subheading": ""
-    },
-    "stats": {
-      "0": {
-        "label": "Empresas protegidas",
-        "value": "20+"
+    "stats": [
+      {
+        "value": "120+",
+        "label": "Guardias OS-10 desplegados en la zona"
       },
-      "1": {
-        "label": "Guardias en zona",
-        "value": "30+"
+      {
+        "value": "250+",
+        "label": "Clientes satisfechos en Los Andes"
       },
-      "2": {
-        "label": "Tiempo respuesta",
-        "value": "< 30 min"
+      {
+        "value": "10 min",
+        "label": "Tiempo de respuesta promedio"
       },
-      "heading": "Números que nos respaldan",
-      "subheading": ""
-    },
-    "faqs": {
-      "0": {
-        "question": "¿Hay disponibilidad de guardias en Los Andes?",
-        "answer": "Sí, tenemos guardias disponibles desplegados en Los Andes listos para comenzar el servicio."
+      {
+        "value": "8+",
+        "label": "Años de experiencia protegiendo la zona"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta contratar guardias de seguridad en Los Andes?",
+        "answer": "Los costos varían según el tipo de servicio, cantidad de guardias y horarios requeridos. En GuardMan ofrecemos cotizaciones personalizadas gratuitas para cada cliente en Los Andes."
       },
-      "1": {
-        "question": "¿Cuál es el tiempo de respuesta en Los Andes?",
-        "answer": "Nuestro tiempo de respuesta en Los Andes es inferior a 30 minutos desde cualquier punto de la comuna."
+      {
+        "question": "¿Los guardias pueden actuar en casos de emergencia?",
+        "answer": "Sí, nuestros guardias están capacitados para responder ante emergencias, coordinar con Carabineros y aplicar protocolos de seguridad para proteger personas y bienes."
       },
-      "2": {
-        "question": "¿Qué tipos de propiedades protegen?",
-        "answer": "Protegemos empresas, condominos, residencias, obras y cualquier tipo de propiedad que necesite seguridad."
+      {
+        "question": "¿Cubren zonas rurales o sectores alejados de Los Andes?",
+        "answer": "Contamos con cobertura en toda la provincia de Los Andes, incluyendo sectores rurales, rutas y localidades como Calle Larga, Rinconada y San Esteban."
       },
-      "heading": "Preguntas Frecuentes",
-      "subheading": ""
-    },
+      {
+        "question": "¿Qué documentación deben tener los guardias?",
+        "answer": "Todos nuestros guardias poseen certificación OS-10 vigente, formación en seguridad privada y documentación al día según la normativa chilena vigente."
+      }
+    ],
     "cta": {
-      "heading": "Protege tu propiedad en Los Andes",
-      "subheading": "Contáctanos para una cotización personalizada.",
-      "description": "Contáctanos para una cotización personalizada.",
-      "button": "Solicitar Cotización"
+      "headline": "Protege lo que Más Importa en Los Andes",
+      "button_text": "Llámanos Ahora",
+      "button_link": "/cotizacion"
     }
   }
 }

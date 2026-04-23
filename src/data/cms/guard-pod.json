@@ -1,107 +1,95 @@
 {
-  "slug": "guard-pod",
-  "name": "Guard Pod",
-  "short_description": "Unidades móviles de vigilancia 24/7 con tecnología avanzada",
-  "price_range": "$$$$",
-  "featured": 0,
-  "sort": 0,
   "sections": {
     "hero": {
-      "heading": "Guard Pod",
-      "subheading": "Unidades móviles de vigilancia autónoma para obras y eventos.",
-      "cta_text": "Cotiza Guard Pod"
+      "heading": "Guard Pod en Santiago: Vigilancia 24/7 sin costos de cuadrícula",
+      "subheading": "Guardia virtual autónomo para industrias, malls y sitios remotos",
+      "cta_text": "Solicitar Cotización",
+      "image": "/images/hero-home.webp"
     },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Guard Pod",
+        "url": "/servicios/guard-pod"
+      }
+    ],
     "intro": {
-      "heading": "Introducción",
-      "subheading": "",
-      "paragraphs": [
-        "Guard Pod es la solución de vigilancia móvil patentada por GuardMan Chile. Se trata de una unidad autónoma de vigilancia con cámaras, sensores de movimiento, sirena y comunicación satelital, que se instala donde necesita protección temporal.",
-        "El Guard Pod es ideal para obras en construcción, eventos temporales, zonas con alto riesgo de robo, o cualquier lugar donde no existe infraestructura de seguridad. Funciona con energía solar y conexión celular, sin necesidad de electricidad ni internet.",
-        "El Guard Pod detecta movimiento en un radio de 30 metros, activa sirena y luces LED, graba video en alta definición, y envía alertas en tiempo real a nuestro centro de monitoreo."
-      ]
+      "title": "¿Qué es un Guard Pod y por qué las empresas chilenas lo prefieren?",
+      "content": "El Guard Pod® V1 es un sistema de vigilancia autónoma desarrollado por GuardMan Chile. A diferencia de las casetas tradicionales o el monitoreo por CCTV puro, el Guard Pod integra sensores de movimiento, cámara con visión nocturna, sirena disuasoria y comunicación en tiempo real con nuestra central de monitoreo 24/7.\nCon más de 8 años implementando soluciones de seguridad privada en la Región Metropolitana, hemos detectado que empresas con faenas en zonas remotas, industrias y centros comerciales necesitan vigilancia constante sin depender de estructuras fijas. El Guard Pod resuelve exactamente ese problema: protección inteligente, móvil y con costos predecibles.",
+      "image": "/images/service-intro.jpg"
     },
     "features": {
-      "0": "Cámaras HD con visión nocturna y detección de movimiento",
-      "1": "Sirena de 120dB y luces LED de alta potencia",
-      "2": "Comunicación celular con centro de monitoreo 24/7",
-      "3": "Energía solar con batería de respaldo de 72 horas",
-      "4": "Instalación en menos de 30 minutos",
-      "5": "Alquiler mensual sin contrato mínimo",
-      "heading": "Qué incluye",
-      "subheading": ""
-    },
-    "process": {
-      "0": {
-        "step": "Cotización",
-        "description": "Evaluamos la zona a proteger y recomendamos cantidad de Pods"
-      },
-      "1": {
-        "step": "Entrega",
-        "description": "Entregamos los Pods instalados y configurados"
-      },
-      "2": {
-        "step": "Monitoreo",
-        "description": "Nuestro centro vigila las 24 horas"
-      },
-      "3": {
-        "step": "Retiro",
-        "description": "Cuando ya no lo necesite, lo recolhemos sin costo"
-      },
-      "heading": "Nuestro proceso",
-      "subheading": ""
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Cámaras HD con visión nocturna y detección de movimiento",
+        "Sirena de 120dB y luces LED de alta potencia",
+        "Comunicación celular con centro de monitoreo 24/7",
+        "Energía solar con batería de respaldo de 72 horas",
+        "Instalación en menos de 30 minutos",
+        "Alquiler mensual sin contrato mínimo"
+      ]
     },
     "issues": {
-      "0": "Obras sin protección que sufren robos de materiales",
-      "1": "Eventos temporales sin seguridad perimetral",
-      "2": "Zonas rurales con alto índice de robos sin vigilancia",
-      "heading": "Problemas que solucionamos",
-      "subheading": ""
+      "title": "Problemas que el Guard Pod resuelve",
+      "items": [
+        "Costo elevado de contratar guardias para turnos nocturnos en zonas sin infraestructura",
+        "Falta de supervisión en faenas industriales después de las 20:00 hrs",
+        "Robos y daños en predios sin vigilancia constante durante fin de semana",
+        "Falsas alarmas por sistemas CCTV tradicionales sin verificación en terreno",
+        "Dependencia de empresas de monitoreo que no tienen guardias propios"
+      ]
     },
-    "stats": {
-      "0": {
-        "label": "Guard Pods en operación",
-        "value": "30+"
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años de experiencia"
       },
-      "1": {
-        "label": "Obras protegidas",
-        "value": "25+"
+      {
+        "value": "500+",
+        "label": "Guardias certificados OS-10"
       },
-      "2": {
-        "label": "Robos prevenidos",
-        "value": "100+"
+      {
+        "value": "24/7",
+        "label": "Central de monitoreo propia"
       },
-      "heading": "Números que nos respaldan",
-      "subheading": ""
-    },
-    "faqs": {
-      "0": {
+      {
+        "value": "15+",
+        "label": "Comunas con cobertura"
+      }
+    ],
+    "faq": [
+      {
         "question": "¿Qué incluye el servicio de Guard Pod?",
         "answer": "El alquiler mensual incluye: unidad Guard Pod con cámaras y sensores, energía solar, comunicación celular, monitoreo 24/7 desde nuestro centro, alertas en tiempo real y soporte técnico."
       },
-      "1": {
+      {
         "question": "¿Funciona sin luz ni internet?",
         "answer": "Sí, el Guard Pod funciona completamente con energía solar y conexión celular. No necesita ningún cableado."
       },
-      "2": {
+      {
         "question": "¿Puedo ver las cámaras desde mi celular?",
         "answer": "Sí, nuestra app permite ver las cámaras en vivo, recibir alertas y ver grabaciones de eventos."
       },
-      "3": {
+      {
         "question": "¿Qué pasa si alguien intenta robar algo de todas formas?",
         "answer": "El Pod detecta el movimiento, activa sirena y luces, envía alerta a nuestro centro, y el operador coordina con Carabineros mientras el ladrón huye."
       },
-      "4": {
+      {
         "question": "¿Hay costo de instalación o retiro?",
         "answer": "No, la entrega y retiro son gratuitos en la Región Metropolitana. El único costo es el alquiler mensual."
-      },
-      "heading": "Preguntas Frecuentes",
-      "subheading": ""
-    },
+      }
+    ],
     "cta": {
-      "heading": "Cotiza Guard Pod",
-      "subheading": "Vigilancia móvil sin instalación.",
-      "description": "Vigilancia móvil sin instalación.",
-      "button": "Solicitar Cotización"
+      "headline": "Protege tu faena, industria o empresa este 2025",
+      "button_text": "Cotizar Guard Pod Ahora",
+      "button_link": "/cotizacion"
     }
   }
 }

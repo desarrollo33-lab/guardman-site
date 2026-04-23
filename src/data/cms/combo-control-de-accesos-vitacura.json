@@ -1,0 +1,96 @@
+{
+  "sections": {
+    "hero": {
+      "heading": "Control de Accesos en Vitacura",
+      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente premium.",
+      "cta_text": "Cotizar en Vitacura",
+      "cta_link": "/cotizacion?service=control-de-accesos&location=vitacura",
+      "image": "/images/service-control-de-accesos.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Control De Accesos",
+        "url": "/servicios/control-de-accesos"
+      },
+      {
+        "label": "Vitacura",
+        "url": "/servicios/control-de-accesos/vitacura"
+      }
+    ],
+    "intro": {
+      "title": "¿Por qué elegir Control de Accesos en Vitacura?",
+      "content": "En GuardMan Chile somos especialistas en control de accesos en Vitacura. Nuestra experiencia en el sector oriente premium nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Vitacura y toda la zona Oriente.",
+      "image": "/images/combo-intro.jpg"
+    },
+    "features": {
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Lectores de tarjeta, biometricos y reconocimiento facial",
+        "Registro de ingresos y salidas en tiempo real",
+        "Integración con CCTV y monitoreo remoto",
+        "Gestión de permisos por horarios y zonas",
+        "Reportes de productividad y asistencia",
+        "Soporte técnico 24/7 y mantenimiento preventivo"
+      ]
+    },
+    "zone_specific": {
+      "title": "Por qué Vitacura",
+      "content": "",
+      "points": [
+        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
+        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "issues": {
+      "title": "Desafíos de seguridad en Vitacura",
+      "items": [
+        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
+        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "stats": [
+      {
+        "value": "< 30 min",
+        "label": "Tiempo de respuesta en Oriente"
+      },
+      {
+        "value": "Oriente",
+        "label": "Cobertura"
+      },
+      {
+        "value": "Disponibles",
+        "label": "Guardias OS-10"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Se puede integrar con mis cámaras existentes?",
+        "answer": "Sí, nuestros sistemas de control de accesos se integran con la mayoría de marcas de CCTV. Te ofrecemos una solución completa y compatible."
+      },
+      {
+        "question": "¿Qué pasa si pierdo mi tarjeta de acceso?",
+        "answer": "Podemos bloquear la tarjeta inmediatamente desde nuestra central y emitir una nueva. También ofrecemos alternativas como biometrics o códigos temporales."
+      },
+      {
+        "question": "¿El sistema funciona sin internet?",
+        "answer": "Sí, los controles de acceso tienen memoria local y funcionan offline. Cuando se restore la conexión, se sincronizan todos los registros."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu propiedad en Vitacura",
+      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
+      "button_text": "Cotizar en Vitacura",
+      "button_link": "/cotizacion?service=control-de-accesos&location=vitacura"
+    }
+  }
+}

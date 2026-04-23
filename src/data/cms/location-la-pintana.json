@@ -1,74 +1,82 @@
 {
-  "slug": "la-pintana",
-  "name": "La Pintana",
-  "zone": "Sur",
   "sections": {
     "hero": {
-      "heading": "Seguridad Privada en La Pintana",
-      "subheading": "Empresa líder con guardias OS-10 en La Pintana. Cobertura 24/7.",
-      "cta_text": "Cotiza en La Pintana"
+      "heading": "Seguridad Privada en La Pintana: Protección Confiable para tu Hogar y Empresa",
+      "subheading": "GuardMan Chile ofrece soluciones de seguridad personalizadas con guardias certificados, sistemas de control de accesos y monitoreo 24/7 para proteger lo que más valoras en La Pintana.",
+      "image": "/images/og-default.webp"
     },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Ubicaciones",
+        "url": "/ubicaciones"
+      },
+      {
+        "label": "La pintana",
+        "url": "/ubicaciones/la-pintana"
+      }
+    ],
     "intro": {
-      "heading": "Introducción",
-      "subheading": "",
-      "paragraphs": [
-        "La Pintana requiere atención especial en seguridad por su densidad poblacional. Ofrecemos soluciones adaptadas a las necesidades del sector sur.",
-        "La seguridad en zonas residenciales requiere un enfoque preventivo y comunitario.",
-        "Contamos con guardias que conocen las dinámicas locales y pueden establecer relaciones de confianza con los residentes."
+      "title": "Expertos en Seguridad en La Pintana",
+      "content": "En GuardMan Chile somos la empresa de seguridad privada líder en La Pintana, ofreciendo servicios diseñados para resolver los desafíos de seguridad de residentes, empresas y comunidades en esta zona sur de Santiago. Con más de 8 años de experiencia en el mercado chileno y presencia en 14 comunas de la capital, conocemos las características únicas de La Pintana y su entorno.\n\nNuestro equipo de 500+ guardias certificados con formación OS-10 y respaldo de nuestro centro de monitoreo 24/7 garantiza una respuesta inmediata ante cualquier situación de emergencia. Cada solución de seguridad en La Pintana se adapta a tus necesidades específicas, ya sea para proteger tu familia, tu negocio o tu comunidad de vecinos.\n\nNos distingue nuestro compromiso con la comunidad de La Pintana: nuestros vigilantes conocen la zona, sus accesos y sus dinámicas, lo que permite una cobertura de seguridad más efectiva y una mejor coordinación con las autoridades locales.",
+      "image": "/images/location-intro.jpg"
+    },
+    "features": {
+      "title": "¿Por qué elegir GuardMan en La Pintana?",
+      "items": [
+        "Guardias de seguridad certificados OS-10 con experiencia en zonas residenciales de La Pintana",
+        "Sistemas de control de accesos con tecnología de última generación para condominios y empresas",
+        "Monitoreo remoto 24/7 desde nuestro centro de operaciones con respuesta en minutos",
+        "Rondas preventivas personalizadas según las necesidades de cada sector de La Pintana",
+        "Alarmas con conexión directa a Carabineros y servicios de emergencia",
+        "Televigilancia con cámaras HD y análisis de movimiento en tiempo real",
+        "Escoltas privados certificados para protección personal y traslado de valores",
+        "Planes de seguridad comunitaria para juntas de vecinos en La Pintana"
       ]
     },
-    "coverage": {
-      "0": "Guardias disponibles 24/7",
-      "1": "Tiempo de respuesta < 30 minutos",
-      "2": "Centro de monitoreo propio",
-      "3": "Reportes diarios de novedades",
-      "heading": "Cobertura en La Pintana",
-      "subheading": ""
-    },
-    "issues": {
-      "0": "Robos en viviendas y vehículos",
-      "1": "Accesos no controlados en poblaciones",
-      "2": "Falta de iluminación en ciertas calles",
-      "heading": "Problemas que solucionamos",
-      "subheading": ""
-    },
-    "stats": {
-      "0": {
-        "label": "Empresas protegidas",
-        "value": "20+"
+    "stats": [
+      {
+        "value": "150+",
+        "label": "Clientes protegidos en La Pintana"
       },
-      "1": {
-        "label": "Guardias en zona",
-        "value": "30+"
+      {
+        "value": "Menos de 8 min",
+        "label": "Respuesta ante emergencias en La Pintana"
       },
-      "2": {
-        "label": "Tiempo respuesta",
-        "value": "< 30 min"
+      {
+        "value": "97%",
+        "label": "Satisfacción de clientes en la zona sur"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta un servicio de seguridad privada en La Pintana?",
+        "answer": "Los costos de seguridad privada en La Pintana varían según el tipo de servicio, extensión de la propiedad y nivel de cobertura requerido. En GuardMan Chile ofrecemos presupuestos personalizados sin costo: guardias de seguridad desde $800.000 mensuales, sistemas de control de accesos desde $350.000 de instalación y planes de monitoreo 24/7 desde $150.000 mensuales. Contáctanos para una cotización detallada."
       },
-      "heading": "Números que nos respaldan",
-      "subheading": ""
-    },
-    "faqs": {
-      "0": {
-        "question": "¿Hay disponibilidad de guardias en La Pintana?",
-        "answer": "Sí, tenemos guardias disponibles desplegados en La Pintana listos para comenzar el servicio."
+      {
+        "question": "¿Cómo funciona el monitoreo 24/7 en La Pintana?",
+        "answer": "Nuestro centro de monitoreo opera las 24 horas, los 365 días del año. Los sensores y cámaras de tu propiedad en La Pintana están conectados en tiempo real con nuestros operadores. Ante cualquier actividad sospechosa, activamos protocolos de respuesta inmediata que incluyen aviso a nuestros guardias en terreno, coordinación con Carabineros y comunicación directa contigo."
       },
-      "1": {
-        "question": "¿Cuál es el tiempo de respuesta en La Pintana?",
-        "answer": "Nuestro tiempo de respuesta en La Pintana es inferior a 30 minutos desde cualquier punto de la comuna."
+      {
+        "question": "¿Qué documentación necesitan los guardias de seguridad en La Pintana?",
+        "answer": "Todos nuestros guardias cuentan con licencia OS-10 vigente, registro en la Superintendencia de Seguridad Privada, revisión de antecedentes y cursos de especialización. En La Pintana también verificamos el conocimiento territorial de cada vigilante para garantizar un servicio efectivo."
       },
-      "2": {
-        "question": "¿Qué tipos de propiedades protegen?",
-        "answer": "Protegemos empresas, condominos, residencias, obras y cualquier tipo de propiedad que necesite seguridad."
+      {
+        "question": "¿Puedo contratar servicios de escoltas privados en La Pintana?",
+        "answer": "Sí, en GuardMan Chile ofrecemos servicios de escoltas privados certificados para La Pintana. Contamos con personal especializado en protección personal, trasladados de valores y escoltas para ejecutivos. Todos nuestros escoltas tienen formación táctica y experiencia en seguridad de alta vulnerabilidad."
       },
-      "heading": "Preguntas Frecuentes",
-      "subheading": ""
-    },
+      {
+        "question": "¿Cómo mejora la seguridad con sistemas de control de accesos en La Pintana?",
+        "answer": "Los sistemas de control de accesos en La Pintana permiten gestionar quién entra y sale de condominios, empresas y residencias. Con lectores de tarjeta, biometría o códigos, más televigilancia, logras reducir accesos no autorizados, registrar horarios de ingreso y tener alertas inmediatas ante intentos de ingreso irregular."
+      }
+    ],
     "cta": {
-      "heading": "Protege tu propiedad en La Pintana",
-      "subheading": "Contáctanos para una cotización personalizada.",
-      "description": "Contáctanos para una cotización personalizada.",
-      "button": "Solicitar Cotización"
+      "headline": "Protege tu Familia y Negocio en La Pintana Hoy",
+      "button_text": "Solicitar Cotización Gratis",
+      "button_link": "/cotizacion"
     }
   }
 }

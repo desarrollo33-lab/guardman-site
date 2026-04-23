@@ -1,74 +1,80 @@
 {
-  "slug": "santiago-centro",
-  "name": "Santiago Centro",
-  "zone": "Centro",
   "sections": {
     "hero": {
-      "heading": "Seguridad Privada en Santiago Centro",
-      "subheading": "Empresa líder con guardias OS-10 en Santiago Centro. Cobertura 24/7.",
-      "cta_text": "Cotiza en Santiago Centro"
+      "heading": "Seguridad Privada en Santiago Centro | GuardMan Chile",
+      "subheading": "Protección profesional para tu hogar, empresa o comercio en el corazón de Santiago",
+      "image": "/images/og-default.webp"
     },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Ubicaciones",
+        "url": "/ubicaciones"
+      },
+      {
+        "label": "Santiago centro",
+        "url": "/ubicaciones/santiago-centro"
+      }
+    ],
     "intro": {
-      "heading": "Introducción",
-      "subheading": "",
-      "paragraphs": [
-        "Santiago Centro concentra alta actividad comercial y empresarial. Nuestros servicios de seguridad ayudan a proteger locales comerciales, oficinas y edificios de departamentos.",
-        "La alta densidad de personas y vehículos requiere protocolos específicos de seguridad.",
-        "Contamos con personal desplegado en Santiago Centro con tiempos de respuesta inferiores a 30 minutos."
+      "title": "Guardias de Seguridad para Santiago Centro: Protección de Confianza",
+      "content": "Santiago Centro es el corazón financiero, comercial y turístico de Chile. Con más de 200 mil personas transitando diariamente por sus calles, la necesidad de servicios de seguridad privada profesional es fundamental. GuardMan Chile ofrece soluciones integrales adaptadas a las exigencias de esta zona urbana de alta demanda.\n\nNuestro equipo de guardias certificados OS-10 y equipamiento de última generación garantizan la protección que necesitas. Con 8+ años de experiencia en la Región Metropolitana, somos la empresa de seguridad más confiable del sector.",
+      "image": "/images/location-intro.jpg"
+    },
+    "features": {
+      "title": "¿Por qué elegir GuardMan en Santiago Centro?",
+      "items": [
+        "Guardias certificados OS-10 con formación continua y experiencia comprobada",
+        "Centro de monitoreo 24/7 propio para respuesta inmediata",
+        "Sistemas de CCTV y control de accesos con tecnología avanzada",
+        "Cobertura en 14 comunas de la Región Metropolitana",
+        "Protocolos de seguridad adaptados a cada tipo de cliente",
+        "Atención personalizada y evaluaciones de riesgo gratuitas"
       ]
     },
-    "coverage": {
-      "0": "Guardias disponibles 24/7",
-      "1": "Tiempo de respuesta < 30 minutos",
-      "2": "Centro de monitoreo propio",
-      "3": "Reportes diarios de novedades",
-      "heading": "Cobertura en Santiago Centro",
-      "subheading": ""
-    },
-    "issues": {
-      "0": "Alto flujo de personas que dificulta el control de accesos",
-      "1": "Robos en locales comerciales y oficinas",
-      "2": "Vandalismo y deterioro de espacios públicos",
-      "heading": "Problemas que solucionamos",
-      "subheading": ""
-    },
-    "stats": {
-      "0": {
-        "label": "Empresas protegidas",
-        "value": "20+"
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años de experiencia"
       },
-      "1": {
-        "label": "Guardias en zona",
-        "value": "30+"
+      {
+        "value": "500+",
+        "label": "Guardias certificados"
       },
-      "2": {
-        "label": "Tiempo respuesta",
-        "value": "< 30 min"
+      {
+        "value": "14",
+        "label": "Comunas cubiertas"
       },
-      "heading": "Números que nos respaldan",
-      "subheading": ""
-    },
-    "faqs": {
-      "0": {
-        "question": "¿Hay disponibilidad de guardias en Santiago Centro?",
-        "answer": "Sí, tenemos guardias disponibles desplegados en Santiago Centro listos para comenzar el servicio."
+      {
+        "value": "350+",
+        "label": "Clientes satisfechos"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuáles son los servicios de seguridad más solicitados en Santiago Centro?",
+        "answer": "Los servicios más requeridos son guardias de vigilancia para edificios y oficinas, instalación de CCTV, control de accesos y monitoreos remotos. Cada solución se adapta a las necesidades específicas del cliente."
       },
-      "1": {
-        "question": "¿Cuál es el tiempo de respuesta en Santiago Centro?",
-        "answer": "Nuestro tiempo de respuesta en Santiago Centro es inferior a 30 minutos desde cualquier punto de la comuna."
+      {
+        "question": "¿Cuánto cuesta contratar guardias de seguridad en Santiago Centro?",
+        "answer": "Los precios varían según el tipo de servicio, cantidad de guardias y horarios requeridos. En GuardMan ofrecemos evaluaciones gratuitas y cotizaciones personalizadas sin compromiso."
       },
-      "2": {
-        "question": "¿Qué tipos de propiedades protegen?",
-        "answer": "Protegemos empresas, condominos, residencias, obras y cualquier tipo de propiedad que necesite seguridad."
+      {
+        "question": "¿Tienen disponibilidad inmediata para proyectos en el centro de Santiago?",
+        "answer": "Sí, gracias a nuestra amplia red de guardias y centros de operaciones, podemos desplegar personal de seguridad en tiempo récord para cubrir emergencias o proyectos nuevos."
       },
-      "heading": "Preguntas Frecuentes",
-      "subheading": ""
-    },
+      {
+        "question": "¿Qué diferencia a GuardMan de otras empresas de seguridad en Santiago?",
+        "answer": "Contamos con centro de monitoreo propio 24/7, guardias con certificación OS-10 vigente y más de 8 años protegiendo hogares, empresas y comercios en toda la Región Metropolitana."
+      }
+    ],
     "cta": {
-      "heading": "Protege tu propiedad en Santiago Centro",
-      "subheading": "Contáctanos para una cotización personalizada.",
-      "description": "Contáctanos para una cotización personalizada.",
-      "button": "Solicitar Cotización"
+      "headline": "Protege lo que más importa en Santiago Centro",
+      "button_text": "Solicitar Cotización Gratis",
+      "button_link": "/cotizacion"
     }
   }
 }

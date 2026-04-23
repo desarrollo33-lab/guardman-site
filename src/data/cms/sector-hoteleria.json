@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "hero": {
+      "heading": "Seguridad para Hoteles y Resorts en Chile",
+      "subheading": "Proteccion integral 24/7 para hoteles, resorts, hostales y establecimientos de alojamiento. Guardias OS-10 certificados y tecnologia de vigilancia avanzada.",
+      "image": "/images/hero-home.webp"
+    },
+    "intro": {
+      "title": "Seguridad Hotelera Profesional en Chile",
+      "content": "En el sector hotelero, la seguridad de los huespedes y la proteccion del patrimonio son prioridades absolutas. Nuestro servicio combina personal altamente capacitado con tecnologia de vanguardia."
+    },
+    "features": {
+      "items": [
+        "Guardias OS-10 certificados con formacion hotelera",
+        "Control de accesos con tecnologia biometrica",
+        "Sistema de CCTV con analisis de video inteligente",
+        "Monitoreo y respuesta 24/7 desde central de operaciones",
+        "Protocolos de emergencia personalizados",
+        "Vigilancia discreta en areas comunes y restringidas"
+      ]
+    },
+    "faq": [
+      {
+        "question": "Que medidas de seguridad implementan para proteger a los huespedes?",
+        "answer": "Sistema integral con guardias OS-10, vigilancia 24 horas, control de accesos, camaras CCTV y protocolos de evacuacion."
+      },
+      {
+        "question": "Como funciona el control de accesos?",
+        "answer": "Tarjetas magneticas, lectores biometricos, cerraduras electronicas y gestion centralizada en tiempo real."
+      },
+      {
+        "question": "Que incluye el monitoreo CCTV 24 horas?",
+        "answer": "Camaras HD, monitoreo permanente, grabacion en nube 30 dias, analisis de video inteligente y alertas inmediatas."
+      },
+      {
+        "question": "Como manejan emergencias como incendios?",
+        "answer": "Protocolos especializados, simulacros periodicos, coordinacion con Bomberos y Carabineros."
+      },
+      {
+        "question": "Cual es el costo de seguridad para mi hotel?",
+        "answer": "Varia segun tamano y servicios. Ofrecemos evaluaciones gratuitas con propuestas personalizadas."
+      },
+      {
+        "question": "Los guardias reciben capacitacion hotelera?",
+        "answer": "Si, formacion en atencion al cliente, manejo de conflictos, primeros auxilios y normativa legal."
+      }
+    ],
+    "cta": {
+      "headline": "Proteja su Hotel con los Mejores Especialistas",
+      "button_text": "Solicitar Cotizacion Gratis"
+    }
+  }
+}

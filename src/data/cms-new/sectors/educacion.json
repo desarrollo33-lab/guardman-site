@@ -1,0 +1,116 @@
+{
+  "slug": "educacion",
+  "type": "sector",
+  "version": 1,
+  "last_modified": "2026-04-22T14:59:39.565Z",
+  "seo": {
+    "title": "Seguridad para Instituciones Educativas Chile | GuardMan Chile",
+    "description": "Guardias OS-10 certificados y sistemas de monitoreo 24/7 para colegios y universidades. Solicita cotización gratuita para tu institución educativa.",
+    "canonical": "https://guardman.cl/sectores/educacion"
+  },
+  "content": {
+    "hero": {
+      "heading": "Seguridad para Colegios y Universidades en Chile",
+      "subheading": "Protección integral para instituciones educativas con guardias certificados y tecnología de monitoreo 24/7",
+      "image": "/images/og-default.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Sectores",
+        "url": "/sectores"
+      },
+      {
+        "label": "Educacion",
+        "url": "/sectores/educacion"
+      }
+    ],
+    "intro": {
+      "title": "Seguridad Confiable para el Sector Educación",
+      "content": "En GuardMan Chile entendemos que la seguridad en instituciones educativas va más allá de proteger bienes materiales. Se trata de crear espacios donde estudiantes, docentes y personal administrativo puedan desarrollarse en un ambiente seguro y tranquilo. Con más de 8 años de experiencia protegiendo colegios, universidades e institutos en la Región Metropolitana, somos el socio estratégico que tu institución necesita.\n\nNuestros guardias OS-10 certificados están capacitados específicamente para el contexto educativo, manejando desde protocolos de acceso hasta situaciones de emergencia con protocolos adaptés a ambientes con menores de edad. Contamos con tecnología de CCTV y control de accesos que se integran perfectamente con las rutinas diarias de tu institución.",
+      "image": "/images/sector-intro.jpg"
+    },
+    "features": {
+      "title": "Servicios de Seguridad para Instituciones Educativas",
+      "items": [
+        "Guardias especializados en protocolos educativos y manejo de menores",
+        "Sistema de CCTV con monitoreo remoto 24/7 desde nuestro centro de operaciones",
+        "Control de accesos con registro biométrico y tickets de visitante",
+        "Patrullaje preventivo en perimetros y áreas comunes",
+        "Escoltas para actividades académicas y eventos institucionales",
+        "Plan de emergencia y evacuación diseñado para cada establecimiento"
+      ]
+    },
+    "stats": [
+      {
+        "value": "45+",
+        "label": "Colegios y universidades protegidas"
+      },
+      {
+        "value": "120+",
+        "label": "Guardias especializados en sector educación"
+      },
+      {
+        "value": "8+",
+        "label": "Años de experiencia protegiendo instituciones"
+      },
+      {
+        "value": "14",
+        "label": "Comunas con cobertura en RM"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Pueden los guardias manejar situaciones con estudiantes menores de edad?",
+        "answer": "Sí, todos nuestros guardias reciben capacitación específica en manejo de menores y protocolos de comunicación con padres y apoderados, siempre bajo protocolos que priorizan la seguridad y el bienestar de los estudiantes."
+      },
+      {
+        "question": "¿Cómo controlan el acceso de visitantes sin generar filas en horas puntas?",
+        "answer": "Implementamos sistemas de pre-registro de visitas, tickets temporales y puntos de acceso organizados que permiten flujo rápido sin comprometer la seguridad del establecimiento."
+      },
+      {
+        "question": "¿Qué pasa durante eventos escolares como ceremonias de graduación?",
+        "answer": "Gestionamos la seguridad del evento según la cantidad de asistentes, implementando refuerzos de personal, control de accesos por sectores y coordinación con las autoridades del establecimiento."
+      },
+      {
+        "question": "¿Pueden integrarse con los sistemas de seguridad ya existentes del colegio?",
+        "answer": "Absolutamente, evaluamos la infraestructura existente y nos integramos con sistemas de CCTV, alarmas y control de accesos, optimizando los recursos ya disponibles en la institución."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu Comunidad Educativa con GuardMan",
+      "button_text": "Solicitar evaluación sin compromiso",
+      "button_link": "/cotizacion"
+    }
+  },
+  "related_content": {
+    "related_services": [
+      {
+        "slug": "auditoria-seguridad",
+        "title": "auditoria-seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/auditoria-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "cctv-videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "control-de-accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 0,
+    "published": false
+  }
+}

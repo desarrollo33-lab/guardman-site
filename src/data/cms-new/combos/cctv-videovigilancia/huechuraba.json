@@ -1,0 +1,150 @@
+{
+  "slug": "cctv-videovigilancia/huechuraba",
+  "type": "combo",
+  "service": "cctv-videovigilancia",
+  "location": "huechuraba",
+  "version": 1,
+  "last_modified": "2026-04-22T14:13:24.613Z",
+  "seo": {
+    "title": "Cctv Videovigilancia en Huechuraba",
+    "description": "Servicio de cctv videovigilancia profesional en Huechuraba. Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector norte de Santiago.",
+    "keywords": [],
+    "canonical": "https://guardman.cl/servicios/cctv-videovigilancia/huechuraba"
+  },
+  "content": {
+    "hero": {
+      "heading": "CCTV y Videovigilancia en Huechuraba",
+      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector norte de Santiago.",
+      "cta_text": "Cotizar en Huechuraba",
+      "cta_link": "/cotizacion?service=cctv-videovigilancia&location=huechuraba",
+      "image": "/images/service-cctv-videovigilancia.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Cctv Videovigilancia",
+        "url": "/servicios/cctv-videovigilancia"
+      },
+      {
+        "label": "Huechuraba",
+        "url": "/servicios/cctv-videovigilancia/huechuraba"
+      }
+    ],
+    "intro": {
+      "title": "¿Por qué elegir CCTV y Videovigilancia en Huechuraba?",
+      "content": "En GuardMan Chile somos especialistas en cctv y videovigilancia en Huechuraba. Nuestra experiencia en el sector norte de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Huechuraba y toda la zona Norte.",
+      "image": "/images/combo-intro.jpg"
+    },
+    "features": {
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Cámaras de alta definición con visión nocturna",
+        "Monitoreo remoto 24/7 desde nuestra central",
+        "Grabación en la nube con respaldo de 30 días",
+        "Detección de movimiento y alertas en tiempo real",
+        "Acceso desde cualquier dispositivo móvil",
+        "Instalación profesional y mantenimiento incluido"
+      ]
+    },
+    "zone_specific": {
+      "title": "Por qué Huechuraba",
+      "content": "",
+      "points": [
+        "centros comerciales, malls and oficinas corporativas requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de seguridad comercial, control de accesos y monitoreo CCTV es cada vez más urgente en el sector norte de Santiago.",
+        " muchas empresas y residencias en Huechuraba enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "issues": {
+      "title": "Desafíos de seguridad en Huechuraba",
+      "items": [
+        "centros comerciales, malls and oficinas corporativas requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de seguridad comercial, control de accesos y monitoreo CCTV es cada vez más urgente en el sector norte de Santiago.",
+        " muchas empresas y residencias en Huechuraba enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "stats": [
+      {
+        "value": "< 30 min",
+        "label": "Tiempo de respuesta en Norte"
+      },
+      {
+        "value": "Norte",
+        "label": "Cobertura"
+      },
+      {
+        "value": "Disponibles",
+        "label": "Guardias OS-10"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Puedo ver las cámaras en mi celular?",
+        "answer": "Sí, todas nuestras cámaras incluyen acceso remoto desde la app móvil. Puedes ver en tiempo real desde cualquier dispositivo, en cualquier momento."
+      },
+      {
+        "question": "¿Por cuánto tiempo se graba?",
+        "answer": "Por defecto grabamos 30 días en la nube con respaldo automático. Podemos extender el período según tus necesidades de seguridad."
+      },
+      {
+        "question": "¿Qué pasa si hay una emergencia?",
+        "answer": "Nuestro equipo de monitoreo recibe las alertas inmediatamente y coordina la respuesta: contacto a Carabineros, notificación a tus contactos de emergencia y activación de sirena si está configurado."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu propiedad en Huechuraba",
+      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
+      "button_text": "Cotizar en Huechuraba",
+      "button_link": "/cotizacion?service=cctv-videovigilancia&location=huechuraba"
+    }
+  },
+  "related_content": {
+    "related_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/guardias-de-seguridad.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "Control De Accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      },
+      {
+        "slug": "escoltas-privados",
+        "title": "Escoltas Privados",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/escoltas-privados.jpg"
+      }
+    ],
+    "nearby_locations": [],
+    "upsell_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      },
+      {
+        "slug": "monitoreo-24-7",
+        "title": "Monitoreo 24 7",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 80,
+    "published": false
+  }
+}

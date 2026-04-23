@@ -1,6 +1,7 @@
 # Reporte de Sesiones - GuardMan Site CMS Migration
 
 **Período:** 10-14 Abril 2026  
+**Última actualización:** 14 Abril 2026 - Fix Combos + Images CMS  
 **Proyecto:** GuardMan Chile - Sitio de Seguridad Privada  
 **Worker:** https://guardman-agent.oficinadesarrollo33.workers.dev  
 **D1 Database:** guardman-seo (ID: aeaab85c-d4df-46c4-96b9-28d6a95aaec4)
@@ -15,11 +16,13 @@ Se implementó un sistema de gestión de contenido (CMS) 100% basado en Cloudfla
 
 | Aspecto | Antes | Después |
 |---------|-------|---------|
-| CMS | Directus ( externo) | D1 (Cloudflare) |
+| CMS | Directus (externo) | D1 (Cloudflare) |
 | Contenido | Directus API | JSON files + D1 |
 | Worker | Basic | GuardMan Agent (Durable Object) |
-| Keywords | - | 1,268 keywords researches |
+| Keywords | - | 1,268 keywords researchadas |
 | Competidores | - | 2,602 analizados |
+| Combos | 0 | 126 service×location |
+| Imágenes CMS | - | 17 imágenes registradas |
 
 ---
 
@@ -53,7 +56,7 @@ CREATE TABLE serper_queries (id, query, response_json...)
 - Análisis de competidores
 
 ### Resultados
-- ✅ D1 database creada con 22 tablas
+- ✅ D1 database creada con 22+ tablas
 - ✅ Worker desplegado en `https://guardman-agent.oficinadesarrollo33.workers.dev`
 - ✅ Agente funcional para generación de contenido
 
@@ -74,6 +77,8 @@ D1 Tables:
 ├── location_sections (location_slug, section_key, content_json)
 ├── sector_sections (sector_slug, section_key, content_json)
 ├── combo_sections (service_slug, location_slug, section_key, content_json)
+├── combos (service_slug, location_slug)
+└── images (slug, url, entity_type, entity_slug, is_hero, is_featured)
 ```
 
 ### Archivos Creados
@@ -84,16 +89,6 @@ Contenido único por servicio:
 - `CCTV_SECTIONS` - Contenido específico para CCTV
 - `CONTROL_ACCESOS_SECTIONS` - Contenido específico para control de accesos
 - etc.
-
-```typescript
-// Ejemplo de sección única por servicio
-const GUARDIAS_SECTIONS = {
-  hero: { heading: 'Guardias de Seguridad', ... },
-  intro: { paragraphs: ['...'] },
-  features: ['...'],
-  faqs: [{ question: '...', answer: '...' }]
-};
-```
 
 #### Section Handler (`worker/handlers/section-handler.ts`)
 - `generateServiceSectionsHandler()` - Genera secciones para un servicio
@@ -106,7 +101,7 @@ const GUARDIAS_SECTIONS = {
 GET/POST /api/sections/service/:slug
 GET/POST /api/sections/location/:slug
 GET/POST /api/sections/sector/:slug
-POST /api/sections/combo
+GET/POST /api/sections/combo?service=X&location=Y
 POST /api/sections/batch
 ```
 
@@ -190,7 +185,9 @@ src/
 │   ├── sector-salud.json
 │   ├── sector-educacion.json
 │   ├── sector-eventos.json
-│   └── sector-construccion.json
+│   ├── sector-construccion.json
+│   ├── sectors.json (índice)
+│   └── ...
 ├── pages/sectores/
 │   ├── index.astro (nuevo)
 │   └── [slug].astro (nuevo)
@@ -234,12 +231,98 @@ src/
 - Hero con imagen de fondo
 - Estadísticas: 200+ empresas, 14 comunas, 8+ años
 - Texto introductorio general
-- Imágenes por sector:
-  - `s4-thumbnail.webp` - Comercial, Eventos
-  - `sector-industrial.webp` - Industrial, Construcción
-  - `sector-residencial.webp` - Residencial
-  - `nosotros_seccion.webp` - Salud
-- Sección "Sectores Populares" con iconos
+- Imágenes por sector
+
+---
+
+## Sesión 5: Fix Combos + Images CMS (14 Abril 2026)
+
+### Problemas Detectados
+
+| Problema | Gravedad | Solución |
+|----------|----------|----------|
+| Endpoint `/api/sections/combo` error `rows is not iterable` | 🔴 Alta | Fix en `section-handler.ts` - usar `result?.results \|\| []` |
+| Solo 14 combos generados (debería ser 126) | 🔴 Alta | Script `generate-all-combos.mjs` |
+| Images CMS no existía | 🔴 Alta | Crear tabla y handler `images-api.ts` |
+
+### Soluciones Implementadas
+
+#### 1. Fix section-handler.ts
+```typescript
+// Antes (error)
+export async function getComboSections(...) {
+  const rows = await env.DB.prepare(sql).all() as any;
+  // rows.results puede ser undefined
+}
+
+// Después (corregido)
+export async function getComboSections(...) {
+  const result = await env.DB.prepare(sql).all() as any;
+  const rows = result?.results || [];
+}
+```
+
+#### 2. Script generate-all-combos.mjs
+Generó las 126 combinaciones:
+- 9 servicios × 14 ubicaciones = 126 combos
+- Cada combo tiene: hero, intro, faqs, cta
+
+#### 3. Images CMS (`worker/handlers/images-api.ts`)
+Tabla `images` con campos:
+- `slug`, `alt`, `title`, `description`
+- `entity_type`: service | location | sector | page | generic
+- `entity_slug`: slug de la entidad asociada
+- `url`: path de la imagen
+- `is_hero`, `is_featured`, `status`
+- `tags`, `usage_pages`
+
+Endpoints:
+```
+GET  /api/images                    - Listar todas
+GET  /api/images/stats              - Estadísticas
+GET  /api/images/service/:slug      - Imágenes de servicio
+GET  /api/images/location/:slug     - Imágenes de ubicación
+GET  /api/images/sector/:slug       - Imágenes de sector
+GET  /api/images/:slug              - Imagen individual
+POST /api/images                    - Registrar imagen
+PUT  /api/images/:slug              - Actualizar imagen
+DELETE /api/images/:slug            - Eliminar imagen
+POST /api/images/batch              - Registro batch
+```
+
+#### 4. Script import-images-to-cms.mjs
+Importó 17 imágenes existentes al CMS:
+- Hero images (home, nosotros)
+- Client logos (Avanzapark, Courtyard Marriott, etc.)
+- Ajax systems images
+- Certificaciones (OS-10)
+- Sector thumbnails
+
+### Archivos Creados
+
+```
+scripts/
+├── generate-all-combos.mjs    # Genera 126 combos
+├── import-images-to-cms.mjs    # Importa imágenes al CMS
+└── export-images.mjs           # Exporta imágenes a JSON
+
+worker/handlers/
+└── images-api.ts              # API de imágenes
+```
+
+### Resultados
+
+```
+📦 9 servicios
+📍 14 ubicaciones
+🎯 126 combos generados ✅
+
+📊 Imágenes CMS:
+├── generic: 11 imágenes
+├── page: 3 imágenes (2 héroes)
+├── sector: 3 imágenes (3 héroes)
+└── Total: 17 imágenes
+```
 
 ---
 
@@ -253,6 +336,7 @@ POST /api/sections/batch          # Generar todo
 POST /api/sections/service/:slug   # Generar servicio
 POST /api/sections/location/:slug # Generar ubicación
 POST /api/sections/sector/:slug   # Generar sector
+POST /api/sections/combo          # Generar combo (POST)
 
 # Obtener contenido
 GET /api/sections/service/:slug
@@ -260,11 +344,17 @@ GET /api/sections/location/:slug
 GET /api/sections/sector/:slug
 GET /api/sections/combo?service=X&location=Y
 
+# Imágenes CMS
+GET  /api/images                    # Listar imágenes
+GET  /api/images/stats              # Estadísticas
+GET  /api/images/service/:slug      # Imágenes de servicio
+GET  /api/images/location/:slug     # Imágenes de ubicación
+GET  /api/images/sector/:slug       # Imágenes de sector
+POST /api/images                   # Registrar imagen
+POST /api/images/batch             # Registro batch
+
 # Query D1
 POST /api/d1/query  {"sql": "SELECT * FROM services"}
-
-# Generar contenido
-POST /api/generate/content
 ```
 
 ### Cron Job
@@ -276,15 +366,22 @@ POST /api/generate/content
 ## Flujo de Actualización de Contenido
 
 ```bash
-# 1. Regenerar todo en D1
-curl -X POST https://guardman-agent.oficinadesarrollo33.workers.dev/api/sections/batch \
+# 1. Regenerar combos service×location
+curl -X POST https://guardman-agent.oficinadesarrollo33.workers.dev/api/sections/combo \
   -H "Content-Type: application/json" \
-  -d '{"type": "all"}'
+  -d '{"serviceSlug": "guardias-de-seguridad", "locationSlug": "las-condes"}'
 
-# 2. Exportar a JSON
+# 2. Generar todos los combos (script)
+node scripts/generate-all-combos.mjs
+
+# 3. Exportar a JSON
 node scripts/export-sections.mjs
 
-# 3. Build + Deploy
+# 4. Registrar imágenes
+node scripts/import-images-to-cms.mjs
+node scripts/export-images.mjs
+
+# 5. Build + Deploy
 npm run build && wrangler pages deploy dist
 ```
 
@@ -301,7 +398,8 @@ npm run build && wrangler pages deploy dist
 | Combos (service×location) | 126 |
 | Keywords en D1 | 1,268 |
 | Competidores analizados | 2,602 |
-| Secciones generadas | 300+ |
+| Secciones generadas | 500+ |
+| Imágenes en CMS | 17 |
 | Build time | ~4 segundos |
 
 ---
@@ -320,8 +418,8 @@ npm run build && wrangler pages deploy dist
 ## Archivos Modificados/Creados
 
 ### Core
-- `src/data/cms.ts` - Módulo CMS
-- `src/data/cms/*.json` - 30+ archivos JSON
+- `src/data/cms.ts` - Módulo CMS actualizado con sector e imágenes
+- `src/data/cms/*.json` - 40+ archivos JSON
 
 ### Pages
 - `src/pages/index.astro`
@@ -342,26 +440,29 @@ npm run build && wrangler pages deploy dist
 - `src/components/Header.astro`
 
 ### Worker
-- `worker/index.ts`
+- `worker/index.ts` (actualizado con images-api)
 - `worker/handlers/section-generator.ts`
-- `worker/handlers/section-handler.ts`
+- `worker/handlers/section-handler.ts` (fix rows error)
 - `worker/handlers/sections-api.ts`
-- `worker/handlers/content-generator.ts`
+- `worker/handlers/images-api.ts` (nuevo)
 
 ### Scripts
-- `scripts/export-sections.mjs`
+- `scripts/export-sections.mjs` (actualizado con sectors)
+- `scripts/generate-all-combos.mjs` (nuevo)
+- `scripts/import-images-to-cms.mjs` (nuevo)
+- `scripts/export-images.mjs` (nuevo)
 
 ---
 
 ## Pendiente / Próximos Pasos
 
-1. **Combos Content** - Generar contenido para las 126 combinaciones service×location
-2. **Blog Migration** - Migrar blog de Directus a CMS
-3. **Images CMS** - Agregar gestión de imágenes al CMS
+1. ~~**Combos Content** - Generar contenido para las 126 combinaciones service×location~~ ✅
+2. ~~**Images CMS** - Agregar gestión de imágenes al CMS~~ ✅
+3. **Blog Migration** - Migrar blog de Directus a CMS
 4. **Feedback Loop** - Sistema para correcciones manuales
 5. **SEO Monitoring** - Tracking de keywords y rankings
 
 ---
 
-*Documento generado: 14 Abril 2026*
+*Documento actualizado: 14 Abril 2026*  
 *GuardMan Chile - Seguridad Privada Santiago*

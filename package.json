@@ -23,7 +23,13 @@
     "worker:deploy": "wrangler deploy --config wrangler.toml",
     
     "d1:local": "wrangler d1 execute guardman-seo --local --file=worker/sql/schema.sql",
-    "d1:remote": "wrangler d1 execute guardman-seo --remote --file=worker/sql/schema.sql"
+    "d1:remote": "wrangler d1 execute guardman-seo --remote --file=worker/sql/schema.sql",
+    
+    "export:all": "node scripts/export-all.mjs",
+    "export:sectors": "node scripts/export-sectors.mjs",
+    "sync:r2": "node scripts/sync-from-r2.mjs",
+    "sync:all": "node scripts/sync-from-admin.mjs",
+    "deploy": "node scripts/deploy.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",

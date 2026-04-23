@@ -1,24 +1,11 @@
 ---
-import { getServicesList, getLocationsList } from '../data/cms';
-import { readdirSync, existsSync, readFileSync } from 'fs';
+import { getServicesList, getLocationsList, getSectorsList } from '../data/cms';
+import { existsSync, readFileSync } from 'fs';
 
-// Get data from CMS
 const services = getServicesList();
 const locations = getLocationsList();
+const sectors = getSectorsList();
 
-// Load sectors from CMS JSON files
-const sectorFiles = readdirSync('src/data/cms')
-  .filter(f => f.startsWith('sector-') && f.endsWith('.json'));
-
-const sectors = sectorFiles.map(f => {
-  const data = JSON.parse(readFileSync(`src/data/cms/${f}`, 'utf-8'));
-  return {
-    slug: data.sectorSlug || f.replace('sector-', '').replace('.json', ''),
-    name: data.sections?.hero?.heading || '',
-  };
-}).filter(s => s.name);
-
-// Load config for phone
 const configData = existsSync('src/data/cms/config.json') 
   ? JSON.parse(readFileSync('src/data/cms/config.json', 'utf-8'))
   : {};

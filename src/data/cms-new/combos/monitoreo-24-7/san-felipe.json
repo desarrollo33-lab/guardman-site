@@ -1,0 +1,144 @@
+{
+  "slug": "monitoreo-24-7/san-felipe",
+  "type": "combo",
+  "service": "monitoreo-24-7",
+  "location": "san-felipe",
+  "version": 1,
+  "last_modified": "2026-04-22T14:13:24.873Z",
+  "seo": {
+    "title": "Monitoreo 24 7 en San Felipe",
+    "description": "Servicio de monitoreo 24 7 profesional en San Felipe. Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
+    "keywords": [],
+    "canonical": "https://guardman.cl/servicios/monitoreo-24-7/san-felipe"
+  },
+  "content": {
+    "hero": {
+      "heading": "Monitoreo 24/7 en San Felipe",
+      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
+      "cta_text": "Cotizar en San Felipe",
+      "cta_link": "/cotizacion?service=monitoreo-24-7&location=san-felipe",
+      "image": "/images/service-monitoreo-24-7.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Servicios",
+        "url": "/servicios"
+      },
+      {
+        "label": "Monitoreo 24 7",
+        "url": "/servicios/monitoreo-24-7"
+      },
+      {
+        "label": "San Felipe",
+        "url": "/servicios/monitoreo-24-7/san-felipe"
+      }
+    ],
+    "intro": {
+      "title": "¿Por qué elegir Monitoreo 24/7 en San Felipe?",
+      "content": "En GuardMan Chile somos especialistas en monitoreo 24/7 en San Felipe. Nuestra experiencia en San Felipe y la zona de Valparaíso nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en San Felipe y toda la zona Valparaíso.",
+      "image": "/images/combo-intro.jpg"
+    },
+    "features": {
+      "title": "Qué Incluye el Servicio",
+      "items": [
+        "Central de monitoreo propia operativa 24/7",
+        "Respuesta ante alarmas en menos de 30 segundos",
+        "Verificación visual con cámaras integradas",
+        "Coordinación con Carabineros y servicios de emergencia",
+        "Informes mensuales de actividad y incidentes",
+        "App móvil para control remoto"
+      ]
+    },
+    "zone_specific": {
+      "title": "Por qué San Felipe",
+      "content": "",
+      "points": [
+        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
+        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "issues": {
+      "title": "Desafíos de seguridad en San Felipe",
+      "items": [
+        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
+        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
+        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+      ]
+    },
+    "stats": [
+      {
+        "value": "< 30 min",
+        "label": "Tiempo de respuesta en Valparaíso"
+      },
+      {
+        "value": "Valparaíso",
+        "label": "Cobertura"
+      },
+      {
+        "value": "Disponibles",
+        "label": "Guardias OS-10"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Qué pasa si salta una alarma a las 3am?",
+        "answer": "Nuestro equipo de monitoreo verifica la alarma inmediatamente. Si es una emergencia real, contactamos a Carabineros y a tus contactos de emergencia simultáneamente."
+      },
+      {
+        "question": "¿Monitorean solo cuando hay alarma?",
+        "answer": "No, el monitoreo es constante y activo. Nuestros operadores vigilan las 24 horas y pueden hacer rondas visuales remotas cuando detectan algo sospechoso."
+      },
+      {
+        "question": "¿Puedo ver lo que sucede en mi propiedad?",
+        "answer": "Sí, tienes acceso 24/7 a todas las cámaras en vivo desde tu celular o computadora. Además, recibes alertas instantáneas ante eventos."
+      }
+    ],
+    "cta": {
+      "headline": "Protege tu propiedad en San Felipe",
+      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
+      "button_text": "Cotizar en San Felipe",
+      "button_link": "/cotizacion?service=monitoreo-24-7&location=san-felipe"
+    }
+  },
+  "related_content": {
+    "related_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/guardias-de-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "Cctv Videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "Control De Accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ],
+    "nearby_locations": [],
+    "upsell_services": [
+      {
+        "slug": "guardias-de-seguridad",
+        "title": "Guardias De Seguridad",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 80,
+    "published": false
+  }
+}

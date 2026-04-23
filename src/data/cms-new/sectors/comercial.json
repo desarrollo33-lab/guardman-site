@@ -1,0 +1,116 @@
+{
+  "slug": "comercial",
+  "type": "sector",
+  "version": 1,
+  "last_modified": "2026-04-22T14:59:39.562Z",
+  "seo": {
+    "title": "Guardias de Seguridad para Empresas Las Condes | GuardMan Chile",
+    "description": "Seguridad privada comercial en Las Condes con guardias OS-10, monitoreo 24/7 propio y 8+ años de experiencia. Cotiza protección para tu empresa hoy.",
+    "canonical": "https://guardman.cl/sectores/comercial"
+  },
+  "content": {
+    "hero": {
+      "heading": "Guardias de Seguridad para Empresas en Las Condes",
+      "subheading": "Protección profesional con guardias OS-10 certificados y monitoreo 24/7 propio",
+      "image": "/images/sector-corporativo.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Sectores",
+        "url": "/sectores"
+      },
+      {
+        "label": "Comercial",
+        "url": "/sectores/comercial"
+      }
+    ],
+    "intro": {
+      "title": "Seguridad privada comercial en Las Condes que protege tu negocio de verdad",
+      "content": "En GuardMan Chile llevamos más de 8 años respaldando empresas en Las Condes y toda la Región Metropolitana. No somos una empresa más de seguridad: somos un equipo con monitoreo propio las 24 horas, 500+ guardias con certificación OS-10 vigente y la experiencia para resolver cualquier situación antes de que se complique.\n\nEl sector comercial en Las Condes enfrenta riesgos reales: accesos no autorizados, robos en exteriores, faltantes en inventarios y situaciones de conflictividad interna. Eso no se resuelve con un guardia cualquiera. Se resuelve con profesionales entrenados, protocolos claros y una central de monitoreo que responde al instante. Eso es lo que GuardMan entrega a cada cliente comercial.",
+      "image": "/images/sector-intro.jpg"
+    },
+    "features": {
+      "title": "Por qué las empresas de Las Condes eligen a GuardMan",
+      "items": [
+        "Guardias con certificación OS-10 vigente: ningún guardia trabaja sin su curso al día. Eso exige la ley y lo cumplimos siempre.",
+        "Monitoreo 24/7 propio: nuestra central opera sin intermediarios, reacciona rápido y coordina las respuestas sin perder tiempo.",
+        "Cobertura en toda la Región Metropolitana: llegamos a Las Condes, Vitacura, Providencia, Huechuraba y todas las comunas del sector oriente.",
+        "8+ años en el mercado chileno: hemos protegido centros comerciales, oficinas, bodegas, retail y empresas de distintos tamaños.",
+        "Planes adaptables a tu operación: turnos rotativos, fijos, 4x4, 6x1 o como necesites según la naturaleza de tu negocio.",
+        "Asesoría en normativa OS-10 y seguridad: no solo desplegamos guardias, te ayudamos a entender qué necesitas legalmente."
+      ]
+    },
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años en el mercado"
+      },
+      {
+        "value": "500+",
+        "label": "Guardias activos con OS-10"
+      },
+      {
+        "value": "250+",
+        "label": "Clientes satisfechos"
+      },
+      {
+        "value": "24/7 propio",
+        "label": "Monitoreo"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Qué precio tiene un guardia de seguridad para mi empresa en Las Condes?",
+        "answer": "El valor depende del turno, la cantidad de guardias y las necesidades específicas de tu operación. En GuardMan armamos una cotización personalizada sin compromiso. Lo que sí te decimos: el precio más bajo suele salir caro cuando el guardia no tiene su OS-10 al día o el monitoreo no responde. Cotiza y compara con nuestras condiciones."
+      },
+      {
+        "question": "¿Cómo sé que los guardias tienen certificación OS-10 vigente?",
+        "answer": "En GuardMan cada guardia tiene su certificación OS-10 verificada y al día. Eso no es opcional ni un favor: es nuestra política de operación y un requisito legal para trabajar en Chile. Te podemos mostrar la documentación de cada uno antes de empezar."
+      },
+      {
+        "question": "¿Pueden cubrir eventos o situaciones de alta demanda en Las Condes?",
+        "answer": "Sí. Tenemos capacidad de reforzar la cobertura con guardias adicionales cuando tu empresa lo requiera, ya sea por季节alidad, eventos o emergencias. No somos una empresa rígida: nos adaptamos al ritmo de tu negocio."
+      },
+      {
+        "question": "¿Qué pasa si un guardia falta o necesita reemplazo?",
+        "answer": "En GuardMan tenemos un equipo de reemplazos listo para cubrir ausencias sin que tu operación se quede desprotegida. El monitoreo propio nos permite reaccionar rápido y coordinar el cambio sin que tú tengas que estar encima del proceso."
+      }
+    ],
+    "cta": {
+      "headline": "Tu empresa en Las Condes no puede quedarse sin protección",
+      "button_text": "Cotizar guardias de seguridad ahora",
+      "button_link": "/cotizacion"
+    }
+  },
+  "related_content": {
+    "related_services": [
+      {
+        "slug": "auditoria-seguridad",
+        "title": "auditoria-seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/auditoria-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "cctv-videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "control-de-accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 0,
+    "published": false
+  }
+}

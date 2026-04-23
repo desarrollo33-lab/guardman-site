@@ -1,0 +1,150 @@
+{
+  "slug": "lampa",
+  "type": "location",
+  "version": 1,
+  "last_modified": "2026-04-22T14:59:39.547Z",
+  "seo": {
+    "title": "Seguridad Privada Lampa | Guardias 24/7 | GuardMan Chile",
+    "description": "GuardMan Chile: empresa de seguridad privada líder en Lampa. Guardias certificados OS-10, monitoreo 24/7 y CCTV. Cotiza gratis hoy.",
+    "canonical": "https://guardman.cl/ubicaciones/lampa"
+  },
+  "content": {
+    "hero": {
+      "heading": "Seguridad Privada en Lampa | Guardias y Monitoreo 24/7",
+      "subheading": "Protegemos tu hogar, empresa o evento con guardias certificados OS-10 y tecnología de vanguardia en Lampa.",
+      "image": "/images/og-default.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Ubicaciones",
+        "url": "/ubicaciones"
+      },
+      {
+        "label": "Lampa",
+        "url": "/ubicaciones/lampa"
+      }
+    ],
+    "intro": {
+      "title": "Guardianes de Seguridad en Lampa: tu mejor opción",
+      "content": "En GuardMan Chile somos la empresa de seguridad privada líder en la Región Metropolitana. Con más de 8 años de experiencia y presencia en Lampa, protegemos hogares, empresas, eventos y obras de construcción con el más alto estándar de calidad.\n\nNuestro equipo de guardias certificados OS-10 y nuestro centro de monitoreo 24/7 propio garantizan una respuesta inmediata ante cualquier emergencia. Si buscas seguridad privada en Lampa, contáctanos hoy.",
+      "image": "/images/location-intro.jpg"
+    },
+    "features": {
+      "title": "¿Por qué elegir GuardMan en Lampa?",
+      "items": [
+        "Guardias certificados OS-10 con formación continua",
+        "Centro de monitoreo propio 24/7 en Santiago",
+        "Sistemas de CCTV y control de accesos avanzados",
+        "Respuesta inmediata ante emergencias",
+        "Cobertura en toda la comuna de Lampa y alrededores",
+        "Informes de actividad y dashboards en tiempo real"
+      ]
+    },
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años de experiencia"
+      },
+      {
+        "value": "500+",
+        "label": "Guardias certificados OS-10"
+      },
+      {
+        "value": "14",
+        "label": "Comunas de cobertura"
+      },
+      {
+        "value": "200+",
+        "label": "Clientes satisfechos"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta un guardia de seguridad en Lampa?",
+        "answer": "Los costos varían según el tipo de servicio, turnos requeridos y características del inmueble. En GuardMan ofrecemos cotizaciones personalizadas gratis, adaptadas a tu presupuesto y necesidades específicas."
+      },
+      {
+        "question": "¿Qué servicios de seguridad ofrecen en Lampa?",
+        "answer": "Brindamos guardias staticos, rondas motorizadas, monitoreo CCTV 24/7, control de accesos, escoltas, seguridad para eventos y seguridad industrial. Cada servicio se personaliza según tus requerimientos."
+      },
+      {
+        "question": "¿Los guardias tienen formación y certificación?",
+        "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 vigente, formación en primeros auxilios y protocolos de emergencia. Además, reciben capacitaciones continuas para mantener altos estándares."
+      },
+      {
+        "question": "¿Cómo funciona el monitoreo 24/7?",
+        "answer": "Nuestro centro de monitoreo opera las 24 horas con operadores especializados que vigilan tu propiedad en tiempo real, detectando situaciones sospechosas y coordinando respuesta inmediata con nuestras fuerzas terrestres."
+      }
+    ],
+    "cta": {
+      "headline": "¿Necesitas seguridad en Lampa?",
+      "button_text": "Llámanos al +56 2 3124 5678",
+      "button_link": "/cotizacion"
+    }
+  },
+  "related_content": {
+    "nearby_locations": [
+      {
+        "slug": "conchali",
+        "title": "Conchali",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/conchali.jpg"
+      },
+      {
+        "slug": "huechuraba",
+        "title": "Huechuraba",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/huechuraba.jpg"
+      },
+      {
+        "slug": "la-pintana",
+        "title": "La Pintana",
+        "excerpt": "Ubicación con cobertura de seguridad",
+        "image": "/images/ubicaciones/la-pintana.jpg"
+      }
+    ],
+    "related_services": [
+      {
+        "slug": "auditoria-seguridad",
+        "title": "auditoria-seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/auditoria-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "cctv-videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "control-de-accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ],
+    "upsell_services": [
+      {
+        "slug": "auditoria-seguridad",
+        "title": "auditoria-seguridad",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "cctv-videovigilancia",
+        "price_range": "$$",
+        "reason": "Complemento ideal para mayor seguridad"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 0,
+    "published": false
+  }
+}

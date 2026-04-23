@@ -1,0 +1,116 @@
+{
+  "slug": "residencial",
+  "type": "sector",
+  "version": 1,
+  "last_modified": "2026-04-22T14:59:39.568Z",
+  "seo": {
+    "title": "Seguridad Residencial Santiago | GuardMan Chile",
+    "description": "Seguridad residencial en Santiago: guardias OS-10 certificados, monitoreo 24/7, cobertura en 14 comunas RM. Cotiza gratis con GuardMan Chile.",
+    "canonical": "https://guardman.cl/sectores/residencial"
+  },
+  "content": {
+    "hero": {
+      "heading": "Seguridad Residencial en Santiago | GuardMan Chile",
+      "subheading": "Protegemos tu hogar y familia con guardias certificados y tecnología de monitoreo 24/7. Confianza que se demuestra.",
+      "image": "/images/sector-residencial.webp"
+    },
+    "breadcrumb": [
+      {
+        "label": "Inicio",
+        "url": "/"
+      },
+      {
+        "label": "Sectores",
+        "url": "/sectores"
+      },
+      {
+        "label": "Residencial",
+        "url": "/sectores/residencial"
+      }
+    ],
+    "intro": {
+      "title": "Seguridad Residencial de Alto Nivel para Tu Hogar",
+      "content": "En GuardMan Chile entendemos que tu hogar es tu refugio. Por eso ofrecemos servicios de seguridad residencial diseñados para proteger lo que más te importa: tu familia y tu patrimonio. Con más de 8 años de experiencia y presencia en 14 comunas de la Región Metropolitana, somos el socio de confianza para miles de familias chilenas.\n\nNuestro equipo de guardias OS-10 certificados trabaja coordinada mente con nuestro centro de monitoreo propio las 24 horas, garantizando una respuesta inmediata ante cualquier situación de riesgo. Desde condos y edificios hasta casas particulares, adaptamos nuestras soluciones a tus necesidades específicas.",
+      "image": "/images/sector-intro.jpg"
+    },
+    "features": {
+      "title": "¿Por Qué Elegir GuardMan Para Tu Hogar?",
+      "items": [
+        "Guardias certificados OS-10 con formación especializada en seguridad residencial",
+        "Centro de monitoreo propio 24/7 con respuesta inmediata ante emergencias",
+        "Cobertura en 14 comunas de la Región Metropolitana",
+        "Sistemas de CCTV y control de accesos integrados",
+        "Rondas preventivas personalizadas según tu sector y horario",
+        "Comunicación directa con Carabineros y servicios de emergencia"
+      ]
+    },
+    "stats": [
+      {
+        "value": "8+",
+        "label": "Años de experiencia"
+      },
+      {
+        "value": "500+",
+        "label": "Guardias OS-10 certificados"
+      },
+      {
+        "value": "14",
+        "label": "Comunas con cobertura"
+      },
+      {
+        "value": "2.500+",
+        "label": "Clientes residenciales satisfechos"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta contratar seguridad residencial en GuardMan Chile?",
+        "answer": "Los costos varían según el tipo de propiedad, extensión del sector a vigilar y horario requerido. En GuardMan ofrecemos cotizaciones personalizadas sin costo. Generalmente, los planes parten desde $350.000 mensuales para servicios básicos."
+      },
+      {
+        "question": "¿Qué es la certificación OS-10 y por qué es importante?",
+        "answer": "La certificación OS-10 es otorgada por la Autoridad Marítima y acredita que el guardia está habilitado para funciones de seguridad privada. Todos nuestros guardias cuentan con esta certificación, garantizando formación profesional y conocimiento legal."
+      },
+      {
+        "question": "¿Pueden vigilar solo ciertas horas de mi casa o condomio?",
+        "answer": "Sí, adaptamos los horarios según tus necesidades. Puedes elegir vigilancia full time las 24 horas, medios turnos de 12 horas, o servicios nocturnos y de fin de semana. También ofrecemos escoltas para momentos específicos."
+      },
+      {
+        "question": "¿En qué comunas de Santiago ofrecen servicios de seguridad residencial?",
+        "answer": "Cubrimos 14 comunas de la Región Metropolitana incluyendo Las Condes, Providencia, Vitacura, La Reina, Ñuñoa, Santiago Centro, Macul, Peñalolén, San Bernardo, La Florida, Puente Alto, entre otras. Consulta disponibilidad para tu sector."
+      }
+    ],
+    "cta": {
+      "headline": "Protege Tu Hogar Hoy con GuardMan Chile",
+      "button_text": "Agenda Tu Reunión Gratis",
+      "button_link": "/cotizacion"
+    }
+  },
+  "related_content": {
+    "related_services": [
+      {
+        "slug": "auditoria-seguridad",
+        "title": "auditoria-seguridad",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/auditoria-seguridad.jpg"
+      },
+      {
+        "slug": "cctv-videovigilancia",
+        "title": "cctv-videovigilancia",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/cctv-videovigilancia.jpg"
+      },
+      {
+        "slug": "control-de-accesos",
+        "title": "control-de-accesos",
+        "excerpt": "Servicio de seguridad profesional",
+        "image": "/images/control-de-accesos.jpg"
+      }
+    ]
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 0,
+    "published": false
+  }
+}
