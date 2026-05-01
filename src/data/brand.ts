@@ -17,6 +17,16 @@ export const CERTIFICATIONS = brandData.certifications || {};
 export const USPS = brandData.usps || {};
 export const COLORS = brandData.colors || {};
 
+// Parsed USPs as array (for homepage/nosotros)
+export const USP_LIST: { key: string; title: string; description: string; icon: string }[] = Object.entries(USPS)
+  .map(([key, raw]) => {
+    if (typeof raw === 'object' && raw !== null) return { key, ...raw };
+    // Legacy pipe format fallback
+    const parts = String(raw).split('|');
+    return { key, title: parts[0] || '', description: parts[1] || '', icon: parts[2] || 'star' };
+  })
+  .filter(u => u.title);
+
 // Convenience helpers
 export function getBrandStat(key: keyof typeof STATS): string {
   return String(STATS[key] || '');

@@ -20,7 +20,6 @@
     "primary_700": "#152038",
     "primary_800": "#0F1829",
     "primary_900": "#0A1019",
-    "secondary_500": "#4A4A4A",
     "sector_automotriz": "bg-cyan-50 text-cyan-800 border-cyan-200",
     "sector_comercial": "bg-blue-50 text-blue-800 border-blue-200",
     "sector_construccion": "bg-amber-50 text-amber-800 border-amber-200",
@@ -124,11 +123,31 @@
     "years": "8+"
   },
   "usps": {
-    "centro_monitoreo": "Centro de Monitoreo Propio|Con redundancia y supervisión 24/7|monitor",
-    "guard_pod": "GuardPod V1|Unidad Autónoma de Vigilancia 24/7 - 15 meses de desarrollo propio|shield-check",
-    "os10_cert": "Personal Certificación OS-10|Todos nuestros guardias cuentan con certificación OS-10 vigente|badge-check",
-    "respuesta_inmediata": "Respuesta Inmediata Certificada|Tiempos de respuesta garantizados contractualmente|clock",
-    "supervision_nocturna": "Supervisión Nocturna Preventiva|Monitoreo proactivo de conductas sospechosas|eye"
+    "centro_monitoreo": {
+      "title": "Centro de Monitoreo Propio",
+      "description": "Con redundancia y supervisión 24/7",
+      "icon": "monitor"
+    },
+    "guard_pod": {
+      "title": "GuardPod V1",
+      "description": "Unidad Autónoma de Vigilancia 24/7 - 15 meses de desarrollo propio",
+      "icon": "shield-check"
+    },
+    "os10_cert": {
+      "title": "Personal Certificación OS-10",
+      "description": "Todos nuestros guardias cuentan con certificación OS-10 vigente",
+      "icon": "badge-check"
+    },
+    "respuesta_inmediata": {
+      "title": "Respuesta Inmediata Certificada",
+      "description": "Tiempos de respuesta garantizados contractualmente",
+      "icon": "clock"
+    },
+    "supervision_nocturna": {
+      "title": "Supervisión Nocturna Preventiva",
+      "description": "Monitoreo proactivo de conductas sospechosas",
+      "icon": "eye"
+    }
   },
   "voice": {
     " forbidden_words": "garantía 100%, impecable, infalible, mejor empresa, líder absoluto",
