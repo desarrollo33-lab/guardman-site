@@ -252,11 +252,10 @@ export const SECTOR_ISSUES: Record<string, string[]> = {
 // GUARD STAFF SECTION (replaces stats)
 // ──────────────────────────────────────────────
 export const STAFF_IMAGE = '/images/nosotros_seccion.webp';
-export const STAFF_TRAITS = [
+export const STAFF_TRAITS: string[] = [
   'Certificación OS-10 vigente verificada por Carabineros de Chile',
   'Capacitación continua en protocolos de seguridad y emergencias',
   'Centro de monitoreo propio 24/7 con operadores especializados',
-  '8+ años de experiencia protegiendo empresas y residencias',
 ];
 
 // ──────────────────────────────────────────────
@@ -269,3 +268,6 @@ export function getSectorTag(slug: string): string {
 export function getZoneTag(zone: string): string {
   return ZONE_COLORS[zone]?.tag || DEFAULT_ZONE_TAG;
 }
+
+// Re-export brand helpers for convenience
+export { getBrandStat, getCompanyInfo, COMPANY, STATS, VOICE, DIFFERENTIATORS, EXCLUSIONS, CERTIFICATIONS, USPS } from './brand';

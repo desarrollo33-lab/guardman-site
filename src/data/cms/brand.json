@@ -1,0 +1,141 @@
+{
+  "certifications": {
+    "antecedentes": "Verificación de antecedentes para todo el personal",
+    "autorizacion_laboral": "Autorización de la Autoridad Administrativa Laboral (Chile) para servicios de seguridad privada",
+    "os10": "Personal con certificación OS-10 vigente",
+    "protocolos_carabineros": "Protocolos de seguridad certificados por Carabineros de Chile",
+    "seguro_rc": "Seguro de responsabilidad civil obligatorio"
+  },
+  "colors": {
+    "accent": "#3B82F6",
+    "accent_hover": "#2563EB",
+    "error": "#EF4444",
+    "primary_100": "#C5CED9",
+    "primary_200": "#8FA4BA",
+    "primary_300": "#5F7A96",
+    "primary_400": "#3A5572",
+    "primary_50": "#E8ECF1",
+    "primary_500": "#1A3A5C",
+    "primary_600": "#1A2744",
+    "primary_700": "#152038",
+    "primary_800": "#0F1829",
+    "primary_900": "#0A1019",
+    "secondary_500": "#4A4A4A",
+    "sector_automotriz": "bg-cyan-50 text-cyan-800 border-cyan-200",
+    "sector_comercial": "bg-blue-50 text-blue-800 border-blue-200",
+    "sector_construccion": "bg-amber-50 text-amber-800 border-amber-200",
+    "sector_educacion": "bg-violet-50 text-violet-800 border-violet-200",
+    "sector_eventos": "bg-fuchsia-50 text-fuchsia-800 border-fuchsia-200",
+    "sector_hoteleria": "bg-rose-50 text-rose-800 border-rose-200",
+    "sector_industrial": "bg-orange-50 text-orange-800 border-orange-200",
+    "sector_residencial": "bg-emerald-50 text-emerald-800 border-emerald-200",
+    "sector_salud": "bg-red-50 text-red-800 border-red-200",
+    "success": "#10B981",
+    "warning": "#F59E0B",
+    "zone_centro": "bg-blue-100 text-blue-800 border-blue-300",
+    "zone_norte": "bg-amber-100 text-amber-800 border-amber-300",
+    "zone_oriente": "bg-emerald-100 text-emerald-800 border-emerald-300",
+    "zone_poniente": "bg-purple-100 text-purple-800 border-purple-300",
+    "zone_sur": "bg-red-100 text-red-800 border-red-300",
+    "zone_valparaiso": "bg-teal-100 text-teal-800 border-teal-300"
+  },
+  "company": {
+    "address": "Av. Américo Vespucio Norte 1980, Providencia, Santiago, Chile",
+    "address_city": "Providencia",
+    "address_country": "Chile",
+    "address_region": "Santiago",
+    "address_street": "Av. Américo Vespucio Norte 1980",
+    "brand_name": "GuardMan Chile",
+    "commercial_email": "ventas@guardman.cl",
+    "description": "Empresa líder en servicios de seguridad privada en Santiago de Chile. Con más de 8 años de experiencia, ofrecemos soluciones integrales de seguridad para empresas, condominios, eventos y residencias particulares. Contamos con un equipo de más de 500 guardias certificados y un centro de monitoreo propio operativo 24/7.",
+    "email": "info@guardman.cl",
+    "latitude": -33.4569,
+    "legal_name": "GuardMan Seguridad Privada SpA",
+    "longitude": -70.6483,
+    "phone": "+56 9 300 000 10",
+    "phone_display": "+56 9 300 000 10",
+    "postal_code": "7560000",
+    "price_range": "$$$",
+    "rut": "76.123.456-7",
+    "short_description": "Empresa líder en servicios de seguridad privada en Santiago. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Región Metropolitana.",
+    "site_url": "https://guardman.cl",
+    "tagline": "Protegemos lo que más te importa",
+    "whatsapp": "+56 9 3000 0010"
+  },
+  "differentiators": {
+    "ajax_distribuidor": "Distribuidores oficiales de Ajax Systems en Chile",
+    "centro_monitoreo": "Centro de monitoreo propio (no tercerizado) con redundancia y supervisión 24/7",
+    "cobertura_regional": "Presencia en 14 comunas + Los Andes + San Felipe = escala única",
+    "guard_pod": "Unidad Autónoma de Vigilancia 24/7 — 15 meses de desarrollo propio (GuardPod V1)",
+    "os10_academia": "GuardMan tiene academia propia para certificación OS-10 — diferenciador único",
+    "respuesta_certificada": "Tiempos de respuesta garantizados contractualmente",
+    "supervision_nocturna": "Supervisión Nocturna Preventiva — Monitoreo proactivo de conductas sospechosas"
+  },
+  "exclusions": {
+    "no_competidores": "No nombrar competidores directamente en contenido — usar \"empresas del rubro\" o similar",
+    "no_garantias": "No prometer \"seguridad 100%\" — esto es legalmente problemático y poco creíble",
+    "no_hype": "No sobrevalorar tecnología — el factor humano sigue siendo clave",
+    "no_precios": "No mencionar precios específicos sin validar — puede afectar comerciales"
+  },
+  "hours": {
+    "schedule": [
+      {
+        "day": "Lunes",
+        "hours": "24 horas"
+      },
+      {
+        "day": "Martes",
+        "hours": "24 horas"
+      },
+      {
+        "day": "Miércoles",
+        "hours": "24 horas"
+      },
+      {
+        "day": "Jueves",
+        "hours": "24 horas"
+      },
+      {
+        "day": "Viernes",
+        "hours": "24 horas"
+      },
+      {
+        "day": "Sábado",
+        "hours": "24 horas"
+      },
+      {
+        "day": "Domingo",
+        "hours": "24 horas"
+      }
+    ],
+    "summary": "24/7"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/grupo_guardman",
+    "instagram_handle": "@grupo_guardman",
+    "youtube": "https://youtu.be/mqpLsKrwjAI"
+  },
+  "stats": {
+    "clients": "200+",
+    "guards": "500+",
+    "locations": "14",
+    "rating": 4.8,
+    "rating_count": 127,
+    "years": "8+"
+  },
+  "usps": {
+    "centro_monitoreo": "Centro de Monitoreo Propio|Con redundancia y supervisión 24/7|monitor",
+    "guard_pod": "GuardPod V1|Unidad Autónoma de Vigilancia 24/7 - 15 meses de desarrollo propio|shield-check",
+    "os10_cert": "Personal Certificación OS-10|Todos nuestros guardias cuentan con certificación OS-10 vigente|badge-check",
+    "respuesta_inmediata": "Respuesta Inmediata Certificada|Tiempos de respuesta garantizados contractualmente|clock",
+    "supervision_nocturna": "Supervisión Nocturna Preventiva|Monitoreo proactivo de conductas sospechosas|eye"
+  },
+  "voice": {
+    " forbidden_words": "garantía 100%, impecable, infalible, mejor empresa, líder absoluto",
+    "audience": "Empresas, condominios, eventos y residencias que buscan seguridad privada profesional en Santiago y RM",
+    "language": "Español chileno formal",
+    "mandatory_mentions": "certificación OS-10, experiencia 8+ años, cobertura 14 comunas, centro de monitoreo propio",
+    "personality": "Confiable, profesional, cercano. Somos expertos en seguridad pero hablamos de forma accesible. No somos militaristas ni agresivos.",
+    "tone": "Profesional, orientado a conversión, en español chileno"
+  }
+}

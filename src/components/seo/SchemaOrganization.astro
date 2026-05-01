@@ -1,38 +1,39 @@
 ---
+import { COMPANY, SOCIAL, STATS, HOURS } from '../../data/brand';
 import { getSiteConfig } from '../../data/directus';
 
 const config = getSiteConfig();
 
 const siteConfig = {
-  name: config?.site_name || 'GuardMan Chile',
-  alternateName: 'GuardMan Seguridad Privada',
-  url: config?.site_url || 'https://guardman.cl',
-  phone: config?.phone || '+56 9 300 000 10',
-  email: config?.email || 'info@guardman.cl',
-  address: config?.address || 'Av. Américo Vespucio Norte 1980, Providencia, Santiago, Chile',
-  latitude: config?.latitude ?? -33.4569,
-  longitude: config?.longitude ?? -70.6483,
-  hours: config?.hours || [
+  name: COMPANY.brand_name || config?.site_name || 'GuardMan Chile',
+  alternateName: COMPANY.legal_name || 'GuardMan Seguridad Privada',
+  url: COMPANY.site_url || config?.site_url || 'https://guardman.cl',
+  phone: COMPANY.phone || config?.phone || '+56 9 300 000 10',
+  email: COMPANY.email || config?.email || 'info@guardman.cl',
+  address: COMPANY.address || config?.address || 'Av. Américo Vespucio Norte 1980, Providencia, Santiago, Chile',
+  latitude: Number(COMPANY.latitude) || (config?.latitude ?? -33.4569),
+  longitude: Number(COMPANY.longitude) || (config?.longitude ?? -70.6483),
+  hours: (HOURS.schedule as any[]) || config?.hours || [
     { day: 'Lunes', hours: '24 horas' },
     { day: 'Martes', hours: '24 horas' },
-    { day: 'Miercoles', hours: '24 horas' },
+    { day: 'Miércoles', hours: '24 horas' },
     { day: 'Jueves', hours: '24 horas' },
     { day: 'Viernes', hours: '24 horas' },
-    { day: 'Sabado', hours: '24 horas' },
+    { day: 'Sábado', hours: '24 horas' },
     { day: 'Domingo', hours: '24 horas' },
   ],
   social: {
-    instagram: config?.social_instagram || 'https://www.instagram.com/grupo_guardman',
-    youtube: config?.social_youtube || 'https://youtu.be/mqpLsKrwjAI',
+    instagram: SOCIAL.instagram || config?.social_instagram || 'https://www.instagram.com/grupo_guardman',
+    youtube: SOCIAL.youtube || config?.social_youtube || 'https://youtu.be/mqpLsKrwjAI',
   },
   stats: {
-    guards: config?.stats_guards || '500+',
-    clients: config?.stats_clients || '200+',
-    locations: config?.stats_locations || '14',
-    years: config?.stats_years || '8+',
+    guards: STATS.guards || config?.stats_guards || '500+',
+    clients: STATS.clients || config?.stats_clients || '200+',
+    locations: STATS.locations || config?.stats_locations || '14',
+    years: STATS.years || config?.stats_years || '8+',
   },
-  ratingValue: config?.aggregate_rating_value || '4.8',
-  ratingCount: config?.aggregate_rating_count || '127',
+  ratingValue: STATS.rating || config?.aggregate_rating_value || '4.8',
+  ratingCount: STATS.rating_count || config?.aggregate_rating_count || '127',
 };
 
 // Map day names to English for Schema.org
@@ -80,7 +81,7 @@ const schemaData = {
         "streetAddress": "Av. Américo Vespucio Norte 1980",
         "addressLocality": "Providencia",
         "addressRegion": "Santiago",
-        "postalCode": "7560000",
+        "postalCode": COMPANY.postal_code || '7560000',
         "addressCountry": "CL"
       },
       "geo": {

@@ -1,4 +1,6 @@
 ---
+import { COMPANY } from '../../data/brand';
+
 interface Props {
   title: string;
   description?: string;
@@ -7,31 +9,32 @@ interface Props {
 }
 
 const { title, description, image, noIndex = false } = Astro.props;
-const siteUrl = 'https://guardman.cl';
-const fullTitle = title.includes('GuardMan') ? title : `${title} | GuardMan Chile`;
+const siteUrl = COMPANY.site_url || 'https://guardman.cl';
+const siteName = COMPANY.brand_name || 'GuardMan Chile';
+const fullTitle = title.includes('GuardMan') ? title : `${title} | ${siteName}`;
 const defaultImage = `${siteUrl}/images/og-default.jpg`;
 const ogImage = image || defaultImage;
 ---
 
 <title>{fullTitle}</title>
-<meta name="description" content={description || 'GuardMan Chile - Seguridad privada profesional en Santiago'} />
+<meta name="description" content={description || COMPANY.short_description || 'GuardMan Chile - Seguridad privada profesional en Santiago'} />
 {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url.href} />
 <meta property="og:title" content={fullTitle} />
-<meta property="og:description" content={description || 'GuardMan Chile - Seguridad privada profesional en Santiago'} />
+<meta property="og:description" content={description || COMPANY.short_description || 'GuardMan Chile - Seguridad privada profesional en Santiago'} />
 <meta property="og:image" content={ogImage} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:locale" content="es_CL" />
-<meta property="og:site_name" content="GuardMan Chile" />
+<meta property="og:site_name" content={siteName} />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={fullTitle} />
-<meta name="twitter:description" content={description || 'GuardMan Chile - Seguridad privada profesional en Santiago'} />
+<meta name="twitter:description" content={description || COMPANY.short_description || 'GuardMan Chile - Seguridad privada profesional en Santiago'} />
 <meta name="twitter:image" content={ogImage} />
 
 <!-- Canonical -->

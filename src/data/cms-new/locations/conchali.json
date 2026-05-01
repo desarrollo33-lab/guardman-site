@@ -1,8 +1,8 @@
 {
   "slug": "conchali",
   "type": "location",
-  "version": 4,
-  "last_modified": "2026-04-15 17:14:40",
+  "version": 5,
+  "last_modified": "2026-05-01 16:57:21",
   "seo": {
     "title": "Seguridad Privada Conchalí | GuardMan Chile",
     "description": "Empresa líder en seguridad privada en Conchalí. Guardias OS-10, monitoreo 24/7, CCTV y más. Cotiza gratis hoy.",
@@ -11,7 +11,8 @@
   "content": {
     "hero": {
       "heading": "Seguridad Privada en Conchalí | Guardias 24/7",
-      "subheading": "Protege tu hogar, empresa o evento con los mejores guardias certificados OS-10 de Santiago Norte"
+      "subheading": "Protege tu hogar, empresa o evento con los mejores guardias certificados OS-10 de Santiago Norte",
+      "image": "/images/service-monitoreo-24-7.webp"
     },
     "meta": {
       "title": "Seguridad Privada Conchalí | GuardMan Chile",

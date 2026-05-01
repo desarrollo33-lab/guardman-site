@@ -1,8 +1,8 @@
 {
   "slug": "huechuraba",
   "type": "location",
-  "version": 1,
-  "last_modified": "2026-04-15 14:26:03",
+  "version": 2,
+  "last_modified": "2026-05-01 17:02:25",
   "seo": {
     "title": "Seguridad Privada Huechuraba | GuardMan Chile",
     "description": "Guardias de seguridad certificados OS-10 en Huechuraba. Servicios 24/7, CCTV y control de accesos. Cotización gratis en Ciudad Empresarial y toda la comuna.",
@@ -12,7 +12,8 @@
     "hero": {
       "heading": "Seguridad Privada en Huechuraba | Guardias 24/7",
       "subheading": "Protege tu empresa, hogar y eventos con los mejores guardias certificados de la zona nororiente",
-      "cta_text": "Solicitar Cotización Gratis"
+      "cta_text": "Solicitar Cotización Gratis",
+      "image": "/images/service-guardias-de-seguridad.webp"
     },
     "intro": {
       "heading": "Guardias de Seguridad Certificados en Huechuraba",

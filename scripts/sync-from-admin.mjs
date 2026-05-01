@@ -117,6 +117,20 @@ async function main() {
 
   console.log(`Content synced: ${synced} pages`);
 
+  // ===== SYNC BRAND DNA =====
+  console.log('Syncing brand DNA...');
+  try {
+    const brandRes = await fetch(`${API_BASE}/api/brand`);
+    const brandData = await brandRes.json();
+    if (brandData.ok && brandData.data) {
+      // Save as brand.json in cms dir
+      writeFileSync(join(CMS_DIR, 'brand.json'), JSON.stringify(brandData.data, null, 2));
+      console.log(`Brand synced: ${Object.keys(brandData.data).length} categories`);
+    }
+  } catch (e) {
+    console.warn('Brand sync failed:', e.message);
+  }
+
   // ===== SYNC MEDIA LIBRARY =====
   console.log('Syncing media library...');
   const imgDir = 'public/images';
