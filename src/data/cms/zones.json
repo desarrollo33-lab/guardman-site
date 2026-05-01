@@ -1,0 +1,68 @@
+{
+  "Oriente": {
+    "focus": "residencias de lujo, embajadas y oficinas corporativas",
+    "common_needs": "control de accesos residencial, escoltas VIP y monitoreo perimetral",
+    "intro": " es una comuna de la zona Oriente de Santiago, caracterizada por residencias de alto nivel, centros corporativos y sedes diplomáticas. En GuardMan Chile protegemos más de 200 propiedades en esta zona con guardias certificados OS-10, tecnología de vigilancia avanzada y un centro de monitoreo propio operativo las 24 horas.",
+    "issues": [
+      "Ingresos no autorizados a condominios y edificios corporativos",
+      "Falta de control de visitas en portones y accesos vehiculares",
+      "Robo de vehículos y pertrechos en estacionamientos subterráneos",
+      "Vulnerabilidad en horarios nocturnos en residencias desocupadas"
+    ]
+  },
+  "Centro": {
+    "focus": "comercios, oficinas públicas y hoteles",
+    "common_needs": "control de flujos de personas, seguridad para eventos y CCTV comercial",
+    "intro": " se ubica en el corazón de Santiago, con alta actividad comercial, oficinas gubernamentales y hotelería. Nuestro equipo de seguridad cuenta con experiencia protegiendo negocios y edificios corporativos en esta zona, con protocolos adaptados al flujo constante de visitantes y trabajadores.",
+    "issues": [
+      "Alto flujo de personas sin control en accesos principales",
+      "Robos y hurtos en locales comerciales y oficinas",
+      "Falta de vigilancia en estacionamientos y pasillos",
+      "Intrusión en edificios por accesos sin supervisión"
+    ]
+  },
+  "Norte": {
+    "focus": "industrias, bodegas y centros logísticos",
+    "common_needs": "vigilancia perimetral, control vehicular y seguridad industrial",
+    "intro": " en la zona Norte de Santiago concentra actividad industrial, logística y bodegas. GuardMan Chile protege activos industriales en esta zona con vigilancia perimetral, control de accesos vehicular y guardias especializados en seguridad industrial certificados OS-10.",
+    "issues": [
+      "Robo de materiales y mercadería en bodegas y naves industriales",
+      "Ingresos no autorizados por accesos perimetrales sin control",
+      "Falta de vigilancia nocturna en patios y estacionamientos",
+      "Vehículos sospechosos sin control de ingreso"
+    ]
+  },
+  "Sur": {
+    "focus": "residencial y comercial",
+    "common_needs": "seguridad general para hogares y negocios",
+    "intro": " es una comuna en crecimiento de la zona Sur de Santiago, con una mezcla de barrios residenciales y zonas comerciales. En GuardMan Chile brindamos seguridad integral para hogares, condominios y negocios con guardias certificados, monitoreo 24/7 y respuesta inmediata.",
+    "issues": [
+      "Delincuencia en zonas residenciales sin vigilancia",
+      "Robo de especies en viviendas y negocios",
+      "Accesos sin control en poblaciones y pasajes",
+      "Falta de patrullaje preventivo en horarios nocturnos"
+    ]
+  },
+  "Poniente": {
+    "focus": "residencial y comercial mixto",
+    "common_needs": "vigilancia comunitaria y control de accesos",
+    "intro": " se encuentra en la zona Poniente de Santiago, con una mezcla de barrios residenciales establecidos y nuevos desarrollos comerciales. En GuardMan Chile brindamos seguridad con guardias certificados OS-10 y monitoreo propio 24/7.",
+    "issues": [
+      "Ingresos no autorizados a recintos y condominios",
+      "Robo de especies en viviendas y locales comerciales",
+      "Falta de control en pasajes y áreas comunes",
+      "Delincuencia en horarios nocturnos sin vigilancia"
+    ]
+  },
+  "Valparaíso": {
+    "focus": "zonas rurales y urbanas de la región de Valparaíso",
+    "common_needs": "seguridad para instalaciones agrícolas, industriales y urbanas",
+    "intro": " está ubicado en la Región de Valparaíso, con una economía basada en agricultura, minería y comercio. En GuardMan Chile extendemos nuestra cobertura de seguridad profesional a esta zona con guardias certificados y monitoreo remoto.",
+    "issues": [
+      "Robo de materiales y equipos en instalaciones aisladas",
+      "Falta de vigilancia en zonas rurales y periurbanas",
+      "Control de accesos insuficiente en recintos industriales",
+      "Ausencia de monitoreo remoto en horas no laborales"
+    ]
+  }
+}

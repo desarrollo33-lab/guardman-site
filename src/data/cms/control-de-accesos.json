@@ -1,94 +1,102 @@
 {
   "sections": {
     "hero": {
-      "heading": "Control de Accesos con Guardias Certificados OS-10 | GuardMan Chile",
-      "subheading": "Seguridad 24/7 con guardias profesionales y monitoreo propio en toda la Región Metropolitana",
-      "image": "/images/service-control-de-accesos.webp"
+      "heading": "Control de Accesos Profesional en Chile | GuardMan Chile",
+      "subheading": "Sistemas de control de accesos certificados con guardias OS-10 disponibles 24/7. Protege tu empresa, edificio o condominio con tecnología de última generación y presencia física disuasoria. +8 años cuidando lo que más importa.",
+      "cta_text": "Cotizar Ahora",
+      "image": "control-accesos-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Control De Accesos",
-        "url": "/servicios/control-de-accesos"
-      }
-    ],
     "intro": {
-      "title": "Control de Accesos Profesional: Más que Tecnología, es Gente Calificada",
-      "content": "En GuardMan Chile llevamos más de 8 años protegiendo empresas, edificios y condominios con servicios de control de accesos que combinan tecnología avanzada ypersonal de seguridad certificado OS-10. A diferencia de las empresas que solo instalan equipos, nosotros entregamos una solución integral con guardias capacitados que saben cómo actuar ante cualquier situación.\nNuestro monitoreo 24/7 propio nos permite reaccionar en tiempo real. Si alguien intenta ingresar fuera de horario, si hay una emergencia o si el sistema detecta algo sospechoso, nuestro equipo actúa inmediatamente. Eso es lo que marca la diferencia entre un sistema automático y un servicio de seguridad real.",
-      "image": "/images/service-intro.jpg"
+      "heading": "Control de Accesos Confiable para Empresas, Edificios y Condominios en Chile",
+      "paragraphs": [
+        "En GuardMan Chile sabemos que cada acceso no autorizado representa un riesgo potencial para tu familia, tus colaboradores o tus activos. Por eso diseñamos sistemas de control de accesos que combinan tecnología avanzada con personal certificado OS-10, creando barreras efectivas contra intrusos mientras facilitan el ingreso fluido de personas autorizadas. Con presencia en 14 comunas del país y más de 8 años de experiencia, somos el socio estratégico que tu comunidad necesita.",
+        "La seguridad efectiva va más allá de instalar cámaras o cerraduras modernas: requiere gestión integral de flujos, registro detallado de ingresos y un equipo humano preparado para responder ante cualquier situación. Nuestros sistemas se adaptan perfectamente a edificios residenciales, centros comerciales, oficinas corporativas e instalaciones industriales, priorizando siempre la prevención sobre la reacción.",
+        "Cada año, más de 1.200 empresas y condominios en Chile confían en nuestros servicios de control de accesos para proteger a sus personas y activos. Con 500 guardias certificados y un centro de monitoreo operativo las 24 horas, garantizamos respuesta inmediata ante cualquier incidente. Solicita tu cotización personalizada y descubre por qué somos la empresa de seguridad privada más recomendada en el país."
+      ]
     },
     "features": {
-      "title": "Qué Incluye el Servicio",
+      "heading": "Características de Nuestro Sistema de Control de Accesos",
       "items": [
-        "Lectores biométricos de huella dactilar y reconocimiento facial",
-        "Tarjetas RFID y tags de proximidad compatibles",
-        "Cerraduras electromagnéticas y electroimanes de alta seguridad",
-        "Software de gestión con reportes de asistencia y accesos",
-        "Integración con sistemas de videovigilancia existentes",
-        "Acceso remoto para administradores desde cualquier dispositivo"
-      ]
+        "Control biométrico con lector de huella dactilar y reconocimiento facial para máxima seguridad y cero tolerancia a suplantaciones",
+        "Tarjetas RFID y tags de proximidad que permiten acceso rápido y sin contacto, ideales para entornos de alto tránsito",
+        "Lectores de patentes vehiculares con registro automático de entrada y salida, incluyendo alertas ante vehículos no autorizados",
+        "Torniquetes peatonales y molinetes para control de flujo eficiente en zonas de acceso restringido",
+        "Software de gestión centralizada con reportes en tiempo real, bitácoras detalladas y backup en la nube",
+        "Integración total con sistemas CCTV, alarmas perimetrales y videoporteros existentes en tus instalaciones"
+      ],
+      "subheading": "Tecnología de vanguardia respaldada por guardias OS-10 certificados"
     },
     "issues": {
-      "title": "Problemas que Enfrentan las Empresas con el Control de Accesos",
+      "heading": "Problemas que Resuelve un Sistema de Control de Accesos Profesional",
       "items": [
-        "Sistemas de citófono o video portero sin vigilancia humana: Los equipos tecnológicos funcionan, pero no hay nadie que verifique quién entra realmente.",
-        "Empresas que solo venden tecnología sin servicio de guardias: Instalan torniquetes o lectores, pero cuando hay un problema no hay quien intervenga.",
-        "Personal sin certificación OS-10: Usar guardias sin la autorización oficial pone en riesgo la legalidad del servicio y la seguridad del lugar.",
-        "Monitoreo externalizado: Si el centro de monitoreo es de terceros, la respuesta ante emergencias puede tardar más de lo necesario.",
-        "Falta de control en horarios nocturnos o fines de semana: Los momentos de mayor vulnerabilidad suelen ser los peor atendidos."
+        "Ingresos no autorizados de personas desconocidas al edificio o empresa sin registro ni control",
+        "Dificultad para identificar visitas frecuentes, proveedores o personal externo que accede regularmente",
+        "Pérdida de trazabilidad ante incidentes por falta de bitácoras actualizadas de ingresos",
+        "Robos y hurtos en áreas comunes o zonas restringidas sin evidencia de registro de accesos",
+        "Falta de disuasión ante intentos de ingreso de individuos con intenciones delictuales",
+        "Gestión manual de llaves o controles remotos que se pierden, copian o deterioran con el tiempo",
+        "Incidentes de seguridad que requieren respuesta inmediata sin protocolo de actuación definido"
       ]
     },
-    "stats": [
-      {
-        "value": "8+",
-        "label": "Años de experiencia en seguridad privada"
-      },
-      {
-        "value": "500+",
-        "label": "Guardias operativos certificados OS-10"
-      },
-      {
-        "value": "3",
-        "label": "Centros de monitoreo con operación propia"
-      },
-      {
-        "value": "15+",
-        "label": "Cobertura en comunas de la Región Metropolitana"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué incluye el servicio de Control de Accesos?",
-        "answer": "El servicio incluye: lectores biométricos o RFID, controlador central, software de gestión, instalación profesional, configuración de permisos, capacitación y 12 meses de soporte técnico."
-      },
-      {
-        "question": "¿Puedo controlar accesos desde mi celular?",
-        "answer": "Sí, nuestra plataforma permite administrar usuarios, crear reportes y recibir alertas de intentos de acceso fallidos desde cualquier dispositivo con internet."
-      },
-      {
-        "question": "¿Funciona sin energía eléctrica?",
-        "answer": "Nuestras cerraduras electromagnéticas incluyen batería de respaldo que mantiene el sistema operativo hasta 8 horas sin energía."
-      },
-      {
-        "question": "¿Cuántos usuarios puedo gestionar?",
-        "answer": "El sistema base soporta hasta 1,000 usuarios. Para instalaciones más grandes, ofrecemos soluciones empresariales con hasta 10,000 usuarios."
-      },
-      {
-        "question": "¿Ofrecen servicio de monitoreo 24/7?",
-        "answer": "Sí, todos nuestros sistemas de control de accesos pueden integrarse con nuestro centro de monitoreo para alertas en tiempo real."
-      }
-    ],
+    "stats": {
+      "heading": "Números que Respaldan Nuestra Experiencia en Control de Accesos",
+      "items": [
+        {
+          "label": "Años de experiencia en seguridad privada",
+          "value": "8+"
+        },
+        {
+          "label": "Guardias certificados OS-10 en operación",
+          "value": "500+"
+        },
+        {
+          "label": "Comunas con cobertura de servicios",
+          "value": "14"
+        },
+        {
+          "label": "Empresas y condominos protegidos",
+          "value": "1.200+"
+        },
+        {
+          "label": "Tasa de respuesta ante emergencias",
+          "value": "<5 min"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Control de Accesos en Chile",
+      "items": [
+        {
+          "question": "¿Qué tipos de sistemas de control de accesos ofrecen en Chile?",
+          "answer": "En GuardMan Chile ofrecemos múltiples tecnologías adaptadas a cada necesidad: control biométrico mediante huella dactilar o reconocimiento facial, tarjetas RFID y tags de proximidad, lectores de patentes vehiculares, torniquetes peatonales y sistemas híbridos que combinan varias tecnologías. Nuestro equipo evalúa las características de tu recinto, flujo de personas y nivel de seguridad requerido para recomendar la solución óptima. Cada sistema se integra con software de gestión centralizada que permite administrar permisos, horarios y generar reportes detallados de todos los ingresos con respaldo automático en la nube."
+        },
+        {
+          "question": "¿Cuál es el precio de un sistema de control de accesos profesional?",
+          "answer": "El valor de un sistema de control de accesos depende de varios factores: tipo de tecnología seleccionada, cantidad de puntos de acceso a controlar, nivel de integración con sistemas existentes, si incluye servicio de guardias OS-10 y la complejidad del software de gestión requerido. En GuardMan Chile entregamos cotizaciones personalizadas sin costo, evaluando previamente las necesidades específicas de tu empresa o condominio. Contáctanos y recibe una propuesta ajustada a tu presupuesto con todas las opciones de financiamiento disponibles."
+        },
+        {
+          "question": "¿Por qué es importante la certificación OS-10 en personal de control de accesos?",
+          "answer": "La certificación OS-10 es un requisito legal establecido por Carabineros de Chile para todo personal de seguridad privada. Este certificado garantiza que el guardia ha completado la formación requerida en prevención del delito, primeros auxilios, normativa legal y protocolos de actuación ante emergencias. En GuardMan Chile, todos nuestros guardias cuentan con certificación OS-10 vigente y reentrenamiento periódico. Esta credenciación ofrece tranquilidad a residentes y clientes sabiendo que quienes controlan sus accesos están debidamente capacitados, fiscalizados y respaldados por una empresa con más de 8 años de trayectoria."
+        },
+        {
+          "question": "¿Un sistema de control de accesos funciona las 24 horas?",
+          "answer": "Sí, los sistemas de control de accesos de GuardMan Chile operan de manera continua las 24 horas, los 7 días de la semana, los 365 días del año. Nuestros equipos tecnológicos cuentan con respaldo eléctrico ante cortes de energía y conectividad redundante. Nuestro centro de monitoreo recibe alertas en tiempo real ante cualquier evento sospechoso y coordina la respuesta del personal en terreno. La combinación de tecnología de monitoreo permanente con presencia física disuasoria de nuestros guardias OS-10 garantiza protección ininterrumpida para tu comunidad o empresa."
+        },
+        {
+          "question": "¿Pueden controlar accesos tanto peatonales como vehiculares?",
+          "answer": "Absolutamente. Nuestros sistemas de control de accesos gestionan tanto ingresos peatonales como vehiculares de manera integral. Para acceso peatonal ofrecemos torniquetes, molinetes, lectores biométricos y videoporteros. Para vehículos, implementamos barreras automáticas, bolardos retráctiles, lectores de patentes y tags de proximidad. Todo se gestiona desde una plataforma centralizada que permite configurar permisos diferenciados por tipo de usuario, horarios de acceso y zonas restringidas. Esta gestión unificada simplifica la administración y mejora significativamente la seguridad del recinto."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu Edificio o Empresa con el Mejor Control de Accesos",
-      "button_text": "Cotizar Control de Accesos Ahora",
-      "button_link": "/cotizacion"
+      "heading": "Protege Tu Recinto con Control de Accesos Profesional Hoy",
+      "subheading": "Solicita una cotización personalizada sin compromiso y descubre cómo GuardMan Chile puede mejorar la seguridad de tu empresa, edificio o condominio con sistemas de control de accesos de nivel profesional.",
+      "button": "Cotizar Control de Accesos",
+      "image": "control-accesos-cta.jpg"
+    },
+    "meta": {
+      "title": "Control de Accesos Chile | Sistemas y Guardias OS-10 | GuardMan",
+      "description": "Expertos en control de accesos en Chile. Sistemas biométricos, RFID y torniquetes con guardias OS-10 certificados. Cotiza hoy y protege lo que más importa."
     }
   }
 }

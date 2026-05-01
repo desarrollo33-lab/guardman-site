@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "heading": "Cobertura de Seguridad en Santiago",
+    "subheading": "Protegemos en 14 comunas de la Región Metropolitana con guardias certificados y monitoreo 24/7.",
+    "image": "/images/hero-home.webp"
+  },
+  "stats": [
+    { "value": "14", "label": "Comunas cubiertas" },
+    { "value": "9", "label": "Servicios disponibles" },
+    { "value": "24/7", "label": "Monitoreo continuo" },
+    { "value": "< 30 min", "label": "Tiempo de respuesta" }
+  ],
+  "cta": {
+    "text": "¿Tu comuna no aparece?",
+    "description": "Contáctanos para verificar disponibilidad en tu zona.",
+    "button_text": "Solicitar Cotización",
+    "button_link": "/cotizacion"
+  }
+}

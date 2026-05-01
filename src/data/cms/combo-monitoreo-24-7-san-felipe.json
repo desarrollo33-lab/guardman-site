@@ -1,96 +1,83 @@
 {
   "sections": {
     "hero": {
-      "heading": "Monitoreo 24/7 en San Felipe",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
-      "cta_text": "Cotizar en San Felipe",
-      "cta_link": "/cotizacion?service=monitoreo-24-7&location=san-felipe",
-      "image": "/images/service-monitoreo-24-7.webp"
+      "heading": "Monitoreo 24/7 en San Felipe: Protección Integral los 365 Días del Año",
+      "subheading": "GuardMan Chile ofrece servicios de monitoreo y vigilancia con guardias certificados OS-10 y central de operaciones activa las 24 horas. Protege tu hogar, empresa o negocio en San Felipe y el Valle de Aconcagua con tecnología de vanguardia y personal profesional.",
+      "image": "monitoreo-24-7-san-felipe-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Monitoreo 24 7",
-        "url": "/servicios/monitoreo-24-7"
-      },
-      {
-        "label": "San Felipe",
-        "url": "/servicios/monitoreo-24-7/san-felipe"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Monitoreo 24/7 en San Felipe?",
-      "content": "En GuardMan Chile somos especialistas en monitoreo 24/7 en San Felipe. Nuestra experiencia en San Felipe y la zona de Valparaíso nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en San Felipe y toda la zona Valparaíso.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Central de monitoreo propia operativa 24/7",
-        "Respuesta ante alarmas en menos de 30 segundos",
-        "Verificación visual con cámaras integradas",
-        "Coordinación con Carabineros y servicios de emergencia",
-        "Informes mensuales de actividad y incidentes",
-        "App móvil para control remoto"
+      "heading": "Servicio de Monitoreo 24/7 en San Felipe con Respuesta Inmediata",
+      "paragraphs": [
+        "El monitoreo 24/7 en San Felipe se ha convertido en una necesidad para hogares, empresas y comercio. Nuestro sistema de televigilancia opera sin interrupciones, conectando sensores, cámaras y alarmas directamente con nuestra central de monitoreo para garantizar una respuesta rápida ante cualquier evento de seguridad. Con cobertura en todo el Valle de Aconcagua, llevamos años protegiendo familias y negocios en San Felipe y comunas cercanas como Los Andes, Santa María, Catemu y Panquehue.",
+        "Contar con un servicio de monitoreo profesional significa tener respaldo permanente incluso cuando no estás presente. Nuestro equipo de operadores capacitados supervisa en tiempo real cada evento, coordina con fuerzas de seguridad y mantiene comunicación directa contigo. La certificación OS-10 de nuestros guardias respalda un estándar de calidad que cumple con las exigencias de la Prefectura de Seguridad Privada de Carabineros de Chile.",
+        "El monitoreo 24/7 en San Felipe no es solo vigilancia remota: es un sistema integral que combina tecnología de análisis de video, detección de movimiento, sensores perimetrales y comunicación directa. Cada componente trabaja en conjunto para crear un escudo de protección que disuade intrusos y asegura que cualquier amenaza sea detectada a tiempo."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué San Felipe",
-      "content": "",
-      "points": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de Nuestro Sistema de Monitoreo 24/7 en San Felipe",
+      "items": [
+        "Central de operaciones con operadores capacitados disponibles las 24 horas, los 365 días del año",
+        "Monitoreo en tiempo real de cámaras, alarmas y sensores perimetrales desde nuestra sala de control",
+        "Guardias de seguridad privados certificados OS-10 por Carabineros de Chile",
+        "Respuesta inmediata ante eventos de intrusión, incendio o emergencia médica",
+        "Notificaciones instantáneas al celular del cliente ante cualquier activación",
+        "Coordinación directa con Carabineros y servicios de emergencia de San Felipe",
+        "Grabación en alta definición con almacenamiento en la nube para respaldo de evidencias",
+        "Análisis de video inteligente con detección de movimiento y reconocimiento de patrones",
+        "Monitoreo remoto desde tu celular con aplicación dedicada",
+        "Soporte técnico y mantenimiento preventivo incluido en el servicio"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en San Felipe",
+      "heading": "Riesgos que Prevenimos con Monitoreo 24/7 en San Felipe",
       "items": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos y saqueos en viviendas y negocios, especialmente en horarios nocturnos y fines de semana",
+        "Intentos de ingreso no autorizado por puertas, ventanas o sectores vulnerables del perímetro",
+        "Incendios provocados o fallas eléctricas que pueden generar pérdidas materiales importantes",
+        "Vandalismo y daños a la propiedad en parcelas, industrias y centros comerciales de la zona",
+        "Asaltos a mascotas o ganado en sectores rurales de la provincia de San Felipe",
+        "Delivery fraudulento y delitos cibernéticos que afectan a empresas locales",
+        "Accidentes laborales y emergencias médicas que requieren respuesta inmediata en terreno"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Valparaíso"
-      },
-      {
-        "value": "Valparaíso",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué pasa si salta una alarma a las 3am?",
-        "answer": "Nuestro equipo de monitoreo verifica la alarma inmediatamente. Si es una emergencia real, contactamos a Carabineros y a tus contactos de emergencia simultáneamente."
-      },
-      {
-        "question": "¿Monitorean solo cuando hay alarma?",
-        "answer": "No, el monitoreo es constante y activo. Nuestros operadores vigilan las 24 horas y pueden hacer rondas visuales remotas cuando detectan algo sospechoso."
-      },
-      {
-        "question": "¿Puedo ver lo que sucede en mi propiedad?",
-        "answer": "Sí, tienes acceso 24/7 a todas las cámaras en vivo desde tu celular o computadora. Además, recibes alertas instantáneas ante eventos."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Monitoreo 24/7 en San Felipe",
+      "items": [
+        {
+          "question": "¿Cómo funciona el servicio de monitoreo 24/7 en San Felipe?",
+          "answer": "Nuestro sistema opera mediante la conexión de tus cámaras, sensores y paneles de alarma con nuestra central de monitoreo en Santiago. Cuando se detecta un evento sospechoso, nuestros operadores verifican la situación en tiempo real mediante las cámaras y activan el protocolo de respuesta correspondiente. Esto puede incluir contacto directo contigo, envío de guardias al lugar o coordinación con Carabineros de la comisaría más cercana. El servicio funciona las 24 horas sin interrupciones, incluyendo feriados y días festivos."
+        },
+        {
+          "question": "¿Qué incluye el servicio de monitoreo 24/7 para hogares en San Felipe?",
+          "answer": "El servicio incluye monitoreo permanente de sensores de movimiento, contactos de puertas y ventanas, detectores de humo y pánico. Nuestras cámaras con visión nocturna y análisis inteligente permiten identificar actividades sospechosas antes de que ocurra un incidente. Además, incluimos la app móvil para que puedas verificar tu hogar en tiempo real desde cualquier lugar. El respaldo de guardias certificados OS-10 está disponible para intervención inmediata cuando el protocolo lo requiera."
+        },
+        {
+          "question": "¿Cuál es el costo del monitoreo 24/7 en San Felipe y el Valle de Aconcagua?",
+          "answer": "El valor del servicio depende de la cantidad de puntos a proteger, tipo de tecnología requerida y el nivel de cobertura solicitado. Ofrecemos diagnósticos gratuitos en terreno para evaluar tu propiedad y diseñar una solución a medida. Puedes cotizar sin compromiso completando el formulario de contacto o llamando directamente a nuestros ejecutivos. No cobramos por visitas técnicas ni estudios de seguridad."
+        },
+        {
+          "question": "¿Los guardias que trabajan con GuardMan cumplen la certificación OS-10?",
+          "answer": "Sí, todos nuestros guardias cuentan con la certificación OS-10 exigida por la Prefectura de Seguridad Privada de Carabineros de Chile. Esta acreditación verifica que el personal ha completado el curso de formación y cumple con los requisitos legales para trabajar en seguridad privada. Adicionalmente, nuestros supervisores realizan auditorías constantes del desempeño del personal en terreno para mantener estándares de calidad superiores."
+        },
+        {
+          "question": "¿Qué diferencia hay entre el automonitoreo y el servicio profesional de monitoreo 24/7?",
+          "answer": "El automonitoreo te permite recibir alertas en tu celular y revisar las cámaras por tu cuenta, pero ante un evento debes actuar solo. Con nuestro servicio profesional, un equipo de operadores vigilantes supervisa constantemente tus sistemas y toma decisiones de respuesta por ti, incluso cuando estás dormido o sin cobertura de celular. La diferencia clave es que no dependes de estar disponible para proteger tu propiedad: nosotros lo hacemos por ti con respaldo documentado y protocolos certificados."
+        },
+        {
+          "question": "¿El servicio de monitoreo cubre emergencias médicas en San Felipe?",
+          "answer": "Sí, nuestro sistema incluye botones de pánico y sensores que permiten reportar emergencias médicas. Al activarse, nuestros operadores verifican la situación y contactan inmediatamente a los servicios de urgencia, familiares designados o ambulancias según el protocolo establecido. Este servicio es especialmente valorado en hogares con personas mayores o con condiciones de salud que requieren respuesta rápida ante emergencias."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en San Felipe",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en San Felipe",
-      "button_link": "/cotizacion?service=monitoreo-24-7&location=san-felipe"
+      "heading": "Protege lo que Más Importa: Solicita Tu Cotización de Monitoreo 24/7 en San Felipe",
+      "subheading": "En GuardMan Chile ofrecemos diagnóstico de seguridad sin costo, visitas técnicas gratuitas y planes de monitoreo adaptados a tu presupuesto. Nuestro equipo está listo para atenderte y diseñar la solución que mejor se ajuste a tus necesidades.",
+      "button": "Cotizar Monitoreo 24/7 en San Felipe",
+      "image": "monitoreo-24-7-san-felipe-cta.jpg"
+    },
+    "meta": {
+      "title": "Monitoreo 24/7 San Felipe | Guardias OS-10 y Central 24h | Cotizar",
+      "description": "Servicio de monitoreo 24/7 en San Felipe con guardias certificados OS-10. Central de vigilancia activa los 365 días. Cotiza gratis y protege tu hogar o empresa."
     }
   }
 }

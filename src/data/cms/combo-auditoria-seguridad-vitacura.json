@@ -1,96 +1,76 @@
 {
   "sections": {
     "hero": {
-      "heading": "Auditoría de Seguridad en Vitacura",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente premium.",
-      "cta_text": "Cotizar en Vitacura",
-      "cta_link": "/cotizacion?service=auditoria-seguridad&location=vitacura",
-      "image": "/images/service-auditoria-seguridad.webp"
+      "heading": "Auditoría de Seguridad en Vitacura: Evaluación Profesional Integral",
+      "subheading": "Identificamos vulnerabilidades y diseñamos soluciones a medida para proteger lo que más le importa. Más de 8 años protegiendo empresas, edificios y familias en Vitacura y toda la Región Metropolitana."
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Auditoria Seguridad",
-        "url": "/servicios/auditoria-seguridad"
-      },
-      {
-        "label": "Vitacura",
-        "url": "/servicios/auditoria-seguridad/vitacura"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Auditoría de Seguridad en Vitacura?",
-      "content": "En GuardMan Chile somos especialistas en auditoría de seguridad en Vitacura. Nuestra experiencia en el sector oriente premium nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Vitacura y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Diagnóstico integral de vulnerabilidades",
-        "Evaluación de riesgos y amenazas",
-        "Diseño de plan de seguridad personalizado",
-        "Capacitación a personal de seguridad",
-        "Implementación de protocolos y procedimientos",
-        "Seguimiento y auditoría continua"
+      "heading": "Expertos en Auditoría de Seguridad en Vitacura",
+      "paragraphs": [
+        "En GuardMan Chile somos especialistas en realizar auditorías de seguridad en Vitacura con un enfoque integral que abarca desde la evaluación física de instalaciones hasta el análisis de protocolos operativos. Nuestro equipo de profesionales certificados OS-10 visita cada propiedad para identificar puntos vulnerables y entregar recomendaciones prácticas.",
+        "Una auditoría de seguridad en Vitacura no es solo un diagnóstico: es el punto de partida para implementar medidas efectivas de protección. Ya sea que necesites proteger tu empresa, edificio en condominio o residencia familiar, nuestro informe detallado te entrega un mapa claro de action para fortalecer tu seguridad.",
+        "Trabajamos con empresas de seguridad del rubro y administradoras de edificios en toda Vitacura, entregando reportes objetivos que permiten tomar decisiones informadas sobre inversión en seguridad. Cada auditoría considera las particularidades del sector, los accesos, la iluminación perimetral y los sistemas existentes."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Vitacura",
-      "content": "",
-      "points": [
-        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
-        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Qué incluye nuestra Auditoría de Seguridad en Vitacura?",
+      "items": [
+        "Inspección presencial de perímetros, accesos principales y secundarios",
+        "Evaluación de sistemas de cámaras CCTV y ángulos de cobertura",
+        "Revisión de cerraduras, rejas, cercas perimetrales e iluminación",
+        "Análisis de protocolos de control de acceso e ingresos",
+        "Evaluación de procedimientos de rondas y respuesta ante emergencias",
+        "Informe técnico con recomendaciones priorizadas según nivel de riesgo",
+        "Cotización opcional de soluciones de seguridad según hallazgos",
+        "Seguimiento post-auditoría para verificar implementaciones"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Vitacura",
+      "heading": "Situaciones que resuelve nuestra auditoría de seguridad en Vitacura",
       "items": [
-        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
-        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Desconocimiento del estado real de seguridad de su propiedad o empresa",
+        "Inversiones en seguridad sin criterio técnico claro",
+        "Sistemas de cámaras con puntos ciegos o fallas de cobertura",
+        "Protocolos de seguridad desactualizados o inexistentes",
+        "Incidentes de robos o inseguridad sin haber identificado las causas",
+        "Necesidad de cumplir con estándares para seguros o contratos empresariales",
+        "Conflictos con empresas de seguridad anteriores por falta de claridad",
+        "Preocupación por la seguridad de su familia o trabajadores"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué incluye una auditoría de seguridad?",
-        "answer": "Incluye evaluación de vulnerabilidades físicas y lógicas, análisis de riesgos, revisión de protocolos actuales, recomendaciones de mejora y plan de implementación."
-      },
-      {
-        "question": "¿Cuánto tiempo toma una auditoría?",
-        "answer": "Una auditoría completa toma entre 1 y 2 semanas dependiendo del tamaño de la instalación y la complejidad de los sistemas a evaluar."
-      },
-      {
-        "question": "¿Después de la auditoría ayudan a implementar?",
-        "answer": "Sí, ofrecemos servicios de implementación de mejoras, capacitación de personal y seguimiento para asegurar que las recomendaciones se ejecuten correctamente."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas frecuentes sobre auditoría de seguridad en Vitacura",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta una auditoría de seguridad en Vitacura?",
+          "answer": "El valor de una auditoría de seguridad en Vitacura varía según el tipo de propiedad, su tamaño y la complejidad de los sistemas existentes. En GuardMan entregamos cotizaciones personalizadas tras una breve consulta inicial, donde evaluamos sus necesidades específicas sin compromiso."
+        },
+        {
+          "question": "¿Cuánto tiempo toma realizar una auditoría de seguridad en Vitacura?",
+          "answer": "El proceso de auditoría en terreno toma entre 2 y 4 horas dependiendo de la extensión de la propiedad. El informe final se entrega dentro de 5 días hábiles, incluyendo el análisis detallado, fotografías de hallazgos y recomendaciones priorizadas por nivel de urgencia."
+        },
+        {
+          "question": "¿Qué diferencia hay entre una auditoría de seguridad y una consulta simple?",
+          "answer": "Una auditoría de seguridad en Vitacura implica una evaluación sistemática y documentada: levantamos información en terreno, fotografiamos hallazgos, analizamos riesgos y entregamos un informe técnico. No es solo una opinión, sino un documento que puede usar para tomar decisiones de inversión o presentar a su aseguradora."
+        },
+        {
+          "question": "¿Necesito ser cliente de GuardMan para solicitar una auditoría?",
+          "answer": "No. La auditoría de seguridad en Vitacura es un servicio independiente que puede contratar sin obligación de contratar servicios adicionales. Many empresas y administradores de edificios nos solicitan auditorías como herramienta de diagnóstico antes de tomar decisiones sobre inversión en seguridad."
+        },
+        {
+          "question": "¿La auditoría incluye una cotización para implementar las mejoras?",
+          "answer": "Sí. Tras la auditoría de seguridad en Vitacura, puede solicitar una cotización detallada para implementar las mejoras recomendadas. En GuardMan ofrecemos soluciones para todos los presupuestos, desde ajustes simples hasta sistemas integrales de vigilancia con guardias certificados OS-10."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Vitacura",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Vitacura",
-      "button_link": "/cotizacion?service=auditoria-seguridad&location=vitacura"
+      "heading": "Solicite su auditoría de seguridad en Vitacura hoy",
+      "subheading": "Protéja su propiedad con un diagnóstico profesional. Sin compromiso, nuestra equipe responde dentro de 24 horas hábiles.",
+      "button": "Cotizar auditoría de seguridad"
+    },
+    "meta": {
+      "title": "Auditoría de Seguridad en Vitacura | Expertos Certificados - GuardMan",
+      "description": "Auditoría de seguridad profesional en Vitacura. Evaluamos vulnerabilidades, sistemas y protocolos. Informe técnico con recomendaciones. Cotiza hoy."
     }
   }
 }

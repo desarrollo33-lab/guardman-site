@@ -3,29 +3,17 @@
     "hero": {
       "heading": "Seguridad Privada en Pudahuel | Guardias 24/7",
       "subheading": "Protección confiable para tu hogar, empresa y comunidad en Pudahuel. 500+ guardias certificados OS-10.",
-      "image": "/images/og-default.webp"
+      "cta_text": "Cotizar Seguridad en Pudahuel"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Ubicaciones",
-        "url": "/ubicaciones"
-      },
-      {
-        "label": "Pudahuel",
-        "url": "/ubicaciones/pudahuel"
-      }
-    ],
     "intro": {
-      "title": "Guardias de Seguridad Certificados para Pudahuel",
-      "content": "Pudahuel es una de las comunas más importantes del sector poniente de Santiago, reconocida por su actividad comercial, industrial y residencial. Con más de 230.000 habitantes y una alta concentración de empresas, la demanda de servicios de seguridad privada en Pudahuel ha crecido significativamente en los últimos años.\n\nEn GuardMan Chile entendemos las necesidades específicas de seguridad de Pudahuel. Contamos con guardias certificados OS-10 con experiencia en barrios residenciales, condominios, empresas industriales y commerciales. Nuestro centro de monitoreo 24/7 nos permite brindar una respuesta inmediata ante cualquier emergencia en la zona.",
-      "image": "/images/location-intro.jpg"
+      "heading": "Guardias de Seguridad Certificados para Pudahuel",
+      "paragraphs": [
+        "Pudahuel es una de las comunas más importantes del sector poniente de Santiago, reconocida por su actividad comercial, industrial y residencial. Con más de 230.000 habitantes y una alta concentración de empresas, la demanda de servicios de seguridad privada en Pudahuel ha crecido significativamente en los últimos años.",
+        "En GuardMan Chile entendemos las necesidades específicas de seguridad de Pudahuel. Contamos con guardias certificados OS-10 con experiencia en barrios residenciales, condominios, empresas industriales y commerciales. Nuestro centro de monitoreo 24/7 nos permite brindar una respuesta inmediata ante cualquier emergencia en la zona."
+      ]
     },
     "features": {
-      "title": "Servicios de Seguridad en Pudahuel",
+      "heading": "Servicios de Seguridad en Pudahuel",
       "items": [
         "Guardias de seguridad residencial para casas y condominios en Pudahuel",
         "Vigilancia empresarial con ronda electrónica y control de accesos",
@@ -35,46 +23,66 @@
         "Seguridad industrial para empresas del sector poniente de Santiago"
       ]
     },
-    "stats": [
-      {
-        "value": "8+",
-        "label": "Años de experiencia"
-      },
-      {
-        "value": "500+",
-        "label": "Guardias certificados OS-10"
-      },
-      {
-        "value": "14",
-        "label": "Comunas de cobertura en RM"
-      },
-      {
-        "value": "1.200+",
-        "label": "Clientes satisfechos"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto cuesta un guardia de seguridad en Pudahuel?",
-        "answer": "El valor depende de las horas de vigilancia, tipo de servicio y características del lugar. En GuardMan Chile ofrecemos cotizaciones personalizadas sin costo. Contáctanos y recibe una propuesta adaptée a tus necesidades de seguridad."
-      },
-      {
-        "question": "¿Tienen guardias disponibles para turno noche en Pudahuel?",
-        "answer": "Sí, contamos con cobertura 24/7 en toda la comuna de Pudahuel. Puedes contratar turnos diurnos, nocturnos o mixtos según tus requerimientos. También ofrecemos servicio de reemplazo cuando un guardia falta."
-      },
-      {
-        "question": "¿Qué certificaciones tienen los guardias de GuardMan?",
-        "answer": "Todos nuestros guardias cuentan con certificación OS-10 emitida por la Autoridad Marítima, formación en seguridad privada y cursos de actualización. Además, reciben entrenamiento específico según el tipo de cliente y zona."
-      },
-      {
-        "question": "¿Cómo funciona el monitoreo 24/7 de GuardMan?",
-        "answer": "Nuestro centro de monitoreo recibe alertas en tiempo real desde los sistemas de cámaras y sensores de tus instalaciones. Ante cualquier emergencia, coordinamos la respuesta con nuestros guardias en terreno y las autoridades соответствующие."
-      }
-    ],
+    "issues": {
+      "heading": "Problemas de Seguridad que Enfrentan en Pudahuel",
+      "items": [
+        "Robos en viviendas y robos vehiculares en sectores residenciales como Los Aguirre y Pudahuel Sur",
+        "Asaltos a locales comerciales y centros comerciales de la zona",
+        "Inseguridad en彭evas urbanizaciones y pasajes con poca iluminación",
+        "Delincuencia en entornos industriales próximos a Aeropuerto Pudahuel",
+        "Falta de vigilancia en comunidades y condominios sin protección privada"
+      ]
+    },
+    "stats": {
+      "heading": "Números que Respaldan Nuestra Experiencia",
+      "items": [
+        {
+          "label": "Años de experiencia",
+          "value": "8+"
+        },
+        {
+          "label": "Guardias certificados OS-10",
+          "value": "500+"
+        },
+        {
+          "label": "Comunas de cobertura en RM",
+          "value": "14"
+        },
+        {
+          "label": "Clientes satisfechos",
+          "value": "1.200+"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Seguridad en Pudahuel",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta un guardia de seguridad en Pudahuel?",
+          "answer": "El valor depende de las horas de vigilancia, tipo de servicio y características del lugar. En GuardMan Chile ofrecemos cotizaciones personalizadas sin costo. Contáctanos y recibe una propuesta adaptée a tus necesidades de seguridad."
+        },
+        {
+          "question": "¿Tienen guardias disponibles para turno noche en Pudahuel?",
+          "answer": "Sí, contamos con cobertura 24/7 en toda la comuna de Pudahuel. Puedes contratar turnos diurnos, nocturnos o mixtos según tus requerimientos. También ofrecemos servicio de reemplazo cuando un guardia falta."
+        },
+        {
+          "question": "¿Qué certificaciones tienen los guardias de GuardMan?",
+          "answer": "Todos nuestros guardias cuentan con certificación OS-10 emitida por la Autoridad Marítima, formación en seguridad privada y cursos de actualización. Además, reciben entrenamiento específico según el tipo de cliente y zona."
+        },
+        {
+          "question": "¿Cómo funciona el monitoreo 24/7 de GuardMan?",
+          "answer": "Nuestro centro de monitoreo recibe alertas en tiempo real desde los sistemas de cámaras y sensores de tus instalaciones. Ante cualquier emergencia, coordinamos la respuesta con nuestros guardias en terreno y las autoridades соответствующие."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu Hogar y Empresa en Pudahuel Hoy",
-      "button_text": "Solicitar Cotización Gratis",
-      "button_link": "/cotizacion"
+      "heading": "Protege tu Hogar y Empresa en Pudahuel Hoy",
+      "subheading": "No dejes la seguridad de tu familia o negocio al azar. Contáctanos y recibe una asesoría personalizada sin compromiso.",
+      "button": "Solicitar Cotización Gratis"
+    },
+    "meta": {
+      "title": "Seguridad Privada en Pudahuel | GuardMan Chile",
+      "description": "Guardias de seguridad certificados OS-10 para hogares y empresas en Pudahuel. Monitoreo 24/7, CCTV y control de accesos. Cotiza sin compromiso."
     }
   }
 }

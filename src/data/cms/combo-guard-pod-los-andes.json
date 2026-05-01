@@ -1,96 +1,86 @@
 {
   "sections": {
     "hero": {
-      "heading": "Guard Pod en Los Andes",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en Los Andes y la zona de Valparaíso.",
-      "cta_text": "Cotizar en Los Andes",
-      "cta_link": "/cotizacion?service=guard-pod&location=los-andes",
-      "image": "/images/hero-home.webp"
+      "heading": "Guard Pod en Los Andes: Seguridad Autónoma para tu Empresa o Propiedad",
+      "subheading": "Protección inteligente las 24 horas con tecnología de vanguardia y monitoreo profesional. Ideal para zonas industriales, obras en construcción y áreas remotas en Los Andes y provincia.",
+      "image": "https://guardman.cl/images/guard-pod-los-andes-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Guard Pod",
-        "url": "/servicios/guard-pod"
-      },
-      {
-        "label": "Los Andes",
-        "url": "/servicios/guard-pod/los-andes"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Guard Pod en Los Andes?",
-      "content": "En GuardMan Chile somos especialistas en guard pod en Los Andes. Nuestra experiencia en Los Andes y la zona de Valparaíso nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Los Andes y toda la zona Valparaíso.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Unidad móvil de vigilancia autónoma",
-        "Energía solar y conexión satelital",
-        "Cámaras 360° y detección de movimiento",
-        "Sirena y luces de advertencia",
-        "Monitoreo remoto 24/7",
-        "Despliegue rápido en cualquier ubicación"
+      "heading": "El Futuro de la Seguridad Privada llegó a Los Andes",
+      "paragraphs": [
+        "En GuardMan Chile comprendemos los desafíos de seguridad que enfrentan las empresas, industrias y comunidades en la zona de Los Andes y provincia de San Felipe. Nuestro servicio Guard Pod® representa la evolución de la vigilancia tradicional: una unidad autónoma de seguridad que combina tecnología de última generación con el respaldo de profesionales certificados OS-10 y nuestra central de monitoreo operativa las 24 horas, los 7 días de la semana.",
+        "El Guard Pod® es un elemento disuasorio visible y altamente efectivo para sitios remotos, zonas vulnerables y áreas extensas donde la cobertura tradicional resulta costosa o poco práctica. Con detección autónoma de intrusos mediante sensores de movimiento avanzados y cámaras de alta definición, este sistema proporciona una barrera tecnológica inteligente que trabaja incansablemente para proteger tus activos, inversiones y personas.",
+        "Con más de 8 años de experiencia en el mercado chileno y presencia en 14 comunas del país, GuardMan Chile se ha consolidado como una empresa de seguridad privada líder. Nuestro equipo de 500 guardias certificados OS-10 y técnicos especializados garantiza que cada instalación de Guard Pod® en Los Andes cuente con el soporte profesional necesario para enfrentar cualquier situación de riesgo."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Los Andes",
-      "content": "",
-      "points": [
-        "centros urbanos y zonas turísticas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia turística, seguridad comercial y control de eventos es cada vez más urgente en Los Andes y la zona de Valparaíso.",
-        " muchas empresas y residencias en Los Andes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características del Servicio Guard Pod® en Los Andes",
+      "items": [
+        "Detección autónoma de intrusos mediante sensores de movimiento de alta sensibilidad",
+        "Cámaras de seguridad con resolución 4K para captura nítida de rostros y patentes",
+        "Iluminación LED disuasoria con activación automática ante movimientos sospechosos",
+        "Conectividad 4G integrada para transmisión de datos en tiempo real",
+        "Monitoreo profesional 24/7 desde nuestra central de operaciones",
+        "Audio bidireccional para comunicación directa y advertencias disuasorias",
+        "Instalación rápida sin necesidad de obras civiles o cableado complejo",
+        "Funcionamiento autónomo con energía solar o conexión eléctrica estándar",
+        "Respuesta coordinada con Carabineros y servicios de emergencia ante incidentes",
+        "Despliegue flexible en zonas industriales, predios agrícolas y obras de construcción",
+        "Sistema modular ampliable según las necesidades específicas del cliente",
+        "App móvil para visualización en tiempo real desde cualquier ubicación"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Los Andes",
+      "heading": "Problemáticas de Seguridad que Resuelve Guard Pod® en Los Andes",
       "items": [
-        "centros urbanos y zonas turísticas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia turística, seguridad comercial y control de eventos es cada vez más urgente en Los Andes y la zona de Valparaíso.",
-        " muchas empresas y residencias en Los Andes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos, hurtos y actos vandálicos en bodegas, talleres y instalaciones industriales",
+        "Dificultad para cubrir grandes extensiones de terreno con guardias tradicionales",
+        "Falta de cobertura de seguridad en zonas rurales y periurbanas de Los Andes",
+        "Costos elevados de vigilancia humana permanente en sitios remotos o de difícil acceso",
+        "Demora en la respuesta ante emergencias por falta de sistemas de detección temprana",
+        "Vulnerabilidad de obras en construcción ante robos de materiales y equipamiento",
+        "Necesidad de protección temporal durante eventos especiales o faenas estacionales",
+        "Riesgos de seguridad en predios agrícolas con maquinaria y equipamiento de alto valor"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Valparaíso"
-      },
-      {
-        "value": "Valparaíso",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué es un Guard POD?",
-        "answer": "Es una unidad móvil de vigilancia autónoma con cámaras, sensores, sirena y luces. Funciona con energía solar y se despliega rápidamente en cualquier ubicación."
-      },
-      {
-        "question": "¿Por cuánto tiempo funciona sin intervención?",
-        "answer": "El Guard POD puede operar de forma autónoma hasta 72 horas con sus baterías internas. La energía solar mantiene el sistema funcionando indefinidamente en condiciones normales."
-      },
-      {
-        "question": "¿Se puede mover a diferentes ubicaciones?",
-        "answer": "Sí, está diseñado para ser transportado fácilmente. Es ideal para obras de construcción, eventos temporales o refuerzos de seguridad en cualquier ubicación."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Guard Pod® en Los Andes",
+      "items": [
+        {
+          "question": "¿Qué es Guard Pod® y cómo funciona en Los Andes?",
+          "answer": "Guard Pod® en Los Andes es una unidad autónoma de seguridad desarrollada por GuardMan Chile que combina cámaras de alta definición, sensores de movimiento infrarrojos, iluminación LED disuasoria y conectividad móvil. El sistema detecta automáticamente cualquier presencia no autorizada, activa protocolos de advertencia y transmite alertas en tiempo real a nuestra central de monitoreo 24/7. Es ideal para proteger zonas industriales, obras en construcción, predios agrícolas y cualquier área vulnerable en la provincia de San Felipe y Los Andes."
+        },
+        {
+          "question": "¿Cuáles son las ventajas del Guard Pod® frente a guardias tradicionales?",
+          "answer": "El Guard Pod® ofrece ventajas significativas: cobertura continua las 24 horas sin descansos ni turnos, detección inmediata de movimientos sospechosos, imposibilidad de ser neutralizado por sorpresa, costos predecibles sin variables de contratación de personal, y funcionamiento óptimo en zonas de difícil acceso o condiciones climáticas adversas. Además, puede complementar la labor de guardias certificados OS-10 para crear un sistema de seguridad integral con presencia tecnológica y humana."
+        },
+        {
+          "question": "¿Necesita instalación eléctrica o conexión a internet fija?",
+          "answer": "No. El Guard Pod® está diseñado para operar de manera completamente autónoma. Puede alimentarse mediante paneles solares integrados o conexión eléctrica convencional. Para la conectividad, utiliza tecnología 4G móvil, eliminando la necesidad de infraestructura de internet fija. Esto permite su despliegue en zonas rurales, predios agrícolas, faenas mineras o cualquier ubicación sin servicios básicos establecidos."
+        },
+        {
+          "question": "¿Cómo se coordina la respuesta ante una detección de intruso?",
+          "answer": "Cuando el sistema detecta una amenaza, inmediatamente activa tres líneas de defensa: primero, iluminación LED y audio disuasorio para alertar al intruso; segundo, notificación a nuestra central de monitoreo donde operadores capacitados evalúan la situación en tiempo real mediante las cámaras; tercero, coordinación directa con Carabineros de Chile y protocolos de emergencia según el plan de seguridad establecido para cada cliente."
+        },
+        {
+          "question": "¿Puedo integrar el Guard Pod® con mis sistemas de seguridad existentes?",
+          "answer": "Sí, el Guard Pod® está diseñado para integrarse con sistemas de cámaras CCTV existentes, alarmas perimetrales, cercos eléctricos y cualquier infraestructura de seguridad que ya poseas. Nuestro equipo técnico realiza una evaluación gratuita del terreno y diseña la configuración óptima para maximizar la cobertura y efectividad. Además, todas las instalaciones incluyen capacitación para tu personal."
+        },
+        {
+          "question": "¿Qué costos tiene el servicio Guard Pod® en Los Andes?",
+          "answer": "El servicio se cotiza de forma personalizada considerando factores como duración del contrato, cantidad de unidades requeridas, nivel de monitoreo necesario y servicios adicionales como guardias complementarios. En GuardMan Chile ofrecemos una cotización sin compromiso con opciones de arriendo mensual,lease operativo o compra. Contáctanos al +56 9 3000 0010 o solicita tu cotización online."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Los Andes",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Los Andes",
-      "button_link": "/cotizacion?service=guard-pod&location=los-andes"
+      "heading": "Protege tu Inversión con Guard Pod® en Los Andes Hoy",
+      "subheading": "Solicita una asesoría personalizada sin costo y descubre cómo nuestra tecnología de seguridad se adapta a las necesidades específicas de tu empresa, industria o propiedad en Los Andes y provincia de San Felipe.",
+      "button": "Cotizar Guard Pod Los Andes",
+      "image": "https://guardman.cl/images/guard-pod-cta-los-andes.jpg"
+    },
+    "meta": {
+      "title": "Guard Pod Los Andes | Seguridad Autónoma 24/7 | GuardMan Chile",
+      "description": "Guard Pod en Los Andes: unidad de seguridad portátil con cámaras 4K, sensores de movimiento y monitoreo profesional 24/7. Cotiza ahora con GuardMan Chile."
     }
   }
 }

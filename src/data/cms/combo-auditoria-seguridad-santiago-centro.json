@@ -1,96 +1,79 @@
 {
   "sections": {
     "hero": {
-      "heading": "Auditoría de Seguridad en Santiago Centro",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el centro de Santiago.",
-      "cta_text": "Cotizar en Santiago Centro",
-      "cta_link": "/cotizacion?service=auditoria-seguridad&location=santiago-centro",
-      "image": "/images/service-auditoria-seguridad.webp"
+      "heading": "Auditoría de Seguridad en Santiago Centro | Evaluación Profesional Integral",
+      "subheading": "Identificamos vulnerabilidades y diseñamos planes de seguridad a medida para empresas y propiedades. Más de 8 años protegiendo el corazón de Santiago.",
+      "image": "auditoria-seguridad-santiago-centro-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Auditoria Seguridad",
-        "url": "/servicios/auditoria-seguridad"
-      },
-      {
-        "label": "Santiago Centro",
-        "url": "/servicios/auditoria-seguridad/santiago-centro"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Auditoría de Seguridad en Santiago Centro?",
-      "content": "En GuardMan Chile somos especialistas en auditoría de seguridad en Santiago Centro. Nuestra experiencia en el centro de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Santiago Centro y toda la zona Centro.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Diagnóstico integral de vulnerabilidades",
-        "Evaluación de riesgos y amenazas",
-        "Diseño de plan de seguridad personalizado",
-        "Capacitación a personal de seguridad",
-        "Implementación de protocolos y procedimientos",
-        "Seguimiento y auditoría continua"
+      "heading": "¿Qué es una Auditoría de Seguridad en Santiago Centro?",
+      "paragraphs": [
+        "Una auditoría de seguridad en Santiago Centro es una evaluación profesional exhaustiva que analiza todos los aspectos de la protección de su propiedad o negocio. En GuardMan Chile, nuestros expertos realizan inspecciones en terreno para identificar vulnerabilidades en accesos, sistemas electrónicos, iluminación, ángulos ciegos y procedimientos de su personal. Esta evaluación le permite conocer exactamente qué tan protegido está y qué mejoras necesita implementar.",
+        "Santiago Centro concentra una alta densidad de empresas, oficinas comerciales y propiedades residenciales, lo que genera desafíos únicos de seguridad. Nuestro equipo de auditores certificados cuenta con experienciavalidated en evaluación de riesgos para todo tipo de instalaciones en esta zona. El resultado es un informe detallado con recomendaciones prácticas y priorizadas según el nivel de riesgo identificado.",
+        "Contratar una auditoría de seguridad en Santiago Centro le permite tomar decisiones informadas sobre inversión en seguridad, cumplir con normativas OS-10 vigentes y reducir significativamente el riesgo de incidentes. En GuardMan Chile oferecemos este servicio con la trayectoria y respaldo de una empresa líder en seguridad privada."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Santiago Centro",
-      "content": "",
-      "points": [
-        "bancos, oficinas públicas, hoteles, retail y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de flujos de personas, seguridad para eventos, CCTV comercial y guardias experimentados es cada vez más urgente en el centro de Santiago.",
-        " muchas empresas y residencias en Santiago Centro enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de Nuestra Auditoría de Seguridad en Santiago Centro",
+      "items": [
+        "Inspección presencial en terreno por auditores con experienciavalidated en seguridad privada",
+        "Revisión integral de accesos: puertas, cerraduras, rejas, cercos perimetrales y puntos de entrada",
+        "Evaluación de sistemas electrónicos: cámaras CCTV, alarmas, sensores de movimiento y control de accesos",
+        "Análisis de iluminación nocturna y detección de ángulos ciegos que favorecen ingresos no autorizados",
+        "Revisión de procedimientos y protocolos de su personal de vigilancia actual",
+        "Informe detallado con mapa de riesgos, fotografías y plan de mejoras priorizado",
+        "Cumplimiento normativo OS-10: verificación de acreditaciones y certificaciones vigentes",
+        "Asesoría personalizada para implementar recomendaciones o contratar servicios adicionales",
+        "Seguimiento post-auditoría para verificar avance en mejoras de seguridad"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Santiago Centro",
+      "heading": "Problemas que Detectamos con una Auditoría de Seguridad en Santiago Centro",
       "items": [
-        "bancos, oficinas públicas, hoteles, retail y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de flujos de personas, seguridad para eventos, CCTV comercial y guardias experimentados es cada vez más urgente en el centro de Santiago.",
-        " muchas empresas y residencias en Santiago Centro enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Vulnerabilidades en accesos principales y secundarios que pueden ser explotadas por delincuentes",
+        "Sistemas de cámaras o alarmas obsoletos, mal instalados o con cobertura insuficiente",
+        "Iluminación deficiente en áreas oscuras que generan espacios propicios para hechos delictuales",
+        "Personal de vigilancia sin certificación OS-10 vigente o con formación insuficiente",
+        "Protocolos de emergencia inexistentes o desactualizados ante distintos escenarios de riesgo",
+        "Falta de coordinación entre sistemas de seguridad física y tecnología de monitoreo",
+        "Edificios o oficinas con puntos ciegos no identificados que comprometen la seguridad perimetral",
+        "Ausencia de registros documentados que dificultan investigaciones en caso de incidentes"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Centro"
-      },
-      {
-        "value": "Centro",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué incluye una auditoría de seguridad?",
-        "answer": "Incluye evaluación de vulnerabilidades físicas y lógicas, análisis de riesgos, revisión de protocolos actuales, recomendaciones de mejora y plan de implementación."
-      },
-      {
-        "question": "¿Cuánto tiempo toma una auditoría?",
-        "answer": "Una auditoría completa toma entre 1 y 2 semanas dependiendo del tamaño de la instalación y la complejidad de los sistemas a evaluar."
-      },
-      {
-        "question": "¿Después de la auditoría ayudan a implementar?",
-        "answer": "Sí, ofrecemos servicios de implementación de mejoras, capacitación de personal y seguimiento para asegurar que las recomendaciones se ejecuten correctamente."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Auditoría de Seguridad en Santiago Centro",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta una auditoría de seguridad en Santiago Centro?",
+          "answer": "El precio de una auditoría de seguridad en Santiago Centro varía según el tamaño de la propiedad, tipo de instalación y alcance de la evaluación requerida. En GuardMan Chile ofrecemos cotización personalizada tras una breve consulta inicial. Consideramos factores como metros cuadrados, cantidad de puntos de acceso, sistemas existentes y nivel de detalle solicitado en el informe final."
+        },
+        {
+          "question": "¿Cuánto tiempo tarda una auditoría de seguridad?",
+          "answer": "El tiempo de una auditoría depende directamente de las dimensiones y complejidad de la propiedad a evaluar. Para una oficina o pequeño comercio en Santiago Centro, la evaluación puede completarse en pocas horas. Propiedades más grandes o con múltiples sistemas pueden requerir uno o dos días de trabajo en terreno. El informe final se entrega en un máximo de 5 días hábiles."
+        },
+        {
+          "question": "¿Qué incluye el informe final de la auditoría?",
+          "answer": "El informe final incluye un mapa de riesgos con fotografías, listado priorizado de vulnerabilidades detectadas, recomendaciones específicas para cada hallazgo y presupuesto estimado para implementar mejoras. Todo nuestro contenido respet the exclusion_rules de no prometer garantías absolutas, ofreciendo en cambio soluciones prácticas y graduales según las prioridades del cliente."
+        },
+        {
+          "question": "¿Puedo contratar guardias después de la auditoría?",
+          "answer": "Sí, absolutamente. Many clients start con una auditoría y luego contratan servicios de guardias de seguridad o monitoreo 24/7. Al conocer exactamente las necesidades de su propiedad, podemos diseñar un esquema de cobertura personalizado que optimice recursos mientras garantiza protección efectiva. Contáctenos para cotizar servicios adicionales tras recibir su informe."
+        },
+        {
+          "question": "¿La auditoría cumple con normativas OS-10?",
+          "answer": "Sí, todas nuestras auditorías consideran el marco normativo OS-10 vigente. Verificamos que su empresa o propiedad cumpla con los requisitos de Carabineros para servicios de seguridad privada, incluyendo acreditaciones del personal, equipos certificados y documentación exigida por la ley. Esto le protege de posibles multas o sanciones por incumplimiento."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Santiago Centro",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Santiago Centro",
-      "button_link": "/cotizacion?service=auditoria-seguridad&location=santiago-centro"
+      "heading": "¿Listo para Evaluar la Seguridad de tu Propiedad en Santiago Centro?",
+      "subheading": "Solicita tu auditoría de seguridad profesional hoy y conoce exactamente qué tan protegido estás. Informe detallado, recomendaciones prácticas y el respaldo de una empresa líder en seguridad privada.",
+      "button": "Cotizar Auditoría de Seguridad",
+      "image": "auditoria-seguridad-santiago-centro-cta.jpg"
+    },
+    "meta": {
+      "title": "Auditoría de Seguridad en Santiago Centro | GuardMan Chile",
+      "description": "Auditoría de seguridad profesional en Santiago Centro. Evaluación integral de vulnerabilidades, sistemas y procedimientos. Cotiza hoy con GuardMan Chile."
     }
   }
 }

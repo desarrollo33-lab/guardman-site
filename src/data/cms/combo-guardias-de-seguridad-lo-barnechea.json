@@ -1,96 +1,82 @@
 {
   "sections": {
     "hero": {
-      "heading": "Guardias de Seguridad en Lo Barnechea",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente de Santiago.",
-      "cta_text": "Cotizar en Lo Barnechea",
-      "cta_link": "/cotizacion?service=guardias-de-seguridad&location=lo-barnechea",
-      "image": "/images/service-guardias-de-seguridad.webp"
+      "heading": "Guardias de Seguridad en Lo Barnechea | Protección Profesional 24/7",
+      "subheading": "GuardMan Chile: Empresa de seguridad privada con guardias certificados OS-10 disponibles en Lo Barnechea. Atención personalizada, cobertura los 365 días del año y tiempos de respuesta garantizados.",
+      "image": "guardias-seguridad-lo-barnechea-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Guardias De Seguridad",
-        "url": "/servicios/guardias-de-seguridad"
-      },
-      {
-        "label": "Lo Barnechea",
-        "url": "/servicios/guardias-de-seguridad/lo-barnechea"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Guardias de Seguridad en Lo Barnechea?",
-      "content": "En GuardMan Chile somos especialistas en guardias de seguridad en Lo Barnechea. Nuestra experiencia en el sector oriente de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Lo Barnechea y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Guardias certificados OS-10 con capacitación continua",
-        "Monitoreo 24/7 desde nuestro centro de control propio",
-        "Respuesta inmediata ante emergencias con coordinación a Carabineros",
-        "Cobertura integral en toda la comuna",
-        "Informes de actividad diaria y reportes semanales",
-        "Esquemas de turnos adaptables: diurno, nocturno, 4x4, 6x1"
+      "heading": "Servicios de Guardias de Seguridad Profesional en Lo Barnechea",
+      "paragraphs": [
+        "Lo Barnechea es una de las comunas con mayor crecimiento en el sector inmobiliario y comercial del sector-oriente de Santiago. Esta expansión ha generado una demanda creciente de soluciones de seguridad privada que se adapten a las necesidades específicas de empresas, condominios y residências de la zona. En GuardMan Chile comprendemos que cada cliente tiene requerimientos únicos, por eso ofrecemos un servicio personalizado que combina presencia física disuasoria con tecnología de monitoreo avanzado.",
+        "Nuestros guardias de seguridad en Lo Barnechea están certificados bajo la normativa OS-10 y cuentan con experiencia comprobable en el rubro de seguridad privada. Cada profesional es seleccionado mediante un proceso riguroso que incluye evaluación psicológica, verificación de antecedentes y capacitación continua. Esta metodología nos permite garantizar un estándar de calidad consistente en cada servicio que prestamos,不管是 para instalaciones comerciales, edificios corporativos o comunidades residenciales.",
+        "Como empresa de seguridad establecida en el mercado chileno con más de 8 años de trayectoria, en GuardMan Chile hemos desarrollado protocolos de operación específicos para las comunas del sector-oriente. Nuestro conocimiento del territorio y nuestra red de supervisores nos permiten ofrecer una cobertura efectiva que va más allá de la simple vigilancia, entregando tranquilidad real a nuestros clientes."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Lo Barnechea",
-      "content": "",
-      "points": [
-        "condominios de lujo, vineyards y propiedades rurales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia perimetral, control vehicular y respuestas de emergencia es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Lo Barnechea enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Por qué elegir GuardMan Chile para Guardias de Seguridad en Lo Barnechea?",
+      "items": [
+        "Guardias certificados OS-10 con curso vigente y experiencia comprobable en seguridad privada",
+        "Cobertura 24 horas, 7 días a la semana, los 365 días del año sin interrupciones",
+        "Turnos flexibles: 4x4, 6x1, 5x2 y turnos rotativos según las necesidades del cliente",
+        "Supervisión constante mediante supervisores de zona con visitas programadas y aleatorias",
+        "Centro de monitoreo propio para integración con sistemas de cámaras y alarmas",
+        "Protocolos de emergencia coordinados con Carabineros de Chile y fuerzas de seguridad",
+        "Reporte diario de novedades y libro de registro digital para seguimiento completo",
+        "Capacitación continua del personal en técnicas de prevención y manejo de situaciones de riesgo",
+        "Seguro de responsabilidad civil para protección adicional del cliente",
+        "Asesoría gratuita para diseñar el plan de seguridad más adecuado para tu instalación"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Lo Barnechea",
+      "heading": "Problemas que Resolvemos con Nuestros Servicios de Seguridad",
       "items": [
-        "condominios de lujo, vineyards y propiedades rurales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia perimetral, control vehicular y respuestas de emergencia es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Lo Barnechea enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Control de acceso y verificación de identidad de visitas, proveedores y vehículos en entradas y salidas de instalaciones",
+        "Prevención de robos, hurtos y situaciones delictivas mediante presencia física disuasoria efectiva",
+        "Rondas perimetrales en sectores de difícil vigilancia o con amplios perímetros",
+        "Monitoreo y registro de eventos sospechoso en tiempo real para reacción inmediata",
+        "Coordinación con servicios de emergencia y Carabineros ante situaciones que requieran apoyo especializado",
+        "Protección de activos, inventario y equipos en empresas, bodegas y centros comerciales de la zona"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto cuesta un guardia de seguridad en Lo Barnechea?",
-        "answer": "El precio depende de la cantidad de guardias, turnos y servicios adicionales. Ofrecemos cotizaciones personalizadas sin compromiso. Contáctanos para una evaluación gratuita."
-      },
-      {
-        "question": "¿Los guardias tienen certificación OS-10 vigente?",
-        "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 obligatoria y al día. Es un requisito legal que cumplimos estrictamente para su protección y la nuestra."
-      },
-      {
-        "question": "¿Tienen cobertura 24 horas?",
-        "answer": "Sí, ofrecemos servicio 24/7 los 365 días del año. Nuestro centro de monitoreo propio opera sin interrupciones y tenemos guardias de reemplazo disponibles."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Guardias de Seguridad en Lo Barnechea",
+      "items": [
+        {
+          "question": "¿Cuáles son los precios de los guardias de seguridad en Lo Barnechea?",
+          "answer": "El valor del servicio de guardias de seguridad depende de varios factores: tipo de instalación, jornada laboral requerida, cantidad de guardias necesarios y servicios adicionales como monitoreo o rondas perimetrales. Para obtener un presupuesto personalizado, recomendamos cotizar directamente con nuestro equipo comercial, quienes evaluarán tus necesidades específicas y entregarán una propuesta ajustada a tus requerimientos y presupuesto."
+        },
+        {
+          "question": "¿Cómo verifico que los guardias tienen el curso OS-10 vigente?",
+          "answer": "Todos nuestros guardias de seguridad cuentan con certificación OS-10 vigente, acreditada por la Prefectura de Seguridad Privada de Carabineros de Chile. Además, cada vigilador porta su credencial de identificación personal которую puede ser verificada en terreno. En GuardMan Chile mantenemos un control riguroso de las fechas de vencimiento de certificaciones y gestionamos las renovaciones oportunamente para garantizar cumplimiento normativo permanente."
+        },
+        {
+          "question": "¿Qué tipos de instalaciones atienden en Lo Barnechea?",
+          "answer": "Nuestros servicios de seguridad en Lo Barnechea cubren diversas instalaciones: condominios y edificios residenciales, empresas comerciales y oficinas, centros comerciales y retail, bodegas y depósitos, instituciones educativas y proyectos en construcción. Cada tipo de instalación requiere un enfoque diferente, por eso nuestros supervisores diseñan planes de seguridad específicos considerando las características particulares del lugar."
+        },
+        {
+          "question": "¿Qué turnos están disponibles para el servicio de guardias?",
+          "answer": "Ofrecemos diferentes modalidades de turnos para adaptarnos a las necesidades de cada cliente: turnos 4x4 (4 días de trabajo por 4 de descanso), turnos 6x1 (6 días de trabajo por 1 de descanso), turnos 5x2 (lunes a viernes con fines de semana libres), y turnos rotativos日夜. También disponibilizamos cobertura para eventos puntuales o refuerzo en temporadas específicas."
+        },
+        {
+          "question": "¿Cómo es el proceso de contratación y cuánto tarda?",
+          "answer": "El proceso de contratación comienza con una asesoría gratuita donde evaluamos tus necesidades de seguridad. Posteriormente, enviamos una cotización personalizada y, una vez aceptada, el inicio del servicio puede programarse en un plazo mínimo de 48 a 72 horas hábiles. Contamos con disponibilidad de guardia para cubrir urgencias y requerimientos de rápida implementación."
+        },
+        {
+          "question": "¿Qué pasa si el guardia no se presenta al turno?",
+          "answer": "En GuardMan Chile contamos con un sistema de reemplazos y backup que garantiza la cobertura continua del servicio. Si un guardia no puede presentarse, automáticamente activamos un reemplazo certificado y notificamos al supervisor de zona. Adicionalmente, supervisamos en tiempo real la asistencia del personal mediante reportes y check-in periódicos."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Lo Barnechea",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Lo Barnechea",
-      "button_link": "/cotizacion?service=guardias-de-seguridad&location=lo-barnechea"
+      "heading": "Protege tu Hogar, Empresa o Comunidad en Lo Barnechea",
+      "subheading": "Cotiza ahora tu servicio de guardias de seguridad y recibe asesoría personalizada sin compromiso. Nuestro equipo comercial está disponible para diseñar la solución de seguridad que necesitas.",
+      "button": "Cotizar Servicio de Guardias",
+      "image": "guardias-seguridad-lo-barnechea-cta.jpg"
+    },
+    "meta": {
+      "title": "Guardias de Seguridad Lo Barnechea | OS-10 | 24/7 - GuardMan Chile",
+      "description": "Contrata guardias de seguridad certificados OS-10 en Lo Barnechea. Empresa con 8+ años de experiencia, 500+ vigiladores y cobertura en 14 comunas. Cotiza ahora."
     }
   }
 }

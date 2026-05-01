@@ -1,53 +1,93 @@
 {
   "sections": {
     "hero": {
-      "heading": "Seguridad para el Sector Automotriz",
-      "subheading": "Proteccion integral para concesionarias, talleres y centros de servicio en Chile.",
-      "image": "/images/s4-thumbnail.webp"
+      "heading": "Seguridad Automotriz Profesional para Proteger tu Negocio en Santiago",
+      "subheading": "Guardias OS-10 certificados, monitoreo 24/7 y cobertura en 14 comunas. Protege vehículos, talleres y concesionarios con la experiencia de más de 8 años.",
+      "cta_text": "Cotizar Ahora",
+      "image": "mantener valor actual"
     },
     "intro": {
-      "title": "Seguridad Automotriz Integral en Chile",
-      "content": "En el competitivo sector automotriz chileno, la seguridad de sus instalaciones, vehiculos y personal es fundamental para mantener la operacion continua de su negocio."
-    },
-    "features": {
-      "items": [
-        "Vigilancia con guardias OS-10",
-        "Control de acceso y registro de visitantes",
-        "Sistema de CCTV con camaras de alta definicion",
-        "Monitoreo remoto 24/7",
-        "Patrullaje preventivo y rondas programadas",
-        "Reporting diario de incidentes"
+      "heading": "Soluciones de Seguridad Integral para el Sector Automotriz",
+      "paragraphs": [
+        "En GuardMan Chile entendemos que el sector automotriz enfrenta desafíos únicos de seguridad, donde la protección de vehículos de alto valor, repuestos costosos y equipos especializados es crucial para la operación diaria de concesionarios, talleres mecánicos y empresas de distribución. Nuestros servicios de seguridad privada están diseñados específicamente para adaptarse a las exigencias particulares de cada instalación automotriz, garantizando un ambiente seguro y confiable tanto para tu personal como para clientes y visitantes.",
+        "Nuestro equipo de guardias certificados OS-10 con más de 8 años de experiencia en el sector automotriz domina completamente las situaciones propias de este ambiente de trabajo, desde el control riguroso de acceso en patios de exhibición hasta la supervisión efectiva de áreas donde se manipulan herramientas costosas y componentes electrónicos sensibles. Implementamos protocolos de seguridad personalizados que consideran los horarios extendidos, la alta rotación de personas y los flujos constantes de vehículos que caracterizan a los negocios automotrices.",
+        "Contamos con sistemas propios de monitoreo disponibles las 24 horas los 7 días de la semana, lo que nos permite ofrecer una respuesta inmediata ante cualquier incidente o alerta de seguridad. Nuestra central de control opera en coordinación permanente con nuestros guardias en terreno, asegurando una cobertura integral que disuade eficazmente intentos de robo, vandalismo o actividades sospechosas dentro de tus instalaciones automotrices en las 14 comunas de Santiago donde prestamos servicio."
       ]
     },
-    "faq": [
-      {
-        "question": "Que tipo de guardias proporcionan?",
-        "answer": "Guardias de seguridad OS-10 acreditados y capacitados para el sector automotriz."
-      },
-      {
-        "question": "Como protegen los vehiculos?",
-        "answer": "Vigilancia perimetral, CCTV, control de acceso e iluminacion disuasoria."
-      },
-      {
-        "question": "Ofrecen monitoreo 24 horas?",
-        "answer": "Si, nuestro centro de control opera 24/7, 365 dias al ano."
-      },
-      {
-        "question": "Tienen experiencia en talleres?",
-        "answer": "Amplia experiencia protegiendo talleres mecanicos, centros de diagnostico y empresas de repuestos."
-      },
-      {
-        "question": "Como solicitan cotizacion?",
-        "answer": "Complete el formulario en linea o contactenos por telefono."
-      },
-      {
-        "question": "Que medidas tienen contra robo de repuestos?",
-        "answer": "Control restrictivo a bodegas, inventario video controlado y coordinacion con Carabineros."
-      }
-    ],
+    "features": {
+      "heading": "Características de Nuestro Servicio de Seguridad Automotriz",
+      "items": [
+        "Guardias OS-10 certificados con capacitación especializada en seguridad vehicular y control de instalaciones automotriz",
+        "Monitoreo remoto 24/7 desde nuestra propia central de control con visualización en tiempo real de cámaras y sensores",
+        "Control de acceso inteligente para patios de exhibición, talleres y áreas de servicio con registro detallado de ingresos",
+        "Patrullaje preventivo en perímetros extensos de concesionarios y centros de distribución automotriz",
+        "Sistema de rondas digitales con geolocalización para garantizar la cobertura completa de todas las áreas",
+        "Integración con tecnología de cámaras, alarmas perimetrales y sensores de movimiento para protección multilayer"
+      ]
+    },
+    "issues": {
+      "heading": "Problemas que Resolvemos",
+      "items": [
+        "Robo de vehículos en patio de exhibición o áreas de almacenamiento temporal, protegiendo tu inventario de alto valor",
+        "Hurto de piezas de repuesto, herramientas especializadas y equipos electrónicos en talleres y centros de servicio",
+        "Accesos no autorizados de personas sospechosas que pueden representar riesgos para clientes o personal",
+        "Vandalismo y daños a infraestructura, vehículos en exhibición y equipamiento de trabajo"
+      ]
+    },
+    "stats": {
+      "heading": "GuardMan en Números",
+      "items": [
+        {
+          "value": "500+",
+          "label": "Guardias"
+        },
+        {
+          "value": "8+",
+          "label": "Años"
+        },
+        {
+          "value": "14",
+          "label": "Comunas"
+        },
+        {
+          "value": "24/7",
+          "label": "Monitoreo"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Seguridad Automotriz",
+      "items": [
+        {
+          "question": "¿Qué experiencia tiene GuardMan en seguridad para el sector automotriz?",
+          "answer": "Contamos con más de 8 años de experiencia protegiendo empresas del sector automotriz, incluyendo concesionarios de vehículos, talleres mecánicos, estacionamientos subterráneos y centros de distribución de autopartes. Nuestro conocimiento especializado nos permite implementar protocolos específicos para cada tipo de instalación automotriz, considerando factores como el flujo de vehículos, rotación de personal y manejo de inventario de alto valor en las 14 comunas de Santiago."
+        },
+        {
+          "question": "¿Cómo controlan el acceso de vehículos y personas a las instalaciones automotrices?",
+          "answer": "Implementamos sistemas de control de acceso que incluyen registro de patentes, validación de credenciales de empleados y visitantes, además de inspecciones visuales de vehículos. Nuestros guardias OS-10 están capacitados para identificar situaciones sospechosas antes de que representen una amenaza, aplicando protocolos de verificación que mantienen la fluidez del tránsito vehicular sin comprometer la seguridad de tus instalaciones."
+        },
+        {
+          "question": "¿Pueden adaptarse los servicios a horarios extendidos típicos de concesionarios y talleres?",
+          "answer": "Absolutamente, entendemos que el sector automotriz opera con horarios extendidos incluyendo turnos nocturnos y fines de semana. Diseñamos cuadrillas de guardias que se ajustan perfectamente a tus necesidades operativas, asegurando cobertura continua durante todas las horas de operación e incluyendo protocolos especiales para horarios de menor actividad donde el riesgo puede incrementarse."
+        },
+        {
+          "question": "¿Qué incluye el servicio de monitoreo 24/7 y cómo funciona la coordinación con los guardias?",
+          "answer": "Nuestro servicio de monitoreo incluye visualización en tiempo real de cámaras de seguridad, gestión de alarmas perimetrales, sensores de movimiento y botón de pánico. La central opera las 24 horas con operadores especializados que coordinan la respuesta inmediata ante cualquier incidente, comunicándose directamente con nuestros guardias en terreno y con las autoridades competentes según sea necesario."
+        },
+        {
+          "question": "¿Cómo es el proceso de cotización para servicios de seguridad automotriz?",
+          "answer": "El proceso comienza con una evaluación gratuita de tus instalaciones donde nuestros especialistas analizan vulnerabilidades, flujos de trabajo y necesidades específicas. Posteriormente elaboramos una propuesta personalizada que puede incluir guardias, sistemas electrónicos y monitoreo, ajustada a tu presupuesto y requerimientos de cobertura en las 14 comunas de Santiago donde operamos."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Proteja su Inversion Automotriz",
-      "button_text": "Solicitar Cotizacion Gratis"
+      "heading": "Protege tu Negocio Automotriz con Expertos Hoy Mismo",
+      "subheading": "Solicita una cotización personalizada sin compromiso y descubre cómo podemos adaptar nuestros servicios de seguridad a las necesidades específicas de tu empresa automotriz",
+      "button": "Cotizar Ahora"
+    },
+    "meta": {
+      "title": "Seguridad Automotriz OS-10 | Monitoreo 24/7 en Santiago",
+      "description": "Guardias OS-10 certificados para el sector automotriz en Santiago. Más de 8 años de experiencia, cobertura en 14 comunas y monitoreo 24/7."
     }
   }
 }

@@ -24,8 +24,8 @@ npm-debug.log*
 *.swp
 *.swo
 
-# Directus sync (generated files)
-src/data/services.json
-src/data/locations.json
-src/data/testimonials.json
-src/data/site-config.json
+# Wrangler local
+.wrangler/
+
+# Generated data (re-exported from CMS/D1)
+src/data/generated/

@@ -1,169 +1,91 @@
 {
   "slug": "guardias-de-seguridad/las-condes",
   "type": "combo",
-  "service": "guardias-de-seguridad",
-  "location": "las-condes",
   "version": 1,
-  "last_modified": "2026-04-22T14:13:24.809Z",
+  "last_modified": "2026-05-01T12:49:24.972Z",
   "seo": {
-    "title": "Guardias De Seguridad en Las Condes",
-    "description": "Servicio de guardias de seguridad profesional en Las Condes. Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente de Santiago.",
-    "keywords": [],
-    "canonical": "https://guardman.cl/servicios/guardias-de-seguridad/las-condes"
+    "title": "Guardias de Seguridad en Las Condes | Certificados OS-10 - GuardMan Chile",
+    "description": "Guardias de seguridad profesionales en Las Condes certificados OS-10. Cobertura 24/7, turnos flexibles y supervisión permanente. Cotiza sin costo y protege lo que más importa.",
+    "canonical": ""
   },
   "content": {
     "hero": {
-      "heading": "Guardias de Seguridad en Las Condes",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente de Santiago.",
-      "cta_text": "Cotizar en Las Condes",
-      "cta_link": "/cotizacion?service=guardias-de-seguridad&location=las-condes",
-      "image": "/images/service-guardias-de-seguridad.webp"
+      "heading": "Guardias de Seguridad en Las Condes | Protección Profesional 24/7",
+      "subheading": "GuardMan Chile: 8+ años protegiendo hogares, empresas y comunidades en Las Condes con guardias certificados OS-10 y cobertura ininterrumpida. Solicita tu cotización hoy.",
+      "image": "guardias-seguridad-las-condes-hero.webp"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Guardias De Seguridad",
-        "url": "/servicios/guardias-de-seguridad"
-      },
-      {
-        "label": "Las Condes",
-        "url": "/servicios/guardias-de-seguridad/las-condes"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Guardias de Seguridad en Las Condes?",
-      "content": "En GuardMan Chile somos especialistas en guardias de seguridad en Las Condes. Nuestra experiencia en el sector oriente de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Las Condes y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Guardias certificados OS-10 con capacitación continua",
-        "Monitoreo 24/7 desde nuestro centro de control propio",
-        "Respuesta inmediata ante emergencias con coordinación a Carabineros",
-        "Cobertura integral en toda la comuna",
-        "Informes de actividad diaria y reportes semanales",
-        "Esquemas de turnos adaptables: diurno, nocturno, 4x4, 6x1"
+      "heading": "Guardias de Seguridad Profesionales en Las Condes, Chile",
+      "paragraphs": [
+        "En Las Condes, una de las comunas más exclusivas de Santiago, la seguridad no es un lujo sino una necesidad. GuardMan Chile lleva más de 8 años proporcionando servicios de guardias de seguridad en Las Condes, respaldados por un equipo de más de 500 guardias certificados OS-10 y un centro de monitoreo disponible las 24 horas, los 365 días del año. Nuestra experiencia nos permite diseñar planes de seguridad personalizados que se adaptan a las necesidades específicas de cada cliente, ya sea una residencia familiar, un edificio corporativo o una empresa del retail.",
+        "A diferencia de empresas que ofrecen soluciones genéricas, en GuardMan Chile entendemos que Las Condes presenta desafíos únicos de seguridad. Por eso, nuestros guardias reciben capacitación especializada para handlear situaciones de alta complejidad, desde el control de acceso en edificios inteligentes hasta la gestión de incidentes en zonas comerciales de alto tráfico. Cada guardia es evaluado periódicamente para garantizar estándares de calidad consistency.",
+        "Nuestros servicios de guardias de seguridad en Las Condes incluyen cobertura completa: guardias fijos en portería, rondas perimetrales, control de eventos y supervisión remota. Además, operamos en 14 comunas de la Región Metropolitana, lo que nos permite ofrecer cobertura extendida a empresas con operaciones en múltiples sectores. La tranquilidad que buscas está a un paso: cotiza hoy y descubre por qué cientos de clientes confían en GuardMan Chile."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Las Condes",
-      "content": "",
-      "points": [
-        "residencias de lujo, embajadas, oficinas corporativas y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de accesos VIP, escoltas personales, monitoreo perimetral y CCTV de alta definición es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Las Condes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Por qué elegir GuardMan Chile para guardias de seguridad en Las Condes?",
+      "items": [
+        "Guardias certificados OS-10 con formación continua y actualizada según normativas vigentes de la Prefectura de Seguridad Privada",
+        "Cobertura 24/7 los 365 días del año con turnos rotativos (4x4, 6x1, 5x2) adaptados a tus necesidades operativas",
+        "Centro de monitoreo en tiempo real con comunicación directa con supervisores y coordinación con Carabineros",
+        "Más de 8 años de experiencia en seguridad privada con presencia establecida en Las Condes y 14 comunas de la RM",
+        "Rondas perimetrales preventivas en horarios programados para detectar irregularidades antes de que escalen",
+        "Control de acceso con registro de visitantes, vehículos y proveedores mediante protocolos estandarizados",
+        "Respuesta inmediata ante emergencias con protocolo de coordinación con fuerzas de orden y seguridad pública",
+        "Uniformes identificables y equipo de comunicación para garantizar presencia disuasoria efectiva"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Las Condes",
+      "heading": "Problemas de seguridad que nuestros guardias resuelven en Las Condes",
       "items": [
-        "residencias de lujo, embajadas, oficinas corporativas y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de accesos VIP, escoltas personales, monitoreo perimetral y CCTV de alta definición es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Las Condes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos y hurtos en residencias y edificios: La presencia visible de guardias certificados reduce significativamente los intentos de ingreso indebido y sustracción de bienes",
+        "Acceso no autorizado a condominos y oficinas: Controlamos quién entra y sale, verificando identidades y registrando cada visita para proteger a los residentes y trabajadores",
+        "Incidentes nocturnos y vecindades conflictivas: Nuestros guardias patrullan zonas de alto riesgo y responden ante situaciones sospechosas antes de que representen una amenaza real",
+        "Vandalismo y daños a la propiedad: La cobertura permanente disuade actos vandálicos y garantiza que tu propiedad esté protegida incluso en horarios inhábiles",
+        "Falta de control en eventos corporativos: Contamos con guardias especializados para eventos empresariales, asegurando la integridad de invitados y activos de la empresa",
+        "Emergencias no atendidas oportunamente: Nuestro centro de monitoreo recibe alertas en tiempo real y coordina la respuesta adecuada, incluyendo contacto con Carabineros y servicios de emergencia"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto cuesta un guardia de seguridad en Las Condes?",
-        "answer": "El precio depende de la cantidad de guardias, turnos y servicios adicionales. Ofrecemos cotizaciones personalizadas sin compromiso. Contáctanos para una evaluación gratuita."
-      },
-      {
-        "question": "¿Los guardias tienen certificación OS-10 vigente?",
-        "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 obligatoria y al día. Es un requisito legal que cumplimos estrictamente para su protección y la nuestra."
-      },
-      {
-        "question": "¿Tienen cobertura 24 horas?",
-        "answer": "Sí, ofrecemos servicio 24/7 los 365 días del año. Nuestro centro de monitoreo propio opera sin interrupciones y tenemos guardias de reemplazo disponibles."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas frecuentes sobre guardias de seguridad en Las Condes",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta un guardia de seguridad en Las Condes?",
+          "answer": "El valor del servicio de guardias de seguridad en Las Condes depende de varios factores: tipo de instalación (residencial, corporativa o comercial), cantidad de guardias requeridos, modalidad de turnos (diurno, nocturno o mixto), y si se necesita cobertura 24/7. En GuardMan Chile ofrecemos cotizaciones personalizadas sin costo, adaptadas al presupuesto y necesidades específicas de cada cliente. No trabajamos con precios estándar porque entendemos que cada proyecto de seguridad es único. Contáctanos y recibe una propuesta económica transparente sin compromiso."
+        },
+        {
+          "question": "¿Qué documentación deben tener los guardias de seguridad en Chile?",
+          "answer": "Todo guardia de seguridad en Chile debe contar con el certificado de formación OS-10 vigente, emitido por la Prefectura de Seguridad Privada (OS-10) de Carabineros. Este certificado acredita que el guardia ha completado la capacitación obligatoria y cumple con los requisitos legales para ejercer funciones de seguridad privada. Adicionalmente, debe poseer certificado de antecedentes limpio y credencial de la empresa inscrita ante la autoridad fiscalizadora. En GuardMan Chile, todos nuestros guardias cumplen estrictamente con estos requisitos y sus certificaciones están siempre actualizadas."
+        },
+        {
+          "question": "¿Puedo contratar guardias solo para turnos específicos en Las Condes?",
+          "answer": "Sí, en GuardMan Chile ofrecemos total flexibilidad en las modalidades de contratación. Puedes elegir entre turnos rotativos (4x4, 6x1, 5x2), turnos fijos diurnos o nocturnos, o cobertura 24/7 continua según tus necesidades. También proporcionamos guardias para eventos puntuales, reemplazos por vacaciones, o refuerzo en temporadas de alta demanda. La ventaja de trabajar con nosotros es que adaptamos la cobertura a tus operaciones, sin forzarte a pagar por servicios que no necesitas. Solicita tu cotización indicando los horarios y días que requieres."
+        },
+        {
+          "question": "¿Qué diferencia hay entre un guardia de seguridad y un conserje?",
+          "answer": "Aunque ambos roles pueden overlap en ciertas funciones básicas como el control de acceso, un guardia de seguridad certificado tiene formación especializada en prevención de incidentes, manejo de emergencias, técnicas de disuasión y coordinación con fuerzas de orden. El guardia OS-10 está entrenado para identificar comportamientos sospechosos, responder ante situaciones de riesgo y ejecutar protocolos de seguridad establecidos. En contraste, un conserje general se enfoca principalmente en tareas de limpieza, recepción y mantenimiento básico. Para protecciones efectivas en zonas como Las Condes, donde los riesgos pueden ser más sofisticados, recomendamos siempre contar con guardias certificados."
+        },
+        {
+          "question": "¿Cómo funciona la supervisión de guardias en Las Condes?",
+          "answer": "En GuardMan Chile implementamos un sistema de supervisión multicapa que garantiza el control permanente de nuestros guardias. Esto incluye rondas de inspección por parte de supervisores de zona, comunicación radial constante con nuestro centro de monitoreo, reportes digitales de cada turno (novedades, rondas realizadas, incidencias), y auditorías sorpresa para verificar el cumplimiento de protocolos. Además, nuestros supervisores están disponibles para coordinar cualquier situación de emergencia en tiempo real. Este enfoque nos permite detectar y corregir desvíos antes de que afecten la seguridad de tu instalación."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Las Condes",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Las Condes",
-      "button_link": "/cotizacion?service=guardias-de-seguridad&location=las-condes"
+      "heading": "Protege tu hogar o negocio en Las Condes con guardias de seguridad profesionales",
+      "subheading": "En GuardMan Chile queremos conocer tu proyecto de seguridad. Completa el formulario de cotización y recibe una asesoría personalizada sin costo, con propuestas adaptadas a tus necesidades y presupuesto. Nuestro equipo se contactará en menos de 24 horas hábiles.",
+      "button": "Solicitar Cotización Gratuita",
+      "image": "guardias-seguridad-las-condes-cta.webp"
+    },
+    "meta": {
+      "title": "Guardias de Seguridad en Las Condes | Certificados OS-10 - GuardMan Chile",
+      "description": "Guardias de seguridad profesionales en Las Condes certificados OS-10. Cobertura 24/7, turnos flexibles y supervisión permanente. Cotiza sin costo y protege lo que más importa."
     }
   },
-  "related_content": {
-    "related_services": [
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "Cctv Videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "Control De Accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      },
-      {
-        "slug": "escoltas-privados",
-        "title": "Escoltas Privados",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/escoltas-privados.jpg"
-      }
-    ],
-    "nearby_locations": [
-      {
-        "slug": "seguridad-la-pintana",
-        "title": "Seguridad La Pintana",
-        "zone": "oriente",
-        "reason": "Zona oriente similar"
-      },
-      {
-        "slug": "seguridad-la-reina",
-        "title": "Seguridad La Reina",
-        "zone": "oriente",
-        "reason": "Zona oriente similar"
-      },
-      {
-        "slug": "seguridad-lampa",
-        "title": "Seguridad Lampa",
-        "zone": "oriente",
-        "reason": "Zona oriente similar"
-      }
-    ],
-    "upsell_services": [
-      {
-        "slug": "escoltas-privados",
-        "title": "Escoltas Privados",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "Cctv Videovigilancia",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
-    "quality_score": 80,
-    "published": false
+    "quality_score": 0,
+    "published": true
   }
 }

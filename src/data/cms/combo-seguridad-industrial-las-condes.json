@@ -1,96 +1,84 @@
 {
   "sections": {
     "hero": {
-      "heading": "Seguridad Industrial en Las Condes",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente de Santiago.",
-      "cta_text": "Cotizar en Las Condes",
-      "cta_link": "/cotizacion?service=seguridad-industrial&location=las-condes",
-      "image": "/images/service-seguridad-industrial.webp"
+      "heading": "Seguridad Industrial en Las Condes: Protección Profesional para tu Empresa",
+      "subheading": "Guardias OS-10 certificados, monitoreo 24/7 y cobertura las 365 días del año. Protegemos activos industriales y comerciales con presencia física disuasoria y tecnología de vigilancia avanzada.",
+      "image": "/images/hero-seguridad-industrial-las-condes.webp"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Seguridad Industrial",
-        "url": "/servicios/seguridad-industrial"
-      },
-      {
-        "label": "Las Condes",
-        "url": "/servicios/seguridad-industrial/las-condes"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Seguridad Industrial en Las Condes?",
-      "content": "En GuardMan Chile somos especialistas en seguridad industrial en Las Condes. Nuestra experiencia en el sector oriente de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Las Condes y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Guardias especializados en entornos industriales",
-        "Control de acceso a bodegas y áreas restringidas",
-        "Monitoreo perimetral y vigilancia móvil",
-        "Prevención de robos de mercadería y equipos",
-        "Inspecciones de seguridad y informesdaily",
-        "Coordinación con committees de higiene y seguridad"
+      "heading": "Expertos en Seguridad Industrial en Las Condes con más de 8 Años de Experiencia",
+      "paragraphs": [
+        "En GuardMan Chile comprendemos que la seguridad industrial en Las Condes requiere soluciones integralesadaptadas a las necesidades específicas de cada empresa. Nuestra experiencia de más de 8 años nos ha permitido desarrollar protocolos de protección efectiva para instalaciones industriales, bodegas, centros comerciales y empresas del sector tecnológico ubicados en esta exclusiva comuna de Santiago.",
+        "Contamos con más de 500 guardias de seguridad certificados bajo la normativa OS-10, quienes reciben capacitación continua para garantizar una respuesta profesional ante cualquier incidente. Nuestro centro de monitoreo opera las 24 horas, los 365 días del año, coordinando vigilancia perimetral, control de accesos y rondas preventivas que aseguran la tranquilidad de tu operación industrial.",
+        "La seguridad industrial en Las Condes no solo implica proteger bienes materiales, sino también proteger a tu personal, visitantes y activos informasi}. En GuardMan Chile implementamos soluciones personalizadas que consideran la normativa chilena vigente en prevención de riesgos y seguridad privada, cumpliendo con todos los estándares establecidos por Carabineros de Chile a través de la Prefectura OS-10."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Las Condes",
-      "content": "",
-      "points": [
-        "residencias de lujo, embajadas, oficinas corporativas y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de accesos VIP, escoltas personales, monitoreo perimetral y CCTV de alta definición es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Las Condes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de Nuestro Servicio de Seguridad Industrial en Las Condes",
+      "items": [
+        "Guardias de seguridad certificados OS-10 con formación continua en prevención y respuesta ante emergencias",
+        "Control de accesos con registro digital de ingresos y salidas de personal, contractors y visitantes",
+        "Monitoreo de CCTV las 24 horas desde nuestro centro de operaciones con análisis de video inteligente",
+        "Rondas preventivas programadas y aleatorias en áreas perimetrales e interiores de instalaciones",
+        "Gestión de emergencias con protocolos coordinados con Carabineros y servicios de emergencia",
+        "Vigilancia perimetral con tecnología de sensores de movimiento y barreras electrónicas",
+        "Reportes de incidentes en tiempo real a través de nuestra plataforma digital de gestión",
+        "Supervisión permanente por equipo de profesionales con experiencia en seguridad empresarial",
+        "Integración con sistemas de alarma y detección de intrusos para respuesta inmediata",
+        "Cobertura en las 14 comunas del área metropolitana, incluyendo Las Condes, Vitacura, Lo Barnechea y Huechuraba"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Las Condes",
+      "heading": "Problemas que Resolvemos con Seguridad Industrial en Las Condes",
       "items": [
-        "residencias de lujo, embajadas, oficinas corporativas y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de accesos VIP, escoltas personales, monitoreo perimetral y CCTV de alta definición es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Las Condes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos y hurtos en instalaciones industriales y centros de distribución durante horarios no laborales",
+        "Acceso no autorizado de personas ajenas a las instalaciones, protegiendo información sensible y activos de valor",
+        "Incidentes de violencia laboral y conflictos internos que requieren presencia de seguridad profesional",
+        "Vandalismo y daños a infraestructura caused por terceros no autorizados en el perímetro industrial",
+        "Pérdida de productividad por preocupaciones del personal respecto a su seguridad en el entorno laboral",
+        "Incumplimiento de protocolos de seguridad que pueden generar multas y sanciones de organismos fiscalizadores",
+        "Falta de disuasión efectiva ante intentos de robo o ingreso irregular a bodegas y áreas de almacenamiento",
+        "Necesidad de un socio estratégico en seguridad que entienda las particularidades del sector industrial chileno"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Conocen las normas de seguridad industrial?",
-        "answer": "Sí, nuestros guardias reciben capacitación en prevención de riesgos, normativa OSHA y protocolos de emergencia específicos para entornos industriales."
-      },
-      {
-        "question": "¿Cómo controlan el acceso a bodegas?",
-        "answer": "Implementamos puntos de control con registro de ingresos, verificación de identidad, inspección de vehículos y control de mercadería que entra y sale."
-      },
-      {
-        "question": "¿报告an incidentes de seguridad?",
-        "answer": "Sí, entregamos reportes diarios de actividad, incidentes y métricas de seguridad. También hacemos análisis semanales y mensuales de tendencias."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Seguridad Industrial en Las Condes",
+      "items": [
+        {
+          "question": "¿Qué incluye el servicio de seguridad industrial en Las Condes?",
+          "answer": "Nuestro servicio de seguridad industrial en Las Condes incluye control de accesos con registro digital, rondas preventivas diurnas y nocturnas, vigilancia perimetral con monitoreo CCTV las 24 horas, gestión de incidentes en tiempo real, coordinación con fuerzas de seguridad pública, y reportes periódicos de actividad. Todos nuestros guardias cuentan con certificación OS-10 vigente y capacitación en prevención de riesgos laborales."
+        },
+        {
+          "question": "¿Cuánto cuesta el servicio de seguridad industrial en Las Condes?",
+          "answer": "El precio del servicio de seguridad industrial en Las Condes depende de factores como el número de guardias requeridos, turnos de cobertura, tecnología de vigilancia a implementar, y características específicas de las instalaciones a proteger. Para obtener una cotización personalizada, recomendamos solicitar una evaluación gratuita de sus necesidades de seguridad. En GuardMan Chile adaptamos nuestras tarifas a la realidad de cada empresa."
+        },
+        {
+          "question": "¿Cómo contratar guardias de seguridad OS-10 certificados en Las Condes?",
+          "answer": "Para contratar guardias de seguridad certificados en Las Condes, debe asegurarse de que la empresa proveedora esté acreditada por Carabineros de Chile bajo la normativa OS-10. En GuardMan Chile todos nuestros guardias cuentan con certificación vigente, registros al día y formación continua. El proceso de contratación incluye una evaluación de necesidades, diseño del plan de seguridad y implementación en un plazo mínimo de 24 a 48 horas."
+        },
+        {
+          "question": "¿Qué normativa regula los servicios de seguridad industrial en Chile?",
+          "answer": "Los servicios de seguridad industrial en Chile están regulados por la Ley 21.659 que/modifica la ley 20.813 sobre seguridad privada, además de normativas del Ministerio del Trabajo y Prevención de Riesgos. La Prefectura de Seguridad Privada OS-10 de Carabineros es el organismo fiscalizador que acredita y supervisa a las empresas del rubro. En GuardMan Chile cumplimos estrictamente con todas estas regulaciones y mantenemos nuestros registros siempre actualizados."
+        },
+        {
+          "question": "¿Pueden adaptarse los servicios de seguridad a las necesidades específicas de mi industria?",
+          "answer": "Sí, en GuardMan Chile desarrollamos planes de seguridad personalizados según el rubro industrial de cada empresa. Ya sea que necesites protección para una planta de manufactura, centro de datos, bodega de almacenamiento, o instalaciones tecnológicas, nuestros especialistas evalúan los riesgos específicos y diseñan protocolos de vigilancia que se ajusten a tus operaciones, turnos de trabajo y normativas sectoriales aplicables."
+        },
+        {
+          "question": "¿Qué tiempo de respuesta tienen ante una emergencia de seguridad?",
+          "answer": "Nuestro tiempo de respuesta ante incidentes de seguridad es inmediato gracias a nuestro centro de monitoreo operativo las 24 horas. Al detectar cualquier anomalía, nuestros guardias en terreno se movilizan de inmediato mientras se coordina la comunicación con Carabineros si es necesario. Además, nuestros supervisores zonales pueden llegar a cualquier instalación en Las Condes en un tiempo promedio inferior a 15 minutos."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Las Condes",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Las Condes",
-      "button_link": "/cotizacion?service=seguridad-industrial&location=las-condes"
+      "heading": "Protege tu Empresa Industrial con Especialistas en Las Condes",
+      "subheading": "Solicita una evaluación gratuita de seguridad y descubre cómo podemos adaptar nuestros servicios a las necesidades específicas de tu industria. Con GuardMan Chile obtienes la tranquilidad de contar con un socio estratégico certificado y con experiencia comprobable.",
+      "button": "Cotizar Seguridad Industrial en Las Condes",
+      "image": "/images/cta-seguridad-industrial-las-condes.webp"
+    },
+    "meta": {
+      "title": "Seguridad Industrial Las Condes | Guardias OS-10 y Monitoreo 24/7",
+      "description": "Empresa líder en seguridad industrial en Las Condes, Chile. Guardias OS-10 certificados, monitoreo CCTV 24/7, control de accesos y rondas preventivas. Cotiza ahora."
     }
   }
 }

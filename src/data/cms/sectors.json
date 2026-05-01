@@ -9,7 +9,9 @@
       "status": "active",
       "sort": 8,
       "created_at": "2026-04-22 17:30:39",
-      "updated_at": "2026-04-22 17:30:39"
+      "updated_at": "2026-04-22 17:30:39",
+      "hero_image": "/images/s4-thumbnail.webp",
+      "issues": "Robo de vehículos en exhibición y estacionamientos,Falta de control de llaves y acceso a unidades,Daños vandálicos sin cobertura de cámaras"
     },
     {
       "id": 1,
@@ -20,7 +22,9 @@
       "status": "active",
       "sort": 1,
       "created_at": "2026-04-14 14:56:52",
-      "updated_at": "2026-04-14 14:56:52"
+      "updated_at": "2026-04-14 14:56:52",
+      "hero_image": "/images/s4-thumbnail.webp",
+      "issues": "Hurto en tiendas y locales comerciales por falta de vigilancia,Accesos sin control en horarios de alta afluencia,Falta de cámaras en zonas de almacenamiento y bodegas"
     },
     {
       "id": 7,
@@ -31,7 +35,9 @@
       "status": "active",
       "sort": 7,
       "created_at": "2026-04-14 14:56:52",
-      "updated_at": "2026-04-14 14:56:52"
+      "updated_at": "2026-04-14 14:56:52",
+      "hero_image": "/images/sector-industrial.webp",
+      "issues": "Robo de materiales y herramientas en horarios nocturnos,Ingresos no autorizados por perímetros sin cerramiento,Falta de vigilancia en obras paralizadas"
     },
     {
       "id": 5,
@@ -42,7 +48,9 @@
       "status": "active",
       "sort": 5,
       "created_at": "2026-04-14 14:56:52",
-      "updated_at": "2026-04-14 14:56:52"
+      "updated_at": "2026-04-14 14:56:52",
+      "hero_image": "/images/hero-home.webp",
+      "issues": "Ingresos de personas ajenas al establecimiento sin control,Falta de protocolos de emergencia escolar,Robo de equipos y materiales en horarios no lectivos"
     },
     {
       "id": 6,
@@ -53,7 +61,9 @@
       "status": "active",
       "sort": 6,
       "created_at": "2026-04-14 14:56:52",
-      "updated_at": "2026-04-14 14:56:52"
+      "updated_at": "2026-04-14 14:56:52",
+      "hero_image": "/images/s4-thumbnail.webp",
+      "issues": "Falta de control de aforo y aglomeraciones,Accesos no supervisados en recintos masivos,Emergencias sin protocolos de evacuación claros"
     },
     {
       "id": 9,
@@ -64,7 +74,9 @@
       "status": "active",
       "sort": 9,
       "created_at": "2026-04-22 17:30:39",
-      "updated_at": "2026-04-22 17:30:39"
+      "updated_at": "2026-04-22 17:30:39",
+      "hero_image": "/images/hero-home.webp",
+      "issues": "Ingresos de personas ajenas a zonas de huéspedes,Robo de equipaje y objetos de valor en áreas comunes,Falta de seguridad discreta en recepción y pasillos"
     },
     {
       "id": 2,
@@ -75,7 +87,9 @@
       "status": "active",
       "sort": 2,
       "created_at": "2026-04-14 14:56:52",
-      "updated_at": "2026-04-14 14:56:52"
+      "updated_at": "2026-04-14 14:56:52",
+      "hero_image": "/images/sector-industrial.webp",
+      "issues": "Robo de materiales y maquinaria en horarios nocturnos,Ingresos no autorizados por perímetros extensos,Falta de protocolos de emergencia y evacuación"
     },
     {
       "id": 3,
@@ -86,7 +100,9 @@
       "status": "active",
       "sort": 3,
       "created_at": "2026-04-14 14:56:52",
-      "updated_at": "2026-04-14 14:56:52"
+      "updated_at": "2026-04-14 14:56:52",
+      "hero_image": "/images/sector-residencial.webp",
+      "issues": "Ingresos de desconocidos a condominios y edificios,Robo de vehículos y especies en estacionamientos,Falta de patrullaje nocturno en pasajes y áreas comunes"
     },
     {
       "id": 4,
@@ -97,7 +113,9 @@
       "status": "active",
       "sort": 4,
       "created_at": "2026-04-14 14:56:52",
-      "updated_at": "2026-04-14 14:56:52"
+      "updated_at": "2026-04-14 14:56:52",
+      "hero_image": "/images/nosotros_seccion.webp",
+      "issues": "Acceso no autorizado a áreas restringidas,Agresiones al personal médico y de atención,Robo de insumos y medicamentos de alto valor"
     }
   ]
 }

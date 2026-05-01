@@ -2,115 +2,107 @@
   "slug": "educacion",
   "type": "sector",
   "version": 1,
-  "last_modified": "2026-04-22T14:59:39.565Z",
+  "last_modified": "2026-04-21 01:55:10",
   "seo": {
-    "title": "Seguridad para Instituciones Educativas Chile | GuardMan Chile",
-    "description": "Guardias OS-10 certificados y sistemas de monitoreo 24/7 para colegios y universidades. Solicita cotización gratuita para tu institución educativa.",
-    "canonical": "https://guardman.cl/sectores/educacion"
+    "title": "Seguridad para Instituciones Educacionales | GuardMan Chile",
+    "description": "Guardias certificados OS-10 para colegios, universidades y academias en Chile. Protección profesional con experiencia en el sector educación. Cotiza gratis.",
+    "canonical": ""
   },
   "content": {
     "hero": {
-      "heading": "Seguridad para Colegios y Universidades en Chile",
-      "subheading": "Protección integral para instituciones educativas con guardias certificados y tecnología de monitoreo 24/7",
-      "image": "/images/og-default.webp"
+      "heading": "Seguridad Profesional para Instituciones Educacionales en Chile",
+      "subheading": "Guardias certificados OS-10 con experiencia en el sector educación. Protección integral para colegios, universidades, academias y centros de formación. Cotiza ahora.",
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Sectores",
-        "url": "/sectores"
-      },
-      {
-        "label": "Educacion",
-        "url": "/sectores/educacion"
-      }
-    ],
     "intro": {
-      "title": "Seguridad Confiable para el Sector Educación",
-      "content": "En GuardMan Chile entendemos que la seguridad en instituciones educativas va más allá de proteger bienes materiales. Se trata de crear espacios donde estudiantes, docentes y personal administrativo puedan desarrollarse en un ambiente seguro y tranquilo. Con más de 8 años de experiencia protegiendo colegios, universidades e institutos en la Región Metropolitana, somos el socio estratégico que tu institución necesita.\n\nNuestros guardias OS-10 certificados están capacitados específicamente para el contexto educativo, manejando desde protocolos de acceso hasta situaciones de emergencia con protocolos adaptés a ambientes con menores de edad. Contamos con tecnología de CCTV y control de accesos que se integran perfectamente con las rutinas diarias de tu institución.",
-      "image": "/images/sector-intro.jpg"
-    },
-    "features": {
-      "title": "Servicios de Seguridad para Instituciones Educativas",
-      "items": [
-        "Guardias especializados en protocolos educativos y manejo de menores",
-        "Sistema de CCTV con monitoreo remoto 24/7 desde nuestro centro de operaciones",
-        "Control de accesos con registro biométrico y tickets de visitante",
-        "Patrullaje preventivo en perimetros y áreas comunes",
-        "Escoltas para actividades académicas y eventos institucionales",
-        "Plan de emergencia y evacuación diseñado para cada establecimiento"
+      "heading": "Protección especializada para el sector educación en Chile",
+      "paragraphs": [
+        "Las instituciones educacionales en Chile enfrentan desafíos únicos en materia de seguridad. La protección de estudiantes, personal administrativo y visitantes requiere guardias con formación especializada en manejo de emergencias y protocols de prevención adaptados a entornos educativos.",
+        "En GuardMan Chile comprendemos que cada establecimiento educacional tiene necesidades distintas. Nuestros servicios de seguridad para el sector educación incluyen guardias certificados OS-10 con experiencia en contención, primeros auxilios y coordinación con autoridades.",
+        "Implementamos planes de seguridad personalizados que consideran la Arquitectura del recinto, flujos de entrada y salida, horarios de clases y actividades extracurriculares. Nuestro objetivo es crear ambientes seguros que favorezcan el aprendizaje y el desarrollo integral de los estudiantes."
       ]
     },
-    "stats": [
-      {
-        "value": "45+",
-        "label": "Colegios y universidades protegidas"
-      },
-      {
-        "value": "120+",
-        "label": "Guardias especializados en sector educación"
-      },
-      {
-        "value": "8+",
-        "label": "Años de experiencia protegiendo instituciones"
-      },
-      {
-        "value": "14",
-        "label": "Comunas con cobertura en RM"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Pueden los guardias manejar situaciones con estudiantes menores de edad?",
-        "answer": "Sí, todos nuestros guardias reciben capacitación específica en manejo de menores y protocolos de comunicación con padres y apoderados, siempre bajo protocolos que priorizan la seguridad y el bienestar de los estudiantes."
-      },
-      {
-        "question": "¿Cómo controlan el acceso de visitantes sin generar filas en horas puntas?",
-        "answer": "Implementamos sistemas de pre-registro de visitas, tickets temporales y puntos de acceso organizados que permiten flujo rápido sin comprometer la seguridad del establecimiento."
-      },
-      {
-        "question": "¿Qué pasa durante eventos escolares como ceremonias de graduación?",
-        "answer": "Gestionamos la seguridad del evento según la cantidad de asistentes, implementando refuerzos de personal, control de accesos por sectores y coordinación con las autoridades del establecimiento."
-      },
-      {
-        "question": "¿Pueden integrarse con los sistemas de seguridad ya existentes del colegio?",
-        "answer": "Absolutamente, evaluamos la infraestructura existente y nos integramos con sistemas de CCTV, alarmas y control de accesos, optimizando los recursos ya disponibles en la institución."
-      }
-    ],
+    "features": {
+      "heading": "Características de nuestro servicio de seguridad educacional",
+      "items": [
+        "Guardias con certificación OS-10 vigente y formación continua en protocolos educativos",
+        "Control de accesos con registro de visitantes, estudiantes y personal externo",
+        "Rondas perimetrales programadas según horarios escolares y actividades",
+        "Monitoreo 24/7 desde nuestro centro de operaciones con comunicación directa",
+        "Coordinación con Carabineros y emergencias para respuestas inmediatas",
+        "Reportes diarios de novedades y accidentes para transparencia total",
+        "Sistemas de comunicación internos con botones de pánico y radios push-to-talk",
+        "Gestión de situaciones de emergencia con protocolos específicos para educación",
+        "Presencia disuasoria preventiva que reduce intentos de ingreso no autorizado",
+        "Personal capacitado en primeros auxilios y manejo de crisis en espacios educativos"
+      ]
+    },
+    "issues": {
+      "heading": "Desafíos de seguridad que enfrentan las instituciones educativas",
+      "items": [
+        "Ingresos no autorizados de personas ajenas al establecimiento educacional",
+        "Robos de equipamiento tecnológico como computadores y proyectores",
+        "Conflictos entre estudiantes que pueden escalar a situaciones de riesgo",
+        "Vandalismo en instalaciones como laboratorios, bibliotecas y áreas deportivas",
+        "Necesidad de proteger zonas de alto valor como salas de servidores y oficinas administrativas",
+        "Control de flujo durante horarios de entrada y salida con alto volumen de personas",
+        "Seguridad en eventos escolares como actos, ceremonias y actividades deportivas",
+        "Protección perimetral en campuses extensos con múltiples accesos"
+      ]
+    },
+    "stats": {
+      "heading": "Números que respaldan nuestra experiencia en seguridad educacional",
+      "items": [
+        {
+          "label": "Instituciones educacionales protegidas",
+          "value": "+45"
+        },
+        {
+          "label": "Guardias operativos en el sector educación",
+          "value": "180+"
+        },
+        {
+          "label": "Años de experiencia en entornos educativos",
+          "value": "8+"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas frecuentes sobre seguridad para instituciones educativas",
+      "items": [
+        {
+          "question": "¿Qué tipo de guardias proporcionan para colegios y escuelas?",
+          "answer": "Contamos con guardias certificados OS-10 con formación específica para entornos educativos. Nuestro personal está entrenado en control de accesos, manejo de emergencias con menores presentes, primeros auxilios básicos y coordinación con personal docente. Ofrecemos perfiles tanto para vigilancia perimetral como para control de ingresos principales."
+        },
+        {
+          "question": "¿Cómo se adaptan los horarios de seguridad a los calendarios escolares?",
+          "answer": " Diseñamos planes de rotación que consideran el calendario académico completo: horarios de entrada y salida, recreos, almuerzos, actividades extraescolares y vacaciones. Durante períodos de menor actividad, podemos ajustar la cantidad de guardias sin comprometer la seguridad perimetral."
+        },
+        {
+          "question": "¿Qué cobertura ofrecen para universidades con múltiples campus?",
+          "answer": "Tenemos capacidad de desplegar guardias en múltiples ubicaciones simultáneamente, gestionados desde nuestro centro de monitoreo unificado. Esto permite una respuesta coordinada ante incidentes y consistencia en los protocolos de seguridad entre facultades o campus distintos."
+        },
+        {
+          "question": "¿Los guardias pueden manejar situaciones de emergencia con estudiantes?",
+          "answer": "Sí, todo nuestro personal recibe capacitación en manejo de crisis con protocolos específicos para entornos educativos. Esto incluye contención de conflictos, evacuación ordenada, primeros auxilios y comunicación inmediata con emergencias. Priorizamos siempre la integridad de los estudiantes."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu Comunidad Educativa con GuardMan",
-      "button_text": "Solicitar evaluación sin compromiso",
-      "button_link": "/cotizacion"
+      "heading": "Protege tu institución educacional con GuardMan Chile",
+      "subheading": "Cotiza nuestro servicio de seguridad para el sector educación. Guardias certificados OS-10 con experiencia en colegios, universidades y centros de formación.",
+      "button": "Solicitar cotización",
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200"
+    },
+    "meta": {
+      "title": "Seguridad para Instituciones Educacionales | GuardMan Chile",
+      "description": "Guardias certificados OS-10 para colegios, universidades y academias en Chile. Protección profesional con experiencia en el sector educación. Cotiza gratis."
     }
   },
-  "related_content": {
-    "related_services": [
-      {
-        "slug": "auditoria-seguridad",
-        "title": "auditoria-seguridad",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/auditoria-seguridad.jpg"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "cctv-videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "control-de-accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
     "quality_score": 0,
-    "published": false
+    "published": true
   }
 }

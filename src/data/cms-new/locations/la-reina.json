@@ -2,39 +2,27 @@
   "slug": "la-reina",
   "type": "location",
   "version": 1,
-  "last_modified": "2026-04-22T14:59:39.546Z",
+  "last_modified": "2026-04-15 14:27:23",
   "seo": {
     "title": "Seguridad Privada La Reina | Guardias 24/7 | GuardMan Chile",
     "description": "Guardias de seguridad certificados OS-10 en La Reina. Servicio 24/7, monitoreo y cobertura total en todos los sectores.",
-    "canonical": "https://guardman.cl/ubicaciones/la-reina"
+    "canonical": ""
   },
   "content": {
     "hero": {
       "heading": "Seguridad Privada en La Reina | Guardias 24/7",
       "subheading": "Protege tu hogar, empresa y familia con guardias certificados OS-10. Coverage total en todos los sectores de La Reina.",
-      "image": "/images/og-default.webp"
+      "cta_text": "Solicitar Cotización Gratis"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Ubicaciones",
-        "url": "/ubicaciones"
-      },
-      {
-        "label": "La reina",
-        "url": "/ubicaciones/la-reina"
-      }
-    ],
     "intro": {
-      "title": "Protección Confiable en La Reina",
-      "content": "En GuardMan Chile somos la empresa de seguridad privada líder en La Reina, ofreciendo soluciones integrales para hogares, empresas y comunidades. Con más de 8 años de experiencia y 500+ guardias certificados OS-10, garantizamos tranquilidad las 24 horas del día.\n\nNuestro centro de monitoreo propio y respuesta inmediata nos permiten reaccionar ante cualquier incidente en el menor tiempo posible. Trabajamos en todos los sectores de La Reina: La Reina Alta, La Reina Baja, sector de Av. General Ossa, Av. Chile-España, Sector Osvaldo Marín y zonas aledañas.",
-      "image": "/images/location-intro.jpg"
+      "heading": "Protección Confiable en La Reina",
+      "paragraphs": [
+        "En GuardMan Chile somos la empresa de seguridad privada líder en La Reina, ofreciendo soluciones integrales para hogares, empresas y comunidades. Con más de 8 años de experiencia y 500+ guardias certificados OS-10, garantizamos tranquilidad las 24 horas del día.",
+        "Nuestro centro de monitoreo propio y respuesta inmediata nos permiten reaccionar ante cualquier incidente en el menor tiempo posible. Trabajamos en todos los sectores de La Reina: La Reina Alta, La Reina Baja, sector de Av. General Ossa, Av. Chile-España, Sector Osvaldo Marín y zonas aledañas."
+      ]
     },
     "features": {
-      "title": "Nuestros Servicios en La Reina",
+      "heading": "Nuestros Servicios en La Reina",
       "items": [
         "Guardias de seguridad las 24 horas para hogares y empresas",
         "Instalación y monitoreo de CCTV con cámaras en tiempo real",
@@ -44,107 +32,72 @@
         "Seguridad para eventos y actividades especiales"
       ]
     },
-    "stats": [
-      {
-        "value": "8+",
-        "label": "Años en el mercado"
-      },
-      {
-        "value": "500+",
-        "label": "Guardias certificados OS-10"
-      },
-      {
-        "value": "120+",
-        "label": "Clientes satisfechos en La Reina"
-      },
-      {
-        "value": "Inmediato",
-        "label": "Tiempo de respuesta"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cubren toda la comuna de La Reina?",
-        "answer": "Sí, cubrimos todos los sectores de La Reina incluyendo La Reina Alta, La Reina Baja, Sector Osvaldo Marín, sector de Av. General Ossa y zonas aledañas."
-      },
-      {
-        "question": "¿Qué certificaciones tienen sus guardias?",
-        "answer": "Todos nuestros guardias están certificados OS-10, la certificación oficial requerida en Chile para guardias de seguridad privada."
-      },
-      {
-        "question": "¿Ofrecen planes para casas y departamentos?",
-        "answer": "Sí, tenemos planes personalizados para residences, comunidades de vecinos y empresas. Contáctanos para una cotización sin compromiso."
-      },
-      {
-        "question": "¿Cuál es el tiempo de respuesta ante emergencias?",
-        "answer": "Contamos con tiempo de respuesta inmediata y centro de monitoreo 24/7 que gestiona cualquier incidente en el menor tiempo posible."
-      }
-    ],
+    "issues": {
+      "heading": "Problemas de Seguridad que Resolvemos",
+      "items": [
+        "Robos en viviendas y edificios residenciales",
+        "Robo de vehículos y accesorios en calles y estacionamientos",
+        "Delincuencia y vandalism en espacios públicos y plazas",
+        "Falta de vigilancia efectiva en sectores residenciales",
+        "Seguridad ineficiente en empresas y locales comerciales"
+      ]
+    },
+    "stats": {
+      "heading": "Números que Respaldan Nuestra Experiencia",
+      "items": [
+        {
+          "label": "Años en el mercado",
+          "value": "8+"
+        },
+        {
+          "label": "Guardias certificados OS-10",
+          "value": "500+"
+        },
+        {
+          "label": "Clientes satisfechos en La Reina",
+          "value": "120+"
+        },
+        {
+          "label": "Tiempo de respuesta",
+          "value": "Inmediato"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Seguridad en La Reina",
+      "items": [
+        {
+          "question": "¿Cubren toda la comuna de La Reina?",
+          "answer": "Sí, cubrimos todos los sectores de La Reina incluyendo La Reina Alta, La Reina Baja, Sector Osvaldo Marín, sector de Av. General Ossa y zonas aledañas."
+        },
+        {
+          "question": "¿Qué certificaciones tienen sus guardias?",
+          "answer": "Todos nuestros guardias están certificados OS-10, la certificación oficial requerida en Chile para guardias de seguridad privada."
+        },
+        {
+          "question": "¿Ofrecen planes para casas y departamentos?",
+          "answer": "Sí, tenemos planes personalizados para residences, comunidades de vecinos y empresas. Contáctanos para una cotización sin compromiso."
+        },
+        {
+          "question": "¿Cuál es el tiempo de respuesta ante emergencias?",
+          "answer": "Contamos con tiempo de respuesta inmediata y centro de monitoreo 24/7 que gestiona cualquier incidente en el menor tiempo posible."
+        }
+      ]
+    },
     "cta": {
-      "headline": "¿Necesitas seguridad en La Reina?",
-      "button_text": "Solicitar Cotización",
-      "button_link": "/cotizacion"
+      "heading": "¿Necesitas seguridad en La Reina?",
+      "subheading": "Contáctanos hoy y recibe una cotización personalizada sin compromiso. Nuestros expertos evaluarán tus necesidades.",
+      "button": "Solicitar Cotización"
+    },
+    "meta": {
+      "title": "Seguridad Privada La Reina | Guardias 24/7 | GuardMan Chile",
+      "description": "Guardias de seguridad certificados OS-10 en La Reina. Servicio 24/7, monitoreo y cobertura total en todos los sectores."
     }
   },
-  "related_content": {
-    "nearby_locations": [
-      {
-        "slug": "conchali",
-        "title": "Conchali",
-        "excerpt": "Ubicación con cobertura de seguridad",
-        "image": "/images/ubicaciones/conchali.jpg"
-      },
-      {
-        "slug": "huechuraba",
-        "title": "Huechuraba",
-        "excerpt": "Ubicación con cobertura de seguridad",
-        "image": "/images/ubicaciones/huechuraba.jpg"
-      },
-      {
-        "slug": "la-pintana",
-        "title": "La Pintana",
-        "excerpt": "Ubicación con cobertura de seguridad",
-        "image": "/images/ubicaciones/la-pintana.jpg"
-      }
-    ],
-    "related_services": [
-      {
-        "slug": "auditoria-seguridad",
-        "title": "auditoria-seguridad",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/auditoria-seguridad.jpg"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "cctv-videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "control-de-accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      }
-    ],
-    "upsell_services": [
-      {
-        "slug": "auditoria-seguridad",
-        "title": "auditoria-seguridad",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "cctv-videovigilancia",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
     "quality_score": 0,
-    "published": false
+    "published": true
   }
 }

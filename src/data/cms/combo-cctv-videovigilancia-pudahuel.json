@@ -1,96 +1,83 @@
 {
   "sections": {
     "hero": {
-      "heading": "CCTV y Videovigilancia en Pudahuel",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector poniente de Santiago.",
-      "cta_text": "Cotizar en Pudahuel",
-      "cta_link": "/cotizacion?service=cctv-videovigilancia&location=pudahuel",
-      "image": "/images/service-cctv-videovigilancia.webp"
+      "heading": "CCTV y Videovigilancia en Pudahuel: Protección Profesional para tu Hogar y Empresa",
+      "subheading": "GuardMan Chile ofrece sistemas de videovigilancia de última generación con instalación profesional, monitoreo 24/7 y guardias certificados OS-10 en Pudahuel. Cotiza hoy y protege lo que más importa.",
+      "image": "cctv-pudahuel-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Cctv Videovigilancia",
-        "url": "/servicios/cctv-videovigilancia"
-      },
-      {
-        "label": "Pudahuel",
-        "url": "/servicios/cctv-videovigilancia/pudahuel"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir CCTV y Videovigilancia en Pudahuel?",
-      "content": "En GuardMan Chile somos especialistas en cctv y videovigilancia en Pudahuel. Nuestra experiencia en el sector poniente de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Pudahuel y toda la zona Poniente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Cámaras de alta definición con visión nocturna",
-        "Monitoreo remoto 24/7 desde nuestra central",
-        "Grabación en la nube con respaldo de 30 días",
-        "Detección de movimiento y alertas en tiempo real",
-        "Acceso desde cualquier dispositivo móvil",
-        "Instalación profesional y mantenimiento incluido"
+      "heading": "Expertos en CCTV y Videovigilancia en Pudahuel con más de 8 Años de Experiencia",
+      "paragraphs": [
+        "En GuardMan Chile entendemos que la seguridad de tu familia y tu negocio es prioridad. Por eso, brindamos servicios especializados de CCTV y videovigilancia en Pudahuel, utilizando tecnología de punta y personal altamente capacitado. Nuestro equipo de guardias certificados OS-10 trabaja las 24 horas, los 365 días del año, para garantizar tu tranquilidad y la de quienes más quieres.",
+        "Pudahuel es una de las comunas con mayor actividad comercial y residencial del sector poniente de Santiago. Con el reciente ingreso de las 76 cámaras municipales al Sistema Integrado de Televigilancia de la capital, la seguridad comunitaria se ha fortalecido significativamente. Sin embargo, la protección de tu propiedad requiere soluciones personalizadas que complementen estos esfuerzos institucionales.",
+        "Como empresa de seguridad privada líder en Chile con presencia en 14 comunas de la Región Metropolitana, en GuardMan Chile diseñamos sistemas de videovigilancia a medida para hogares, empresas y condominos en Pudahuel. Trabajamos con las mejores marcas del mercado como Hikvision, Dahua y Axis, garantizando calidad, durabilidad y acceso remoto desde tu smartphone o computador."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Pudahuel",
-      "content": "",
-      "points": [
-        "cercanías del aeropuerto, hoteles y negocios requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad hotelera, control vehicular y respuesta rápida es cada vez más urgente en el sector poniente de Santiago.",
-        " muchas empresas y residencias en Pudahuel enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Nuestro Servicio de CCTV y Videovigilancia en Pudahuel Incluye",
+      "items": [
+        "Instalación profesional de cámaras de seguridad con garantía de workmanship",
+        "Sistemas CCTV con resolución Full HD, 4K y visión nocturna infrarroja",
+        "Monitoreo remoto 24/7 desde tu celular, tablet o computador",
+        "Grabación continua en la nube o DVR/NVR local con respaldo automático",
+        "Personal de vigilancia certificado OS-10 por Carabineros de Chile",
+        "Detección de movimiento y notificaciones en tiempo real",
+        "Integración con alarmas, control de acceso y cercos eléctricos",
+        "Mantenimiento preventivo y soporte técnico especializado",
+        "Diseño personalizado según las necesidades de tu propiedad",
+        "Informe de vulnerabilidades y recomendaciones de seguridad gratuitas"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Pudahuel",
+      "heading": "Señales de que tu Hogar o Empresa en Pudahuel Necesita un Sistema de Videovigilancia",
       "items": [
-        "cercanías del aeropuerto, hoteles y negocios requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad hotelera, control vehicular y respuesta rápida es cada vez más urgente en el sector poniente de Santiago.",
-        " muchas empresas y residencias en Pudahuel enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Tu sector presenta antecedentes de robos, hurtos o actividades sospechosas reportadas por vecinos o Carabineros",
+        "Tu negocio opera fuera de horario habitual y deseas supervisar remotamente movimientos o emergencias",
+        "Necesitas supervisar el comportamiento de personal de servicio, trabajadores o visitas frecuentes",
+        "Tu vivienda se encuentra sola durante períodos prolongados por trabajo o vacaciones",
+        "Cuentas con valores, equipos o inventario que requieren protección continua y evidencia ante incidentes",
+        "Deseas complementar las cámaras municipales de televigilancia con cobertura privada en tu propiedad",
+        "Requieres un sistema que permita actuar rápidamente ante emergencias con coordinación de fuerzas de seguridad"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Poniente"
-      },
-      {
-        "value": "Poniente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo ver las cámaras en mi celular?",
-        "answer": "Sí, todas nuestras cámaras incluyen acceso remoto desde la app móvil. Puedes ver en tiempo real desde cualquier dispositivo, en cualquier momento."
-      },
-      {
-        "question": "¿Por cuánto tiempo se graba?",
-        "answer": "Por defecto grabamos 30 días en la nube con respaldo automático. Podemos extender el período según tus necesidades de seguridad."
-      },
-      {
-        "question": "¿Qué pasa si hay una emergencia?",
-        "answer": "Nuestro equipo de monitoreo recibe las alertas inmediatamente y coordina la respuesta: contacto a Carabineros, notificación a tus contactos de emergencia y activación de sirena si está configurado."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre CCTV y Videovigilancia en Pudahuel",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta instalar un sistema de CCTV y videovigilancia en Pudahuel?",
+          "answer": "El costo de instalación de cámaras de seguridad en Pudahuel varía según la cantidad de cámaras, tipo de tecnología (analógica, IP, 4K), complejidad del sitio y servicios adicionales como monitoreo 24/7 o integración con alarmas. En GuardMan Chile realizamos una visita técnica gratuita para evaluar tu propiedad y cotizar un sistema a medida. Nuestros precios son competitivos y transparentes, sin costos ocultos. Contáctanos y recibe tu cotización personalizada sin compromiso."
+        },
+        {
+          "question": "¿Qué tipo de cámaras de seguridad son mejores para mi hogar en Pudahuel?",
+          "answer": "La elección del sistema de videovigilancia depende de tus necesidades específicas. Para hogares en Pudahuel recomendamos cámaras IP con resolución Full HD o 4K, visión nocturna infrarroja de al menos 30 metros, detección de movimiento y acceso remoto. Las cámaras tipo domo son ideales para techos de interior, mientras que las tipo bullet funcionan mejor en exteriores. Nuestro equipo técnico evaluará los puntos críticos de tu vivienda: accesos principales, jardines, estacionamientos y áreas comunes."
+        },
+        {
+          "question": "¿Los guardias de GuardMan están certificados y son legales en Chile?",
+          "answer": "Sí. Todos nuestros guardias de seguridad cuentan con la certificación OS-10 otorgada por Carabineros de Chile, requisito legal obligatorio según la Ley 21.659 que regula los servicios de seguridad privada. Esta certificación garantiza que nuestro personal ha sido evaluado en aspectos técnicos, legales y éticos. Además, GuardMan cuenta con autorización vigente de la Prefectura de Seguridad Privada (O.S.10) para operar en todo el territorio nacional."
+        },
+        {
+          "question": "¿Puedo ver las cámaras de seguridad desde mi celular?",
+          "answer": "Absolutamente. Todos nuestros sistemas de CCTV y videovigilancia en Pudahuel incluyen acceso remoto a través de aplicaciones móviles compatibles con iOS y Android. Podrás visualizar en tiempo real lo que ocurre en tu propiedad, revisar grabaciones存储adas, recibir alertas por movimiento sospechoso y controlar múltiples cámaras simultáneamente. La conexión se realiza de forma segura mediante encriptación, protegiendo tu privacidad."
+        },
+        {
+          "question": "¿Ofrecen servicios de monitoreo las 24 horas en Pudahuel?",
+          "answer": "Sí. En GuardMan Chile contamos con un Centro de Monitoreo operativo las 24 horas, los 365 días del año. Nuestro equipo de operadores especializados vigila tu propiedad de forma continua, detectando situaciones sospechosas y activando protocolos de respuesta inmediata. Ante cualquier incidente, coordinamos con Carabineros, nuestra Fuerza de Intervención o contactos de emergencia según el plan de seguridad acordado."
+        },
+        {
+          "question": "¿Cómo solicito una cotización para instalar cámaras de seguridad en Pudahuel?",
+          "answer": "Solicitar una cotización es muy fácil. Puedes contactarnos por WhatsApp, teléfono o completar el formulario en nuestro sitio web. Un asesor comercial se comunicará contigo para agendar una visita técnica gratuita a tu propiedad en Pudahuel. Durante la visita, evaluaremos vulnerabilidades, recommendaremos el sistema más adecuado y te entregaremos una cotización detallada sin compromiso. Comenzamos la instalación en un plazo máximo de 7 días hábiles."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Pudahuel",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Pudahuel",
-      "button_link": "/cotizacion?service=cctv-videovigilancia&location=pudahuel"
+      "heading": "Protege tu Hogar y Empresa en Pudahuel con GuardMan Chile",
+      "subheading": "No dejes la seguridad de tu familia y tu negocio al azar. Nuestros expertos en CCTV y videovigilancia en Pudahuel diseñan soluciones a tu medida con tecnología de última generación y el respaldo de guardias certificados. Solicita tu cotización gratuita hoy y da el primer paso hacia mayor tranquilidad.",
+      "button": "Solicitar Cotización Gratuita",
+      "image": "cctv-pudahuel-cta.jpg"
+    },
+    "meta": {
+      "title": "CCTV y Videovigilancia en Pudahuel | GuardMan Chile - Instalación Profesional",
+      "description": "Expertos en CCTV y videovigilancia en Pudahuel. Instalación profesional, guardias OS-10 certificados y monitoreo 24/7. Cotiza gratis hoy."
     }
   }
 }

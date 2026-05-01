@@ -1,96 +1,79 @@
 {
   "sections": {
     "hero": {
-      "heading": "CCTV y Videovigilancia en Vitacura",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente premium.",
-      "cta_text": "Cotizar en Vitacura",
-      "cta_link": "/cotizacion?service=cctv-videovigilancia&location=vitacura",
-      "image": "/images/service-cctv-videovigilancia.webp"
+      "heading": "CCTV y Videovigilancia en Vitacura: Protección Profesional las 24 Horas",
+      "subheading": "GuardMan Chile te ofrece sistemas de videovigilancia de última generación con monitoreo 24/7 y guardias certificados OS-10. Protege tu hogar, empresa o condominio con la experiencia de más de 8 años en el sector oriente de Santiago.",
+      "image": "cctv-vitacura-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Cctv Videovigilancia",
-        "url": "/servicios/cctv-videovigilancia"
-      },
-      {
-        "label": "Vitacura",
-        "url": "/servicios/cctv-videovigilancia/vitacura"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir CCTV y Videovigilancia en Vitacura?",
-      "content": "En GuardMan Chile somos especialistas en cctv y videovigilancia en Vitacura. Nuestra experiencia en el sector oriente premium nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Vitacura y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Cámaras de alta definición con visión nocturna",
-        "Monitoreo remoto 24/7 desde nuestra central",
-        "Grabación en la nube con respaldo de 30 días",
-        "Detección de movimiento y alertas en tiempo real",
-        "Acceso desde cualquier dispositivo móvil",
-        "Instalación profesional y mantenimiento incluido"
+      "heading": "Sistemas de CCTV y Videovigilancia Diseñados para Vitacura",
+      "paragraphs": [
+        "Vitacura es una de las comunas con mayor inversión en seguridad en todo Chile, con más de 850 cámaras municipales operativas y una coordinación permanente con Carabineros. Sin embargo, la seguridad pública y la privada son complementarias: proteger tu hogar, empresa o condominio requiere soluciones personalizadas que se adapten a tus necesidades específicas.",
+        "En GuardMan Chile entendemos que cada propiedad en Vitacura tiene características únicas. Por eso, nuestros sistemas de CCTV y videovigilancia se diseñan a medida, considerando el entorno, los puntos de acceso, la iluminación y los flujos de personas. Trabajamos con tecnología de marcas líderes como Hikvision y Dahua, garantizando imágenes en alta definición y acceso remoto desde tu celular.",
+        "Nuestro equipo técnico certificado realiza instalaciones profesionales con garantía real, y nuestro centro de monitoreo 24/7 está operativo los 365 días del año. Si buscas una empresa de videovigilancia en Vitacura con experiencia comprobada y personal OS-10 certificado, GuardMan Chile es tu mejor opción."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Vitacura",
-      "content": "",
-      "points": [
-        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
-        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Por Qué Elegir Nuestros Sistemas de CCTV en Vitacura?",
+      "items": [
+        "Cámaras de alta definición con resolución Full HD y 4K para capturar cada detalle",
+        "Visión nocturna en color con alcance de hasta 50 metros según el modelo",
+        "Monitoreo remoto en tiempo real desde smartphone, tablet o computador",
+        "Grabación continua 24/7 con almacenamiento en la nube o grabador local NVR",
+        "Tecnologías de análisis inteligente: detección de movimiento, cruce de líneas virtuales y reconocimiento facial",
+        "Notificaciones instantáneas al celular ante eventos sospechosos",
+        "Instalación profesional con cableado oculto y certificados por nuestro equipo técnico",
+        "Integración con sistemas de alarmas, control de acceso y cercos eléctricos",
+        "Soporte técnico y mantención preventiva incluida en nuestros planes",
+        "Garantía real de equipos y respaldo postventa con repuestos disponibles"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Vitacura",
+      "heading": "Señales de Que Tu Propiedad en Vitacura Necesita un Sistema de Videovigilancia",
       "items": [
-        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
-        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Zonas oscuras o con poca iluminación en perímetros y accesos principales",
+        "Incidentes recientes de robos o intentos de robo en el sector o condominio",
+        "Dificultad para supervisarpersonalmente empleados, visitas o proveedores",
+        "Necesidad de evidencia visual para trámites judiciales o denuncias",
+        "Falta de visibilidad en áreas comunes como estacionamientos, jardines o halls",
+        "Riesgo elevado por cercanía a vías de alto tráfico o zonas comerciales",
+        "Presencia de personas no autorizadas en horarios no hábiles"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo ver las cámaras en mi celular?",
-        "answer": "Sí, todas nuestras cámaras incluyen acceso remoto desde la app móvil. Puedes ver en tiempo real desde cualquier dispositivo, en cualquier momento."
-      },
-      {
-        "question": "¿Por cuánto tiempo se graba?",
-        "answer": "Por defecto grabamos 30 días en la nube con respaldo automático. Podemos extender el período según tus necesidades de seguridad."
-      },
-      {
-        "question": "¿Qué pasa si hay una emergencia?",
-        "answer": "Nuestro equipo de monitoreo recibe las alertas inmediatamente y coordina la respuesta: contacto a Carabineros, notificación a tus contactos de emergencia y activación de sirena si está configurado."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre CCTV y Videovigilancia en Vitacura",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta instalar un sistema de CCTV en Vitacura?",
+          "answer": "El costo de instalación de cámaras de seguridad en Vitacura varía según la cantidad de cámaras, el tipo de tecnología (analógico, IP o híbrida), la resolución elegida y la complejidad del cableado. Un sistema básico para una casa puede partir desde $400.000 CLP, mientras que soluciones empresariales con múltiples cámaras y monitoreo 24/7 pueden superar los $2.000.000 CLP. Para cotizar sin compromiso, contáctanos y realiza tu consulta gratis."
+        },
+        {
+          "question": "¿Necesito autorización para instalar cámaras de videovigilancia en Vitacura?",
+          "answer": "Para uso residencial privado, no se requiere autorización especial. Sin embargo, si instalas cámaras en zonas comunes de edificios o condominios, es necesario contar con la aprobación de la comunidad. En caso de empresas comerciales, existen normativas de privacidad que deben cumplirse. Nuestro equipo puede asesorarte sobre los requisitos legales y la normativa OS-10 aplicable."
+        },
+        {
+          "question": "¿Puedo monitorear las cámaras desde mi celular?",
+          "answer": "Sí, todos nuestros sistemas de CCTV incluyen acceso remoto a través de aplicaciones móviles compatibles con iOS y Android. Podrás visualizar imágenes en tiempo real, revisar grabaciones存储 y recibir notificaciones de alerta estés donde estés. La configuración se realiza durante la instalación y te capacitamos en el uso de la plataforma."
+        },
+        {
+          "question": "¿Qué marcas de cámaras de seguridad trabajan con ustedes?",
+          "answer": "Trabajamos con marcas líderes a nivel mundial: Hikvision, Dahua, Samsung Hanwha y Axis Communications. Estas marcas ofrecen diferentes líneas para adaptarse a distintos presupuestos y necesidades. Todas nuestras cámaras incluyen garantía de fabricante y soporte técnico profesional."
+        },
+        {
+          "question": "¿Ofrecen servicios de monitoreo 24/7 además de la instalación?",
+          "answer": "Sí, contamos con un centro de monitoreo operativo las 24 horas, los 365 días del año. Nuestro servicio de televigilancia incluye operadores capacitados que supervisan tu sistema en tiempo real y activan protocolos de respuesta inmediata ante incidentes. Este servicio se cotiza por separado según la cantidad de cámaras y puntos a monitorear."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Vitacura",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Vitacura",
-      "button_link": "/cotizacion?service=cctv-videovigilancia&location=vitacura"
+      "heading": "Protege Tu Propiedad en Vitacura Hoy Mismo",
+      "subheading": "Solicita una asesoría gratuita y cotiza sin compromiso. Nuestro equipo técnico.visitara tu propiedad, evaluará los puntos estratégicos y diseñará un sistema de videovigilancia a tu medida. Incluye garantía de instalación y soporte postventa.",
+      "button": "Cotiza Tu Sistema de CCTV en Vitacura",
+      "image": "cctv-vitacura-cta.jpg"
+    },
+    "meta": {
+      "title": "CCTV y Videovigilancia Vitacura | Instalación Profesional 24/7 | GuardMan",
+      "description": "Sistemas de CCTV y videovigilancia profesional en Vitacura. Instalación, monitoreo 24/7 y guardias OS-10 certificados. Cotiza sin compromiso con GuardMan Chile."
     }
   }
 }

@@ -1,96 +1,74 @@
 {
   "sections": {
     "hero": {
-      "heading": "Seguridad Industrial en Lampa",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector norte de Santiago.",
-      "cta_text": "Cotizar en Lampa",
-      "cta_link": "/cotizacion?service=seguridad-industrial&location=lampa",
-      "image": "/images/service-seguridad-industrial.webp"
+      "heading": "Seguridad Industrial en Lampa: Protección Profesional para tu Empresa",
+      "subheading": "Guardias certificados OS-10 con experiencia comprobada en instalaciones industriales. Monitoreo 24/7 y respuesta inmediata ante cualquier incidente.",
+      "image": "seguridad-industrial-lampa-hero.webp"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Seguridad Industrial",
-        "url": "/servicios/seguridad-industrial"
-      },
-      {
-        "label": "Lampa",
-        "url": "/servicios/seguridad-industrial/lampa"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Seguridad Industrial en Lampa?",
-      "content": "En GuardMan Chile somos especialistas en seguridad industrial en Lampa. Nuestra experiencia en el sector norte de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Lampa y toda la zona Norte.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Guardias especializados en entornos industriales",
-        "Control de acceso a bodegas y áreas restringidas",
-        "Monitoreo perimetral y vigilancia móvil",
-        "Prevención de robos de mercadería y equipos",
-        "Inspecciones de seguridad y informesdaily",
-        "Coordinación con committees de higiene y seguridad"
+      "heading": "Protección Integral para el Sector Industrial en Lampa",
+      "paragraphs": [
+        "Lampa se ha consolidado como uno de los polos industriales más dinámicos de la Región Metropolitana, concentrando empresas del rubro manufacturero, logístico y de manufactura. En este contexto, la seguridad industrial en Lampa se vuelve un factor estratégico para proteger activos, prevenir pérdidas y garantizar la continuidad operativa de tu negocio.",
+        "En GuardMan Chile entendemos que cada instalación industrial tiene necesidades únicas. Por eso, nuestro servicio de seguridad industrial en Lampa se adapta a las características de tu empresa: desde plantas de producción y centros de distribución hasta galpones y obras en terreno. Contamos con guardias certificados OS-10 y un equipo de supervisores que vela por el cumplimiento de los protocolos de seguridad las 24 horas.",
+        "Nuestro enfoque preventivo es lo que nos diferencia. No esperamos a que ocurran incidentes; nuestros guardias están entrenados para identificar riesgos potenciales, realizar rondas estratégicas y coordinar acciones inmediatas con nuestro centro de monitoreo. Con GuardMan, tu tranquilidad está en manos de profesionales con años de experiencia en seguridad industrial en Lampa."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Lampa",
-      "content": "",
-      "points": [
-        "parques industriales y terrenos de expansión requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia perimetral, control de accesos y rondas programadas es cada vez más urgente en el sector norte de Santiago.",
-        " muchas empresas y residencias en Lampa enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Por qué elegir GuardMan para tu Seguridad Industrial en Lampa?",
+      "items": [
+        "Guardias certificados OS-10 con formación continua y experiencia en entornos industriales",
+        "Monitoreo remoto 24/7 desde nuestro centro de operaciones integrado",
+        "Control de accesos con registro digital de ingresos y salidas de personal",
+        "Rondas preventivas personalizadas según las características de tu instalación",
+        "Vigilancia perimetral para prevenir ingresos no autorizados",
+        "Coordinación directa con Carabineros y servicios de emergencia",
+        "Supervisión permanente con supervisores zonales acreditados",
+        "Planes de contingencia y evacuación adaptados a tu faena industrial",
+        "Reportes detallados de novedades y métricas de seguridad",
+        "Cobertura los 365 días del año, sin interrupciones"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Lampa",
+      "heading": "Riesgos que Mitigamos con Nuestro Servicio de Seguridad Industrial en Lampa",
       "items": [
-        "parques industriales y terrenos de expansión requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia perimetral, control de accesos y rondas programadas es cada vez más urgente en el sector norte de Santiago.",
-        " muchas empresas y residencias en Lampa enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos y hurtos de maquinaria, herramientas y materiales de valor en instalaciones industriales",
+        "Accesos no autorizados de personas ajenas a la empresa que podrían generar incidentes o pérdidas",
+        "Actos de sabotaje o daño intencional a equipos y infraestructura productiva",
+        "Falta de control en el registro de ingresos y salidas de visitantes y contratistas",
+        "Incidentes de seguridad que podrían paralizar operaciones y generar costos significativos",
+        "Vulnerabilidades perimetrales que exponen activos y al personal a riesgos innecesarios"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Norte"
-      },
-      {
-        "value": "Norte",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Conocen las normas de seguridad industrial?",
-        "answer": "Sí, nuestros guardias reciben capacitación en prevención de riesgos, normativa OSHA y protocolos de emergencia específicos para entornos industriales."
-      },
-      {
-        "question": "¿Cómo controlan el acceso a bodegas?",
-        "answer": "Implementamos puntos de control con registro de ingresos, verificación de identidad, inspección de vehículos y control de mercadería que entra y sale."
-      },
-      {
-        "question": "¿报告an incidentes de seguridad?",
-        "answer": "Sí, entregamos reportes diarios de actividad, incidentes y métricas de seguridad. También hacemos análisis semanales y mensuales de tendencias."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Seguridad Industrial en Lampa",
+      "items": [
+        {
+          "question": "¿Qué incluye el servicio de seguridad industrial en Lampa de GuardMan?",
+          "answer": "Nuestro servicio de seguridad industrial en Lampa incluye un análisis previo de riesgos de tu instalación, asignación de guardias certificados OS-10 según tus necesidades, rondas preventivas programadas, control de accesos con registro digital, monitoreo remoto 24/7 desde nuestro centro de operaciones, y coordinación permanente con supervisores zonales. Cada servicio se diseña a medida considerando las características específicas de tu faena industrial."
+        },
+        {
+          "question": "¿Cómo cotizar el servicio de seguridad industrial en Lampa?",
+          "answer": "Para cotizar nuestro servicio de seguridad industrial en Lampa, puedes contactarnos directamente por WhatsApp, teléfono o completar el formulario de contacto en nuestro sitio web. Uno de nuestros ejecutivos comerciales se pondrá en contacto contigo dentro de las próximas 24 horas para agendar una visita técnica sin costo, evaluar tus necesidades y elaborar una propuesta personalizada con precios competitivos."
+        },
+        {
+          "question": "¿Por qué es importante contar con guardias certificados OS-10?",
+          "answer": "La certificación OS-10 es un requisito legal establecido por la Prefectura de Seguridad Privada de Carabineros de Chile. Esta acreditación garantiza que el guardia ha completado una formación específica en materias de seguridad, control de masas, primeros auxilios y normativa legal. En GuardMan, todos nuestros guardias cuentan con certificación OS-10 vigente, lo que asegura un servicio profesional,合法 y apegado a las regulaciones vigentes."
+        },
+        {
+          "question": "¿Qué experiencia tiene GuardMan en seguridad industrial?",
+          "answer": "GuardMan Chile cuenta con más de 8 años de experiencia en el rubro de seguridad privada, protegiendo más de 120 empresas industriales en distintas comunas de la Región Metropolitana. Nuestro equipo está respaldado por un centro de monitoreo 24/7 y supervisores zonales con vasta experiencia en instalaciones de alto riesgo. Esta trayectoria nos permite ofrecer soluciones integrales y adaptadas a cada tipo de industria."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Lampa",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Lampa",
-      "button_link": "/cotizacion?service=seguridad-industrial&location=lampa"
+      "heading": "Protege tu Instalación Industrial con GuardMan en Lampa",
+      "subheading": "Solicita una cotización personalizada y descubre cómo nuestros guardias certificados OS-10 pueden proteger tu empresa las 24 horas.",
+      "button": "Cotizar Servicio Ahora",
+      "image": "seguridad-industrial-lampa-cta.webp"
+    },
+    "meta": {
+      "title": "Seguridad Industrial en Lampa | Guardias OS-10 Certificados - GuardMan Chile",
+      "description": "Servicio profesional de seguridad industrial en Lampa. Guardias certificados OS-10, monitoreo 24/7 y cobertura los 365 días. Cotiza ahora y protege tu empresa."
     }
   }
 }

@@ -1,96 +1,76 @@
 {
   "sections": {
     "hero": {
-      "heading": "Seguridad Industrial en Los Andes",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en Los Andes y la zona de Valparaíso.",
-      "cta_text": "Cotizar en Los Andes",
-      "cta_link": "/cotizacion?service=seguridad-industrial&location=los-andes",
-      "image": "/images/service-seguridad-industrial.webp"
+      "heading": "Seguridad Industrial en Los Andes Chile | Guardias Profesionales 24/7",
+      "subheading": "Protegemos tu empresa o faena industrial en Los Andes con guardias certificados OS-10, monitoreo en tiempo real y presencia física disuasoria. Cotiza hoy.",
+      "image": null
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Seguridad Industrial",
-        "url": "/servicios/seguridad-industrial"
-      },
-      {
-        "label": "Los Andes",
-        "url": "/servicios/seguridad-industrial/los-andes"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Seguridad Industrial en Los Andes?",
-      "content": "En GuardMan Chile somos especialistas en seguridad industrial en Los Andes. Nuestra experiencia en Los Andes y la zona de Valparaíso nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Los Andes y toda la zona Valparaíso.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Guardias especializados en entornos industriales",
-        "Control de acceso a bodegas y áreas restringidas",
-        "Monitoreo perimetral y vigilancia móvil",
-        "Prevención de robos de mercadería y equipos",
-        "Inspecciones de seguridad y informesdaily",
-        "Coordinación con committees de higiene y seguridad"
+      "heading": "Servicio de Seguridad Industrial en Los Andes con Experiencia Comprobada",
+      "paragraphs": [
+        "En GuardMan Chile entendemos que la seguridad industrial en Los Andes requiere soluciones adaptées a las necesidades específicas de empresas, faenas mineras y centros de distribución ubicados en esta estratégica zona de la Región de Valparaíso. Con más de 8 años de experiencia protegiendo activos industriales en todo Chile, nuestro equipo de guardias profesionales certificados OS-10 está preparado para brindar protección integral a tu operación las 24 horas del día, los 365 días del año.",
+        "Nuestra presencia en la zona de Los Andes nos permite ofrecer un servicio cercano y efectivo, con tiempos de respuesta garantizados y supervisión constante desde nuestro centro de monitoreo 24/7. Cada خطة de seguridad industrial que implementamos se diseña considerando los riesgos particulares de tu sector: ya sea que necesites protección para una faena minera, un centro logístico o instalaciones industriales, tenemos la experiencia y los recursos para proteger lo que más valoras.",
+        "Al elegir nuestro servicio de seguridad industrial en Los Andes, accedes a un equipo profesional con certificación OS-10 vigente, capacitación continua en prevención de riesgos y protocolos de actuación diseñados para cada tipo de emergencia. La tranquilidad de saber que tu empresa está protegida por especialistas es lo que nos diferencia en el mercado de seguridad privada en Los Andes y toda la Región Valparaíso."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Los Andes",
-      "content": "",
-      "points": [
-        "centros urbanos y zonas turísticas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia turística, seguridad comercial y control de eventos es cada vez más urgente en Los Andes y la zona de Valparaíso.",
-        " muchas empresas y residencias en Los Andes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de Nuestro Servicio de Seguridad Industrial en Los Andes",
+      "items": [
+        "Guardias certificados OS-10 con formación continua en prevención y respuesta ante emergencias industriales",
+        "Monitoreo remoto 24/7 desde nuestro centro de operaciones con tecnología de última generación",
+        "Rondas preventivas y vigilancia perimetral adaptadas a las características de cada instalación industrial",
+        "Control de accesos con registro digital de visitantes, vehículos y mercadería",
+        "Planes de emergencia personalizados según el rubro y riesgos específicos de tu empresa",
+        "Supervisión constante con supervisores zonales acreditados y tiempos de respuesta garantizados",
+        "Coordinación directa con Carabineros y servicios de emergencia de la Región de Valparaíso",
+        "Reportes de actividad diarios y semanales con indicadores de gestión y novedades"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Los Andes",
+      "heading": "Problemas que Resolvemos con Seguridad Industrial en Los Andes",
       "items": [
-        "centros urbanos y zonas turísticas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia turística, seguridad comercial y control de eventos es cada vez más urgente en Los Andes y la zona de Valparaíso.",
-        " muchas empresas y residencias en Los Andes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Riesgo de robo o hurto de materiales, equipos y mercadería en instalaciones industriales y bodegas",
+        "Acceso no autorizado de personas ajenas a faenas y centros de trabajo que ponen en peligro la seguridad laboral",
+        "Falta de control en el ingreso y egreso de vehículos de carga y trabajadores subcontratados",
+        "Vulnerabilidad ante emergencias sin protocolos establecidos ni personal capacitado para actuar",
+        "Necesidad de cumplir con normativas de seguridad y requisitos de Mutuales como IST o ACHS",
+        "Pérdidas económicas por extorsiones, daños a la propiedad o interrupciones operacionales"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Valparaíso"
-      },
-      {
-        "value": "Valparaíso",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Conocen las normas de seguridad industrial?",
-        "answer": "Sí, nuestros guardias reciben capacitación en prevención de riesgos, normativa OSHA y protocolos de emergencia específicos para entornos industriales."
-      },
-      {
-        "question": "¿Cómo controlan el acceso a bodegas?",
-        "answer": "Implementamos puntos de control con registro de ingresos, verificación de identidad, inspección de vehículos y control de mercadería que entra y sale."
-      },
-      {
-        "question": "¿报告an incidentes de seguridad?",
-        "answer": "Sí, entregamos reportes diarios de actividad, incidentes y métricas de seguridad. También hacemos análisis semanales y mensuales de tendencias."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Seguridad Industrial en Los Andes",
+      "items": [
+        {
+          "question": "¿Qué incluye el servicio de seguridad industrial en Los Andes?",
+          "answer": "Nuestro servicio de seguridad industrial en Los Andes incluye un conjunto integral de soluciones: control de accesos con registro digital para visitantes y vehículos, rondas preventivas programadas según las características de tu instalación, vigilancia perimetral constante, monitoreo de cámaras CCTV desde nuestro centro de operaciones 24/7, gestión de situaciones de emergencia con protocolos establecidos, y reportes de actividad periódicos. Todos nuestros guardias cuentan con certificación OS-10 vigente y capacitación en prevención de riesgos laborales."
+        },
+        {
+          "question": "¿Cómo cotizar el servicio de seguridad industrial en Los Andes?",
+          "answer": "Para cotizar nuestro servicio de seguridad industrial en Los Andes, puedes contactarnos directamente a través de nuestro formulario web, WhatsApp o llamada telefónica. Evaluamos cada requerimiento considerando factores como el tipo de industria, metros cuadrados a vigilar, nivel de riesgo, horarios de operación y cantidad de puestos necesarios. Esta evaluación personalizada nos permite ofrecer un presupuesto transparente sin costos ocultos, con soluciones adaptées a tu presupuesto y necesidades específicas."
+        },
+        {
+          "question": "¿Qué certificación tienen los guardias de seguridad industrial?",
+          "answer": "Todos nuestros guardias de seguridad industrial en Los Andes cuentan con certificación OS-10 vigente, otorgada por Carabineros de Chile tras completar el curso oficial de formación para guardias de seguridad privada. Esta acreditación es un requisito legal obligatorio y garantiza que nuestro personal ha sido evaluado en aspectos técnicos, legales y éticos. Adicionalmente, nuestros guardias reciben capacitación continua en primeros auxilios, prevención de riesgos y manejo de situaciones de emergencia."
+        },
+        {
+          "question": "¿Cuál es la experiencia de GuardMan en seguridad industrial?",
+          "answer": "GuardMan Chile cuenta con más de 8 años de experiencia en el rubro de seguridad privada en Chile, protegiendo empresas de diversos rubros industriales: minería, logística, manufactura, construcción y comercio. En la zona de Los Andes y Región Valparaíso, hemos consolidado presencia con 85 empresas protegidas y guardias desplegados en las principales comunas industriales. Nuestra experiencia nos permite ofrecer soluciones probadas y adaptadas a cada sector industrial."
+        },
+        {
+          "question": "¿El servicio de seguridad industrial opera los fines de semana y feriados?",
+          "answer": "Sí, nuestro servicio de seguridad industrial en Los Andes opera los 365 días del año, incluyendo fines de semana, festivos y durante emergencias. La cobertura continua es fundamental para la protección efectiva de instalaciones industriales, donde los riesgos no se limitan a horarios hábiles. Nuestros guardias rotan en turnos diseñados para garantizar presencia permanente, y nuestro centro de monitoreo supervisa todas las operaciones las 24 horas sin interrupciones."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Los Andes",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Los Andes",
-      "button_link": "/cotizacion?service=seguridad-industrial&location=los-andes"
+      "heading": "Protege tu Empresa Industrial en Los Andes Hoy",
+      "subheading": "No dejes la seguridad de tu empresa al azar. Con GuardMan Chile obtienes guardias certificados, monitoreo 24/7 y la tranquilidad de trabajar con una empresa de seguridad privada con experiencia comprovada en Los Andes y toda la Región Valparaíso.",
+      "button": "Cotizar Seguridad Industrial en Los Andes",
+      "image": null
+    },
+    "meta": {
+      "title": "Seguridad Industrial Los Andes | Guardias OS-10 24/7 - GuardMan Chile",
+      "description": "Servicio de seguridad industrial en Los Andes Chile con guardias certificados OS-10, monitoreo 24/7 y cobertura los 365 días. Cotiza hoy con GuardMan Chile."
     }
   }
 }

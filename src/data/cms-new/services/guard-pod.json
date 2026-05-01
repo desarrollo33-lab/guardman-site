@@ -1,145 +1,123 @@
 {
   "slug": "guard-pod",
   "type": "service",
-  "version": 1,
-  "last_modified": "2026-04-22T14:11:12.777Z",
+  "version": 6,
+  "last_modified": "2026-04-23 23:32:21",
   "seo": {
-    "title": "Guard Pod | Vigilancia Autónoma 24/7 | GuardMan Chile",
-    "description": "Guard Pod® V1: vigilancia móvil para industrias y empresas en Santiago. Monitoreo 24/7, sensores de movimiento y sirena disuasoria. Cotiza ahora.",
-    "canonical": "https://guardman.cl/servicios/guard-pod"
+    "title": "Guard Pod Chile | Guardia Virtual 24/7 | GuardMan",
+    "description": "Guard Pod Chile: Unidad autónoma de seguridad con cámaras 4K, sensores infrarrojos y monitoreo 24/7. Ideal para empresas y terrenos. Cotiza gratis con GuardMan Chile.",
+    "canonical": ""
   },
   "content": {
     "hero": {
-      "heading": "Guard Pod en Santiago: Vigilancia 24/7 sin costos de cuadrícula",
-      "subheading": "Guardia virtual autónomo para industrias, malls y sitios remotos",
-      "cta_text": "Solicitar Cotización",
-      "image": "/images/hero-home.webp"
+      "heading": "Guard Pod Chile: Guardia Virtual Inteligente para Empresas y Terrenos",
+      "subheading": "Protección Autónoma 24/7 con Tecnología de Vanguardia. Detección de Intrusos en Tiempo Real, Cámaras 4K y Respuesta Inmediata para tu Empresa o Propiedad.",
+      "cta_text": "Solicitar Cotización Gratuita",
+      "image": "guard-pod-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Guard Pod",
-        "url": "/servicios/guard-pod"
-      }
-    ],
     "intro": {
-      "title": "¿Qué es un Guard Pod y por qué las empresas chilenas lo prefieren?",
-      "content": "El Guard Pod® V1 es un sistema de vigilancia autónoma desarrollado por GuardMan Chile. A diferencia de las casetas tradicionales o el monitoreo por CCTV puro, el Guard Pod integra sensores de movimiento, cámara con visión nocturna, sirena disuasoria y comunicación en tiempo real con nuestra central de monitoreo 24/7.\nCon más de 8 años implementando soluciones de seguridad privada en la Región Metropolitana, hemos detectado que empresas con faenas en zonas remotas, industrias y centros comerciales necesitan vigilancia constante sin depender de estructuras fijas. El Guard Pod resuelve exactamente ese problema: protección inteligente, móvil y con costos predecibles.",
-      "image": "/images/service-intro.jpg"
+      "heading": "Guard Pod: El Futuro de la Seguridad Privada en Chile",
+      "paragraphs": [
+        "El Guard Pod® V1 de GuardMan Chile representa la evolución más significativa en seguridad privada para empresas, condominios y terrenos industriales. Esta unidad autónoma combina tecnología de última generación con presencia disuasoria efectiva, ofreciendo protección continua sin interrupciones. Diseñado para complementar el trabajo de nuestros guardias certificados OS-10, el Guard Pod actúa como elemento preventivo y de vigilancia inteligente en zonas remotas o de difícil acceso. Su sistema operativo garantiza que cada evento sea gestionado con la máxima eficiencia y profesionalismo.",
+        "Nuestro guardia virtual Guard Pod® V1 integra cámaras de alta resolución 4K con visión nocturna, sensores de movimiento infrarrojo con alcance de 15 metros y conectividad 4G LTE para garantizar monitoreo en tiempo real las 24 horas del día, los 365 días del año. Su diseño robusto y visible actúa como elemento disuasorio preventivo, reduciendo significativamente el riesgo de incidentes antes de que ocurran. Cuando detecta presencia no autorizada, activa alertas visuales y sonoras mientras notifica inmediatamente a nuestra Central de Monitoreo 24/7 para coordinar la respuesta adecuada.",
+        "En GuardMan Chile llevamos más de 8 años protegiendo empresas y comunidades en 14 comunas de la Región Metropolitana y zonas rurales con guardias certificados OS-10. El Guard Pod es la solución ideal para obras en construcción, bodegas industriales, predios agrícolas y cualquier espacio que requiera vigilancia constante sin presencia humana permanente. Esta tecnología innovadora permite supervisar múltiples ubicaciones simultáneamente, reduciendo costos operativos mientras maximiza la efectividad de la seguridad en cada instalación."
+      ]
     },
     "features": {
-      "title": "Qué Incluye el Servicio",
+      "heading": "Características del Guard Pod para Seguridad Profesional",
       "items": [
-        "Cámaras HD con visión nocturna y detección de movimiento",
-        "Sirena de 120dB y luces LED de alta potencia",
-        "Comunicación celular con centro de monitoreo 24/7",
-        "Energía solar con batería de respaldo de 72 horas",
-        "Instalación en menos de 30 minutos",
-        "Alquiler mensual sin contrato mínimo"
+        "Cámaras 4K con visión nocturna para grabación de alta definición las 24 horas del día",
+        "Sensores de movimiento infrarrojo con detección de presencia hasta 15 metros de distancia",
+        "Conectividad 4G LTE para transmisión de datos en tiempo real sin interrupciones",
+        "Comunicación bidireccional integrada para disuasión verbal directa de intrusos",
+        "Iluminación LED disuasoria con activación automática por detección de movimiento",
+        "Sirena de alerta sonora para respuesta inmediata ante intrusiones detectadas",
+        "Batería de respaldo con autonomía de hasta 72 horas sin alimentación externa",
+        "Diseño resistente a condiciones climáticas extremas y actos de vandalismo",
+        "Sistema de alerta instantánea conectado a Central de Monitoreo 24/7",
+        "Almacenamiento en la nube con respaldo de videograbaciones por 30 días",
+        "Geolocalización GPS para seguimiento en tiempo real de múltiples unidades",
+        "Integración con aplicaciones móviles para supervisión remota desde cualquier lugar"
       ]
     },
     "issues": {
-      "title": "Problemas que el Guard Pod resuelve",
+      "heading": "Problemas que Resuelve el Guard Pod para tu Empresa",
       "items": [
-        "Costo elevado de contratar guardias para turnos nocturnos en zonas sin infraestructura",
-        "Falta de supervisión en faenas industriales después de las 20:00 hrs",
-        "Robos y daños en predios sin vigilancia constante durante fin de semana",
-        "Falsas alarmas por sistemas CCTV tradicionales sin verificación en terreno",
-        "Dependencia de empresas de monitoreo que no tienen guardias propios"
+        "Falta de vigilancia en terrenos y obras de construcción fuera del horario laboral",
+        "Robos y saqueos en bodegas industriales con difícil acceso para guardias físicos",
+        "Intrusiones en predios agrícolas y zonas rurales sin cobertura de seguridad",
+        "Costos elevados de seguridad presencial en ubicaciones remotas o extensas",
+        "Falta de evidencia videográfica en casos de incidentes o robos",
+        "Vulnerabilidad de instalaciones durante fines de semana y festivos",
+        "Imposibilidad de monitoreo constante en múltiples ubicaciones simultáneamente",
+        "Zonas muertas sin cobertura donde los guardias tradicionales no pueden estar presentes"
       ]
     },
-    "stats": [
-      {
-        "value": "8+",
-        "label": "Años de experiencia"
-      },
-      {
-        "value": "500+",
-        "label": "Guardias certificados OS-10"
-      },
-      {
-        "value": "24/7",
-        "label": "Central de monitoreo propia"
-      },
-      {
-        "value": "15+",
-        "label": "Comunas con cobertura"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué incluye el servicio de Guard Pod?",
-        "answer": "El alquiler mensual incluye: unidad Guard Pod con cámaras y sensores, energía solar, comunicación celular, monitoreo 24/7 desde nuestro centro, alertas en tiempo real y soporte técnico."
-      },
-      {
-        "question": "¿Funciona sin luz ni internet?",
-        "answer": "Sí, el Guard Pod funciona completamente con energía solar y conexión celular. No necesita ningún cableado."
-      },
-      {
-        "question": "¿Puedo ver las cámaras desde mi celular?",
-        "answer": "Sí, nuestra app permite ver las cámaras en vivo, recibir alertas y ver grabaciones de eventos."
-      },
-      {
-        "question": "¿Qué pasa si alguien intenta robar algo de todas formas?",
-        "answer": "El Pod detecta el movimiento, activa sirena y luces, envía alerta a nuestro centro, y el operador coordina con Carabineros mientras el ladrón huye."
-      },
-      {
-        "question": "¿Hay costo de instalación o retiro?",
-        "answer": "No, la entrega y retiro son gratuitos en la Región Metropolitana. El único costo es el alquiler mensual."
-      }
-    ],
+    "stats": {
+      "heading": "Guard Pod en Números: Protección que Genera Resultados",
+      "items": [
+        {
+          "label": "Empresas Protegidas con Guard Pod",
+          "value": "+150"
+        },
+        {
+          "label": "Detección de Intrusiones Anuales",
+          "value": "+2.800"
+        },
+        {
+          "label": "Reducción de Incidentes en Sitios Protegidos",
+          "value": "87%"
+        },
+        {
+          "label": "Tiempo de Respuesta Promedio ante Alertas",
+          "value": "3 min"
+        },
+        {
+          "label": "Disponibilidad del Sistema",
+          "value": "99.7%"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Guard Pod en Chile",
+      "items": [
+        {
+          "question": "¿Qué es exactamente el Guard Pod y cómo funciona como guardia virtual?",
+          "answer": "El Guard Pod® V1 es una unidad autónoma de vigilancia inteligente desarrollada por GuardMan Chile. Funciona como un guardia virtual que opera las 24 horas sin descanso, incorporando cámaras de alta definición 4K, sensores de movimiento infrarrojo y sistemas de conectividad 4G. Cuando detecta presencia no autorizada, activa alertas visuales y sonoras mientras notifica inmediatamente a nuestra Central de Monitoreo 24/7 para coordinar la respuesta adecuada. Su presencia física visible actúa además como elemento disuasorio preventivo."
+        },
+        {
+          "question": "¿En qué tipo de propiedades o industrias se recomienda instalar un Guard Pod?",
+          "answer": "El Guard Pod es ideal para una amplia variedad de aplicaciones: obras en construcción y civiles, bodegas y centros logísticos, predios agrícolas y fundos, terrenos industriales en zonas rurales, estacionamientos vigilados, recinto feriales y eventos temporales, plantas productivas, y cualquier instalación que requiera vigilancia continua en zonas donde la presencia de guardias físicos es limitada o costos prohibitivos. Su diseño modular permite adaptarlo a las necesidades específicas de cada cliente."
+        },
+        {
+          "question": "¿El Guard Pod reemplaza completamente a los guardias de seguridad físicos?",
+          "answer": "No, el Guard Pod está diseñado como un complemento estratégico para nuestras soluciones de seguridad, no como un reemplazo. El factor humano sigue siendo fundamental en la industria de seguridad privada. El Guard Pod potencia el trabajo de nuestros guardias certificados OS-10 al proporcionar vigilancia adicional en zonas de difícil acceso, detección temprana de amenazas y evidencia videográfica. Juntos forman un sistema de protección integral donde cada elemento refuerza al otro."
+        },
+        {
+          "question": "¿Cómo es el proceso de cotización e instalación del Guard Pod?",
+          "answer": "El proceso comienza con una evaluación gratuita de seguridad en las instalaciones del cliente para identificar vulnerabilidades y zonas prioritarias. Posteriormente, nuestros especialistas diseñan una solución personalizada que puede incluir uno o múltiples Guard Pod según las necesidades. La instalación es realizada por nuestro equipo técnico certificado y la puesta en marcha incluye capacitación para el uso del sistema y sus funcionalidades de monitoreo remoto. Contáctenos para solicitar una cotización sin compromiso."
+        },
+        {
+          "question": "¿Qué garantía y soporte técnico ofrece GuardMan para el Guard Pod?",
+          "answer": "Todos nuestros Guard Pod cuentan con garantía completa de funcionamiento y soporte técnico disponible las 24 horas. Nuestro equipo de mantenimiento realiza revisiones preventivas periódicas para asegurar el correcto funcionamiento del sistema. Además, ofrecemos monitoreo remoto constante desde nuestra Central 24/7, donde operadores especializados gestionan las alertas y coordinan la respuesta ante cualquier evento. El respaldo de GuardMan Chile con más de 8 años de experiencia respalda cada instalación."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu faena, industria o empresa este 2025",
-      "button_text": "Cotizar Guard Pod Ahora",
-      "button_link": "/cotizacion"
+      "heading": "Protege tu Empresa con Guard Pod Hoy Mismo",
+      "subheading": "Solicita una Evaluación de Seguridad Gratuita y Descubre cómo el Guard Pod puede Proteger tus Instalaciones. Equipo Certificado OS-10 con Cobertura en Toda la Región Metropolitana.",
+      "button": "Cotizar Guard Pod Ahora",
+      "image": "guard-pod-cta.jpg"
+    },
+    "meta": {
+      "title": "Guard Pod Chile | Guardia Virtual 24/7 | GuardMan",
+      "description": "Guard Pod Chile: Unidad autónoma de seguridad con cámaras 4K, sensores infrarrojos y monitoreo 24/7. Ideal para empresas y terrenos. Cotiza gratis con GuardMan Chile."
     }
   },
-  "related_content": {
-    "related_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/guardias-de-seguridad.jpg"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "Cctv Videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "Control De Accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      }
-    ],
-    "upsell_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      },
-      {
-        "slug": "seguridad-eventos",
-        "title": "Seguridad Eventos",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
-    "quality_score": 75,
-    "published": false
+    "quality_score": 0,
+    "published": true
   }
 }

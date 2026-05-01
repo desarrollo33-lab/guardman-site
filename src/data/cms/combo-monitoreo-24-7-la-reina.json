@@ -1,96 +1,70 @@
 {
   "sections": {
     "hero": {
-      "heading": "Monitoreo 24/7 en La Reina",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente de Santiago.",
-      "cta_text": "Cotizar en La Reina",
-      "cta_link": "/cotizacion?service=monitoreo-24-7&location=la-reina",
-      "image": "/images/service-monitoreo-24-7.webp"
+      "heading": "Monitoreo 24/7 en La Reina: Protección Integral para Tu Hogar y Empresa",
+      "subheading": "En GuardMan Chile protegemos lo que más valoras con vigilancia profesional, guardias certificados OS-10 y respuesta inmediata las 24 horas. Más de 8 años cuidando familias y negocios en La Reina y toda la Región Metropolitana.",
+      "image": "monitoreo-24-7-la-reina-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Monitoreo 24 7",
-        "url": "/servicios/monitoreo-24-7"
-      },
-      {
-        "label": "La Reina",
-        "url": "/servicios/monitoreo-24-7/la-reina"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Monitoreo 24/7 en La Reina?",
-      "content": "En GuardMan Chile somos especialistas en monitoreo 24/7 en La Reina. Nuestra experiencia en el sector oriente de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en La Reina y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Central de monitoreo propia operativa 24/7",
-        "Respuesta ante alarmas en menos de 30 segundos",
-        "Verificación visual con cámaras integradas",
-        "Coordinación con Carabineros y servicios de emergencia",
-        "Informes mensuales de actividad y incidentes",
-        "App móvil para control remoto"
+      "heading": "Tu Seguridad Es Nuestra Prioridad en La Reina",
+      "paragraphs": [
+        "El monitoreo 24/7 en La Reina es mucho más que observar cámaras. Es tener la tranquilidad de saber que un equipo profesional está atento a cada evento, las 24 horas del día, los 365 días del año. En GuardMan Chile combinamos tecnología de vanguardia con el factor humano que marca la diferencia en la prevención de incidentes.",
+        "Nuestro centro de operaciones recibe señales de alarmas, sensores de movimiento y cámaras en tiempo real. Cuando ocurre una activación, nuestros operadores verifican inmediatamente la situación y activan los protocolos de respuesta, coordinando con Carabineros o nuestros guardias en terreno según corresponda.",
+        "Elegir una empresa de monitoreo profesional en La Reina significa confiar en personal certificado OS-10 por Carabineros de Chile, con años de experiencia en prevención y una presencia disuasoria que mantiene alejados a quienes buscan oportunidades."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué La Reina",
-      "content": "",
-      "points": [
-        "viviendas residenciales, schools and oficinas pequeñas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de rondas preventivas, control de acceso residencial y monitoreo perimetral es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en La Reina enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Beneficios del Monitoreo Profesional 24/7 en La Reina",
+      "items": [
+        "Vigilancia continua 24/7 desde nuestro centro de operaciones con operadores capacitados en procedimientos de emergencia",
+        "Guardias de seguridad certificados OS-10 con formación permanente en prevención y respuesta inmediata",
+        "Verificación en tiempo real de eventos de alarma, sensores y cámaras con protocolos de acción definidos",
+        "Coordinación directa con Carabineros de Chile y servicios de emergencia ante situaciones de riesgo",
+        "Notificaciones instantáneas al celular cuando ocurre cualquier evento en tu propiedad",
+        "Presencia física disuasoria con rondas preventivas según el plan de seguridad acordado",
+        "Monitoreo de cámaras con análisis inteligente para detectar comportamientos sospechosos",
+        "Soporte técnico y mantención preventiva de todos los equipos de seguridad instalados"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en La Reina",
+      "heading": "Situaciones de Seguridad que Prevenimos en La Reina",
       "items": [
-        "viviendas residenciales, schools and oficinas pequeñas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de rondas preventivas, control de acceso residencial y monitoreo perimetral es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en La Reina enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos con forcejeo y robos en dwelling: nuestra central detecta intentos de ingreso y activa respuesta inmediata",
+        "Delincuencia organizada en sectores residenciales: la presencia de guardias certificados disuade a grupos criminales",
+        "Robos de vehículos y especies en домоcilios: monitoreo de perímetros y zonas vulnerables las 24 horas",
+        "Incendios y emergencias domésticas: sensores de humo conectados a nuestra central para activación de secours"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué pasa si salta una alarma a las 3am?",
-        "answer": "Nuestro equipo de monitoreo verifica la alarma inmediatamente. Si es una emergencia real, contactamos a Carabineros y a tus contactos de emergencia simultáneamente."
-      },
-      {
-        "question": "¿Monitorean solo cuando hay alarma?",
-        "answer": "No, el monitoreo es constante y activo. Nuestros operadores vigilan las 24 horas y pueden hacer rondas visuales remotas cuando detectan algo sospechoso."
-      },
-      {
-        "question": "¿Puedo ver lo que sucede en mi propiedad?",
-        "answer": "Sí, tienes acceso 24/7 a todas las cámaras en vivo desde tu celular o computadora. Además, recibes alertas instantáneas ante eventos."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Monitoreo 24/7 en La Reina",
+      "items": [
+        {
+          "question": "¿Cómo funciona el monitoreo 24/7 en La Reina?",
+          "answer": "Nuestro sistema de monitoreo opera desde un centro de control donde personal capacitado recibe señales de tus alarmas, cámaras y sensores las 24 horas. Cuando ocurre una activación, nuestros operadores verifican el evento en tiempo real y activan el protocolo correspondiente: contactarte inmediatamente, coordinar con nuestros guardias en terreno o solicitar apoyo de Carabineros según la gravedad de la situación."
+        },
+        {
+          "question": "¿Qué incluye el servicio de monitoreo 24/7 en La Reina?",
+          "answer": "El servicio incluye la recepción y verificación de señales desde tu sistema de seguridad,骚扰 disuasión activa mediante speak to hablar a través de parlantes conectados, coordinación de respuesta inmediata con guardias o emergencias, y reportes periódicos de eventos. Trabajamos con planes personalizados según si necesitas proteger tu hogar, empresa o condominio."
+        },
+        {
+          "question": "¿Los guardias de seguridad en La Reina están certificados?",
+          "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 otorgada por Carabineros de Chile, que es el requisito legal para trabajar en seguridad privada. Además, reciben capacitación permanente en técnicas de prevención, manejo de conflictos y procedimientos de emergencia, lo que garantiza un servicio profesional y efectivo."
+        },
+        {
+          "question": "¿Cuánto cuesta el monitoreo 24/7 en La Reina?",
+          "answer": "Los precios varían según el tipo de propiedad, cantidad de cámaras y sensores, nivel de monitoreo requerido y si incluye presencia física de guardias. Te invitamos a cotizar sin compromiso para que un especialista evalúe tu propiedad y diseñe un plan de seguridad adecuado a tus necesidades y presupuesto."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en La Reina",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en La Reina",
-      "button_link": "/cotizacion?service=monitoreo-24-7&location=la-reina"
+      "heading": "Protege Tu Hogar o Empresa con Monitoreo Profesional en La Reina",
+      "subheading": "Cotiza hoy tu servicio de monitoreo 24/7 y recibe asesoría personalizada sin costo. Nuestros especialistas diseñan soluciones a tu medida.",
+      "button": "Cotizar Monitoreo 24/7",
+      "image": "monitoreo-24-7-la-reina-cta.jpg"
+    },
+    "meta": {
+      "title": "Monitoreo 24/7 en La Reina | GuardMan Chile - Seguridad Profesional",
+      "description": "Servicio de monitoreo 24/7 en La Reina con guardias OS-10 certificados. Protección integral para hogares y empresas. Cotiza hoy sin compromiso."
     }
   }
 }

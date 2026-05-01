@@ -1,40 +1,31 @@
 {
   "slug": "santiago-centro",
   "type": "location",
-  "version": 1,
-  "last_modified": "2026-04-22T14:59:39.558Z",
+  "version": 3,
+  "last_modified": "2026-04-15 21:45:25",
   "seo": {
     "title": "Seguridad Privada Santiago Centro | GuardMan Chile",
     "description": "Empresa de seguridad privada líder en Santiago Centro. Guardias certificados OS-10, CCTV y monitoreo 24/7. Solicita tu cotización gratuita hoy.",
-    "canonical": "https://guardman.cl/ubicaciones/santiago-centro"
+    "canonical": ""
   },
   "content": {
     "hero": {
       "heading": "Seguridad Privada en Santiago Centro | GuardMan Chile",
-      "subheading": "Protección profesional para tu hogar, empresa o comercio en el corazón de Santiago",
-      "image": "/images/og-default.webp"
+      "subheading": "Protección profesional para tu hogar, empresa o comercio en el corazón de Santiago"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Ubicaciones",
-        "url": "/ubicaciones"
-      },
-      {
-        "label": "Santiago centro",
-        "url": "/ubicaciones/santiago-centro"
-      }
-    ],
+    "meta": {
+      "title": "Seguridad Privada Santiago Centro | GuardMan Chile",
+      "description": "Empresa de seguridad privada líder en Santiago Centro. Guardias certificados OS-10, CCTV y monitoreo 24/7. Solicita tu cotización gratuita hoy."
+    },
     "intro": {
-      "title": "Guardias de Seguridad para Santiago Centro: Protección de Confianza",
-      "content": "Santiago Centro es el corazón financiero, comercial y turístico de Chile. Con más de 200 mil personas transitando diariamente por sus calles, la necesidad de servicios de seguridad privada profesional es fundamental. GuardMan Chile ofrece soluciones integrales adaptadas a las exigencias de esta zona urbana de alta demanda.\n\nNuestro equipo de guardias certificados OS-10 y equipamiento de última generación garantizan la protección que necesitas. Con 8+ años de experiencia en la Región Metropolitana, somos la empresa de seguridad más confiable del sector.",
-      "image": "/images/location-intro.jpg"
+      "heading": "Guardias de Seguridad para Santiago Centro: Protección de Confianza",
+      "paragraphs": [
+        "Santiago Centro es el corazón financiero, comercial y turístico de Chile. Con más de 200 mil personas transitando diariamente por sus calles, la necesidad de servicios de seguridad privada profesional es fundamental. GuardMan Chile ofrece soluciones integrales adaptadas a las exigencias de esta zona urbana de alta demanda.",
+        "Nuestro equipo de guardias certificados OS-10 y equipamiento de última generación garantizan la protección que necesitas. Con 8+ años de experiencia en la Región Metropolitana, somos la empresa de seguridad más confiable del sector."
+      ]
     },
     "features": {
-      "title": "¿Por qué elegir GuardMan en Santiago Centro?",
+      "heading": "¿Por qué elegir GuardMan en Santiago Centro?",
       "items": [
         "Guardias certificados OS-10 con formación continua y experiencia comprobada",
         "Centro de monitoreo 24/7 propio para respuesta inmediata",
@@ -44,107 +35,68 @@
         "Atención personalizada y evaluaciones de riesgo gratuitas"
       ]
     },
-    "stats": [
-      {
-        "value": "8+",
-        "label": "Años de experiencia"
-      },
-      {
-        "value": "500+",
-        "label": "Guardias certificados"
-      },
-      {
-        "value": "14",
-        "label": "Comunas cubiertas"
-      },
-      {
-        "value": "350+",
-        "label": "Clientes satisfechos"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuáles son los servicios de seguridad más solicitados en Santiago Centro?",
-        "answer": "Los servicios más requeridos son guardias de vigilancia para edificios y oficinas, instalación de CCTV, control de accesos y monitoreos remotos. Cada solución se adapta a las necesidades específicas del cliente."
-      },
-      {
-        "question": "¿Cuánto cuesta contratar guardias de seguridad en Santiago Centro?",
-        "answer": "Los precios varían según el tipo de servicio, cantidad de guardias y horarios requeridos. En GuardMan ofrecemos evaluaciones gratuitas y cotizaciones personalizadas sin compromiso."
-      },
-      {
-        "question": "¿Tienen disponibilidad inmediata para proyectos en el centro de Santiago?",
-        "answer": "Sí, gracias a nuestra amplia red de guardias y centros de operaciones, podemos desplegar personal de seguridad en tiempo récord para cubrir emergencias o proyectos nuevos."
-      },
-      {
-        "question": "¿Qué diferencia a GuardMan de otras empresas de seguridad en Santiago?",
-        "answer": "Contamos con centro de monitoreo propio 24/7, guardias con certificación OS-10 vigente y más de 8 años protegiendo hogares, empresas y comercios en toda la Región Metropolitana."
-      }
-    ],
+    "issues": {
+      "heading": "Desafíos de Seguridad en Santiago Centro",
+      "items": [
+        "Alto flujo de personas y vehículos que dificultan el control perimetral",
+        "Robos y hurtos en espacios públicos y comercios",
+        "Vandalismo en fachadas, señalética y mobiliario urbano",
+        "Necesidad de vigilantes para eventos y actividades masivas",
+        "Seguridad en edificios corporativos y centros comerciales"
+      ]
+    },
+    "stats": {
+      "heading": "Números que Respaldan Nuestra Experiencia",
+      "items": [
+        {
+          "label": "Años de experiencia",
+          "value": "8+"
+        },
+        {
+          "label": "Guardias certificados",
+          "value": "500+"
+        },
+        {
+          "label": "Comunas cubiertas",
+          "value": "14"
+        },
+        {
+          "label": "Clientes satisfechos",
+          "value": "350+"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Seguridad en Santiago Centro",
+      "items": [
+        {
+          "question": "¿Cuáles son los servicios de seguridad más solicitados en Santiago Centro?",
+          "answer": "Los servicios más requeridos son guardias de vigilancia para edificios y oficinas, instalación de CCTV, control de accesos y monitoreos remotos. Cada solución se adapta a las necesidades específicas del cliente."
+        },
+        {
+          "question": "¿Cuánto cuesta contratar guardias de seguridad en Santiago Centro?",
+          "answer": "Los precios varían según el tipo de servicio, cantidad de guardias y horarios requeridos. En GuardMan ofrecemos evaluaciones gratuitas y cotizaciones personalizadas sin compromiso."
+        },
+        {
+          "question": "¿Tienen disponibilidad inmediata para proyectos en el centro de Santiago?",
+          "answer": "Sí, gracias a nuestra amplia red de guardias y centros de operaciones, podemos desplegar personal de seguridad en tiempo récord para cubrir emergencias o proyectos nuevos."
+        },
+        {
+          "question": "¿Qué diferencia a GuardMan de otras empresas de seguridad en Santiago?",
+          "answer": "Contamos con centro de monitoreo propio 24/7, guardias con certificación OS-10 vigente y más de 8 años protegiendo hogares, empresas y comercios en toda la Región Metropolitana."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege lo que más importa en Santiago Centro",
-      "button_text": "Solicitar Cotización Gratis",
-      "button_link": "/cotizacion"
+      "heading": "Protege lo que más importa en Santiago Centro",
+      "subheading": "Contáctanos hoy y recibe una asesoría personalizada sin costo. Seguridad profesional al alcance de tu mano.",
+      "button": "Solicitar Cotización Gratis"
     }
   },
-  "related_content": {
-    "nearby_locations": [
-      {
-        "slug": "conchali",
-        "title": "Conchali",
-        "excerpt": "Ubicación con cobertura de seguridad",
-        "image": "/images/ubicaciones/conchali.jpg"
-      },
-      {
-        "slug": "huechuraba",
-        "title": "Huechuraba",
-        "excerpt": "Ubicación con cobertura de seguridad",
-        "image": "/images/ubicaciones/huechuraba.jpg"
-      },
-      {
-        "slug": "la-pintana",
-        "title": "La Pintana",
-        "excerpt": "Ubicación con cobertura de seguridad",
-        "image": "/images/ubicaciones/la-pintana.jpg"
-      }
-    ],
-    "related_services": [
-      {
-        "slug": "auditoria-seguridad",
-        "title": "auditoria-seguridad",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/auditoria-seguridad.jpg"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "cctv-videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "control-de-accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      }
-    ],
-    "upsell_services": [
-      {
-        "slug": "auditoria-seguridad",
-        "title": "auditoria-seguridad",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "cctv-videovigilancia",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
     "quality_score": 0,
-    "published": false
+    "published": true
   }
 }

@@ -3,41 +3,28 @@
     "hero": {
       "heading": "Seguridad Industrial en Chile | Expertos en Protección de Instalaciones",
       "subheading": "Protege tu planta, bodega o faena con guardias certificados OS-10 y monitoreo 24/7",
-      "cta_text": "Solicitar Cotización",
-      "image": "/images/service-seguridad-industrial.webp"
+      "cta_text": "Solicitar Cotización"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Seguridad Industrial",
-        "url": "/servicios/seguridad-industrial"
-      }
-    ],
     "intro": {
-      "title": "Protección Integral para la Industria Chilena",
-      "content": "En GuardMan Chile somos especialistas en seguridad industrial. Protegemos plantas productoras, bodegas, faenas mineras y centros logísticos con guardias entrenados en prevención de riesgos y manejo de emergencias.\nNuestros servicios combinan presencia física calificada, tecnología de monitoreo avanzado y protocolos diseñados para cada tipo de industria, asegurando la continuidad operativa de tu empresa.",
-      "image": "/images/service-intro.jpg"
+      "heading": "Protección Integral para la Industria Chilena",
+      "paragraphs": [
+        "En GuardMan Chile somos especialistas en seguridad industrial. Protegemos plantas productoras, bodegas, faenas mineras y centros logísticos con guardias entrenados en prevención de riesgos y manejo de emergencias.",
+        "Nuestros servicios combinan presencia física calificada, tecnología de monitoreo avanzado y protocolos diseñados para cada tipo de industria, asegurando la continuidad operativa de tu empresa."
+      ]
     },
     "features": {
-      "title": "Qué Incluye el Servicio",
+      "heading": "Por Qué Empresas Industriales Confían en GuardMan",
       "items": [
-        "Vigilancia perimetral con rondas programadas",
-        "Control de acceso vehicular y peatonal",
-        "Registro de contratistas y visitantes con photo ID",
-        "Monitoreo de cámaras con enfoque en zonas críticas",
-        "Control de horario de turnos y asistencia",
-        "Reporte de novedades con fotografías del evento"
+        "Guardias certificados OS-10 con formación en prevención de riesgos laborales",
+        "Centro de monitoreo 24/7 propio con cámaras y sensores de última generación",
+        "Cobertura en 14 comunas del Gran Santiago y zonas industriales clave",
+        "Protocolos adaptados a normativas SERNACYT y regulación chilena",
+        "Reportes en tiempo real y dashboard de actividad para gerencias",
+        "Respuesta inmediata ante emergencias con coordinación a Carabineros"
       ]
     },
     "issues": {
-      "title": "Problemas que Resolvemos para Tu Operación",
+      "heading": "Problemas que Resolvemos para Tu Operación",
       "items": [
         "Robo de materiales, herramientas y productos terminados en bodegas y plantas",
         "Acceso no autorizado de personas ajenas a zonas operativas peligrosas",
@@ -46,50 +33,56 @@
         "Pérdida de producción por cortes de luz o fallas de seguridad no detectadas"
       ]
     },
-    "stats": [
-      {
-        "value": "8+",
-        "label": "Años de experiencia en seguridad industrial"
-      },
-      {
-        "value": "45+",
-        "label": "Clientes industriales activos en la Región Metropolitana"
-      },
-      {
-        "value": "73%",
-        "label": "Reducción promedio de incidentes en faenas protegidas"
-      },
-      {
-        "value": "500+",
-        "label": "Guardias disponibles para turnos diurnos y nocturnos"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Los guardias tienen experiencia en entornos industriales?",
-        "answer": "Sí, nuestros guardias industriales son seleccionados por su experiencia en el sector y capacitados en seguridad ocupacional, prevención de accidentes y manejo de emergencias."
-      },
-      {
-        "question": "¿Cómo controlan el acceso de vehículos?",
-        "answer": "Contamos con garitas equipadas con barreras, cámaras de lectura de patentes y sistema de registro de vehículos autorizados."
-      },
-      {
-        "question": "¿El servicio funciona 24/7?",
-        "answer": "Sí, ofrecemos cobertura continua para operaciones que trabajan las 24 horas, con personal de relevo y supervisión constante."
-      },
-      {
-        "question": "¿Pueden integrar su servicio con mis cámaras existentes?",
-        "answer": "Sí, podemos monitorear sus cámaras desde nuestro centro de operaciones y coordinar con los guardias en terreno."
-      },
-      {
-        "question": "¿Qué reportes recibo?",
-        "answer": "Recibe reportes diarios por email con novedades, conteo de ingresos/egresos, fotografía de incidentes y métricas de turno."
-      }
-    ],
+    "stats": {
+      "heading": "Resultados que Respaldan Nuestra Trayectoria",
+      "items": [
+        {
+          "label": "Años de experiencia en seguridad industrial",
+          "value": "8+"
+        },
+        {
+          "label": "Clientes industriales activos en la Región Metropolitana",
+          "value": "45+"
+        },
+        {
+          "label": "Reducción promedio de incidentes en faenas protegidas",
+          "value": "73%"
+        },
+        {
+          "label": "Guardias disponibles para turnos diurnos y nocturnos",
+          "value": "500+"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Seguridad Industrial",
+      "items": [
+        {
+          "question": "¿Qué tipos de industrias protege GuardMan?",
+          "answer": "Trabajamos con plantas manufactureras, bodegas logísticas, faenas de construcción, centros de distribución y cualquier instalación industrial que requiera protección especializada."
+        },
+        {
+          "question": "¿Los guardias están capacitados para entornos industriales?",
+          "answer": "Sí, todos nuestros guardias reciben capacitación específica en prevención de riesgos, manejo de sustancias peligrosas y procedimientos de emergencia, aparte de la certificación OS-10."
+        },
+        {
+          "question": "¿Pueden integrarse con los sistemas de seguridad existentes?",
+          "answer": "Claro, nos adaptamos a tus cámaras, cercos eléctricos y sistemas de control de acceso. Además, podemos conectar todo a nuestro centro de monitoreo para cobertura integral."
+        },
+        {
+          "question": "¿Cómo funciona el servicio de monitoreo 24/7?",
+          "answer": "Nuestro centro opera las 24 horas con operadores entrenados que vigilan tu instalación mediante cámaras y sensores, activando protocolos y contacto con Carabineros ante cualquier emergencia."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege Tu Operación Industrial Hoy",
-      "button_text": "Pedir Evaluación Gratuita",
-      "button_link": "/cotizacion"
+      "heading": "Protege Tu Operación Industrial Hoy",
+      "subheading": "Solicita una evaluación gratuita de seguridad para tu planta o faena. Sin compromiso, en menos de 48 horas tienes la cotización.",
+      "button": "Pedir Evaluación Gratuita"
+    },
+    "meta": {
+      "title": "Seguridad Industrial | GuardMan Chile",
+      "description": "Servicios de seguridad industrial en Chile: guardias OS-10, monitoreo 24/7 y protección para plantas y faenas. Cotiza gratis en GuardMan."
     }
   }
 }

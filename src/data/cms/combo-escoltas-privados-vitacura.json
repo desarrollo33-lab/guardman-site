@@ -1,96 +1,72 @@
 {
   "sections": {
     "hero": {
-      "heading": "Escoltas Privados en Vitacura",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente premium.",
-      "cta_text": "Cotizar en Vitacura",
-      "cta_link": "/cotizacion?service=escoltas-privados&location=vitacura",
-      "image": "/images/service-escoltas-privados.webp"
+      "heading": "Escoltas Privados en Vitacura: Protección Personal Profesional",
+      "subheading": "Guardia particular y resguardo de personas certificado OS-10. Respuesta inmediata, cobertura 24/7 y escoltas con años de experiencia en protección VIP en Vitacura y toda la Región Metropolitana.",
+      "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Escoltas Privados",
-        "url": "/servicios/escoltas-privados"
-      },
-      {
-        "label": "Vitacura",
-        "url": "/servicios/escoltas-privados/vitacura"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Escoltas Privados en Vitacura?",
-      "content": "En GuardMan Chile somos especialistas en escoltas privados en Vitacura. Nuestra experiencia en el sector oriente premium nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Vitacura y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Escoltas certificados OS-10 con experiencia militar o policial",
-        "Evaluación de riesgos previa al servicio",
-        "Protección ejecutiva y familiar",
-        "Transporte seguro y ruta de evasión",
-        "Coordinación con autoridades de seguridad",
-        "Confidentialidad y discreción total"
+      "heading": "Servicio de Escoltas Privados en Vitacura con Certificación OS-10",
+      "paragraphs": [
+        "En GuardMan Chile ofrecemos escoltas privados en Vitacura con personal altamentecapacitado y certificado por la Prefectura de Seguridad Privada de Carabineros. Nuestrosequipos de protección personal cuentan con formación táctica, experiencia comprobada ylos recursos necesarios para garantizar su seguridad y la de sus seres queridos encada desplazamiento.",
+        "Entendemos que cada cliente tiene necesidades únicas de protección. Por ello,diseñamos planes de seguridad personalizados que se adaptan a su rutina, nivel deriesgo y presupuesto. Ya sea que requiera un escolta para eventos corporativos,traslados diarios o protección permanente, nuestro equipo está preparado paraproveer un servicio discreto, profesional y efectivo.",
+        "Como empresa de escoltas privados en Vitacura con más de 8 años de experiencia,garantizamos personal certificado OS-10, vehículos equipados y cobertura en las 14comunas de la Región Metropolitana. Nuestra central de monitoreo opera las 24 horas,los 365 días del año, asegurando respuesta inmediata ante cualquier situación deemergencia."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Vitacura",
-      "content": "",
-      "points": [
-        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
-        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de Nuestros Escoltas Privados en Vitacura",
+      "items": [
+        "Escoltas certificados OS-10 por Carabineros de Chile con formación continua yactualización táctica permanente",
+        "Cobertura 24/7 durante los 365 días del año con disponibilidad paramodelos de turno o eventuales",
+        "Evaluación de riesgo gratuita antes de contratar el servicio de escolta enVitacura",
+        "Personal con experiencia en protección VIP, ejecutivos, familias ypersonas con riesgo moderado a alto",
+        "Vehículos equipados para labores de escolta y transporte seguro depersonas protegidas",
+        "Central de monitoreo y comunicaciones con respuesta inmediata anteemergencias",
+        "Escoltas con licencia de conducir profesional y capacitación enconducción defensiva y táctica",
+        "Coordinación con autoridades Carabineros y servicios de emergencia paramáxima seguridad"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Vitacura",
+      "heading": "Situaciones que Nuestros Escoltas Privados en Vitacura Resuelven",
       "items": [
-        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
-        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Protección personal ante amenazas, hostigamientos o situaciones de riesgopara su integridad física",
+        "Resguardo durante traslados por zonas de alta criminalidad o rutaspeligrosas de la Región Metropolitana",
+        "Acompañamiento en eventos corporativos, sociales o reuniones dealto riesgo donde se requiere protección visible",
+        "Protección de menores, adultos mayores o familiares que requierenasistencia de seguridad personalizada",
+        "Custodia de valores, documentos importantes o bienes que requierenmovimiento seguro entre ubicaciones",
+        "Disuasión efectiva ante intentos de robo, intimidación o seguimientosindeseados"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cómo contratan el servicio de escoltas?",
-        "answer": "Primero evaluamos tus necesidades específicas de seguridad. Luego seleccionamos el escolta adecuado según perfil, experiencia y requisitos particulares."
-      },
-      {
-        "question": "¿Los escoltas tienen formación legal?",
-        "answer": "Sí, todos nuestros escoltas tienen certificación OS-10 y formación en defensa personal, primeros auxilios y manejo de situaciones de crisis."
-      },
-      {
-        "question": "¿El servicio es confidencial?",
-        "answer": "Absolutamente. La confidencialidad es parte fundamental de nuestro servicio. No revelamos información de nuestros clientes ni de sus rutinas."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Escoltas Privados en Vitacura",
+      "items": [
+        {
+          "question": "¿Cómo contratar un escolta privado en Vitacura?",
+          "answer": "Para contratar un escolta privado en Vitacura con GuardMan Chile, contáctenosporteléfono o completando nuestro formulario web. Realizamos una evaluación deriesgo gratuita para entender sus necesidades específicas. Luego, le asignamos un escoltaocondiciones que se ajuste a sus requerimientos de horario, nivel de protección ypresupuesto. El proceso de contratación es ágil y podemos implementar elservicio en pocas horas tras la aprobación del plan de seguridad."
+        },
+        {
+          "question": "¿Qué precio tiene un escolta privado en Vitacura?",
+          "answer": "El precio de un escolta privado en Vitacura varía según el tipo deservicio, duración (horas, días o permanente), nivel de riesgo y cantidad deescoltas requeridos. En GuardMan Chile ofrecemos cotizaciones personalizadas sincompromiso. Nuestros planes parte desde servicios por hora hasta contratosmensuales. Contáctenos para recibir una cotización detallada según susnecesidades específicas de protección."
+        },
+        {
+          "question": "¿Qué certificación debe tener un escolta privado en Chile?",
+          "answer": "Todo escolta privado en Chile debe contar con la certificación OS-10emitida por la Prefectura de Seguridad Privada de Carabineros. Esta acreditaciónverifica que el guardia ha completado el curso formal de guardias de seguridadprivada. En GuardMan Chile todos nuestros escoltas cumplen con este requisito legal yademás reciben capacitación adicional en protección personal, primeros auxilios yconducción defensiva."
+        },
+        {
+          "question": "¿Cuánto tiempo de respuesta tiene un escolta privado en Vitacura?",
+          "answer": "Nuestros escoltas privados en Vitacura tienen tiempos de respuesta inmediatosgracias a nuestra central de monitoreo 24/7 y nuestra presencia en las 14comunas de la Región Metropolitana. En situaciones de emergencia, nuestro personalde respuesta puede movilizarse en minutos. Además, cada escolta cuenta con medios decomunicación directa con nuestra central para coordinar respaldo adicional sicampieza necesario."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Vitacura",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Vitacura",
-      "button_link": "/cotizacion?service=escoltas-privados&location=vitacura"
+      "heading": "¿Necesita un Escolta Privado en Vitacura?",
+      "subheading": "Proteja lo que más importa con escoltas profesionales certificados OS-10.Contáctenos hoy para una evaluación de riesgo gratuita y descubra cómo podemosayudarle.",
+      "button": "Cotizar Escolta en Vitacura",
+      "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200"
+    },
+    "meta": {
+      "title": "Escoltas Privados en Vitacura | OS-10 Certificados - GuardMan Chile",
+      "description": "Contrate escoltas privados en Vitacura certificados OS-10. Protección personal 24/7,personal experimentado y planes personalizados. Cotizacióngratuita."
     }
   }
 }

@@ -1,96 +1,74 @@
 {
   "sections": {
     "hero": {
-      "heading": "Auditoría de Seguridad en Lo Barnechea",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente de Santiago.",
-      "cta_text": "Cotizar en Lo Barnechea",
-      "cta_link": "/cotizacion?service=auditoria-seguridad&location=lo-barnechea",
-      "image": "/images/service-auditoria-seguridad.webp"
+      "heading": "Auditoría de Seguridad en Lo Barnechea | Evaluaciones Profesionales 24/7",
+      "subheading": "Protege tu empresa, condominio o propiedad en Lo Barnechea con nuestra auditoría de seguridad profesional. Evaluamos vulnerabilidades, sistemas y protocolos para prevenir incidentes antes de que ocurran."
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Auditoria Seguridad",
-        "url": "/servicios/auditoria-seguridad"
-      },
-      {
-        "label": "Lo Barnechea",
-        "url": "/servicios/auditoria-seguridad/lo-barnechea"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Auditoría de Seguridad en Lo Barnechea?",
-      "content": "En GuardMan Chile somos especialistas en auditoría de seguridad en Lo Barnechea. Nuestra experiencia en el sector oriente de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Lo Barnechea y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Diagnóstico integral de vulnerabilidades",
-        "Evaluación de riesgos y amenazas",
-        "Diseño de plan de seguridad personalizado",
-        "Capacitación a personal de seguridad",
-        "Implementación de protocolos y procedimientos",
-        "Seguimiento y auditoría continua"
+      "heading": "Auditoría de Seguridad en Lo Barnechea: Diagnóstico Integral para Proteger lo que Más Importa",
+      "paragraphs": [
+        "En GuardMan Chile, empresa de seguridad privada con más de 8 años de experiencia en el mercado chileno, entendemos que la mejor estrategia de protección es la prevención. Nuestra auditoría de seguridad en Lo Barnechea es un proceso sistemático de evaluación que analiza todos los aspectos de la protección de tu propiedad o empresa: desde la infraestructura física hasta los procedimientos operativos y la capacidad de respuesta ante emergencias.",
+        "Nuestro equipo de profesionales especializados realiza inspecciones en terreno para identificar vulnerabilidades y detectar falencias en sistemas de vigilancia, control de accesos y protocolos de seguridad. Con operativos en 14 comunas de la Región Metropolitana y más de 500 guardias certificados OS-10, garantizamos evaluaciones fundamentadas en conocimiento práctico y normativa vigente.",
+        "Cada auditoría de seguridad en Lo Barnechea que realizamos incluye un informe detallado con hallazgos, recomendaciones priorizadas y un plan de acción personalizado. No solo identificamos problemas: entregamos soluciones concretas para que puedas tomar decisiones informadas sobre la protección de tus activos."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Lo Barnechea",
-      "content": "",
-      "points": [
-        "condominios de lujo, vineyards y propiedades rurales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia perimetral, control vehicular y respuestas de emergencia es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Lo Barnechea enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Qué Incluye Nuestra Auditoría de Seguridad en Lo Barnechea?",
+      "items": [
+        "Evaluación perimetral: Revisión de muros, cercas, rejas, puertas y toda la estructura física que define el perímetro de seguridad de tu propiedad.",
+        "Análisis de sistemas de vigilancia: Verificación del funcionamiento, cobertura y calidad de cámaras CCTV, sensores de movimiento y sistemas de alarma.",
+        "Revisión de control de accesos: Evaluación de mecanismos de identificación, registro de ingresos y protocolos para visitantes y contractors.",
+        "Inspección de iluminación y señalética: Verificación de zonas oscuras, puntos ciegos y señalización de emergencia que afectan la seguridad efectiva.",
+        "Evaluación de procedimientos operativos: Análisis de protocolos de rondas, tiempos de respuesta y coordinación con fuerzas de seguridad.",
+        "Revisión de documentación y normativas: Verificación de cumplimiento con la Ley 21.659 de Seguridad Privada y certificaciones OS-10 del personal.",
+        "Informe ejecutivo con plan de mejoras: Documento detallado con hallazgos, fotografías, nivel de riesgo y recomendaciones priorizadas por urgencia.",
+        "Asesoría personalizada post-auditoría: Seguimiento con nuestros especialistas para implementar las mejoras recomendadas según tu presupuesto."
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Lo Barnechea",
+      "heading": "Señales de que Necesitas una Auditoría de Seguridad en Lo Barnechea",
       "items": [
-        "condominios de lujo, vineyards y propiedades rurales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia perimetral, control vehicular y respuestas de emergencia es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Lo Barnechea enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "No recuerdas cuándo se realizó la última evaluación de seguridad de tu propiedad o empresa, o nunca se ha realizado una.",
+        "Has experimentado intentos de robo, vandalism o incidentes de seguridad que pudieron prevenirse con mejor protección.",
+        "Tu sistema de cámaras o alarmas presenta fallas intermitentes sin un mantenimiento correcto hace mucho tiempo.",
+        "Los guardias de seguridad no cuentan con certificación OS-10 actualizada o no existe un control documentado de sus turnos y rondas.",
+        "No existe un protocolo documentado para responder ante emergencias, robos o situaciones de riesgo especifico para tu sector.",
+        "Has notado zonas sin cobertura de cámaras, ángulos muertos en vigilancia o iluminación deficiente que genera puntos vulnerables."
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué incluye una auditoría de seguridad?",
-        "answer": "Incluye evaluación de vulnerabilidades físicas y lógicas, análisis de riesgos, revisión de protocolos actuales, recomendaciones de mejora y plan de implementación."
-      },
-      {
-        "question": "¿Cuánto tiempo toma una auditoría?",
-        "answer": "Una auditoría completa toma entre 1 y 2 semanas dependiendo del tamaño de la instalación y la complejidad de los sistemas a evaluar."
-      },
-      {
-        "question": "¿Después de la auditoría ayudan a implementar?",
-        "answer": "Sí, ofrecemos servicios de implementación de mejoras, capacitación de personal y seguimiento para asegurar que las recomendaciones se ejecuten correctamente."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Nuestra Auditoría de Seguridad en Lo Barnechea",
+      "items": [
+        {
+          "question": "¿Qué es una auditoría de seguridad en Lo Barnechea y por qué es importante?",
+          "answer": "Una auditoría de seguridad en Lo Barnechea es una evaluación profesional integral que examina todos los aspectos de la protección de tu propiedad o empresa en esta comuna. Incluye inspección física del perímetro, revisión de sistemas de vigilancia y alarmas, evaluación de procedimientos operativos y verificación de cumplimiento normativo. Es importante porque permite identificar vulnerabilidades antes de que sean explotadas por delinquentes, evitando pérdidas económicas, daños materiales y riesgos para las personas. En Lo Barnechea, donde las propiedades de alto valor son frecuentes, esta evaluación es fundamental para garantizar una protección efectiva."
+        },
+        {
+          "question": "¿Cuánto cuesta una auditoría de seguridad en Lo Barnechea?",
+          "answer": "El valor de una auditoría de seguridad en Lo Barnechea depende del tipo de propiedad, su tamaño, la complejidad de los sistemas instalados y el alcance de la evaluación requerida. Para properties residenciales стандартных我们会提供一个定制的смету基于您的具体需求.We offer customized budgets that consider property size, existing security systems, and the scope of assessment needed. Para condominios, empresas o properties comerciales, el presupuesto se ajusta según el número de unidades, turnos de vigilancia y complejidad operativa. Lo importante es que nuestra auditoría ofrece un retorno de inversión claro: cada recomendación está diseñada para reducir riesgos y costos asociados a incidentes de seguridad."
+        },
+        {
+          "question": "¿Cuánto tiempo toma realizar una auditoría de seguridad?",
+          "answer": "El tiempo de una auditoría de seguridad en Lo Barnechea varía según el tipo y tamaño de la propiedad. Para una propiedad residencial estándar, la inspección en terreno puede completarse en 4-6 horas. Para condominios medianos o empresas pequeñas, el proceso puede extenderse a 1-2 días de evaluación. Propiedades grandes o complejos industriales pueden requerir una semana completa de trabajo. En todos los casos, entregamos el informe ejecutivo con hallazgos y recomendaciones en un máximo de 5 días hábiles после завершения оценки, aunque para casos urgentes podemos acelerar el proceso."
+        },
+        {
+          "question": "¿Qué diferencia tiene la auditoría de GuardMan respecto a otras empresas de seguridad en Lo Barnechea?",
+          "answer": "Nuestra auditoría de seguridad en Lo Barnechea se diferencia por tres factores clave: primero, nuestro equipo está compuesto por profesionales con experiencia práctica en seguridad operativa, no solo consultores teóricos. Segundo,Somos una empresa establecida con más de 8 años en el mercado y presencia directa en 14 comunas de la RM, lo que nos permite conocer las dinámicas específicas de cada sector. Tercero, no solo entregamos un informe: ofrecemos acompañamiento en la implementación de mejoras y acceso a nuestros servicios de guardias certificados OS-10 si necesitas fortalecer tu protección tras la auditoría."
+        },
+        {
+          "question": "¿La auditoría de seguridad verifica que los guardias cumplan con la certificación OS-10?",
+          "answer": "Sí, una parte fundamental de nuestra auditoría de seguridad en Lo Barnechea incluye la verificación del cumplimiento normativo. Esto comprende la revisión de la certificación OS-10 de todo el personal de vigilancia, la validez de sus credenciales, la actualización de cursos y la documentación exigida por la Prefectura de Seguridad Privada (O.S.10) de Carabineros. El personal sin certificación vigente representa un riesgo legal para tu property y puede resultar en sanciones. En GuardMan todos nuestros guardias están certificado OS-10 y actualizados, y podemos ayudarte a regularizar cualquier situación irregular que detectemos durante la auditoría."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Lo Barnechea",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Lo Barnechea",
-      "button_link": "/cotizacion?service=auditoria-seguridad&location=lo-barnechea"
+      "heading": "Solicita tu Auditoría de Seguridad en Lo Barnechea Ahora",
+      "subheading": "No esperes a que ocurra un incidente para evaluar tu seguridad. Nuestros especialistas en Lo Barnechea realizan auditorías profesionales con entrega de informe en 5 días. Protege tu inversión y la de tu familia.",
+      "button": "Cotizar Auditoría de Seguridad"
+    },
+    "meta": {
+      "title": "Auditoría de Seguridad en Lo Barnechea | GuardMan Chile 2026",
+      "description": "Auditoría de seguridad profesional en Lo Barnechea. Evaluamos vulnerabilidades, sistemas y protocolos. Informe detallado con plan de mejoras. Empresa con 8+ años de experiencia."
     }
   }
 }

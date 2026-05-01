@@ -1,75 +1,78 @@
 ---
 /**
- * Locations Index - Lista todas las ubicaciones desde CMS
+ * Locations Hub - Reads from hub-locations.json + zones.json
  */
-
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLocationSections, getLocationsList } from '../../data/cms';
+import { getLocationSections, getLocationsList, getServicesList } from '../../data/cms';
+import { getZoneTag } from '../../data/cms-config';
+import { readFileSync, existsSync } from 'fs';
 
 const locations = getLocationsList();
+const allServices = getServicesList();
 
-// Group by zone
-const zones = ['Oriente', 'Centro', 'Norte', 'Sur'];
-const locationsByZone: Record<string, any[]> = {
-  'Oriente': [],
-  'Centro': [],
-  'Norte': [],
-  'Sur': []
-};
+// Hub content from CMS
+const hubPath = 'src/data/cms/hub-locations.json';
+let hubData: any = { hero: {}, stats: [], cta: {} };
+if (existsSync(hubPath)) {
+  hubData = JSON.parse(readFileSync(hubPath, 'utf-8'));
+}
 
+// Zones from zones.json (dynamic, not hardcoded)
+const zonesPath = 'src/data/cms/zones.json';
+let zonesData: Record<string, any> = {};
+if (existsSync(zonesPath)) {
+  zonesData = JSON.parse(readFileSync(zonesPath, 'utf-8'));
+}
+const zones = Object.keys(zonesData).length > 0 ? Object.keys(zonesData) : ['Oriente', 'Centro', 'Norte', 'Sur'];
+
+const locationsByZone: Record<string, any[]> = {};
+for (const zone of zones) { locationsByZone[zone] = []; }
 for (const location of locations) {
   const zone = location.zone || 'Centro';
-  if (locationsByZone[zone]) {
-    locationsByZone[zone].push(location);
-  } else {
-    locationsByZone['Centro'].push(location);
-  }
+  if (locationsByZone[zone]) { locationsByZone[zone].push(location); }
+  else if (locationsByZone['Centro']) { locationsByZone['Centro'].push(location); }
+  else { locationsByZone[zone] = [location]; }
 }
 ---
 
-<BaseLayout 
-  title="Ubicaciones | GuardMan Chile" 
-  description="Cobertura de seguridad en toda la Región Metropolitana. Servicios disponibles en Santiago Centro, Las Condes, Vitacura, Huechuraba y más."
->
+<BaseLayout title={hubData.seo?.title || "Ubicaciones | GuardMan Chile"} description={hubData.seo?.description || "Cobertura de seguridad en toda la Región Metropolitana. Servicios disponibles en Santiago Centro, Las Condes, Vitacura, Huechuraba y más."}>
   <!-- Hero -->
   <section class="bg-primary-600 text-white py-16 lg:py-20">
     <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Cobertura en Toda la Región Metropolitana</h1>
-      <p class="text-xl text-white/90 max-w-2xl mx-auto">
-        Protegemos empresas y residencias en las principales comunas de Santiago con guardias certificados OS-10
-      </p>
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">{hubData.hero?.heading || 'Cobertura en Toda la Región Metropolitana'}</h1>
+      <p class="text-xl text-white/90 max-w-2xl mx-auto">{hubData.hero?.subheading || 'Protegemos empresas y residencias en las principales comunas de Santiago con guardias certificados OS-10'}</p>
+      {hubData.stats?.length > 0 && (
+        <div class="flex flex-wrap justify-center gap-6 mt-6 text-white/90">
+          {hubData.stats.map((stat: any) => (
+            <div><div class="text-2xl font-bold">{stat.value}</div><div class="text-sm text-white/70">{stat.label}</div></div>
+          ))}
+        </div>
+      )}
     </div>
   </section>
 
   <!-- Locations by Zone -->
-  {zones.map(zone => locationsByZone[zone].length > 0 && (
-    <section class="py-12 bg-white">
+  {zones.map((zone: string, idx: number) => locationsByZone[zone]?.length > 0 && (
+    <section class={idx % 2 === 0 ? 'py-12 bg-white' : 'py-12 bg-neutral-50'}>
       <div class="container mx-auto px-4">
         <h2 class="text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-2">
-          <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium">{zone}</span>
-          {zone === 'Oriente' ? 'Zona Premium' : zone === 'Centro' ? 'Zona Centro' : zone === 'Norte' ? 'Zona Norte' : 'Zona Sur'}
+          <span class={`px-3 py-1 rounded-full text-sm font-medium border ${getZoneTag(zone)}`}>{zone}</span>
+          Zona {zone}
         </h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {locationsByZone[zone].map(location => {
+          {locationsByZone[zone].map((location: any) => {
             const sections = getLocationSections(location.slug);
             const hero = sections?.hero || {};
-            
             return (
-              <a 
-                href={`/ubicaciones/${location.slug}`} 
-                class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-6 transition-all group"
-              >
-                <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
-                  {hero.heading?.replace('Seguridad Privada en ', '') || location.name}
-                </h3>
-                <p class="text-sm text-neutral-600 line-clamp-2">
-                  {hero.subheading || location.name}
-                </p>
-                <div class="mt-4 flex items-center text-primary-600 text-sm font-medium">
-                  Ver cobertura
-                  <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                  </svg>
+              <a href={`/ubicaciones/${location.slug}`} class="bg-white hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-6 transition-all group">
+                <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">{hero.heading?.replace('Seguridad Privada en ', '') || location.name}</h3>
+                <p class="text-sm text-neutral-600 line-clamp-2">{hero.subheading || `Servicios de seguridad privada con guardias OS-10 en ${location.name}`}</p>
+                <div class="mt-4 flex items-center justify-between">
+                  <span class="text-xs text-neutral-500 flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    {allServices.length} servicios
+                  </span>
+                  <span class="text-primary-600 text-sm font-medium flex items-center">Ver cobertura <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
                 </div>
               </a>
             );
@@ -82,17 +85,11 @@ for (const location of locations) {
   <!-- CTA -->
   <section class="py-12 bg-primary-600 text-white">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-2xl font-bold mb-4">¿No encuentras tu ubicación?</h2>
-      <p class="text-white/90 mb-6 max-w-2xl mx-auto">
-        Contactanos y verificamos cobertura en tu zona. Operamos en toda la Región Metropolitana.
-      </p>
+      <h2 class="text-2xl font-bold mb-4">{hubData.cta?.text || '¿No encuentras tu ubicación?'}</h2>
+      <p class="text-white/90 mb-6 max-w-2xl mx-auto">{hubData.cta?.description || 'Contactanos y verificamos cobertura en tu zona. Operamos en toda la Región Metropolitana.'}</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/cotizacion" class="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
-          Solicitar Cotización
-        </a>
-        <a href="/contacto" class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-          Llamar ahora
-        </a>
+        <a href={hubData.cta?.button_link || '/cotizacion'} class="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">{hubData.cta?.button_text || 'Solicitar Cotización'}</a>
+        <a href="/contacto" class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">Llamar ahora</a>
       </div>
     </div>
   </section>

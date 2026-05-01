@@ -1,12 +1,14 @@
 ---
 /**
- * Location Page - MODIFICADO: Usa contenido del CMS (JSON con related_content)
+ * Location Detail - Unified structure
+ * Hero → Intro → Features → Issues → Staff → Services → Nearby → CTA
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getServiceSections, getLocationSections, getServicesList, getLocationsList } from '../../data/cms';
+import { ZONE_CONTEXT, STAFF_IMAGE, STAFF_TRAITS, LOCATION_ISSUES, getZoneTag, getSectorTag } from '../../data/cms-config';
+import { readFileSync, existsSync } from 'fs';
 import SchemaLocalBusiness from '../../components/seo/SchemaLocalBusiness.astro';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
-import { optimizeImageUrl } from '../../data/directus';
 import { readFileSync, existsSync } from 'fs';
 
 const CMS_DIR = 'src/data/cms';
@@ -27,17 +29,11 @@ const sections = getLocationSections(slug);
 const locations = getLocationsList();
 const services = getServicesList();
 
-const location = locations.find((l: any) => l.slug === slug) || {
-  slug,
-  name: locationName,
-  zone: zone || 'Centro'
-};
+const location = locations.find((l: any) => l.slug === slug) || { slug, name: locationName, zone: zone || 'Centro' };
 
-// Load new CMS JSON format (with related_content)
 const newLocationPath = `${NEW_CMS_DIR}/locations/${slug}.json`;
 const legacyLocationPath = `${CMS_DIR}/location-${slug}.json`;
 let cmsLocationData: any = null;
-
 if (existsSync(newLocationPath)) {
   cmsLocationData = JSON.parse(readFileSync(newLocationPath, 'utf-8'));
 } else if (existsSync(legacyLocationPath)) {
@@ -45,19 +41,24 @@ if (existsSync(newLocationPath)) {
   cmsLocationData = { content: legacy.sections, related_content: {} };
 }
 
-// Use related_content from CMS JSON
 const relatedContentFromCMS = cmsLocationData?.related_content || {};
-const nearbyLocations = relatedContentFromCMS?.nearby_locations || locations.filter((l: any) => l.slug !== slug && l.zone === location.zone).slice(0, 3);
+const nearbyLocations = relatedContentFromCMS?.nearby_locations || locations.filter((l: any) => l.slug !== slug && l.zone === location.zone).slice(0, 5);
 
-const availableServices = services.slice(0, 6);
+// Service-sector mapping for colored tags
+const serviceSectorsMapPath = 'src/data/cms/service-sectors.json';
+let serviceSectorsMap: Record<string, string[]> = {};
+if (existsSync(serviceSectorsMapPath)) {
+  serviceSectorsMap = JSON.parse(readFileSync(serviceSectorsMapPath, 'utf-8'));
+}
 
-const hero = sections?.hero || {
-  heading: `Seguridad Privada en ${locationName}`,
-  subheading: `Empresa líder con guardias OS-10 en ${locationName}. Cobertura 24/7.`
-};
+const sectorsPath = 'src/data/cms/sectors.json';
+let sectors: any[] = [];
+if (existsSync(sectorsPath)) {
+  const sectorsData = JSON.parse(readFileSync(sectorsPath, 'utf-8'));
+  sectors = Array.isArray(sectorsData) ? sectorsData : (sectorsData.results || []);
+}
 
-const heroImage = hero.image || null;
-const ogImage = sections?.meta?.ogImage || (heroImage ? `/cdn-cgi/image/width=1200,height=630,format=jpg,fit=cover/${heroImage}` : null);
+const hero = sections?.hero || { heading: `Seguridad Privada en ${locationName}`, subheading: `Empresa líder con guardias OS-10 en ${locationName}. Cobertura 24/7.` };
 
 const breadcrumbItems = [
   { name: 'Inicio', url: 'https://guardman.cl' },
@@ -65,43 +66,52 @@ const breadcrumbItems = [
   { name: locationName, url: `https://guardman.cl/ubicaciones/${slug}` }
 ];
 
-const zoneContext: Record<string, { focus: string; commonNeeds: string }> = {
-  'Oriente': {
-    focus: 'residencias de lujo, embajadas y oficinas corporativas',
-    commonNeeds: 'control de accesos residencial, escoltas VIP y monitoreo perimetral'
-  },
-  'Centro': {
-    focus: 'comercios, oficinas públicas y hoteles',
-    commonNeeds: 'control de flujos de personas, seguridad para eventos y CCTV comercial'
-  },
-  'Norte': {
-    focus: 'industrias, bodegas y centros logísticos',
-    commonNeeds: 'vigilancia perimetral, control vehicular y seguridad industrial'
-  },
-  'Sur': {
-    focus: 'residencial y comercial',
-    commonNeeds: 'seguridad general para hogares y negocios'
-  }
-};
-
 const locationZone = location.zone || 'Centro';
-const context = zoneContext[locationZone] || zoneContext['Centro'];
+
+// Zone context: load from zones.json, fallback to ZONE_CONTEXT
+const zonesPath = 'src/data/cms/zones.json';
+let zonesData: Record<string, any> = {};
+if (existsSync(zonesPath)) {
+  zonesData = JSON.parse(readFileSync(zonesPath, 'utf-8'));
+}
+const context = zonesData[locationZone] || ZONE_CONTEXT[locationZone] || ZONE_CONTEXT['Centro'];
+
+// Intro: CMS intro.content → array; fallback to intro.paragraphs; then zones.json intro; then ZONE_CONTEXT
+const cmsIntroContent = sections?.intro?.content;
+const introParagraphs = cmsIntroContent
+  ? cmsIntroContent.split('\n\n').filter(Boolean)
+  : sections?.intro?.paragraphs?.length > 0
+    ? sections.intro.paragraphs
+    : [`${locationName}${context.intro}`];
+
+// Issues: CMS issues.items → zones.json issues → LOCATION_ISSUES fallback
+const issuesList = (() => {
+  const cmsItems = sections?.issues?.items || sections?.issues?.title ? (sections?.issues?.items || []) : [];
+  if (cmsItems.length > 0) return cmsItems;
+  const legacyItems = sections?.issues ? Object.entries(sections.issues).filter(([key]) => !isNaN(Number(key))).map(([_, v]) => v).filter((item: any) => typeof item === 'string') : [];
+  if (legacyItems.length > 0) return legacyItems;
+  // From zones.json
+  if (context.issues && context.issues.length > 0) return context.issues;
+  return LOCATION_ISSUES[locationZone] || LOCATION_ISSUES['Centro'];
+})();
+
+// Related services (other locations in same zone)
+const relatedLocations = locations.filter((l: any) => l.slug !== slug).slice(0, 3);
+
+// Staff section: load from staff.json
+const staffPath = 'src/data/cms/staff.json';
+let staffData = { image: STAFF_IMAGE, title: `Protección profesional en ${locationName}`, description: `Nuestro equipo desplegado en la zona ${locationZone} está listo para responder.`, traits: STAFF_TRAITS };
+if (existsSync(staffPath)) {
+  const loaded = JSON.parse(readFileSync(staffPath, 'utf-8'));
+  staffData = { image: loaded.image || STAFF_IMAGE, title: loaded.title || staffData.title, description: loaded.description || staffData.description, traits: loaded.traits || STAFF_TRAITS };
+}
 ---
 
-<BaseLayout 
-  title={hero.heading}
-  description={hero.subheading}
-  image={ogImage}
->
-  <!-- Schema -->
-  <SchemaLocalBusiness 
-    name={`GuardMan Chile - ${locationName}`}
-    address={locationName}
-    areaServed="Región Metropolitana"
-  />
+<BaseLayout title={hero.heading} description={hero.subheading}>
+  <SchemaLocalBusiness name={`GuardMan Chile - ${locationName}`} address={locationName} areaServed="Región Metropolitana" />
   <SchemaBreadcrumb items={breadcrumbItems} />
 
-  <!-- Breadcrumb Visual -->
+  <!-- Breadcrumb -->
   <div class="bg-neutral-100 py-3">
     <div class="container mx-auto px-4">
       <nav class="flex text-sm text-neutral-600" aria-label="Breadcrumb">
@@ -114,16 +124,17 @@ const context = zoneContext[locationZone] || zoneContext['Centro'];
     </div>
   </div>
 
-  <!-- Hero -->
+  <!-- Hero (sin tags) -->
   <section class="relative bg-primary-600 text-white py-16 lg:py-20 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="/images/hero-home.webp" alt={hero.heading} class="w-full h-full object-cover opacity-30" width="1920" height="1080" loading="eager" />
+      <div class="absolute inset-0 bg-gradient-to-r from-primary-800/95 to-primary-600/80"></div>
+    </div>
     <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
-    
     <div class="container mx-auto px-4 relative z-10">
       <h1 class="text-3xl lg:text-5xl font-bold mb-4">{hero.heading}</h1>
-      {hero.subheading && (
-        <p class="text-xl text-white/90 max-w-3xl">{hero.subheading}</p>
-      )}
+      {hero.subheading && <p class="text-xl text-white/90 max-w-3xl">{hero.subheading}</p>}
     </div>
   </section>
 
@@ -131,205 +142,150 @@ const context = zoneContext[locationZone] || zoneContext['Centro'];
   <section class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4">
       <div class="grid lg:grid-cols-3 gap-12">
-        <!-- Column 1-2: CMS Sections -->
         <div class="lg:col-span-2">
-          
-          <!-- Intro Section -->
-          {sections?.intro?.paragraphs && (
-            <div class="mb-12 prose prose-neutral max-w-none">
-              {sections.intro.paragraphs.map((p: string) => (
-                <p>{p}</p>
-              ))}
-            </div>
-          )}
 
-          <!-- Why this zone -->
-          {sections?.issues && (
-            <div class="mb-12">
-              <h2 class="text-2xl font-bold text-neutral-900 mb-6">
-                {sections.issues.heading || `Seguridad en ${locationName}`}
-              </h2>
-              <div class="bg-amber-50 border border-amber-200 rounded-xl p-6">
-                <p class="text-neutral-700">
-                  <strong>{locationName}</strong> se especializa en {context.focus}. 
-                  {context.commonNeeds && (
-                    <> Las necesidades más comunes incluyen: {context.commonNeeds}.</>
-                  )}
-                </p>
+          <!-- Intro -->
+          <div class="mb-12 prose prose-neutral max-w-none">
+            {introParagraphs.map((p: string) => <p>{p}</p>)}
+          </div>
+
+          <!-- Features: Qué incluye -->
+          {(() => {
+            const featureItems = sections?.features?.items || [];
+            if (featureItems.length === 0) return null;
+            return (
+              <div class="mb-12">
+                <h2 class="text-2xl font-bold text-neutral-900 mb-6">{sections.features.title || sections.features.heading || `Qué incluye nuestro servicio en ${locationName}`}</h2>
+                <div class="grid sm:grid-cols-2 gap-4">
+                  {featureItems.map((feature: string) => (
+                    <div class="flex items-start gap-3 bg-neutral-50 rounded-lg p-4 hover:shadow-md transition-shadow">
+                      <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span class="text-neutral-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              {Object.entries(sections.issues)
-                .filter(([key]) => !isNaN(Number(key)))
-                .map(([_, issue]) => (
-                  <div class="flex items-start gap-3 mt-4">
-                    <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                    </svg>
-                    <span class="text-neutral-700">{issue}</span>
-                  </div>
-                ))
-              }
-            </div>
-          )}
+            );
+          })()}
 
-          <!-- Coverage Section -->
-          {sections?.coverage && (
+          <!-- Issues: Problemas que solucionamos -->
+          {issuesList.length > 0 && (
             <div class="mb-12">
-              <h2 class="text-2xl font-bold text-neutral-900 mb-6">
-                {sections.coverage.heading || `Cobertura en ${locationName}`}
-              </h2>
+              <h2 class="text-2xl font-bold text-neutral-900 mb-6">Problemas que solucionamos en {locationName}</h2>
               <div class="grid sm:grid-cols-2 gap-4">
-                {Object.entries(sections.coverage)
-                  .filter(([key]) => !isNaN(Number(key)))
-                  .map(([_, item]) => (
-                    <div class="flex items-start gap-3 bg-success/10 rounded-lg p-4">
-                      <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                      </svg>
-                      <span class="text-neutral-700">{item}</span>
-                    </div>
-                  ))
-                }
+                {issuesList.map((issue: string) => (
+                  <div class="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-lg p-4">
+                    <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <span class="text-neutral-700 text-sm font-medium">{issue}</span>
+                  </div>
+                ))}
               </div>
             </div>
           )}
 
-          <!-- Stats Section -->
-          {sections?.stats && (
-            <div class="mb-12 bg-primary-700 text-white rounded-xl p-8">
-              <h2 class="text-2xl font-bold text-center mb-8">
-                {sections.stats.heading || `Números en ${locationName}`}
-              </h2>
-              <div class="grid grid-cols-3 gap-8 text-center">
-                {Object.entries(sections.stats)
-                  .filter(([key]) => !isNaN(Number(key)))
-                  .map(([_, stat]: [string, any]) => (
-                    <div>
-                      <div class="text-4xl lg:text-5xl font-bold mb-2">{stat.value}</div>
-                      <div class="text-white/80">{stat.label}</div>
-                    </div>
-                  ))
-                }
+          <!-- Staff Section (replaces Stats) -->
+          <div class="mb-12 bg-neutral-900 text-white rounded-2xl overflow-hidden">
+            <div class="grid md:grid-cols-2">
+              <div class="relative">
+                <img src={staffData.image} alt={`Personal GuardMan Chile en ${locationName}`} class="w-full h-full object-cover min-h-[280px]" width="800" height="500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/60 to-transparent md:bg-gradient-to-r md:from-transparent md:to-neutral-900"></div>
               </div>
-            </div>
-          )}
-
-          <!-- Services in this location -->
-          <div class="mb-12">
-            <h2 class="text-2xl font-bold text-neutral-900 mb-6">
-              Servicios disponibles en {locationName}
-            </h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {availableServices.map((service: any) => {
-                const serviceSections = getServiceSections(service.slug);
-                return (
-                  <a 
-                    href={`/servicios/${service.slug}`}
-                    class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-4 transition-all group"
-                  >
-                    <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-2">
-                      {serviceSections?.hero?.heading || service.name}
-                    </h3>
-                    <p class="text-sm text-neutral-600 line-clamp-2">
-                      {serviceSections?.hero?.subheading || service.short_description || ''}
-                    </p>
-                  </a>
-                );
-              })}
-            </div>
-            <div class="mt-4 text-center">
-              <a href="/servicios" class="text-primary-600 hover:text-primary-700 font-medium text-sm inline-flex items-center gap-1">
-                Ver todos los servicios
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
+              <div class="p-8 flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-4">{staffData.title}</h2>
+                <p class="text-white/80 mb-6">{staffData.description}</p>
+                <ul class="space-y-3">
+                  {staffData.traits.map((trait: string) => (
+                    <li class="flex items-start gap-3">
+                      <svg class="w-5 h-5 text-primary-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span class="text-white/90 text-sm">{trait}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
-          <!-- FAQs Section -->
+          <!-- FAQs -->
           {sections?.faqs && (
             <div class="mb-8">
-              <h2 class="text-2xl font-bold text-neutral-900 mb-6">
-                {sections.faqs.heading || 'Preguntas Frecuentes'}
-              </h2>
+              <h2 class="text-2xl font-bold text-neutral-900 mb-6">{sections.faqs.heading || 'Preguntas Frecuentes'}</h2>
               <div class="space-y-4">
-                {Object.entries(sections.faqs)
-                  .filter(([key]) => !isNaN(Number(key)))
-                  .map(([_, faq]: [string, any]) => (
-                    <details class="group bg-neutral-50 rounded-lg">
-                      <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-neutral-900">
-                        {faq.question}
-                        <svg class="w-5 h-5 text-neutral-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                      </summary>
-                      <div class="px-4 pb-4 text-neutral-600">
-                        {faq.answer}
-                      </div>
-                    </details>
-                  ))
-                }
+                {Object.entries(sections.faqs).filter(([key]) => !isNaN(Number(key)) || key === 'items').map(([key, value]) => key === 'items' ? value : null).flat().filter(item => item && typeof item === 'object').map((faq: any) => (
+                  <details class="group bg-neutral-50 rounded-lg">
+                    <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-neutral-900">{faq.question}<svg class="w-5 h-5 text-neutral-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                    <div class="px-4 pb-4 text-neutral-600">{faq.answer}</div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Services Grid -->
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold text-neutral-900 mb-2">Servicios disponibles en {locationName}</h2>
+            <p class="text-neutral-600 text-sm mb-6">Selecciona un servicio para ver detalles y cotizar en tu comuna.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {services.map((service: any) => {
+                const serviceSections = getServiceSections(service.slug);
+                const sName = serviceSections?.hero?.heading || service.name;
+                return (
+                  <a href={`/servicios/${service.slug}/${slug}`} class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-3 text-center text-sm text-neutral-700 hover:text-primary-700 transition-all font-medium">{sName.length > 28 ? sName.substring(0, 28) + '...' : sName}</a>
+                );
+              })}
+            </div>
+          </div>
+
+          <!-- Nearby Locations -->
+          {nearbyLocations.length > 0 && (
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-neutral-900 mb-2">Comunas cercanas en zona {locationZone}</h2>
+              <p class="text-neutral-600 text-sm mb-6">También cubrimos seguridad en estas comunas de la misma zona.</p>
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                {nearbyLocations.map((l: any) => (
+                  <a href={`/ubicaciones/${l.slug}`} class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-3 text-center text-sm text-neutral-700 hover:text-primary-700 transition-all font-medium">{l.name}</a>
+                ))}
               </div>
             </div>
           )}
         </div>
 
-        <!-- Column 3: Sidebar -->
+        <!-- Sidebar (header fijo + body con scroll) -->
         <div class="lg:col-span-1">
-          <div class="bg-neutral-50 rounded-xl p-6 sticky top-8">
-            <h3 class="text-xl font-bold text-neutral-900 mb-4">
-              {sections?.cta?.heading || `Cotiza en ${locationName}`}
-            </h3>
-            
-            {sections?.cta?.description && (
-              <p class="text-neutral-600 mb-6">
-                {sections.cta.description}
-              </p>
-            )}
-            
-            <a 
-              href="/cotizacion" 
-              class="block w-full bg-primary-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
-            >
-              {sections?.cta?.button || 'Solicitar Cotización'}
-            </a>
-            
-            <a 
-              href="/contacto" 
-              class="block w-full border border-primary-600 text-primary-600 text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors mt-3"
-            >
-              Llamar ahora
-            </a>
-
-            <!-- Nearby locations -->
-            {nearbyLocations.length > 0 && (
-              <div class="mt-6 pt-6 border-t border-neutral-200">
-                <h4 class="text-sm font-semibold text-neutral-700 mb-3">Comunas cercanas</h4>
-                {nearbyLocations.map((l: any) => (
-                  <a
-                    href={`/ubicaciones/${l.slug}`}
-                    class="block py-2 text-sm text-neutral-600 hover:text-primary-600 border-b border-neutral-100 last:border-0"
-                  >
-                    {l.title || l.name}
-                  </a>
-                ))}
+          <div class="bg-neutral-50 rounded-xl sticky top-6 max-h-[calc(100vh-3rem)] flex flex-col overflow-hidden">
+            <!-- Header fijo -->
+            <div class="p-6 pb-0 shrink-0">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4">{sections?.cta?.headline || `Cotiza seguridad en ${locationName}`}</h3>
+              {sections?.cta?.description && <p class="text-neutral-600 mb-4">{sections.cta.description}</p>}
+              <div class="space-y-3">
+                <a href="/cotizacion" class="block w-full bg-primary-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">{sections?.cta?.button_text || 'Solicitar Cotización'}</a>
+                <a href="/contacto" class="block w-full border border-primary-600 text-primary-600 text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors">Llamar ahora</a>
               </div>
-            )}
+            </div>
+            <!-- Body con scroll -->
+            <div class="p-6 pt-4 overflow-y-auto">
+              <div class="pb-6 border-t border-neutral-200 pt-4">
+                <h4 class="text-sm font-semibold text-neutral-700 mb-3">Servicios disponibles</h4>
+                <div class="flex flex-wrap gap-2">
+                  {services.slice(0, 8).map((s: any) => {
+                    const sSections = getServiceSections(s.slug);
+                    const sName = sSections?.hero?.heading || s.name;
+                    const sSectors = serviceSectorsMap[s.slug] || [];
+                    const sectorSlug = sSectors[0] || 'comercial';
+                    return <a href={`/servicios/${s.slug}/${slug}`} class={`text-xs px-2.5 py-1 rounded-full border ${getSectorTag(sectorSlug)}`}>{sName.length > 22 ? sName.substring(0, 22) + '...' : sName}</a>;
+                  })}
+                </div>
+              </div>
 
-            <!-- Services in sidebar -->
-            <div class="mt-6 pt-6 border-t border-neutral-200">
-              <h4 class="text-sm font-semibold text-neutral-700 mb-3">Servicios en {locationName}</h4>
-              {services.slice(0, 4).map((s: any) => {
-                const serviceSections = getServiceSections(s.slug);
-                return (
-                  <a 
-                    href={`/servicios/${s.slug}`}
-                    class="block py-2 text-sm text-neutral-600 hover:text-primary-600 border-b border-neutral-100 last:border-0"
-                  >
-                    {serviceSections?.hero?.heading || s.name}
-                  </a>
-                );
-              })}
+              {nearbyLocations.length > 0 && (
+                <div class="pb-6 border-t border-neutral-200 pt-4">
+                  <h4 class="text-sm font-semibold text-neutral-700 mb-3">Comunas cercanas</h4>
+                  <div class="flex flex-wrap gap-2">
+                    {nearbyLocations.slice(0, 5).map((l: any) => (
+                      <a href={`/ubicaciones/${l.slug}`} class={`text-xs px-2.5 py-1 rounded-full border ${getZoneTag(l.zone || 'Centro')}`}>{l.name}</a>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -337,21 +293,35 @@ const context = zoneContext[locationZone] || zoneContext['Centro'];
     </div>
   </section>
 
-  <!-- CTA Final -->
-  {sections?.cta && (
-    <section class="py-12 bg-primary-600 text-white">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-2xl lg:text-3xl font-bold mb-4">{sections.cta.heading}</h2>
-        <p class="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
-          {sections.cta.description}
-        </p>
-        <a 
-          href="/cotizacion" 
-          class="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors"
-        >
-          {sections.cta.button || 'Solicitar Cotización'}
-        </a>
+  <!-- Related -->
+  <section class="py-12 bg-neutral-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-neutral-900 mb-6">También te puede interesar</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {relatedLocations.map((l: any) => {
+          const lSections = getLocationSections(l.slug);
+          const lName = lSections?.hero?.heading || l.name;
+          return (
+            <a href={`/ubicaciones/${l.slug}`} class="bg-white rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all group">
+              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">{lName}</h3>
+              <p class="text-sm text-neutral-600 line-clamp-2">{lSections?.hero?.subheading || `Seguridad privada en ${l.name}`}</p>
+              <div class="mt-4 text-primary-600 font-medium text-sm flex items-center gap-1">Ver más <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></div>
+            </a>
+          );
+        })}
       </div>
-    </section>
-  )}
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="py-12 bg-primary-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl lg:text-3xl font-bold mb-4">{sections?.cta?.headline || `Protege tu propiedad en ${locationName}`}</h2>
+      <p class="text-lg text-white/90 mb-6 max-w-2xl mx-auto">{sections?.cta?.description || `Cotiza gratis seguridad privada en ${locationName}. Respuesta en menos de 24 horas.`}</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/cotizacion" class="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Solicitar Cotización</a>
+        <a href="/contacto" class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">Hablar con un experto</a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

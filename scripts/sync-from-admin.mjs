@@ -117,33 +117,81 @@ async function main() {
 
   console.log(`Content synced: ${synced} pages`);
 
-  // Sync images from R2
-  console.log('Syncing images from admin R2...');
+  // ===== SYNC MEDIA LIBRARY =====
+  console.log('Syncing media library...');
   const imgDir = 'public/images';
   if (!existsSync(imgDir)) mkdirSync(imgDir, { recursive: true });
 
   try {
-    const imgRes = await fetch(`${API_BASE}/api/images`);
-    const imgData = await imgRes.json();
-    if (imgData.ok && imgData.data) {
-      const imageFiles = imgData.data.filter(o => o.key.startsWith('images/') && o.key.match(/\.(webp|jpg|jpeg|png)$/));
+    // 1. Get media map (image assignments)
+    const mapRes = await fetch(`${API_BASE}/api/media/map`);
+    const mapData = await mapRes.json();
+    if (mapData.ok && mapData.data) {
+      // Save media map for the frontend
+      writeFileSync(join(CMS_DIR, 'media-map.json'), JSON.stringify(mapData.data, null, 2));
+      console.log('Media map saved');
+    }
+
+    // 2. Get all registered media
+    const mediaRes = await fetch(`${API_BASE}/api/media?limit=500`);
+    const mediaData = await mediaRes.json();
+    if (mediaData.ok && mediaData.data) {
+      const registeredKeys = new Set(mediaData.data.map(m => m.key));
       let imgSynced = 0;
-      for (const img of imageFiles) {
-        const fileName = img.key.replace('images/', '');
+      let imgSkipped = 0;
+
+      // Download only registered images
+      for (const img of mediaData.data) {
+        const fileName = img.key.replace(/^images\//, '');
         const destPath = join(imgDir, fileName);
+
+        // Skip PNGs if WebP version exists
+        if (fileName.endsWith('.png')) {
+          const webpPath = join(imgDir, fileName.replace('.png', '.webp'));
+          if (existsSync(webpPath)) {
+            imgSkipped++;
+            continue;
+          }
+        }
+
         const alreadyExists = existsSync(destPath);
-        const localSize = alreadyExists ? (await import('fs')).statSync(destPath).size : 0;
-        if (alreadyExists && localSize === img.size) {
-          imgSynced++;
+        if (alreadyExists) {
+          imgSkipped++;
           continue;
         }
+
         const ok = await downloadImage(img.key, imgDir);
         if (ok) imgSynced++;
       }
-      console.log(`Images synced: ${imgSynced}/${imageFiles.length}`);
+      console.log(`Images synced: ${imgSynced} downloaded, ${imgSkipped} already present`);
+
+      // 3. Clean orphan images (files not in media_library)
+      const fs = await import('fs');
+      const localFiles = fs.readdirSync(imgDir).filter(f =>
+        f.match(/\.(webp|jpg|jpeg|png)$/)
+      );
+      let removed = 0;
+      for (const f of localFiles) {
+        const key = `images/${f}`;
+        if (!registeredKeys.has(key)) {
+          // Don't remove favicon or special files
+          if (f.startsWith('favicon') || f.startsWith('.cache')) continue;
+          // Remove orphan
+          const fullPath = join(imgDir, f);
+          const stat = fs.statSync(fullPath);
+          if (stat.size > 100) { // Only real images, not tiny placeholders
+            // Check if a webp version of this png exists (we prefer webp)
+            if (f.endsWith('.png') && localFiles.includes(f.replace('.png', '.webp'))) {
+              fs.unlinkSync(fullPath);
+              removed++;
+            }
+          }
+        }
+      }
+      if (removed > 0) console.log(`Cleaned ${removed} orphan/duplicate images`);
     }
   } catch (e) {
-    console.warn('Image sync failed:', e.message);
+    console.warn('Media sync failed:', e.message);
   }
 
   console.log('Done!');

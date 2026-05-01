@@ -1,96 +1,77 @@
 {
   "sections": {
     "hero": {
-      "heading": "Guardias de Seguridad en Conchalí",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector poniente de Santiago.",
-      "cta_text": "Cotizar en Conchalí",
-      "cta_link": "/cotizacion?service=guardias-de-seguridad&location=conchali",
-      "image": "/images/service-guardias-de-seguridad.webp"
+      "heading": "Guardias de Seguridad en Conchalí | Protección Profesional 24/7",
+      "subheading": "GuardMan Chile: Empresa de seguridad privada con guardias certificados OS-10 para empresas, condominios y eventos en Conchalí. Cotiza hoy.",
+      "image": "guardias-seguridad-conchali-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Guardias De Seguridad",
-        "url": "/servicios/guardias-de-seguridad"
-      },
-      {
-        "label": "Conchali",
-        "url": "/servicios/guardias-de-seguridad/conchali"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Guardias de Seguridad en Conchalí?",
-      "content": "En GuardMan Chile somos especialistas en guardias de seguridad en Conchalí. Nuestra experiencia en el sector poniente de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Conchalí y toda la zona Poniente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Guardias certificados OS-10 con capacitación continua",
-        "Monitoreo 24/7 desde nuestro centro de control propio",
-        "Respuesta inmediata ante emergencias con coordinación a Carabineros",
-        "Cobertura integral en toda la comuna",
-        "Informes de actividad diaria y reportes semanales",
-        "Esquemas de turnos adaptables: diurno, nocturno, 4x4, 6x1"
+      "heading": "Servicio de Guardias de Seguridad Profesional en Conchalí",
+      "paragraphs": [
+        "En GuardMan Chile comprendemos que la seguridad en Conchalí requiere soluciones adaptadas a la realidad de esta comuna del sector norte de Santiago. Nuestros guardias de seguridad en Conchalí están desplegados estratégicamente para proteger tu empresa, condominio o evento, combinando presencia física disuasoria con capacitación profesional continua y coordinación permanente con nuestro centro de monitoreo 24/7.",
+        "Cada uno de nuestros guardias de seguridad en Conchalí cuenta con certificación OS-10 vigente, requisito legal obligatorio que avala su formación técnica y ética profesional. Esta credencial, otorgada por la Prefectura de Seguridad Privada de Carabineros de Chile, garantiza que el personal ha superado exámenes de antecedentes, competencias técnicas y capacitación en protocolos de emergencia. En GuardMan Chile no solo cumplimos la normativa: la superamos con estándares internos más exigentes.",
+        "Nuestra experiencia de más de 8 años protegiendo organizaciones en la Región Metropolitana nos ha enseñado que la prevención es la mejor estrategia de seguridad. Por eso, nuestros guardias en Conchalí no solo reaccionan ante incidentes: los previenen mediante vigilancia activa, control riguroso de accesos y detección temprana de comportamientos sospechosos. Confía en la empresa de seguridad privada que protege más de 500 clientes satisfechos en 14 comunas de Santiago."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Conchali",
-      "content": "",
-      "points": [
-        "establecimientos comerciales y residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de rondas preventivas, control vecinal y coordinación comunitaria es cada vez más urgente en el sector poniente de Santiago.",
-        " muchas empresas y residencias en Conchalí enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Por qué elegir Guardias de Seguridad en Conchalí con GuardMan Chile?",
+      "items": [
+        "Guardias certificados OS-10 con formación contínua y renovación obligatoria de credenciales",
+        "Cobertura 24 horas, los 7 días de la semana, los 365 días del año sin interrupciones",
+        "Control de accesos y registro de visitantes con protocolos personalizados según tu instalación",
+        "Rondas preventivas perimetrales y surveillance en zonas de alto tránsito en Conchalí",
+        "Centro de monitoreo integrado para coordinación inmediata ante cualquier emergencia",
+        "Supervisión constante mediante Jefes de Turno que verifican el desempeño del personal",
+        "Reportes diarios de novedades y estadísticas de seguridad para tu tranquilidad",
+        "Integración con sistemas de cámaras CCTV y alarmas para cobertura integral",
+        "Protocolos de emergencia coordidados con Carabineros y empresas de seguridad del sector"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Conchalí",
+      "heading": "Problemas que Resolvemos con Nuestros Servicios de Seguridad en Conchalí",
       "items": [
-        "establecimientos comerciales y residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de rondas preventivas, control vecinal y coordinación comunitaria es cada vez más urgente en el sector poniente de Santiago.",
-        " muchas empresas y residencias en Conchalí enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos y hurtos en instalaciones comerciales, bodegas y empresas del sector industrial de Conchalí",
+        "Ingresos no autorizados a condominios, edificios residenciales y oficinas corporativas",
+        "Falta de presencia disuasoria que genera sensación de inseguridad en el entorno",
+        "Deficiente control de flujo de personas y vehículos en puntos de acceso críticos",
+        "Ausencia de personal capacitado para responder ante emergencias o situaciones de riesgo",
+        "Dificultad para contratar guardias con certificación legal vigente y experiencia comprobable"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Poniente"
-      },
-      {
-        "value": "Poniente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto cuesta un guardia de seguridad en Conchali?",
-        "answer": "El precio depende de la cantidad de guardias, turnos y servicios adicionales. Ofrecemos cotizaciones personalizadas sin compromiso. Contáctanos para una evaluación gratuita."
-      },
-      {
-        "question": "¿Los guardias tienen certificación OS-10 vigente?",
-        "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 obligatoria y al día. Es un requisito legal que cumplimos estrictamente para su protección y la nuestra."
-      },
-      {
-        "question": "¿Tienen cobertura 24 horas?",
-        "answer": "Sí, ofrecemos servicio 24/7 los 365 días del año. Nuestro centro de monitoreo propio opera sin interrupciones y tenemos guardias de reemplazo disponibles."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Guardias de Seguridad en Conchalí",
+      "items": [
+        {
+          "question": "¿Hay guardias de seguridad disponibles en Conchalí?",
+          "answer": "Sí, GuardMan Chile cuenta con guardias de seguridad certificados OS-10 disponibles en Conchalí. Nuestro equipo está desplegado en la zona con capacidad de respuesta inmediata y cobertura para turnos diurnos, nocturnos, 4x4, 6x1 y modalidades 24/7 según las necesidades de tu instalación. Contacta和我们 y coordina una evaluación gratuita de tus requerimientos de seguridad."
+        },
+        {
+          "question": "¿Qué documentación deben tener los guardias de seguridad en Chile?",
+          "answer": "Todo guardia de seguridad privada en Chile debe contar con la certificación OS-10 vigente, emitida por la Prefectura de Seguridad Privada de Carabineros (O.S.10). Esta credencial acredita que el trabajador ha aprobado el curso de formación, tiene antecedentes limpios y cumple con los requisitos legales para ejercer. En GuardMan Chile verificamos y mantenemos actualizadas las certificaciones de todo nuestro personal."
+        },
+        {
+          "question": "¿Cuánto cuesta contratar guardias de seguridad en Conchalí?",
+          "answer": "El valor del servicio depende de factores como el tipo de instalación (empresa, condominio, evento), la cantidad de guardias necesarios, los turnos requeridos y las funciones específicas. En GuardMan Chile ofrecemos cotizaciones personalizadas sin costo, evaluando tu situación particular para proponerte la solución más eficiente. Contáctanos y recibe una propuesta ajustada a tu presupuesto."
+        },
+        {
+          "question": "¿Qué tipo de instalaciones pueden proteger los guardias en Conchalí?",
+          "answer": "Nuestros guardias en Conchalí están capacitados para proteger diversas instalaciones: empresas y oficinas corporativas, bodegas y centros logísticos, condominios y edificios residenciales, locales comerciales y retail, eventos masivos y corporativas, fábricas e industrias. Cada perfil de guardia se adapta a las necesidades específicas del cliente con protocolos personalizados."
+        },
+        {
+          "question": "¿Los guardias de GuardMan pueden coordinarse con Carabineros de Chile?",
+          "answer": "Sí, todos nuestros guardias reciben capacitación en protocolos de coordinación con Carabineros y otras fuerzas de orden. Ante situaciones de emergencia o delitos en curso, activamos comunicación directa con las autoridades competentes. Esta coordinación es parte fundamental de nuestra filosofía de prevención y respuesta integral para proteger a nuestros clientes."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Conchalí",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Conchalí",
-      "button_link": "/cotizacion?service=guardias-de-seguridad&location=conchali"
+      "heading": "Protege tu Empresa o Hogar con Guardias de Seguridad Profesionales en Conchalí",
+      "subheading": "Cotiza hoy tu servicio de guardias de seguridad y recibe una propuesta personalizada sin compromiso. Nuestro equipo evaluará tus necesidades y desplegará la solución de protección más efectiva.",
+      "button": "Cotizar Servicio de Guardias en Conchalí",
+      "image": "guardias-seguridad-conchali-cta.jpg"
+    },
+    "meta": {
+      "title": "Guardias de Seguridad en Conchalí | GuardMan Chile - Certificados OS-10",
+      "description": "Guardias de seguridad en Conchalí certificados OS-10 con experiencia. Empresa de seguridad privada 24/7 para empresas, condominios y eventos. Cotiza hoy."
     }
   }
 }

@@ -1,96 +1,78 @@
 {
   "sections": {
     "hero": {
-      "heading": "Auditoría de Seguridad en Los Andes",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en Los Andes y la zona de Valparaíso.",
-      "cta_text": "Cotizar en Los Andes",
-      "cta_link": "/cotizacion?service=auditoria-seguridad&location=los-andes",
-      "image": "/images/service-auditoria-seguridad.webp"
+      "heading": "Auditoría de Seguridad en Los Andes | Evaluación Profesional Integral",
+      "subheading": "Expertos en seguridad privada con más de 8 años protegiendo empresas y comunidades en la Provincia de Los Andes. Evaluaciones exhaustivas para identificar vulnerabilidades y fortalecer tu protección.",
+      "image": "auditoria-seguridad-los-andes-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Auditoria Seguridad",
-        "url": "/servicios/auditoria-seguridad"
-      },
-      {
-        "label": "Los Andes",
-        "url": "/servicios/auditoria-seguridad/los-andes"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Auditoría de Seguridad en Los Andes?",
-      "content": "En GuardMan Chile somos especialistas en auditoría de seguridad en Los Andes. Nuestra experiencia en Los Andes y la zona de Valparaíso nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Los Andes y toda la zona Valparaíso.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Diagnóstico integral de vulnerabilidades",
-        "Evaluación de riesgos y amenazas",
-        "Diseño de plan de seguridad personalizado",
-        "Capacitación a personal de seguridad",
-        "Implementación de protocolos y procedimientos",
-        "Seguimiento y auditoría continua"
+      "heading": "Protege tu Empresa con una Auditoría de Seguridad Profesional en Los Andes",
+      "paragraphs": [
+        "En GuardMan Chile somos especialistas en auditoría de seguridad en Los Andes, ofreciendo evaluaciones integrales diseñadas para identificar vulnerabilidades y fortalezas en tu sistema de protección actual. Nuestra experiencia de más de 8 años en el mercado chileno nos respalda como líderes en seguridad privada en la zona.",
+        "Nuestra auditoría de seguridad en Los Andes incluye una revisión exhaustiva de todos los aspectos críticos: sistemas de vigilancia, controles de acceso, iluminación perimetral, ángulos ciegos, capacitación del personal y cumplimiento normativo OS-10. Cada evaluación es realizada por profesionales certificados con experiencia comprobada en el rubro.",
+        "Entendemos las necesidades específicas de las empresas en Los Andes y la Provincia, desde el tránsito pesado por el Paso Los Libertadores hasta la protección de centros comerciales, industrias y comunidades residenciales. Solicita tu cotización de auditoría de seguridad en Los Andes y fortalece tu protección."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Los Andes",
-      "content": "",
-      "points": [
-        "centros urbanos y zonas turísticas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia turística, seguridad comercial y control de eventos es cada vez más urgente en Los Andes y la zona de Valparaíso.",
-        " muchas empresas y residencias en Los Andes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Qué Incluye Nuestra Auditoría de Seguridad en Los Andes?",
+      "items": [
+        "Evaluación integral de vulnerabilidades físicas: muros, cercas, rejas, cerraduras y puntos de acceso",
+        "Revisión de sistemas electrónicos: cámaras CCTV, alarmas, sensores de movimiento y control de accesos",
+        "Análisis de iluminación perimetral y detección de ángulos ciegos en instalaciones",
+        "Verificación de certificación OS-10 del personal de seguridad y protocolos operativos",
+        "Evaluación de procedimientos de emergencia y planes de respuesta ante incidentes",
+        "Informe detallado con hallazgos priorizados por nivel de riesgo y recomendaciones específicas",
+        "Análisis de cumplimiento normativo según legislación chilena de seguridad privada",
+        "Evaluación de tecnología de monitoreo y tiempos de respuesta ante emergencias"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Los Andes",
+      "heading": "Señales de Alerta: ¿Necesitas una Auditoría de Seguridad en Los Andes?",
       "items": [
-        "centros urbanos y zonas turísticas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia turística, seguridad comercial y control de eventos es cada vez más urgente en Los Andes y la zona de Valparaíso.",
-        " muchas empresas y residencias en Los Andes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "No has realizado ninguna evaluación de seguridad en los últimos 12 meses",
+        "Incidentes de robo, vandalismo o accesos no autorizados en tus instalaciones",
+        "Personal de seguridad sin certificación OS-10 vigente o actualizada",
+        "Sistemas de cámaras o alarmas con más de 5 años sin actualización tecnológica",
+        "Ausencia de protocolos documentados para situaciones de emergencia",
+        "Falta de coordinación con Carabineros o servicios de emergencia locales",
+        "No existe registro de ingresos ni control de visitantes en tus instalaciones",
+        "Áreas oscuras o sin cobertura de vigilancia identificadas visualmente"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Valparaíso"
-      },
-      {
-        "value": "Valparaíso",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué incluye una auditoría de seguridad?",
-        "answer": "Incluye evaluación de vulnerabilidades físicas y lógicas, análisis de riesgos, revisión de protocolos actuales, recomendaciones de mejora y plan de implementación."
-      },
-      {
-        "question": "¿Cuánto tiempo toma una auditoría?",
-        "answer": "Una auditoría completa toma entre 1 y 2 semanas dependiendo del tamaño de la instalación y la complejidad de los sistemas a evaluar."
-      },
-      {
-        "question": "¿Después de la auditoría ayudan a implementar?",
-        "answer": "Sí, ofrecemos servicios de implementación de mejoras, capacitación de personal y seguimiento para asegurar que las recomendaciones se ejecuten correctamente."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Auditoría de Seguridad en Los Andes",
+      "items": [
+        {
+          "question": "¿Qué es una auditoría de seguridad en Los Andes y por qué la necesito?",
+          "answer": "Una auditoría de seguridad en Los Andes es una evaluación profesional e integral de los sistemas de protección de tu propiedad o empresa. Incluye inspección presencial de las instalaciones, revisión de equipos de vigilancia, análisis de procedimientos del personal y verificación de cumplimiento normativo. Necesitas una auditoría para identificar vulnerabilidades antes de que sean aprovechadas por terceros maliciosos, optimizar tu inversión en seguridad y garantizar la protección efectiva de tus colaboradores, activos y clientes."
+        },
+        {
+          "question": "¿Cuánto cuesta una auditoría de seguridad en Los Andes?",
+          "answer": "El precio de una auditoría de seguridad en Los Andes varía según el tamaño de las instalaciones, la complejidad de los sistemas a evaluar y el tipo de propiedad (residencial, comercial o industrial). En GuardMan Chile ofrecemos evaluaciones personalizadas con cotización gratuita y sin compromiso. Nuestro equipo se desplaza a tus instalaciones para entregar un presupuesto ajustado a tus necesidades específicas de seguridad."
+        },
+        {
+          "question": "¿Qué duración tiene una auditoría de seguridad profesional?",
+          "answer": "El tiempo de una auditoría de seguridad en Los Andes depende directamente del tamaño y complejidad de las instalaciones. Para viviendas o locales comerciales pequeños, la evaluación puede completarse en pocas horas. Para empresas medianas o industriales, el proceso puede extenderse entre uno y tres días, incluyendo inspección en terreno, revisión documental y elaboración del informe con recomendaciones. GuardMan garantiza un proceso eficiente sin interrumpir tus operaciones."
+        },
+        {
+          "question": "¿Mi empresa en Los Andes requiere personal con certificación OS-10?",
+          "answer": "Sí, según la normativa chilena vigente (Ley 21.659), toda empresa de seguridad privada debe contar con guardias acreditados mediante el curso OS-10 certificado por Carabineros de Chile. Durante nuestra auditoría de seguridad en Los Andes, verificamos que tu empresa cumpla con este requisito legal, protegiéndote de multas y sanciones. También evaluamos la vigencia de las certificaciones y la capacitación continua del personal."
+        },
+        {
+          "question": "¿Con qué frecuencia debo realizar auditorías de seguridad?",
+          "answer": "Recomendamos realizar una auditoría de seguridad en Los Andes al menos una vez al año, o cuando ocurran cambios significativos en tus instalaciones, incorporación de nuevo personal de seguridad, aumento del personal en la empresa, o ante cambios en el entorno de seguridad de la zona. También es advisable solicitar una auditoría antes de contratar o renovar servicios de seguridad privada para verificar que cumplan con los estándares requeridos."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Los Andes",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Los Andes",
-      "button_link": "/cotizacion?service=auditoria-seguridad&location=los-andes"
+      "heading": "Solicita tu Auditoría de Seguridad en Los Andes Hoy",
+      "subheading": "Protege tu empresa con una evaluación profesional. Contamos con 500+ guardias certificados OS-10 y cobertura en 14 comunas. Atencion 24/7 los 365 días del año.",
+      "button": "Cotizar Auditoría de Seguridad",
+      "image": "auditoria-seguridad-los-andes-cta.jpg"
+    },
+    "meta": {
+      "title": "Auditoría de Seguridad en Los Andes | Cotiza Hoy | GuardMan Chile",
+      "description": "Expertos en auditoría de seguridad en Los Andes. Evaluaciones profesionales para empresas e industrias en la Provincia de Los Andes. Cotiza hoy y fortalece tu protección."
     }
   }
 }

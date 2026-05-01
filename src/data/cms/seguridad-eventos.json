@@ -1,95 +1,105 @@
 {
   "sections": {
     "hero": {
-      "heading": "Seguridad para Eventos en Chile | GuardMan Chile",
-      "subheading": "Protección profesional para eventos corporativos, masivos y privados",
-      "cta_text": "Cotizar Seguridad para Eventos",
-      "image": "/images/service-seguridad-eventos.webp"
+      "heading": "Seguridad Profesional para Eventos en Chile",
+      "subheading": "Protección integral para eventos corporativos, sociales y masivos. Guardias certificados OS-10 con experiencia comprobada. Disponibilidad 24/7 y cobertura en 14 comunas.",
+      "image": "seguridad-eventos-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Seguridad Eventos",
-        "url": "/servicios/seguridad-eventos"
-      }
-    ],
     "intro": {
-      "title": "Servicio Integral de Seguridad para Eventos en Santiago",
-      "content": "En GuardMan Chile somos especialistas en seguridad para eventos. Con más de 8 años de experiencia protegiendo eventos corporativos, masivos y privados en Santiago, hemos consolidado nuestra posición como la empresa líder en el sector. Nuestro equipo de guardias certificados OS-10 está preparado para garantizar la seguridad de tu evento desde la planificación hasta su finalización.\nEntendemos que cada evento es único, por eso desarrollamos planes de seguridad personalizados que se adaptan a las necesidades específicas de cada cliente. Trabajamos en las 14 comunas de la Región Metropolitana, ofreciendo un servicio integral que incluye control de accesos, vigilancia perimetral, monitoreo en tiempo real y coordinación con fuerzas de orden.",
-      "image": "/images/service-intro.jpg"
+      "heading": "Tu Evento en Buenas Manos",
+      "paragraphs": [
+        "En GuardMan Chile entendemos que la seguridad de un evento va mucho más allá de colocar guardias en la entrada. Cada celebración corporativa, concierto,发布会 o reunión social requiere una planificación meticulosa que anticipe escenarios de riesgo y establezca protocolos de respuesta inmediata. Con más de 8 años protegiendo eventos en las principales comunas de Santiago, hemos desarrollado metodologías probadas que garantizan la tranquilidad de organizadores y asistentes.",
+        "Nuestro equipo de seguridad para eventos está conformado por guardias certificados con curso OS-10 vigente, entrenamiento especializado en manejo de multitudes y protocolos de emergencia. La presencia visible de nuestro personal no solo disuade situaciones sospechosas, sino que transmite confianza y orden, elementos fundamentales para el éxito de cualquier evento.",
+        "Contamos con un centro de monitoreo operativo las 24 horas, los 365 días del año, lo que nos permite coordinar respuestas inmediatas ante cualquier incidente. Ya sea que organices un evento íntimo en Las Condes o Vitacura, o un espectáculo masivo con miles de asistentes, en GuardMan adaptamos nuestros recursos a tus necesidades específicas."
+      ]
     },
     "features": {
-      "title": "Qué Incluye el Servicio",
+      "heading": "¿Por qué elegir GuardMan para tu evento?",
       "items": [
-        "Coordinadores de seguridad certificados para planificar el evento",
-        "Guardias OS-10 capacitados en control masivo",
-        "Escoltas VIP discretos para invitados especiales",
-        "Postes de control y arcos detectores de metales",
-        "Comunicación radial y coordinación con Carabineros",
-        "Servicio de primeros auxilios con botiquín completo"
+        "Guardias certificados OS-10 con formación continua y experiencia en eventos de مختلف tamaños",
+        "Planificación de seguridad personalizada según tipo de evento, asistencia estimada y características del recinto",
+        "Control de accesos eficiente con verificación de invitaciones y gestión de flujo de personas",
+        "Coordinación permanente con fuerzas de orden y Carabineros de Chile",
+        "Monitoreo en tiempo real desde nuestro centro de operaciones 24/7",
+        "Supervisores de terreno con comunicación instantánea mediante equipos de radio",
+        "Protocolos de emergencia claramente establecidos y conocidos por todo el personal",
+        "Cobertura en 14 comunas del sector oriente y poniente de Santiago",
+        "Atención personalizada desde la cotización hasta la ejecución final del evento",
+        "Reportes post-evento con análisis de incidencias y recomendaciones"
       ]
     },
     "issues": {
-      "title": "Problemas que resolvemos para tu evento",
+      "heading": "Situaciones que nuestros guardias previenen",
       "items": [
-        "Control de accesos y prevención de ingresos no autorizados que pueden poner en riesgo a los asistentes",
-        "Gestión de multitudes y prevención de situaciones de hacinamiento o pánico en eventos masivos",
-        "Protección de activos, equipamiento y escenario ante posibles robos o daños materiales",
-        "Coordinación de seguridad para Speakers, VIPs y personalidades que asisten a tu evento corporativo",
-        "Vigilancia perimetral y respuesta inmediata ante intentos de ingreso irregular o incidentes de seguridad"
+        "Acceso no autorizado de personas sin invitación o credencial válida al recinto",
+        "Alteraciones del orden público por consumo excesivo de alcohol o sustancias",
+        "Robos y hurtos entre asistentes, especialmente en eventos masivos",
+        "Situaciones de violencia entre personas o grupos conflictivos",
+        "Colapso en el control de accesos por falta de personal o mala organización",
+        "Emergencias médicas sin respuesta inmediata por ausencia de protocolo",
+        "Ingreso de objetos prohibidos como armas, fuegos artificiales o materiales peligrosos",
+        "Acumulación excesiva de personas en áreas restringidas generando riesgos de conmemtración"
       ]
     },
-    "stats": [
-      {
-        "value": "850+",
-        "label": "Eventos protegidos exitosamente"
-      },
-      {
-        "value": "500+",
-        "label": "Guardias certificados desplegados"
-      },
-      {
-        "value": "8+",
-        "label": "Años de experiencia en eventos"
-      },
-      {
-        "value": "14",
-        "label": "Comunas con cobertura"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Con cuánta anticipación debo contratar seguridad para mi evento?",
-        "answer": "Recomendamos contactar con al menos 2 semanas de anticipación. Para eventos masivos (>1,000 personas) necesitamos 1 mes."
-      },
-      {
-        "question": "¿Cuántos guardias necesito para mi evento?",
-        "answer": "La cantidad depende del tipo de evento y número esperado. Por regla general: 1 guardia cada 100 personas para eventos sociales, 1 cada 50 para corporativos."
-      },
-      {
-        "question": "¿Incluyen arcos detectores y postes de seguridad?",
-        "answer": "Sí, ofrecemos el equipamiento necesario como parte del servicio. Incluye arcos, postes, detectores de metales portátiles y equipos de comunicación."
-      },
-      {
-        "question": "¿Pueden coordinar con Carabineros?",
-        "answer": "Sí, gestionamos los permisos necesarios ante Carabineros y coordinamos la presencia de efectivo público si el evento lo requiere."
-      },
-      {
-        "question": "¿Qué pasa si hay una emergencia durante el evento?",
-        "answer": "Nuestros guardias están entrenados en primeros auxilios y evacuación. Activan protocolos de emergencia y contactan a servicios profesionales inmediatamente."
-      }
-    ],
+    "stats": {
+      "heading": "Resultados que hablan por nosotros",
+      "items": [
+        {
+          "label": "Eventos protegidos exitosamente",
+          "value": "+2.800"
+        },
+        {
+          "label": "Guardias certificados OS-10 disponibles",
+          "value": "500+"
+        },
+        {
+          "label": "Comunas con cobertura operativa",
+          "value": "14"
+        },
+        {
+          "label": "Años de experiencia en seguridad privada",
+          "value": "8+"
+        },
+        {
+          "label": "Tiempo promedio de respuesta ante incidentes",
+          "value": "<3 min"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas frecuentes sobre seguridad para eventos",
+      "items": [
+        {
+          "question": "¿Cuántos guardias necesito contratar para mi evento?",
+          "answer": "La cantidad de guardias depende de tres factores principales: la asistencia esperada, el tipo de evento y el nivel de riesgo asociado. Como referencia general, recomendamos 1 guardia por cada 50-100 asistentes para eventos corporativos y 1 por cada 30-50 para eventos masivos o con alto consumo de alcohol. En GuardMan realizamos una evaluación personalizada de cada requerimiento para dimensionar correctamente el equipo necesario."
+        },
+        {
+          "question": "¿Qué incluye el servicio de seguridad para eventos?",
+          "answer": "Nuestro servicio contempla múltiples componentes: despliegue de guardias en puntos estratégicos, control de accesos, supervisión de áreas críticas, coordinación con emergencias, monitoreo desde nuestro centro de operaciones y protocolos de evacuación. Además, asignamos un supervisor de terreno que lidera la operación y reporta en tiempo real. Cada servicio se configura según las características específicas de tu evento."
+        },
+        {
+          "question": "¿Pueden cubrir eventos en comunas específicas como Huechuraba o La Reina?",
+          "answer": "Sí, tenemos cobertura operativa en 14 comunas incluyendo Huechuraba, La Reina, Las Condes, Vitacura, Lo Barnechea, Pudahuel, Quilicura, Conchalí, La Pintana, Lampa y otras zonas del sector oriente y poniente de Santiago. Nuestra red de guardias nos permite reaccionar rápidamente en cualquier comuna de la Región Metropolitana."
+        },
+        {
+          "question": "¿Cómo funciona la coordinación con Carabineros en eventos masivos?",
+          "answer": "Para eventos que superen las 1.000 personas, la ley exige التنسيق مع Carabineros. En GuardMan gestionamos toda la documentación y comunicación necesaria con la institución, incluyendo el plan de seguridad del evento. Nuestro equipo conoce los protocolos oficiales y mantiene liaison permanente con las autoridades durante todo el desarrollo del evento."
+        },
+        {
+          "question": "¿Cuánto cuesta contratar seguridad para un evento?",
+          "answer": "Los precios varían según la cantidad de guardias, duración del evento, ubicación geográfica y complejidad del servicio. En GuardMan ofrecemos cotizaciones personalizadas sin compromiso. Contáctanos con los detalles de tu evento y nuestros especialistas te entregarán un presupuesto ajustado a tus necesidades específicas."
+        }
+      ]
+    },
     "cta": {
-      "headline": "¿Listo para asegurar el éxito de tu evento?",
-      "button_text": "Cotizar Ahora - Es Gratis",
-      "button_link": "/cotizacion"
+      "heading": "Protege tu próximo evento con GuardMan",
+      "subheading": "Contáctanos hoy para recibir una cotización personalizada. Nuestro equipo está disponible para atenderte de inmediato y resolver todas tus consultas sobre seguridad para eventos.",
+      "button": "Cotizar Seguridad para Evento",
+      "image": "seguridad-eventos-cta.jpg"
+    },
+    "meta": {
+      "title": "Seguridad para Eventos en Chile | Guardias OS-10 - GuardMan",
+      "description": "Contrata seguridad profesional para eventos con GuardMan Chile. Guardias certificados OS-10, cobertura en 14 comunas y atención 24/7. Cotiza hoy."
     }
   }
 }

@@ -10,7 +10,10 @@
       "created_at": "2026-04-13 23:46:18",
       "updated_at": "2026-04-14 00:59:21",
       "featured": 0,
-      "sort": 0
+      "sort": 0,
+      "hero_image": "/images/service-auditoria-seguridad.webp",
+      "related_services": "guardias-de-seguridad,cctv-videovigilancia,control-de-accesos",
+      "upsell_services": "guardias-de-seguridad,control-de-accesos"
     },
     {
       "id": 2,
@@ -22,7 +25,10 @@
       "created_at": "2026-04-13 23:46:18",
       "updated_at": "2026-04-14 00:59:21",
       "featured": 0,
-      "sort": 0
+      "sort": 0,
+      "hero_image": "/images/service-cctv-videovigilancia.webp",
+      "related_services": "monitoreo-24-7,control-de-accesos,guard-pod",
+      "upsell_services": "monitoreo-24-7,guard-pod"
     },
     {
       "id": 3,
@@ -34,7 +40,10 @@
       "created_at": "2026-04-13 23:46:18",
       "updated_at": "2026-04-14 00:59:21",
       "featured": 0,
-      "sort": 0
+      "sort": 0,
+      "hero_image": "/images/service-control-de-accesos.webp",
+      "related_services": "guardias-de-seguridad,cctv-videovigilancia,monitoreo-24-7",
+      "upsell_services": "cctv-videovigilancia,guardias-de-seguridad"
     },
     {
       "id": 4,
@@ -46,7 +55,10 @@
       "created_at": "2026-04-13 23:46:18",
       "updated_at": "2026-04-14 00:59:21",
       "featured": 0,
-      "sort": 0
+      "sort": 0,
+      "hero_image": "/images/service-escoltas-privados.webp",
+      "related_services": "seguridad-eventos,guardias-de-seguridad,auditoria-seguridad",
+      "upsell_services": "seguridad-eventos,auditoria-seguridad"
     },
     {
       "id": 9,
@@ -58,7 +70,10 @@
       "created_at": "2026-04-13 23:46:18",
       "updated_at": "2026-04-14 00:59:21",
       "featured": 0,
-      "sort": 0
+      "sort": 0,
+      "hero_image": "/images/s4-thumbnail.webp",
+      "related_services": "cctv-videovigilancia,monitoreo-24-7,seguridad-industrial",
+      "upsell_services": "monitoreo-24-7,seguridad-industrial"
     },
     {
       "id": 1,
@@ -70,7 +85,10 @@
       "created_at": "2026-04-13 23:46:18",
       "updated_at": "2026-04-14 00:59:21",
       "featured": 0,
-      "sort": 0
+      "sort": 0,
+      "hero_image": "/images/service-guardias-de-seguridad.webp",
+      "related_services": "monitoreo-24-7,control-de-accesos,auditoria-seguridad",
+      "upsell_services": "monitoreo-24-7,cctv-videovigilancia"
     },
     {
       "id": 5,
@@ -82,7 +100,10 @@
       "created_at": "2026-04-13 23:46:18",
       "updated_at": "2026-04-14 00:59:21",
       "featured": 0,
-      "sort": 0
+      "sort": 0,
+      "hero_image": "/images/service-monitoreo-24-7.webp",
+      "related_services": "cctv-videovigilancia,guardias-de-seguridad,guard-pod",
+      "upsell_services": "guard-pod,cctv-videovigilancia"
     },
     {
       "id": 7,
@@ -94,7 +115,10 @@
       "created_at": "2026-04-13 23:46:18",
       "updated_at": "2026-04-14 00:59:21",
       "featured": 0,
-      "sort": 0
+      "sort": 0,
+      "hero_image": "/images/service-seguridad-industrial.webp",
+      "related_services": "guardias-de-seguridad,cctv-videovigilancia,auditoria-seguridad",
+      "upsell_services": "guard-pod,auditoria-seguridad"
     },
     {
       "id": 6,
@@ -106,7 +130,10 @@
       "created_at": "2026-04-13 23:46:18",
       "updated_at": "2026-04-14 00:59:21",
       "featured": 0,
-      "sort": 0
+      "sort": 0,
+      "hero_image": "/images/service-seguridad-eventos.webp",
+      "related_services": "escoltas-privados,guardias-de-seguridad,control-de-accesos",
+      "upsell_services": "escoltas-privados,control-de-accesos"
     }
   ]
 }

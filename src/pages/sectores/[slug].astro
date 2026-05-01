@@ -1,9 +1,13 @@
 ---
 /**
- * Sector Page - MODIFICADO: Usa contenido del CMS (JSON con related_content)
+ * Sector Detail - Unified structure
+ * Hero → Intro → Features → Issues → Staff → Services → Locations → Related → CTA
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getSectorSections, getServicesList } from '../../data/cms';
+import { getSectorSections, getServiceSections, getServicesList, getLocationsList, getSectorsList } from '../../data/cms';
+import { SECTOR_IMAGES, SECTOR_INTROS, SECTOR_ISSUES, STAFF_IMAGE, STAFF_TRAITS, getSectorTag } from '../../data/cms-config';
+import { optimizeImageUrl } from '../../data/directus';
+import { readFileSync, existsSync } from 'fs';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
 import { optimizeImageUrl } from '../../data/directus';
 import { readFileSync, existsSync } from 'fs';
@@ -11,22 +15,8 @@ import { readFileSync, existsSync } from 'fs';
 const CMS_DIR = 'src/data/cms';
 const NEW_CMS_DIR = 'src/data/cms-new';
 
-const SECTOR_IMAGES: Record<string, string> = {
-  'comercial': 's4-thumbnail.webp',
-  'industrial': 'sector-industrial.webp',
-  'residencial': 'sector-residencial.webp',
-  'salud': 'nosotros_seccion.webp',
-  'educacion': 'hero-home.webp',
-  'eventos': 's4-thumbnail.webp',
-  'construccion': 'sector-industrial.webp',
-  'automotriz': 's4-thumbnail.webp',
-  'hoteleria': 'hero-home.webp'
-};
-
 export async function getStaticPaths() {
-  const { getSectorsList } = await import('../../data/cms');
   const sectors = getSectorsList();
-
   return sectors.map((s: any) => ({
     params: { slug: s.slug },
     props: { sectorSlug: s.slug }
@@ -35,80 +25,104 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 
-// Load new CMS JSON format (with related_content)
 const newSectorPath = `${NEW_CMS_DIR}/sectors/${slug}.json`;
 const legacySectorPath = `${CMS_DIR}/sector-${slug}.json`;
-let cmsSectorData: any = null;
 let sectionData = { sections: {}, services: [], related_content: {} };
 
 if (existsSync(newSectorPath)) {
-  cmsSectorData = JSON.parse(readFileSync(newSectorPath, 'utf-8'));
-  sectionData = { sections: cmsSectorData.content || cmsSectorData.sections || {}, services: [], related_content: cmsSectorData.related_content || {} };
+  const cms = JSON.parse(readFileSync(newSectorPath, 'utf-8'));
+  sectionData = { sections: cms.content || cms.sections || {}, services: [], related_content: cms.related_content || {} };
 } else if (existsSync(legacySectorPath)) {
   sectionData = JSON.parse(readFileSync(legacySectorPath, 'utf-8'));
   sectionData.related_content = {};
 }
 
 const sections = sectionData.sections || {};
-const relatedContentFromCMS = sectionData.related_content || {};
-const relatedServices = relatedContentFromCMS.related_services || sectionData.services || [];
-const sectorServices = getServicesList();
+const allServices = getServicesList();
+const allLocations = getLocationsList();
+const allSectors = getSectorsList();
 
-const hero = sections?.hero || {
-  heading: slug.charAt(0).toUpperCase() + slug.slice(1),
-  subheading: 'Contenido del sector'
-};
+const serviceSectorsPath = 'src/data/cms/service-sectors.json';
+let serviceSectorsMap: Record<string, string[]> = {};
+if (existsSync(serviceSectorsPath)) {
+  serviceSectorsMap = JSON.parse(readFileSync(serviceSectorsPath, 'utf-8'));
+}
+const sectorServiceSlugs = Object.entries(serviceSectorsMap).filter(([_, sectorSlugs]) => sectorSlugs.includes(slug)).map(([serviceSlug]) => serviceSlug);
+const relevantServices = sectorServiceSlugs.length > 0
+  ? sectorServiceSlugs.map(s => allServices.find((sv: any) => sv.slug === s)).filter(Boolean)
+  : allServices;
+
+const hero = sections?.hero || { heading: slug.charAt(0).toUpperCase() + slug.slice(1), subheading: 'Contenido del sector' };
+
+// Sector meta from sectors.json (for hero_image, issues)
+const sectorMeta = allSectors.find((s: any) => s.slug === slug) || {};
+const sectorHeroImage = sections?.hero?.image || sectorMeta?.hero_image || (SECTOR_IMAGES[slug] ? `/images/${SECTOR_IMAGES[slug]}` : null);
 
 const breadcrumbItems = [
   { name: 'Inicio', url: 'https://guardman.cl' },
   { name: 'Sectores', url: 'https://guardman.cl/sectores' },
   { name: hero.heading, url: `https://guardman.cl/sectores/${slug}` }
 ];
+
+// Intro: CMS intro.content → string; fallback to intro.paragraphs joined; then SECTOR_INTROS
+const cmsIntroContent = sections?.intro?.content;
+const introText = cmsIntroContent
+  ? cmsIntroContent
+  : sections?.intro?.paragraphs?.length > 0
+    ? sections.intro.paragraphs.join(' ')
+    : SECTOR_INTROS[slug] || `${hero.heading} es uno de los sectores que protegemos en GuardMan Chile. Contamos con más de 8 años de experiencia y guardias certificados OS-10.`;
+
+// Issues: CMS issues.items → sectors.json issues → SECTOR_ISSUES fallback
+const issuesList = (() => {
+  // From CMS sections
+  const items = sections?.issues?.items || (sections?.issues?.title ? (sections?.issues?.items || []) : []);
+  if (items.length > 0) return items;
+  const legacyItems = sections?.issues ? Object.entries(sections.issues).filter(([key]) => !isNaN(Number(key)) || key === 'items').map(([key, value]) => key === 'items' ? value : value).flat().filter((item: any) => item && typeof item === 'string') : [];
+  if (legacyItems.length > 0) return legacyItems;
+  // From sectors.json meta
+  if (sectorMeta?.issues?.length > 0) return sectorMeta.issues;
+  return SECTOR_ISSUES[slug] || [];
+})();
+
+// Related sectors
+const relatedSectors = allSectors.filter((s: any) => s.slug !== slug).slice(0, 3);
+
+// Staff section: load from staff.json
+const staffPath = 'src/data/cms/staff.json';
+let staffData = { image: STAFF_IMAGE, title: `Experticia en ${hero.heading}`, description: 'Nuestro personal cuenta con formación específica para este sector.', traits: STAFF_TRAITS };
+if (existsSync(staffPath)) {
+  const loaded = JSON.parse(readFileSync(staffPath, 'utf-8'));
+  staffData = { image: loaded.image || STAFF_IMAGE, title: loaded.title || staffData.title, description: loaded.description || staffData.description, traits: loaded.traits || STAFF_TRAITS };
+}
 ---
 
-<BaseLayout 
-  title={`${hero.heading} | GuardMan Chile`}
-  description={hero.subheading}
->
+<BaseLayout title={`${hero.heading} | GuardMan Chile`} description={hero.subheading}>
   <SchemaBreadcrumb items={breadcrumbItems} />
 
-  <!-- Breadcrumb Visual -->
+  <!-- Breadcrumb -->
   <div class="bg-neutral-100 py-3">
     <div class="container mx-auto px-4">
       <nav class="flex text-sm text-neutral-600">
-        <a href="/" class="hover:text-primary-600">Inicio</a>
-        <span class="mx-2">/</span>
-        <a href="/sectores" class="hover:text-primary-600">Sectores</a>
-        <span class="mx-2">/</span>
+        <a href="/" class="hover:text-primary-600">Inicio</a><span class="mx-2">/</span>
+        <a href="/sectores" class="hover:text-primary-600">Sectores</a><span class="mx-2">/</span>
         <span class="text-neutral-900 font-medium">{hero.heading}</span>
       </nav>
     </div>
   </div>
 
-  <!-- Hero with Background Image -->
+  <!-- Hero (sin tags) -->
   <section class="relative bg-primary-600 text-white py-16 lg:py-20 overflow-hidden">
-    {SECTOR_IMAGES[slug] && (
+    {sectorHeroImage && (
       <div class="absolute inset-0 z-0">
-        <img 
-          src={optimizeImageUrl(`/images/${SECTOR_IMAGES[slug]}`)}
-          alt={hero.heading}
-          class="w-full h-full object-cover opacity-30"
-          width="1920"
-          height="1080"
-          loading="eager"
-        />
+        <img src={optimizeImageUrl(sectorHeroImage)} alt={hero.heading} class="w-full h-full object-cover opacity-30" width="1920" height="1080" loading="eager" />
         <div class="absolute inset-0 bg-gradient-to-r from-primary-800/95 to-primary-600/80"></div>
       </div>
     )}
-    
     <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
-    
     <div class="container mx-auto px-4 relative z-10">
       <h1 class="text-3xl lg:text-5xl font-bold mb-4">{hero.heading}</h1>
-      {hero.subheading && (
-        <p class="text-xl text-white/90 max-w-3xl">{hero.subheading}</p>
-      )}
+      {hero.subheading && <p class="text-xl text-white/90 max-w-3xl">{hero.subheading}</p>}
     </div>
   </section>
 
@@ -116,198 +130,154 @@ const breadcrumbItems = [
   <section class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4">
       <div class="grid lg:grid-cols-3 gap-12">
-        <!-- Column 1-2: Content -->
         <div class="lg:col-span-2">
-          
-          <!-- Intro -->
-          {sections?.intro?.paragraphs && (
-            <div class="mb-12 prose prose-neutral max-w-none">
-              {sections.intro.paragraphs.map((p: string) => (
-                <p>{p}</p>
-              ))}
-            </div>
-          )}
 
-          <!-- Features -->
-          {sections?.features && (
-            <div class="mb-12">
-              <h2 class="text-2xl font-bold text-neutral-900 mb-6">
-                {sections.features.heading || 'Qué incluye el servicio'}
-              </h2>
-              <div class="grid sm:grid-cols-2 gap-4">
-                {(() => {
-                  // Handle both {0: 'item', 1: 'item'} and {items: ['item', 'item']}
-                  const items = sections.features.items 
-                    ? sections.features.items 
-                    : Object.entries(sections.features)
-                        .filter(([key]) => !isNaN(Number(key)))
-                        .map(([_, value]) => value);
-                  return items.map((feature, idx) => (
-                    <div class="flex items-start gap-3 bg-neutral-50 rounded-lg p-4">
-                      <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                      </svg>
+          <!-- Intro -->
+          <div class="mb-12 prose prose-neutral max-w-none">
+            <p>{introText}</p>
+          </div>
+
+          <!-- Features: Qué incluye -->
+          {(() => {
+            const featureItems = sections?.features?.items || [];
+            if (featureItems.length === 0) return null;
+            return (
+              <div class="mb-12">
+                <h2 class="text-2xl font-bold text-neutral-900 mb-6">{sections.features.title || sections.features.heading || 'Qué incluye el servicio'}</h2>
+                <div class="grid sm:grid-cols-2 gap-4">
+                  {featureItems.map((feature: string) => (
+                    <div class="flex items-start gap-3 bg-neutral-50 rounded-lg p-4 hover:shadow-md transition-shadow">
+                      <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                       <span class="text-neutral-700">{feature}</span>
                     </div>
-                  ));
-                })()}
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            );
+          })()}
 
-          <!-- Issues -->
-          {sections?.issues && (
+          <!-- Issues: Problemas que solucionamos -->
+          {issuesList.length > 0 && (
             <div class="mb-12">
-              <h2 class="text-2xl font-bold text-neutral-900 mb-6">
-                {sections.issues.heading || 'Problemas que solucionamos'}
-              </h2>
+              <h2 class="text-2xl font-bold text-neutral-900 mb-6">Problemas que solucionamos</h2>
               <div class="grid sm:grid-cols-2 gap-4">
-                {Object.entries(sections.issues)
-                  .filter(([key]) => !isNaN(Number(key)) || key === 'items')
-                  .map(([key, value]) => {
-                    // Handle both {0: 'item', 1: 'item'} and {items: ['item', 'item']}
-                    if (key === 'items') return value;
-                    return value;
-                  })
-                  .flat()
-                  .filter(item => item && typeof item === 'string')
-                  .map((issue, idx) => (
-                    <div class="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-lg p-4">
-                      <svg class="w-5 h-5 text-amber-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                      </svg>
-                      <span class="text-neutral-700">{issue}</span>
-                    </div>
-                  ))
-                }
-              </div>
-            </div>
-          )}
-
-          <!-- Stats -->
-          {sections?.stats && (
-            <div class="mb-12 bg-primary-700 text-white rounded-xl p-8">
-              <h2 class="text-2xl font-bold text-center mb-8">
-                {sections.stats.heading || 'Números que nos respaldan'}
-              </h2>
-              <div class="grid grid-cols-3 gap-8 text-center">
-                {Object.entries(sections.stats)
-                  .filter(([key]) => !isNaN(Number(key)) || key === 'items')
-                  .map(([key, value]) => {
-                    if (key === 'items') return value;
-                    return null;
-                  })
-                  .flat()
-                  .filter(item => item && typeof item === 'object')
-                  .map((stat, idx) => (
-                    <div>
-                      <div class="text-4xl lg:text-5xl font-bold mb-2">{stat.value}</div>
-                      <div class="text-white/80">{stat.label}</div>
-                    </div>
-                  ))
-                }
-              </div>
-            </div>
-          )}
-
-          <!-- FAQs -->
-          {sections?.faqs && (
-            <div class="mb-8">
-              <h2 class="text-2xl font-bold text-neutral-900 mb-6">
-                {sections.faqs.heading || 'Preguntas Frecuentes'}
-              </h2>
-              <div class="space-y-4">
-                {Object.entries(sections.faqs)
-                  .filter(([key]) => !isNaN(Number(key)) || key === 'items')
-                  .map(([key, value]) => {
-                    if (key === 'items') return value;
-                    return null;
-                  })
-                  .flat()
-                  .filter(item => item && typeof item === 'object')
-                  .map((faq, idx) => (
-                    <details class="group bg-neutral-50 rounded-lg">
-                      <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-neutral-900">
-                        {faq.question}
-                        <svg class="w-5 h-5 text-neutral-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                      </summary>
-                      <div class="px-4 pb-4 text-neutral-600">
-                        {faq.answer}
-                      </div>
-                    </details>
-                  ))
-                }
-              </div>
-            </div>
-          )}
-
-          <!-- Related Services (from service-sector relations) -->
-          {sectorServices.length > 0 && (
-            <div class="mb-8">
-              <h2 class="text-2xl font-bold text-neutral-900 mb-6">
-                Servicios para este sector
-              </h2>
-              <div class="grid sm:grid-cols-2 gap-4">
-                {sectorServices.map((service: any) => (
-                  <a 
-                    href={`/servicios/${service.slug}`}
-                    class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-4 transition-all group"
-                  >
-                    <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-2">
-                      {service.name}
-                    </h3>
-                    <p class="text-sm text-neutral-600 line-clamp-2">
-                      {service.short_description || ''}
-                    </p>
-                  </a>
+                {issuesList.map((issue: string) => (
+                  <div class="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-lg p-4">
+                    <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <span class="text-neutral-700 text-sm font-medium">{issue}</span>
+                  </div>
                 ))}
               </div>
             </div>
           )}
+
+          <!-- Staff Section (replaces Stats) -->
+          <div class="mb-12 bg-neutral-900 text-white rounded-2xl overflow-hidden">
+            <div class="grid md:grid-cols-2">
+              <div class="relative">
+                <img src={staffData.image} alt={`Personal GuardMan Chile para sector ${hero.heading}`} class="w-full h-full object-cover min-h-[280px]" width="800" height="500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/60 to-transparent md:bg-gradient-to-r md:from-transparent md:to-neutral-900"></div>
+              </div>
+              <div class="p-8 flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-4">{staffData.title}</h2>
+                <p class="text-white/80 mb-6">{staffData.description}</p>
+                <ul class="space-y-3">
+                  {staffData.traits.map((trait: string) => (
+                    <li class="flex items-start gap-3">
+                      <svg class="w-5 h-5 text-primary-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span class="text-white/90 text-sm">{trait}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          {sections?.faqs && (
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-neutral-900 mb-6">{sections.faqs.heading || 'Preguntas Frecuentes'}</h2>
+              <div class="space-y-4">
+                {Object.entries(sections.faqs).filter(([key]) => !isNaN(Number(key)) || key === 'items').map(([key, value]) => key === 'items' ? value : null).flat().filter(item => item && typeof item === 'object').map((faq: any) => (
+                  <details class="group bg-neutral-50 rounded-lg">
+                    <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-neutral-900">{faq.question}<svg class="w-5 h-5 text-neutral-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                    <div class="px-4 pb-4 text-neutral-600">{faq.answer}</div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Services for this sector -->
+          {relevantServices.length > 0 && (
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-neutral-900 mb-2">Servicios para el sector {hero.heading}</h2>
+              <p class="text-neutral-600 text-sm mb-6">Selecciona un servicio para ver detalles y solicitar cotización.</p>
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                {relevantServices.map((service: any) => {
+                  const sSections = getServiceSections(service.slug);
+                  const sName = sSections?.hero?.heading || service.name;
+                  return (
+                    <a href={`/servicios/${service.slug}`} class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-3 text-center text-sm text-neutral-700 hover:text-primary-700 transition-all font-medium">{sName.length > 28 ? sName.substring(0, 28) + '...' : sName}</a>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          <!-- Locations Grid -->
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold text-neutral-900 mb-2">Disponible en {allLocations.length} ubicaciones</h2>
+            <p class="text-neutral-600 text-sm mb-6">Selecciona tu comuna para ver disponibilidad.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+              {allLocations.map((location: any) => {
+                const firstServiceSlug = relevantServices[0]?.slug || 'guardias-de-seguridad';
+                return <a href={`/servicios/${firstServiceSlug}/${location.slug}`} class="bg-neutral-50 hover:bg-primary-50 border border-neutral-200 hover:border-primary-300 rounded-lg p-3 text-center text-sm text-neutral-700 hover:text-primary-700 transition-all font-medium">{location.name}</a>;
+              })}
+            </div>
+            <div class="mt-4 text-center">
+              <a href="/ubicaciones" class="text-primary-600 hover:text-primary-700 font-medium text-sm inline-flex items-center gap-1">Explorar mapa de cobertura <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
         </div>
 
-        <!-- Column 3: Sidebar -->
+        <!-- Sidebar (header fijo + body con scroll) -->
         <div class="lg:col-span-1">
-          <div class="bg-neutral-50 rounded-xl p-6 sticky top-8">
-            <h3 class="text-xl font-bold text-neutral-900 mb-4">
-              {sections?.cta?.heading || hero.heading}
-            </h3>
-            
-            {sections?.cta?.description && (
-              <p class="text-neutral-600 mb-6">
-                {sections.cta.description}
-              </p>
-            )}
-            
-            <a 
-              href="/cotizacion" 
-              class="block w-full bg-primary-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
-            >
-              {sections?.cta?.button || 'Solicitar Cotización'}
-            </a>
-            
-            <a 
-              href="/contacto" 
-              class="block w-full border border-primary-600 text-primary-600 text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors mt-3"
-            >
-              Llamar ahora
-            </a>
+          <div class="bg-neutral-50 rounded-xl sticky top-6 max-h-[calc(100vh-3rem)] flex flex-col overflow-hidden">
+            <!-- Header fijo -->
+            <div class="p-6 pb-0 shrink-0">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4">{sections?.cta?.headline || hero.heading}</h3>
+              {sections?.cta?.description && <p class="text-neutral-600 mb-4">{sections.cta.description}</p>}
+              <div class="space-y-3">
+                <a href="/cotizacion" class="block w-full bg-primary-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">{sections?.cta?.button_text || 'Solicitar Cotización'}</a>
+                <a href="/contacto" class="block w-full border border-primary-600 text-primary-600 text-center px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors">Llamar ahora</a>
+              </div>
+            </div>
+            <!-- Body con scroll -->
+            <div class="p-6 pt-4 overflow-y-auto">
+              {relevantServices.length > 0 && (
+                <div class="pb-6 border-t border-neutral-200 pt-4">
+                  <h4 class="text-sm font-semibold text-neutral-700 mb-3">Servicios para este sector</h4>
+                  <div class="flex flex-wrap gap-2">
+                    {relevantServices.slice(0, 8).map((service: any) => {
+                      const sSections = getServiceSections(service.slug);
+                      const sName = sSections?.hero?.heading || service.name;
+                      const sSectors = serviceSectorsMap[service.slug] || [];
+                      const sectorColor = sSectors.length > 0 ? getSectorTag(sSectors[0]) : getSectorTag(slug);
+                      return <a href={`/servicios/${service.slug}`} class={`text-xs px-2.5 py-1 rounded-full border ${sectorColor}`}>{sName.length > 22 ? sName.substring(0, 22) + '...' : sName}</a>;
+                    })}
+                  </div>
+                </div>
+              )}
 
-            <div class="mt-6 pt-6 border-t border-neutral-200">
-              <h4 class="text-sm font-semibold text-neutral-700 mb-3">Otros sectores</h4>
-              {['comercial', 'industrial', 'residencial', 'salud', 'educacion', 'eventos', 'construccion']
-                .filter(s => s !== slug)
-                .map(s => (
-                  <a 
-                    href={`/sectores/${s}`}
-                    class="block py-2 text-sm text-neutral-600 hover:text-primary-600 border-b border-neutral-100 last:border-0 capitalize"
-                  >
-                    {s}
-                  </a>
-                ))
-              }
+              <div class="pb-6 border-t border-neutral-200 pt-4">
+                <h4 class="text-sm font-semibold text-neutral-700 mb-3">Otros sectores</h4>
+                <div class="flex flex-wrap gap-2">
+                  {allSectors.filter((s: any) => s.slug !== slug).slice(0, 6).map((s: any) => (
+                    <a href={`/sectores/${s.slug}`} class={`text-xs px-2.5 py-1 rounded-full border ${getSectorTag(s.slug)}`}>{s.name}</a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -315,21 +285,35 @@ const breadcrumbItems = [
     </div>
   </section>
 
-  <!-- CTA Final -->
-  {sections?.cta && (
-    <section class="py-12 bg-primary-600 text-white">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-2xl lg:text-3xl font-bold mb-4">{sections.cta.heading}</h2>
-        <p class="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
-          {sections.cta.description}
-        </p>
-        <a 
-          href="/cotizacion" 
-          class="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors"
-        >
-          {sections.cta.button || 'Solicitar Cotización'}
-        </a>
+  <!-- Related -->
+  <section class="py-12 bg-neutral-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-neutral-900 mb-6">También te puede interesar</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {relatedSectors.map((s: any) => {
+          const sData = allSectors.find((sec: any) => sec.slug === s.slug);
+          const sName = sData?.name || s.name;
+          return (
+            <a href={`/sectores/${s.slug}`} class="bg-white rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all group">
+              <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">{sName}</h3>
+              <p class="text-sm text-neutral-600 line-clamp-2">{SECTOR_INTROS[s.slug]?.substring(0, 120) || `Seguridad para el sector ${sName}`}...</p>
+              <div class="mt-4 text-primary-600 font-medium text-sm flex items-center gap-1">Ver más <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></div>
+            </a>
+          );
+        })}
       </div>
-    </section>
-  )}
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="py-12 bg-primary-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl lg:text-3xl font-bold mb-4">{sections?.cta?.headline || `Seguridad profesional para el sector ${hero.heading}`}</h2>
+      <p class="text-lg text-white/90 mb-6 max-w-2xl mx-auto">{sections?.cta?.description || 'Cotiza gratis seguridad adaptada a tu industria. Respuesta en menos de 24 horas.'}</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/cotizacion" class="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Solicitar Cotización</a>
+        <a href="/contacto" class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">Hablar con un experto</a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

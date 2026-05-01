@@ -1,96 +1,78 @@
 {
   "sections": {
     "hero": {
-      "heading": "Seguridad Industrial en Santiago Centro",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el centro de Santiago.",
-      "cta_text": "Cotizar en Santiago Centro",
-      "cta_link": "/cotizacion?service=seguridad-industrial&location=santiago-centro",
-      "image": "/images/service-seguridad-industrial.webp"
+      "heading": "Seguridad Industrial en Santiago Centro | Guardias Profesionales 24/7",
+      "subheading": "Protección integral para instalaciones industriales y centros de trabajo en el corazón de Santiago. Guardias certificados OS-10 con presencia física disuasoria y monitoreo permanente.",
+      "image": "seguridad-industrial-santiago-centro-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Seguridad Industrial",
-        "url": "/servicios/seguridad-industrial"
-      },
-      {
-        "label": "Santiago Centro",
-        "url": "/servicios/seguridad-industrial/santiago-centro"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Seguridad Industrial en Santiago Centro?",
-      "content": "En GuardMan Chile somos especialistas en seguridad industrial en Santiago Centro. Nuestra experiencia en el centro de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Santiago Centro y toda la zona Centro.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Guardias especializados en entornos industriales",
-        "Control de acceso a bodegas y áreas restringidas",
-        "Monitoreo perimetral y vigilancia móvil",
-        "Prevención de robos de mercadería y equipos",
-        "Inspecciones de seguridad y informesdaily",
-        "Coordinación con committees de higiene y seguridad"
+      "heading": "Protección profesional para entornos industriales en Santiago Centro",
+      "paragraphs": [
+        "Santiago Centro concentra una de las zonas comerciales e industriales más dinámicas de la Región Metropolitana, con múltiples centros de distribución, bodegas y recintos productivos que requieren vigilancia constante. En GuardMan Chile entendemos que la seguridad industrial en Santiago Centro no es solo contratar guardias: es implementar un sistema integral de prevención diseñado específicamente para cada tipo de instalación.",
+        "Nuestro equipo de seguridad industrial en Santiago Centro está respaldado por más de 8 años de experiencia en el sector y 500 guardias certificados bajo la normativa OS-10 vigente. Cada servicio incluye supervisión permanente, protocolos de emergencia adaptados al rubro industrial y coordinación directa con las autoridades competentes.",
+        "Trabajamos con empresas de diversos rubros incluyendo logística, manufactura, comercio mayorista y centros de bodegaje. Nuestra presencia física disuasoria combinada con tecnología de monitoreo 24/7 permite detectar situaciones de riesgo antes de que se conviertan en incidentes, garantizando la continuidad operativa de tu negocio."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Santiago Centro",
-      "content": "",
-      "points": [
-        "bancos, oficinas públicas, hoteles, retail y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de flujos de personas, seguridad para eventos, CCTV comercial y guardias experimentados es cada vez más urgente en el centro de Santiago.",
-        " muchas empresas y residencias en Santiago Centro enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de nuestro servicio de seguridad industrial en Santiago Centro",
+      "items": [
+        "Guardias de seguridad certificados OS-10 con formación continua en protocolos industriales",
+        "Rondas preventivas programadas según las necesidades específicas de cada instalación",
+        "Control de accesos con registro digital de ingresos y visitas",
+        "Monitoreo remoto 24/7 desde nuestro centro de operaciones con respuesta inmediata",
+        "Coordinación con Carabineros y servicios de emergencia las 24 horas",
+        "Sistema de reporte diario de novedades e incidentes",
+        "Cobertura en festivos, fines de semana y horarios extendidos",
+        "Planes de emergencia y evacuación personalizados",
+        "Asesoría en seguridad industrial según normativas vigentes (DS 594, Ley 16.744)",
+        "Supervisión semanal por parte de nuestro equipo gerencial"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Santiago Centro",
+      "heading": "Riesgos que mitigamos en entornos industriales de Santiago Centro",
       "items": [
-        "bancos, oficinas públicas, hoteles, retail y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de flujos de personas, seguridad para eventos, CCTV comercial y guardias experimentados es cada vez más urgente en el centro de Santiago.",
-        " muchas empresas y residencias en Santiago Centro enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos y hurtos de mercadería en bodegas y centros de distribución",
+        "Acceso no autorizado a zonas restringidas o áreas de alto valor",
+        "Incidentes de seguridad durante horarios no laborales y turnos nocturnos",
+        "Falta de control en puntos de ingreso y egreso de vehículos de carga",
+        "Vulnerabilidades en el perímetro industrial durante horas sin operación",
+        "Pérdidas por negligencia en el manejo de materiales y activos"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Centro"
-      },
-      {
-        "value": "Centro",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Conocen las normas de seguridad industrial?",
-        "answer": "Sí, nuestros guardias reciben capacitación en prevención de riesgos, normativa OSHA y protocolos de emergencia específicos para entornos industriales."
-      },
-      {
-        "question": "¿Cómo controlan el acceso a bodegas?",
-        "answer": "Implementamos puntos de control con registro de ingresos, verificación de identidad, inspección de vehículos y control de mercadería que entra y sale."
-      },
-      {
-        "question": "¿报告an incidentes de seguridad?",
-        "answer": "Sí, entregamos reportes diarios de actividad, incidentes y métricas de seguridad. También hacemos análisis semanales y mensuales de tendencias."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas frecuentes sobre seguridad industrial en Santiago Centro",
+      "items": [
+        {
+          "question": "¿Qué Incluye el servicio de seguridad industrial en Santiago Centro?",
+          "answer": "Nuestro servicio de seguridad industrial en Santiago Centro incluye guardias certificados OS-10 desplegados en tus instalaciones, control de accesos con registro digital, rondas preventivas según cronograma establecido, monitoreo 24/7 desde nuestro centro de operaciones, gestión de emergencias y coordinación con Carabineros. Todos nuestros planes incluyen supervisión semanal, reportes de novedades diarios y cobertura los 365 días del año incluyendo festivos."
+        },
+        {
+          "question": "¿Cuánto cuesta el servicio de seguridad industrial en Santiago Centro?",
+          "answer": "El costo del servicio de seguridad industrial en Santiago Centro varía según factores como cantidad de guardias requeridos, horarios de cobertura, características del punto (tamaño, acceso, nivel de riesgo) y servicios adicionales como monitoreo CCTV o control de accesos. Para cotizar tu servicio puedes contactarnos directamente y uno de nuestros ejecutivos comerciales te entregaré una propuesta personalizada sin compromiso."
+        },
+        {
+          "question": "¿Cómo verifican que los guardias cumplen con los estándares de seguridad?",
+          "answer": "Todos nuestros guardias cuentan con certificación OS-10 vigente, requisito legal obrigatório para trabajar en seguridad privada en Chile. Además, implementamos un sistema de supervisión continua que incluye supervisores zonales que realizan rondas de fiscalización, reportes digitales en tiempo real, evaluaciones de desempeño mensuales y formación continua en protocolos de emergencia. El control de calidad es permanente para garantizar un servicio diferenciado."
+        },
+        {
+          "question": "¿Pueden cubrir emergencias fuera del horario laboral?",
+          "answer": "Sí, nuestro centro de monitoreo opera las 24 horas los 365 días del año, incluyendo fines de semana y festivos. En caso de emergencia, tenemos tiempos de respuesta garantizados y coordinamos directamente con Carabineros y servicios de emergencia. Además, cada instalación cuenta con protocolos de evacuación y emergencia personalizados que son dados a conocer al personal de vigilancia durante la inducción."
+        },
+        {
+          "question": "¿Qué normativa regula el servicio de seguridad industrial en Chile?",
+          "answer": "El servicio de seguridad privada en Chile está regulado por la Ley 21.657 y su normativa complementaria, fiscalizada por la Prefectura de Seguridad Privada (O.S.10) de Carabineros. Los guardias deben contar con certificación OS-10 actualizada y las empresas deben cumplir con requisitos de infraestructura, tecnología y formación establecidos por la autoridad. En GuardMan cumplimos con todas las normativas vigentes y mantenemos nuestros registros al día ante O.S.10."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Santiago Centro",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Santiago Centro",
-      "button_link": "/cotizacion?service=seguridad-industrial&location=santiago-centro"
+      "heading": "Protege tu instalación industrial con expertos en seguridad",
+      "subheading": "Cotiza hoy tu servicio de seguridad industrial en Santiago Centro. Evaluamos tu instalación sin costo y entregamos una propuesta personalizada.",
+      "button": "Cotizar servicio de seguridad",
+      "image": "seguridad-industrial-santiago-centro-cta.jpg"
+    },
+    "meta": {
+      "title": "Seguridad Industrial Santiago Centro | Guardias 24/7 OS-10 | GuardMan",
+      "description": "Servicio de seguridad industrial en Santiago Centro con guardias certificados OS-10. Cobertura 24/7, monitoreo y prevención. Empresa líder con 8+ años de experiencia. Cotiza hoy."
     }
   }
 }

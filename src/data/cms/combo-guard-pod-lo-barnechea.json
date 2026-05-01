@@ -1,96 +1,83 @@
 {
   "sections": {
     "hero": {
-      "heading": "Guard Pod en Lo Barnechea",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente de Santiago.",
-      "cta_text": "Cotizar en Lo Barnechea",
-      "cta_link": "/cotizacion?service=guard-pod&location=lo-barnechea",
-      "image": "/images/hero-home.webp"
+      "heading": "Guard Pod en Lo Barnechea: Seguridad Autónoma de Última Generación",
+      "subheading": "Protección inteligente 24/7 para empresas, condominios y terrenos en Lo Barnechea. Tecnología de vanguardia con respaldo humano certificado OS-10.",
+      "image": "guard-pod-lo-barnechea-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Guard Pod",
-        "url": "/servicios/guard-pod"
-      },
-      {
-        "label": "Lo Barnechea",
-        "url": "/servicios/guard-pod/lo-barnechea"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Guard Pod en Lo Barnechea?",
-      "content": "En GuardMan Chile somos especialistas en guard pod en Lo Barnechea. Nuestra experiencia en el sector oriente de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Lo Barnechea y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Unidad móvil de vigilancia autónoma",
-        "Energía solar y conexión satelital",
-        "Cámaras 360° y detección de movimiento",
-        "Sirena y luces de advertencia",
-        "Monitoreo remoto 24/7",
-        "Despliegue rápido en cualquier ubicación"
+      "heading": "Guardia Virtual Guard Pod en Lo Barnechea: La Revolución en Seguridad Privada",
+      "paragraphs": [
+        "En GuardMan Chile somos pioneros en soluciones de seguridad integral en Lo Barnechea. Nuestro Guard Pod® V1 representa la evolución tecnológica que combina detección autónoma de intrusos, cámaras 4K de alta definición y sensores de movimiento avanzados, todo respaldado por guardias certificados OS-10 y nuestra central de monitoreo 24/7.",
+        "Lo Barnechea, con su expansión urbana hacia zonas como Chicureo, La Dehesa y El Totoral, demanda soluciones de seguridad adaptables. El Guard Pod en Lo Barnechea se posiciona como elemento disuasorio visible que refuerza la protección en sitios remotos, parcelas agrícolas, empresas y residencias que requieren vigilancia continua sin comprometer la presencia humana profesional.",
+        "Nuestro sistema permite monitorear en tiempo real desde cualquier ubicación, enviando alertas inmediatas ante movimientos sospechosos. La combinación de tecnología de punta y personal capacitado garantiza una respuesta rápida y efectiva ante cualquier situación de riesgo en tu propiedad."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Lo Barnechea",
-      "content": "",
-      "points": [
-        "condominios de lujo, vineyards y propiedades rurales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia perimetral, control vehicular y respuestas de emergencia es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Lo Barnechea enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características del Guard Pod en Lo Barnechea",
+      "items": [
+        "Detección autónoma de intrusos con sensores de movimiento infrarrojos de largo alcance",
+        "Cámaras 4K con visión nocturna para monitoreo continuo las 24 horas",
+        "Iluminación LED disuasoria activada por movimiento",
+        "Conectividad 4G/LTE para transmisión de datos en tiempo real",
+        "Batería solar con autonomía extendida para zonas sin acceso eléctrico",
+        "Alertas instantáneas a celular y central de monitoreo GuardMan",
+        "Audio bidireccional para comunicación remota y disuasión verbal",
+        "Respaldo de guardias OS-10 certificados para intervención presencial",
+        "Cobertura en zonas remotas y periurbanas de Lo Barnechea",
+        "Instalación móvil sin obras civiles ni permisos municipales"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Lo Barnechea",
+      "heading": "Problemas que Resuelve el Guard Pod en Lo Barnechea",
       "items": [
-        "condominios de lujo, vineyards y propiedades rurales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia perimetral, control vehicular y respuestas de emergencia es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Lo Barnechea enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos y saqueos en parcelas y terrenos sin vigilancia permanente en zonas como Chicureo y Colina",
+        "Intrusiones en empresas con ubicaciones remotas o difícil acceso en el sector nororiente",
+        "Falta de cobertura de seguridad en urbanizaciones nuevas y condominios en expansión",
+        "Costos elevados de vigilancia humana 24/7 en múltiples puntos de una propiedad",
+        "Demora en la respuesta ante emergencias por distancia a retenes de Carabineros",
+        "Vulnerabilidad de bienes y equipos durante horarios no laborales o fines de semana",
+        "Dificultad para supervisar múltiples ubicaciones simultáneamente sin personal adicional"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué es un Guard POD?",
-        "answer": "Es una unidad móvil de vigilancia autónoma con cámaras, sensores, sirena y luces. Funciona con energía solar y se despliega rápidamente en cualquier ubicación."
-      },
-      {
-        "question": "¿Por cuánto tiempo funciona sin intervención?",
-        "answer": "El Guard POD puede operar de forma autónoma hasta 72 horas con sus baterías internas. La energía solar mantiene el sistema funcionando indefinidamente en condiciones normales."
-      },
-      {
-        "question": "¿Se puede mover a diferentes ubicaciones?",
-        "answer": "Sí, está diseñado para ser transportado fácilmente. Es ideal para obras de construcción, eventos temporales o refuerzos de seguridad en cualquier ubicación."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Guard Pod en Lo Barnechea",
+      "items": [
+        {
+          "question": "¿Qué es el Guard Pod y cómo funciona en Lo Barnechea?",
+          "answer": "El Guard Pod en Lo Barnechea es una unidad autónoma de seguridad portátil que integra cámaras 4K, sensores de movimiento, iluminación LED y conectividad 4G. Funciona como elemento disuasorio y de monitoreo activo, enviando alertas en tiempo real a nuestra central 24/7. Cuando detecta movimiento sospechoso, activa grabación de video y notificación inmediata, permitiendo respuesta remota mediante audio bidireccional o despacho de guardias OS-10 a tu ubicación en Lo Barnechea."
+        },
+        {
+          "question": "¿Cuál es el precio del Guard Pod en Lo Barnechea?",
+          "answer": "El valor del servicio Guard Pod en Lo Barnechea varía según la cobertura necesaria, extensión del terreno o número de puntos a vigilar, y la modalidad de monitoreo requerida. Para obtener una cotización personalizada, recomendamos contactar directamente a nuestro equipo comercial que evaluará las características específicas de tu propiedad y diseñará una solución a medida con precios competitivos para el sector de Lo Barnechea."
+        },
+        {
+          "question": "¿El Guard Pod requiere instalación especial o permisos municipales en Lo Barnechea?",
+          "answer": "Una de las ventajas del Guard Pod en Lo Barnechea es su instalación móvil que no requiere obras civiles ni conexiones eléctricas permanentes. Funciona con batería solar autónoma y se puede reubicar según tus necesidades de seguridad. Al ser una solución portátil, no necesitas permisos municipales especiales para su instalación en tu propiedad dentro de Lo Barnechea."
+        },
+        {
+          "question": "¿Qué incluye la certificación OS-10 de los guardias de respaldo?",
+          "answer": "Todos los guardias de respaldo que dispatchamos desde GuardMan están certificados con el curso OS-10 autorizado por Carabineros de Chile. Esta certificación incluye formación en prevención del delito, control de accesos, manejo de situaciones de emergencia y protocolos de actuación. Los guardias OS-10 cumplen con los requisitos legales para trabajar en seguridad privada en toda la Región Metropolitana, incluyendo Lo Barnechea."
+        },
+        {
+          "question": "¿Puedo monitorear el Guard Pod desde mi celular en tiempo real?",
+          "answer": "Sí, desde la aplicación móvil de GuardMan puedes acceder al video en vivo de tu Guard Pod en Lo Barnechea, revisar grabaciones, recibir alertas personalizadas y comunicarte mediante el audio bidireccional. También puedes solicitar intervención presencial con un guardia OS-10 directamente desde la app, asegurando una respuesta rápida ante cualquier incidente en tu propiedad."
+        },
+        {
+          "question": "¿El Guard Pod funciona en zonas rurales de Lo Barnechea como Chicureo o Colina?",
+          "answer": "El Guard Pod en Lo Barnechea está diseñado específicamente para operar en zonas periurbanas y rurales con conectividad limitada. Su tecnología 4G/LTE adaptable y batería solar de alta capacidad permiten funcionamiento autónomo en parcelas y terrenos agrícolas de Chicureo, Colina y demás sectores del nororiente de Lo Barnechea donde la seguridad tradicional tiene limitaciones."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Lo Barnechea",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Lo Barnechea",
-      "button_link": "/cotizacion?service=guard-pod&location=lo-barnechea"
+      "heading": "Protege Tu Propiedad en Lo Barnechea con Guard Pod",
+      "subheading": "Solicita una evaluación gratuita de seguridad para tu empresa, parcela o residencia en Lo Barnechea. Nuestros especialistas diseñan soluciones a medida con tecnología Guard Pod y respaldo de guardias certificados OS-10.",
+      "button": "Cotizar Guard Pod Lo Barnechea",
+      "image": "guard-pod-lo-barnechea-cta.jpg"
+    },
+    "meta": {
+      "title": "Guard Pod Lo Barnechea | Seguridad Autónoma 24/7 | GuardMan Chile",
+      "description": "Guard Pod en Lo Barnechea: unidad autónoma de seguridad con cámaras 4K, sensores de movimiento y respaldo de guardias OS-10. Protección integral para empresas y residencias en Lo Barnechea, Chicureo y Colina. Cotiza ahora."
     }
   }
 }

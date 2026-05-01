@@ -1,96 +1,79 @@
 {
   "sections": {
     "hero": {
-      "heading": "Control de Accesos en Vitacura",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente premium.",
-      "cta_text": "Cotizar en Vitacura",
-      "cta_link": "/cotizacion?service=control-de-accesos&location=vitacura",
-      "image": "/images/service-control-de-accesos.webp"
+      "heading": "Control de Accesos en Vitacura: Seguridad Profesional con Guardias OS-10 Certificados",
+      "subheading": "Protegemos tu edificio, empresa o residencia en Vitacura con personal certificado, sistemas de control de accesos y monitoreo 24/7. Más de 8 años respaldando la tranquilidad de miles de vecinos.",
+      "image": "/images/control-accesos-vitacura-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Control De Accesos",
-        "url": "/servicios/control-de-accesos"
-      },
-      {
-        "label": "Vitacura",
-        "url": "/servicios/control-de-accesos/vitacura"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Control de Accesos en Vitacura?",
-      "content": "En GuardMan Chile somos especialistas en control de accesos en Vitacura. Nuestra experiencia en el sector oriente premium nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Vitacura y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Lectores de tarjeta, biometricos y reconocimiento facial",
-        "Registro de ingresos y salidas en tiempo real",
-        "Integración con CCTV y monitoreo remoto",
-        "Gestión de permisos por horarios y zonas",
-        "Reportes de productividad y asistencia",
-        "Soporte técnico 24/7 y mantenimiento preventivo"
+      "heading": "Control de Accesos en Vitacura: Protege Tu Propiedad con Expertos",
+      "paragraphs": [
+        "En Vitacura, donde la seguridad es prioridad para familias y empresas, contar con un sistema de control de accesos profesional marca la diferencia entre reaccionar ante incidentes o prevenirlos. En GuardMan Chile ofrecemos soluciones integrales que combinan presencia física de guardias certificados OS-10 con tecnología de vanguardia para garantizar que solo personas autorizadas ingresen a tus instalaciones.",
+        "Nuestro servicio de control de accesos en Vitacura se adapta a las necesidades específicas de cada cliente: edificios residenciales, empresas, centros comerciales, almacenes y recintos industriales. Cada solución que implementamos considera el contexto del sector, los flujos de personas y vehículos, y los niveles de seguridad requeridos por nuestros clientes.",
+        "La diferencia de GuardMan radica en la combinación de tres pilares fundamentales: personal altamente capacitado y certificado, tecnología de control de accesos actualizada y un centro de monitoreo operativo las 24 horas. Esta integración nos permite ofrecer un servicio que va más allá de abrir y cerrar puertas: proporcionamos trazabilidad, control y tranquilidad permanente."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Vitacura",
-      "content": "",
-      "points": [
-        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
-        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de Nuestro Control de Accesos en Vitacura",
+      "items": [
+        "Guardias de seguridad certificados con curso OS-10 vigente y entrenamiento continuo en control de accesos",
+        "Sistemas de identificación: tarjetas RFID, biometría (huella dactilar, reconocimiento facial) y códigos PIN",
+        "Control de accesos peatonales y vehiculares con barreras, torniquetes y lectores de patentes",
+        "Software de gestión de visitas con registro en tiempo real, generación de códigos QR y notificaciones",
+        "Monitoreo remoto desde nuestro centro de operaciones las 24 horas, los 365 días del año",
+        "Rondas preventivas programadas y aleatorias según las características del recinto",
+        "Protocolos diferenciados para residentes, visitas, proveedores y personal de emergencia",
+        "Integración con sistemas de CCTV, alarmas perimetrales y cerco eléctrico",
+        "Reportes detallados de ingresos, egresos e incidencias con registro histórico",
+        "Coordinación directa con Carabineros y seguridad municipal de Vitacura ante eventos críticos"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Vitacura",
+      "heading": "Problemas que Resolvemos con Control de Accesos en Vitacura",
       "items": [
-        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
-        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Ingresos no autorizados y situación de riesgo por fallas en la validación de visitas",
+        "Falta de trazabilidad sobre quién entra y sale del edificio o empresa en horarios específicos",
+        "Robos, hurtos y encerronas en estacionamientos y accesos vehiculares",
+        "Dificultad para gestionar alto flujo de visitas, repartidores y proveedores sin comprometer seguridad",
+        "Incertidumbre sobre la cobertura y respuesta ante emergencias fuera de horario hábil",
+        "Vulnerabilidades en portones, rejas y accesos secundarios que no reciben vigilancia constante",
+        "Personal de seguridad sin certificación adecuada que no garantiza el estándar requerido"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Se puede integrar con mis cámaras existentes?",
-        "answer": "Sí, nuestros sistemas de control de accesos se integran con la mayoría de marcas de CCTV. Te ofrecemos una solución completa y compatible."
-      },
-      {
-        "question": "¿Qué pasa si pierdo mi tarjeta de acceso?",
-        "answer": "Podemos bloquear la tarjeta inmediatamente desde nuestra central y emitir una nueva. También ofrecemos alternativas como biometrics o códigos temporales."
-      },
-      {
-        "question": "¿El sistema funciona sin internet?",
-        "answer": "Sí, los controles de acceso tienen memoria local y funcionan offline. Cuando se restore la conexión, se sincronizan todos los registros."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Control de Accesos en Vitacura",
+      "items": [
+        {
+          "question": "¿Qué tipos de sistemas de control de accesos ofrecen en Vitacura?",
+          "answer": "En Vitacura implementamos múltiples tecnologías según las necesidades del cliente: lectores de tarjetas RFID para acceso rápido, biometría (huella dactilar y reconocimiento facial) para máxima seguridad, barreras vehiculares con lectura de patentes, torniquetes peatonales y sistemas híbridos. Cada instalación se diseña considerando el flujo de personas, el nivel de seguridad requerido y el presupuesto disponible. Nuestros técnicos evalúan el recinto y proponen la solución óptima sin costos ocultos."
+        },
+        {
+          "question": "¿Cómo funciona el control de accesos con guardias en Vitacura?",
+          "answer": "El guardia ubicado en el acceso principal valida la identidad de cada visitante mediante credenciales, registro digital o comunicación directa con el residente o administrador. Para residentes y colaboradores frecuentes, el sistema permite acceso mediante tag, huella o código PIN. Todo evento de ingreso y egreso queda registrado con hora, fecha y tipo de acceso. Ante situaciones sospechosas, el guardia ejecuta protocolos de contención y da alerta inmediata a nuestro centro de monitoreo."
+        },
+        {
+          "question": "¿Cuál es el costo del control de accesos en Vitacura?",
+          "answer": "El valor depende de factores como tipo de sistema requerido, cantidad de puntos de acceso, horario de cobertura y nivel de especialización del personal. En GuardMan manejamos planes desde opciones económicas para accesos simples hasta soluciones integrales con tecnología avanzada y cobertura 24/7. La cotización se realiza en terreno, sin costo, evaluando las características específicas de tu propiedad. Contáctanos para recibir una propuesta personalizada sin compromiso."
+        },
+        {
+          "question": "¿Los guardias tienen certificación OS-10 para trabajar en Vitacura?",
+          "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 vigente, requisito legal exigido por la Prefectura de Seguridad Privada de Carabineros. Este certificado avala la formación en normativas de seguridad, protocolos de actuación y manejo de situaciones de riesgo. Además, nuestros efectivos reciben capacitaciones internas periódicas y evaluaciones de desempeño para mantener altos estándares de servicio en Vitacura y todas las comunas donde operamos."
+        },
+        {
+          "question": "¿Pueden integrarse con mis sistemas de cámaras y alarmas existentes?",
+          "answer": "Absolutamente. Nuestros sistemas de control de accesos se integran con circuitos cerrados de televisión (CCTV), alarmas perimetrales, cerco eléctrico y cualquier otra tecnología de seguridad existente. Esta integración permite monitorear desde una sola plataforma, recibir alertas ante eventos y revisar grabaciones关联adas a intentos de acceso no autorizados. Ofrecemos兼容性 con las principales marcas del mercado y desarrollamos soluciones a medida para cada cliente."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Vitacura",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Vitacura",
-      "button_link": "/cotizacion?service=control-de-accesos&location=vitacura"
+      "heading": "Protege Tu Propiedad en Vitacura con Control de Accesos Profesional",
+      "subheading": "No dejes la seguridad de tu edificio, empresa o casa al azar. Contáctanos hoy y recibe una asesoría personalizada sin costo. Nuestros especialistas evalúan tu situación y proponen soluciones a medida.",
+      "button": "Cotizar Control de Accesos en Vitacura",
+      "image": "/images/control-accesos-vitacura-cta.jpg"
+    },
+    "meta": {
+      "title": "Control de Accesos Vitacura | Guardias OS-10, 24/7 | GuardMan Chile",
+      "description": "Servicio profesional de control de accesos en Vitacura con guardias certificados OS-10. Sistemas RFID, biometría, barreras vehiculares y monitoreo 24/7. Cotiza sin costo."
     }
   }
 }

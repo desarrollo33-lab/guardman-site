@@ -1,40 +1,31 @@
 {
   "slug": "conchali",
   "type": "location",
-  "version": 1,
-  "last_modified": "2026-04-22T14:59:39.539Z",
+  "version": 4,
+  "last_modified": "2026-04-15 17:14:40",
   "seo": {
     "title": "Seguridad Privada Conchalí | GuardMan Chile",
     "description": "Empresa líder en seguridad privada en Conchalí. Guardias OS-10, monitoreo 24/7, CCTV y más. Cotiza gratis hoy.",
-    "canonical": "https://guardman.cl/ubicaciones/conchali"
+    "canonical": ""
   },
   "content": {
     "hero": {
       "heading": "Seguridad Privada en Conchalí | Guardias 24/7",
-      "subheading": "Protege tu hogar, empresa o evento con los mejores guardias certificados OS-10 de Santiago Norte",
-      "image": "/images/og-default.webp"
+      "subheading": "Protege tu hogar, empresa o evento con los mejores guardias certificados OS-10 de Santiago Norte"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Ubicaciones",
-        "url": "/ubicaciones"
-      },
-      {
-        "label": "Conchali",
-        "url": "/ubicaciones/conchali"
-      }
-    ],
+    "meta": {
+      "title": "Seguridad Privada Conchalí | GuardMan Chile",
+      "description": "Empresa líder en seguridad privada en Conchalí. Guardias OS-10, monitoreo 24/7, CCTV y más. Cotiza gratis hoy."
+    },
     "intro": {
-      "title": "Soluciones de Seguridad Confiables para Conchalí",
-      "content": "En GuardMan Chile somos la empresa de seguridad privada líder en Conchalí y todo el sector norte de Santiago. Con más de 8 años de experiencia y más de 500 guardias certificados OS-10, garantizamos la protección que tu familia o negocio merece.\n\nNuestro centro de monitoreo propio opera las 24 horas, los 7 días de la semana, brindándote tranquilidad total. Desde vigilancia residencial hasta seguridad industrial y para eventos, tenemos la solución perfecta para cada necesidad en Conchalí.",
-      "image": "/images/location-intro.jpg"
+      "heading": "Soluciones de Seguridad Confiables para Conchalí",
+      "paragraphs": [
+        "En GuardMan Chile somos la empresa de seguridad privada líder en Conchalí y todo el sector norte de Santiago. Con más de 8 años de experiencia y más de 500 guardias certificados OS-10, garantizamos la protección que tu familia o negocio merece.",
+        "Nuestro centro de monitoreo propio opera las 24 horas, los 7 días de la semana, brindándote tranquilidad total. Desde vigilancia residencial hasta seguridad industrial y para eventos, tenemos la solución perfecta para cada necesidad en Conchalí."
+      ]
     },
     "features": {
-      "title": "¿Por Qué Elegir GuardMan en Conchalí?",
+      "heading": "¿Por Qué Elegir GuardMan en Conchalí?",
       "items": [
         "Guardias certificados OS-10 con entrenamiento avanzado en respuesta ante emergencias",
         "Centro de monitoreo propio 24/7 con tecnología de última generación",
@@ -44,107 +35,68 @@
         "Atención personalizada y visitas de inspección sin costo"
       ]
     },
-    "stats": [
-      {
-        "value": "8+",
-        "label": "Años de Experiencia"
-      },
-      {
-        "value": "500+",
-        "label": "Guardias Certificados"
-      },
-      {
-        "value": "1.200+",
-        "label": "Clientes Satisfechos"
-      },
-      {
-        "value": "14",
-        "label": "Comunas de Cobertura"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto cuesta contratar seguridad privada en Conchalí?",
-        "answer": "Los precios varían según el tipo de servicio y las horas requeridas. En GuardMan ofrecemos cotizaciones personalizadas sin costo. Contáctanos y te entregamos una propuesta adaptée a tu presupuesto y necesidades específicas."
-      },
-      {
-        "question": "¿Qué servicios de seguridad ofrecen en la zona de Conchalí?",
-        "answer": "Brindamos guardias de vigilancia, instalación de CCTV, control de accesos, monitoreo 24/7, escoltas, seguridad para eventos y seguridad industrial. Todos nuestros servicios están disponibles para hogares, empresas y comercio en Conchalí."
-      },
-      {
-        "question": "¿Los guardias de GuardMan están capacitados y certificados?",
-        "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 vigente y reciben entrenamiento continuo en técnicas de vigilancia, primeros auxilios y manejo de situaciones de emergencia para garantizar la mejor protección."
-      },
-      {
-        "question": "¿Cómo contrato los servicios de seguridad de GuardMan en Conchalí?",
-        "answer": "Es muy fácil. Puedes contactarnos por WhatsApp, teléfono o completar el formulario de nuestra web. Un ejecutivo te contactará para entender tus necesidades y ofrecerte la mejor solución de seguridad para tu caso."
-      }
-    ],
+    "issues": {
+      "heading": "Problemas de Seguridad Comunes en Conchalí",
+      "items": [
+        "Robos y hurtos en viviendas y edificios residenciales del sector norte",
+        "Inseguridad en comércio y negocios por robos con violencia",
+        "Asaltos callejeros y encerronas en horarios nocturnos",
+        "Falta de vigilancia en poblaciones y condomínios sin seguridad privada",
+        "Necesidad de protección para eventos y reuniones empresariales en la zona"
+      ]
+    },
+    "stats": {
+      "heading": "Números que Respaldan Nuestra Experiencia",
+      "items": [
+        {
+          "label": "Años de Experiencia",
+          "value": "8+"
+        },
+        {
+          "label": "Guardias Certificados",
+          "value": "500+"
+        },
+        {
+          "label": "Clientes Satisfechos",
+          "value": "1.200+"
+        },
+        {
+          "label": "Comunas de Cobertura",
+          "value": "14"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Seguridad en Conchalí",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta contratar seguridad privada en Conchalí?",
+          "answer": "Los precios varían según el tipo de servicio y las horas requeridas. En GuardMan ofrecemos cotizaciones personalizadas sin costo. Contáctanos y te entregamos una propuesta adaptée a tu presupuesto y necesidades específicas."
+        },
+        {
+          "question": "¿Qué servicios de seguridad ofrecen en la zona de Conchalí?",
+          "answer": "Brindamos guardias de vigilancia, instalación de CCTV, control de accesos, monitoreo 24/7, escoltas, seguridad para eventos y seguridad industrial. Todos nuestros servicios están disponibles para hogares, empresas y comercio en Conchalí."
+        },
+        {
+          "question": "¿Los guardias de GuardMan están capacitados y certificados?",
+          "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 vigente y reciben entrenamiento continuo en técnicas de vigilancia, primeros auxilios y manejo de situaciones de emergencia para garantizar la mejor protección."
+        },
+        {
+          "question": "¿Cómo contrato los servicios de seguridad de GuardMan en Conchalí?",
+          "answer": "Es muy fácil. Puedes contactarnos por WhatsApp, teléfono o completar el formulario de nuestra web. Un ejecutivo te contactará para entender tus necesidades y ofrecerte la mejor solución de seguridad para tu caso."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege lo que Más te Importa en Conchalí",
-      "button_text": "Pedir Cotización Ahora",
-      "button_link": "/cotizacion"
+      "heading": "Protege lo que Más te Importa en Conchalí",
+      "subheading": "No dejes la seguridad de tu familia o negocio al azar. Contáctanos hoy y recibe una asesoría gratuita sin compromiso.",
+      "button": "Pedir Cotización Ahora"
     }
   },
-  "related_content": {
-    "nearby_locations": [
-      {
-        "slug": "huechuraba",
-        "title": "Huechuraba",
-        "excerpt": "Ubicación con cobertura de seguridad",
-        "image": "/images/ubicaciones/huechuraba.jpg"
-      },
-      {
-        "slug": "la-pintana",
-        "title": "La Pintana",
-        "excerpt": "Ubicación con cobertura de seguridad",
-        "image": "/images/ubicaciones/la-pintana.jpg"
-      },
-      {
-        "slug": "la-reina",
-        "title": "La Reina",
-        "excerpt": "Ubicación con cobertura de seguridad",
-        "image": "/images/ubicaciones/la-reina.jpg"
-      }
-    ],
-    "related_services": [
-      {
-        "slug": "auditoria-seguridad",
-        "title": "auditoria-seguridad",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/auditoria-seguridad.jpg"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "cctv-videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "control-de-accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      }
-    ],
-    "upsell_services": [
-      {
-        "slug": "auditoria-seguridad",
-        "title": "auditoria-seguridad",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "cctv-videovigilancia",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
     "quality_score": 0,
-    "published": false
+    "published": true
   }
 }

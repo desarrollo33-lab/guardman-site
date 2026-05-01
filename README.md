@@ -152,9 +152,11 @@ npm run dev
 
 ## Environment Variables
 
+Configurar en `.env` o Cloudflare dashboard:
+
 ```
-SERPER_API_KEY=560f82db098446d04e390640882b3a4313ffd39b
-AUTH_PASSWORD=guardman-seo-2024
+SERPER_API_KEY=<obtener de serper.dev>
+AUTH_PASSWORD=<ver .env>
 ENVIRONMENT=production
 ```
 

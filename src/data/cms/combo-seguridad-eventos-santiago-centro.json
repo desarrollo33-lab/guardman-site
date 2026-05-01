@@ -1,96 +1,77 @@
 {
   "sections": {
     "hero": {
-      "heading": "Seguridad para Eventos en Santiago Centro",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el centro de Santiago.",
-      "cta_text": "Cotizar en Santiago Centro",
-      "cta_link": "/cotizacion?service=seguridad-eventos&location=santiago-centro",
-      "image": "/images/service-seguridad-eventos.webp"
+      "heading": "Seguridad para Eventos en Santiago Centro | Guardias OS-10 Certificado",
+      "subheading": "Profesionales OS-10, monitoreo 24/7 y experiencia comprobada en eventos corporativos, sociales y masivos en el corazón de Santiago.",
+      "image": "/images/seguridad-eventos-santiago-centro.webp"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Seguridad Eventos",
-        "url": "/servicios/seguridad-eventos"
-      },
-      {
-        "label": "Santiago Centro",
-        "url": "/servicios/seguridad-eventos/santiago-centro"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Seguridad para Eventos en Santiago Centro?",
-      "content": "En GuardMan Chile somos especialistas en seguridad para eventos en Santiago Centro. Nuestra experiencia en el centro de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Santiago Centro y toda la zona Centro.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Planificación de seguridad según tipo de evento",
-        "Control de acceso y registro de asistentes",
-        "Vigilancia perimetral y detección de amenazas",
-        "Coordinación con producción y Carabineros",
-        "Equipo de reacción rápida ante incidentes",
-        "Informe post-evento con análisis de seguridad"
+      "heading": "Protección Profesional para Eventos en Santiago Centro",
+      "paragraphs": [
+        "Santiago Centro es el punto neurálgico de los eventos en la capital: conciertos, lanzamientos, conferencias, matrimonios y celebraciones privadas convergen en un sector donde la seguridad profesional marca la diferencia entre un evento exitoso y una situación fuera de control. En GuardMan Chile contamos con guardias certificados OS-10 y amplia experiencia protegiendo reuniones de todo tipo en la comuna y sus alrededores.",
+        "Nuestro equipo de seguridad para eventos en Santiago Centro trabaja de la mano con organizadores, productoras y empresas para diseñar planes de seguridad a medida. Evaluamos riesgos, controlamos accesos, gestionamos multitudes y respondemos ante emergencias con tiempos de reacción inmediata, respaldados por nuestro centro de monitoreo activo las 24 horas.",
+        "Ya sea un evento íntimo de 50 personas o un espectáculo masivo con miles de asistentes, GuardMan Chile ofrece la cobertura necesaria con personal altamente capacitado, protocolos actualizados y tecnología de apoyo. Somos la empresa de seguridad que entiende la dinámica propia del centro de Santiago y sabe cómo proteger a tu público, invitados ystaff."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Santiago Centro",
-      "content": "",
-      "points": [
-        "bancos, oficinas públicas, hoteles, retail y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de flujos de personas, seguridad para eventos, CCTV comercial y guardias experimentados es cada vez más urgente en el centro de Santiago.",
-        " muchas empresas y residencias en Santiago Centro enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Qué Incluye Nuestro Servicio de Seguridad para Eventos en Santiago Centro?",
+      "items": [
+        "Guardias de seguridad certificados OS-10 por Carabineros de Chile, con formación en manejo de multitudes y primeros auxilios",
+        "Control de accesos y filtrado de público con procedimientos claros para evitar aglomeraciones y accesos no autorizados",
+        "Diseño de plan de seguridad personalizado según tipo de evento, cantidad de asistentes y nivel de riesgo identificado",
+        "Monitoreo en tiempo real desde nuestro Centro de Control 24/7 con comunicación directa con el equipo en terreno",
+        "Gestión de emergencias con protocolos coordinados junto a Carabineros, SAMU y empresas de respuesta inmediata",
+        "Supervisión permanente de un jefe de seguridad que lidera al equipo y reporta novedades en tiempo real",
+        "Coordinación logística con productores, proveedores y mandantes para alinear expectativas y protocolos del evento",
+        "Respaldo en zonas de estacionamiento y exteriores del recinto para prevenir hurtos y hechos de violencia",
+        "Personal disponible los 365 días del año, con turnos adaptados a la duración y horario específico de tu evento"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Santiago Centro",
+      "heading": "Problemas que Prevenimos en Cada Evento en Santiago Centro",
       "items": [
-        "bancos, oficinas públicas, hoteles, retail y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de flujos de personas, seguridad para eventos, CCTV comercial y guardias experimentados es cada vez más urgente en el centro de Santiago.",
-        " muchas empresas y residencias en Santiago Centro enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Aglomeraciones descontroladas en accesos y salidas que pueden generar pánico, caídas o lesionados",
+        "Ingresos de personas no autorizadas o con objetos prohibidos que comprometen la seguridad del evento",
+        "Robos y hurtos en recintos con alta concentración de público, especialmente en eventos al aire libre",
+        "Situaciones de violencia entre asistentes que requieren intervención rápida y capacitación tactica del personal",
+        "Falta de coordinación con emergencias públicas (Carabineros, ambulancias) cuando no existe un plan formal",
+        "Pérdida de la experiencia del evento por ausencia de un equipo que gestione imprevistos de forma profesional"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Centro"
-      },
-      {
-        "value": "Centro",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto personal se necesita para mi evento?",
-        "answer": "La cantidad depende del tipo de evento, número de asistentes y nivel de riesgo. Evaluamos cada caso para garantizar la seguridad óptima."
-      },
-      {
-        "question": "¿Trabajan con Carabineros?",
-        "answer": "Sí, coordinamos con Carabineros según los permisos requeridos para eventos masivos. Tenemos experiencia en la obtención de permisos y protocolos."
-      },
-      {
-        "question": "¿Qué pasa si hay una emergencia durante el evento?",
-        "answer": "Contamos con un protocolo de emergencias que incluye evacuación, primeros auxilios y coordinación con servicios de emergencia. Nuestro equipo está entrenado para actuar bajo presión."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Seguridad para Eventos en Santiago Centro",
+      "items": [
+        {
+          "question": "¿Cuántos guardias necesito para un evento en Santiago Centro?",
+          "answer": "La cantidad de guardias depende de la asistencia esperada, el tipo de evento y el nivel de riesgo. Como regla general, se estima 1 guardia por cada 50 a 100 asistentes para eventos corporativos y sociales. Para espectáculos masivos o eventos con consumo de alcohol, la proporción aumenta. En GuardMan Chile evaluamos cada caso de forma particular y entregamos un plan de cobertura optimizado para tu evento específico."
+        },
+        {
+          "question": "¿Cuáles son los precios de seguridad para eventos en Santiago Centro?",
+          "answer": "El costo varía según la cantidad de guardias requeridos, la duración del evento, el horario y los servicios adicionales como monitoreo o coordinación con emergencias. Te invitamos a cotizar directamente con nuestro equipo para recibir una propuesta personalizada sin compromiso."
+        },
+        {
+          "question": "¿Qué incluye la certificación OS-10 de los guardias?",
+          "answer": "La certificación OS-10 es otorgada por la Prefectura de Seguridad Privada de Carabineros de Chile y acredita que el guardia ha completado la formación obligatoria según la Ley 21.659. Incluye técnicas de vigilancia, manejo de conflictos, primeros auxilios y marco legal de la seguridad privada. Todos nuestros guardias cuentan con credencial vigente."
+        },
+        {
+          "question": "¿Con cuánta anticipación debo contratar seguridad para mi evento en Santiago Centro?",
+          "answer": "Lo recomendable es contactarnos con al menos 7 a 15 días de anticipación para eventos corporativos y sociales. Para eventos masivos o de alta complejidad, lo ideal es contar con 30 días para diseñar un plan de seguridad detallado, coordinar con las autoridades competentes y asignar al equipo adecuado."
+        },
+        {
+          "question": "¿GuardMan Chile puede coordinar con Carabineros para mi evento?",
+          "answer": "Sí. Nuestro equipo se coordina de manera directa con Carabineros de Chile y otros organismos de emergencia cuando el evento lo requiere. Esta coordinación es parte de los protocolos de seguridad que diseñamos para cada servicio, asegurando que las respuestas ante cualquier incidente sean ágiles y efectivas."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Santiago Centro",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Santiago Centro",
-      "button_link": "/cotizacion?service=seguridad-eventos&location=santiago-centro"
+      "heading": "Protege Tu Evento en Santiago Centro con la Experiencia de GuardMan Chile",
+      "subheading": "Contáctanos hoy y recibe una cotización personalizada. Disponibilidad 24/7, guardias OS-10 certificados y cobertura en Santiago Centro y toda la Región Metropolitana.",
+      "button": "Cotizar Seguridad para Mi Evento",
+      "image": "/images/seguridad-eventos-santiago-centro-cta.webp"
+    },
+    "meta": {
+      "title": "Seguridad para Eventos en Santiago Centro | GuardMan Chile",
+      "description": "Contrata guardias OS-10 certificados para eventos en Santiago Centro. Planificación de seguridad, control de accesos y monitoreo 24/7. Cotiza hoy."
     }
   }
 }

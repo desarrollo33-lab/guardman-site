@@ -1,96 +1,83 @@
 {
   "sections": {
     "hero": {
-      "heading": "Escoltas Privados en Las Condes",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente de Santiago.",
-      "cta_text": "Cotizar en Las Condes",
-      "cta_link": "/cotizacion?service=escoltas-privados&location=las-condes",
-      "image": "/images/service-escoltas-privados.webp"
+      "heading": "Escoltas Privados en Las Condes: Protección Personal Profesional con GuardMan",
+      "subheading": "Protección personalizada las 24 horas para executives, empresarios y familias en Las Condes. Escoltas certificados OS-10 con años de experiencia en seguridad de alto nivel.",
+      "image": "escoltas-privados-las-condes-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Escoltas Privados",
-        "url": "/servicios/escoltas-privados"
-      },
-      {
-        "label": "Las Condes",
-        "url": "/servicios/escoltas-privados/las-condes"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Escoltas Privados en Las Condes?",
-      "content": "En GuardMan Chile somos especialistas en escoltas privados en Las Condes. Nuestra experiencia en el sector oriente de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Las Condes y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Escoltas certificados OS-10 con experiencia militar o policial",
-        "Evaluación de riesgos previa al servicio",
-        "Protección ejecutiva y familiar",
-        "Transporte seguro y ruta de evasión",
-        "Coordinación con autoridades de seguridad",
-        "Confidentialidad y discreción total"
+      "heading": "Servicio de Escoltas Privados en Las Condes: Seguridad que se Adapta a Tu Estilo de Vida",
+      "paragraphs": [
+        "En GuardMan Chile entendemos que la seguridad personal en Las Condes requiere soluciones flexibles y profesionales. Nuestro servicio de escoltas privados en Las Condes combina presencia física disuasoria con protocolos de protección avanzados, adaptados a las necesidades específicas de cada cliente, ya sea para ejecutivos, empresarios, inversionistas o familias que valoran su tranquilidad.",
+        "Nuestros escoltas privados en Las Condes operan bajo estrictos estándares de certificación OS-10, respaldados por años de experiencia en protección de personas y gestión de riesgos. Cada plan de seguridad se diseña tras una evaluación gratuita de vulnerabilidad, asegurando cobertura efectiva las 24 horas durante los 365 días del año en esta comuna de alto valor inmobiliario.",
+        "A diferencia de servicios genéricos de seguridad, GuardMan entrega escoltas privados en Las Condes con formación táctica, primeros auxilios y manejo de crisis. La presencia visible de nuestros profesionales certified es un factor disuasorio clave que reduce significativamente los riesgos antes de que ocurran."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Las Condes",
-      "content": "",
-      "points": [
-        "residencias de lujo, embajadas, oficinas corporativas y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de accesos VIP, escoltas personales, monitoreo perimetral y CCTV de alta definición es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Las Condes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características del Servicio de Escoltas Privados en Las Condes",
+      "items": [
+        "Escoltas privados certificados OS-10 por Carabineros de Chile con curso vigente y acreditación oficial",
+        "Cobertura 24/7 los 365 días del año con disponibilidad inmediata para eventos o emergencias",
+        "Evaluación de riesgo personalizada gratuita antes de iniciar cualquier servicio de protección",
+        "Escoltas con formación en defensa personal, primeros auxilios y manejo de situaciones de crisis",
+        "Protección para executive, empresarios, inversionistas, figuras públicas y familias en Las Condes",
+        "Rutas de desplazamiento seguras y análisis previo de lugares de reunión, trabajo y eventos",
+        "Escoltas conductuales disponibles con licencia profesional para traslados en vehículo blindado",
+        "Coordinación con Carabineros y servicios de emergencia ante incidentes de alta gravedad",
+        "Reportes periódicos de actividad y estado de seguridad del protegido"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Las Condes",
+      "heading": "Situaciones que Previene un Escolta Privado en Las Condes",
       "items": [
-        "residencias de lujo, embajadas, oficinas corporativas y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de accesos VIP, escoltas personales, monitoreo perimetral y CCTV de alta definición es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Las Condes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos con intimidación o violencia en vía pública, estacionamientos y entornos residenciales de alto patrimonio",
+        "Seguimientos indeseados y acecho por parte de terceros con intenciones perjudiciales",
+        "Situaciones de secuestro express o retención vehicular en sectores de alto tránsito",
+        "Episodios de violencia intrafamiliar donde se requiere protección adicional para los afectados",
+        "Amenazas, hostigamientos o situaciones de riesgo para ejecutivos y personalidades con exposición pública",
+        "Robos en domicilio cuando hay indicios de vulnerabilidad en el hogar o propiedades de temporada",
+        "Asaltos durante traslados de valores, especies o documentación sensible para empresas",
+        "Conflictos en eventos corporativos o sociales donde se requiere control de acceso y protección perimetral"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cómo contratan el servicio de escoltas?",
-        "answer": "Primero evaluamos tus necesidades específicas de seguridad. Luego seleccionamos el escolta adecuado según perfil, experiencia y requisitos particulares."
-      },
-      {
-        "question": "¿Los escoltas tienen formación legal?",
-        "answer": "Sí, todos nuestros escoltas tienen certificación OS-10 y formación en defensa personal, primeros auxilios y manejo de situaciones de crisis."
-      },
-      {
-        "question": "¿El servicio es confidencial?",
-        "answer": "Absolutamente. La confidencialidad es parte fundamental de nuestro servicio. No revelamos información de nuestros clientes ni de sus rutinas."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Escoltas Privados en Las Condes",
+      "items": [
+        {
+          "question": "¿Cómo contrato un escolta privado en Las Condes?",
+          "answer": "Para contratar un escolta privado en Las Condes con GuardMan, contáctenos por teléfono o a través de nuestro formulario web. Realizamos una evaluación de riesgo gratuita para identificar sus necesidades específicas y le asignamos un escolta certificado OS-10 que se ajusta a su perfil de protección. El proceso de activación puede ser inmediato ante situaciones de urgencia."
+        },
+        {
+          "question": "¿Cuál es el precio de un escolta privado en Las Condes?",
+          "answer": "El costo del servicio de escoltas privados en Las Condes varía según el nivel de riesgo evaluado, la cantidad de escoltas necesarios, las horas de cobertura requeridas y si se incluyen servicios adicionales como conducción de vehículo o coordinación con otras empresas de seguridad. Para conocer una cotización precisa, Solicite su evaluación gratuita y le entregamos un presupuesto personalizado sin compromiso."
+        },
+        {
+          "question": "¿Qué diferencia hay entre un escolta y un guardaespaldas?",
+          "answer": "En Chile, un escolta privado es un guardia de seguridad certificado con formación específica en protección de personas, acreditado por OS-10 de Carabineros. Un guardaespaldas puede referirse coloquialmente a este mismo rol, pero en el ámbito legal chileno, nuestros escoltas privados cumplen con la normativa vigente y tienen autorización formal para prestar servicios de protección personal."
+        },
+        {
+          "question": "¿Los escoltas de GuardMan pueden portar armas?",
+          "answer": "Nuestros escoltas privados cumplen estrictamente con la normativa de Carabineros de Chile y la Prefectura de Seguridad Privada (OS-10). El porte de armas es regulado por la legislación chilena y depende de autorizaciones personales del guardia. Lo fundamental es que todos nuestros escoltas tienen formación táctica, capacidad de respuesta ante emergencias y coordinación inmediata con fuerzas de orden."
+        },
+        {
+          "question": "¿Puedo contratar escoltas solo para eventos puntuales en Las Condes?",
+          "answer": "Sí, GuardMan ofrece servicios de escoltas privados tanto permanentes como eventuales. Si necesita protección para un evento corporativo, lanzamiento, reunión de directorio o celebración familiar en Las Condes, gestionamos la cobertura con escoltas certificados según la cantidad de invitados, el nivel de riesgo identificado y las características del lugar."
+        },
+        {
+          "question": "¿Cómo funciona la coordinación entre escoltas y Carabineros?",
+          "answer": "Nuestros protocolos incluyen comunicación directa con Carabineros de Chile y la Central de Seguridad Municipal de Las Condes. Ante cualquier incidente, el escolta activa los canales de emergencia mientras mantiene la protección del cliente. Esta coordinación es parte de nuestros estándares operativos y garantiza una respuesta integral ante situaciones de alto riesgo."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Las Condes",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Las Condes",
-      "button_link": "/cotizacion?service=escoltas-privados&location=las-condes"
+      "heading": "Protege lo que más importa con Escoltas Privados Profesionales en Las Condes",
+      "subheading": "No dejes la seguridad de tu familia o empresa al azar. Solicita una evaluación gratuita y descubre cómo GuardMan puede brindarte tranquilidad las 24 horas con escoltas certificados OS-10.",
+      "button": "Cotizar Escoltas en Las Condes",
+      "image": "escoltas-privados-las-condes-cta.jpg"
+    },
+    "meta": {
+      "title": "Escoltas Privados Las Condes | Servicio Profesional OS-10 | GuardMan",
+      "description": "Contrata escoltas privados certificados OS-10 en Las Condes. Protección 24/7 para executives, empresarios y familias. Evaluación de riesgo gratuita. GuardMan Chile."
     }
   }
 }

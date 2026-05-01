@@ -1,144 +1,91 @@
 {
   "slug": "seguridad-eventos/los-andes",
   "type": "combo",
-  "service": "seguridad-eventos",
-  "location": "los-andes",
   "version": 1,
-  "last_modified": "2026-04-22T14:13:24.903Z",
+  "last_modified": "2026-05-01T12:49:33.751Z",
   "seo": {
-    "title": "Seguridad Eventos en Los Andes",
-    "description": "Servicio de seguridad eventos profesional en Los Andes. Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en Los Andes y la zona de Valparaíso.",
-    "keywords": [],
-    "canonical": "https://guardman.cl/servicios/seguridad-eventos/los-andes"
+    "title": "Seguridad para Eventos en Los Andes | GuardMan Chile OS-10",
+    "description": "Contrata guardias certificados OS-10 para tu evento en Los Andes. Empresa de seguridad privada con 8+ años de experiencia, cobertura en toda la provincia y monitoreo 24/7.",
+    "canonical": ""
   },
   "content": {
     "hero": {
-      "heading": "Seguridad para Eventos en Los Andes",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en Los Andes y la zona de Valparaíso.",
-      "cta_text": "Cotizar en Los Andes",
-      "cta_link": "/cotizacion?service=seguridad-eventos&location=los-andes",
-      "image": "/images/service-seguridad-eventos.webp"
+      "heading": "Seguridad para Eventos en Los Andes | Guardias Profesionales OS-10",
+      "subheading": "Protección integral para tu evento en Los Andes y provincia. Guardias certificados, planificación de seguridad y cobertura las 24 horas con la empresa líder en Chile.",
+      "image": "guardman-eventos-los-andes-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Seguridad Eventos",
-        "url": "/servicios/seguridad-eventos"
-      },
-      {
-        "label": "Los Andes",
-        "url": "/servicios/seguridad-eventos/los-andes"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Seguridad para Eventos en Los Andes?",
-      "content": "En GuardMan Chile somos especialistas en seguridad para eventos en Los Andes. Nuestra experiencia en Los Andes y la zona de Valparaíso nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Los Andes y toda la zona Valparaíso.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Planificación de seguridad según tipo de evento",
-        "Control de acceso y registro de asistentes",
-        "Vigilancia perimetral y detección de amenazas",
-        "Coordinación con producción y Carabineros",
-        "Equipo de reacción rápida ante incidentes",
-        "Informe post-evento con análisis de seguridad"
+      "heading": "Seguridad Confiable para Eventos en Los Andes y Provincia",
+      "paragraphs": [
+        "Organizar un evento en Los Andes o sus comunas aledañas requiere más que una buena planificación: necesita protección profesional que garantice la tranquilidad de anfitriones e invitados. En GuardMan Chile ofrecemos servicios de seguridad privada especializados para todo tipo de celebraciones, desde matrimonios y cumpleaños hasta eventos corporativos y actividades masivas en la provincia.",
+        "Nuestro equipo de guardias certificados OS-10 cuenta con años de experiencia en el control de accesos, gestión de multitudes y respuesta ante emergencias. Operamos en Los Andes, San Felipe, Calle Larga, Rinconada y toda la Provincia de Los Andes, delivering soluciones adaptadas a cada contexto geográfico y social de la zona.",
+        "Como empresa de seguridad con cobertura nacional y presencia en 14 comunas del país, sabemos que cada evento tiene características únicas. Por eso desarrollamos planes de seguridad personalizados que consideran el tipo de actividad, número de asistentes esperado, ubicación del recinto y nivel de riesgo asociado."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Los Andes",
-      "content": "",
-      "points": [
-        "centros urbanos y zonas turísticas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia turística, seguridad comercial y control de eventos es cada vez más urgente en Los Andes y la zona de Valparaíso.",
-        " muchas empresas y residencias en Los Andes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de Nuestro Servicio de Seguridad para Eventos en Los Andes",
+      "items": [
+        "Guardias de seguridad certificados con curso OS-10 vigente y capacitación continua en protocolos de emergencia",
+        "Planificación integral de seguridad con evaluación de riesgos previa al evento y coordinación con autoridades",
+        "Control de accesos mediante sistemas de registro que permiten gestionar invitaciones y acreditaciones",
+        "Cobertura las 24 horas, los 7 días de la semana, incluyendo feriados y temporada alta de eventos",
+        "Monitoreo en tiempo real desde nuestro centro de operaciones con comunicación directa con Carabineros",
+        "Rondas preventivas y vigilancia perimetral para detectar situaciones sospechosas antes de que escalen",
+        "Atención personalizada con supervisor de seguridad asignado para eventos de alta convocatoria",
+        "Coordinación logística con servicios de emergencias, Carabineros y servicios médicos del sector"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Los Andes",
+      "heading": "Problemas que Prevenimos en Eventos de Los Andes y Provincia",
       "items": [
-        "centros urbanos y zonas turísticas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia turística, seguridad comercial y control de eventos es cada vez más urgente en Los Andes y la zona de Valparaíso.",
-        " muchas empresas y residencias en Los Andes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Accesos descontrolados y situaciones de sobrecupo que comprometen la seguridad de los asistentes",
+        "Consumo de alcohol en menores de edad y conductas disorderadas entre invitados",
+        "Robos y hurtos de pertenencias, equipos electrónicos y objetos de valor durante el evento",
+        "Conflictos interpersonales que pueden escalar y afectar el desarrollo tranquilo de la celebración",
+        "Emergencias médicas sin respuesta inmediata por falta de personal capacitado en primeros auxilios",
+        "Daños a instalaciones, equipamiento de audio o decoración por fallas en el control de acceso"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Valparaíso"
-      },
-      {
-        "value": "Valparaíso",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto personal se necesita para mi evento?",
-        "answer": "La cantidad depende del tipo de evento, número de asistentes y nivel de riesgo. Evaluamos cada caso para garantizar la seguridad óptima."
-      },
-      {
-        "question": "¿Trabajan con Carabineros?",
-        "answer": "Sí, coordinamos con Carabineros según los permisos requeridos para eventos masivos. Tenemos experiencia en la obtención de permisos y protocolos."
-      },
-      {
-        "question": "¿Qué pasa si hay una emergencia durante el evento?",
-        "answer": "Contamos con un protocolo de emergencias que incluye evacuación, primeros auxilios y coordinación con servicios de emergencia. Nuestro equipo está entrenado para actuar bajo presión."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Seguridad para Eventos en Los Andes",
+      "items": [
+        {
+          "question": "¿Cuántos guardias necesito para mi evento en Los Andes?",
+          "answer": "La cantidad de guardias depende de factores como el tipo de evento, número de asistentes esperados, características del recinto y nivel de riesgo. Como referencia general, se recomienda 1 guardia por cada 50-100 personas para eventos sociales y 1 por cada 30-50 para eventos corporativos o masivos. En GuardMan evaluamos cada caso de forma personalizada para garantizar una cobertura óptima sin costos innecesarios."
+        },
+        {
+          "question": "¿Qué documentos deben tener los guardias de seguridad para eventos?",
+          "answer": "Todo guardia de seguridad privada debe contar con su certificado OS-10 vigente emitido por la Prefectura de Seguridad Privada de Carabineros de Chile, junto con su credencial de identidad. En GuardMan verificamos continuamente la vigencia de las certificaciones de todo nuestro personal y mantenemos los registros actualizados para cumplir con la normativa vigente."
+        },
+        {
+          "question": "¿Pueden coordinar la seguridad de mi evento con Carabineros de Los Andes?",
+          "answer": "Sí, dentro de nuestro servicio de planificación de seguridad incluimos la coordinación con Carabineros de Chile, especialmente para eventos de alta convocatoria o que requieran permisos municipales. Esta coordinación permite una respuesta más efectiva ante emergencias y asegura el cumplimiento de las normativas municipales de la Provincia de Los Andes."
+        },
+        {
+          "question": "¿Cuánto cuesta contratar seguridad para un evento en Los Andes?",
+          "answer": "Los precios varían según la cantidad de guardias requeridos, duración del evento, complejidad de la logística y servicios adicionales como monitoreo o control de accesos automatizado. En GuardMan entregamos cotizaciones personalizadas sin compromiso, considerando las necesidades específicas de cada evento y el presupuesto disponible."
+        },
+        {
+          "question": "¿Qué pasa si necesito reforzar la seguridad durante el evento?",
+          "answer": "Nuestro centro de monitoreo opera las 24 horas y puede dispatchar refuerzos en很短 tiempo si la situación lo requiere. Contamos con guardias disponibles para cubrir emergencias o incrementos inesperados en la asistencia. La comunicación constante entre nuestro supervisor en terreno y el centro de operaciones nos permite reaccionar ágilmente ante cualquier eventualidad."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Los Andes",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Los Andes",
-      "button_link": "/cotizacion?service=seguridad-eventos&location=los-andes"
+      "heading": "Protege tu Próximo Evento en Los Andes con GuardMan Chile",
+      "subheading": "Cotiza hoy tu servicio de seguridad y garantiza una celebración segura para todos los invitados. Personal certificado, experiencia comprobada y cobertura en toda la Provincia de Los Andes.",
+      "button": "Cotizar Seguridad para Evento",
+      "image": "guardman-eventos-los-andes-cta.jpg"
+    },
+    "meta": {
+      "title": "Seguridad para Eventos en Los Andes | GuardMan Chile OS-10",
+      "description": "Contrata guardias certificados OS-10 para tu evento en Los Andes. Empresa de seguridad privada con 8+ años de experiencia, cobertura en toda la provincia y monitoreo 24/7."
     }
   },
-  "related_content": {
-    "related_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/guardias-de-seguridad.jpg"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "Cctv Videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "Control De Accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      }
-    ],
-    "nearby_locations": [],
-    "upsell_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
-    "quality_score": 80,
-    "published": false
+    "quality_score": 0,
+    "published": true
   }
 }

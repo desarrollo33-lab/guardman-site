@@ -1,96 +1,72 @@
 {
   "sections": {
     "hero": {
-      "heading": "Guardias de Seguridad en La Reina",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente de Santiago.",
-      "cta_text": "Cotizar en La Reina",
-      "cta_link": "/cotizacion?service=guardias-de-seguridad&location=la-reina",
-      "image": "/images/service-guardias-de-seguridad.webp"
+      "heading": "Guardias de Seguridad en La Reina | Empresa Profesional con Guardias OS-10",
+      "subheading": "Protege tu hogar, empresa o condominio con guardias certificados y experiencia comprobada. Cobertura 24/7 en toda la comuna de La Reina.",
+      "image": "/images/guardias-seguridad-la-reina-hero.webp"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Guardias De Seguridad",
-        "url": "/servicios/guardias-de-seguridad"
-      },
-      {
-        "label": "La Reina",
-        "url": "/servicios/guardias-de-seguridad/la-reina"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Guardias de Seguridad en La Reina?",
-      "content": "En GuardMan Chile somos especialistas en guardias de seguridad en La Reina. Nuestra experiencia en el sector oriente de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en La Reina y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Guardias certificados OS-10 con capacitación continua",
-        "Monitoreo 24/7 desde nuestro centro de control propio",
-        "Respuesta inmediata ante emergencias con coordinación a Carabineros",
-        "Cobertura integral en toda la comuna",
-        "Informes de actividad diaria y reportes semanales",
-        "Esquemas de turnos adaptables: diurno, nocturno, 4x4, 6x1"
+      "heading": "Servicios de Guardias de Seguridad Profesionales en La Reina",
+      "paragraphs": [
+        "En GuardMan Chile comprendemos que la seguridad es una necesidad fundamental para residentes y empresas en La Reina. Nuestra empresa de seguridad privada lleva más de 8 años protegiendo hogares, condominios y comercios en esta comuna del sector nororiente de Santiago, entregando tranquilidad a cientos de familias y empresarios de la zona.",
+        "Contamos con un equipo de guardias de seguridad certificados con curso OS-10 vigente, quienes reciben capacitación continua para enfrentar cualquier situación de riesgo. Nuestros profesionales están desplegados estratégicamente en La Reina,覆盖 toda el área desde Avenida Príncipe de Gales hasta Los Dominicos, incluyendo sectores residenciales como La Reina Alta, Villa San Enrique y áreas comerciales.",
+        "Cada servicio de guardias que ofrecemos se adapta a las necesidades específicas del cliente. Ya sea que necesites vigilancia para un edificio corporativo en Tobalaba, seguridad para un colegio en Vicuña Mackenna o protección perimetral en un condominio del sector de Los Trapenses, tenemos la solución perfecta."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué La Reina",
-      "content": "",
-      "points": [
-        "viviendas residenciales, schools and oficinas pequeñas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de rondas preventivas, control de acceso residencial y monitoreo perimetral es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en La Reina enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de Nuestros Guardias de Seguridad en La Reina",
+      "items": [
+        "Guardias certificados con curso OS-10 vigente y autorización oficial de la Prefectura de Seguridad Privada",
+        "Cobertura 24 horas, los 7 días de la semana, incluyendo festivos y holidays",
+        "Supervisión permanente desde nuestro centro de monitoreo con comunicación directa",
+        "Rondas preventivas programables según las características de cada instalación",
+        "Control de accesos con registro digital de visitas, vehículos y proveedores",
+        "Respuesta inmediata ante emergencias con protocolos coordinados con Carabineros",
+        "Uniforme institucional completo e identificación visible para máxima disuasión",
+        "Reportes diarios de novedades y estadísticas de seguridad para la administración"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en La Reina",
+      "heading": "Problemas que Resolvemos con Nuestros Servicios en La Reina",
       "items": [
-        "viviendas residenciales, schools and oficinas pequeñas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de rondas preventivas, control de acceso residencial y monitoreo perimetral es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en La Reina enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos y saqueos en viviendas y edificios que carecen de vigilancia profesional permanente",
+        "Ingresos no autorizados de personas desconocidas al condominio o instalación",
+        "Falta de control en estacionamientos y áreas comunes，导致安全隐患",
+        "Ausencia de personal capacitado para reaccionar ante situaciones de emergencia",
+        "Vandalismo y daños a la propiedad en sectores residenciales y comerciales",
+        "Pérdida de tranquilidad familiar por preocupación ante la seguridad del hogar"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto cuesta un guardia de seguridad en La Reina?",
-        "answer": "El precio depende de la cantidad de guardias, turnos y servicios adicionales. Ofrecemos cotizaciones personalizadas sin compromiso. Contáctanos para una evaluación gratuita."
-      },
-      {
-        "question": "¿Los guardias tienen certificación OS-10 vigente?",
-        "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 obligatoria y al día. Es un requisito legal que cumplimos estrictamente para su protección y la nuestra."
-      },
-      {
-        "question": "¿Tienen cobertura 24 horas?",
-        "answer": "Sí, ofrecemos servicio 24/7 los 365 días del año. Nuestro centro de monitoreo propio opera sin interrupciones y tenemos guardias de reemplazo disponibles."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Guardias de Seguridad en La Reina",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta un guardia de seguridad en La Reina?",
+          "answer": "El valor del servicio de guardias de seguridad varía según el tipo de instalación, jornada laboral y funciones requeridas. En GuardMan Chile realizamos una evaluación gratuita de sus necesidades para entregar una cotización personalizada y transparente. Nuestros precios consideran guardias con curso OS-10 certificado, supervisión permanente y todos los implementos necesarios para un servicio de calidad."
+        },
+        {
+          "question": "¿Cómo contratar guardias de seguridad en La Reina?",
+          "answer": "El proceso es很简单: contacta con nuestro equipo comercial, nos indicas tus necesidades de seguridad,visitamos la instalación para evaluar riesgos y características, y te presentamos una propuesta personalizada. Trabajamos con contratos flexibles que se ajustan a presupuestos residenciales y empresariales por igual."
+        },
+        {
+          "question": "¿Los guardias tienen curso OS-10 vigente?",
+          "answer": "Sí, absolutamente. Todos nuestros guardias de seguridad cuentan con el certificado OS-10 vigente, que es el requisito legal obligatorio para ejercer como vigilante de seguridad privada en Chile. Esta certificación es emitida por la Prefectura de Seguridad Privada de Carabineros y garantiza la formación técnica del personal en materias de prevención, control y reacción."
+        },
+        {
+          "question": "¿Qué tipos de instalaciones protegen en La Reina?",
+          "answer": "Tenemos experiencia en múltiples tipos de instalaciones: condominios residenciales, edificios corporativos, colegios y colegios particular, locales comerciales, centros médicos, bodegas, fábricas y empresas de diversos rubros. Cada servicio se personaliza según las necesidades específicas del cliente y las características del lugar a proteger."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en La Reina",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en La Reina",
-      "button_link": "/cotizacion?service=guardias-de-seguridad&location=la-reina"
+      "heading": "Protege tu Propiedad con los Mejores Guardias de Seguridad en La Reina",
+      "subheading": "Cotiza hoy mismo nuestro servicio de guardias certificados OS-10. Atención personalizada, precios competitivos y la tranquilidad que tu familia o negocio merece.",
+      "button": "Cotizar Servicio de Guardias en La Reina",
+      "image": "/images/guardias-seguridad-cta-la-reina.webp"
+    },
+    "meta": {
+      "title": "Guardias de Seguridad La Reina | Empresa Autorizada OS-10 | GuardMan Chile",
+      "description": "Empresa de guardias de seguridad profesional en La Reina con guardias certificados OS-10. Cotiza ahora servicios 24/7 para tu hogar, condominio o empresa."
     }
   }
 }

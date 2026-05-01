@@ -1,144 +1,95 @@
 {
   "slug": "monitoreo-24-7/los-andes",
   "type": "combo",
-  "service": "monitoreo-24-7",
-  "location": "los-andes",
   "version": 1,
-  "last_modified": "2026-04-22T14:13:24.860Z",
+  "last_modified": "2026-05-01T12:49:28.228Z",
   "seo": {
-    "title": "Monitoreo 24 7 en Los Andes",
-    "description": "Servicio de monitoreo 24 7 profesional en Los Andes. Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en Los Andes y la zona de Valparaíso.",
-    "keywords": [],
-    "canonical": "https://guardman.cl/servicios/monitoreo-24-7/los-andes"
+    "title": "Monitoreo 24/7 Los Andes | GuardMan - Seguridad Profesional",
+    "description": "Servicio de monitoreo 24/7 en Los Andes con guardias OS-10 certificados. Protección integral para hogares y empresas. Cotiza sin costo.",
+    "canonical": ""
   },
   "content": {
     "hero": {
-      "heading": "Monitoreo 24/7 en Los Andes",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en Los Andes y la zona de Valparaíso.",
-      "cta_text": "Cotizar en Los Andes",
-      "cta_link": "/cotizacion?service=monitoreo-24-7&location=los-andes",
-      "image": "/images/service-monitoreo-24-7.webp"
+      "heading": "Monitoreo 24/7 en Los Andes | Protección Integral con GuardMan Chile",
+      "subheading": "Vigilancia profesional las 24 horas con guardias certificados OS-10 y central de monitoreo en tiempo real. Protege tu hogar, empresa o negocio en Los Andes con la experiencia de GuardMan.",
+      "image": "/images/servicios/monitoreo-24-7-los-andes-hero.webp"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Monitoreo 24 7",
-        "url": "/servicios/monitoreo-24-7"
-      },
-      {
-        "label": "Los Andes",
-        "url": "/servicios/monitoreo-24-7/los-andes"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Monitoreo 24/7 en Los Andes?",
-      "content": "En GuardMan Chile somos especialistas en monitoreo 24/7 en Los Andes. Nuestra experiencia en Los Andes y la zona de Valparaíso nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Los Andes y toda la zona Valparaíso.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Central de monitoreo propia operativa 24/7",
-        "Respuesta ante alarmas en menos de 30 segundos",
-        "Verificación visual con cámaras integradas",
-        "Coordinación con Carabineros y servicios de emergencia",
-        "Informes mensuales de actividad y incidentes",
-        "App móvil para control remoto"
+      "heading": "Servicio de Monitoreo 24/7 Profesional en Los Andes",
+      "paragraphs": [
+        "En GuardMan Chile entendemos que la seguridad no puede esperar. Por eso ofrecemos un servicio de monitoreo 24/7 en Los Andes, diseñado para proteger tu patrimonio y familia las 24 horas del día, los 365 días del año. Nuestro centro de operaciones trabaja de manera coordinada con guardias certificados OS-10, asegurando una respuesta inmediata ante cualquier situación de riesgo.",
+        "Contamos con años de experiencia en el Valle de Aconcagua, lo que nos permite ofrecer soluciones de monitoreo adaptadas a las necesidades específicas de cada cliente. Ya sea para hogares, empresas, locales comerciales o instituciones, nuestro equipo está preparado para brindar protección integral con estándares profesionales.",
+        "La combinación de tecnología avanzada y personal humano capacitado nos diferencia en el mercado. No solo monitoreamos cámaras y alarmas; entregamos tranquilidad real a través de una supervisión constante y protocolos de respuesta establecidos."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Los Andes",
-      "content": "",
-      "points": [
-        "centros urbanos y zonas turísticas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia turística, seguridad comercial y control de eventos es cada vez más urgente en Los Andes y la zona de Valparaíso.",
-        " muchas empresas y residencias en Los Andes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de Nuestro Monitoreo 24/7 en Los Andes",
+      "items": [
+        "Central de monitoreo operativo las 24 horas con operadores capacitados en procedimientos de emergencia",
+        "Guardias de seguridad certificados OS-10 con formación continua en prevención y respuesta",
+        "Integración con sistemas de alarmas, cámaras CCTV y sensores perimetrales",
+        "Respuesta inmediata ante activaciones con coordinación a Carabineros y servicios de emergencia",
+        "Supervisión remota desde tu celular con notificaciones en tiempo real",
+        "Rondas preventivas y presencia disuasoria en instalaciones",
+        "Cobertura los 365 días del año sin interrupciones",
+        "Reportes periódicos de actividad y novedades del sistema de seguridad"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Los Andes",
+      "heading": "Situaciones que Prevenimos con Monitoreo 24/7",
       "items": [
-        "centros urbanos y zonas turísticas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia turística, seguridad comercial y control de eventos es cada vez más urgente en Los Andes y la zona de Valparaíso.",
-        " muchas empresas y residencias en Los Andes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos con fuerza e intimidación en viviendas y locales comerciales",
+        "Ingresos no autorizados fuera del horario laboral o en zonas vulnerabilidade",
+        "Incendios y emergencias técnicas detectadas tempranamente",
+        "Vandalismo y daños a la propiedad durante la noche o fines de semana",
+        "Asaltos a trabajadores que manipulan valores o caja chica",
+        "Inquietudes de vecinos por ruidos molestos o conductas sospechosas"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Valparaíso"
-      },
-      {
-        "value": "Valparaíso",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué pasa si salta una alarma a las 3am?",
-        "answer": "Nuestro equipo de monitoreo verifica la alarma inmediatamente. Si es una emergencia real, contactamos a Carabineros y a tus contactos de emergencia simultáneamente."
-      },
-      {
-        "question": "¿Monitorean solo cuando hay alarma?",
-        "answer": "No, el monitoreo es constante y activo. Nuestros operadores vigilan las 24 horas y pueden hacer rondas visuales remotas cuando detectan algo sospechoso."
-      },
-      {
-        "question": "¿Puedo ver lo que sucede en mi propiedad?",
-        "answer": "Sí, tienes acceso 24/7 a todas las cámaras en vivo desde tu celular o computadora. Además, recibes alertas instantáneas ante eventos."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Monitoreo 24/7 en Los Andes",
+      "items": [
+        {
+          "question": "¿Cómo funciona el servicio de monitoreo 24/7 en Los Andes?",
+          "answer": "Nuestro servicio opera desde una central de monitoreo con personal capacitado las 24 horas. Recibimos señales de tus alarmas, cámaras y sensores en tiempo real. Ante cualquier evento sospechoso, nuestros operadores verifican la situación y activan el protocolo de respuesta correspondiente, incluyendo coordinación con Carabineros si es necesario.同时, puedes supervisar tu sistema desde tu celular a través de nuestra app."
+        },
+        {
+          "question": "¿Qué incluye el servicio de monitoreo para empresas en Los Andes?",
+          "answer": "Ofrecemos una solución integral que contempla vigilancia física con guardias OS-10, monitoreo remoto de cámaras y alarmas, control de accesos, rondas preventivas y reporte de novedades. Personalizamos el servicio según las características de tu empresa, sea un retail, oficina, bodega o industria. El precio varía según la extensión del perímetro y cantidad de puntos de control."
+        },
+        {
+          "question": "¿Los guardias están certificados y son de confianza?",
+          "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 de Carabineros de Chile, que es el requisito legal para trabajar en seguridad privada. Además, pasan por procesos de selección rigurosos, exámenes de antecedentes y trainings periódicos. En GuardMan verificamos antecedentes todos los años para garantizar la confiabilidad de nuestro personal."
+        },
+        {
+          "question": "¿Puedo monitorear mi sistema desde el celular?",
+          "answer": "Sí, integramos tecnología que permite supervisar cámaras, recibir alertas de alarma y controlar el sistema desde tu smartphone. Recibirás notificaciones instantáneas ante cualquier evento, con imágenes o videos según la configuración. Esto te da control y visibilidad aunque estés fuera de la propiedad."
+        },
+        {
+          "question": "¿Cuál es el tiempo de respuesta ante una emergencia?",
+          "answer": "Nuestro protocolo establece tiempos de respuesta garantizados. Al recibir una alerta, nuestros operadores verifican el evento en menos de 2 minutos y activan la respuesta correspondiente.同时, mantenemos coordinación directa con Carabineros para casos de seguridad que requieran intervención inmediata."
+        },
+        {
+          "question": "¿Cómo cotizo el servicio de monitoreo 24/7 en Los Andes?",
+          "answer": "Puedes solicitar una cotización sin costo contacting our team. Realizamos una visita técnica para evaluar tus necesidades de seguridad, dimensionar el sistema y proponer la solución más adecuada. Ofrecemos planes flexibles para hogares, empresas y negocios con diferentes presupuestos."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Los Andes",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Los Andes",
-      "button_link": "/cotizacion?service=monitoreo-24-7&location=los-andes"
+      "heading": "Protege lo que más importa con GuardMan Chile",
+      "subheading": "Solicita una asesoría personalizada y descubre cómo nuestro monitoreo 24/7 en Los Andes puede salvaguardar tu hogar o empresa. Sin costo, sin compromiso.",
+      "button": "Cotizar Monitoreo 24/7",
+      "image": "/images/servicios/monitoreo-24-7-los-andes-cta.webp"
+    },
+    "meta": {
+      "title": "Monitoreo 24/7 Los Andes | GuardMan - Seguridad Profesional",
+      "description": "Servicio de monitoreo 24/7 en Los Andes con guardias OS-10 certificados. Protección integral para hogares y empresas. Cotiza sin costo."
     }
   },
-  "related_content": {
-    "related_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/guardias-de-seguridad.jpg"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "Cctv Videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "Control De Accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      }
-    ],
-    "nearby_locations": [],
-    "upsell_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
-    "quality_score": 80,
-    "published": false
+    "quality_score": 0,
+    "published": true
   }
 }

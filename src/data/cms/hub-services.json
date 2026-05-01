@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "heading": "Servicios de Seguridad Privada en Santiago",
+    "subheading": "Soluciones integrales de seguridad con guardias certificados OS-10, tecnología de vanguardia y monitoreo 24/7.",
+    "image": "/images/hero-home.webp"
+  },
+  "stats": [
+    { "value": "9", "label": "Servicios especializados" },
+    { "value": "14", "label": "Comunas con cobertura" },
+    { "value": "500+", "label": "Guardias certificados" },
+    { "value": "8+", "label": "Años de experiencia" }
+  ],
+  "cta": {
+    "text": "¿No encuentras lo que necesitas?",
+    "description": "Contáctanos y diseñamos una solución a medida para tu empresa o residencia.",
+    "button_text": "Solicitar Cotización",
+    "button_link": "/cotizacion"
+  }
+}

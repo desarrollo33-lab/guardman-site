@@ -1,144 +1,88 @@
 {
   "slug": "seguridad-eventos/lampa",
   "type": "combo",
-  "service": "seguridad-eventos",
-  "location": "lampa",
   "version": 1,
-  "last_modified": "2026-04-22T14:13:24.894Z",
+  "last_modified": "2026-05-01T12:49:33.160Z",
   "seo": {
-    "title": "Seguridad Eventos en Lampa",
-    "description": "Servicio de seguridad eventos profesional en Lampa. Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector norte de Santiago.",
-    "keywords": [],
-    "canonical": "https://guardman.cl/servicios/seguridad-eventos/lampa"
+    "title": "Seguridad para Eventos en Lampa | Guardias OS-10 - GuardMan Chile",
+    "description": "Servicio profesional de seguridad para eventos en Lampa. Guardias certificados OS-10, control de accesos y supervisión 24/7. Cotiza hoy tu evento seguro.",
+    "canonical": ""
   },
   "content": {
     "hero": {
       "heading": "Seguridad para Eventos en Lampa",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector norte de Santiago.",
-      "cta_text": "Cotizar en Lampa",
-      "cta_link": "/cotizacion?service=seguridad-eventos&location=lampa",
-      "image": "/images/service-seguridad-eventos.webp"
+      "subheading": "Guardias profesionales certificados OS-10 para bodas, fiestas y eventos corporativos. Protección integral con supervisión 24/7 y cobertura en toda la provincia de Chacabuco.",
+      "image": "/images/seguridad-eventos-lampa-hero.webp"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Seguridad Eventos",
-        "url": "/servicios/seguridad-eventos"
-      },
-      {
-        "label": "Lampa",
-        "url": "/servicios/seguridad-eventos/lampa"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Seguridad para Eventos en Lampa?",
-      "content": "En GuardMan Chile somos especialistas en seguridad para eventos en Lampa. Nuestra experiencia en el sector norte de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Lampa y toda la zona Norte.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Planificación de seguridad según tipo de evento",
-        "Control de acceso y registro de asistentes",
-        "Vigilancia perimetral y detección de amenazas",
-        "Coordinación con producción y Carabineros",
-        "Equipo de reacción rápida ante incidentes",
-        "Informe post-evento con análisis de seguridad"
+      "heading": "Protección Profesional para Eventos en Lampa",
+      "paragraphs": [
+        "Lampa se ha consolidado como uno de los sectores más solicitados para la celebración de matrimonios, cumpleaños y eventos corporativos en la Región Metropolitana. Su tranquilidad, extensiones de terreno y hermosa arquitectura rural atraen cada año a cientos de familias y empresas. Sin embargo, la lejanía respecto a centros urbanos puede generar vulnerabilidades si no se cuenta con un servicio de seguridad para eventos en Lampa profesional y experimentado.",
+        "GuardMan Chile cuenta con más de 8 años de experiencia protegiendo eventos de различни tipos en todo el sector norte de Santiago. Nuestro equipo de guardias certificados OS-10 está preparado para eventos desde 50 hasta más de 2.000 asistentes, adaptando recursos y protocolos según las necesidades específicas de cada celebración. La presencia visible de nuestro personal uniformado funciona como factor disuasorio eficaz, reduciendo significativamente el riesgo de incidentes.",
+        "Entendemos que cada evento es único. Por eso, nuestra seguridad para eventos en Lampa incluye evaluación previa del recinto, planificación de puntos de control de acceso, coordinación con autoridades si corresponde, y supervisión continua durante toda la jornada. Ya sea una intimidad familiar en parcela o un masivo encuentro corporativo, Garantizamos una cobertura que permite a los organizadores y asistentes disfrutar con tranquilidad."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Lampa",
-      "content": "",
-      "points": [
-        "parques industriales y terrenos de expansión requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia perimetral, control de accesos y rondas programadas es cada vez más urgente en el sector norte de Santiago.",
-        " muchas empresas y residencias en Lampa enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Por qué elegir GuardMan para tu evento en Lampa?",
+      "items": [
+        "Guardias certificados OS-10 con formación contínua y experiencia en dinámicas de eventos masivos",
+        "Evaluación previa del recinto y planificación de seguridad personalizada sin costo adicional",
+        "Control de accesos y registro de invitados con protocolos adaptados a cada tipo de evento",
+        "Coordinación permanente con Carabineros y servicios de emergencia de la zona",
+        "Supervisión 24/7 desde nuestro Centro de Monitoreo con comunicación instantánea al evento",
+        "Cobertura de eventos corporativos, sociales, matrimonios, cumpleaños y celebraciones especiales",
+        "Flexibilidad horaria con servicios desde 4 horas hasta jornadas completas",
+        "Respuesta inmediata ante incidentes con protocolos de evacuación y primeros auxilios"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Lampa",
+      "heading": "Riesgos frecuentes en eventos de Lampa sin seguridad profesional",
       "items": [
-        "parques industriales y terrenos de expansión requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia perimetral, control de accesos y rondas programadas es cada vez más urgente en el sector norte de Santiago.",
-        " muchas empresas y residencias en Lampa enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Acceso no autorizado de personas ajenas al evento, especialmente en recintos con múltiples entradas",
+        "Robos o hurtos de vehículos en el estacionamiento y objetos personales al interior del evento",
+        "Consumos excesivos de alcohol sin control, generando situaciones de conflicto entre asistentes",
+        "Pérdida de menores en eventos familiares numerosos, particularmente en áreas verdes extensas",
+        "Alteraciones del orden público por grupos conflictivos que acceden sin invitación",
+        "Daños a la propiedad del recinto por falta de supervisión y control de行為",
+        "Responsabilidad legal del organizador ante incidentes que pudieron ser prevenidos"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Norte"
-      },
-      {
-        "value": "Norte",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto personal se necesita para mi evento?",
-        "answer": "La cantidad depende del tipo de evento, número de asistentes y nivel de riesgo. Evaluamos cada caso para garantizar la seguridad óptima."
-      },
-      {
-        "question": "¿Trabajan con Carabineros?",
-        "answer": "Sí, coordinamos con Carabineros según los permisos requeridos para eventos masivos. Tenemos experiencia en la obtención de permisos y protocolos."
-      },
-      {
-        "question": "¿Qué pasa si hay una emergencia durante el evento?",
-        "answer": "Contamos con un protocolo de emergencias que incluye evacuación, primeros auxilios y coordinación con servicios de emergencia. Nuestro equipo está entrenado para actuar bajo presión."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas frecuentes sobre seguridad para eventos en Lampa",
+      "items": [
+        {
+          "question": "¿Cuántos guardias necesito para mi evento en Lampa?",
+          "answer": "La cantidad depende de la asistencia esperada, tipo de evento y características del recinto. Como referencia general, recomendamos 1 guardia cada 50-100 asistentes para eventos sociales y 1 cada 25-50 para eventos corporativos o de alto riesgo. Nuestro equipo realiza una evaluación gratuita del recinto para determinar la cantidad óptima de personal, evitando costos excesivos pero garantizando una cobertura efectiva."
+        },
+        {
+          "question": "¿Qué incluye el servicio de seguridad para eventos en Lampa?",
+          "answer": "El servicio incluye: guardias certificados OS-10 según la cantidad acordada, jefe de seguridad experimentado, planificación y evaluación previa del recinto, control de accesos, supervisión durante toda la jornada, coordinación con emergencias si fuera necesario, y報告e post-evento. También ofrecemos servicios adicionales como arriendo de detectores de metales, cierres perimetrales temporales y coordinación con Carabineros."
+        },
+        {
+          "question": "¿Cómo funciona la certificación OS-10 de los guardias?",
+          "answer": "Todos nuestros guardias cuentan con la acreditación OS-10 emitida por la Prefectura de Seguridad Privada de Carabineros de Chile. Esta certificación acredita que han completado la formación requerida por la Ley 21.659, incluyendo aspectos legales, técnicas de vigilancia, primeros auxilios y manejo de conflitos. La certificación tiene vigencia de 3 años y nuestros guardias mantienen su formación actualizada contínuamente."
+        },
+        {
+          "question": "¿Puedo cotizar el servicio con anticipación para planificar mi presupuesto?",
+          "answer": "Sí, cotizamos sin compromiso cualquier servicio de seguridad para eventos en Lampa. Para recibir una cotización precisa, necesitamos conocer: fecha del evento, horario estimado de inicio y término, número esperado de asistentes, tipo de evento, características del recinto y servicios adicionales requeridos. Contáctanos por WhatsApp o formulario web y notre equipe responderá dentro de las próximas 24 horas hábiles."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Lampa",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Lampa",
-      "button_link": "/cotizacion?service=seguridad-eventos&location=lampa"
+      "heading": "Protege tu evento en Lampa con los mejores",
+      "subheading": "Cotiza hoy tu servicio de seguridad para eventos. Personal altamente capacitado, supervisión continua y cobertura garantizada para que tú y tus invitados disfruten sin preocupaciones.",
+      "button": "Cotizar Seguridad para Eventos",
+      "image": "/images/seguridad-eventos-lampa-cta.webp"
+    },
+    "meta": {
+      "title": "Seguridad para Eventos en Lampa | Guardias OS-10 - GuardMan Chile",
+      "description": "Servicio profesional de seguridad para eventos en Lampa. Guardias certificados OS-10, control de accesos y supervisión 24/7. Cotiza hoy tu evento seguro."
     }
   },
-  "related_content": {
-    "related_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/guardias-de-seguridad.jpg"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "Cctv Videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "Control De Accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      }
-    ],
-    "nearby_locations": [],
-    "upsell_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
-    "quality_score": 80,
-    "published": false
+    "quality_score": 0,
+    "published": true
   }
 }

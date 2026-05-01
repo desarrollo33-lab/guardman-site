@@ -1,150 +1,91 @@
 {
   "slug": "guard-pod/san-felipe",
   "type": "combo",
-  "service": "guard-pod",
-  "location": "san-felipe",
   "version": 1,
-  "last_modified": "2026-04-22T14:13:24.785Z",
+  "last_modified": "2026-05-01T12:49:23.394Z",
   "seo": {
-    "title": "Guard Pod en San Felipe",
-    "description": "Servicio de guard pod profesional en San Felipe. Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
-    "keywords": [],
-    "canonical": "https://guardman.cl/servicios/guard-pod/san-felipe"
+    "title": "Guard Pod San Felipe | Seguridad Autónoma 24/7 - GuardMan",
+    "description": "Guard Pod en San Felipe: vigilancia autónoma 4K, sensores de movimiento y conexión 4G. Protección profesional sin guardias permanentes. Cotiza hoy.",
+    "canonical": ""
   },
   "content": {
     "hero": {
-      "heading": "Guard Pod en San Felipe",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
-      "cta_text": "Cotizar en San Felipe",
-      "cta_link": "/cotizacion?service=guard-pod&location=san-felipe",
-      "image": "/images/hero-home.webp"
+      "heading": "Guard Pod en San Felipe: Seguridad Autónoma las 24 Horas",
+      "subheading": "Protección inteligente y portátil para tu hogar, negocio o terreno en San Felipe. Vigilancia 4K, sensores de movimiento y respuesta inmediata sin necesidad de guardias permanentes.",
+      "image": "guard-pod-san-felipe-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Guard Pod",
-        "url": "/servicios/guard-pod"
-      },
-      {
-        "label": "San Felipe",
-        "url": "/servicios/guard-pod/san-felipe"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Guard Pod en San Felipe?",
-      "content": "En GuardMan Chile somos especialistas en guard pod en San Felipe. Nuestra experiencia en San Felipe y la zona de Valparaíso nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en San Felipe y toda la zona Valparaíso.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Unidad móvil de vigilancia autónoma",
-        "Energía solar y conexión satelital",
-        "Cámaras 360° y detección de movimiento",
-        "Sirena y luces de advertencia",
-        "Monitoreo remoto 24/7",
-        "Despliegue rápido en cualquier ubicación"
+      "heading": "Guardianía Virtual Profesional en San Felipe de Aconcagua",
+      "paragraphs": [
+        "En GuardMan Chile somos líderes en seguridad privada con más de 8 años protegiendo hogares, empresas y predios en la Provincia de San Felipe. Nuestro Guard Pod® V1 representa la evolución de la vigilancia: una unidad autónoma de última generación que combina tecnología 4K, sensores avanzados y conectividad 4G para ofrecerte protección continua sin los costos de un guardia permanente.",
+        "San Felipe y sus alrededores enfrentan desafíos crecientes de seguridad. Terrenos eriazos, construcciones en pausa, parcelas agrícolas y viviendas vacacionales requieren soluciones que vigilen incluso cuando no hay nadie presente. El Guard Pod® V1 actúa como vigilante permanente: detecta intrusos, disuade con luces LED de alta potencia y alertará a nuestro centro de monitoreo ante cualquier situación sospechosa.",
+        "A diferencia de sistemas de cámaras tradicionales que solo graban, nuestro Guard Pod® en San Felipe integra detección autónoma de movimiento, sirena disuasoria, alimentación solar independiente y comunicación 4G en tiempo real. Esto significa que tu propiedad recibe protección profesional real las 24 horas, los 365 días del año, con la tranquilidad de saber que nuestro equipo intervenirá ante cualquier alerta."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué San Felipe",
-      "content": "",
-      "points": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características del Guard Pod® V1 para San Felipe",
+      "items": [
+        "Cámara 4K con visión nocturna en color: Captura cada detalle con resolución Ultra HD, incluso en completa oscuridad",
+        "Sensores de movimiento PIR de alta precisión: Detecta presencias no autorizadas en un radio extendida, minimizando falsas alarmas",
+        "Iluminación LED disuasoria de 3000 lúmenes: Se activa automáticamente ante movimientos sospechosos, ahuyentando intrusos",
+        "Conectividad 4G/LTE autónoma: Transmisión en tiempo real a nuestro centro de monitoreo, sin depender de internet local",
+        "Alimentación solar integrada: Funciona independientemente de la red eléctrica por hasta 72 horas continuas",
+        "Sirena disuasoria de 120 dB: Sonido potente que alerta al vecindario y espanta a cualquier intruso",
+        "Batería de respaldo de larga duración: Autonomía garantizada ante cortes de energía o condiciones climáticas adversas",
+        "Diseño portátil y resistente intemperie: IP65 certificado, soporta lluvia, polvo y temperaturas extremas del valle de Aconcagua"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en San Felipe",
+      "heading": "Problemas que Resuelve el Guard Pod® en San Felipe",
       "items": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Terrenos y parcelas sin vigilancia: Predios agrícolas, lotes en venta o construcciones detenidas quedan protegidos sin necesidad de contratación permanente de guardias",
+        "Robos y okupas en viviendas vacacionales: Residentes de Santiago que tienen casas de verano en San Felipe reportan ocupaciones irregulares durante meses",
+        "Vandalismo en sitios de construcción: El alto costo de materiales de construcción atrae saqueos, especialmente en zonas periurbanas de la provincia",
+        "Dificultad para contratar guardias en zonas rurales: La disponibilidad de personal certificado OS-10 es limitada fuera del área metropolitana de Santiago",
+        "Falta de cobertura eléctrica o internet: Muchas parcelas en San Felipe de Aconcagua no tienen acceso estable a servicios básicos para sistemas de seguridad tradicionales",
+        "Costos de seguridad disproportionados: Mantener un guardia 24/7 puede costar más que el valor del contenido a proteger en propiedades rurales"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Valparaíso"
-      },
-      {
-        "value": "Valparaíso",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué es un Guard POD?",
-        "answer": "Es una unidad móvil de vigilancia autónoma con cámaras, sensores, sirena y luces. Funciona con energía solar y se despliega rápidamente en cualquier ubicación."
-      },
-      {
-        "question": "¿Por cuánto tiempo funciona sin intervención?",
-        "answer": "El Guard POD puede operar de forma autónoma hasta 72 horas con sus baterías internas. La energía solar mantiene el sistema funcionando indefinidamente en condiciones normales."
-      },
-      {
-        "question": "¿Se puede mover a diferentes ubicaciones?",
-        "answer": "Sí, está diseñado para ser transportado fácilmente. Es ideal para obras de construcción, eventos temporales o refuerzos de seguridad en cualquier ubicación."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Guard Pod en San Felipe",
+      "items": [
+        {
+          "question": "¿Qué es el Guard Pod® y cómo funciona en San Felipe?",
+          "answer": "El Guard Pod® V1 es una unidad autónoma de vigilancia desarrollada por GuardMan Chile. Funciona como un vigilante electrónico permanente: integra cámara 4K, sensores de movimiento, iluminación LED y conectividad 4G. Cuando detecta movimiento sospechoso, activa protocolos de disuasión (luces y sirena) y envía alertas instantáneas a nuestro centro de monitoreo 24/7. Nosotros coordinamos la respuesta con Carabineros o personal de seguridad según la situación. No requiere instalación fija ni conexión a internet local."
+        },
+        {
+          "question": "¿Qué costo tiene arrendar un Guard Pod en San Felipe?",
+          "answer": "El valor del servicio Guard Pod® V1 varía según la duración del contrato, características del terreno y nivel de monitoreo requerido. En GuardMan ofrecemos cotización personalizada sin costo, considerando factores como accesibilidad al sitio, extensión del área a cubrir y si necesitas integración con nuestro centro de monitoreo 24/7. Contáctanos para recibir una propuesta adaptada a tu propiedad en San Felipe o alrededores."
+        },
+        {
+          "question": "¿El Guard Pod funciona sin energía eléctrica ni internet?",
+          "answer": "Sí, el Guard Pod® V1 está diseñado para operar de forma completamente autónoma. Cuenta con panel solar integrado que carga la batería de respaldo, garantizando funcionamiento por hasta 72 horas sin sol directo. Además, utiliza conectividad 4G/LTE propia, independiente de las instalaciones del terreno. Esto lo hace ideal para parcelas rurales en San Felipe de Aconcagua donde la infraestructura eléctrica e internet es limitada o inexistente."
+        },
+        {
+          "question": "¿Necesito permisos municipales para instalar un Guard Pod en mi terreno?",
+          "answer": "El Guard Pod® V1 es una unidad portátil que no requiere obras ni instalaciones permanentes, lo que simplifica considerablemente su despliegue. Sin embargo, según la normativa OS-10 de Carabineros para seguridad privada, es recomendable que el servicio sea proporcionado por una empresa acreditada como GuardMan Chile. Nosotros nos encargamos de toda la documentación y cumplimiento normativo para que tú solo disfrutes de la tranquilidad."
+        },
+        {
+          "question": "¿Qué pasa si se activa una alarma en mi propiedad?",
+          "answer": "Cuando los sensores del Guard Pod® detectan movimiento sospechoso, el sistema ejecuta una secuencia: primero activa las luces LED y sirena disuasoria; segundo, envía alerta inmediata a nuestra Central de Monitoreo 24/7; tercero, nuestros operadores evalúan la situación mediante video en tiempo real y determinan la respuesta apropiada. Esto puede incluir aviso a Carabineros de San Felipe, coordinación con rondas municipales o activación de servicios de emergencia. Todo en menos de 3 minutos desde la detección."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en San Felipe",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en San Felipe",
-      "button_link": "/cotizacion?service=guard-pod&location=san-felipe"
+      "heading": "Protege Tu Propiedad en San Felipe Hoy",
+      "subheading": "Solicita tu cotización personalizada para Guard Pod® V1 en San Felipe de Aconcagua. Nuestros especialistas evaluarán tu terreno y te proposer la mejor solución de seguridad.",
+      "button": "Cotizar Guard Pod San Felipe",
+      "image": "guard-pod-san-felipe-cta.jpg"
+    },
+    "meta": {
+      "title": "Guard Pod San Felipe | Seguridad Autónoma 24/7 - GuardMan",
+      "description": "Guard Pod en San Felipe: vigilancia autónoma 4K, sensores de movimiento y conexión 4G. Protección profesional sin guardias permanentes. Cotiza hoy."
     }
   },
-  "related_content": {
-    "related_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/guardias-de-seguridad.jpg"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "Cctv Videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "Control De Accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      }
-    ],
-    "nearby_locations": [],
-    "upsell_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      },
-      {
-        "slug": "seguridad-eventos",
-        "title": "Seguridad Eventos",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
-    "quality_score": 80,
-    "published": false
+    "quality_score": 0,
+    "published": true
   }
 }

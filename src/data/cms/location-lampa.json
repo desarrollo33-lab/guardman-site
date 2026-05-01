@@ -3,29 +3,17 @@
     "hero": {
       "heading": "Seguridad Privada en Lampa | Guardias y Monitoreo 24/7",
       "subheading": "Protegemos tu hogar, empresa o evento con guardias certificados OS-10 y tecnología de vanguardia en Lampa.",
-      "image": "/images/og-default.webp"
+      "cta_text": "Solicitar Cotización Gratis"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Ubicaciones",
-        "url": "/ubicaciones"
-      },
-      {
-        "label": "Lampa",
-        "url": "/ubicaciones/lampa"
-      }
-    ],
     "intro": {
-      "title": "Guardianes de Seguridad en Lampa: tu mejor opción",
-      "content": "En GuardMan Chile somos la empresa de seguridad privada líder en la Región Metropolitana. Con más de 8 años de experiencia y presencia en Lampa, protegemos hogares, empresas, eventos y obras de construcción con el más alto estándar de calidad.\n\nNuestro equipo de guardias certificados OS-10 y nuestro centro de monitoreo 24/7 propio garantizan una respuesta inmediata ante cualquier emergencia. Si buscas seguridad privada en Lampa, contáctanos hoy.",
-      "image": "/images/location-intro.jpg"
+      "heading": "Guardianes de Seguridad en Lampa: tu mejor opción",
+      "paragraphs": [
+        "En GuardMan Chile somos la empresa de seguridad privada líder en la Región Metropolitana. Con más de 8 años de experiencia y presencia en Lampa, protegemos hogares, empresas, eventos y obras de construcción con el más alto estándar de calidad.",
+        "Nuestro equipo de guardias certificados OS-10 y nuestro centro de monitoreo 24/7 propio garantizan una respuesta inmediata ante cualquier emergencia. Si buscas seguridad privada en Lampa, contáctanos hoy."
+      ]
     },
     "features": {
-      "title": "¿Por qué elegir GuardMan en Lampa?",
+      "heading": "¿Por qué elegir GuardMan en Lampa?",
       "items": [
         "Guardias certificados OS-10 con formación continua",
         "Centro de monitoreo propio 24/7 en Santiago",
@@ -35,46 +23,66 @@
         "Informes de actividad y dashboards en tiempo real"
       ]
     },
-    "stats": [
-      {
-        "value": "8+",
-        "label": "Años de experiencia"
-      },
-      {
-        "value": "500+",
-        "label": "Guardias certificados OS-10"
-      },
-      {
-        "value": "14",
-        "label": "Comunas de cobertura"
-      },
-      {
-        "value": "200+",
-        "label": "Clientes satisfechos"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto cuesta un guardia de seguridad en Lampa?",
-        "answer": "Los costos varían según el tipo de servicio, turnos requeridos y características del inmueble. En GuardMan ofrecemos cotizaciones personalizadas gratis, adaptadas a tu presupuesto y necesidades específicas."
-      },
-      {
-        "question": "¿Qué servicios de seguridad ofrecen en Lampa?",
-        "answer": "Brindamos guardias staticos, rondas motorizadas, monitoreo CCTV 24/7, control de accesos, escoltas, seguridad para eventos y seguridad industrial. Cada servicio se personaliza según tus requerimientos."
-      },
-      {
-        "question": "¿Los guardias tienen formación y certificación?",
-        "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 vigente, formación en primeros auxilios y protocolos de emergencia. Además, reciben capacitaciones continuas para mantener altos estándares."
-      },
-      {
-        "question": "¿Cómo funciona el monitoreo 24/7?",
-        "answer": "Nuestro centro de monitoreo opera las 24 horas con operadores especializados que vigilan tu propiedad en tiempo real, detectando situaciones sospechosas y coordinando respuesta inmediata con nuestras fuerzas terrestres."
-      }
-    ],
+    "issues": {
+      "heading": "Problemas de seguridad que resolvemos en Lampa",
+      "items": [
+        "Robos y robos con violencia en hogares y empresas del sector",
+        "Inseguridad en poblaciones y condominios de la zona",
+        "Falta de vigilancia en obras de construcción y proyectos inmobiliarios",
+        "Necesidad de escoltas para ejecutivos y transporte de valores",
+        "Eventos masivos sin cobertura de seguridad profesional"
+      ]
+    },
+    "stats": {
+      "heading": "Números que respaldan nuestra experiencia",
+      "items": [
+        {
+          "label": "Años de experiencia",
+          "value": "8+"
+        },
+        {
+          "label": "Guardias certificados OS-10",
+          "value": "500+"
+        },
+        {
+          "label": "Comunas de cobertura",
+          "value": "14"
+        },
+        {
+          "label": "Clientes satisfechos",
+          "value": "200+"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas frecuentes sobre seguridad en Lampa",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta un guardia de seguridad en Lampa?",
+          "answer": "Los costos varían según el tipo de servicio, turnos requeridos y características del inmueble. En GuardMan ofrecemos cotizaciones personalizadas gratis, adaptadas a tu presupuesto y necesidades específicas."
+        },
+        {
+          "question": "¿Qué servicios de seguridad ofrecen en Lampa?",
+          "answer": "Brindamos guardias staticos, rondas motorizadas, monitoreo CCTV 24/7, control de accesos, escoltas, seguridad para eventos y seguridad industrial. Cada servicio se personaliza según tus requerimientos."
+        },
+        {
+          "question": "¿Los guardias tienen formación y certificación?",
+          "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 vigente, formación en primeros auxilios y protocolos de emergencia. Además, reciben capacitaciones continuas para mantener altos estándares."
+        },
+        {
+          "question": "¿Cómo funciona el monitoreo 24/7?",
+          "answer": "Nuestro centro de monitoreo opera las 24 horas con operadores especializados que vigilan tu propiedad en tiempo real, detectando situaciones sospechosas y coordinando respuesta inmediata con nuestras fuerzas terrestres."
+        }
+      ]
+    },
     "cta": {
-      "headline": "¿Necesitas seguridad en Lampa?",
-      "button_text": "Llámanos al +56 2 3124 5678",
-      "button_link": "/cotizacion"
+      "heading": "¿Necesitas seguridad en Lampa?",
+      "subheading": "Contáctanos ahora y recibe una asesoría personalizada sin compromiso. Protege lo que más te importa.",
+      "button": "Llámanos al +56 2 3124 5678"
+    },
+    "meta": {
+      "title": "Seguridad Privada Lampa | Guardias 24/7 | GuardMan Chile",
+      "description": "GuardMan Chile: empresa de seguridad privada líder en Lampa. Guardias certificados OS-10, monitoreo 24/7 y CCTV. Cotiza gratis hoy."
     }
   }
 }

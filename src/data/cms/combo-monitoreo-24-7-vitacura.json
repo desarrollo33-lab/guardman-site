@@ -1,96 +1,78 @@
 {
   "sections": {
     "hero": {
-      "heading": "Monitoreo 24/7 en Vitacura",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente premium.",
-      "cta_text": "Cotizar en Vitacura",
-      "cta_link": "/cotizacion?service=monitoreo-24-7&location=vitacura",
-      "image": "/images/service-monitoreo-24-7.webp"
+      "heading": "Monitoreo 24/7 en Vitacura: Protección Integral para Tu Hogar y Empresa",
+      "subheading": "En GuardMan Chile somos especialistas en monitoreo de seguridad las 24 horas en Vitacura. Contamos con guardias certificados OS-10, central de monitoreo propia y más de 8 años de experiencia protegiendo familias y empresas en el sector oriente de Santiago.",
+      "image": "monitoreo-24-7-vitacura-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Monitoreo 24 7",
-        "url": "/servicios/monitoreo-24-7"
-      },
-      {
-        "label": "Vitacura",
-        "url": "/servicios/monitoreo-24-7/vitacura"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Monitoreo 24/7 en Vitacura?",
-      "content": "En GuardMan Chile somos especialistas en monitoreo 24/7 en Vitacura. Nuestra experiencia en el sector oriente premium nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Vitacura y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Central de monitoreo propia operativa 24/7",
-        "Respuesta ante alarmas en menos de 30 segundos",
-        "Verificación visual con cámaras integradas",
-        "Coordinación con Carabineros y servicios de emergencia",
-        "Informes mensuales de actividad y incidentes",
-        "App móvil para control remoto"
+      "heading": "Tu Seguridad es Nuestra Prioridad: Monitoreo Profesional en Vitacura",
+      "paragraphs": [
+        "Vitacura es una de las comunas más exclusivas de Santiago, pero eso no la exime de riesgos de seguridad. En GuardMan Chile entendemos que la tranquilidad de tu familia y la protección de tu negocio requieren soluciones integrales y profesionales. Nuestro servicio de monitoreo 24/7 en Vitacura combina tecnología de última generación con el respaldo de personal altamente capacitado y certificado bajo la normativa OS-10 de Carabineros de Chile.",
+        "Operamos las 24 horas del día, los 365 días del año, desde nuestra central de monitoreo con cobertura especializada para Vitacura y el sector oriente. Cuando contratas nuestro servicio, no solo obtienes vigilancia constante: ganas un equipo de profesionales que verifican cada evento en tiempo real, coordinan respuestas inmediatas y mantienen informados a los moradores o administradores en todo momento.",
+        "A diferencia de empresas que ofrecen solo tecnología, en GuardMan Chile creemos que la seguridad efectiva combina presencia humana, tecnología inteligente y protocolos de respuesta probados. Por eso, nuestro monitoreo 24/7 en Vitacura incluye verificación visual, activación de sirenas disuasorias, aviso a fuerzas de emergencia y despliegue de móviles de seguridad según el protocolo correspondiente."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Vitacura",
-      "content": "",
-      "points": [
-        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
-        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de Nuestro Monitoreo 24/7 en Vitacura",
+      "items": [
+        "Central de monitoreo propia operativa las 24 horas con operadores especializados en seguridad residencial y comercial",
+        "Guardias certificados OS-10 con formación continua y experiencia comprobada en el sector oriente de Santiago",
+        "Integración con sistemas de alarmas, cámaras CCTV, sensores perimetrales y control de acceso",
+        "Verificación visual de eventos mediante cámaras conectadas a nuestra central de operaciones",
+        "Coordinación directa con Carabineros de Chile y servicios de emergencia ante incidentes",
+        "Notificaciones en tiempo real al celular del cliente vía aplicación móvil dedicada",
+        "Respuesta inmediata con tiempos de reacción garantizados según protocolo de seguridad",
+        "Monitoreo remoto desde cualquier ubicación con acceso a cámaras en vivo las 24 horas",
+        "Supervisión y ronda de inspectores de seguridad en puntos estratégicos de Vitacura",
+        "Generación de reportes periódicos con estadísticas de eventos y acciones tomadas"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Vitacura",
+      "heading": "Problemas de Seguridad que Resolvemos en Vitacura",
       "items": [
-        "casas de alto valor, clínicas privadas y oficinas ejecutivas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia residencial de lujo, monitoreo perimetral, control de accesos biométrico y respuesta rápida es cada vez más urgente en el sector oriente premium.",
-        " muchas empresas y residencias en Vitacura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos con violencia o intimidación en hogares y comunidades cerradas que requieren respuesta inmediata",
+        "Ingresos no autorizados a propiedades por puertas, ventanas o accesos perimetrales",
+        "Vandalismo, daños a la propiedad y robo de especies en exteriores e interiores",
+        "Falta de supervisión durante horarios nocturnos, fines de semana y períodos de vacaciones",
+        "Necesidad de контроль de accesos para visitas, trabajadores y proveedores en tiempo real",
+        "Alertas tardías o respuestas lentas que permiten que incidentes escalen sin intervención"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué pasa si salta una alarma a las 3am?",
-        "answer": "Nuestro equipo de monitoreo verifica la alarma inmediatamente. Si es una emergencia real, contactamos a Carabineros y a tus contactos de emergencia simultáneamente."
-      },
-      {
-        "question": "¿Monitorean solo cuando hay alarma?",
-        "answer": "No, el monitoreo es constante y activo. Nuestros operadores vigilan las 24 horas y pueden hacer rondas visuales remotas cuando detectan algo sospechoso."
-      },
-      {
-        "question": "¿Puedo ver lo que sucede en mi propiedad?",
-        "answer": "Sí, tienes acceso 24/7 a todas las cámaras en vivo desde tu celular o computadora. Además, recibes alertas instantáneas ante eventos."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Monitoreo 24/7 en Vitacura",
+      "items": [
+        {
+          "question": "¿Cómo funciona el servicio de monitoreo 24/7 en Vitacura?",
+          "answer": "Nuestro sistema opera mediante la conexión de tus equipos de seguridad (alarmas, cámaras, sensores) a nuestra central de monitoreo en Santiago. Cuando se detecta una anomalía, nuestros operadores reciben la señal instantáneamente, verifican el evento mediante las cámaras conectadas y activan el protocolo de respuesta correspondiente, que puede incluir activación de sirenas, aviso al cliente, contacto con Carabineros o despliegue de móviles de seguridad."
+        },
+        {
+          "question": "¿Qué diferencia tiene el monitoreo profesional versus el automonitoreo desde el celular?",
+          "answer": "El automonitoreo requiere que tú estés disponible para responder ante una alarma, lo cual puede ser imposible si estás en una reunión, manejando o durmiendo profundamente. Con nuestro servicio de monitoreo 24/7 en Vitacura, siempre hay un operador especializado pendiente de tu seguridad. Además, nuestros guardias pueden actuar como elemento disuasorio físico y coordinar respuestas que tú solo no podrías gestionar, como solicitar intervención de Carabineros."
+        },
+        {
+          "question": "¿Los guardias de seguridad en Vitacura están certificados y legalizados?",
+          "answer": "Sí, absolutamente. En GuardMan Chile todos nuestros guardias cuentan con certificación OS-10 vigente otorgada por Carabineros de Chile. Esta certificación acredita que el personal ha superado los cursos de formación requeridos, cumple con los requisitos legales para operar como vigilantes privados y está habilitado para portar elementos de defensa. Puedes verificar nuestra autorización ante la Prefectura de Seguridad Privada (O.S.10) cuando lo necesites."
+        },
+        {
+          "question": "¿Cuánto cuesta el monitoreo 24/7 en Vitacura y cómo se cotiza?",
+          "answer": "El precio del servicio depende de varios factores: cantidad de sensores y cámaras a monitorear, tipo de propiedad (casa, departamento, empresa, condominio), nivel de riesgo de la zona dentro de Vitacura y servicios adicionales requeridos como vigilancia física complementaria. Para obtener una cotización precisa, recomendamos solicitar una asesoría gratuita donde nuestros especialistas evalúan tu propiedad y diseñan una solución a tu medida sin costo ni compromiso."
+        },
+        {
+          "question": "¿Puedo integrar el monitoreo con mis cámaras y alarmas existentes?",
+          "answer": "Sí, en la mayoría de los casos podemos integrar equipos de seguridad de diversas marcas y tecnologías a nuestra central de monitoreo. Realizamos una evaluación técnica para determinar la compatibilidad y, si es necesario, recomendamos actualizaciones o mejoras. También ofrecemos equipos nuevos con garantía y soporte técnico incluido si prefieres partir con infraestructura completamente nueva bajo nuestro cuidado."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Vitacura",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Vitacura",
-      "button_link": "/cotizacion?service=monitoreo-24-7&location=vitacura"
+      "heading": "Protege Tu Propiedad en Vitacura con Expertos en Seguridad",
+      "subheading": "No dejes la seguridad de tu familia o empresa al azar. En GuardMan Chile tenemos la experiencia, el personal certificado y la tecnología para mantenerte protegido las 24 horas. Solicita una cotización sin compromiso y descubre cómo nuestro monitoreo 24/7 en Vitacura puede darte la tranquilidad que mereces.",
+      "button": "Solicitar Cotización Gratis",
+      "image": "monitoreo-24-7-vitacura-cta.jpg"
+    },
+    "meta": {
+      "title": "Monitoreo 24/7 Vitacura | Guardias OS-10 y Central de Monitoreo",
+      "description": "Servicio de monitoreo 24/7 en Vitacura con guardias certificados OS-10. Central de monitoreo propia, respuesta inmediata y cobertura los 365 días. Cotiza gratis."
     }
   }
 }

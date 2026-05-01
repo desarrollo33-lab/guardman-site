@@ -1,95 +1,101 @@
 {
   "sections": {
     "hero": {
-      "heading": "CCTV y Videovigilancia en Santiago | Seguridad Profesional",
-      "subheading": "Monitoreo 24/7 con guardias OS-10 certificados. Protege tu empresa o hogar con 8 años de experiencia.",
-      "cta_text": "Cotizar Videovigilancia",
-      "image": "/images/service-cctv-videovigilancia.webp"
+      "heading": "CCTV y Videovigilancia en Santiago | Seguridad Profesional con Guardias OS-10",
+      "subheading": "Monitoreo 24/7 con guardias OS-10 certificados. Protege tu empresa o hogar con más de 8 años de experiencia en videovigilancia en la Región Metropolitana.",
+      "cta_text": "Cotizar Videovigilancia"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Cctv Videovigilancia",
-        "url": "/servicios/cctv-videovigilancia"
-      }
-    ],
     "intro": {
-      "title": "Sistema de CCTV y Videovigilancia en Santiago que realmente funciona",
-      "content": "En GuardMan Chile sabemos que las cámaras de seguridad no son solo equipos: son tu primera línea de defensa. Por eso diseñamos sistemas de videovigilancia profesional adaptados a cada cliente, combinando tecnología de alto rendimiento con monitoreo en vivo las 24 horas.\nA diferencia de las tiendas que solo venden equipos, nosotros somos una empresa de seguridad privada con certificación OS-10. Esto significa que nuestros guardias están entrenados para reaccionar ante cualquier situación que detecten las cámaras, no solo para grabar.",
-      "image": "/images/service-intro.jpg"
+      "heading": "Sistema de CCTV y Videovigilancia en Santiago que realmente protege",
+      "paragraphs": [
+        "En GuardMan Chile sabemos que las cámaras de seguridad no son solo equipos: son tu primera línea de defensa. Por eso diseñamos sistemas de videovigilancia profesional adaptados a cada cliente, combinando tecnología de alto rendimiento con monitoreo en vivo las 24 horas. Nuestro centro de control propio opera sin interrupciones, con operadores entrenados que observan tu propiedad en tiempo real y activan protocolos de respuesta inmediata ante cualquier situación sospechosa.",
+        "A diferencia de las tiendas que solo venden equipos, nosotros somos una empresa de seguridad privada con certificación OS-10 vigente. Esto significa que nuestros guardias están entrenados para reaccionar ante cualquier incidente que detecten las cámaras, no solo para grabar. Cuando una cámara detecta movimiento sospechoso, el operador alerta inmediatamente a nuestro equipo en terreno, que llega a tu ubicación en minutos. esa es la diferencia entre tener cámaras y tener protección real.",
+        "Trabajamos con equipos de última generación: cámaras IP con resolución 4K, visión nocturna infrarroja, detección de movimiento inteligente y acceso remoto desde tu celular. Pero la tecnología sin supervisión humana es incompleta. Por eso cada cámara de nuestros clientes está respaldada por nuestro equipo de guardias certificados, garantizando una respuesta efectiva ante emergencias, robos en proceso o situaciones de riesgo."
+      ]
     },
     "features": {
-      "title": "Qué Incluye el Servicio",
+      "heading": "Por qué elegir GuardMan para tu CCTV en la Región Metropolitana",
       "items": [
-        "Cámaras IP de alta definición (2MP a 4K)",
-        "Visión nocturna por infrarrojo hasta 50 metros",
-        "Análisis de video con IA (detección facial, movimiento)",
-        "Monitoreo remoto desde smartphone y computadora",
-        "Almacenamiento en la nube con respaldo automático",
-        "Integración con acceso remoto y control de luces"
+        "Monitoreo remoto 24/7 desde nuestro centro de control propio con operadores especializados, no subcontratado ni tercerizado",
+        "Guardias de seguridad OS-10 que responden en terreno ante incidentes detectados por las cámaras en máximo 15 minutos",
+        "Más de 8 años de experiencia en videovigilancia empresarial y residencial en toda la Región Metropolitana de Santiago",
+        "Equipos de última generación con resolución 4K, visión nocturna infrarroja y acceso remoto desde smartphone las 24 horas",
+        "Instalación profesional con cableado oculto, configuración personalizada y pruebas de funcionamiento completas",
+        "Soporte técnico urgente sin costo adicional para clientes activos con técnicos disponibles los 365 días del año"
       ]
     },
     "issues": {
-      "title": "Problemas que enfrentas con los servicios de videovigilancia actuales",
+      "heading": "Problemas que enfrentas con los servicios de videovigilancia actuales",
       "items": [
         "Cámaras compradas en retail que graban pero nadie observa: un intruso puede estar horas antes de que te des cuenta",
         "Empresas que instalan equipos sin respaldo: cuando necesitas soporte, no responden o te cobran el doble",
         "Sistemas sin certificación OS-10: tus cámaras están ahí pero no hay protocolo de reacción ante emergencias",
         "Monitoreo subcontratado a empresas externas con operadores sobregirados que no conocen tu sector",
-        "Precios que incluyen equipos chinos de baja calidad que fallan a los pocos meses"
+        "Precios que incluyen equipos chinos de baja calidad que fallan a los pocos meses y no tienen soporte técnico"
       ]
     },
-    "stats": [
-      {
-        "value": "8+",
-        "label": "Años de experiencia en seguridad privada"
-      },
-      {
-        "value": "500+",
-        "label": "Guardias operativos con certificación OS-10"
-      },
-      {
-        "value": "150+",
-        "label": "Clientes activos en la Región Metropolitana"
-      },
-      {
-        "value": "2",
-        "label": "Centros de monitoreo propios"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo ver las cámaras desde mi celular?",
-        "answer": "Sí, todas nuestras instalaciones incluyen acceso remoto mediante aplicación gratuita para iOS y Android, con notificaciones de movimiento."
-      },
-      {
-        "question": "¿Cuánto duran las grabaciones?",
-        "answer": "Por defecto almacenamos 30 días de grabaciones. Ofrecemos planes desde 7 hasta 90 días según sus necesidades y presupuesto."
-      },
-      {
-        "question": "¿Necesito internet para ver las cámaras?",
-        "answer": "Sí, para acceso remoto se requiere conexión a internet. El sistema sigue grabando localmente aunque pierda conexión."
-      },
-      {
-        "question": "¿Qué pasa si se corta la luz?",
-        "answer": "Nuestras cámaras incluyen UPS integrado que permite hasta 4 horas de operación continua sin energía eléctrica."
-      },
-      {
-        "question": "¿Ofrecen mantenimiento?",
-        "answer": "Sí, tenemos planes de mantenimiento preventivo trimestral que incluyen limpieza de lentes, verificación de conexiones y actualización de firmware."
-      }
-    ],
+    "stats": {
+      "heading": "GuardMan Chile en números",
+      "items": [
+        {
+          "label": "Años de experiencia en seguridad privada",
+          "value": "8+"
+        },
+        {
+          "label": "Guardias operativos con certificación OS-10",
+          "value": "500+"
+        },
+        {
+          "label": "Clientes activos en la Región Metropolitana",
+          "value": "150+"
+        },
+        {
+          "label": "Centros de monitoreo propios",
+          "value": "2"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas frecuentes sobre nuestros sistemas CCTV en Chile",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta instalar un sistema de CCTV con videovigilancia en Santiago?",
+          "answer": "El precio depende del número de cámaras, resolución, conectividad y si incluye monitoreo 24/7 con respuesta de guardias. Una instalación básica parte desde $350.000, mientras que un sistema empresarial con monitoreo permanente y reacción en terreno parte desde $800.000 mensuales. Contáctanos y te cotizamos sin costo según tus necesidades reales."
+        },
+        {
+          "question": "¿Necesito autorización de la autoridad competente para instalar cámaras de seguridad?",
+          "answer": "Para uso residencial y empresarial privado no requieres autorización especial. Lo que sí necesitas es que la empresa instaladora esté registrada y que el sistema cumpla con la normativa de protección de datos. En GuardMan te asesoramos sobre las normativas vigentes y respetamos los protocolos de intimidad en zonas comunes y áreas privadas."
+        },
+        {
+          "question": "¿Qué diferencia hay entre comprar cámaras en una tienda y contratar un servicio de seguridad con videovigilancia?",
+          "answer": "La diferencia es crucial: las tiendas venden equipos, nosotros vendemos protección. Nuestras cámaras están conectadas a un centro de monitoreo donde nuestros operadores observan en tiempo real y activan protocolos de respuesta ante movimientos sospechosos. Tu casa o empresa nunca está desatendida y ante cualquier incidente nuestro equipo reacciona inmediatamente."
+        },
+        {
+          "question": "¿Qué es la certificación OS-10 y por qué es importante para vigilancia?",
+          "answer": "La OS-10 es la autorización que otorga la autoridad competente en Chile a empresas de seguridad privada. Solo las empresas con OS-10 pueden ofrecer vigilancia con guardias entrenados y protocolos oficiales. GuardMan cuenta con esta certificación hace más de 8 años, lo que garantiza que nuestros servicios cumplen con la normativa chilena y que nuestros guardias están properly capacitados."
+        },
+        {
+          "question": "¿Qué pasa si salta una alarma en horario nocturno?",
+          "answer": "Nuestro centro de monitoreo opera 24/7 los 365 días del año. Cuando una cámara detecta movimiento sospechoso o se activa una alarma, un operador evalúa la situación en tiempo real a través de las imágenes y coordina la respuesta de nuestros guardias más cercanos a tu ubicación. Dependiendo de la gravedad, también activamos protocolo de contacto a Carabineros. Te informamos inmediatamente vía llamada telefónica y notificación en tu celular."
+        },
+        {
+          "question": "¿Puedo ver las cámaras desde mi celular?",
+          "answer": "Sí, todas nuestras instalaciones incluyen acceso remoto a través de una aplicación móvil segura donde puedes ver las cámaras en vivo desde cualquier lugar. También recibes alertas instantáneas cuando se detecta movimiento fuera de horario y puedes revisar grabaciones anteriores. Todo esto sin costos adicionales para clientes con monitoreo activo."
+        },
+        {
+          "question": "¿En cuántas comunas de Santiago operan?",
+          "answer": "Cubrimos toda la Región Metropolitana y sus 52 comunas. Tenemos guardias asignados en las principales comunas como Providencia, Las Condes, Vitacura, Santiago Centro, Maipú, Puente Alto, Ñuñoa, La Florida, entre otras. Nuestro tiempo de respuesta promedio en las comunas del sector oriente es menor a 10 minutos."
+        }
+      ]
+    },
     "cta": {
-      "headline": "No dejes tu seguridad para después",
-      "button_text": "Solicitar Cotización Gratis",
-      "button_link": "/cotizacion"
+      "heading": "Protege lo que más importa antes de que sea demasiado tarde",
+      "subheading": "En GuardMan llegamos a tu comuna en 24 horas con una solución de seguridad personalizada.",
+      "button": "Cotizar Sistema de Videovigilancia"
+    },
+    "meta": {
+      "title": "CCTV y Videovigilancia en Santiago | Monitoreo 24/7 con Guardias OS-10",
+      "description": "Sistemas CCTV con videovigilancia en Santiago. Monitoreo 24/7, guardias OS-10 y respuesta inmediata. Empresa con 8+ años de experiencia en la Región Metropolitana. Cotiza gratis hoy."
     }
   }
 }

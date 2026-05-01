@@ -1,144 +1,91 @@
 {
   "slug": "escoltas-privados/san-felipe",
   "type": "combo",
-  "service": "escoltas-privados",
-  "location": "san-felipe",
   "version": 1,
-  "last_modified": "2026-04-22T14:13:24.738Z",
+  "last_modified": "2026-05-01T12:49:20.561Z",
   "seo": {
-    "title": "Escoltas Privados en San Felipe",
-    "description": "Servicio de escoltas privados profesional en San Felipe. Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
-    "keywords": [],
-    "canonical": "https://guardman.cl/servicios/escoltas-privados/san-felipe"
+    "title": "Escoltas Privados San Felipe | Certificados OS-10 y Servicio 24/7 | GuardMan",
+    "description": "Contrata escoltas privados certificados OS-10 en San Felipe. Protección profesional las 24hrs, evaluación de riesgos y planes personalizados. Cotiza gratis.",
+    "canonical": ""
   },
   "content": {
     "hero": {
-      "heading": "Escoltas Privados en San Felipe",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
-      "cta_text": "Cotizar en San Felipe",
-      "cta_link": "/cotizacion?service=escoltas-privados&location=san-felipe",
-      "image": "/images/service-escoltas-privados.webp"
+      "heading": "Escoltas Privados en San Felipe: Protección Personal Profesional y Confiable",
+      "subheading": "En GuardMan Chile ofrecemos escoltas privados certificados OS-10 con años de experiencia en protección de personas. Servicio disponible las 24 horas, los 365 días del año en San Felipe y toda la Provincia.",
+      "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Escoltas Privados",
-        "url": "/servicios/escoltas-privados"
-      },
-      {
-        "label": "San Felipe",
-        "url": "/servicios/escoltas-privados/san-felipe"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Escoltas Privados en San Felipe?",
-      "content": "En GuardMan Chile somos especialistas en escoltas privados en San Felipe. Nuestra experiencia en San Felipe y la zona de Valparaíso nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en San Felipe y toda la zona Valparaíso.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Escoltas certificados OS-10 con experiencia militar o policial",
-        "Evaluación de riesgos previa al servicio",
-        "Protección ejecutiva y familiar",
-        "Transporte seguro y ruta de evasión",
-        "Coordinación con autoridades de seguridad",
-        "Confidentialidad y discreción total"
+      "heading": "Servicio de Escoltas Privados en San Felipe Certificados y Experimentados",
+      "paragraphs": [
+        "En GuardMan Chile comprendemos que la seguridad personal es una prioridad fundamental para familias y empresas en San Felipe. Nuestros escoltas privados están certificados con el curso OS-10 vigente y cuentan con años de experiencia en protección de personas, brindándote la tranquilidad que mereces en cada desplazamiento y actividad.",
+        "Como empresa de seguridad con más de 8 años en el mercado chileno y cobertura en 14 comunas, hemos desarrollado protocolos de actuación que nos permiten ofrecer un servicio de escolta eficiente y discreto. Nuestro equipo está preparado para evaluar riesgos, anticiparse a situaciones de vulnerabilidad y actuar de manera decisiva ante cualquier amenaza.",
+        "Cada plan de escolta privada que implementamos en San Felipe se diseña de manera personalizada según las necesidades específicas del cliente. Ya sea que necesites protección para traslados diarios, eventos corporativos, reuniones de negocios o protección continua para ti y tu familia, en GuardMan tenemos la solución adecuada para ti."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué San Felipe",
-      "content": "",
-      "points": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Por qué elegir Escoltas Privados en San Felipe con GuardMan?",
+      "items": [
+        "Escoltas privados certificados OS-10 por Carabineros de Chile con formación continua y actualizaciones de protocolos de seguridad",
+        "Cobertura las 24 horas, los 365 días del año con disponibilidad inmediata para situaciones de emergencia en San Felipe y provincia",
+        "Evaluación de riesgos personalizada para diseñar un plan de protección adaptado a tus necesidades específicas y nivel de exposición",
+        "Personal con experiencia en seguridad corporativa y protección de altos ejecutivos, directivos y sus familias",
+        "Coordinación permanente con nuestro Centro de Monitoreo 24/7 para respaldo y comunicación constante durante el servicio",
+        "Escoltas capacitados en defensa personal, manejo de crisis y primeros auxilios para responder ante diversas situaciones",
+        "Rutas de desplazamiento programadas y análisis de vulnerabilidad en puntos de mayor riesgo",
+        "Vehículos de apoyo y comunicación radial para garantizar cobertura integral durante todo el servicio"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en San Felipe",
+      "heading": "Situaciones que Resolvemos con nuestros Escoltas Privados en San Felipe",
       "items": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Protección durante traslados frecuentes en la ciudad de San Felipe y conexiones con Santiago o Valparaíso para usted y su familia",
+        "Resguardo en eventos corporativos, presentaciones públicas y reuniones de negocios donde se requiere presencia de seguridad visible",
+        "Protección para ejecutivos y profesionales que requieren discreción y cobertura durante jornadas laborales extensas en la zona",
+        "Acompañamiento en actividades cotidianas como llevar niños al colegio, ir al banco o realizar trámites en organismos públicos de San Felipe",
+        "Prevención de situaciones de riesgo en zonas con antecedentes de delitos contra personas o robos con intimidación",
+        "Coordinación de seguridad para visitantes ejecutivos o inversionistas que requieren protección durante su estadía en la provincia de San Felipe"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Valparaíso"
-      },
-      {
-        "value": "Valparaíso",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cómo contratan el servicio de escoltas?",
-        "answer": "Primero evaluamos tus necesidades específicas de seguridad. Luego seleccionamos el escolta adecuado según perfil, experiencia y requisitos particulares."
-      },
-      {
-        "question": "¿Los escoltas tienen formación legal?",
-        "answer": "Sí, todos nuestros escoltas tienen certificación OS-10 y formación en defensa personal, primeros auxilios y manejo de situaciones de crisis."
-      },
-      {
-        "question": "¿El servicio es confidencial?",
-        "answer": "Absolutamente. La confidencialidad es parte fundamental de nuestro servicio. No revelamos información de nuestros clientes ni de sus rutinas."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Escoltas Privados en San Felipe",
+      "items": [
+        {
+          "question": "¿Cómo contrato un escolta privado en San Felipe?",
+          "answer": "Para contratar un escolta privado en San Felipe, puedes contactarnos por teléfono, WhatsApp o completar nuestro formulario de cotización. Nuestro equipo realizará una evaluación de riesgo sin costo para diseñar el plan de protección que mejor se adapte a tus necesidades."
+        },
+        {
+          "question": "¿Qué certificación deben tener los escoltas privados en Chile?",
+          "answer": "Todo escolta privado debe contar con el certificado OS-10 vigente, emitido por la Prefectura de Seguridad Privada de Carabineros de Chile. Este curso acredita la formación en vigilancia, manejo de emergencias y normatividad legal aplicable. En GuardMan verificamos que todo nuestro personal cumpla con este requisito."
+        },
+        {
+          "question": "¿El servicio de escolta privada funciona los fines de semana y festivos?",
+          "answer": "Sí, nuestro servicio de escoltas privados opera las 24 horas, los 365 días del año, incluyendo weekends y festivos. Entendemos que las situaciones de riesgo pueden ocurrir en cualquier momento, por eso mantenemos disponibilidad permanente para nuestros clientes en San Felipe."
+        },
+        {
+          "question": "¿Puedo solicitar un escolta para protección temporal o por un período específico?",
+          "answer": "Ofrecemos planes flexibles que se adaptan a tus necesidades: puedes contratar escoltas privados por horas, días, semanas o de manera indefinida. Trabajamos tanto con clientes que requieren protección permanente como con quienes necesitan cobertura para eventos específicos o situaciones puntuales."
+        },
+        {
+          "question": "¿Cómo se determina el costo del servicio de escolta privada en San Felipe?",
+          "answer": "El precio del servicio considera varios factores como la modalidad de escolta necesaria, la duración del servicio, el número de escoltas requeridos y el nivel de riesgo asociado. Contáctanos para recibir una cotización personalizada sin compromiso."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en San Felipe",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en San Felipe",
-      "button_link": "/cotizacion?service=escoltas-privados&location=san-felipe"
+      "heading": "Protege lo que más Importa con Escoltas Privados Certificados en San Felipe",
+      "subheading": "En GuardMan Chile queremos escucharte. Cuéntanos sobre tus necesidades de seguridad y diseñaremos un plan de protección personalizado. Cotiza gratis y sin compromiso.",
+      "button": "Cotizar Escolta Privado",
+      "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200"
+    },
+    "meta": {
+      "title": "Escoltas Privados San Felipe | Certificados OS-10 y Servicio 24/7 | GuardMan",
+      "description": "Contrata escoltas privados certificados OS-10 en San Felipe. Protección profesional las 24hrs, evaluación de riesgos y planes personalizados. Cotiza gratis."
     }
   },
-  "related_content": {
-    "related_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/guardias-de-seguridad.jpg"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "Cctv Videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "Control De Accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      }
-    ],
-    "nearby_locations": [],
-    "upsell_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
-    "quality_score": 80,
-    "published": false
+    "quality_score": 0,
+    "published": true
   }
 }

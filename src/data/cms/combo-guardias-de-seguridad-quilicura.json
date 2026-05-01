@@ -1,96 +1,72 @@
 {
   "sections": {
     "hero": {
-      "heading": "Guardias de Seguridad en Quilicura",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector norte de Santiago.",
-      "cta_text": "Cotizar en Quilicura",
-      "cta_link": "/cotizacion?service=guardias-de-seguridad&location=quilicura",
-      "image": "/images/service-guardias-de-seguridad.webp"
+      "heading": "Guardias de Seguridad en Quilicura | Protección Profesional 24/7 con OS-10",
+      "subheading": "Guardias de seguridad certificados OS-10 para empresas, bodegas y condominios en Quilicura. Experiencia comprobada, cobertura inmediata y supervisión permanente."
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Guardias De Seguridad",
-        "url": "/servicios/guardias-de-seguridad"
-      },
-      {
-        "label": "Quilicura",
-        "url": "/servicios/guardias-de-seguridad/quilicura"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Guardias de Seguridad en Quilicura?",
-      "content": "En GuardMan Chile somos especialistas en guardias de seguridad en Quilicura. Nuestra experiencia en el sector norte de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Quilicura y toda la zona Norte.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Guardias certificados OS-10 con capacitación continua",
-        "Monitoreo 24/7 desde nuestro centro de control propio",
-        "Respuesta inmediata ante emergencias con coordinación a Carabineros",
-        "Cobertura integral en toda la comuna",
-        "Informes de actividad diaria y reportes semanales",
-        "Esquemas de turnos adaptables: diurno, nocturno, 4x4, 6x1"
+      "heading": "Servicios de Guardias de Seguridad en Quilicura para Proteger tu Negocio y Patrimonio",
+      "paragraphs": [
+        "En GuardMan Chile sabemos que la seguridad de tu empresa, bodega o instalación en Quilicura es una prioridad que no admite improvisaciones. Con más de 8 años de experiencia en seguridad privada en Chile, hemos consolidado un equipo de guardias de seguridad altamente capacitados y con certificación OS-10 vigente, listos para cubrir tus necesidades de vigilancia y protección en esta comuna estratégica de la Región Metropolitana.",
+        "Quilicura se ha posicionado como uno de los polos logísticos y comerciales más importantes del gran Santiago, lo que ha generado una creciente demanda de guardias de seguridad profesionales. Nuestra empresa cuenta con presencia activa en la comuna, desplegando personal en zonas industriales como Lo Echevers, El Montijo y Ciudad de los Valles, así como en sectores residenciales y comerciales. Cada guardia es seleccionado rigurosamente, con antecedentes verificados y formación especializada en prevención de riesgos."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Quilicura",
-      "content": "",
-      "points": [
-        "industrias, bodegas y centros logísticos requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia perimetral, control vehicular y seguridad industrial es cada vez más urgente en el sector norte de Santiago.",
-        " muchas empresas y residencias en Quilicura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Por qué elegir GuardMan para tus Guardias de Seguridad en Quilicura?",
+      "items": [
+        "Guardias con certificación OS-10 vigente y más de 8 años de experiencia en seguridad privada en Chile",
+        "Cobertura disponible los 365 días del año, incluyendo festivos y horarios especiales",
+        "Centro de monitoreo 24/7 con comunicación directa con nuestros guardias en terreno",
+        "Cobertura en 14 comunas de la Región Metropolitana, incluyendo Quilicura y comunas cercanas",
+        "Supervisión constante y reportes de actividad para mantenerte informado sobre la seguridad de tus instalaciones",
+        "Coordinación con Carabineros y servicios de emergencia ante cualquier incidente",
+        "Personal seleccionado rigurosamente con antecedentes verificados y formación en prevención de riesgos",
+        "Planes flexibles adaptados al tamaño y tipo de tu empresa o instalación en Quilicura"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Quilicura",
+      "heading": "Riesgos de no Contar con Guardias de Seguridad Profesionales en Quilicura",
       "items": [
-        "industrias, bodegas y centros logísticos requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de vigilancia perimetral, control vehicular y seguridad industrial es cada vez más urgente en el sector norte de Santiago.",
-        " muchas empresas y residencias en Quilicura enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Mayor vulnerabilidad ante robos y sustracciones que afectan directamente tus activos inventory y personal",
+        "Falta de control efectivo en el acceso de personas y vehículos a tus instalaciones, generando ingresos no autorizados",
+        "Incidentes no detectados a tiempo que pueden escalar y generar pérdidas económicas significativas para tu operación",
+        "Dificultad para responder ante emergencias de manera efectiva y coordinada sin personal entrenado",
+        "Pérdida de confianza de clientes y trabajadores al no garantizar un entorno seguro para desarrollar sus actividades"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Norte"
-      },
-      {
-        "value": "Norte",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto cuesta un guardia de seguridad en Quilicura?",
-        "answer": "El precio depende de la cantidad de guardias, turnos y servicios adicionales. Ofrecemos cotizaciones personalizadas sin compromiso. Contáctanos para una evaluación gratuita."
-      },
-      {
-        "question": "¿Los guardias tienen certificación OS-10 vigente?",
-        "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 obligatoria y al día. Es un requisito legal que cumplimos estrictamente para su protección y la nuestra."
-      },
-      {
-        "question": "¿Tienen cobertura 24 horas?",
-        "answer": "Sí, ofrecemos servicio 24/7 los 365 días del año. Nuestro centro de monitoreo propio opera sin interrupciones y tenemos guardias de reemplazo disponibles."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Nuestros Servicios de Seguridad en Quilicura",
+      "items": [
+        {
+          "question": "¿Qué tipos de instalaciones en Quilicura pueden beneficiarse con guardias de seguridad?",
+          "answer": "En Quilicura hemos protegido exitosamente naves logísticas, centros de distribución, plantas manufactureras, data centers, condominios residenciales y centros comerciales. Cada tipo de instalación tiene necesidades específicas de seguridad, y nuestros guardias se adaptan para cubrir desde control de acceso básico hasta vigilancia perimetral especializada con rondas programadas."
+        },
+        {
+          "question": "¿Cómo verifican que los guardias tengan la certificación OS-10 vigente en Quilicura?",
+          "answer": "Todos nuestros guardias cuentan con certificación OS-10 vigente, verificada directamente con la Prefectura de Seguridad Privada (O.S.10) de Carabineros de Chile. Realizamos actualizaciones y reentrenamientos periódicos para mantener los más altos estándares de calidad, asegurando que cada guardia opere dentro del marco legal establecido para la seguridad privada en Chile."
+        },
+        {
+          "question": "¿Qué modalidades de turnos ofrecen para guardias de seguridad en Quilicura?",
+          "answer": "Ofrecemos múltiples modalidades adaptadas a cada cliente: turnos 4x4 (cuatro días trabajados, cuatro libres), turnos 6x1, turnos diurnos y nocturnos fijos, y cobertura 24/7 continua. Cada modalidad tiene ventajas según el tipo de actividad, nivel de riesgo y presupuesto disponible para tu instalación en Quilicura."
+        },
+        {
+          "question": "¿Cómo solicitan una cotización de guardias de seguridad en Quilicura?",
+          "answer": "Puedes contactarnos a través de nuestro formulario de cotización indicando las características de tu instalación, el tipo de actividad, cantidad de guardias requeridos y turnos necesarios. Nuestro equipo evaluará tus requerimientos y te entregando una propuesta personalizada sin compromiso, adaptada a las necesidades específicas de tu empresa o propiedad en Quilicura."
+        },
+        {
+          "question": "¿Qué zonas específicas de Quilicura tienen cobertura con guardias de seguridad?",
+          "answer": "Contamos con guardias desplegados en las principales zonas de Quilicura, incluyendo el sector industrial Lo Echevers, Ciudad de los Valles, El Montijo, el área comercial del centro de Quilicura y los sectores residenciales de la comuna. Nuestra cobertura se extiende también a comunas cercanas como Renca, Huechuraba y Pudahuel para cubrir necesidades integrales de seguridad."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Quilicura",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Quilicura",
-      "button_link": "/cotizacion?service=guardias-de-seguridad&location=quilicura"
+      "heading": "Solicita tu Cotización de Guardias de Seguridad en Quilicura sin Compromiso",
+      "subheading": "Cuéntanos sobre tu empresa o instalación y te entregaremos una propuesta personalizada. Nuestro equipo evaluará tus necesidades de seguridad en Quilicura y propondrá la mejor solución.",
+      "button": "Cotizar Servicio de Guardias en Quilicura"
+    },
+    "meta": {
+      "title": "Guardias de Seguridad en Quilicura | OS-10 Certificado - Cotiza Ahora",
+      "description": "Guardias de seguridad certificados OS-10 en Quilicura para empresas, bodegas y condominios. Protección 24/7 con experiencia. Solicita tu cotización sin compromiso."
     }
   }
 }

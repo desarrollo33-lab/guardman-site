@@ -3,29 +3,17 @@
     "hero": {
       "heading": "Guardias de Seguridad en Renca | GuardMan Chile",
       "subheading": "Protección profesional con guardias OS-10 certificados. Más de 8 años cuidando hogares y empresas en Renca.",
-      "image": "/images/og-default.webp"
+      "cta_text": "Solicitar Cotización Gratis"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Ubicaciones",
-        "url": "/ubicaciones"
-      },
-      {
-        "label": "Renca",
-        "url": "/ubicaciones/renca"
-      }
-    ],
     "intro": {
-      "title": "Servicio de Seguridad Privada en Renca",
-      "content": "En GuardMan Chile somos la empresa de seguridad privada con mayor presencia en Renca. Contamos con guardias certificados por OS-10 y con experiencia en el sector industrial y residencial de la comuna.\n\nOfrecemos soluciones integrales de seguridad adaptadas a las necesidades de cada cliente. Desde vigilancia residencial hasta protección de bodegas y empresas, nuestro equipo está disponible las 24 horas para garantizar tu tranquilidad.",
-      "image": "/images/location-intro.jpg"
+      "heading": "Servicio de Seguridad Privada en Renca",
+      "paragraphs": [
+        "En GuardMan Chile somos la empresa de seguridad privada con mayor presencia en Renca. Contamos con guardias certificados por OS-10 y con experiencia en el sector industrial y residencial de la comuna.",
+        "Ofrecemos soluciones integrales de seguridad adaptadas a las necesidades de cada cliente. Desde vigilancia residencial hasta protección de bodegas y empresas, nuestro equipo está disponible las 24 horas para garantizar tu tranquilidad."
+      ]
     },
     "features": {
-      "title": "Nuestros Servicios de Seguridad en Renca",
+      "heading": "Nuestros Servicios de Seguridad en Renca",
       "items": [
         "Guardias de seguridad certificados OS-10 con experiencia en zonas industriales y residenciales de Renca",
         "Monitoreo remoto 24/7 desde nuestro centro de control con cámaras y sensores de movimiento",
@@ -35,46 +23,66 @@
         "Escoltas y acompañamientos para directivos y ejecutivos con agenda en Renca"
       ]
     },
-    "stats": [
-      {
-        "value": "8+",
-        "label": "Años de experiencia en Renca"
-      },
-      {
-        "value": "120+",
-        "label": "Clientes satisfechos en la comuna"
-      },
-      {
-        "value": "45+",
-        "label": "Guardias operando en la zona"
-      },
-      {
-        "value": "97%",
-        "label": "Porcentaje de resolución de emergencias"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto cuesta contratar guardias de seguridad en Renca?",
-        "answer": "Los costos dependen del número de guardias, horario y servicios adicionales requeridos. En GuardMan ofrecemos cotizaciones personalizadas sin costo. Contáctanos y te entregamos un presupuesto en menos de 24 horas."
-      },
-      {
-        "question": "¿Los guardias de GuardMan operan las 24 horas en Renca?",
-        "answer": "Sí, brindamos cobertura continua durante las 24 horas del día, los 7 días de la semana. Puedes contratar turnos diurnos, nocturnos o mixtos según las necesidades de tu propiedad o empresa."
-      },
-      {
-        "question": "¿Qué cobertura tiene GuardMan en los distintos sectores de Renca?",
-        "answer": "Cubrimos toda la comuna incluyendo el sector industrial, poblaciones residenciales y zonas comerciales. Contamos con equipos de respuesta rápida en la zona para atender emergencias en tiempo récord."
-      },
-      {
-        "question": "¿Ofrecen sistemas de cámaras y monitoreo remoto en Renca?",
-        "answer": "Sí, instalamos equipos de CCTV con visualización remota desde tu celular o computador. También puedes contratar monitoreo profesional las 24 horas desde nuestro centro de control."
-      }
-    ],
+    "issues": {
+      "heading": "Problemas de Seguridad que Resolvemos en Renca",
+      "items": [
+        "Robos y saqueos en warehouses y centros de distribución del sector industrial de Renca",
+        "Entradas no autorizadas a condomínios y parcelas por sectores aislados",
+        "Delincuencia en vía pública durante horarios nocturnos en poblaciones del sector poniente",
+        "Hurto de vehículos y accesorios en barrios residenciales con poca iluminación",
+        "Faltantes y mercadería en empresas del área comercial e industrial de la comuna"
+      ]
+    },
+    "stats": {
+      "heading": "Números que Respaldan Nuestra Trayectoria en Renca",
+      "items": [
+        {
+          "label": "Años de experiencia en Renca",
+          "value": "8+"
+        },
+        {
+          "label": "Clientes satisfechos en la comuna",
+          "value": "120+"
+        },
+        {
+          "label": "Guardias operando en la zona",
+          "value": "45+"
+        },
+        {
+          "label": "Porcentaje de resolución de emergencias",
+          "value": "97%"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Seguridad en Renca",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta contratar guardias de seguridad en Renca?",
+          "answer": "Los costos dependen del número de guardias, horario y servicios adicionales requeridos. En GuardMan ofrecemos cotizaciones personalizadas sin costo. Contáctanos y te entregamos un presupuesto en menos de 24 horas."
+        },
+        {
+          "question": "¿Los guardias de GuardMan operan las 24 horas en Renca?",
+          "answer": "Sí, brindamos cobertura continua durante las 24 horas del día, los 7 días de la semana. Puedes contratar turnos diurnos, nocturnos o mixtos según las necesidades de tu propiedad o empresa."
+        },
+        {
+          "question": "¿Qué cobertura tiene GuardMan en los distintos sectores de Renca?",
+          "answer": "Cubrimos toda la comuna incluyendo el sector industrial, poblaciones residenciales y zonas comerciales. Contamos con equipos de respuesta rápida en la zona para atender emergencias en tiempo récord."
+        },
+        {
+          "question": "¿Ofrecen sistemas de cámaras y monitoreo remoto en Renca?",
+          "answer": "Sí, instalamos equipos de CCTV con visualización remota desde tu celular o computador. También puedes contratar monitoreo profesional las 24 horas desde nuestro centro de control."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu Hogar o Empresa en Renca Hoy",
-      "button_text": "Cotizar Ahora",
-      "button_link": "/cotizacion"
+      "heading": "Protege tu Hogar o Empresa en Renca Hoy",
+      "subheading": "No dejes la seguridad de tu familia o negocio al azar. Contáctanos y recibe una cotización personalizada sin compromiso.",
+      "button": "Cotizar Ahora"
+    },
+    "meta": {
+      "title": "Seguridad Renca | GuardMan Chile",
+      "description": "Empresa de seguridad en Renca con guardias certificados OS-10. Protección 24/7 para hogares y empresas. Cotiza gratis."
     }
   }
 }

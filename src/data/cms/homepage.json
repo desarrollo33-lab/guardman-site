@@ -1,0 +1,145 @@
+{
+  "type": "homepage",
+  "slug": "home",
+  "version": 1,
+  "last_modified": "2026-04-23T16:31:42",
+  "seo": {
+    "title": "Seguridad Privada en Santiago | GuardMan Chile",
+    "description": "GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana."
+  },
+  "content": {
+    "hero": {
+      "headline": "Seguridad Privada en Santiago, Chile",
+      "subheadline": "Protegemos lo que mas te importa",
+      "background_image": "/images/hero-home.webp",
+      "phone": "+56930000010",
+      "badge_image": "/images/escudo-os10.webp"
+    },
+    "nosotros": {
+      "badge": "Grupo GuardMan Chile",
+      "title": "GuardMan Chile - Seguridad privada profesional en Santiago",
+      "paragraph": "Mas de 8 años de experiencia protegiendo lo que mas te importa. Guardias certificados OS-10 y tecnologia de vanguardia para un servicio integral y confiable.",
+      "image": "/images/nosotros_seccion.webp",
+      "image_badge": "Conoce GuardMan",
+      "features": [
+        {
+          "title": "Guardias certificados OS-10 vigentes",
+          "description": "Personal capacitado y certificado para maxima proteccion."
+        },
+        {
+          "title": "Cumplimiento Ley 21.659",
+          "description": "Operamos dentro de todas las normativas legales vigentes."
+        },
+        {
+          "title": "Atencion 24/7 los 365 dias",
+          "description": "Respuesta inmediata en cualquier momento del año."
+        },
+        {
+          "title": "Centro de monitoreo propio",
+          "description": "Supervision continua desde nuestras instalaciones."
+        }
+      ],
+      "cta_text": "Conoce mas sobre nosotros",
+      "cta_link": "/nosotros",
+      "stats": {
+        "guards": "500+",
+        "clients": "200+",
+        "locations": "14",
+        "years": "8+"
+      }
+    },
+    "servicios": {
+      "title": "Soluciones de seguridad para cada necesidad",
+      "subtitle": "Desde guardias de seguridad hasta tecnologia de vigilancia avanzada, adaptamos nuestros servicios a las caracteristicas de tu empresa o residencia.",
+      "cta_text": "Ver todos los servicios",
+      "cta_link": "/servicios"
+    },
+    "guardpod": {
+      "badge": "Tecnologia Propia GuardMan",
+      "title": "Guard Pod",
+      "paragraph": "Vigilancia autonoma para obras, eventos y zonas sin infraestructura. Energia solar, camaras PTZ y monitoreo remoto en una unidad desplegable en menos de 2 horas.",
+      "image": "/images/s4-thumbnail.webp",
+      "image_badge": "15 meses de I+D",
+      "features": [
+        {
+          "title": "Despliegue en menos de 2 horas",
+          "description": "Unidad autonoma lista para operar inmediatamente en cualquier ubicacion."
+        },
+        {
+          "title": "Energia solar, funciona sin red electrica",
+          "description": "Sistema energetico independiente ideal para zonas remotas."
+        },
+        {
+          "title": "Camaras PTZ 360 con vision nocturna",
+          "description": "Cobertura total y grabacion las 24 horas del dia."
+        },
+        {
+          "title": "15 meses de desarrollo propio",
+          "description": "Tecnologia 100% disenada y fabricada por GuardMan Chile."
+        }
+      ],
+      "cta_text": "Conocer Guard Pod",
+      "cta_link": "/servicios/guard-pod"
+    },
+    "sectores": {
+      "title": "Soluciones por sector",
+      "subtitle": "Adaptamos nuestros servicios a las necesidades especificas de cada industria en Santiago",
+      "cta_text": "Ver todos los sectores",
+      "cta_link": "/sectores"
+    },
+    "ajax": {
+      "badge": "Distribuidor Oficial Ajax Systems",
+      "title": "Tecnologia de clase mundial para tu seguridad",
+      "paragraph": "Somos distribuidores oficiales de Ajax Systems, la empresa lider mundial en sistemas de alarmas inteligentes con mas de 4.5 millones de usuarios protegidos en 187 paises.",
+      "image": "/images/Ajax-systems-header.jpg",
+      "image_badge": "Distribuidor Oficial",
+      "features": [
+        {
+          "title": "Certificacion Grade 3 Professional",
+          "description": "El maximo nivel internacional de seguridad para instalaciones residenciales y comerciales de alto riesgo."
+        },
+        {
+          "title": "Protocolo Jeweller",
+          "description": "Comunicacion radio encriptada de largo alcance (hasta 2km), inmune a jamming, con verificacion constante del sistema."
+        },
+        {
+          "title": "Monitoreo y Video Verificacion 24/7",
+          "description": "Centro de monitoreo propio con verificacion visual de alarmas en tiempo real y respuesta inmediata."
+        },
+        {
+          "title": "App Ajax - Control Total",
+          "description": "Armado, camaras, automatizacion y notificaciones en tiempo real desde tu smartphone iOS y Android."
+        }
+      ],
+      "cta_text": "Conocer Ajax Systems",
+      "cta_link": "/contacto"
+    },
+    "clientes": {
+      "title": "Empresas que confian en GuardMan",
+      "subtitle": "Confian en nosotros las principales empresas de Santiago",
+      "cta_text": "Conoce mas sobre nosotros",
+      "cta_link": "/nosotros"
+    },
+    "ubicaciones": {
+      "badge": "Amplia Cobertura",
+      "title": "Protegemos en toda la Region Metropolitana",
+      "subtitle": "Presencia en las principales comunas de Santiago y la zona de Los Andes y San Felipe.",
+      "cta_text": "Ver todas las ubicaciones",
+      "cta_link": "/ubicaciones"
+    },
+    "cta_final": {
+      "badge": "Certificacion OS-10 y Ley 21.659",
+      "title": "Proteccion profesional para tu tranquilidad",
+      "subtitle": "Mas de 8 años protegiendo empresas y residencias con guardias certificados, tecnologia de vanguardia y atencion personalizada.",
+      "cta1_text": "Hablar con un experto",
+      "cta1_link": "/contacto",
+      "cta2_text": "Conoce nuestra trayectoria",
+      "cta2_link": "/nosotros",
+      "badge_image": "/images/escudo-os10.webp"
+    }
+  },
+  "meta": {
+    "author": "admin",
+    "quality_score": 100
+  }
+}

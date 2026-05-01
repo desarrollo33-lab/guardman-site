@@ -1,150 +1,89 @@
 {
   "slug": "cctv-videovigilancia/san-felipe",
   "type": "combo",
-  "service": "cctv-videovigilancia",
-  "location": "san-felipe",
   "version": 1,
-  "last_modified": "2026-04-22T14:13:24.648Z",
+  "last_modified": "2026-05-01T12:49:14.933Z",
   "seo": {
-    "title": "Cctv Videovigilancia en San Felipe",
-    "description": "Servicio de cctv videovigilancia profesional en San Felipe. Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
-    "keywords": [],
-    "canonical": "https://guardman.cl/servicios/cctv-videovigilancia/san-felipe"
+    "title": "CCTV y Videovigilancia San Felipe | GuardMan Chile",
+    "description": "Sistemas de CCTV y videovigilancia en San Felipe con guardias OS-10 certificados. Monitoreo 24/7, instalación profesional. Cotiza sin compromiso.",
+    "canonical": ""
   },
   "content": {
     "hero": {
-      "heading": "CCTV y Videovigilancia en San Felipe",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
-      "cta_text": "Cotizar en San Felipe",
-      "cta_link": "/cotizacion?service=cctv-videovigilancia&location=san-felipe",
-      "image": "/images/service-cctv-videovigilancia.webp"
+      "heading": "CCTV y Videovigilancia en San Felipe | Seguridad Profesional 24/7",
+      "subheading": "Protege tu hogar, negocio o empresa con sistemas de videovigilancia de última generación. Guardias certificados OS-10 y monitoreo permanente en toda la provincia de San Felipe."
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Cctv Videovigilancia",
-        "url": "/servicios/cctv-videovigilancia"
-      },
-      {
-        "label": "San Felipe",
-        "url": "/servicios/cctv-videovigilancia/san-felipe"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir CCTV y Videovigilancia en San Felipe?",
-      "content": "En GuardMan Chile somos especialistas en cctv y videovigilancia en San Felipe. Nuestra experiencia en San Felipe y la zona de Valparaíso nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en San Felipe y toda la zona Valparaíso.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Cámaras de alta definición con visión nocturna",
-        "Monitoreo remoto 24/7 desde nuestra central",
-        "Grabación en la nube con respaldo de 30 días",
-        "Detección de movimiento y alertas en tiempo real",
-        "Acceso desde cualquier dispositivo móvil",
-        "Instalación profesional y mantenimiento incluido"
+      "heading": "Expertos en Videovigilancia y CCTV en San Felipe",
+      "paragraphs": [
+        "En GuardMan Chile somos especialistas en instalar sistemas de CCTV y videovigilancia en San Felipe y toda la provincia del Valle del Aconcagua. Contamos con más de 8 años de experiencia protegiendo hogares, comercios y empresas con soluciones personalizadas de seguridad electrónica.",
+        "Nuestra empresa de seguridad privada en San Felipe trabaja con tecnología de punta: cámaras de alta definición con visión nocturna, sistemas IP, grabación en la nube y acceso remoto desde tu celular. Cada instalación es diseñada por técnicos certificados para maximizar la cobertura y la disuasión efectiva.",
+        "El factor humano sigue siendo clave en la seguridad. Por eso, todos nuestros guardias en San Felipe están certificados OS-10 por Carabineros de Chile, garantizando un servicio profesional y legalmente respaldado. Además, nuestra central de monitoreo opera las 24 horas, los 365 días del año."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué San Felipe",
-      "content": "",
-      "points": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Nuestro Servicio de Videovigilancia en San Felipe Incluye",
+      "items": [
+        "Cámaras de seguridad de alta resolución con visión nocturna infrarroja",
+        "Sistemas CCTV IP y analítica de video inteligente",
+        "Grabadores NVR con almacenamiento local y en la nube",
+        "Acceso remoto desde celular y computador las 24 horas",
+        "Monitoreo en tiempo real desde nuestra central de operaciones",
+        "Integración con sistemas de alarmas y control de acceso",
+        "Instalación profesional por técnicos certificados OS-10",
+        "Mantención preventiva y soporte técnico permanente",
+        "Evaluación de riesgos y diseño personalizado del sistema"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en San Felipe",
+      "heading": "Problemas de Seguridad que Resolvemos en San Felipe",
       "items": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos y hurtos en viviendas y parcelas de sectores rurales",
+        "Delincuencia en comercio local y centros comerciales",
+        "Accesos no autorizados a condomios y comunidades residenciales",
+        "Falta de visibilidad y cobertura en horarios nocturnos",
+        "Necesidad de evidencia grabada para denuncias y seguros"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Valparaíso"
-      },
-      {
-        "value": "Valparaíso",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo ver las cámaras en mi celular?",
-        "answer": "Sí, todas nuestras cámaras incluyen acceso remoto desde la app móvil. Puedes ver en tiempo real desde cualquier dispositivo, en cualquier momento."
-      },
-      {
-        "question": "¿Por cuánto tiempo se graba?",
-        "answer": "Por defecto grabamos 30 días en la nube con respaldo automático. Podemos extender el período según tus necesidades de seguridad."
-      },
-      {
-        "question": "¿Qué pasa si hay una emergencia?",
-        "answer": "Nuestro equipo de monitoreo recibe las alertas inmediatamente y coordina la respuesta: contacto a Carabineros, notificación a tus contactos de emergencia y activación de sirena si está configurado."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre CCTV en San Felipe",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta instalar un sistema de cámaras de seguridad en San Felipe?",
+          "answer": "El precio de instalación de cámaras de seguridad en San Felipe depende de la cantidad de cámaras, tecnología elegida y características del lugar. Un sistema básico parte desde $250.000 CLP con 4 cámaras, mientras que instalaciones profesionales con 8 a 16 cámaras pueden superar los $800.000 CLP. La mejor forma de obtener un precio exacto es solicitar una cotización personalizada con visita técnica gratuita."
+        },
+        {
+          "question": "¿Qué hago si las cámaras detectan movimiento sospechoso?",
+          "answer": "Cuando el sistema detecta movimiento, nuestra central de monitoreo recibe una alerta inmediata. Nuestros operadores evalúan la situación en tiempo real y se comunican contigo al instante. Si se confirma una emergencia, coordinamos directamente con Carabineros de Chile. Tu tranquilidad es nuestra prioridad."
+        },
+        {
+          "question": "¿Necesito autorización o permiso para instalar cámaras de videovigilancia?",
+          "answer": "Para instalaciones privadas en tu propiedad no necesitas permisos especiales. Sin embargo, si las cámaras captan espacios públicos o áreas compartidas, existen normativas de protección de datos que debes considerar. En GuardMan te asesoramos sobre la legislación vigente y cumplimos con todos los requisitos de la certificación OS-10."
+        },
+        {
+          "question": "¿En cuánto tiempo instalan el sistema de CCTV en San Felipe?",
+          "answer": "La instalación de un sistema de videovigilancia en una vivienda particular puede completarse en un solo día. Para empresas grandes o condomios, el proyecto puede tomar entre 2 y 5 días dependiendo de la complejidad. Siempre entregamos el sistema funcionando y capacitamos al usuario final."
+        },
+        {
+          "question": "¿Qué incluye el servicio de monitoreo 24/7 en San Felipe?",
+          "answer": "Nuestro servicio incluye supervisión constante de todas tus cámaras desde nuestra central de operaciones, respuesta inmediata ante alertas, coordinación con fuerzas de seguridad, soporte técnico remoto y visitas de mantención preventiva. Los sistemas quedan conectados a nuestra red de emergencia para garantizar una respuesta rápida ante cualquier incidente."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en San Felipe",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en San Felipe",
-      "button_link": "/cotizacion?service=cctv-videovigilancia&location=san-felipe"
+      "heading": "Protege tu Propiedad en San Felipe Hoy",
+      "subheading": "Recibe una asesoría personalizada y cotiza sin compromiso. Instalación profesional, tecnología de punta y guardias certificados.",
+      "button": "Cotizar CCTV San Felipe"
+    },
+    "meta": {
+      "title": "CCTV y Videovigilancia San Felipe | GuardMan Chile",
+      "description": "Sistemas de CCTV y videovigilancia en San Felipe con guardias OS-10 certificados. Monitoreo 24/7, instalación profesional. Cotiza sin compromiso."
     }
   },
-  "related_content": {
-    "related_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/guardias-de-seguridad.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "Control De Accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      },
-      {
-        "slug": "escoltas-privados",
-        "title": "Escoltas Privados",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/escoltas-privados.jpg"
-      }
-    ],
-    "nearby_locations": [],
-    "upsell_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      },
-      {
-        "slug": "monitoreo-24-7",
-        "title": "Monitoreo 24 7",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
-    "quality_score": 80,
-    "published": false
+    "quality_score": 0,
+    "published": true
   }
 }

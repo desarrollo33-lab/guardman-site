@@ -1,96 +1,78 @@
 {
   "sections": {
     "hero": {
-      "heading": "Guardias de Seguridad en Huechuraba",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector norte de Santiago.",
-      "cta_text": "Cotizar en Huechuraba",
-      "cta_link": "/cotizacion?service=guardias-de-seguridad&location=huechuraba",
-      "image": "/images/service-guardias-de-seguridad.webp"
+      "heading": "Guardias de Seguridad en Huechuraba | Protección Profesional 24/7",
+      "subheading": "GuardMan Chile: Empresa de seguridad con guardias OS-10 certificados y experiencia comprobada en Huechuraba. Cotiza hoy y protege lo que más importa.",
+      "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Guardias De Seguridad",
-        "url": "/servicios/guardias-de-seguridad"
-      },
-      {
-        "label": "Huechuraba",
-        "url": "/servicios/guardias-de-seguridad/huechuraba"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Guardias de Seguridad en Huechuraba?",
-      "content": "En GuardMan Chile somos especialistas en guardias de seguridad en Huechuraba. Nuestra experiencia en el sector norte de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Huechuraba y toda la zona Norte.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Guardias certificados OS-10 con capacitación continua",
-        "Monitoreo 24/7 desde nuestro centro de control propio",
-        "Respuesta inmediata ante emergencias con coordinación a Carabineros",
-        "Cobertura integral en toda la comuna",
-        "Informes de actividad diaria y reportes semanales",
-        "Esquemas de turnos adaptables: diurno, nocturno, 4x4, 6x1"
+      "heading": "Servicio de Guardias de Seguridad en Huechuraba con Certificación OS-10",
+      "paragraphs": [
+        "En GuardMan Chile entendemos que la seguridad de tu hogar, empresa o condominio en Huechuraba es una prioridad que no admite compromisos. Contamos con guardias de seguridad en Huechuraba profesionalmente capacitados, todos con certificación OS-10 vigente, lo que garantiza el cumplimiento de los más altos estándares establecidos por la Prefectura de Seguridad Privada de Carabineros de Chile.",
+        "Nuestra experiencia de más de 8 años en el mercado de seguridad privada nos ha permitido consolidarnos como una de las empresas de guardias de seguridad en Huechuraba más confiables de la zona. Disponemos de cobertura las 24 horas, los 365 días del año, con personal listo para responder ante cualquier situación de riesgo o emergencia en tu instalación.",
+        "Cada guardia de seguridad en Huechuraba que desplegamos pasa por un riguroso proceso de selección y entrenamiento continuo. No solo verificamos sus antecedentes y certificaciones, sino que también evaluamos sus habilidades blandas, capacidad de reacción ante emergencias y compromiso con la prevención del delito. El resultado es un equipo de profesionales que no solo vigilan, sino que previenen incidentes antes de que ocurran."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Huechuraba",
-      "content": "",
-      "points": [
-        "centros comerciales, malls and oficinas corporativas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y monitoreo CCTV es cada vez más urgente en el sector norte de Santiago.",
-        " muchas empresas y residencias en Huechuraba enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de Nuestros Guardias de Seguridad en Huechuraba",
+      "items": [
+        "Guardias con certificación OS-10 vigente y reinscripción al día ante la autoridad fiscalizadora",
+        "Cobertura 24/7 durante los 365 días del año con turnos rotativos o fijos según tu necesidad",
+        "Supervisión permanente desde nuestro centro de operaciones con comunicación en tiempo real",
+        "Control de accesos e identificación de visitantes, contractors y proveedores",
+        "Rondas preventivas programables y aleatorias para maximizar la disuasión",
+        "Registro electrónico de novedades con reportes detallados por turno",
+        "Coordinación inmediata con Carabineros y servicios de emergencia",
+        "Uniforme profesional completo e identificación visible para disuasión efectiva",
+        "Capacitación en primeros auxilios, manejo de crisis y protocolo de evacuaciones",
+        "Experiencia verificada en instalaciones industriales, comerciales y residenciales"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Huechuraba",
+      "heading": "Problemas que Resolvemos con Nuestros Guardias de Seguridad en Huechuraba",
       "items": [
-        "centros comerciales, malls and oficinas corporativas requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y monitoreo CCTV es cada vez más urgente en el sector norte de Santiago.",
-        " muchas empresas y residencias en Huechuraba enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos yhurtos en viviendas y condominios: La presencia visible de guardias certificados reduce significativamente los intentos de ingreso no autorizado y disuade a posibles delincuentes que buscan objetivos vulnerables.",
+        "Sustracción en empresas y bodegas: Protegemos activos, inventario y mercadería en sectores industriales como Espacio Riesgo y Ciudad Empresarial, donde el movimiento de carga requiere control estricto.",
+        "Accessos no autorizados y seguridad perimetral: Nuestros guardias controlan quién entra y sale de tus instalaciones, verificando identidades y registrando cada visitante para mantener un ambiente seguro.",
+        "Falta de supervisión en horarios críticos: Con turnos diurnos, nocturnos y 4x4, garantizamos vigilancia continua incluso en las horas de mayor riesgo, como madrugadas y festivos.",
+        "Vandalismo y daños a la propiedad: La presencia disuasoria de guardias uniformados y bien posicionados reduce significativamente los actos vandálicos y los daños a infraestructura.",
+        "Emergencias no atendidas: Cada guardia está entrenado para activar protocolos de emergencia, coordinar con serviciosBomberos, Carabineros y SAMU, y gestionar evacuaciones de manera ordenada."
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Norte"
-      },
-      {
-        "value": "Norte",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto cuesta un guardia de seguridad en Huechuraba?",
-        "answer": "El precio depende de la cantidad de guardias, turnos y servicios adicionales. Ofrecemos cotizaciones personalizadas sin compromiso. Contáctanos para una evaluación gratuita."
-      },
-      {
-        "question": "¿Los guardias tienen certificación OS-10 vigente?",
-        "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 obligatoria y al día. Es un requisito legal que cumplimos estrictamente para su protección y la nuestra."
-      },
-      {
-        "question": "¿Tienen cobertura 24 horas?",
-        "answer": "Sí, ofrecemos servicio 24/7 los 365 días del año. Nuestro centro de monitoreo propio opera sin interrupciones y tenemos guardias de reemplazo disponibles."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Guardias de Seguridad en Huechuraba",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta contratar guardias de seguridad en Huechuraba?",
+          "answer": "El precio de nuestros servicios depende de varios factores: cantidad de guardias requeridos, tipo de instalación, horario de cobertura y modalidad de turno (fijo o rotativo). Para entregarte una cotización precisa, analizamos las necesidades específicas de tu propiedad y diseñamos un plan de seguridad a medida. Contáctanos y recibe una cotización sin compromiso en menos de 24 horas."
+        },
+        {
+          "question": "¿Qué documentación deben tener los guardias de seguridad?",
+          "answer": "Todo guardia de seguridad debe contar con: certificación OS-10 vigente emitida por la Prefectura de Seguridad Privada de Carabineros, credencial de identidad proporcionada por la empresa empleador, antecedentes comerciales al día, y uniforme institucional. En GuardMan Chile verificamos que todo nuestro personal cumpla con estos requisitos antes de cualquier despliegue en Huechuraba."
+        },
+        {
+          "question": "¿Pueden los guardias de seguridad portar armas de fuego?",
+          "answer": "El uso de armas de fuego está restringido y regulado por la normativa OS-10 para guardias de seguridad privada. Nuestros guardias están capacitados para actuar como elemento disuasorio principal y manejar situaciones de riesgo sin necesidad de armes. En casos de amenaza grave, el protocolo indica contactar inmediatamente a Carabineros, quienes son la autoridad competente para el uso de la fuerza."
+        },
+        {
+          "question": "¿Qué tipos de instalaciones protegen en Huechuraba?",
+          "answer": "En Huechuraba cubrimos diversos sectores: condominios y residential complexes en Ciudad Empresarial y Huechuraba centro, naves industriales y bodegas en zona poniente e Espacio Riesgo, centros comerciales y retail, oficinas corporativas, instituciones educativas y centros de datos. Cada tipo de instalación requiere un perfil de guardia específico que nossos especialistas diseñan a medida."
+        },
+        {
+          "question": "¿Cómo es el proceso de contratación de guardias de seguridad en Huechuraba?",
+          "answer": "El proceso es simple: primero, nos contactas y analizamos tus necesidades de seguridad. Luego, diseñamos un plan personalizado considerando cobertura, turnos y supervisión. Posteriormente, seleccionamos y desplegamos al personal certificado. Finalmente, supervisamos continuamente el servicio y ajustamos según retroalimentación. Todo el proceso lo manejamos nosotros con total transparencia."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Huechuraba",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Huechuraba",
-      "button_link": "/cotizacion?service=guardias-de-seguridad&location=huechuraba"
+      "heading": "Protege tu Propiedad en Huechuraba con Guardias Profesionales Hoy",
+      "subheading": "No dejes la seguridad de tu familia, negocio o empresa al azar. Nuestros guardias de seguridad en Huechuraba están listos para protegerte con profesionalismo y compromiso. Cotiza ahora y recibe atención personalizada en menos de 24 horas.",
+      "button": "Cotizar Servicios de Seguridad",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
+    },
+    "meta": {
+      "title": "Guardias de Seguridad en Huechuraba | OS-10 Certificados - GuardMan",
+      "description": "Contrata guardias de seguridad en Huechuraba con certificación OS-10. Empresa profesional con 8+ años de experiencia. Cobertura 24/7. Cotiza hoy."
     }
   }
 }

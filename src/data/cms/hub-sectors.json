@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "heading": "Seguridad por Sector",
+    "subheading": "Soluciones de seguridad adaptadas a las necesidades específicas de cada industria y sector en Santiago.",
+    "image": "/images/hero-home.webp"
+  },
+  "stats": [
+    { "value": "200+", "label": "Empresas protegidas" },
+    { "value": "14", "label": "Comunas cobertura" },
+    { "value": "8+", "label": "Años experiencia" }
+  ],
+  "top_sectors": ["comercial", "industrial", "residencial"],
+  "cta": {
+    "text": "¿No encuentras tu sector?",
+    "description": "Contáctanos y diseñamos una solución a medida para tu industria.",
+    "button_text": "Solicitar Cotización",
+    "button_link": "/cotizacion"
+  }
+}

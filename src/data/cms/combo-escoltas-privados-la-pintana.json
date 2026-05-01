@@ -1,96 +1,80 @@
 {
   "sections": {
     "hero": {
-      "heading": "Escoltas Privados en La Pintana",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector sur de Santiago.",
-      "cta_text": "Cotizar en La Pintana",
-      "cta_link": "/cotizacion?service=escoltas-privados&location=la-pintana",
-      "image": "/images/service-escoltas-privados.webp"
+      "heading": "Escoltas Privados en La Pintana: Protección Personal Profesional con Certificación OS-10",
+      "subheading": "GuardMan Chile ofrece escoltas privados certificados para protegerte a ti y a tu familia en La Pintana y toda la Región Metropolitana. Evaluación de riesgo gratuita y cobertura 24/7.",
+      "image": null
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Escoltas Privados",
-        "url": "/servicios/escoltas-privados"
-      },
-      {
-        "label": "La Pintana",
-        "url": "/servicios/escoltas-privados/la-pintana"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Escoltas Privados en La Pintana?",
-      "content": "En GuardMan Chile somos especialistas en escoltas privados en La Pintana. Nuestra experiencia en el sector sur de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en La Pintana y toda la zona Sur.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Escoltas certificados OS-10 con experiencia militar o policial",
-        "Evaluación de riesgos previa al servicio",
-        "Protección ejecutiva y familiar",
-        "Transporte seguro y ruta de evasión",
-        "Coordinación con autoridades de seguridad",
-        "Confidentialidad y discreción total"
+      "heading": "Escoltas Privados en La Pintana: Seguridad Personal que Respalda tu Tranquilidad",
+      "paragraphs": [
+        "En GuardMan Chile entendemos que la seguridad personal es una necesidad creciente en La Pintana y sus alrededores. Nuestros escoltas privados en La Pintana son profesionales altamente capacitados, con certificación OS-10 vigente, preparados para brindarte protección efectiva en tu día a día, ya sea en traslados, eventos o resguardo permanente.",
+        "Con más de 8 años de experiencia en el mercado chileno de seguridad privada y presencia en 14 comunas de la Región Metropolitana, nuestro equipo de escoltas privados en La Pintana Chile se adapta a tus necesidades específicas. Desde ejecutivos que requieren protección discreta hasta familias que buscan mayor tranquilidad, cada servicio es diseñado a medida.",
+        "La diferencia de nuestros escoltas privados en La Pintana radica en el compromiso con la prevención. Nuestros profesionales no solo reaccionan ante situaciones de riesgo, sino que las anticipan y neutralizan antes de que escalen. Esto es posible gracias a rigurosos programas de capacitación continua y años de experiencia en terreno."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué La Pintana",
-      "content": "",
-      "points": [
-        "residencial y pequeños comercios requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de rondas preventivas, control vecinal y coordinación con Carabineros es cada vez más urgente en el sector sur de Santiago.",
-        " muchas empresas y residencias en La Pintana enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Por qué elegir escoltas privados en La Pintana con GuardMan Chile?",
+      "items": [
+        "Escoltas certificados OS-10 por Carabineros de Chile: Todos nuestros profesionales cumplen con la normativa vigente y están acreditados por la Prefectura de Seguridad Privada.",
+        "Cobertura 24/7 los 365 días del año: Disponibilidad permanente para responder ante cualquier situación, sin importar la hora o el día.",
+        "Evaluación de riesgo gratuita: Analizamos tu situación particular para diseñar un plan de seguridad personalizado y efectivo.",
+        "Personal con experiencia verificada: Seleccionamos escoltas con trayectoria comprobada en protección personal y manejo de situaciones de emergencia.",
+        "Tecnología de monitoreo integrada: Complementamos la presencia física de nuestros escoltas con sistemas de comunicación y seguimiento en tiempo real.",
+        "Protocolos de prevención avanzados: Entrenamiento en identificación de amenazas, planificación de rutas seguras y evacuaciones preventivas.",
+        "Flexibilidad en modalidades de servicio: Desde escolta por horas para eventos puntuales hasta protección permanente las 24 horas.",
+        "Coordinación con fuerzas de seguridad: Protocolos de comunicación directa con Carabineros y servicios de emergencia para respuestas coordinadas."
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en La Pintana",
+      "heading": "Situaciones que Nuestros Escoltas Privados en La Pintana Manejan con Expertise",
       "items": [
-        "residencial y pequeños comercios requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de rondas preventivas, control vecinal y coordinación con Carabineros es cada vez más urgente en el sector sur de Santiago.",
-        " muchas empresas y residencias en La Pintana enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Traslados seguros en zonas de alto riesgo: Ya sea para niños送去学校, adultos mayores o ejecutivos, nuestros escoltas planifican y ejecutan rutas seguras minimizando exposición a potenciales amenazas.",
+        "Protección en contextos de amenazas documentadas: Si has recibido intimidaciones o sientes tu integridad en riesgo, nuestro equipo evalúa la situación y despliega medidas de protección adaptadas.",
+        "Eventos corporativos y reuniones de alto perfil: Brindamos cobertura de seguridad perimetral y escolta personal para invitados VIP, directivos o speakers que asisten a eventos en La Pintana o comunas aledañas.",
+        "Resguardo de personas vulnerables: Adultos mayores que viven solos, personas con condiciones médicas que requieren acompañamiento, o niños que necesitan protección adicional durante sus actividades cotidianas.",
+        "Contra vigilancia y detección de seguimiento: Nuestros escoltas identifican posible comportamiento sospechoso y establecen contramedidas para garantizar que tu rutina no sea alterada por potenciales amenazas.",
+        "Gestión de crisis y primeros auxilios: Además de su formación en seguridad, nuestros profesionales están entrenados en primeros auxilios y protocolos de emergencia para actuar efectivamente ante incidentes de salud o accidentes."
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Sur"
-      },
-      {
-        "value": "Sur",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cómo contratan el servicio de escoltas?",
-        "answer": "Primero evaluamos tus necesidades específicas de seguridad. Luego seleccionamos el escolta adecuado según perfil, experiencia y requisitos particulares."
-      },
-      {
-        "question": "¿Los escoltas tienen formación legal?",
-        "answer": "Sí, todos nuestros escoltas tienen certificación OS-10 y formación en defensa personal, primeros auxilios y manejo de situaciones de crisis."
-      },
-      {
-        "question": "¿El servicio es confidencial?",
-        "answer": "Absolutamente. La confidencialidad es parte fundamental de nuestro servicio. No revelamos información de nuestros clientes ni de sus rutinas."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Escoltas Privados en La Pintana",
+      "items": [
+        {
+          "question": "¿Cómo contratar un escolta privado en La Pintana?",
+          "answer": "El proceso es sencillo y comienza con contactarnos por teléfono al +56 9 XXXX XXXX o a través de nuestro formulario web. Uno de nuestros especialistas realizará una evaluación de riesgo gratuita, entendiendo tus necesidades específicas y el contexto de La Pintana. Con esa información, diseñamos un plan de seguridad personalizado y te asignamos al escolta o equipo de escoltas que mejor se adapte a tus requerimientos. Todo el proceso de contratación es transparente, sin costos ocultos."
+        },
+        {
+          "question": "¿Cuánto cuesta un escolta privado en La Pintana?",
+          "answer": "El precio de nuestros escoltas privados en La Pintana varía según la modalidad de servicio, duración del contrato y nivel de riesgo asociado. Realizamos una evaluación gratuita para cotizar con precisión. Valoramos la transparencia en nuestros precios y no aplicamos cobros ocultos. Contáctanos para recibir una cotización personalizada sin compromiso."
+        },
+        {
+          "question": "¿Qué documentación debe tener un escolta privado para operar legalmente en La Pintana?",
+          "answer": "Todo escolta privado en La Pintana debe contar con certificación OS-10 vigente, otorgada por la Prefectura de Seguridad Privada de Carabineros de Chile. Además, debe ser mayor de 21 años, tener sus antecedentes limpios y acreditar aptitud física y mental. En GuardMan Chile verificamos y actualizamos constantemente la documentación de todo nuestro personal, garantizando que operen dentro del marco legal."
+        },
+        {
+          "question": "¿Puedo contratar un escolta privado por horas en La Pintana?",
+          "answer": "Sí, ofrecemos flexibilidad total en las modalidades de servicio. Puedes contratar nuestros escoltas privados en La Pintana por horas para eventos puntuales, por días específicos, o bien optar por cobertura permanente 24/7 según tus necesidades. Nos adaptamos a tu agenda y presupuesto, siempre garantizando el mismo nivel de profesionalismo y seguridad."
+        },
+        {
+          "question": "¿Los escoltas de GuardMan en La Pintana están entrenados para emergencias médicas?",
+          "answer": "Sí, todos nuestros escoltas reciben formación en primeros auxilios y protocolos de emergencia. Ante una situación de salud crítica, pueden proporcionar asistencia inicial mientras se coordina la llegada de servicios de emergencia. Este entrenamiento complementa su formación en seguridad y asegura una respuesta integral ante diversos escenarios."
+        },
+        {
+          "question": "¿Cómo se coordina el trabajo entre escoltas y los sistemas de monitoreo de GuardMan?",
+          "answer": "Nuestros escoltas mantienen comunicación constante con nuestro Centro de Monitoreo 24/7 a través de equipos de comunicación avanzados. Esto permite координацию en tiempo real, generación de reportes automáticos y respuesta inmediata ante cualquier incidente. La combinación de presencia física disuasoria con tecnología de monitoreo crea un sistema de seguridad multicapa especialmente efectivo."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en La Pintana",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en La Pintana",
-      "button_link": "/cotizacion?service=escoltas-privados&location=la-pintana"
+      "heading": "Protege lo que más Importa: Solicita tu Cotización de Escoltas Privados en La Pintana",
+      "subheading": "En GuardMan Chile sabemos que la seguridad de tu familia no admite espera. Nuestros escoltas privados en La Pintana están listos para brindarte la tranquilidad que mereces. Contáctanos hoy y recibe una evaluación de riesgo gratuita sin compromiso.",
+      "button": "Solicitar Cotización Gratis",
+      "image": null
+    },
+    "meta": {
+      "title": "Escoltas Privados en La Pintana | Certificación OS-10 | GuardMan Chile",
+      "description": "Contrata escoltas privados certificados OS-10 en La Pintana. Protección personal 24/7, evaluación de riesgo gratuita y más de 8 años de experiencia. Solicita tu cotización hoy."
     }
   }
 }

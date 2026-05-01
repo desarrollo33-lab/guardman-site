@@ -1,0 +1,184 @@
+{
+  "client": {
+    "avanza-park": {
+      "logo": {
+        "key": "images/client-avanzapark.webp",
+        "alt": "Avanza Park"
+      }
+    },
+    "courtyard-marriott": {
+      "logo": {
+        "key": "images/client-courtyardmarriot.webp",
+        "alt": "Courtyard by Marriott"
+      }
+    },
+    "hamptons": {
+      "logo": {
+        "key": "images/client-hamptons.webp",
+        "alt": "Hamptons"
+      }
+    },
+    "kavak": {
+      "logo": {
+        "key": "images/client-kavak.webp",
+        "alt": "Kavak"
+      }
+    },
+    "work-center": {
+      "logo": {
+        "key": "images/client-workcenter.webp",
+        "alt": "Work Center"
+      }
+    }
+  },
+  "global": {
+    "ajax": {
+      "partner": {
+        "key": "images/Ajax-systems-header.jpg",
+        "alt": "Ajax Systems - Distribuidor oficial GuardMan"
+      }
+    },
+    "global": {
+      "badge": {
+        "key": "images/escudo-os10.webp",
+        "alt": "Certificación OS-10 GuardMan Chile"
+      },
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      },
+      "og": {
+        "key": "images/og-default.webp",
+        "alt": "GuardMan Chile - Seguridad Privada"
+      },
+      "staff": {
+        "key": "images/nosotros_seccion.webp",
+        "alt": "Personal de seguridad GuardMan Chile"
+      }
+    },
+    "guard-pod": {
+      "product": {
+        "key": "images/s4-thumbnail.webp",
+        "alt": "Guard Pod - Unidad de vigilancia autónoma"
+      }
+    }
+  },
+  "sector": {
+    "automotriz": {
+      "hero": {
+        "key": "images/sector-automotriz.webp",
+        "alt": "Seguridad para sector automotriz"
+      }
+    },
+    "comercial": {
+      "hero": {
+        "key": "images/s4-thumbnail.webp",
+        "alt": "Guard Pod - Unidad de vigilancia autónoma"
+      }
+    },
+    "construccion": {
+      "hero": {
+        "key": "images/sector-industrial.webp",
+        "alt": "Seguridad para sector industrial"
+      }
+    },
+    "diplomatico": {
+      "hero": {
+        "key": "images/sector-diplomatico.webp",
+        "alt": "Seguridad para sector diplomático"
+      }
+    },
+    "educacion": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "eventos": {
+      "hero": {
+        "key": "images/s4-thumbnail.webp",
+        "alt": "Guard Pod - Unidad de vigilancia autónoma"
+      }
+    },
+    "hoteleria": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "industrial": {
+      "hero": {
+        "key": "images/sector-industrial.webp",
+        "alt": "Seguridad para sector industrial"
+      }
+    },
+    "residencial": {
+      "hero": {
+        "key": "images/sector-residencial.webp",
+        "alt": "Seguridad para sector residencial"
+      }
+    },
+    "salud": {
+      "hero": {
+        "key": "images/nosotros_seccion.webp",
+        "alt": "Personal de seguridad GuardMan Chile"
+      }
+    }
+  },
+  "service": {
+    "auditoria-seguridad": {
+      "hero": {
+        "key": "images/service-auditoria-seguridad.webp",
+        "alt": "Auditoría de seguridad profesional"
+      }
+    },
+    "cctv-videovigilancia": {
+      "hero": {
+        "key": "images/service-cctv-videovigilancia.webp",
+        "alt": "Sistema de CCTV y videovigilancia"
+      }
+    },
+    "control-de-accesos": {
+      "hero": {
+        "key": "images/service-control-de-accesos.webp",
+        "alt": "Control de accesos biométrico"
+      }
+    },
+    "escoltas-privados": {
+      "hero": {
+        "key": "images/service-escoltas-privados.webp",
+        "alt": "Escoltas privados profesionales"
+      }
+    },
+    "guard-pod": {
+      "hero": {
+        "key": "images/s4-thumbnail.webp",
+        "alt": "Guard Pod - Unidad de vigilancia autónoma"
+      }
+    },
+    "guardias-de-seguridad": {
+      "hero": {
+        "key": "images/service-guardias-de-seguridad.webp",
+        "alt": "Guardias de seguridad certificados OS-10"
+      }
+    },
+    "monitoreo-24-7": {
+      "hero": {
+        "key": "images/service-monitoreo-24-7.webp",
+        "alt": "Centro de monitoreo 24/7"
+      }
+    },
+    "seguridad-eventos": {
+      "hero": {
+        "key": "images/service-seguridad-eventos.webp",
+        "alt": "Seguridad para eventos corporativos"
+      }
+    },
+    "seguridad-industrial": {
+      "hero": {
+        "key": "images/service-seguridad-industrial.webp",
+        "alt": "Seguridad industrial y perimetral"
+      }
+    }
+  }
+}

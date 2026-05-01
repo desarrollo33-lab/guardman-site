@@ -1,144 +1,93 @@
 {
   "slug": "control-de-accesos/san-felipe",
   "type": "combo",
-  "service": "control-de-accesos",
-  "location": "san-felipe",
   "version": 1,
-  "last_modified": "2026-04-22T14:13:24.692Z",
+  "last_modified": "2026-05-01T12:49:17.762Z",
   "seo": {
-    "title": "Control De Accesos en San Felipe",
-    "description": "Servicio de control de accesos profesional en San Felipe. Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
-    "keywords": [],
-    "canonical": "https://guardman.cl/servicios/control-de-accesos/san-felipe"
+    "title": "Control de Accesos San Felipe | Guardias Certificados OS-10 | GuardMan",
+    "description": "Servicio profesional de control de accesos en San Felipe. Guardias certificados OS-10, tecnología biométrica y monitoreo 24/7. Cotiza sin compromiso y protege tu propiedad.",
+    "canonical": ""
   },
   "content": {
     "hero": {
-      "heading": "Control de Accesos en San Felipe",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
-      "cta_text": "Cotizar en San Felipe",
-      "cta_link": "/cotizacion?service=control-de-accesos&location=san-felipe",
-      "image": "/images/service-control-de-accesos.webp"
+      "heading": "Control de Accesos en San Felipe | Seguridad Profesional para tu Hogar y Empresa",
+      "subheading": "Protegemos lo que más te importa con guardias certificados OS-10 y sistemas de control de accesos. Disponibilidad 24/7 los 365 días del año.",
+      "image": "control-accesos-san-felipe-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Control De Accesos",
-        "url": "/servicios/control-de-accesos"
-      },
-      {
-        "label": "San Felipe",
-        "url": "/servicios/control-de-accesos/san-felipe"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Control de Accesos en San Felipe?",
-      "content": "En GuardMan Chile somos especialistas en control de accesos en San Felipe. Nuestra experiencia en San Felipe y la zona de Valparaíso nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en San Felipe y toda la zona Valparaíso.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Lectores de tarjeta, biometricos y reconocimiento facial",
-        "Registro de ingresos y salidas en tiempo real",
-        "Integración con CCTV y monitoreo remoto",
-        "Gestión de permisos por horarios y zonas",
-        "Reportes de productividad y asistencia",
-        "Soporte técnico 24/7 y mantenimiento preventivo"
+      "heading": "Tu Primer Línea de Defensa Contra Ingresos No Autorizados",
+      "paragraphs": [
+        "En GuardMan Chile entendemos que cada acceso no controlado es una oportunidad para incidentes de seguridad. Por eso, nuestro servicio de control de accesos en San Felipe combina tecnología de vanguardia con la experiencia de guardias certificados OS-10, creando una barrera efectiva entre tu propiedad y cualquier amenaza potencial.",
+        "Ya sea que necesites proteger tu hogar, negocio o empresa en San Felipe, nuestro equipo diseña soluciones a medida. No trabajamos con plantillas genéricas: evaluamos cada punto de acceso, analizamos los flujos de personas y vehículos, y implementamos protocolos específicos para tu realidad. Eso nos permite ofrecer un control de accesos真正 efectivo.",
+        "Con 8+ años protegiendo organizaciones en toda la Región de Valparaíso y más de 500 guardias certificados, hemos aprendido que la mejor seguridad es quella que se adapta a ti, no al revés. ¿Necesitas control de accesos en San Felipe? Conversemos sobre tu situación."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué San Felipe",
-      "content": "",
-      "points": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Lo que Incluye Nuestro Servicio de Control de Accesos en San Felipe",
+      "items": [
+        "Guardias de seguridad certificados OS-10 en turnos 24/7, incluyendo festivos y fines de semana",
+        "Registro digital de ingresos y egresos con trazabilidad completa de cada visita",
+        "Control de accesos peatonales y vehiculares: personas, bikes, trucks y proveedores",
+        "Sistemas de citofonía y videoportero para verificación visual de visitas",
+        "Generación y gestión de códigos QR o invitaciones digitales para visitas",
+        "Coordinación con Carabineros y servicios de emergencia ante incidentes",
+        "Monitoreo remoto desde nuestro Centro de Control 24/7",
+        "Reportes semanales de incidencias y métricas de acceso",
+        "Protocolos diferenciados para residentes, visitas, proveedores y personal de emergencia",
+        "Rondas preventivas estratégicas en puntos críticos de tu propiedad"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en San Felipe",
+      "heading": "Señales de que tu Propiedad en San Felipe Necesita un Control de Accesos Mejor",
       "items": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "No sabes quién entra y sale cuando no estás: la falta de registro permite ingresos no autorizados sin que te enteres",
+        "Visitas no identificadas campan a sus anchas: sin un sistema de control, cualquier persona puede recorrer tus instalaciones sin ser cuestionada",
+        "Tu personal se siente inseguro: empleados stressed por accesos no controlados reportan menor productividad y mayor rotación",
+        "Los vecinos se quejan de ruidos y desconocidos: sin control vecinal, el desorden crece y la convivencia se deteriora",
+        "Incidentes reiterados sin registro: cuando algo pasa, no tienes cómo reconstruir los hechos ni identificar responsables",
+        "Gastos legales por invasiones a la propiedad: propiedades sin control documentado son caldo de cultivo para conflictos legales costosos"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Valparaíso"
-      },
-      {
-        "value": "Valparaíso",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Se puede integrar con mis cámaras existentes?",
-        "answer": "Sí, nuestros sistemas de control de accesos se integran con la mayoría de marcas de CCTV. Te ofrecemos una solución completa y compatible."
-      },
-      {
-        "question": "¿Qué pasa si pierdo mi tarjeta de acceso?",
-        "answer": "Podemos bloquear la tarjeta inmediatamente desde nuestra central y emitir una nueva. También ofrecemos alternativas como biometrics o códigos temporales."
-      },
-      {
-        "question": "¿El sistema funciona sin internet?",
-        "answer": "Sí, los controles de acceso tienen memoria local y funcionan offline. Cuando se restore la conexión, se sincronizan todos los registros."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Control de Accesos en San Felipe",
+      "items": [
+        {
+          "question": "¿Qué tipos de control de accesos ofrecen en San Felipe?",
+          "answer": "En San Felipe ofrecemos múltiples modalidades adaptadas a tu realidad: control biométrico con huella dactilar o reconocimiento facial, tarjetas de proximidad RFID, códigos PIN, y sistemas híbridos que combinan varias tecnologías. También implementamos barreras vehiculares con lectura de patentes y torniquetes para zonas de alto tránsito. Nuestro equipo evalúa tus necesidades específicas y diseña la solución óptima considerando presupuesto, flujo de personas y nivel de seguridad requerido."
+        },
+        {
+          "question": "¿Cuánto cuesta implementar un control de accesos en San Felipe?",
+          "answer": "El valor depende de factores como el número de puntos de acceso a controlar, tecnología elegida, cantidad de guardias necesarios y extensión horaria. Trabajamos con modelos flexibles: desde planes mensuales accesibles para casas y departamentos hasta contratos personalizados para empresas y condomínios. Para cotizar sin compromiso, puedes contactarnos directamente y uno de nuestros especialistas visitará tu propiedad para entregarte un presupuesto detallado sin costo."
+        },
+        {
+          "question": "¿Los guardias de seguridad tienen certificación OS-10?",
+          "answer": "Sí, absolutamente. En GuardMan Chile todos nuestros guardias cuentan con certificación OS-10 vigente, requisito legal establecido por Carabineros de Chile para ejercer funciones de seguridad privada. Además, reciben capacitaciones continuas en protocolos de emergencia, atención al cliente y técnicas de control de accesos. Esta certificación es tu garantía de estar contratando profesionales que cumplen con la normativa legal vigente."
+        },
+        {
+          "question": "¿Pueden cubrir emergencias fuera de horarios hábiles?",
+          "answer": "Sí, nuestro servicio opera 24 horas, los 365 días del año. Contamos con un Centro de Monitoreo remoto que coordina respuestas inmediatas ante cualquier incidente, y nuestros guardias en terreno siguen protocolos de emergencia que incluyen contacto directo con Carabineros y servicios de rescate. Ya sea una urgencia a las 3 de la mañana o un evento inesperado en fin de semana largo, tienes la tranquilidad de que responderemos."
+        },
+        {
+          "question": "¿Cómo se coordina el control de accesos con los residentes o trabajadores?",
+          "answer": "Implementamos un proceso de onboarding donde Residents o administradores de edificio reciben credenciales personalizadas (tarjetas, tags o acceso via app), mientras que visitas y proveedores se registran mediante nuestro software de control. Los Residents pueden generar invitaciones temporales, revisar el historial de accesos y recibir notificaciones en tiempo real. También capacitamos al personal de portería en los protocolos para garantizar una transición sin fricciones."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en San Felipe",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en San Felipe",
-      "button_link": "/cotizacion?service=control-de-accesos&location=san-felipe"
+      "heading": "Protege tu Propiedad en San Felipe Antes de que sea Tarde",
+      "subheading": "La diferencia entre un incidente y una tragedia a veces es solo un buen control de accesos. No dejes tu seguridad para después. Conversa con nuestro equipo hoy y descubre cómo podemos adaptar nuestra experiencia a tu realidad específica.",
+      "button": "Cotizar Control de Accesos en San Felipe",
+      "image": "control-accesos-san-felipe-cta.jpg"
+    },
+    "meta": {
+      "title": "Control de Accesos San Felipe | Guardias Certificados OS-10 | GuardMan",
+      "description": "Servicio profesional de control de accesos en San Felipe. Guardias certificados OS-10, tecnología biométrica y monitoreo 24/7. Cotiza sin compromiso y protege tu propiedad."
     }
   },
-  "related_content": {
-    "related_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/guardias-de-seguridad.jpg"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "Cctv Videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "escoltas-privados",
-        "title": "Escoltas Privados",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/escoltas-privados.jpg"
-      }
-    ],
-    "nearby_locations": [],
-    "upsell_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
-    "quality_score": 80,
-    "published": false
+    "quality_score": 0,
+    "published": true
   }
 }

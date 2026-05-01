@@ -1,96 +1,73 @@
 {
   "sections": {
     "hero": {
-      "heading": "Monitoreo 24/7 en La Pintana",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector sur de Santiago.",
-      "cta_text": "Cotizar en La Pintana",
-      "cta_link": "/cotizacion?service=monitoreo-24-7&location=la-pintana",
-      "image": "/images/service-monitoreo-24-7.webp"
+      "heading": "Monitoreo 24/7 en La Pintana: Protección Integral con GuardMan Chile",
+      "subheading": "Vigilancia profesional las 24 horas, los 365 días. Operadores capacitados monitoreando tu hogar o negocio en tiempo real desde nuestra central de control.",
+      "image": "monitoreo-24-7-la-pintana-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Monitoreo 24 7",
-        "url": "/servicios/monitoreo-24-7"
-      },
-      {
-        "label": "La Pintana",
-        "url": "/servicios/monitoreo-24-7/la-pintana"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Monitoreo 24/7 en La Pintana?",
-      "content": "En GuardMan Chile somos especialistas en monitoreo 24/7 en La Pintana. Nuestra experiencia en el sector sur de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en La Pintana y toda la zona Sur.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Central de monitoreo propia operativa 24/7",
-        "Respuesta ante alarmas en menos de 30 segundos",
-        "Verificación visual con cámaras integradas",
-        "Coordinación con Carabineros y servicios de emergencia",
-        "Informes mensuales de actividad y incidentes",
-        "App móvil para control remoto"
+      "heading": "Protección y Seguridad las 24 Horas en La Pintana",
+      "paragraphs": [
+        "En GuardMan Chile entendemos que la seguridad no espera horarios. Por eso ofrecemos nuestro servicio de Monitoreo 24/7 en La Pintana, una solución integral diseñada para proteger tu hogar, familia y negocio las 24 horas del día. Con más de 8 años de experiencia en el mercado chileno y cobertura en 14 comunas de la Región Metropolitana, nuestro equipo de profesionales capacitados opera desde una central de monitoreo de última generación.",
+        "Nuestro servicio de monitoreo 24/7 en La Pintana Chile combina tecnología avanzada con el factor humano esencial. Los guardias de seguridad certificados OS-10 y nuestros operadores en central trabajan en coordinación permanente para detectar cualquier evento sospechoso, verificar activations de alarma y coordinar respuestas inmediatas ante emergencias. Esta integración entre vigilancia física y monitoreo remoto es lo que marca la diferencia.",
+        "Elegir un servicio de monitoreo profesional en La Pintana es una decisión que protege lo que más valoras. No se trata solo de instalar cámaras o alarmas, sino de contar con un sistema integrado donde cada señal es analizada por profesionales capacitados, asegurando que ante cualquier incidente la respuesta sea inmediata y efectiva."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué La Pintana",
-      "content": "",
-      "points": [
-        "residencial y pequeños comercios requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de rondas preventivas, control vecinal y coordinación con Carabineros es cada vez más urgente en el sector sur de Santiago.",
-        " muchas empresas y residencias en La Pintana enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Por qué elegir nuestro Monitoreo 24/7 en La Pintana?",
+      "items": [
+        "Central de monitoreo operativa 24/7 con operadores capacitados y en permanente formación",
+        "Guardias de seguridad certificados OS-10 por Carabineros de Chile en todas las rondas y servicios",
+        "Monitoreo en tiempo real de cámaras, sensores de movimiento, alarmas perimetrales e interiores",
+        "Verificación profesional de cada evento antes de coordinar respuesta con Carabineros o seguridad privada",
+        "Notificaciones instantáneas al celular ante cualquier activación o situación inusual",
+        "Coordinación directa con vehículos de reacción ante emergencias las 24 horas",
+        "App móvil para visualizar cámaras y recibir alertas desde cualquier lugar",
+        "Soporte técnico especializado con visitas de mantención preventiva programadas",
+        "Informes mensuales de actividad y eventos para que tengas control total de tu seguridad"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en La Pintana",
+      "heading": "Situaciones que Prevenimos con Monitoreo 24/7 en La Pintana",
       "items": [
-        "residencial y pequeños comercios requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de rondas preventivas, control vecinal y coordinación con Carabineros es cada vez más urgente en el sector sur de Santiago.",
-        " muchas empresas y residencias en La Pintana enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Robos con violencia o intimidación en hogares y negocios: la presencia monitoreada disuade intentos de ingreso no autorizado",
+        "Robos de vehículos y accesorios en viviendas con estacionamiento: sensores perimetrales y cámaras con detección de movimiento",
+        "Asaltos en el sector comercial y empresarial: cámaras con análisis de comportamiento permiten identificar actividades sospechosas",
+        "Robos en viviendas deshabitadas o durante vacaciones: notificaciones inmediatas permiten coordinar respuesta remota",
+        "Vandalismo y daños a la propiedad: la grabación continua y monitoreo permanente facilita la identificación de responsables",
+        "Emergencias médicas o incendios: botones de pánico conectados a central permiten atención inmediata"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Sur"
-      },
-      {
-        "value": "Sur",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué pasa si salta una alarma a las 3am?",
-        "answer": "Nuestro equipo de monitoreo verifica la alarma inmediatamente. Si es una emergencia real, contactamos a Carabineros y a tus contactos de emergencia simultáneamente."
-      },
-      {
-        "question": "¿Monitorean solo cuando hay alarma?",
-        "answer": "No, el monitoreo es constante y activo. Nuestros operadores vigilan las 24 horas y pueden hacer rondas visuales remotas cuando detectan algo sospechoso."
-      },
-      {
-        "question": "¿Puedo ver lo que sucede en mi propiedad?",
-        "answer": "Sí, tienes acceso 24/7 a todas las cámaras en vivo desde tu celular o computadora. Además, recibes alertas instantáneas ante eventos."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Monitoreo 24/7 en La Pintana",
+      "items": [
+        {
+          "question": "¿Cómo funciona el monitoreo 24/7 en La Pintana?",
+          "answer": "Nuestro sistema de monitoreo 24/7 en La Pintana opera desde una central de control donde nuestros operadores capacitados supervisan las 24 horas. Cuando una alarma se activa, un sensor detecta movimiento o una cámara identifica actividad sospechosa, la señal llega inmediatamente a nuestra central. Nuestros operadores verifican el evento en tiempo real mediante las cámaras y deciden el protocolo de acción: contactar al propietario, dispatchar un vehículo de reacción o solicitar apoyo de Carabineros según la gravedad de la situación."
+        },
+        {
+          "question": "¿Qué diferencia hay entre monitoreo propio y monitoreo desde una central externa?",
+          "answer": "La diferencia principal radica en la capacidad de respuesta coordinada. En GuardMan Chile, el monitoreo 24/7 en La Pintana se integra con nuestros guardias de seguridad OS-10 stationed en la zona. Cuando nuestra central detecta un evento, no solo te notifica: dispatchamos vehículos de reacción que llegan al lugar en tiempos garantizados. El factor humano capacitado y la coordinación entre operadores y guardias en terreno es lo que convierte la tecnología en protección real."
+        },
+        {
+          "question": "¿Qué incluye el servicio de monitoreo 24/7 para hogares en La Pintana?",
+          "answer": "Nuestro servicio de monitoreo para hogares incluye la supervisión continua de sensores de puertas y ventanas, detectores de movimiento interiores, sensores de rotura de cristal, alarmas de incendio y pánico. Además, integramos cámaras de seguridad con visión nocturna para verificación visual de eventos. Todo queda conectado a nuestra central 24/7 y recibirás notificaciones instantáneas en tu celular ante cualquier activación."
+        },
+        {
+          "question": "¿Cómo elijo la mejor empresa de monitoreo 24/7 en La Pintana?",
+          "answer": "Al buscar monitoreo 24/7 en La Pintana Chile, verifica que la empresa tenga certificación OS-10 vigente para sus guardias, experiencia comprobable en la zona y una central de monitoreo propia. Pregunta por los tiempos de respuesta garantizados, si tienen cobertura local con guardias en terreno y cómo manejan las falsas alarmas. En GuardMan Chile ofrecemos atención personalizada, evaluación gratuita de tus necesidades de seguridad y un equipo profesional con años de experiencia protegiendo hogares y negocios en La Pintana."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en La Pintana",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en La Pintana",
-      "button_link": "/cotizacion?service=monitoreo-24-7&location=la-pintana"
+      "heading": "Protege tu Hogar y Negocio con Monitoreo 24/7 Profesional en La Pintana",
+      "subheading": "Solicita una evaluación de seguridad sin costo y descubre cómo nuestro monitoreo 24/7 en La Pintana puede proteger lo que más valoras. Contáctanos hoy.",
+      "button": "Cotizar Monitoreo 24/7 en La Pintana",
+      "image": "monitoreo-24-7-la-pintana-cta.jpg"
+    },
+    "meta": {
+      "title": "Monitoreo 24/7 La Pintana | Seguridad Profesional | GuardMan Chile",
+      "description": "Servicio de monitoreo 24/7 en La Pintana con guardias OS-10 certificados. Central de vigilancia, cámaras y alarmas conectadas 24/7. Cotiza sin costo."
     }
   }
 }

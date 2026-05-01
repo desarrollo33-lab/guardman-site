@@ -1,96 +1,77 @@
 {
   "sections": {
     "hero": {
-      "heading": "Auditoría de Seguridad en San Felipe",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
-      "cta_text": "Cotizar en San Felipe",
-      "cta_link": "/cotizacion?service=auditoria-seguridad&location=san-felipe",
-      "image": "/images/service-auditoria-seguridad.webp"
+      "heading": "Auditoría de Seguridad en San Felipe | Evaluación Profesional Integral",
+      "subheading": "Protege tu empresa, edificio o propiedad con nuestra auditoría de seguridad en San Felipe. Expertos certificados OS-10 con más de 8 años de experiencia protegiendo negocios en la Provincia de San Felipe y toda la Región de Valparaíso.",
+      "image": "auditoria-seguridad-san-felipe-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Auditoria Seguridad",
-        "url": "/servicios/auditoria-seguridad"
-      },
-      {
-        "label": "San Felipe",
-        "url": "/servicios/auditoria-seguridad/san-felipe"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Auditoría de Seguridad en San Felipe?",
-      "content": "En GuardMan Chile somos especialistas en auditoría de seguridad en San Felipe. Nuestra experiencia en San Felipe y la zona de Valparaíso nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en San Felipe y toda la zona Valparaíso.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Diagnóstico integral de vulnerabilidades",
-        "Evaluación de riesgos y amenazas",
-        "Diseño de plan de seguridad personalizado",
-        "Capacitación a personal de seguridad",
-        "Implementación de protocolos y procedimientos",
-        "Seguimiento y auditoría continua"
+      "heading": "Auditoría de Seguridad Profesional en San Felipe de Aconcagua",
+      "paragraphs": [
+        "En GuardMan Chile entendemos que la seguridad no es un gasto, es una inversión en la continuidad de tu negocio. Nuestra auditoría de seguridad en San Felipe proporciona un diagnóstico completo de vulnerabilidades físicas, procedimentales y tecnológicas, permitiendo tomar decisiones informadas para proteger tus activos más valiosos.",
+        "Nuestro equipo de auditores profesionales especializados en seguridad privada evalúa cada aspecto de tu infraestructura de protección, desde el perímetro exterior hasta los sistemas de control de accesos y monitoreo. Con cobertura en 14 comunas y presencia directa en la zona de San Felipe, Los Andes y provincia completa, garantizamos respuesta inmediata cuando más lo necesites.",
+        "Cada auditoría de seguridad en San Felipe que realizamos incluye un informe detallado con recomendaciones priorizadas según el nivel de riesgo, presupuesto estimado para mejoras y plan de implementación. La experiencia de más de 8 años nos permite identificar vulnerabilidades que otras empresas pasan por alto."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué San Felipe",
-      "content": "",
-      "points": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "¿Qué Incluye Nuestra Auditoría de Seguridad en San Felipe?",
+      "items": [
+        "Evaluación integral de seguridad física: muros perimetrales, cerraduras, rejas, iluminación exterior y ángulos ciegos que podrían ser utilizados por intrusos",
+        "Revisión de sistemas de alarma y sensores de movimiento, verificando funcionamiento, cobertura y tiempos de respuesta del sistema",
+        "Análisis de circuitos cerrados de televisión (CCTV): posicionamiento de cámaras, calidad de imagen, almacenamiento y acceso remoto",
+        "Control de accesos: evaluación de sistemas de registro de entrada y salida, credenciales vigentes y protocolos de identificación",
+        "Revisión de procedimientos internos de seguridad y protocolos de emergencia adaptados a tu tipo de negocio o propiedad",
+        "Verificación de cumplimiento normativo OS-10 y certificaciones vigentes del personal de vigilancia existente",
+        "Evaluación de puntos críticos y vulnerables mediante análisis de riesgo según metodología profesional",
+        "Informe ejecutivo con mapa de calor de vulnerabilidades y priorización de mejoras según impacto y urgencia"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en San Felipe",
+      "heading": "Problemas que Detectamos en Auditorías de Seguridad en San Felipe",
       "items": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Cámaras de seguridad mal posicionadas que no cubren zonas de alto riesgo o tienen puntos ciegos que facilitan el acceso no autorizado",
+        "Sistemas de alarma obsoletos o mal mantenidos que generan falsas alarmas y disminuyen la credibilidad del sistema",
+        "Ausencia de protocols de emergencia documentados o personal no capacitado para actuar ante situaciones de riesgo",
+        "Lugares con iluminación deficiente en exteriores que generan zonas de sombra donde potenciales intrusos pueden ocultarse",
+        "Accesos secundarios o de servicio sin control adecuado, convirtiéndose en la vía de entrada más utilizada por delincuentes",
+        "Personal de vigilancia sin certificación OS-10 vigente, exponiendo a la empresa a multas y responsabilidad legal",
+        "Falta de integración entre sistemas de seguridad, generando brechas de cobertura y respuesta fragmentada ante incidentes"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Valparaíso"
-      },
-      {
-        "value": "Valparaíso",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué incluye una auditoría de seguridad?",
-        "answer": "Incluye evaluación de vulnerabilidades físicas y lógicas, análisis de riesgos, revisión de protocolos actuales, recomendaciones de mejora y plan de implementación."
-      },
-      {
-        "question": "¿Cuánto tiempo toma una auditoría?",
-        "answer": "Una auditoría completa toma entre 1 y 2 semanas dependiendo del tamaño de la instalación y la complejidad de los sistemas a evaluar."
-      },
-      {
-        "question": "¿Después de la auditoría ayudan a implementar?",
-        "answer": "Sí, ofrecemos servicios de implementación de mejoras, capacitación de personal y seguimiento para asegurar que las recomendaciones se ejecuten correctamente."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Auditoría de Seguridad en San Felipe",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta una auditoría de seguridad en San Felipe?",
+          "answer": "El precio de una auditoría de seguridad en San Felipe varía según el tamaño de la propiedad, tipo de negocio y complejidad de los sistemas existentes. En GuardMan Chile ofrecemos una cotización personalizada sin costo, donde nuestros especialistas evalúan tus necesidades específicas y entregan un presupuesto transparente. No comprometemos precios sin antes conocer tu situación particular, ya que cada auditoría se adapta a las características únicas de cada cliente."
+        },
+        {
+          "question": "¿Qué duración tiene el proceso de auditoría de seguridad?",
+          "answer": "El tiempo de una auditoría de seguridad profesional en San Felipe depende de la extensión del área a evaluar. Para residencias y pequeños comercios el proceso toma entre 2 y 4 horas. Para empresas medianas y grandes, o comunidades de edificios, la auditoría puede extenderse entre 1 y 3 días, incluyendo inspección en terreno y análisis documental. Entregamos el informe final con recomendaciones dentro de los 5 días hábiles posteriores a la auditoría."
+        },
+        {
+          "question": "¿Por qué es importante contratar una auditoría de seguridad con empresa certificada?",
+          "answer": "Contratar una auditoría de seguridad en San Felipe con una empresa de seguridad privada certificada OS-10 garantiza que el diagnóstico sea realizado por profesionales que conocen la normativa chilena vigente y las mejores prácticas del rubro. En GuardMan Chile nuestros auditores cuentan con experiencia comprobada y formación continua, lo que permite identificar tanto vulnerabilidades técnicas como procedimentales. Además, una empresa establecida le da respaldo y continuidad al proceso de mejoras."
+        },
+        {
+          "question": "¿La auditoría de seguridad incluye recomendaciones para cumplir con OS-10?",
+          "answer": "Sí, nuestra auditoría de seguridad en San Felipe incluye una revisión completa del cumplimiento de la normativa OS-10 vigente. Verificamos que el personal de vigilancia tenga sus certificaciones actualizadas, que los turnos y dotaciones cumplan con los estándares legales, y que los protocolos de operación se ajusten a lo exigido por Carabineros de Chile. El informe incluye un plan de regularización con los pasos específicos para estar 100% compliant."
+        },
+        {
+          "question": "¿Pueden realizar auditorías de seguridad en empresas located en Los Andes y alrededores?",
+          "answer": "Efectivamente, GuardMan Chile tiene presencia directa en toda la Provincia de San Felipe, incluyendo San Felipe, Los Andes, Calle Larga, Rinconada, Santa María, Panquehue, Catemu y Putaendo. Nuestras audiencias de seguridad en Los Andes y comunas aledañas se realizan con el mismo estándar de calidad y profesionalismo, aprovechando nuestra infraestructura regional y tiempos de respuesta garantizados."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en San Felipe",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en San Felipe",
-      "button_link": "/cotizacion?service=auditoria-seguridad&location=san-felipe"
+      "heading": "Protege Tu Propiedad o Empresa con una Auditoría de Seguridad Profesional",
+      "subheading": "No dejes la seguridad de tu negocio o familia al azar. Solicita tu auditoría de seguridad en San Felipe hoy y recibe un diagnóstico completo con recomendaciones prácticas. Primer presupuesto sin compromiso.",
+      "button": "Solicitar Auditoría de Seguridad",
+      "image": "auditoria-seguridad-san-felipe-cta.jpg"
+    },
+    "meta": {
+      "title": "Auditoría de Seguridad San Felipe | Expertos OS-10 | GuardMan Chile",
+      "description": "Auditoría de seguridad profesional en San Felipe de Aconcagua. Evaluación integral de vulnerabilidades, sistemas de alarma, CCTV y control de accesos. Cotiza hoy."
     }
   }
 }

@@ -1,150 +1,92 @@
 {
   "slug": "guardias-de-seguridad/san-felipe",
   "type": "combo",
-  "service": "guardias-de-seguridad",
-  "location": "san-felipe",
   "version": 1,
-  "last_modified": "2026-04-22T14:13:24.828Z",
+  "last_modified": "2026-05-01T12:49:26.148Z",
   "seo": {
-    "title": "Guardias De Seguridad en San Felipe",
-    "description": "Servicio de guardias de seguridad profesional en San Felipe. Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
-    "keywords": [],
-    "canonical": "https://guardman.cl/servicios/guardias-de-seguridad/san-felipe"
+    "title": "Guardias de Seguridad en San Felipe | GuardMan Chile 24/7",
+    "description": "Guardias de seguridad certificados OS-10 en San Felipe. Empresa líder con 8+ años de experiencia, cobertura 24/7 y más de 500 guardias profesionales. Cotiza hoy.",
+    "canonical": ""
   },
   "content": {
     "hero": {
-      "heading": "Guardias de Seguridad en San Felipe",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en San Felipe y la zona de Valparaíso.",
-      "cta_text": "Cotizar en San Felipe",
-      "cta_link": "/cotizacion?service=guardias-de-seguridad&location=san-felipe",
-      "image": "/images/service-guardias-de-seguridad.webp"
+      "heading": "Guardias de Seguridad en San Felipe | Protección Profesional las 24 Horas",
+      "subheading": "Empresa líder en seguridad privada con guardias certificados OS-10. Protege tu hogar, negocio o empresa en San Felipe con la experiencia de GuardMan Chile.",
+      "image": "guardia-seguridad-san-felipe-hero.jpg"
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Guardias De Seguridad",
-        "url": "/servicios/guardias-de-seguridad"
-      },
-      {
-        "label": "San Felipe",
-        "url": "/servicios/guardias-de-seguridad/san-felipe"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Guardias de Seguridad en San Felipe?",
-      "content": "En GuardMan Chile somos especialistas en guardias de seguridad en San Felipe. Nuestra experiencia en San Felipe y la zona de Valparaíso nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en San Felipe y toda la zona Valparaíso.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Guardias certificados OS-10 con capacitación continua",
-        "Monitoreo 24/7 desde nuestro centro de control propio",
-        "Respuesta inmediata ante emergencias con coordinación a Carabineros",
-        "Cobertura integral en toda la comuna",
-        "Informes de actividad diaria y reportes semanales",
-        "Esquemas de turnos adaptables: diurno, nocturno, 4x4, 6x1"
+      "heading": "Guardias de Seguridad Profesionales en San Felipe",
+      "paragraphs": [
+        "En GuardMan Chile entendemos que la seguridad es un derecho fundamental y una necesidad prioritaria para las familias y empresas de San Felipe. Nuestra empresa de seguridad privada lleva más de 8 años protegiendo activos y personas en toda la Región de Valparaíso, ofreciendo un servicio de vigilancia que combina capacitación profesional, tecnología de monitoreo y la presencia disuasoria que solo un guardia experimentado puede brindar.",
+        "Cada guardia de seguridad en San Felipe que forma parte de nuestro equipo cuenta con certificación OS-10 vigente, emitida por la Prefectura de Seguridad Privada de Carabineros de Chile. Este requisito legal no solo garantiza el cumplimiento normativo, sino que certifica que nuestros profesionales han sido formados en técnicas de prevención, control de accesos, manejo de situaciones de emergencia y protocolos de coordinación con fuerzas de orden y seguridad pública.",
+        "Nuestro modelo de cobertura incluye presencia física continua, rondas preventivas programadas y comunicación directa con nuestro centro de monitoreo operativo las 24 horas, los 365 días del año. Ya sea que necesites proteger una vivienda en el centro de San Felipe, un local comercial en la Avenidafre, o gestionar la seguridad de una empresa industrial en las zonas industriales de la provincia, tenemos la solución adaptée a cada necesidad y presupuesto."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué San Felipe",
-      "content": "",
-      "points": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de Nuestro Servicio de Guardias en San Felipe",
+      "items": [
+        "Guardias certificados OS-10 con formación continua y actualizaciones legales al día",
+        "Cobertura 24/7 durante los 365 días del año, incluyendo festivos y días domingo",
+        "Supervisión remota desde nuestro centro de operaciones con comunicación permanente",
+        "Control de accesos y registro detallado de ingresos y salidas de personas y vehículos",
+        "Rondas preventivas programables según las características de cada instalación",
+        "Coordinación directa con Carabineros de Chile y servicios de emergencia locales",
+        "Uniforme profesional identificado y equipamiento de comunicación adecuadas",
+        "Reportes de novedades diarios con trazabilidad completa de incidentes",
+        "Cobertura flexible: turnos diurnos, nocturnos, 4x4, 6x1 o según necesidad",
+        "Coordinación con sistemas de cámaras CCTV y alarmas para protección integral"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en San Felipe",
+      "heading": "Problemas que Resolvemos con Nuestros Guardias de Seguridad",
       "items": [
-        "comercios, servicios y zonas residenciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de seguridad comercial, control de accesos y rondas preventivas es cada vez más urgente en San Felipe y la zona de Valparaíso.",
-        " muchas empresas y residencias en San Felipe enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Sustracciones y robos en viviendas sin vigilancia: la presencia visible de guardias reduce hasta en un 70% los intentos de ingreso delictual según estudios del sector",
+        "Inseguridad en comercio y empresas: nuestros guardias realizan control de acceso, identificación de visitantes y detección temprana de comportamientos sospechosos",
+        "Falta de control en accesos residenciales: implementamos protocolos de verificación que protejen a las familias y sus bienes materiales",
+        "Necesidad de supervisión continua en industrias y bodegas: cobertura extendida con rondas perimetrales y registro de novedades en tiempo real",
+        "Ausencia de respuesta inmediata ante emergencias: nuestro equipo está entrenado para activarse ante cualquier situación de riesgo y coordinar con authorities competentes"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Valparaíso"
-      },
-      {
-        "value": "Valparaíso",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto cuesta un guardia de seguridad en San Felipe?",
-        "answer": "El precio depende de la cantidad de guardias, turnos y servicios adicionales. Ofrecemos cotizaciones personalizadas sin compromiso. Contáctanos para una evaluación gratuita."
-      },
-      {
-        "question": "¿Los guardias tienen certificación OS-10 vigente?",
-        "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 obligatoria y al día. Es un requisito legal que cumplimos estrictamente para su protección y la nuestra."
-      },
-      {
-        "question": "¿Tienen cobertura 24 horas?",
-        "answer": "Sí, ofrecemos servicio 24/7 los 365 días del año. Nuestro centro de monitoreo propio opera sin interrupciones y tenemos guardias de reemplazo disponibles."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Guardias de Seguridad en San Felipe",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta contratar guardias de seguridad en San Felipe?",
+          "answer": "Los costos varían según el tipo de instalación, modalidad de turno y cantidad de guardias requeridos. Para recibir una cotización personnalisée sin compromiso, contáctanos a través de nuestro formulario o WhatsApp indicando las características de tu propiedad o negocio. Evaluaremos tu situación y proposeremos la solución más eficiente según tus necesidades específicas y presupuesto disponible."
+        },
+        {
+          "question": "¿Los guardias tienen certificación OS-10 vigente?",
+          "answer": "Sí, todos nuestros guardias de seguridad en San Felipe cuentan con certificación OS-10 vigente, requisito legal obligatorio para trabajar en el sector de seguridad privada en Chile. Esta certificación es expedida por la Prefectura de Seguridad Privada de Carabineros y garantiza que el profesional ha superado los exámenes teóricos y prácticos establecidos en la normativa vigente."
+        },
+        {
+          "question": "¿Pueden trabajar en días festivos y turnos nocturnos?",
+          "answer": "Absolutamente. Nuestro servicio opera las 24 horas, los 365 días del año. Podemos implementar modalidades de turno 4x4 (cuatro días de trabajo por cuatro de descanso), 6x1, turnos diurnos o nocturnos fijos, según las necesidades de cobertura de cada cliente. También ofrecemos refuerzo de personal para temporadas altas o eventos especiales en la provincia."
+        },
+        {
+          "question": "¿Qué pasa si ocurre una emergencia fuera de horario de oficina?",
+          "answer": "Nuestro centro de monitoreo opera las 24 horas con supervisores disponibles para coordinar cualquier eventualidad. Ante una emergencia, nuestros guardias activan inmediatamente los protocolos de seguridad, dan alerta a Carabineros de Chile si corresponde, y mantienen comunicación constante con nuestro equipo de supervisión hasta la resolución de la situación. La tranquilidad de nuestros clientes no tiene horarios."
+        },
+        {
+          "question": "¿Pueden los guardias controlar el acceso de visitas y delivery?",
+          "answer": "Sí, el control de accesos es una de las funciones principales de nuestros guardias. Implementan protocolos de verificación de identidad, registro de visitantes con fecha, hora y motivo de ingreso, coordinación de recepciones de paquetes y deliveries, y gestión de autorizaciones de acceso para personal autorizado. Esta función es especialmente valiosa en condominios, oficinas y empresas."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en San Felipe",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en San Felipe",
-      "button_link": "/cotizacion?service=guardias-de-seguridad&location=san-felipe"
+      "heading": "Protege lo que más Importa: Solicita tu Cotización de Guardias en San Felipe",
+      "subheading": "En GuardMan Chile no vendemos solo guardias: ofrecemos tranquilidad. Contáctanos hoy y descubre cómo podemos diseñar un plan de seguridad personalizado para tu hogar o empresa en San Felipe.",
+      "button": "Cotizar Servicio de Guardias",
+      "image": "guardia-seguridad-san-felipe-cta.jpg"
+    },
+    "meta": {
+      "title": "Guardias de Seguridad en San Felipe | GuardMan Chile 24/7",
+      "description": "Guardias de seguridad certificados OS-10 en San Felipe. Empresa líder con 8+ años de experiencia, cobertura 24/7 y más de 500 guardias profesionales. Cotiza hoy."
     }
   },
-  "related_content": {
-    "related_services": [
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "Cctv Videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "Control De Accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      },
-      {
-        "slug": "escoltas-privados",
-        "title": "Escoltas Privados",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/escoltas-privados.jpg"
-      }
-    ],
-    "nearby_locations": [],
-    "upsell_services": [
-      {
-        "slug": "escoltas-privados",
-        "title": "Escoltas Privados",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "Cctv Videovigilancia",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
-    "quality_score": 80,
-    "published": false
+    "quality_score": 0,
+    "published": true
   }
 }

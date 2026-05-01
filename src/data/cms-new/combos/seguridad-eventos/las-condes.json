@@ -1,163 +1,95 @@
 {
   "slug": "seguridad-eventos/las-condes",
   "type": "combo",
-  "service": "seguridad-eventos",
-  "location": "las-condes",
   "version": 1,
-  "last_modified": "2026-04-22T14:13:24.897Z",
+  "last_modified": "2026-05-01T12:49:33.361Z",
   "seo": {
-    "title": "Seguridad Eventos en Las Condes",
-    "description": "Servicio de seguridad eventos profesional en Las Condes. Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente de Santiago.",
-    "keywords": [],
-    "canonical": "https://guardman.cl/servicios/seguridad-eventos/las-condes"
+    "title": "Seguridad para Eventos en Las Condes | GuardMan Chile",
+    "description": "Empresa de seguridad para eventos en Las Condes con guardias OS-10 certificados. Protección profesional 24/7 para matrimonios, corporativos y masivos. Cotiza ahora.",
+    "canonical": ""
   },
   "content": {
     "hero": {
       "heading": "Seguridad para Eventos en Las Condes",
-      "subheading": "Servicio profesional con guardias OS-10 certificados y monitoreo 24/7 en el sector oriente de Santiago.",
-      "cta_text": "Cotizar en Las Condes",
-      "cta_link": "/cotizacion?service=seguridad-eventos&location=las-condes",
-      "image": "/images/service-seguridad-eventos.webp"
+      "subheading": "Guardias certificados OS-10 con experiencia en eventos corporativos, sociales y masivos. Protección profesional las 24 horas para tu tranquilidad en Las Condes y todo el sector oriente de Santiago."
     },
-    "breadcrumb": [
-      {
-        "label": "Inicio",
-        "url": "/"
-      },
-      {
-        "label": "Servicios",
-        "url": "/servicios"
-      },
-      {
-        "label": "Seguridad Eventos",
-        "url": "/servicios/seguridad-eventos"
-      },
-      {
-        "label": "Las Condes",
-        "url": "/servicios/seguridad-eventos/las-condes"
-      }
-    ],
     "intro": {
-      "title": "¿Por qué elegir Seguridad para Eventos en Las Condes?",
-      "content": "En GuardMan Chile somos especialistas en seguridad para eventos en Las Condes. Nuestra experiencia en el sector oriente de Santiago nos permite ofrecer soluciones adaptadas a las necesidades específicas de la zona, ya sea para empresas, residencias o eventos.\nContamos con guardias certificados OS-10, monitoreo propio 24/7 y tiempos de respuesta inferiores a 30 minutos en Las Condes y toda la zona Oriente.",
-      "image": "/images/combo-intro.jpg"
-    },
-    "features": {
-      "title": "Qué Incluye el Servicio",
-      "items": [
-        "Planificación de seguridad según tipo de evento",
-        "Control de acceso y registro de asistentes",
-        "Vigilancia perimetral y detección de amenazas",
-        "Coordinación con producción y Carabineros",
-        "Equipo de reacción rápida ante incidentes",
-        "Informe post-evento con análisis de seguridad"
+      "heading": "Expertos en Seguridad para Eventos en Las Condes",
+      "paragraphs": [
+        "En GuardMan Chile somos la empresa de seguridad para eventos en Las Condes con más de 8 años protegiendo celebraciones corporativas, sociales y masivas en el sector oriente de Santiago. Nuestro equipo de guardias certificados OS-10 garantiza la tranquilidad que necesitas para que tú y tus invitados disfruten sin preocupaciones.",
+        "Sabemos que cada evento es único, por eso diseñamos planes de seguridad personalizados según la asistencia esperada, tipo de actividad y nivel de riesgo. Desde matrimonios privados hasta conciertos masivos, tenemos la experiencia y los recursos para brindar protección profesional integral con presencia física disuasoria y coordinación constante.",
+        "Nuestro centro de monitoreo opera 24/7 los 365 días del año, permitiéndonos coordinar respuesta inmediata ante cualquier situación de emergencia. Contamos con cobertura en Las Condes y las 14 comunas del sector oriente, ofreciendo seguridad de primer nivel con tarifas competitivas y transparencia total en nuestros servicios."
       ]
     },
-    "zone_specific": {
-      "title": "Por qué Las Condes",
-      "content": "",
-      "points": [
-        "residencias de lujo, embajadas, oficinas corporativas y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de accesos VIP, escoltas personales, monitoreo perimetral y CCTV de alta definición es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Las Condes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+    "features": {
+      "heading": "Características de Nuestro Servicio de Seguridad para Eventos en Las Condes",
+      "items": [
+        "Guardias certificados OS-10 con curso vigente y experiencia comprobada en eventos de alta convocatoria",
+        "Planificación y evaluación de riesgos previa al evento para diseñar un dispositivo de seguridad a medida",
+        "Control de accesos con registro de invitados y gestión de flujo de personas durante el evento",
+        "Supervisión permanente con Jefes de Seguridad y coordinators en terreno durante toda la actividad",
+        "Centro de monitoreo 24/7 con comunicación directa y tiempos de respuesta garantizados",
+        "Coordinación con Carabineros y servicios de emergencia para eventos de gran escala",
+        "Cobertura flexible: desde 2 guardias para eventos íntimos hasta equipos completos para masivos",
+        "Monitoreo perimetral y vigilancia de áreas críticas como escenario, backstage y zonas VIP",
+        "Capacitación en manejo de masas y resolución de conflictos para prevenir incidentes",
+        "Respaldo tecnológico con sistemas de comunicación radial y enlace con cámaras de seguridad"
       ]
     },
     "issues": {
-      "title": "Desafíos de seguridad en Las Condes",
+      "heading": "Riesgos que Prevenimos con Seguridad Profesional para Eventos en Las Condes",
       "items": [
-        "residencias de lujo, embajadas, oficinas corporativas y centros comerciales requieren soluciones especializadas que van más allá de la vigilancia básica.",
-        "La necesidad de control de accesos VIP, escoltas personales, monitoreo perimetral y CCTV de alta definición es cada vez más urgente en el sector oriente de Santiago.",
-        " muchas empresas y residencias en Las Condes enfrentan riesgos específicos de seguridad que no se resuelven con guardias genéricos."
+        "Accesos descontrolados y sobrecupo: sin un equipo profesional, cualquier evento puede superar su capacidad segura, generando riesgos para la integridad de los asistentes",
+        "Robos y hurtos en eventos concurridos: en aglomeraciones es común que personas malintencionadas aprovechen descuidos para cometer delitos, afectando la experiencia de los invitados",
+        "Conflictos y peleas entre asistentes: el consumo de alcohol o discrepancias personales pueden escalar sin intervención oportuna de personal capacitado",
+        "Emergencias médicas sin atención inmediata: ante descompensaciones o accidentes, la falta de protocolo y personal entrenado puede tener consecuencias graves",
+        "Daños a la propiedad del recinto: sin vigilancia constante, el mobiliario, equipos de audio o decoración pueden sufrir deterioros o destrucción",
+        "Situaciones de violencia o emergencias no gestionadas: la ausencia de coordinación con autoridades puede agravar cualquier incidente menor"
       ]
     },
-    "stats": [
-      {
-        "value": "< 30 min",
-        "label": "Tiempo de respuesta en Oriente"
-      },
-      {
-        "value": "Oriente",
-        "label": "Cobertura"
-      },
-      {
-        "value": "Disponibles",
-        "label": "Guardias OS-10"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto personal se necesita para mi evento?",
-        "answer": "La cantidad depende del tipo de evento, número de asistentes y nivel de riesgo. Evaluamos cada caso para garantizar la seguridad óptima."
-      },
-      {
-        "question": "¿Trabajan con Carabineros?",
-        "answer": "Sí, coordinamos con Carabineros según los permisos requeridos para eventos masivos. Tenemos experiencia en la obtención de permisos y protocolos."
-      },
-      {
-        "question": "¿Qué pasa si hay una emergencia durante el evento?",
-        "answer": "Contamos con un protocolo de emergencias que incluye evacuación, primeros auxilios y coordinación con servicios de emergencia. Nuestro equipo está entrenado para actuar bajo presión."
-      }
-    ],
+    "faqs": {
+      "heading": "Preguntas Frecuentes sobre Seguridad para Eventos en Las Condes",
+      "items": [
+        {
+          "question": "¿Cuántos guardias necesito para mi evento en Las Condes?",
+          "answer": "La cantidad de guardias depende de la asistencia esperada, el tipo de evento y el nivel de riesgo. Como referencia general, recomendamos 1 guardia cada 50-100 asistentes para eventos sociales y 1 cada 25-50 para corporativos o masivos. En GuardMan Chile realizamos una evaluación previa gratuita para determinar el número óptimo de personal de seguridad, asegurando protección efectiva sin sobre costos innecesarios."
+        },
+        {
+          "question": "¿Qué incluye el servicio de seguridad para eventos en Las Condes?",
+          "answer": "Nuestro servicio integral incluye: planificación de seguridad personalizada, guardias OS-10 certificados, Jefe de Seguridad en terreno, control de accesos y registro de invitados, supervisión perimetral, coordinación con emergencias y monitoreo 24/7. El precio varía según duración del evento, cantidad de guardias y servicios adicionales requeridos. Contáctanos para recibir una cotización sin compromiso."
+        },
+        {
+          "question": "¿Cómo contratar seguridad para eventos en Las Condes?",
+          "answer": "El proceso es sencillo: contacta nuestro equipo vía WhatsApp o formulario web, descríbenos tu evento (tipo, fecha, ubicación, asistencia esperada), nuestros especialistas realizan una evaluación de riesgos sin costo, recibimos tu aprobación y confirmamos la dotación. Recomendamos contactar con al menos 7 días de anticipación para eventos masivos y 3 días para eventos íntimos."
+        },
+        {
+          "question": "¿Los guardias tienen certificación OS-10 vigente?",
+          "answer": "Sí, todos nuestros guardias cuentan con certificación OS-10 actualizada, requisito legal para trabajar en seguridad privada en Chile según la Ley 21.657. Esta acreditación entregada por Carabineros garantiza formación en prevención, manejo de masas, primeros auxilios y normativa legal. Nuestro equipo de recursos humanos verifica constantemente la vigencia de todas las acreditaciones."
+        },
+        {
+          "question": "¿Pueden coordinar con Carabineros para mi evento en Las Condes?",
+          "answer": "Absolutamente. Para eventos de alta convocatoria o que requieran Permiso de Alcohol, coordinamos directamente con Carabineros de Chile y la Subsecretaría de Prevención del Delito. Esta articulación es fundamental para cumplimiento normativo y garantiza una respuesta integral ante cualquier emergencia durante tu evento en Las Condes."
+        },
+        {
+          "question": "¿Qué pasa si surge una emergencia durante el evento?",
+          "answer": "Nuestro protocolo de emergencia incluye activación inmediata del Jefe de Seguridad en terreno, comunicación con nuestro centro de monitoreo 24/7, coordinación con Carabineros y servicios de emergencia (SAMU, Bomberos), evacuación ordenada si es necesario y comunicación con los organizadores. La prevención es nuestra prioridad, pero estamos preparados para responder de manera profesional ante cualquier situación."
+        }
+      ]
+    },
     "cta": {
-      "headline": "Protege tu propiedad en Las Condes",
-      "subheadline": "Solicita una cotización sin compromiso. Evaluamos tu caso y te entregamos una propuesta personalizada.",
-      "button_text": "Cotizar en Las Condes",
-      "button_link": "/cotizacion?service=seguridad-eventos&location=las-condes"
+      "heading": "Protege tu Evento con los Mejores Profesionales en Las Condes",
+      "subheading": "Cotiza sin compromiso y descubre cómo GuardMan Chile puede garantizar la seguridad de tu próximo evento en Las Condes. Atención personalizada, guardias certificados y cobertura las 24 horas.",
+      "button": "Cotizar Seguridad para Evento"
+    },
+    "meta": {
+      "title": "Seguridad para Eventos en Las Condes | GuardMan Chile",
+      "description": "Empresa de seguridad para eventos en Las Condes con guardias OS-10 certificados. Protección profesional 24/7 para matrimonios, corporativos y masivos. Cotiza ahora."
     }
   },
-  "related_content": {
-    "related_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/guardias-de-seguridad.jpg"
-      },
-      {
-        "slug": "cctv-videovigilancia",
-        "title": "Cctv Videovigilancia",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/cctv-videovigilancia.jpg"
-      },
-      {
-        "slug": "control-de-accesos",
-        "title": "Control De Accesos",
-        "excerpt": "Servicio de seguridad profesional",
-        "image": "/images/control-de-accesos.jpg"
-      }
-    ],
-    "nearby_locations": [
-      {
-        "slug": "seguridad-la-pintana",
-        "title": "Seguridad La Pintana",
-        "zone": "oriente",
-        "reason": "Zona oriente similar"
-      },
-      {
-        "slug": "seguridad-la-reina",
-        "title": "Seguridad La Reina",
-        "zone": "oriente",
-        "reason": "Zona oriente similar"
-      },
-      {
-        "slug": "seguridad-lampa",
-        "title": "Seguridad Lampa",
-        "zone": "oriente",
-        "reason": "Zona oriente similar"
-      }
-    ],
-    "upsell_services": [
-      {
-        "slug": "guardias-de-seguridad",
-        "title": "Guardias De Seguridad",
-        "price_range": "$$",
-        "reason": "Complemento ideal para mayor seguridad"
-      }
-    ]
-  },
+  "related_content": null,
   "meta": {
     "author": "admin",
-    "quality_score": 80,
-    "published": false
+    "quality_score": 0,
+    "published": true
   }
 }
