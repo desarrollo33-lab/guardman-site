@@ -1,10 +1,10 @@
 {
   "sections": {
     "hero": {
-      "heading": "Control de Accesos Profesional en Chile | GuardMan Chile",
+      "heading": "Control de Accesos ",
       "subheading": "Sistemas de control de accesos certificados con guardias OS-10 disponibles 24/7. Protege tu empresa, edificio o condominio con tecnología de última generación y presencia física disuasoria. +8 años cuidando lo que más importa.",
       "cta_text": "Cotizar Ahora",
-      "image": "control-accesos-hero.jpg"
+      "image": "/images/service-control-de-accesos.webp"
     },
     "intro": {
       "heading": "Control de Accesos Confiable para Empresas, Edificios y Condominios en Chile",
@@ -36,31 +36,6 @@
         "Falta de disuasión ante intentos de ingreso de individuos con intenciones delictuales",
         "Gestión manual de llaves o controles remotos que se pierden, copian o deterioran con el tiempo",
         "Incidentes de seguridad que requieren respuesta inmediata sin protocolo de actuación definido"
-      ]
-    },
-    "stats": {
-      "heading": "Números que Respaldan Nuestra Experiencia en Control de Accesos",
-      "items": [
-        {
-          "label": "Años de experiencia en seguridad privada",
-          "value": "8+"
-        },
-        {
-          "label": "Guardias certificados OS-10 en operación",
-          "value": "500+"
-        },
-        {
-          "label": "Comunas con cobertura de servicios",
-          "value": "14"
-        },
-        {
-          "label": "Empresas y condominos protegidos",
-          "value": "1.200+"
-        },
-        {
-          "label": "Tasa de respuesta ante emergencias",
-          "value": "<5 min"
-        }
       ]
     },
     "faqs": {

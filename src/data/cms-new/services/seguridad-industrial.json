@@ -12,7 +12,8 @@
     "hero": {
       "heading": "Seguridad Industrial en Chile | Expertos en Protección de Instalaciones",
       "subheading": "Protege tu planta, bodega o faena con guardias certificados OS-10 y monitoreo 24/7",
-      "cta_text": "Solicitar Cotización"
+      "cta_text": "Solicitar Cotización",
+      "image": "/images/service-seguridad-industrial.webp"
     },
     "intro": {
       "heading": "Protección Integral para la Industria Chilena",
@@ -40,27 +41,6 @@
         "Falta de control en puntos críticos como portones, estacionamientos y perímetros",
         "Incidentes de violencia o situaciones de emergencia sin protocolo establecido",
         "Pérdida de producción por cortes de luz o fallas de seguridad no detectadas"
-      ]
-    },
-    "stats": {
-      "heading": "Resultados que Respaldan Nuestra Trayectoria",
-      "items": [
-        {
-          "label": "Años de experiencia en seguridad industrial",
-          "value": "8+"
-        },
-        {
-          "label": "Clientes industriales activos en la Región Metropolitana",
-          "value": "45+"
-        },
-        {
-          "label": "Reducción promedio de incidentes en faenas protegidas",
-          "value": "73%"
-        },
-        {
-          "label": "Guardias disponibles para turnos diurnos y nocturnos",
-          "value": "500+"
-        }
       ]
     },
     "faqs": {

@@ -3,7 +3,7 @@
     "hero": {
       "heading": "Escoltas Privados en Chile: Protección Personal y Ejecutiva",
       "subheading": "GuardMan Chile ofrece escoltas privados certificados OS-10 con experiencia verificada. Seguridad profesional para empresas, ejecutivos y familias en Santiago y 14 comunas.",
-      "image": "escoltas-privados-hero.webp"
+      "image": "/images/service-escoltas-privados.webp"
     },
     "intro": {
       "heading": "Servicio de Escoltas Privados con Certificación y Experiencia",
@@ -35,27 +35,6 @@
         "En GuardMan Chile garantizamos que todos nuestros escoltas privados tienen experiencia verificable en el rubro, certificación OS-10 vigente y entrenamiento continuo en técnicas de defensa personal, manejo de crisis y protocolos de emergencia.",
         "A diferencia de contratar personal no certificado, nuestros escoltas privados para empresas cumplen con la normativa legal vigente y cuentan con seguros de responsabilidad civil que protegen tanto al cliente como al profesional.",
         "Nuestro servicio incluye supervisión constante, respaldo de radiocomunicadores y conexión directa con nuestro centro de monitoreo 24/7, asegurando respuesta inmediata ante cualquier situación de riesgo."
-      ]
-    },
-    "stats": {
-      "heading": "Números que Respaldan Nuestra Experiencia",
-      "items": [
-        {
-          "label": "Años de experiencia en seguridad privada",
-          "value": "8+"
-        },
-        {
-          "label": "Guardias escoltas certificados OS-10",
-          "value": "500+"
-        },
-        {
-          "label": "Clientes satisfechos con nuestros servicios",
-          "value": "2.500+"
-        },
-        {
-          "label": "Comunas cubiertas en la Región Metropolitana",
-          "value": "14"
-        }
       ]
     },
     "faqs": {

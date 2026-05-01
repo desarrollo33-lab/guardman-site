@@ -43,27 +43,6 @@
         "Dificultad para verificar en tiempo real qué ocurre en tus instalaciones"
       ]
     },
-    "stats": {
-      "heading": "Números que Respaldan Nuestra Experiencia",
-      "items": [
-        {
-          "label": "Años de experiencia en seguridad privada",
-          "value": "8+"
-        },
-        {
-          "label": "Guardias certificados OS-10 en operación",
-          "value": "500+"
-        },
-        {
-          "label": "Comunas cubiertas en Región Metropolitana",
-          "value": "14"
-        },
-        {
-          "label": "Clientes satisfechos con monitoreo activo",
-          "value": "2.000+"
-        }
-      ]
-    },
     "faqs": {
       "heading": "Preguntas Frecuentes sobre Monitoreo 24/7",
       "items": [

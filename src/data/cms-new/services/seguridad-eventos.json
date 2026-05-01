@@ -12,7 +12,7 @@
     "hero": {
       "heading": "Seguridad Profesional para Eventos en Chile",
       "subheading": "Protección integral para eventos corporativos, sociales y masivos. Guardias certificados OS-10 con experiencia comprobada. Disponibilidad 24/7 y cobertura en 14 comunas.",
-      "image": "seguridad-eventos-hero.jpg"
+      "image": "/images/service-seguridad-eventos.webp"
     },
     "intro": {
       "heading": "Tu Evento en Buenas Manos",
@@ -48,31 +48,6 @@
         "Emergencias médicas sin respuesta inmediata por ausencia de protocolo",
         "Ingreso de objetos prohibidos como armas, fuegos artificiales o materiales peligrosos",
         "Acumulación excesiva de personas en áreas restringidas generando riesgos de conmemtración"
-      ]
-    },
-    "stats": {
-      "heading": "Resultados que hablan por nosotros",
-      "items": [
-        {
-          "label": "Eventos protegidos exitosamente",
-          "value": "+2.800"
-        },
-        {
-          "label": "Guardias certificados OS-10 disponibles",
-          "value": "500+"
-        },
-        {
-          "label": "Comunas con cobertura operativa",
-          "value": "14"
-        },
-        {
-          "label": "Años de experiencia en seguridad privada",
-          "value": "8+"
-        },
-        {
-          "label": "Tiempo promedio de respuesta ante incidentes",
-          "value": "<3 min"
-        }
       ]
     },
     "faqs": {

@@ -12,7 +12,7 @@
     "hero": {
       "heading": "Guardias de Seguridad Residencial en Chile | Protección Profesional para tu Hogar",
       "subheading": "Guardias certificados OS-10 con experiencia comprobada. Protección 24/7 para condominos, casas y comunidades residenciales en toda la Región Metropolitana.",
-      "image": "residencial-hero.jpg"
+      "image": "/images/sector-residencial.webp"
     },
     "intro": {
       "heading": "Seguridad Residencial Profesional en Chile",
@@ -47,27 +47,6 @@
         "Preocupación constante de los vecinos por la seguridad familiar",
         "Necesidad de un filtro efectivo para deliveries y visitas programadas",
         "Desequilibrio entre seguridad pública municipal y protección privada"
-      ]
-    },
-    "stats": {
-      "heading": "Números que Respaldan Nuestra Experiencia",
-      "items": [
-        {
-          "label": "Guardias certificados OS-10 desplegados",
-          "value": "500+"
-        },
-        {
-          "label": "Años de experiencia en seguridad residencial",
-          "value": "8+"
-        },
-        {
-          "label": "Comunas con cobertura activa en RM",
-          "value": "14"
-        },
-        {
-          "label": "Residenciales protegidas en Chile",
-          "value": "200+"
-        }
       ]
     },
     "faqs": {

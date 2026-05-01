@@ -6,10 +6,10 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getServiceSections, getLocationSections, getServicesList, getLocationsList } from '../../data/cms';
 import { ZONE_CONTEXT, STAFF_IMAGE, STAFF_TRAITS, LOCATION_ISSUES, getZoneTag, getSectorTag } from '../../data/cms-config';
+import { getLocationHero } from '../../data/media-map';
 import { readFileSync, existsSync } from 'fs';
 import SchemaLocalBusiness from '../../components/seo/SchemaLocalBusiness.astro';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
-import { readFileSync, existsSync } from 'fs';
 
 const CMS_DIR = 'src/data/cms';
 const NEW_CMS_DIR = 'src/data/cms-new';
@@ -59,6 +59,7 @@ if (existsSync(sectorsPath)) {
 }
 
 const hero = sections?.hero || { heading: `Seguridad Privada en ${locationName}`, subheading: `Empresa líder con guardias OS-10 en ${locationName}. Cobertura 24/7.` };
+const locationHeroImage = sections?.hero?.image || getLocationHero(slug);
 
 const breadcrumbItems = [
   { name: 'Inicio', url: 'https://guardman.cl' },
@@ -99,15 +100,22 @@ const issuesList = (() => {
 const relatedLocations = locations.filter((l: any) => l.slug !== slug).slice(0, 3);
 
 // Staff section: load from staff.json
+// Staff section: per-page override from CMS, then global staff.json
 const staffPath = 'src/data/cms/staff.json';
-let staffData = { image: STAFF_IMAGE, title: `Protección profesional en ${locationName}`, description: `Nuestro equipo desplegado en la zona ${locationZone} está listo para responder.`, traits: STAFF_TRAITS };
+let globalStaff = { image: STAFF_IMAGE, title: `Protección profesional en ${locationName}`, description: `Nuestro equipo desplegado en la zona ${locationZone} está listo para responder.`, traits: STAFF_TRAITS };
 if (existsSync(staffPath)) {
   const loaded = JSON.parse(readFileSync(staffPath, 'utf-8'));
-  staffData = { image: loaded.image || STAFF_IMAGE, title: loaded.title || staffData.title, description: loaded.description || staffData.description, traits: loaded.traits || STAFF_TRAITS };
+  globalStaff = { image: loaded.image || STAFF_IMAGE, title: loaded.title || globalStaff.title, description: loaded.description || globalStaff.description, traits: loaded.traits || STAFF_TRAITS };
 }
+const staffData = sections?.staff ? {
+  image: (sections.staff as any).image || globalStaff.image,
+  title: (sections.staff as any).title || globalStaff.title,
+  description: (sections.staff as any).description || globalStaff.description,
+  traits: (sections.staff as any).traits || globalStaff.traits,
+} : globalStaff;
 ---
 
-<BaseLayout title={hero.heading} description={hero.subheading}>
+<BaseLayout title={hero.heading} description={hero.subheading} image={locationHeroImage}>
   <SchemaLocalBusiness name={`GuardMan Chile - ${locationName}`} address={locationName} areaServed="Región Metropolitana" />
   <SchemaBreadcrumb items={breadcrumbItems} />
 
@@ -127,7 +135,7 @@ if (existsSync(staffPath)) {
   <!-- Hero (sin tags) -->
   <section class="relative bg-primary-600 text-white py-16 lg:py-20 overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img src="/images/hero-home.webp" alt={hero.heading} class="w-full h-full object-cover opacity-30" width="1920" height="1080" loading="eager" />
+      <img src={locationHeroImage} alt={hero.heading} class="w-full h-full object-cover opacity-30" width="1920" height="1080" loading="eager" />
       <div class="absolute inset-0 bg-gradient-to-r from-primary-800/95 to-primary-600/80"></div>
     </div>
     <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>

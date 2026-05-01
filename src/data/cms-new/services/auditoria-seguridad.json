@@ -13,7 +13,7 @@
       "heading": "Auditoría de Seguridad Profesional en Santiago | GuardMan Chile",
       "subheading": "Evaluación integral de vulnerabilidades para empresas, edificios y condominios. Identificamos puntos débiles, verificamos cumplimiento OS-10 y diseñamos soluciones a medida con respaldo de 8+ años de experiencia.",
       "cta_text": "Solicitar Auditoría Gratuita",
-      "image": "auditoria-seguridad-hero.jpg"
+      "image": "/images/service-auditoria-seguridad.webp"
     },
     "meta": {
       "title": "Auditoría de Seguridad Santiago | GuardMan Chile",
@@ -45,23 +45,6 @@
         "Los guardias de seguridad operan sin protocolos claros ni supervisión efectiva",
         "Tu sistema de cámaras no cubre zonas críticas o tiene fallas de grabación frecuentes",
         "Experimentas robos, hechos vandálicos o ingresos no autorizados de manera recurrente"
-      ]
-    },
-    "stats": {
-      "heading": "Números que respaldan nuestra experiencia en auditorías de seguridad",
-      "items": [
-        {
-          "label": "Auditorías realizadas",
-          "value": "+850"
-        },
-        {
-          "label": "Empresas evaluadas",
-          "value": "500+"
-        },
-        {
-          "label": "Vulnerabilidades detectadas y resueltas",
-          "value": "3.200+"
-        }
       ]
     },
     "faqs": {

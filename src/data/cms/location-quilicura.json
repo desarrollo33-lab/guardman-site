@@ -33,27 +33,6 @@
         "Necesidad de escoltas para el transporte de mercancías de alto valor"
       ]
     },
-    "stats": {
-      "heading": "Números que respaldan nuestra experiencia",
-      "items": [
-        {
-          "label": "Años protegiendo Chile",
-          "value": "8+"
-        },
-        {
-          "label": "Clientes satisfechos en Quilicura",
-          "value": "150+"
-        },
-        {
-          "label": "Guardias certificados OS-10",
-          "value": "500+"
-        },
-        {
-          "label": "Comunas con cobertura en RM",
-          "value": "14"
-        }
-      ]
-    },
     "faqs": {
       "heading": "Preguntas frecuentes sobre seguridad en Quilicura",
       "items": [

@@ -3,7 +3,8 @@
     "hero": {
       "heading": "CCTV y Videovigilancia en Santiago | Seguridad Profesional con Guardias OS-10",
       "subheading": "Monitoreo 24/7 con guardias OS-10 certificados. Protege tu empresa o hogar con más de 8 años de experiencia en videovigilancia en la Región Metropolitana.",
-      "cta_text": "Cotizar Videovigilancia"
+      "cta_text": "Cotizar Videovigilancia",
+      "image": "/images/service-cctv-videovigilancia.webp"
     },
     "intro": {
       "heading": "Sistema de CCTV y Videovigilancia en Santiago que realmente protege",
@@ -32,27 +33,6 @@
         "Sistemas sin certificación OS-10: tus cámaras están ahí pero no hay protocolo de reacción ante emergencias",
         "Monitoreo subcontratado a empresas externas con operadores sobregirados que no conocen tu sector",
         "Precios que incluyen equipos chinos de baja calidad que fallan a los pocos meses y no tienen soporte técnico"
-      ]
-    },
-    "stats": {
-      "heading": "GuardMan Chile en números",
-      "items": [
-        {
-          "label": "Años de experiencia en seguridad privada",
-          "value": "8+"
-        },
-        {
-          "label": "Guardias operativos con certificación OS-10",
-          "value": "500+"
-        },
-        {
-          "label": "Clientes activos en la Región Metropolitana",
-          "value": "150+"
-        },
-        {
-          "label": "Centros de monitoreo propios",
-          "value": "2"
-        }
       ]
     },
     "faqs": {

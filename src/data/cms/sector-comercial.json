@@ -4,7 +4,7 @@
       "heading": "Guardias de Seguridad Comercial en Chile | Protección Integral para tu Negocio",
       "subheading": "Más de 500 guardias certificados OS-10 desplegados en centros comerciales, malls y retail en toda la Región Metropolitana y zonas extremas. Protección profesional 24/7 con presencia disuasoria efectiva.",
       "cta_text": "Cotizar Servicio Comercial",
-      "image": "guardia-comercial-chile"
+      "image": "/images/sector-corporativo.webp"
     },
     "intro": {
       "heading": "Seguridad Comercial que Protege tu Inversión y Genera Confianza",
@@ -38,31 +38,6 @@
         "Suplantación de identidad o uso indebido de credenciales de acceso",
         "Actividades sospechosas previo a robos de mayor escala (reconocimiento)",
         "Gestion de protocolos en eventos masivos o lanzamientos promocionales"
-      ]
-    },
-    "stats": {
-      "heading": "Cifras que Respaldan Nuestra Experiencia en Seguridad Comercial",
-      "items": [
-        {
-          "label": "Guardias desplegados en el sector comercial",
-          "value": "500+"
-        },
-        {
-          "label": "Instalaciones comerciales protegidas actualmente",
-          "value": "120+"
-        },
-        {
-          "label": "Comunas con cobertura operativa comercial",
-          "value": "14"
-        },
-        {
-          "label": "Años de experiencia en seguridad comercial Chile",
-          "value": "8+"
-        },
-        {
-          "label": "Tasa de resolución de incidentes en primera intervención",
-          "value": "97%"
-        }
       ]
     },
     "faqs": {

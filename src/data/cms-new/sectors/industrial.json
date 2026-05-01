@@ -12,7 +12,7 @@
     "hero": {
       "heading": "Seguridad Industrial en Chile: Protección Integral para Tu Empresa",
       "subheading": "Guardias certificados OS-10, monitoreo 24/7 y cobertura en 14 comunas. Más de 8 años protegiendo instalaciones industriales en toda la Región Metropolitana y zona central.",
-      "image": "/images/sectores/industrial/hero-industrial.webp"
+      "image": "/images/sector-industrial.webp"
     },
     "intro": {
       "heading": "Soluciones de Seguridad Industrial Adaptadas al Sector Productivo Chileno",
@@ -48,35 +48,6 @@
         "Incendios y emergencias ambientales que demandan planes de evacuación y respuesta coordinada",
         "Delincuencia organizada que apunta a cargar y descargar mercadería en horarios vulnerables",
         "Sabotaje industrial y filtraciones de información confidencial por parte de personal interno"
-      ]
-    },
-    "stats": {
-      "heading": "Números que Respaldan Nuestra Experiencia en Seguridad Industrial",
-      "items": [
-        {
-          "label": "Años de experiencia en el sector industrial",
-          "value": "8+"
-        },
-        {
-          "label": "Guardias certificados OS-10 en planta",
-          "value": "500+"
-        },
-        {
-          "label": "Instalaciones industriales protegidas",
-          "value": "120+"
-        },
-        {
-          "label": "Comunas con cobertura industrial",
-          "value": "14"
-        },
-        {
-          "label": "Tasa de reducción de incidentes",
-          "value": "87%"
-        },
-        {
-          "label": "Empresas del sector productivo que confían en nosotros",
-          "value": "95+"
-        }
       ]
     },
     "faqs": {

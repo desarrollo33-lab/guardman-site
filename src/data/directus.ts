@@ -1,6 +1,6 @@
 /**
  * Static Data Layer - GuardMan Chile
- * 
+ *
  * This module provides static data for the site.
  * All data is stored as JSON files in src/data/generated/
  * No external CMS or database required.
@@ -151,18 +151,21 @@ export interface SiteConfig {
 /**
  * Convert image paths to WebP format for optimization
  */
-export function optimizeImageUrl(imagePath: string | null | undefined): string | null {
+export function optimizeImageUrl(imagePath: string | null | undefined, opts?: { width?: number; height?: number; quality?: number }): string | null {
   if (!imagePath) return null;
   
-  // If it's already WebP or external URL, return as-is
-  if (imagePath.endsWith('.webp') || imagePath.startsWith('http')) {
-    return imagePath;
-  }
+  // External URLs: return as-is (can't resize via Cloudflare)
+  if (imagePath.startsWith('http')) return imagePath;
   
-  // Convert PNG/JPG/etc to WebP
-  const basePath = imagePath.replace(/\.(png|jpg|jpeg|gif)$/i, '.webp');
-  return basePath;
-}
+  // Build Cloudflare Image Resizing URL
+  // Works on *.pages.dev and custom domains with Cloudflare proxy
+  const width = opts?.width || 1200;
+  const quality = opts?.quality || 80;
+  const params = [`width=${width}`, 'format=webp', `quality=${quality}`, 'fit=cover'];
+  if (opts?.height) params.push(`height=${opts.height}`);
+  
+  return `/cdn-cgi/image/${params.join(',')}/${imagePath.replace(/^\//, '')}`;
+} 
 
 // Data - typed and normalized
 const services = servicesData as Service[];
@@ -237,18 +240,18 @@ export function getBlogPostBySlug(slug: string): BlogPost | null {
 export function getRelatedPosts(currentSlug: string, limit = 3): BlogPost[] {
   const current = blog.find(p => p.slug === currentSlug);
   if (!current) return blog.slice(0, limit);
-  
+
   // Prioritize same category, then most recent
   const sameCategory = blog
     .filter(p => p.slug !== currentSlug && p.category === current.category && p.status === 'published')
     .slice(0, limit);
-  
+
   if (sameCategory.length >= limit) return sameCategory;
-  
+
   const others = blog
     .filter(p => p.slug !== currentSlug && p.category !== current.category && p.status === 'published')
     .slice(0, limit - sameCategory.length);
-  
+
   return [...sameCategory, ...others];
 }
 
@@ -260,7 +263,7 @@ export function getBlogCategories(): { slug: string; name: string }[] {
     empresa: 'Empresa',
     tecnologia: 'Tecnología',
   };
-  
+
   const categories = [...new Set(blog.map(p => p.category))];
   return categories
     .map(slug => ({ slug, name: categoryMap[slug] || slug }))
@@ -271,9 +274,9 @@ export function getBlogCategories(): { slug: string; name: string }[] {
 export function getServiceLocationPairs(): { serviceSlug: string; locationSlug: string }[] {
   const publishedServices = getServices();
   const publishedLocations = getLocations();
-  
+
   const pairs: { serviceSlug: string; locationSlug: string }[] = [];
-  
+
   for (const service of publishedServices) {
     for (const location of publishedLocations) {
       pairs.push({
@@ -282,6 +285,6 @@ export function getServiceLocationPairs(): { serviceSlug: string; locationSlug: 
       });
     }
   }
-  
+
   return pairs;
 }

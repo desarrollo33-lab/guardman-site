@@ -63,6 +63,98 @@
       }
     }
   },
+  "location": {
+    "conchali": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "huechuraba": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "la-pintana": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "la-reina": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "lampa": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "las-condes": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "lo-barnechea": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "los-andes": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "providencia": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "pudahuel": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "quilicura": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "renca": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "san-felipe": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "santiago-centro": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    },
+    "vitacura": {
+      "hero": {
+        "key": "images/hero-home.webp",
+        "alt": "GuardMan Chile - Seguridad Privada Profesional"
+      }
+    }
+  },
   "sector": {
     "automotriz": {
       "hero": {

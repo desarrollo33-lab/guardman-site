@@ -3,7 +3,8 @@
     "hero": {
       "heading": "Seguridad Integral para Hoteles en Santiago",
       "subheading": "Protección profesional para tu establecimiento hotelero con guardias certificados y monitoreo 24/7 disponible en 14 comunas",
-      "cta_text": "Cotizar Ahora"
+      "cta_text": "Cotizar Ahora",
+      "image": "/images/sector-hoteleria.webp"
     },
     "intro": {
       "heading": "Soluciones de Seguridad para el Sector Hotelero",
@@ -39,27 +40,6 @@
         "Costos elevados en seguridad por contratos inflexibles que no se adaptan a la temporada alta y baja del sector hotelero",
         "Imagen del hotel afectada por incidentes de seguridad mal manejados o falta de presencia disuasiva visible",
         "Dificultad para mantener protocolos de seguridad actualizados y alineados con las normativas vigentes"
-      ]
-    },
-    "stats": {
-      "heading": "GuardMan en Números",
-      "items": [
-        {
-          "value": "500+",
-          "label": "Guardias"
-        },
-        {
-          "value": "8+",
-          "label": "Años"
-        },
-        {
-          "value": "14",
-          "label": "Comunas"
-        },
-        {
-          "value": "24/7",
-          "label": "Monitoreo"
-        }
       ]
     },
     "faqs": {

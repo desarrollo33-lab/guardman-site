@@ -3,7 +3,7 @@
     "hero": {
       "heading": "Seguridad para Eventos en Chile | Guardias Profesionales OS-10",
       "subheading": "Protege tu evento con guardias certificados, cobertura nacional y experiencia comprobada. Cotiza ahora y asegura el éxito de tu celebración.",
-      "image": "seguridad-eventos-hero.jpg"
+      "image": "/images/s4-thumbnail.webp"
     },
     "intro": {
       "heading": "Guardias de Seguridad para Eventos: La Protección que tu Evento Necesita",
@@ -35,35 +35,6 @@
         "Coordinación con emergencias: En caso de incendios, problemas médicos o amenazas, activamos protocolos inmediatos conectando con SAMU, Bomberos y Carabineros",
         "Protección de assets y equipamiento: En eventos corporativos y conciertos, safeguardamos equipos de sonido, iluminación y decoración de posibles robos",
         "Gestión de conflictos entre asistentes: Actuamos como mediadores profesionales para resolver disputes sin escalar la situación"
-      ]
-    },
-    "stats": {
-      "heading": "Números que Respaldan Nuestra Experiencia",
-      "items": [
-        {
-          "label": "Eventos protegidos exitosamente",
-          "value": "2.800+"
-        },
-        {
-          "label": "Guardias activos con certificación OS-10",
-          "value": "500+"
-        },
-        {
-          "label": "Comunas con cobertura operativa",
-          "value": "14"
-        },
-        {
-          "label": "Años de experiencia en seguridad privada",
-          "value": "8+"
-        },
-        {
-          "label": "Tasa de incidentes en eventos protegidos",
-          "value": "0.3%"
-        },
-        {
-          "label": "Clientes que renuevan servicios",
-          "value": "92%"
-        }
       ]
     },
     "faqs": {

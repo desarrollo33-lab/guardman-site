@@ -12,7 +12,7 @@
     "hero": {
       "heading": "Guardias de Seguridad Profesional en Chile | Certificación OS-10",
       "subheading": "Protección y tranquilidad para tu empresa, condominio o evento. 500+ guardias certificados, cobertura en 14 comunas de la Región Metropolitana.",
-      "image": "guardia-seguridad-profesional-hero.jpg"
+      "image": "/images/service-guardias-de-seguridad.webp"
     },
     "intro": {
       "heading": "Servicio de Guardias de Seguridad Confiable para Todo Chile",
@@ -43,27 +43,6 @@
         "Falta de control en accesos: Visitas no identificadas y vehículos sospechosos requieren filtro efectivo",
         "Eventos sin protección adecuada: Reuniones masivas necesitan protocolarios de seguridad profesional",
         "Horarios vulnerables: Las noches y madrugada son los momentos de mayor riesgo sin supervisión"
-      ]
-    },
-    "stats": {
-      "heading": "Números que Respaldan Nuestra Experiencia",
-      "items": [
-        {
-          "label": "Guardias certificados OS-10 en activo",
-          "value": "500+"
-        },
-        {
-          "label": "Comunas con cobertura operativa en RM",
-          "value": "14"
-        },
-        {
-          "label": "Años de experiencia en seguridad privada",
-          "value": "8+"
-        },
-        {
-          "label": "Clientes satisfechos a lo largo del país",
-          "value": "200+"
-        }
       ]
     },
     "faqs": {

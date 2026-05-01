@@ -13,7 +13,7 @@
       "heading": "Guard Pod Chile: Guardia Virtual Inteligente para Empresas y Terrenos",
       "subheading": "Protección Autónoma 24/7 con Tecnología de Vanguardia. Detección de Intrusos en Tiempo Real, Cámaras 4K y Respuesta Inmediata para tu Empresa o Propiedad.",
       "cta_text": "Solicitar Cotización Gratuita",
-      "image": "guard-pod-hero.jpg"
+      "image": "/images/s4-thumbnail.webp"
     },
     "intro": {
       "heading": "Guard Pod: El Futuro de la Seguridad Privada en Chile",
@@ -51,31 +51,6 @@
         "Vulnerabilidad de instalaciones durante fines de semana y festivos",
         "Imposibilidad de monitoreo constante en múltiples ubicaciones simultáneamente",
         "Zonas muertas sin cobertura donde los guardias tradicionales no pueden estar presentes"
-      ]
-    },
-    "stats": {
-      "heading": "Guard Pod en Números: Protección que Genera Resultados",
-      "items": [
-        {
-          "label": "Empresas Protegidas con Guard Pod",
-          "value": "+150"
-        },
-        {
-          "label": "Detección de Intrusiones Anuales",
-          "value": "+2.800"
-        },
-        {
-          "label": "Reducción de Incidentes en Sitios Protegidos",
-          "value": "87%"
-        },
-        {
-          "label": "Tiempo de Respuesta Promedio ante Alertas",
-          "value": "3 min"
-        },
-        {
-          "label": "Disponibilidad del Sistema",
-          "value": "99.7%"
-        }
       ]
     },
     "faqs": {

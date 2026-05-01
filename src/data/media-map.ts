@@ -48,6 +48,10 @@ export function getSectorHero(slug: string): string {
   return getMediaImage('sector', slug, 'hero') || '/images/hero-home.webp';
 }
 
+export function getLocationHero(slug: string): string {
+  return getMediaImage('location', slug, 'hero') || '/images/hero-home.webp';
+}
+
 export function getClientLogo(slug: string): string {
   return getMediaImage('client', slug, 'logo') || `/images/client-${slug}.webp`;
 }

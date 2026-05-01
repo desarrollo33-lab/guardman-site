@@ -97,13 +97,20 @@ const introText = cmsIntroContent
     ? sections.intro.paragraphs
     : [SERVICE_INTROS[slug] || `${service.name} es uno de nuestros servicios principales. En GuardMan Chile contamos con más de 8 años de experiencia protegiendo empresas y residencias con personal certificado OS-10 y tecnología de vanguardia.`];
 
-// Staff section: load from staff.json, fallback to cms-config
-const staffPath = `${CMS_DIR}/staff.json`;
-let staffData = { image: STAFF_IMAGE, title: 'Personal que marca la diferencia', description: 'Nuestros guardias son la base de la confianza que nuestros clientes depositan en nosotros.', traits: STAFF_TRAITS };
-if (existsSync(staffPath)) {
-  const loaded = JSON.parse(readFileSync(staffPath, 'utf-8'));
-  staffData = { image: loaded.image || STAFF_IMAGE, title: loaded.title || staffData.title, description: loaded.description || staffData.description, traits: loaded.traits || STAFF_TRAITS };
+// Staff section: load from page content first, fallback to staff.json, then cms-config
+const globalStaffPath = `${CMS_DIR}/staff.json`;
+let globalStaff = { image: STAFF_IMAGE, title: 'Personal que marca la diferencia', description: 'Nuestros guardias son la base de la confianza que nuestros clientes depositan en nosotros.', traits: STAFF_TRAITS };
+if (existsSync(globalStaffPath)) {
+  const loaded = JSON.parse(readFileSync(globalStaffPath, 'utf-8'));
+  globalStaff = { image: loaded.image || STAFF_IMAGE, title: loaded.title || globalStaff.title, description: loaded.description || globalStaff.description, traits: loaded.traits || STAFF_TRAITS };
 }
+// Per-page override from CMS content
+const staffData = sections?.staff ? {
+  image: (sections.staff as any).image || globalStaff.image,
+  title: (sections.staff as any).title || globalStaff.title,
+  description: (sections.staff as any).description || globalStaff.description,
+  traits: (sections.staff as any).traits || globalStaff.traits,
+} : globalStaff;
 ---
 
 <BaseLayout title={hero.heading ? `${hero.heading} | GuardMan` : service.name} description={hero.subheading || service.short_description} image={ogImage}>

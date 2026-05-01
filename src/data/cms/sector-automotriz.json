@@ -4,7 +4,7 @@
       "heading": "Seguridad Automotriz Profesional para Proteger tu Negocio en Santiago",
       "subheading": "Guardias OS-10 certificados, monitoreo 24/7 y cobertura en 14 comunas. Protege vehículos, talleres y concesionarios con la experiencia de más de 8 años.",
       "cta_text": "Cotizar Ahora",
-      "image": "mantener valor actual"
+      "image": "/images/sector-automotriz.webp"
     },
     "intro": {
       "heading": "Soluciones de Seguridad Integral para el Sector Automotriz",
@@ -32,27 +32,6 @@
         "Hurto de piezas de repuesto, herramientas especializadas y equipos electrónicos en talleres y centros de servicio",
         "Accesos no autorizados de personas sospechosas que pueden representar riesgos para clientes o personal",
         "Vandalismo y daños a infraestructura, vehículos en exhibición y equipamiento de trabajo"
-      ]
-    },
-    "stats": {
-      "heading": "GuardMan en Números",
-      "items": [
-        {
-          "value": "500+",
-          "label": "Guardias"
-        },
-        {
-          "value": "8+",
-          "label": "Años"
-        },
-        {
-          "value": "14",
-          "label": "Comunas"
-        },
-        {
-          "value": "24/7",
-          "label": "Monitoreo"
-        }
       ]
     },
     "faqs": {

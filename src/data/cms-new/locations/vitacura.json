@@ -41,23 +41,6 @@
         "Falta de personal capacitado"
       ]
     },
-    "stats": {
-      "heading": "Numeros que nos respaldan",
-      "items": [
-        {
-          "label": "Empresas protegidas",
-          "value": "20+"
-        },
-        {
-          "label": "Guardias en zona",
-          "value": "30+"
-        },
-        {
-          "label": "Tiempo respuesta",
-          "value": "< 30 min"
-        }
-      ]
-    },
     "faqs": {
       "heading": "Preguntas Frecuentes",
       "items": [

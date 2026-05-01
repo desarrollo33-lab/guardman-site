@@ -10,6 +10,7 @@ import SchemaService from '../../../components/seo/SchemaService.astro';
 import SchemaLocalBusiness from '../../../components/seo/SchemaLocalBusiness.astro';
 import SchemaBreadcrumb from '../../../components/seo/SchemaBreadcrumb.astro';
 import { readFileSync, existsSync } from 'fs';
+import { getServiceHero, getLocationHero } from '../../../data/media-map';
 
 export async function getStaticPaths() {
   const services = getServicesList();
@@ -76,6 +77,7 @@ const ctx = zoneContext[location.zone] || { challenges: 'residencial y comercial
 
 // SEO meta
 const hero = comboSections?.hero || serviceSections?.hero || { heading: serviceName, subheading: '' };
+const comboHeroImage = comboSections?.hero?.image || serviceSections?.hero?.image || getServiceHero(serviceSlug) || getLocationHero(locationSlug);
 const metaTitle = comboSections?.meta?.title || comboContent?.seo?.title || `${hero.heading} en ${locationName} | GuardMan`;
 const metaDescription = comboSections?.meta?.description || comboContent?.seo?.description || `Servicio de ${serviceName.toLowerCase()} profesional en ${locationName}. ${hero.subheading || serviceName}. Solicita tu cotización.`;
 
@@ -108,7 +110,7 @@ const breadcrumbItems = [
 ];
 ---
 
-<BaseLayout title={metaTitle} description={metaDescription}>
+<BaseLayout title={metaTitle} description={metaDescription} image={comboHeroImage}>
   <SchemaService
     name={`${serviceName} en ${locationName}`}
     description={hero.heading}
@@ -138,6 +140,10 @@ const breadcrumbItems = [
   </div>
 
   <section class="relative bg-primary-600 text-white py-16 lg:py-20 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src={comboHeroImage} alt={hero.heading} class="w-full h-full object-cover opacity-30" width="1920" height="1080" loading="eager" />
+      <div class="absolute inset-0 bg-gradient-to-r from-primary-800/95 to-primary-600/80"></div>
+    </div>
     <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" aria-hidden="true"></div>
 
@@ -236,6 +242,11 @@ const breadcrumbItems = [
             if (existsSync(staffPath)) {
               const loaded = JSON.parse(readFileSync(staffPath, 'utf-8'));
               staffD = { image: loaded.image || staffD.image, title: loaded.title || staffD.title, description: loaded.description || staffD.description, traits: loaded.traits || staffD.traits };
+            }
+            // Per-page override from combo content
+            if (comboSections?.staff) {
+              const s = comboSections.staff as any;
+              staffD = { image: s.image || staffD.image, title: s.title || staffD.title, description: s.description || staffD.description, traits: s.traits || staffD.traits };
             }
             return (
               <div class="mb-8 bg-neutral-900 text-white rounded-2xl overflow-hidden">

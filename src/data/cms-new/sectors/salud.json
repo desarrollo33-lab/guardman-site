@@ -12,7 +12,7 @@
     "hero": {
       "heading": "Guardias de Seguridad para el Sector Salud en Chile",
       "subheading": "Protección profesional para clínicas, hospitales, laboratorios y centros de salud. Guardias certificados OS-10 con experiencia en el rubro kesehatan.",
-      "image": "guardia-seguridad-clinica-chile.jpg"
+      "image": "/images/nosotros_seccion.webp"
     },
     "intro": {
       "heading": "Seguridad Especializada para Instalaciones de Salud",
@@ -43,23 +43,6 @@
         "Situaciones de agresividad de familiares en salas de urgencia o espera de clínicas",
         "Protección de equipos médicos costosos y tecnología de diagnóstico durante horas no hábiles",
         "Control de flujo de visitantes excesivo que puede comprometer la seguridad institucional"
-      ]
-    },
-    "stats": {
-      "heading": "Cifras que Respaldan Nuestra Experiencia en Salud",
-      "items": [
-        {
-          "label": "Clínicas y hospitales protegidos",
-          "value": "45+"
-        },
-        {
-          "label": "Guardias certificados OS-10 desplegados en sector salud",
-          "value": "180+"
-        },
-        {
-          "label": "Reducción promedio de incidentes de seguridad en instalaciones de salud",
-          "value": "78%"
-        }
       ]
     },
     "faqs": {
