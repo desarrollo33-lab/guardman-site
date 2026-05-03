@@ -1,174 +1,96 @@
-# GuardMan Chile - SEO Content Generation System
+# GuardMan Chile — Sitio Público v1.12
 
-Sistema completo de generación de contenido SEO para [guardman.cl](https://guardman.cl).
-
-## Arquitectura
-
-```
-┌────────────────────────────────────────────────────────────────────┐
-│                    GUARDMAN SEO SYSTEM                               │
-├────────────────────────────────────────────────────────────────────┤
-│                                                                     │
-│  WORKER: https://guardman-agent.oficinadesarrollo33.workers.dev     │
-│  D1: guardman-seo                                                   │
-│                                                                     │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐         │
-│  │   SERPER     │───▶│  GUARDMAN   │───▶│     D1       │         │
-│  │   API        │    │   AGENT     │    │   DATABASE   │         │
-│  └──────────────┘    └──────────────┘    └──────────────┘         │
-│                                                                     │
-└────────────────────────────────────────────────────────────────────┘
-```
-
-## Componentes
-
-### Cloudflare Worker
-- **URL**: https://guardman-agent.oficinadesarrollo33.workers.dev
-- **Endpoints**: Research, Generate, D1, Deploy
-- **Schedule**: Daily cron job a las 3:00 AM
-
-### D1 Database
-- **Name**: guardman-seo
-- **Tables**: 18 tablas para SEO data
-- **Status**: 5,357 registros
-
-### Durable Object: GuardmanAgent
-- AI-powered content generation
-- Learning from corrections
-- Knowledge base management
-
-## API Endpoints
-
-### Research
-```bash
-# Single research
-curl -X POST https://guardman-agent.oficinadesarrollo33.workers.dev/api/research \
-  -H "Content-Type: application/json" \
-  -d '{"serviceSlug": "guardias-de-seguridad", "locationSlug": "las-condes"}'
-
-# Batch research
-curl -X POST https://guardman-agent.oficinadesarrollo33.workers.dev/api/batch-research \
-  -H "Content-Type: application/json" \
-  -d '{"combinations": [{"serviceSlug":"guard-pod","locationSlug":"las-condes"}]}'
-```
-
-### Generate
-```bash
-# Service content
-curl -X POST https://guardman-agent.oficinadesarrollo33.workers.dev/api/generate \
-  -d '{"type":"service","slug":"guardias-de-seguridad"}'
-
-# Location content
-curl -X POST https://guardman-agent.oficinadesarrollo33.workers.dev/api/generate \
-  -d '{"type":"location","slug":"las-condes"}'
-
-# Combo content
-curl -X POST https://guardman-agent.oficinadesarrollo33.workers.dev/api/generate \
-  -d '{"type":"combo","slug":"guard-pod","locationSlug":"las-condes"}'
-```
-
-### Status
-```bash
-curl https://guardman-agent.oficinadesarrollo33.workers.dev/api/d1/status
-curl https://guardman-agent.oficinadesarrollo33.workers.dev/api/guardman/status
-```
-
-## D1 Tables
-
-| Table | Rows | Description |
-|-------|------|-------------|
-| services | 9 | Servicios de seguridad |
-| locations | 14 | Comunas de cobertura |
-| keywords | 1,268 | Keywords con SDS score |
-| competitors | 2,602 | Competidores por dominio |
-| service_content | 9 | Contenido generado |
-| location_content | 14 | Contenido generado |
-| combo_content | 14 | Contenido generado |
-| agent_knowledge | 29 | Base de conocimiento |
-
-## Scripts
-
-```bash
-# Run full pipeline
-npm run pipeline
-
-# Export D1 content to JSON
-npm run export
-
-# Deploy worker
-npm run worker:deploy
-
-# Development
-npm run dev
-```
-
-## SDS Score (SEO Difficulty Score)
-
-| Tier | Score | Description |
-|------|-------|-------------|
-| Easy | < 25 | Rápido de posicionar |
-| Moderate | 25-40 | Requiere esfuerzo |
-| Competitive | 40-60 | Competencia alta |
-| Hard | 60+ | Authority required |
-
-## Keywords Easy Win
-
-| Keyword | SDS | Servicio | Ubicación |
-|---------|-----|----------|-----------|
-| Guard Pod Las Condes | 20 | guard-pod | las-condes |
-| Guard Pod Santiago Centro | 20 | guard-pod | santiago-centro |
-| Guard Pod Lampa | 20 | guard-pod | lampa |
-| Guard Pod Los Andes | 20 | guard-pod | los-andes |
-| Guard Pod San Felipe | 23 | guard-pod | san-felipe |
-
-## Services
-
-1. guardias-de-seguridad
-2. cctv-videovigilancia
-3. control-de-accesos
-4. escoltas-privados
-5. monitoreo-24-7
-6. seguridad-eventos
-7. seguridad-industrial
-8. auditoria-seguridad
-9. guard-pod
-
-## Locations
-
-1. santiago-centro
-2. las-condes
-3. vitacura
-4. huechuraba
-5. quilicura
-6. lo-barnechea
-7. la-reina
-8. renca
-9. pudahuel
-10. la-pintana
-11. lampa
-12. conchali
-13. los-andes
-14. san-felipe
-
-## Environment Variables
-
-Configurar en `.env` o Cloudflare dashboard:
-
-```
-SERPER_API_KEY=<obtener de serper.dev>
-AUTH_PASSWORD=<ver .env>
-ENVIRONMENT=production
-```
+Sitio web de [GuardMan Chile](https://guardman.cl), empresa de seguridad privada.
 
 ## Tech Stack
+- **Astro 5** + Tailwind CSS v4 + React 19
+- Deploy en **Cloudflare Pages**
+- CMS: **Cloudflare D1** + Admin Panel Worker
 
-- **Frontend**: Astro 5 + Tailwind v4
-- **Backend**: Cloudflare Workers + Durable Objects
-- **Database**: Cloudflare D1
-- **AI**: Workers AI (Llama 3.1 8B)
-- **Research**: Serper.dev API
-- **Hosting**: Cloudflare Pages
+## CMS Architecture
+Todo el contenido se gestiona desde el [Admin Panel](https://guardman-admin.pages.dev) y se sincroniza vía GitHub Actions o manualmente.
 
----
+```
+Admin Panel (D1 + R2)
+    ↓ sync-from-admin.mjs
+guardman-site (src/data/cms/*.json)  ← 171+ JSON files
+    ↓ astro build (SSG)
+Cloudflare Pages (dist/)             ← 174 pages
+```
 
-Last updated: 2026-04-13
+## Structure
+```
+src/
+├── data/
+│   ├── cms/                # 171+ JSON files (CMS sync)
+│   │   ├── services.json   # 9 servicios
+│   │   ├── locations.json  # 14 ubicaciones
+│   │   ├── sectors.json    # 9 sectores
+│   │   ├── zones.json      # 6 zonas con contexto
+│   │   ├── homepage.json   # Homepage CMS
+│   │   ├── brand.json      # Brand DNA
+│   │   ├── staff.json      # Staff section
+│   │   ├── hub-*.json      # Hub page content
+│   │   ├── pages-*.json    # Static page content
+│   │   ├── combo-*.json    # 126 combo pages
+│   │   └── media-map.json  # Image assignments
+│   ├── generated/          # Pipeline data (SEO, blog, etc.)
+│   ├── cms.ts              # CMS reader module
+│   ├── cms-config.ts       # Visual design tokens only
+│   ├── cms-helpers.ts      # Unified parsers (parseIntro, parseFAQs, etc.)
+│   ├── media-map.ts        # Image resolver
+│   ├── brand.ts            # Brand DNA from CMS
+│   ├── directus.ts         # Blog/Clients/SiteConfig (generated data)
+│   └── types.ts            # TypeScript interfaces
+├── pages/                  # 16 route templates → 174 pages
+├── components/             # 20 Astro components
+├── layouts/                # BaseLayout
+└── styles/                 # app.css (Tailwind v4 theme)
+```
+
+## Pages (174 total)
+| Route | Count | CMS Source |
+|-------|-------|------------|
+| `/` | 1 | `homepage.json` |
+| `/servicios/` | 1 | `hub-services.json` |
+| `/servicios/[slug]` | 9 | `{slug}.json` |
+| `/servicios/[slug]/[location]` | 126 | `combo-*.json` |
+| `/ubicaciones/` | 1 | `hub-locations.json` |
+| `/ubicaciones/[slug]` | 14 | `location-*.json` |
+| `/sectores/` | 1 | `hub-sectors.json` |
+| `/sectores/[slug]` | 9 | `sector-*.json` |
+| `/blog/` | 1 | `hub-blog.json` |
+| `/blog/[slug]` | N | `generated/blog.json` |
+| `/nosotros` | 1 | `pages-nosotros.json` |
+| `/contacto` | 1 | `pages-contacto.json` |
+| `/cotizacion` | 1 | `pages-cotizacion.json` |
+| `/404` | 1 | `pages-404.json` |
+| `/privacidad` | 1 | `pages-privacidad.json` |
+| `/terminos` | 1 | `pages-terminos.json` |
+
+## Commands
+```bash
+npm run dev          # Desarrollo local
+npm run build        # Build de producción
+npm run sync:all     # Sincronizar contenido desde Admin API
+npm run deploy       # Sync + Build + Deploy
+node scripts/validate-cms.mjs   # Validar datos CMS
+node scripts/clean-chinese.mjs  # Limpiar caracteres chinos
+node scripts/generate-seo-meta.mjs  # Generar SEO meta desde keywords
+```
+
+## SEO
+- **126 páginas combo** (9 servicios × 14 ubicaciones)
+- **9 páginas de sector** industrial
+- **1,268 keywords** investigadas (Serper data)
+- **Schema markup**: Organization, WebSite, Service, LocalBusiness, FAQ, Article, Breadcrumb
+- Sitemap automático (`@astrojs/sitemap`)
+- `robots.txt` configurado
+
+## Deploy
+Automático via GitHub Actions (`repository_dispatch` desde Admin API).
+
+## Documentation
+- `docs/PLAN-v1.12.md` — Plan de optimización completo
+- `docs/DESIGN.md` — Design system
+- `docs/handoffs/` — Session reports y handoffs

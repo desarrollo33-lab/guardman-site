@@ -6,14 +6,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSectorSections, getServiceSections, getServicesList, getLocationsList, getSectorsList } from '../../data/cms';
 import { SECTOR_IMAGES, SECTOR_INTROS, SECTOR_ISSUES, STAFF_IMAGE, STAFF_TRAITS, getSectorTag } from '../../data/cms-config';
-import { optimizeImageUrl } from '../../data/directus';
+import { optimizeImageUrl } from '../../data/cms-helpers';
 import { readFileSync, existsSync } from 'fs';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
-import { optimizeImageUrl } from '../../data/directus';
-import { readFileSync, existsSync } from 'fs';
 
 const CMS_DIR = 'src/data/cms';
-const NEW_CMS_DIR = 'src/data/cms-new';
 
 export async function getStaticPaths() {
   const sectors = getSectorsList();
@@ -25,16 +22,12 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 
-const newSectorPath = `${NEW_CMS_DIR}/sectors/${slug}.json`;
-const legacySectorPath = `${CMS_DIR}/sector-${slug}.json`;
+const sectorDataPath = `${CMS_DIR}/sector-${slug}.json`;
 let sectionData = { sections: {}, services: [], related_content: {} };
 
-if (existsSync(newSectorPath)) {
-  const cms = JSON.parse(readFileSync(newSectorPath, 'utf-8'));
-  sectionData = { sections: cms.content || cms.sections || {}, services: [], related_content: cms.related_content || {} };
-} else if (existsSync(legacySectorPath)) {
-  sectionData = JSON.parse(readFileSync(legacySectorPath, 'utf-8'));
-  sectionData.related_content = {};
+if (existsSync(sectorDataPath)) {
+  sectionData = JSON.parse(readFileSync(sectorDataPath, 'utf-8'));
+  sectionData.related_content = sectionData.related_content || {};
 }
 
 const sections = sectionData.sections || {};

@@ -1,19 +1,19 @@
 {
   "hero": {
-    "heading": "Seguridad por Sector",
-    "subheading": "Soluciones de seguridad adaptadas a las necesidades específicas de cada industria y sector en Santiago.",
-    "image": "/images/hero-home.webp"
+    "heading": "Seguridad por Sector Industrial",
+    "subheading": "Adaptamos nuestros servicios de seguridad a las necesidades específicas de cada industria. Protocolos especializados, personal entrenado y tecnología adecuada para cada rubro."
   },
   "stats": [
-    { "value": "200+", "label": "Empresas protegidas" },
-    { "value": "14", "label": "Comunas cobertura" },
-    { "value": "8+", "label": "Años experiencia" }
+    { "label": "Sectores", "value": "9" },
+    { "label": "Empresas protegidas", "value": "200+" },
+    { "label": "Industrias cubiertas", "value": "9" },
+    { "label": "Guardias especializados", "value": "500+" }
   ],
-  "top_sectors": ["comercial", "industrial", "residencial"],
+  "intro": "Cada sector industrial tiene desafíos de seguridad únicos. Nuestro equipo diseña estrategias de protección específicas para cada rubro, combinando guardias presenciales, tecnología de vigilancia y protocolos de emergencia adaptados.",
+  "top_sectors": ["industrial", "residencial", "comercial"],
   "cta": {
-    "text": "¿No encuentras tu sector?",
-    "description": "Contáctanos y diseñamos una solución a medida para tu industria.",
-    "button_text": "Solicitar Cotización",
-    "button_link": "/cotizacion"
+    "text": "¿No encuentras tu sector? Contáctanos para una evaluación personalizada.",
+    "link": "/cotizacion",
+    "button": "Cotizar para mi industria"
   }
 }

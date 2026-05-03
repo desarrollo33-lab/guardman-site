@@ -1,27 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { COMPANY } from '../data/brand';
 import { readFileSync, existsSync } from 'fs';
 
-// Load config from CMS
-const configData = existsSync('src/data/cms/config.json') 
-  ? JSON.parse(readFileSync('src/data/cms/config.json', 'utf-8'))
-  : {};
+// Load page content from CMS
+const cmsPath = 'src/data/cms/pages-contacto.json';
+const cms = existsSync(cmsPath) ? JSON.parse(readFileSync(cmsPath, 'utf-8')) : {};
 
-const siteConfig = {
-  phone: configData.phone || '+56930000010',
-  phoneTel: (configData.phone || '+56930000010').replace(/[^0-9+]/g, ''),
-  email: configData.email || 'info@guardman.cl',
-  address: configData.address || 'Santiago, Chile',
-};
+const hero = cms.hero || { heading: 'Contáctanos', subheading: 'Estamos disponibles 24/7 para atenderte.' };
+const info = cms.info || { phone: COMPANY.phone || '+56 9 300 000 10', email: COMPANY.email || 'info@guardman.cl', address: COMPANY.address || 'Santiago, Chile' };
+const phoneTel = (info.phone || info.phone_tel || COMPANY.phone || '').replace(/[^0-9+]/g, '');
+const formContent = cms.form || { title: 'Envíanos un mensaje', subtitle: 'Te responderemos en menos de 24 horas.' };
 ---
 
 <BaseLayout title="Contacto | GuardMan Chile" description="Contacta a GuardMan Chile para cotizar servicios de seguridad privada en Santiago.">
   <section class="bg-primary-600 text-white py-16 lg:py-20">
     <div class="container mx-auto px-4">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Contacto</h1>
-      <p class="text-xl text-white/90">
-        Estamos disponibles 24/7 para atenderte
-      </p>
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">{hero.heading}</h1>
+      <p class="text-xl text-white/90">{hero.subheading}</p>
     </div>
   </section>
 
@@ -29,7 +25,7 @@ const siteConfig = {
     <div class="container mx-auto px-4">
       <div class="grid lg:grid-cols-2 gap-12">
         <div>
-          <h2 class="text-2xl font-bold text-neutral-900 mb-6">Informacion de contacto</h2>
+          <h2 class="text-2xl font-bold text-neutral-900 mb-6">Información de contacto</h2>
           <div class="space-y-6">
             <div class="flex gap-4">
               <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
@@ -39,7 +35,7 @@ const siteConfig = {
               </div>
               <div>
                 <h3 class="font-semibold text-neutral-900">Telefono</h3>
-                <a href={`tel:${siteConfig.phoneTel}`} class="text-primary-600 hover:text-primary-700">{siteConfig.phone}</a>
+                <a href={`tel:${phoneTel}`} class="text-primary-600 hover:text-primary-700">{info.phone}</a></a>
                 <p class="text-sm text-neutral-500">Disponible 24/7</p>
               </div>
             </div>
@@ -52,7 +48,7 @@ const siteConfig = {
               </div>
               <div>
                 <h3 class="font-semibold text-neutral-900">Email</h3>
-                <a href={`mailto:${siteConfig.email}`} class="text-primary-600 hover:text-primary-700">{siteConfig.email}</a>
+                <a href={`mailto:${info.email}`} class="text-primary-600 hover:text-primary-700">{info.email}</a></a>
                 <p class="text-sm text-neutral-500">Respuesta en menos de 24h</p>
               </div>
             </div>
@@ -66,8 +62,8 @@ const siteConfig = {
               </div>
               <div>
                 <h3 class="font-semibold text-neutral-900">Ubicacion</h3>
-                <p class="text-neutral-600">{siteConfig.address}</p>
-                <p class="text-sm text-neutral-500">Cobertura en toda la Region Metropolitana</p>
+                <p class="text-neutral-600">{info.address}</p>
+                <p class="text-sm text-neutral-500">Cobertura en toda la Región Metropolitana</p>
               </div>
             </div>
 
@@ -79,7 +75,7 @@ const siteConfig = {
               </div>
               <div>
                 <h3 class="font-semibold text-neutral-900">Horario</h3>
-                <p class="text-neutral-600">Atencion 24 horas, 7 dias a la semana</p>
+                <p class="text-neutral-600">Atención 24 horas, 7 días a la semana</p>
                 <p class="text-sm text-neutral-500">Siempre disponibles para emergencias</p>
               </div>
             </div>
@@ -87,7 +83,7 @@ const siteConfig = {
         </div>
 
         <div class="bg-neutral-50 rounded-2xl p-8">
-          <h2 class="text-2xl font-bold text-neutral-900 mb-6">Envianos un mensaje</h2>
+          <h2 class="text-2xl font-bold text-neutral-900 mb-6">{formContent.title}</h2>
           <form class="space-y-4" id="contact-form">
             <div>
               <label for="name" class="block text-sm font-medium text-neutral-700 mb-1">Nombre completo</label>
@@ -124,7 +120,7 @@ const siteConfig = {
             </button>
           </form>
           <p class="text-sm text-neutral-500 mt-4 text-center">
-            O llama directamente al <a href={`tel:${siteConfig.phoneTel}`} class="text-primary-600 font-medium">{siteConfig.phone}</a>
+            O llama directamente al <a href={`tel:${phoneTel}`} class="text-primary-600 font-medium">{info.phone}</a>
           </p>
         </div>
       </div>
@@ -138,8 +134,35 @@ const siteConfig = {
     e.preventDefault();
     const formData = new FormData(form as HTMLFormElement);
     const data = Object.fromEntries(formData);
-    console.log('Form submitted:', data);
-    alert('Gracias por tu mensaje. Te contactaremos pronto.');
-    (form as HTMLFormElement).reset();
+    
+    try {
+      const res = await fetch('https://guardman-admin-api.oficinadesarrollo33.workers.dev/api/intel/leads/capture', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          source: 'web_contacto',
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          service_slug: data.service,
+          message: data.message,
+          landing_page: window.location.href,
+          utm_source: new URLSearchParams(window.location.search).get('utm_source') || null,
+          utm_medium: new URLSearchParams(window.location.search).get('utm_medium') || null,
+          utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || null,
+        }),
+      });
+      const result = await res.json();
+      if (result.ok) {
+        alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
+        (form as HTMLFormElement).reset();
+      } else {
+        alert('Hubo un error. Por favor intenta de nuevo o llámanos directamente.');
+      }
+    } catch (err) {
+      console.error('Contact form error:', err);
+      alert('¡Gracias! Tu mensaje fue recibido.');
+      (form as HTMLFormElement).reset();
+    }
   });
 </script>

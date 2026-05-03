@@ -6,15 +6,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getServiceSections, getServicesList, getLocationsList } from '../../data/cms';
 import { SERVICE_IMAGES, SERVICE_INTROS, SERVICE_RELATED, SERVICE_UPSELL, STAFF_IMAGE, STAFF_TRAITS, getSectorTag } from '../../data/cms-config';
-import { optimizeImageUrl } from '../../data/directus';
+import { optimizeImageUrl } from '../../data/cms-helpers';
 import { readFileSync, existsSync } from 'fs';
 import SchemaService from '../../components/seo/SchemaService.astro';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
-import { optimizeImageUrl } from '../../data/directus';
-import { readFileSync, existsSync } from 'fs';
 
 const CMS_DIR = 'src/data/cms';
-const NEW_CMS_DIR = 'src/data/cms-new';
 
 export async function getStaticPaths() {
   const services = getServicesList();
@@ -50,14 +47,11 @@ const service = services.find((s: any) => s.slug === slug) || {
 
 const sections = getServiceSections(slug);
 
-const newServicePath = `${NEW_CMS_DIR}/services/${slug}.json`;
-const legacyServicePath = `${CMS_DIR}/${slug}.json`;
+const serviceDataPath = `${CMS_DIR}/${slug}.json`;
 let cmsServiceData: any = null;
-if (existsSync(newServicePath)) {
-  cmsServiceData = JSON.parse(readFileSync(newServicePath, 'utf-8'));
-} else if (existsSync(legacyServicePath)) {
-  const legacy = JSON.parse(readFileSync(legacyServicePath, 'utf-8'));
-  cmsServiceData = { content: legacy.sections, related_content: {} };
+if (existsSync(serviceDataPath)) {
+  const data = JSON.parse(readFileSync(serviceDataPath, 'utf-8'));
+  cmsServiceData = { content: data.sections, related_content: {} };
 }
 
 const relatedContentFromCMS = cmsServiceData?.related_content || {};

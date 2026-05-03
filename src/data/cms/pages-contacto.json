@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "heading": "Contáctanos",
+    "subheading": "Estamos disponibles las 24 horas, los 7 días de la semana. Habla con un experto en seguridad."
+  },
+  "info": {
+    "phone": "+56 9 300 000 10",
+    "phone_tel": "+56930000010",
+    "whatsapp": "+56 9 3000 0010",
+    "email": "info@guardman.cl",
+    "commercial_email": "ventas@guardman.cl",
+    "address": "Av. Américo Vespucio Norte 1980, Providencia, Santiago, Chile"
+  },
+  "form": {
+    "title": "Envíanos un mensaje",
+    "subtitle": "Completa el formulario y te responderemos en menos de 24 horas.",
+    "success_message": "Mensaje enviado correctamente. Nos comunicaremos contigo pronto."
+  },
+  "map": {
+    "lat": -33.4569,
+    "lng": -70.6483,
+    "zoom": 12
+  },
+  "schedule": "Lunes a Domingo: 24 horas"
+}

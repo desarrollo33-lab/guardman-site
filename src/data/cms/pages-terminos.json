@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "heading": "Términos y Condiciones",
+    "subheading": "Condiciones generales de uso del sitio web de GuardMan Chile.",
+    "last_updated": "2026-01-01"
+  },
+  "sections": [
+    {
+      "title": "Información general",
+      "content": "El sitio web guardman.cl es propiedad de GuardMan Seguridad Privada SpA, RUT 76.123.456-7, con domicilio en Av. Américo Vespucio Norte 1980, Providencia, Santiago, Chile. El uso de este sitio implica la aceptación de estos términos y condiciones."
+    },
+    {
+      "title": "Propiedad intelectual",
+      "content": "Todo el contenido de este sitio web, incluyendo textos, imágenes, logos, diseños y código fuente, es propiedad de GuardMan Seguridad Privada SpA y está protegido por las leyes chilenas de propiedad intelectual. Su reproducción sin autorización está prohibida."
+    },
+    {
+      "title": "Servicios",
+      "content": "La información sobre nuestros servicios publicada en este sitio es de carácter informativo. Las condiciones específicas de cada servicio se acuerdan en los contratos individuales correspondientes. Los precios pueden variar según la ubicación, tipo de servicio y condiciones particulares."
+    },
+    {
+      "title": "Limitación de responsabilidad",
+      "content": "Nos esforzamos por mantener la información del sitio actualizada y precisa, pero no garantizamos que sea completa o esté libre de errores. GuardMan no se hace responsable por decisiones tomadas en base a la información publicada sin una consulta formal."
+    },
+    {
+      "title": "Enlaces externos",
+      "content": "Este sitio puede contener enlaces a sitios web de terceros. GuardMan no se responsabiliza por el contenido, políticas de privacidad o prácticas de sitios externos."
+    },
+    {
+      "title": "Modificaciones",
+      "content": "Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones entran en vigencia desde su publicación en el sitio."
+    },
+    {
+      "title": "Legislación aplicable",
+      "content": "Estos términos se rigen por las leyes de la República de Chile. Cualquier controversia será sometida a los tribunales de Santiago de Chile."
+    },
+    {
+      "title": "Contacto",
+      "content": "Para consultas sobre estos términos, contacta a info@guardman.cl o llama al +56 9 300 000 10."
+    }
+  ]
+}

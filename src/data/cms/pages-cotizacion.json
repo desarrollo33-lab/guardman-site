@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "heading": "Cotiza tu Servicio de Seguridad",
+    "subheading": "Recibe una propuesta personalizada sin compromiso. Respuesta en menos de 24 horas."
+  },
+  "form": {
+    "title": "Solicitar Cotización",
+    "subtitle": "Cuéntanos sobre tus necesidades de seguridad y te enviaremos una propuesta adaptada.",
+    "success_message": "¡Cotización solicitada! Un asesor se comunicará contigo en menos de 24 horas."
+  },
+  "trust_badges": [
+    { "icon": "shield", "text": "Certificación OS-10 vigente" },
+    { "icon": "clock", "text": "Respuesta en menos de 24h" },
+    { "icon": "lock", "text": "Cotización sin compromiso" },
+    { "icon": "award", "text": "8+ años de experiencia" }
+  ]
+}

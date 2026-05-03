@@ -1,10 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "guardman-admin-panel",
-  "main": "src/admin-stable.ts",
+  "name": "guardman-site",
   "compatibility_date": "2024-04-01",
-  "compatibility_flags": ["nodejs_compat"],
-  "d1_databases": [{ "binding": "DB", "database_name": "guardman-seo", "database_id": "aeaab85c-d4df-46c4-96b9-28d6a95aaec4" }],
-  "r2_buckets": [{ "binding": "IMAGES", "bucket_name": "guardman-images" }],
-  "vars": { "ENVIRONMENT": "production", "ADMIN_EMAIL": "admin@guardman.cl" }
+  "pages_build_output_dir": "./dist"
 }

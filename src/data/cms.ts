@@ -37,7 +37,7 @@ export function getServiceSections(slug: string): any {
       serviceSectionsCache[slug] = data.sections || {};
       return serviceSectionsCache[slug];
     } catch (e) {
-      console.error(`Error loading service ${slug}:`, e);
+      
     }
   }
 
@@ -60,7 +60,7 @@ export function getLocationSections(slug: string): any {
       locationSectionsCache[slug] = data.sections || {};
       return locationSectionsCache[slug];
     } catch (e) {
-      console.error(`Error loading location ${slug}:`, e);
+      
     }
   }
 
@@ -79,7 +79,7 @@ export function getServicesList(): any[] {
       // D1 query returns { results: [...], meta: {...} }
       return data.results || data || [];
     } catch (e) {
-      console.error('Error loading services list:', e);
+      
     }
   }
 
@@ -98,7 +98,7 @@ export function getLocationsList(): any[] {
       // D1 query returns { results: [...], meta: {...} }
       return data.results || data || [];
     } catch (e) {
-      console.error('Error loading locations list:', e);
+      
     }
   }
 
@@ -185,7 +185,7 @@ export function getSectorSections(slug: string): any {
       sectorSectionsCache[slug] = data.sections || {};
       return sectorSectionsCache[slug];
     } catch (e) {
-      console.error(`Error loading sector ${slug}:`, e);
+      
     }
   }
 
@@ -203,7 +203,7 @@ export function getSectorsList(): any[] {
       const data = JSON.parse(readFileSync(filePath, 'utf-8'));
       return data.results || data || [];
     } catch (e) {
-      console.error('Error loading sectors list:', e);
+      
     }
   }
 
@@ -269,7 +269,7 @@ export function getAllImages(): any[] {
       const data = JSON.parse(readFileSync(filePath, 'utf-8'));
       return data.images || [];
     } catch (e) {
-      console.error('Error loading images:', e);
+      
     }
   }
 

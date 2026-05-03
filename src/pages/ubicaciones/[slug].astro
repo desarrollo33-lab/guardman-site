@@ -12,7 +12,6 @@ import SchemaLocalBusiness from '../../components/seo/SchemaLocalBusiness.astro'
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
 
 const CMS_DIR = 'src/data/cms';
-const NEW_CMS_DIR = 'src/data/cms-new';
 
 export async function getStaticPaths() {
   const locations = getLocationsList();
@@ -31,14 +30,11 @@ const services = getServicesList();
 
 const location = locations.find((l: any) => l.slug === slug) || { slug, name: locationName, zone: zone || 'Centro' };
 
-const newLocationPath = `${NEW_CMS_DIR}/locations/${slug}.json`;
-const legacyLocationPath = `${CMS_DIR}/location-${slug}.json`;
+const locationDataPath = `${CMS_DIR}/location-${slug}.json`;
 let cmsLocationData: any = null;
-if (existsSync(newLocationPath)) {
-  cmsLocationData = JSON.parse(readFileSync(newLocationPath, 'utf-8'));
-} else if (existsSync(legacyLocationPath)) {
-  const legacy = JSON.parse(readFileSync(legacyLocationPath, 'utf-8'));
-  cmsLocationData = { content: legacy.sections, related_content: {} };
+if (existsSync(locationDataPath)) {
+  const data = JSON.parse(readFileSync(locationDataPath, 'utf-8'));
+  cmsLocationData = { content: data.sections, related_content: {} };
 }
 
 const relatedContentFromCMS = cmsLocationData?.related_content || {};

@@ -10,7 +10,7 @@
   "content": {
     "hero": {
       "headline": "Seguridad Privada en Santiago, Chile",
-      "subheadline": "Protegemos lo que mas te importa",
+      "subheadline": "Protegemos lo que más te importa",
       "background_image": "/images/hero-home.webp",
       "phone": "+56930000010",
       "badge_image": "/images/escudo-os10.webp"
@@ -18,13 +18,13 @@
     "nosotros": {
       "badge": "Grupo GuardMan Chile",
       "title": "GuardMan Chile - Seguridad privada profesional en Santiago",
-      "paragraph": "Mas de 8 años de experiencia protegiendo lo que mas te importa. Guardias certificados OS-10 y tecnologia de vanguardia para un servicio integral y confiable.",
+      "paragraph": "Más de 8 años de experiencia protegiendo lo que más te importa. Guardias certificados OS-10 y tecnología de vanguardia para un servicio integral y confiable.",
       "image": "/images/nosotros_seccion.webp",
       "image_badge": "Conoce GuardMan",
       "features": [
         {
           "title": "Guardias certificados OS-10 vigentes",
-          "description": "Personal capacitado y certificado para maxima proteccion."
+          "description": "Personal capacitado y certificado para máxima protección."
         },
         {
           "title": "Cumplimiento Ley 21.659",
@@ -62,8 +62,8 @@
       "image_badge": "15 meses de I+D",
       "features": [
         {
-          "title": "Despliegue en menos de 2 horas",
-          "description": "Unidad autonoma lista para operar inmediatamente en cualquier ubicacion."
+          "title": "Despliegue en tiempo record",
+          "description": "Unidad autonoma lista para operar casi inmediatamente en cualquier ubicacion."
         },
         {
           "title": "Energia solar, funciona sin red electrica",

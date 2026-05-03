@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "heading": "Política de Privacidad",
+    "subheading": "Información sobre cómo GuardMan Chile protege tus datos personales.",
+    "last_updated": "2026-01-01"
+  },
+  "sections": [
+    {
+      "title": "Responsable del tratamiento",
+      "content": "El responsable del tratamiento de los datos personales es GuardMan Seguridad Privada SpA, RUT 76.123.456-7, con domicilio en Av. Américo Vespucio Norte 1980, Providencia, Santiago, Chile."
+    },
+    {
+      "title": "Datos que recopilamos",
+      "content": "Recopilamos datos que tú nos proporcionas voluntariamente al contactarnos o solicitar una cotización: nombre, email, teléfono, dirección y detalles sobre tus necesidades de seguridad. No recopilamos datos de navegación más allá de lo necesario para el funcionamiento del sitio."
+    },
+    {
+      "title": "Finalidad del tratamiento",
+      "content": "Utilizamos tus datos personales exclusivamente para responder tus consultas, enviar cotizaciones y prestar nuestros servicios de seguridad. No compartimos tus datos con terceros sin tu consentimiento expreso."
+    },
+    {
+      "title": "Derechos del titular",
+      "content": "De acuerdo con la Ley 19.628 sobre Protección de la Vida Privada, tienes derecho a acceder, rectificar y eliminar tus datos personales. Para ejercer estos derechos, contacta a info@guardman.cl."
+    },
+    {
+      "title": "Seguridad de los datos",
+      "content": "Implementamos medidas de seguridad técnicas y organizativas para proteger tus datos personales contra accesos no autorizados, pérdida o alteración."
+    },
+    {
+      "title": "Cookies",
+      "content": "Este sitio utiliza cookies técnicas necesarias para su funcionamiento. No utilizamos cookies de rastreo publicitario."
+    },
+    {
+      "title": "Contacto",
+      "content": "Para consultas sobre privacidad, contacta a info@guardman.cl o llama al +56 9 300 000 10."
+    }
+  ]
+}

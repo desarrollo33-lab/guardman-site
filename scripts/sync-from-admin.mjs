@@ -5,7 +5,6 @@ import { Readable } from 'stream';
 
 const API_BASE = 'https://guardman-admin-api.oficinadesarrollo33.workers.dev';
 const CMS_DIR = 'src/data/cms';
-const CMS_NEW_DIR = 'src/data/cms-new';
 
 async function fetchJSON(path) {
   const res = await fetch(`${API_BASE}${path}`);
@@ -42,7 +41,6 @@ async function main() {
   console.log('Syncing from guardman-admin (D1 + CMS)...');
 
   if (!existsSync(CMS_DIR)) mkdirSync(CMS_DIR, { recursive: true });
-  if (!existsSync(CMS_NEW_DIR)) mkdirSync(CMS_NEW_DIR, { recursive: true });
 
   const services = await fetchJSON('/api/services');
   writeFileSync(join(CMS_DIR, 'services.json'), JSON.stringify({ results: services }, null, 2));
@@ -58,13 +56,15 @@ async function main() {
 
   console.log('Syncing individual content from CMS...');
 
-  // Sync homepage
+  // Sync homepage — save to both locations
   try {
     const hpRes = await fetch(`${API_BASE}/api/cms/homepage`);
     const hpData = await hpRes.json();
     if (hpData.ok && hpData.content) {
-      writeFileSync('homepage.json', JSON.stringify(hpData.content, null, 2));
-      console.log('Homepage synced');
+      const hpJson = JSON.stringify(hpData.content, null, 2);
+      writeFileSync('homepage.json', hpJson);
+      writeFileSync(join(CMS_DIR, 'homepage.json'), hpJson);
+      console.log('Homepage synced → homepage.json + cms/homepage.json');
     }
   } catch (e) {
     console.warn('Homepage sync failed:', e.message);
@@ -76,8 +76,6 @@ async function main() {
     const content = await fetchCMSContent('service', s.slug);
     if (content) {
       writeFileSync(join(CMS_DIR, `${s.slug}.json`), JSON.stringify({ sections: content.content || content }, null, 2));
-      mkdirSync(`${CMS_NEW_DIR}/services`, { recursive: true });
-      writeFileSync(join(CMS_NEW_DIR, 'services', `${s.slug}.json`), JSON.stringify(content, null, 2));
       synced++;
     }
   }
@@ -86,8 +84,6 @@ async function main() {
     const content = await fetchCMSContent('location', l.slug);
     if (content) {
       writeFileSync(join(CMS_DIR, `location-${l.slug}.json`), JSON.stringify({ sections: content.content || content }, null, 2));
-      mkdirSync(`${CMS_NEW_DIR}/locations`, { recursive: true });
-      writeFileSync(join(CMS_NEW_DIR, 'locations', `${l.slug}.json`), JSON.stringify(content, null, 2));
       synced++;
     }
   }
@@ -96,19 +92,14 @@ async function main() {
     const content = await fetchCMSContent('sector', sec.slug);
     if (content) {
       writeFileSync(join(CMS_DIR, `sector-${sec.slug}.json`), JSON.stringify({ sections: content.content || content }, null, 2));
-      mkdirSync(`${CMS_NEW_DIR}/sectors`, { recursive: true });
-      writeFileSync(join(CMS_NEW_DIR, 'sectors', `${sec.slug}.json`), JSON.stringify(content, null, 2));
       synced++;
     }
   }
 
-  mkdirSync(`${CMS_NEW_DIR}/combos`, { recursive: true });
   for (const s of services) {
     for (const l of locations) {
       const content = await fetchCMSContent('combo', s.slug, l.slug);
       if (content) {
-        mkdirSync(`${CMS_NEW_DIR}/combos/${s.slug}`, { recursive: true });
-        writeFileSync(join(CMS_NEW_DIR, 'combos', s.slug, `${l.slug}.json`), JSON.stringify(content, null, 2));
         writeFileSync(join(CMS_DIR, `combo-${s.slug}-${l.slug}.json`), JSON.stringify({ sections: content.content || content }, null, 2));
         synced++;
       }

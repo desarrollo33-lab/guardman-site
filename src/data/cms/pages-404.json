@@ -1,0 +1,12 @@
+{
+  "heading": "Página no encontrada",
+  "subheading": "La página que buscas no existe o ha sido movida.",
+  "cta_text": "Volver al inicio",
+  "cta_link": "/",
+  "suggestion_text": "¿Buscas servicios de seguridad? Conoce lo que ofrecemos:",
+  "suggestion_links": [
+    { "text": "Nuestros servicios", "link": "/servicios" },
+    { "text": "Cotizar ahora", "link": "/cotizacion" },
+    { "text": "Contactar", "link": "/contacto" }
+  ]
+}

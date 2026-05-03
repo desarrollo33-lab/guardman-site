@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /_astro/
-Disallow: /dist/
 
 Sitemap: https://guardman.cl/sitemap-index.xml

@@ -62,13 +62,13 @@
     "whatsapp": "+56 9 3000 0010"
   },
   "differentiators": {
-    "ajax_distribuidor": "Distribuidores oficiales de Ajax Systems en Chile",
-    "centro_monitoreo": "Centro de monitoreo propio (no tercerizado) con redundancia y supervisión 24/7",
-    "cobertura_regional": "Presencia en 14 comunas + Los Andes + San Felipe = escala única",
-    "guard_pod": "Unidad Autónoma de Vigilancia 24/7 — 15 meses de desarrollo propio (GuardPod V1)",
-    "os10_academia": "GuardMan tiene academia propia para certificación OS-10 — diferenciador único",
-    "respuesta_certificada": "Tiempos de respuesta garantizados contractualmente",
-    "supervision_nocturna": "Supervisión Nocturna Preventiva — Monitoreo proactivo de conductas sospechosas"
+    "ajax_distribuidor": "{\"title\":\" Ajax Systems\",\"description\":\"Instaladores oficiales de Ajax Systems en Chile\",\"icon\":\"zap\"}",
+    "centro_monitoreo": "{\"title\":\"Centro de Monitoreo Propio\",\"description\":\"Centro de monitoreo propio (no tercerizado) con redundancia y supervisión 24/7\",\"icon\":\"monitor\"}",
+    "cobertura_regional": "{\"title\":\"Cobertura Regional\",\"description\":\"Presencia en 14 comunas + Los Andes + San Felipe = escala única\",\"icon\":\"map-pin\"}",
+    "guard_pod": "{\"title\":\"GuardPod V1\",\"description\":\"Unidad Autónoma de Vigilancia 24/7 — 15 meses de desarrollo propio\",\"icon\":\"shield-check\"}",
+    "os10_academia": "{\"title\":\"Academia OS-10\",\"description\":\"GuardMan tiene academia propia para certificación OS-10 — diferenciador único\",\"icon\":\"award\"}",
+    "respuesta_certificada": "{\"title\":\"Respuesta Inmediata \",\"description\":\"Tiempos de respuesta garantizados \",\"icon\":\"clock\"}",
+    "supervision_nocturna": "{\"title\":\"Supervisión Nocturna Preventiva\",\"description\":\"Monitoreo proactivo de conductas sospechosas\",\"icon\":\"eye\"}"
   },
   "exclusions": {
     "no_competidores": "No nombrar competidores directamente en contenido — usar \"empresas del rubro\" o similar",
@@ -123,31 +123,11 @@
     "years": "8+"
   },
   "usps": {
-    "centro_monitoreo": {
-      "title": "Centro de Monitoreo Propio",
-      "description": "Con redundancia y supervisión 24/7",
-      "icon": "monitor"
-    },
-    "guard_pod": {
-      "title": "GuardPod V1",
-      "description": "Unidad Autónoma de Vigilancia 24/7 - 15 meses de desarrollo propio",
-      "icon": "shield-check"
-    },
-    "os10_cert": {
-      "title": "Personal Certificación OS-10",
-      "description": "Todos nuestros guardias cuentan con certificación OS-10 vigente",
-      "icon": "badge-check"
-    },
-    "respuesta_inmediata": {
-      "title": "Respuesta Inmediata Certificada",
-      "description": "Tiempos de respuesta garantizados contractualmente",
-      "icon": "clock"
-    },
-    "supervision_nocturna": {
-      "title": "Supervisión Nocturna Preventiva",
-      "description": "Monitoreo proactivo de conductas sospechosas",
-      "icon": "eye"
-    }
+    "centro_monitoreo": "{\"title\":\"Centro de Monitoreo Propio\",\"description\":\"Con redundancia y supervisión 24/7\",\"icon\":\"monitor\"}",
+    "guard_pod": "{\"title\":\"GuardPod V1\",\"description\":\"Unidad Autónoma de Vigilancia 24/7 \",\"icon\":\"shield-check\"}",
+    "os10_cert": "{\"title\":\"Personal Certificación OS-10\",\"description\":\"Todos nuestros guardias cuentan con certificación OS-10 vigente\",\"icon\":\"badge-check\"}",
+    "respuesta_inmediata": "{\"title\":\"Respuesta Inmediata Certificada\",\"description\":\"Tiempos de respuesta garantizados \",\"icon\":\"clock\"}",
+    "supervision_nocturna": "{\"title\":\"Supervisión Nocturna Preventiva\",\"description\":\"Monitoreo proactivo de conductas sospechosas\",\"icon\":\"eye\"}"
   },
   "voice": {
     " forbidden_words": "garantía 100%, impecable, infalible, mejor empresa, líder absoluto",

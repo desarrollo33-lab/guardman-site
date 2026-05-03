@@ -1,75 +1,55 @@
 ---
+/**
+ * Nosotros Page — CMS-driven
+ */
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { readFileSync, existsSync } from 'fs';
+import { COMPANY, STATS, USPS } from '../data/brand';
 
-// Load config from CMS
-const configData = existsSync('src/data/cms/config.json') 
-  ? JSON.parse(readFileSync('src/data/cms/config.json', 'utf-8'))
-  : {};
+// Load page content from CMS
+const cmsPath = 'src/data/cms/pages-nosotros.json';
+const cms = existsSync(cmsPath) ? JSON.parse(readFileSync(cmsPath, 'utf-8')) : {};
 
-const siteConfig = {
-  name: configData.site_name || 'GuardMan Chile',
-  aboutText: configData.about_text || 'GuardMan Chile es una empresa lider en servicios de seguridad privada en Santiago de Chile.',
-  email: configData.email || 'info@guardman.cl',
-  phone: configData.phone || '+56930000010',
-  phoneTel: (configData.phone || '+56930000010').replace(/[^0-9+]/g, ''),
-  address: configData.address || '',
-  hours: configData.hours || [],
-  social: {
-    instagram: configData.social_instagram || '',
-    youtube: configData.social_youtube || '',
-  },
-  stats: {
-    guards: configData.stats_guards || '500+',
-    clients: configData.stats_clients || '200+',
-    locations: configData.stats_locations || '14',
-    years: configData.stats_years || '8+',
-  },
-  usps: configData.usps || [
-    { title: 'GuardPod V1', description: 'Unidad Autonoma de Vigilancia 24/7' },
-    { title: 'Supervision Nocturna', description: 'Monitoreo proactivo de conductas sospechosas' },
-    { title: 'Respuesta Inmediata', description: 'Tiempos de respuesta garantizados' },
-    { title: 'Personal OS-10', description: 'Guardias con certificacion OS-10 vigente' },
-  ],
-};
+const hero = cms.hero || { heading: 'Sobre GuardMan Chile', subheading: 'Más de 8 años protegiendo empresas y residencias en la Región Metropolitana.' };
+const story = cms.story || { title: 'Nuestra Historia', paragraphs: [COMPANY.description || ''] };
+const team = cms.team || { title: 'Personal que marca la diferencia', description: 'Nuestros guardias son la base de la confianza de nuestros clientes.' };
+const stats = cms.stats || { guards: STATS.guards || '500+', clients: STATS.clients || '200+', locations: STATS.locations || '14', years: STATS.years || '8+' };
+const certifications: { name: string; description: string }[] = cms.certifications || [];
+const values: { title: string; description: string }[] = cms.values || [];
 
-const statsGuards = siteConfig.stats.guards;
-const statsClients = siteConfig.stats.clients;
-const statsLocations = siteConfig.stats.locations;
-const statsYears = siteConfig.stats.years;
-const featuredTestimonials: any[] = []; // Placeholder - can be loaded from CMS later
-const featuredClients: any[] = []; // Placeholder - can be loaded from CMS later
-const featuredClientNames: string[] = []; // Placeholder
+// USPs from brand DNA
+const uspList = Object.entries(USPS).map(([key, raw]) => {
+  if (typeof raw === 'object' && raw !== null) return raw as { title: string; description: string };
+  const parts = String(raw).split('|');
+  return { title: parts[0] || '', description: parts[1] || '' };
+}).filter(u => u.title);
 ---
 
-<BaseLayout title="Nosotros | GuardMan Chile" description="Conoce a GuardMan Chile - empresa líder en seguridad privada con años de experiencia en el mercado chileno.">
-  
-  <!-- Hero Section -->
+<BaseLayout title={`${hero.heading} | GuardMan Chile`} description={hero.subheading}>
+  <!-- Hero -->
   <section class="bg-primary-600 text-white py-16 lg:py-20">
     <div class="container mx-auto px-4">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Sobre Nosotros</h1>
-      <p class="text-lg text-white/90 max-w-2xl">
-        Protegiendo Santiago desde hace más de 8 años con profesionalismo y compromiso
-      </p>
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">{hero.heading}</h1>
+      <p class="text-lg text-white/90 max-w-2xl">{hero.subheading}</p>
     </div>
   </section>
 
-  <!-- Historia + Diferenciadores Section -->
+  <!-- Historia + Diferenciadores -->
   <section class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
         <div>
-          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6">Nuestra Historia</h2>
+          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6">{story.title}</h2>
           <div class="space-y-4 text-neutral-600">
-            <p class="text-lg">{siteConfig.aboutText}</p>
-            <p class="text-lg">Contamos con un equipo de mas de {statsGuards} guardias en terreno, {statsClients} clientes activos y cobertura en {statsLocations} comunas de la Region Metropolitana.</p>
-            <p class="text-lg">Nuestra vision es ser la empresa de seguridad privada mas confiable y profesional de Chile, ofreciendo soluciones innovadoras y un servicio excepcional.</p>
+            {(Array.isArray(story.paragraphs) ? story.paragraphs : [story.paragraphs]).map((p: string) => (
+              <p class="text-lg">{p}</p>
+            ))}
           </div>
         </div>
         <div class="bg-neutral-50 rounded-2xl p-8 border border-neutral-200">
           <h3 class="text-2xl lg:text-3xl font-bold text-neutral-900 mb-6">Lo que nos diferencia</h3>
           <div class="space-y-4">
-            {siteConfig.usps.map((usp) => (
+            {uspList.map((usp) => (
               <div class="flex gap-4">
                 <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
                   <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,39 +68,45 @@ const featuredClientNames: string[] = []; // Placeholder
     </div>
   </section>
 
-  <!-- Estadisticas Section -->
+  <!-- Estadísticas -->
   <section class="py-16 lg:py-24 bg-neutral-800 text-white">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         <div>
-          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{statsGuards}</div>
+          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{stats.guards}</div>
           <div class="text-neutral-300">Guardias en terreno</div>
         </div>
         <div>
-          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{statsClients}</div>
+          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{stats.clients}</div>
           <div class="text-neutral-300">Clientes activos</div>
         </div>
         <div>
-          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{statsLocations}</div>
+          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{stats.locations}</div>
           <div class="text-neutral-300">Comunas con cobertura</div>
         </div>
         <div>
-          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{statsYears}</div>
-          <div class="text-neutral-300">Anos de experiencia</div>
+          <div class="text-4xl lg:text-5xl font-bold text-accent mb-2">{stats.years}</div>
+          <div class="text-neutral-300">Años de experiencia</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Empresas que confian Section -->
-  {featuredClientNames.length > 0 && (
+  <!-- Valores -->
+  {values.length > 0 && (
     <section class="py-16 lg:py-24 bg-neutral-50">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-8 text-center">Empresas que confian en GuardMan</h2>
-        <div class="flex flex-wrap justify-center gap-4">
-          {featuredClientNames.map((client) => (
-            <div class="bg-white px-6 py-4 rounded-lg border border-neutral-200">
-              <span class="text-lg font-semibold text-neutral-600">{client}</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-8 text-center">Nuestros Valores</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {values.map((value) => (
+            <div class="bg-white rounded-xl p-6 border border-neutral-200 hover:shadow-lg transition-shadow">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <h3 class="font-bold text-neutral-900 mb-2">{value.title}</h3>
+              <p class="text-neutral-600 text-sm">{value.description}</p>
             </div>
           ))}
         </div>
@@ -128,31 +114,20 @@ const featuredClientNames: string[] = []; // Placeholder
     </section>
   )}
 
-  <!-- Testimonios Section -->
-  {featuredTestimonials.length > 0 && (
+  <!-- Certificaciones -->
+  {certifications.length > 0 && (
     <section class="py-16 lg:py-24 bg-white">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Lo que dicen nuestros clientes</h2>
-          <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Conoce las experiencias de empresas que confian en nosotros
-          </p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          {featuredTestimonials.map((testimonial) => (
-            <div class="bg-neutral-50 rounded-xl p-6 border border-neutral-200">
-              <div class="flex items-center gap-1 mb-4">
-                {[...Array(testimonial.rating)].map(() => (
-                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                  </svg>
-                ))}
-              </div>
-              <blockquote class="text-neutral-600 mb-4 italic">"{testimonial.quote}"</blockquote>
-              <div class="border-t border-neutral-200 pt-4">
-                <p class="font-semibold text-neutral-900">{testimonial.name}</p>
-                <p class="text-sm text-neutral-500">{testimonial.role}</p>
-                <p class="text-sm text-primary-600 font-medium">{testimonial.company}</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-8 text-center">Certificaciones y Cumplimiento</h2>
+        <div class="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+          {certifications.map((cert) => (
+            <div class="flex items-start gap-3 bg-neutral-50 rounded-lg p-4">
+              <svg class="w-5 h-5 text-success mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+              <div>
+                <span class="font-semibold text-neutral-900">{cert.name}</span>
+                <p class="text-neutral-600 text-sm">{cert.description}</p>
               </div>
             </div>
           ))}
@@ -161,18 +136,23 @@ const featuredClientNames: string[] = []; // Placeholder
     </section>
   )}
 
-  <!-- CTA Section -->
+  <!-- CTA -->
   <section class="py-16 lg:py-24 bg-primary-600 text-white relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-primary-700 to-primary-900"></div>
     <div class="container mx-auto px-4 relative z-10">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl lg:text-4xl font-bold mb-4">Trabaja con nosotros</h2>
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">¿Necesitas seguridad profesional?</h2>
         <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-          Si eres guardia de seguridad certificado, contactanos y unete a nuestro equipo.
+          Cotiza sin compromiso y recibe una propuesta personalizada en menos de 24 horas.
         </p>
-        <a href="/contacto" class="inline-flex items-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
-          Contactar RH
-        </a>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/cotizacion" class="inline-flex items-center gap-2 bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+            Solicitar Cotización
+          </a>
+          <a href="/contacto" class="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+            Hablar con un experto
+          </a>
+        </div>
       </div>
     </div>
   </section>

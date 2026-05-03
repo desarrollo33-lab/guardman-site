@@ -1,19 +1,18 @@
 {
   "hero": {
-    "heading": "Cobertura de Seguridad en Santiago",
-    "subheading": "Protegemos en 14 comunas de la Región Metropolitana con guardias certificados y monitoreo 24/7.",
-    "image": "/images/hero-home.webp"
+    "heading": "Cobertura de Seguridad en la Región Metropolitana",
+    "subheading": "Presencia operativa en 14 comunas de Santiago, más Los Andes y San Felipe en la Región de Valparaíso."
   },
   "stats": [
-    { "value": "14", "label": "Comunas cubiertas" },
-    { "value": "9", "label": "Servicios disponibles" },
-    { "value": "24/7", "label": "Monitoreo continuo" },
-    { "value": "< 30 min", "label": "Tiempo de respuesta" }
+    { "label": "Comunas", "value": "14" },
+    { "label": "Zonas", "value": "6" },
+    { "label": "Guardias desplegados", "value": "500+" },
+    { "label": "Centro de monitoreo", "value": "24/7" }
   ],
+  "intro": "Nuestra red de seguridad cubre las principales comunas de Santiago, desde la zona Oriente hasta el sector Norte y Sur. Cada ubicación cuenta con guardias certificados OS-10 y supervisión desde nuestro centro de monitoreo propio.",
   "cta": {
-    "text": "¿Tu comuna no aparece?",
-    "description": "Contáctanos para verificar disponibilidad en tu zona.",
-    "button_text": "Solicitar Cotización",
-    "button_link": "/cotizacion"
+    "text": "Busca tu comuna y cotiza seguridad local.",
+    "link": "/cotizacion",
+    "button": "Cotizar en mi comuna"
   }
 }

@@ -4,7 +4,7 @@
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getServiceSections, getServicesList, getLocationsList } from '../../data/cms';
-import { SERVICE_IMAGES, getSectorTag } from '../../data/cms-config';
+import { getSectorTag } from '../../data/cms-config';
 import { readFileSync, existsSync } from 'fs';
 
 const services = getServicesList();
@@ -77,7 +77,7 @@ const initialSector = url.searchParams.get('sector') || '';
           const hero = sections?.hero || {};
           const serviceSectorList = serviceSectors[service.slug] || [];
           if (initialSector && !serviceSectorList.includes(initialSector)) return null;
-          const imgSrc = service.hero_image || (SERVICE_IMAGES[service.slug] ? `/images/${SERVICE_IMAGES[service.slug]}` : null);
+          const imgSrc = service.hero_image || null;
           return (
             <a href={`/servicios/${service.slug}`} class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-lg transition-all border border-neutral-200 hover:border-primary-300">
               <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center overflow-hidden relative">

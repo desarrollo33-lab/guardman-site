@@ -1,78 +1,24 @@
 /**
- * Static Data Layer - GuardMan Chile
+ * Static Data Layer — GuardMan Chile (v1.12)
  *
- * This module provides static data for the site.
- * All data is stored as JSON files in src/data/generated/
- * No external CMS or database required.
+ * Refactored: Services, Locations, Sectors now delegate to cms.ts (D1 CMS).
+ * This module handles: Blog, Clients, Testimonials, SiteConfig (generated data).
+ *
+ * For CMS-driven content (services, locations, sectors), use:
+ *   import { getServicesList, getLocationsList, getSectorsList } from './cms';
  */
 
-import servicesData from './generated/services.json';
-import locationsData from './generated/locations.json';
-import sectorsData from './generated/sectors.json';
 import clientsData from './generated/clients.json';
 import testimonialsData from './generated/testimonials.json';
 import blogData from './generated/blog.json';
 import siteConfigData from './generated/site-config.json';
+import { getServicesList, getLocationsList, getSectorsList } from './cms';
 
-// Types
-export interface Service {
-  id: number;
-  name: string;
-  slug: string;
-  description: string;
-  short_description: string;
-  hero_heading: string;
-  meta_title: string;
-  meta_description: string;
-  price_range: string;
-  features: string[];
-  process: { step: string; description: string }[];
-  common_issues: string[];
-  faqs: { question: string; answer: string }[];
-  featured: boolean;
-  status: string;
-  sort: number;
-  image: string | null;
-}
+// Re-export CMS list functions for backward compatibility
+export { getServicesList as getServices, getLocationsList as getLocations, getSectorsList as getSectors } from './cms';
+export { optimizeImageUrl } from './cms-helpers';
 
-export interface Location {
-  id: number;
-  name: string;
-  slug: string;
-  zone: string;
-  description: string;
-  neighborhoods: string[];
-  landmarks?: string[];
-  stats?: { empresas: string; guardias: string; experiencia: string };
-  why_this_zone?: string;
-  priority_score: number;
-  latitude: number;
-  longitude: number;
-  meta_title: string;
-  meta_description: string;
-  faqs?: { question: string; answer: string }[];
-  featured: boolean;
-  image: string | null;
-  status: string;
-  sort: number;
-}
-
-export interface Sector {
-  id: number;
-  name: string;
-  slug: string;
-  icon: string;
-  description: string;
-  hero_title: string;
-  hero_subtitle: string;
-  challenges: { title: string; description: string }[];
-  meta_title: string;
-  meta_description: string;
-  featured: boolean;
-  image: string | null;
-  status: string;
-  sort: number;
-}
+// === Types ===
 
 export interface Client {
   id: number;
@@ -148,70 +94,14 @@ export interface SiteConfig {
   certifications: { name: string; description: string }[];
 }
 
-/**
- * Convert image paths to WebP format for optimization
- */
-export function optimizeImageUrl(imagePath: string | null | undefined, opts?: { width?: number; height?: number; quality?: number }): string | null {
-  if (!imagePath) return null;
-  
-  // External URLs: return as-is (can't resize via Cloudflare)
-  if (imagePath.startsWith('http')) return imagePath;
-  
-  // Build Cloudflare Image Resizing URL
-  // Works on *.pages.dev and custom domains with Cloudflare proxy
-  const width = opts?.width || 1200;
-  const quality = opts?.quality || 80;
-  const params = [`width=${width}`, 'format=webp', `quality=${quality}`, 'fit=cover'];
-  if (opts?.height) params.push(`height=${opts.height}`);
-  
-  return `/cdn-cgi/image/${params.join(',')}/${imagePath.replace(/^\//, '')}`;
-} 
+// === Data ===
 
-// Data - typed and normalized
-const services = servicesData as Service[];
-const locations = locationsData as Location[];
-const sectors = sectorsData as Sector[];
 const clients = clientsData as Client[];
 const testimonials = testimonialsData as Testimonial[];
 const blog = blogData as BlogPost[];
 const siteConfig = siteConfigData as SiteConfig;
 
-// API Functions
-export function getServices(): Service[] {
-  return services.filter(s => s.status === 'published').sort((a, b) => a.sort - b.sort);
-}
-
-export function getServiceBySlug(slug: string): Service | null {
-  return services.find(s => s.slug === slug && s.status === 'published') || null;
-}
-
-export function getFeaturedServices(): Service[] {
-  return services.filter(s => s.featured && s.status === 'published');
-}
-
-export function getLocations(): Location[] {
-  return locations.filter(l => l.status === 'published').sort((a, b) => b.priority_score - a.priority_score);
-}
-
-export function getLocationBySlug(slug: string): Location | null {
-  return locations.find(l => l.slug === slug && l.status === 'published') || null;
-}
-
-export function getFeaturedLocations(): Location[] {
-  return locations.filter(l => l.featured && l.status === 'published');
-}
-
-export function getSectors(): Sector[] {
-  return sectors.filter(s => s.status === 'published').sort((a, b) => a.sort - b.sort);
-}
-
-export function getSectorBySlug(slug: string): Sector | null {
-  return sectors.find(s => s.slug === slug && s.status === 'published') || null;
-}
-
-export function getFeaturedSectors(): Sector[] {
-  return sectors.filter(s => s.featured && s.status === 'published');
-}
+// === Client Functions ===
 
 export function getFeaturedClients(): Client[] {
   return clients.filter(c => c.featured && c.status === 'published').sort((a, b) => a.sort - b.sort);
@@ -221,13 +111,19 @@ export function getClients(): Client[] {
   return clients.filter(c => c.status === 'published');
 }
 
+// === Testimonial Functions ===
+
 export function getTestimonials(): Testimonial[] {
   return testimonials.filter(t => t.status === 'published').sort((a, b) => a.sort - b.sort);
 }
 
+// === Site Config ===
+
 export function getSiteConfig(): SiteConfig {
   return siteConfig;
 }
+
+// === Blog Functions ===
 
 export function getBlogPosts(): BlogPost[] {
   return blog.filter(p => p.status === 'published').sort((a, b) => b.sort - a.sort);
@@ -241,7 +137,6 @@ export function getRelatedPosts(currentSlug: string, limit = 3): BlogPost[] {
   const current = blog.find(p => p.slug === currentSlug);
   if (!current) return blog.slice(0, limit);
 
-  // Prioritize same category, then most recent
   const sameCategory = blog
     .filter(p => p.slug !== currentSlug && p.category === current.category && p.status === 'published')
     .slice(0, limit);
@@ -270,10 +165,11 @@ export function getBlogCategories(): { slug: string; name: string }[] {
     .filter(c => c.slug);
 }
 
-// Combinations: service + location pages
+// === Combinations ===
+
 export function getServiceLocationPairs(): { serviceSlug: string; locationSlug: string }[] {
-  const publishedServices = getServices();
-  const publishedLocations = getLocations();
+  const publishedServices = getServicesList();
+  const publishedLocations = getLocationsList();
 
   const pairs: { serviceSlug: string; locationSlug: string }[] = [];
 

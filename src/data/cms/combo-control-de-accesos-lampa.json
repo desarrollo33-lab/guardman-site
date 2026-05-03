@@ -25,7 +25,7 @@
         "Rondas preventivas programadas según las necesidades específicas de tu recinto",
         "Integración con cámaras de videovigilancia y alarmas de seguridad",
         "Reportes de actividad diarios, semanales y mensuales para tu tranquilidad",
-        "Coordinación directa con Carabineros y僵局 органы de emergencia ante incidentes"
+        "Coordinación directa con Carabineros y органы de emergencia ante incidentes"
       ]
     },
     "issues": {
@@ -62,7 +62,7 @@
         },
         {
           "question": "¿Cómo funciona el control de accesos para visitas y proveedores?",
-          "answer": "Nuestro sistema registra a cada visitante mediante identificación obligatoria, generación de通行证 QR temporal y registro en nuestra base de datos. Los residentes pueden preautorizar visitas mediante nuestra aplicación móvil, notificando automáticamente al guardia en portería. Esto elimina ingresos no autorizados mientras facilita el paso de visitas legítimas como delivery, mantenimiento o servicios doméstico."
+          "answer": "Nuestro sistema registra a cada visitante mediante identificación obligatoria, generación de QR temporal y registro en nuestra base de datos. Los residentes pueden preautorizar visitas mediante nuestra aplicación móvil, notificando automáticamente al guardia en portería. Esto elimina ingresos no autorizados mientras facilita el paso de visitas legítimas como delivery, mantenimiento o servicios doméstico."
         }
       ]
     },

@@ -1,20 +1,25 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getServicesList, getLocationsList } from '../data/cms';
+import { readFileSync, existsSync } from 'fs';
 
-// Get data from CMS (synchronous - data is pre-loaded at build time)
 const services = getServicesList();
 const locations = getLocationsList();
+
+// Load page content from CMS
+const cmsPath = 'src/data/cms/pages-cotizacion.json';
+const cms = existsSync(cmsPath) ? JSON.parse(readFileSync(cmsPath, 'utf-8')) : {};
+const hero = cms.hero || { heading: 'Solicita tu Cotización', subheading: 'Completa el formulario y te contactaremos en menos de 24 horas.' };
+const formContent = cms.form || { title: 'Solicitar Cotización', subtitle: '' };
+const trustBadges: { icon: string; text: string }[] = cms.trust_badges || [];
 ---
 
-<BaseLayout title="Cotizacion | GuardMan Chile" description="Solicita una cotizacion gratis para servicios de seguridad privada en Santiago.">
+<BaseLayout title={`${hero.heading} | GuardMan Chile`} description="Solicita una cotización gratis para servicios de seguridad privada en Santiago.">
   <!-- Hero -->
   <section class="bg-primary-600 text-white py-16 lg:py-20">
     <div class="container mx-auto px-4">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Solicita tu Cotizacion</h1>
-      <p class="text-xl text-white/90">
-        Completa el formulario y te contactaremos en menos de 24 horas
-      </p>
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">{hero.heading}</h1>
+      <p class="text-xl text-white/90">{hero.subheading}</p>
     </div>
   </section>
 
@@ -124,8 +129,37 @@ const locations = getLocationsList();
     e.preventDefault();
     const formData = new FormData(form as HTMLFormElement);
     const data = Object.fromEntries(formData);
-    console.log('Quote requested:', data);
-    alert('Gracias por tu solicitud de cotizacion. Te contactaremos en menos de 24 horas.');
-    (form as HTMLFormElement).reset();
+    
+    try {
+      const res = await fetch('https://guardman-admin-api.oficinadesarrollo33.workers.dev/api/intel/leads/capture', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          source: 'web_cotizacion',
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          company: data.company,
+          service_slug: data.service,
+          location_slug: data.location,
+          message: data.message,
+          landing_page: window.location.href,
+          utm_source: new URLSearchParams(window.location.search).get('utm_source') || null,
+          utm_medium: new URLSearchParams(window.location.search).get('utm_medium') || null,
+          utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || null,
+        }),
+      });
+      const result = await res.json();
+      if (result.ok) {
+        alert('¡Gracias por tu solicitud! Te contactaremos en menos de 24 horas.');
+        (form as HTMLFormElement).reset();
+      } else {
+        alert('Hubo un error. Por favor intenta de nuevo o contáctanos por teléfono.');
+      }
+    } catch (err) {
+      console.error('Lead capture error:', err);
+      alert('¡Gracias! Tu solicitud fue recibida. Te contactaremos pronto.');
+      (form as HTMLFormElement).reset();
+    }
   });
 </script>

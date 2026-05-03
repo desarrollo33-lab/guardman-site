@@ -218,12 +218,6 @@
     }
   },
   "service": {
-    "auditoria-seguridad": {
-      "hero": {
-        "key": "images/service-auditoria-seguridad.webp",
-        "alt": "Auditoría de seguridad profesional"
-      }
-    },
     "cctv-videovigilancia": {
       "hero": {
         "key": "images/service-cctv-videovigilancia.webp",

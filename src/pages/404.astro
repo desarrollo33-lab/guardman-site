@@ -1,22 +1,39 @@
 ---
+/**
+ * 404 Page — CMS-driven
+ */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { readFileSync, existsSync } from 'fs';
+
+const cmsPath = 'src/data/cms/pages-404.json';
+const cms = existsSync(cmsPath) ? JSON.parse(readFileSync(cmsPath, 'utf-8')) : {};
+
+const heading = cms.heading || 'Página no encontrada';
+const subheading = cms.subheading || 'La página que buscas no existe o ha sido movida.';
+const ctaText = cms.cta_text || 'Volver al inicio';
+const ctaLink = cms.cta_link || '/';
+const links: { text: string; link: string }[] = cms.suggestion_links || [
+  { text: 'Nuestros servicios', link: '/servicios' },
+  { text: 'Cotizar ahora', link: '/cotizacion' },
+  { text: 'Contactar', link: '/contacto' }
+];
 ---
 
-<BaseLayout title="Pagina no encontrada | GuardMan Chile" noIndex={true}>
+<BaseLayout title={`${heading} | GuardMan Chile`} noIndex={true}>
   <section class="min-h-[60vh] flex items-center justify-center bg-white">
     <div class="text-center px-4">
       <div class="text-8xl font-bold text-primary-600 mb-4">404</div>
-      <h1 class="text-3xl font-bold text-neutral-900 mb-4">Pagina no encontrada</h1>
-      <p class="text-lg text-neutral-600 mb-8">
-        Lo sentimos, la pagina que buscas no existe o ha sido movida.
-      </p>
+      <h1 class="text-3xl font-bold text-neutral-900 mb-4">{heading}</h1>
+      <p class="text-lg text-neutral-600 mb-8">{subheading}</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/" class="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-          Volver al inicio
+        <a href={ctaLink} class="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+          {ctaText}
         </a>
-        <a href="/contacto" class="border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors">
-          Contactar
-        </a>
+        {links.map((l: any) => (
+          <a href={l.link} class="border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors">
+            {l.text}
+          </a>
+        ))}
       </div>
     </div>
   </section>

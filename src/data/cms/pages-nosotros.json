@@ -1,0 +1,36 @@
+{
+  "hero": {
+    "heading": "Sobre GuardMan Chile",
+    "subheading": "Más de 8 años protegiendo empresas, residencias y eventos en la Región Metropolitana."
+  },
+  "story": {
+    "title": "Nuestra Historia",
+    "paragraphs": [
+      "GuardMan Chile nació con la misión de elevar el estándar de seguridad privada en Santiago. Desde nuestros inicios, nos comprometimos a ofrecer un servicio profesional, confiable y certificado, diferenciándonos de las empresas tradicionales del rubro.",
+      "Con más de 8 años de trayectoria, hemos crecido hasta contar con un equipo de más de 500 guardias certificados OS-10, un centro de monitoreo propio operativo las 24 horas, y presencia en 14 comunas de la Región Metropolitana.",
+      "Nuestra inversión en tecnología — incluyendo el desarrollo del Guard Pod, nuestra unidad de vigilancia autónoma, y nuestra alianza como distribuidores oficiales de Ajax Systems — nos posiciona como una empresa de seguridad de nueva generación."
+    ]
+  },
+  "team": {
+    "title": "Personal que marca la diferencia",
+    "description": "Nuestros guardias son la base de la confianza que nuestros clientes depositan en nosotros."
+  },
+  "stats": {
+    "guards": "500+",
+    "clients": "200+",
+    "locations": "14",
+    "years": "8+"
+  },
+  "certifications": [
+    { "name": "Certificación OS-10", "description": "Personal con certificación OS-10 vigente verificada por Carabineros de Chile" },
+    { "name": "Ley 21.659", "description": "Cumplimiento total de la Ley de Seguridad Privada vigente en Chile" },
+    { "name": "Seguro RC", "description": "Seguro de responsabilidad civil obligatorio para operaciones de seguridad" },
+    { "name": "Verificación de antecedentes", "description": "Control de antecedentes completo para todo el personal" }
+  ],
+  "values": [
+    { "title": "Compromiso", "description": "Cada cliente recibe un servicio dedicado y personalizado." },
+    { "title": "Profesionalismo", "description": "Guardias certificados, equipamiento de calidad y protocolos probados." },
+    { "title": "Innovación", "description": "Invertimos en tecnología propia como Guard Pod para ofrecer soluciones únicas." },
+    { "title": "Transparencia", "description": "Reportes periódicos, métricas de gestión y comunicación constante." }
+  ]
+}

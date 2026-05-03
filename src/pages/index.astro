@@ -7,17 +7,15 @@ import SchemaWebSite from '../components/seo/SchemaWebSite.astro';
 import SchemaOrganization from '../components/seo/SchemaOrganization.astro';
 import CoverageMap from '../components/CoverageMap.astro';
 import { getServiceSections, getServicesList, getLocationsList, getImage } from '../data/cms';
-import { optimizeImageUrl } from '../data/directus';
+import { getServiceHero, getSectorHero } from '../data/media-map';
 import { readdirSync, existsSync, readFileSync } from 'fs';
 
 // CMS JSON paths
 const CMS_DIR = 'src/data/cms';
-const NEW_CMS_DIR = 'src/data/cms-new';
 
 let cmsHomepage: any = null;
 
-const homepagePath = existsSync(`${NEW_CMS_DIR}/homepage.json`) ? `${NEW_CMS_DIR}/homepage.json`
-  : existsSync(`${CMS_DIR}/homepage.json`) ? `${CMS_DIR}/homepage.json`
+const homepagePath = existsSync(`${CMS_DIR}/homepage.json`) ? `${CMS_DIR}/homepage.json`
   : existsSync('homepage.json') ? 'homepage.json'
   : null;
 
@@ -31,27 +29,7 @@ if (homepagePath) {
 
 const hp = cmsHomepage?.content || {};
 
-const SERVICE_IMAGES: Record<string, string> = {
-  'guardias-de-seguridad': 'service-guardias-de-seguridad.webp',
-  'cctv-videovigilancia': 'service-cctv-videovigilancia.webp',
-  'control-de-accesos': 'service-control-de-accesos.webp',
-  'escoltas-privados': 'service-escoltas-privados.webp',
-  'monitoreo-24-7': 'service-monitoreo-24-7.webp',
-  'seguridad-eventos': 'service-seguridad-eventos.webp',
-  'seguridad-industrial': 'service-seguridad-industrial.webp',
-  'auditoria-seguridad': 'service-auditoria-seguridad.webp',
-  'guard-pod': 's4-thumbnail.webp'
-};
-
-const SECTOR_IMAGES: Record<string, string> = {
-  'comercial': 's4-thumbnail.webp',
-  'industrial': 'sector-industrial.webp',
-  'residencial': 'sector-residencial.webp',
-  'salud': 'nosotros_seccion.webp',
-  'educacion': 'hero-home.webp',
-  'eventos': 's4-thumbnail.webp',
-  'construccion': 'sector-industrial.webp'
-};
+// Images resolved via media-map module
 
 const services = getServicesList();
 const locations = getLocationsList();
@@ -82,8 +60,8 @@ const siteConfig = {
   tagline: hp.hero?.subheadline || configData.tagline || 'Protegemos lo que mas te importa',
   email: configData.email || 'info@guardman.cl',
   heroImage: hp.hero?.background_image
-    ? optimizeImageUrl(hp.hero.background_image.replace('.png', '.webp'))
-    : (configData.hero_image ? optimizeImageUrl(`/images/${configData.hero_image.replace('.png', '.webp')}`) : '/images/hero-home.webp'),
+    ? hp.hero.background_image.replace('.png', '.webp')
+    : (configData.hero_image ? `/images/${configData.hero_image.replace('.png', '.webp')}` : '/images/hero-home.webp'),
   seo_title: cmsHomepage?.seo?.title || 'Seguridad Privada en Santiago | GuardMan Chile',
   seo_description: cmsHomepage?.seo?.description || configData.seo_description || 'GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana.',
   stats: hp.nosotros?.stats || {
@@ -230,14 +208,14 @@ const featuredClients: any[] = [];
         {services.filter(s => s.slug !== 'guard-pod').map(service => {
           const sections = getServiceSections(service.slug);
           const hero = sections?.hero || {};
-          const serviceImage = SERVICE_IMAGES[service.slug] || null;
+          const serviceImage = service.hero_image || getServiceHero(service.slug) || null;
           
           return (
             <a href={`/servicios/${service.slug}`} class="group bg-neutral-50 rounded-xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
               <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
                 {serviceImage ? (
                   <img 
-                    src={optimizeImageUrl(`/images/${serviceImage}`)}
+                    src={serviceImage}
                     alt={service.name}
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     width="800"
@@ -356,13 +334,13 @@ const featuredClients: any[] = [];
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {sectors.map(sector => {
-          const sectorImage = SECTOR_IMAGES[sector.slug] || 's4-thumbnail.webp';
+          const sectorImage = getSectorHero(sector.slug);
           
           return (
             <a href={`/sectores/${sector.slug}`} class="group bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
               <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
                 <img 
-                  src={optimizeImageUrl(`/images/${sectorImage}`)}
+                  src={sectorImage}
                   alt={sector.name}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   width="800"
