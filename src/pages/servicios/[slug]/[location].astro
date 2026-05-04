@@ -11,6 +11,7 @@ import SchemaLocalBusiness from '../../../components/seo/SchemaLocalBusiness.ast
 import SchemaBreadcrumb from '../../../components/seo/SchemaBreadcrumb.astro';
 import { readFileSync, existsSync } from 'fs';
 import { getServiceHero, getLocationHero } from '../../../data/media-map';
+import { getSEOKeywords, getSEOMeta } from '../../../data/seo-data';
 
 export async function getStaticPaths() {
   const services = getServicesList();
@@ -75,11 +76,21 @@ const zoneContext: Record<string, { challenges: string; focus: string }> = {
 
 const ctx = zoneContext[location.zone] || { challenges: 'residencial y comercial', focus: 'seguridad general' };
 
-// SEO meta
+// SEO meta — use Serper-derived data when available
+const seoKeywords = getSEOKeywords(serviceSlug, locationSlug);
+const seoMeta = getSEOMeta(serviceSlug, locationSlug);
+
 const hero = comboSections?.hero || serviceSections?.hero || { heading: serviceName, subheading: '' };
 const comboHeroImage = comboSections?.hero?.image || serviceSections?.hero?.image || getServiceHero(serviceSlug) || getLocationHero(locationSlug);
-const metaTitle = comboSections?.meta?.title || comboContent?.seo?.title || `${hero.heading} en ${locationName} | GuardMan`;
-const metaDescription = comboSections?.meta?.description || comboContent?.seo?.description || `Servicio de ${serviceName.toLowerCase()} profesional en ${locationName}. ${hero.subheading || serviceName}. Solicita tu cotización.`;
+
+const metaTitle = comboSections?.meta?.title
+  || seoMeta?.meta_title
+  || comboContent?.seo?.title
+  || `${hero.heading} en ${locationName} | GuardMan`;
+const metaDescription = comboSections?.meta?.description
+  || seoMeta?.meta_description
+  || comboContent?.seo?.description
+  || `Servicio de ${serviceName.toLowerCase()} profesional en ${locationName}. ${hero.subheading || serviceName}. Solicita tu cotización.`;
 
 // FAQs from CMS or fallback
 const faqsFromCMS = comboSections?.faq || comboContent?.content?.faq || [];
@@ -110,7 +121,7 @@ const breadcrumbItems = [
 ];
 ---
 
-<BaseLayout title={metaTitle} description={metaDescription} image={comboHeroImage}>
+<BaseLayout title={metaTitle} description={metaDescription} image={comboHeroImage} keywords={seoKeywords?.secondary_keywords?.join(', ') || undefined}>
   <SchemaService
     name={`${serviceName} en ${locationName}`}
     description={hero.heading}

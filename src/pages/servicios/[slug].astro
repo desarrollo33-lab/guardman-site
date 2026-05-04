@@ -6,6 +6,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getServiceSections, getServicesList, getLocationsList } from '../../data/cms';
 import { SERVICE_IMAGES, SERVICE_INTROS, SERVICE_RELATED, SERVICE_UPSELL, STAFF_IMAGE, STAFF_TRAITS, getSectorTag } from '../../data/cms-config';
+import { getEasyWins, getServiceKeywords } from '../../data/seo-data';
 import { optimizeImageUrl } from '../../data/cms-helpers';
 import { readFileSync, existsSync } from 'fs';
 import SchemaService from '../../components/seo/SchemaService.astro';
@@ -83,6 +84,10 @@ const hero = sections?.hero || { heading: service.name, subheading: service.shor
 const heroImage = hero.image || service?.hero_image || (SERVICE_IMAGES[slug] ? `/images/${SERVICE_IMAGES[slug]}` : null);
 const ogImage = sections?.meta?.ogImage || (heroImage ? `/cdn-cgi/image/width=1200,height=630,format=jpg,fit=cover/${heroImage}` : null);
 
+// Serper SEO keywords
+const serviceEasyWins = getEasyWins(slug);
+const serviceKwList = getServiceKeywords(slug);
+
 // Intro: CMS intro.content (string with \n\n) → array; fallback to intro.paragraphs; then SERVICE_INTROS
 const cmsIntroContent = sections?.intro?.content;
 const introText = cmsIntroContent
@@ -107,7 +112,7 @@ const staffData = sections?.staff ? {
 } : globalStaff;
 ---
 
-<BaseLayout title={hero.heading ? `${hero.heading} | GuardMan` : service.name} description={hero.subheading || service.short_description} image={ogImage}>
+<BaseLayout title={hero.heading ? `${hero.heading} | GuardMan` : service.name} description={hero.subheading || service.short_description} image={ogImage} keywords={serviceKwList.length > 0 ? serviceKwList.join(', ') : undefined}>
   <SchemaService name={service.name} description={hero.heading || service.name} slug={slug} priceRange={service.price_range} areaServed={locations.map((l: any) => l.name)} />
   <SchemaBreadcrumb items={breadcrumbItems} />
 

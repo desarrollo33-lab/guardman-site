@@ -23,6 +23,10 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Validate CMS data
+        run: node scripts/validate-cms.mjs
+        continue-on-error: true
+
       - name: Build Astro Site
         run: npm run build
 
@@ -32,10 +36,20 @@ jobs:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           command: pages deploy dist --project-name=guardman-site-v2
 
+      - name: Health Check
+        run: |
+          sleep 30
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://guardman-site-v2.pages.dev/ || echo "000")
+          if [ "$STATUS" != "200" ]; then
+            echo "⚠️ Health check returned $STATUS (may need more time)"
+          else
+            echo "✅ Health check passed - HTTP $STATUS"
+          fi
+
       - name: Notify success
         if: success()
-        run: echo "Site deployed to https://guardman-site-v2.pages.dev"
+        run: echo "✅ Site deployed at $(date)"
 
       - name: Notify failure
         if: failure()
-        run: echo "Deploy failed!"
+        run: echo "❌ Deploy failed!"

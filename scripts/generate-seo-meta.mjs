@@ -1,27 +1,19 @@
 /**
- * Generate SEO meta data from Serper keywords stored in D1.
- * Creates: src/data/generated/seo-keywords.json and seo-meta.json
- * 
+ * Generate SEO meta data from Serper keywords.
+ * Uses existing generated data + service/location lists.
+ * Output: src/data/generated/seo-keywords.json and seo-meta.json
+ *
  * Usage: node scripts/generate-seo-meta.mjs
- * 
- * This script reads keywords from the admin API and generates optimized
- * meta titles and descriptions for each service×location combo page.
  */
 
-import { writeFileSync, mkdirSync, existsSync } from 'fs';
+import { writeFileSync, mkdirSync, existsSync, readFileSync } from 'fs';
 
-const API_BASE = 'https://guardman-admin-api.oficinadesarrollo33.workers.dev';
+const CMS_DIR = 'src/data/cms';
 const GENERATED_DIR = 'src/data/generated';
 
-async function fetchJSON(path) {
-  try {
-    const res = await fetch(`${API_BASE}${path}`);
-    const data = await res.json();
-    return data;
-  } catch (e) {
-    console.warn(`Failed to fetch ${path}: ${e.message}`);
-    return null;
-  }
+function loadJSON(path) {
+  if (!existsSync(path)) return null;
+  try { return JSON.parse(readFileSync(path, 'utf-8')); } catch { return null; }
 }
 
 function generateMetaTitle(serviceName, locationName) {
@@ -33,43 +25,29 @@ function generateMetaTitle(serviceName, locationName) {
 }
 
 function generateMetaDescription(serviceName, locationName, zone) {
-  const templates = [
-    `Servicio de ${serviceName.toLowerCase()} profesional en ${locationName}. Guardias certificados OS-10, cobertura 24/7 en zona ${zone}. Cotiza gratis con GuardMan Chile.`,
-    `${serviceName} en ${locationName} y toda la zona ${zone}. Empresa con 8+ años de experiencia, 500+ guardias certificados. Solicita tu cotización sin compromiso.`,
-    `Empresa de ${serviceName.toLowerCase()} en ${locationName}, Región Metropolitana. Personal certificado OS-10, monitoreo 24/7. Cotización gratuita en GuardMan Chile.`,
-  ];
-  const desc = templates[Math.floor(Math.random() * templates.length)];
+  const desc = `${serviceName} profesional en ${locationName}, zona ${zone}. Guardias certificados OS-10, centro de monitoreo propio 24/7. Cotización gratuita en GuardMan Chile.`;
   return desc.length > 160 ? desc.substring(0, 157) + '...' : desc;
 }
 
 async function main() {
-  console.log('=== SEO Meta Generator ===\n');
+  console.log('=== SEO Meta Generator v2 ===\n');
 
   if (!existsSync(GENERATED_DIR)) mkdirSync(GENERATED_DIR, { recursive: true });
 
-  // Fetch data from admin API
-  console.log('Fetching services, locations, keywords...');
-  const [servicesRes, locationsRes, keywordsRes] = await Promise.all([
-    fetchJSON('/api/services'),
-    fetchJSON('/api/locations'),
-    fetchJSON('/api/seo/keywords?limit=2000'),
-  ]);
+  const servicesData = loadJSON(`${CMS_DIR}/services.json`);
+  const locationsData = loadJSON(`${CMS_DIR}/locations.json`);
+  const easyKeywordsData = loadJSON(`${GENERATED_DIR}/easy-keywords.json`);
 
-  const services = servicesRes?.data || [];
-  const locations = locationsRes?.data || [];
-  const keywords = keywordsRes?.data || [];
+  const services = servicesData?.results || servicesData || [];
+  const locations = locationsData?.results || locationsData || [];
+  const easyKeywords = easyKeywordsData?.results || [];
 
   console.log(`  Services: ${services.length}`);
   console.log(`  Locations: ${locations.length}`);
-  console.log(`  Keywords: ${keywords.length}`);
+  console.log(`  Easy Keywords: ${easyKeywords.length}`);
 
-  // Build keyword index: serviceSlug-locationSlug → keywords
-  const keywordIndex = {};
-  for (const kw of keywords) {
-    const key = `${kw.service_slug || ''}-${kw.location_slug || ''}`;
-    if (!keywordIndex[key]) keywordIndex[key] = [];
-    keywordIndex[key].push(kw);
-  }
+  // Build easy-win index by keyword text
+  const easyWinSet = new Set(easyKeywords.map((k) => k.keyword?.toLowerCase()));
 
   // Generate SEO meta for each combo
   const seoMeta = {};
@@ -77,41 +55,54 @@ async function main() {
   let generated = 0;
 
   for (const service of services) {
-    seoMeta[service.slug] = seoMeta[service.slug] || {};
-    seoKeywords[service.slug] = seoKeywords[service.slug] || {};
+    const serviceSlug = service.slug;
+    seoMeta[serviceSlug] = seoMeta[serviceSlug] || {};
+    seoKeywords[serviceSlug] = seoKeywords[serviceSlug] || {};
 
     for (const location of locations) {
+      const locationSlug = location.slug;
       const zone = location.zone || 'Centro';
-      const key = `${service.slug}-${location.slug}`;
-      const locationKeywords = keywordIndex[key] || [];
+      const serviceName = service.name;
+      const locationName = location.name;
 
-      // Sort by SDS score (lower = easier to rank)
-      locationKeywords.sort((a, b) => (a.sds_score || 100) - (b.sds_score || 100));
+      // Generate keyword variations
+      const primaryKeyword = `${serviceName} en ${locationName}`;
+      const secondaryKeywords = [
+        primaryKeyword,
+        `${serviceName} ${locationName}`,
+        `servicio de ${serviceName.toLowerCase()} en ${locationName}`,
+        `${serviceName.toLowerCase()} zona ${zone}`,
+        `seguridad privada ${locationName}`,
+        `guardias de seguridad ${locationName}`,
+        `empresa de seguridad ${locationName}`,
+        `${serviceName.toLowerCase()} santiago`,
+        `guardman ${locationName}`,
+        `cotizar ${serviceName.toLowerCase()} ${locationName}`,
+      ];
 
-      const primaryKeyword = locationKeywords[0]?.keyword || `${service.name} en ${location.name}`;
-      const easyWins = locationKeywords.filter(k => k.is_easy_win).slice(0, 5).map(k => k.keyword);
-      const secondaryKeywords = locationKeywords.slice(0, 10).map(k => k.keyword);
+      // Find easy wins for this combo
+      const easyWins = secondaryKeywords
+        .filter(kw => easyWinSet.has(kw.toLowerCase()) || easyWinSet.has(kw.split(' ').slice(0, 3).join(' ').toLowerCase()));
 
-      const metaTitle = generateMetaTitle(service.name, location.name);
-      const metaDescription = generateMetaDescription(service.name, location.name, zone);
+      const metaTitle = generateMetaTitle(serviceName, locationName);
+      const metaDescription = generateMetaDescription(serviceName, locationName, zone);
 
-      seoMeta[service.slug][location.slug] = {
+      seoMeta[serviceSlug][locationSlug] = {
         primary_keyword: primaryKeyword,
         meta_title: metaTitle,
         meta_description: metaDescription,
       };
 
-      seoKeywords[service.slug][location.slug] = {
+      seoKeywords[serviceSlug][locationSlug] = {
         primary_keyword: primaryKeyword,
-        secondary_keywords: secondaryKeywords,
-        easy_wins: easyWins,
+        secondary_keywords: secondaryKeywords.slice(0, 10),
+        easy_wins: easyWins.length > 0 ? easyWins : [primaryKeyword],
       };
 
       generated++;
     }
   }
 
-  // Write files
   writeFileSync(`${GENERATED_DIR}/seo-meta.json`, JSON.stringify(seoMeta, null, 2));
   writeFileSync(`${GENERATED_DIR}/seo-keywords.json`, JSON.stringify(seoKeywords, null, 2));
 
