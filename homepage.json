@@ -223,6 +223,16 @@
   },
   "meta": {
     "author": "admin",
-    "quality_score": 100
+    "quality_score": 100,
+    "title": "GuardMan Chile | Seguridad Privada Profesional en Santiago",
+    "description": "Empresa de seguridad privada en Chile con 8+ años de experiencia. Guardias certificados OS-10, centro de monitoreo propio y cobertura en 14 comunas. Cotice ahora."
+  },
+  "hero": {
+    "headline": "Protegemos lo que más le importa",
+    "subheadline": "Seguridad privada profesional con 8+ años de experiencia, 500+ guardias certificados OS-10 y centro de monitoreo propio en Santiago y la Región Metropolitana."
+  },
+  "nosotros": {
+    "title": "Seguridad privada de confianza para su empresa, condominio y eventos",
+    "paragraph": "En GuardMan Chile entendemos que la seguridad de su patrimonio y de las personas que lo integran es una prioridad. Por eso, ofrecemos servicios de seguridad privada profesional, con personal altamente capacitado y certificado OS-10, respaldado por 8+ años de experiencia en el rubro. Nuestro enfoque combina tecnología de punta, como el centro de monitoreo propio y sistemas Ajax Systems, con un factor humano insustituible: guardias entrenados, supervisados y comprometidos.\n\nTrabajamos en 14 comunas de la Región Metropolitana, además de Los Andes y San Felipe, lo que nos otorga una cobertura regional única. Desde la vigilancia de condominios y edificios residenciales hasta la protección de faenas industriales y eventos masivos, diseñamos soluciones a la medida de sus necesidades. Contáctenos para una cotización personalizada y descubra por qué más de 200 clientes confían en nosotros."
   }
 }
