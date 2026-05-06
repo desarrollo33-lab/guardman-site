@@ -5,7 +5,7 @@
   "last_modified": "2026-04-23T16:31:42",
   "seo": {
     "title": "GuardMan Chile | Seguridad Privada Profesional en Santiago",
-    "description": "Seguridad privada con 8+ años de experiencia, 500+ guardias certificados OS-10 y centro de monitoreo propio en 14 comunas. Cotice ahora.",
+    "description": "Más de 8 años protegiendo empresas y condominios con guardias certificados OS-10, centro de monitoreo propio y tecnología Ajax Systems. Cotice hoy.",
     "canonical": ""
   },
   "content": {
@@ -13,13 +13,16 @@
       "heading": "Seguridad Privada Profesional en Santiago y la Región Metropolitana",
       "subheading": "Protegemos su empresa, condominio o evento con 8+ años de experiencia, 500+ guardias certificados OS-10 y centro de monitoreo propio 24/7.",
       "image": "/images/service-homepage.webp",
-      "headline": "Protegemos lo que más le importa",
-      "subheadline": "Seguridad privada profesional con 8+ años de experiencia, 500+ guardias certificados OS-10 y centro de monitoreo propio en 14 comunas de la Región Metropolitana."
+      "headline": "Seguridad Privada Profesional en Santiago",
+      "subheadline": "Protegemos su empresa, condominio o evento con guardias certificados OS-10 y centro de monitoreo propio 24/7.",
+      "phone": "+56 9 3000 0010",
+      "background_image": "/images/hero-home.webp",
+      "badge_image": "/images/badge-os10.webp"
     },
     "nosotros": {
       "badge": "Grupo GuardMan Chile",
-      "title": "GuardMan Chile - Seguridad privada profesional en Santiago",
-      "paragraph": "En GuardMan Chile, llevamos más de 8 años protegiendo empresas, condominios, eventos y residencias en la Región Metropolitana. Contamos con un equipo de 500+ guardias certificados OS-10, un centro de monitoreo propio con supervisión 24/7 y presencia en 14 comunas, incluyendo Los Andes y San Felipe. Nuestra experiencia nos permite ofrecer soluciones de seguridad a medida, combinando tecnología avanzada con el factor humano que marca la diferencia.\n\nSomos instaladores oficiales de Ajax Systems en Chile y desarrollamos GuardPod V1, nuestra unidad autónoma de vigilancia 24/7, fruto de 15 meses de desarrollo propio. Además, contamos con academia propia para la certificación OS-10, lo que asegura que todo nuestro personal esté capacitado con los más altos estándares exigidos por Carabineros de Chile. No tercerizamos servicios: cada guardia es parte de nuestro equipo y responde a nuestros protocolos.\n\nNuestro enfoque es preventivo y proactivo. Realizamos supervisión nocturna preventiva para detectar conductas sospechosas antes de que ocurran incidentes, y garantizamos tiempos de respuesta inmediata certificados. Si busca una empresa de seguridad privada confiable, con respaldo real y cobertura regional, contáctenos para una cotización sin compromiso.",
+      "title": "Más de 8 años protegiendo lo que más le importa",
+      "paragraph": "En GuardMan Chile contamos con más de 8 años de experiencia en seguridad privada, respaldados por un equipo de 500+ guardias con certificación OS-10 vigente. Nuestro centro de monitoreo propio opera las 24 horas del día, los 7 días de la semana, garantizando una respuesta inmediata ante cualquier eventualidad.\n\nAtendemos a más de 200 clientes en 14 comunas de la Región Metropolitana, además de Los Andes y San Felipe. Somos instaladores oficiales de Ajax Systems en Chile, lo que nos permite integrar tecnología de punta con el factor humano que marca la diferencia.\n\nNuestra academia OS-10 propia asegura que cada guardia reciba formación continua y cumpla con los más altos estándares exigidos por Carabineros de Chile. Así, ofrecemos un servicio confiable, profesional y adaptado a las necesidades de cada cliente.",
       "image": "/images/nosotros_seccion.webp",
       "image_badge": "Conoce GuardMan",
       "features": [
