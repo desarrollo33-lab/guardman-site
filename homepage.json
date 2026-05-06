@@ -4,16 +4,15 @@
   "version": 1,
   "last_modified": "2026-04-23T16:31:42",
   "seo": {
-    "title": "Seguridad Privada en Santiago | GuardMan Chile",
-    "description": "GuardMan Chile - Empresa lider en servicios de seguridad privada. Guardias certificados OS-10, CCTV, control de accesos y monitoreo 24/7 en toda la Region Metropolitana."
+    "title": "GuardMan Chile | Seguridad Privada Profesional en Santiago",
+    "description": "Empresa de seguridad privada con 8+ años, 500+ guardias certificados OS-10 y centro de monitoreo propio. Protegemos empresas, condominios y eventos en 14 comunas de RM. Cotice ahora.",
+    "canonical": ""
   },
   "content": {
     "hero": {
-      "headline": "Seguridad Privada en Santiago, Chile",
-      "subheadline": "Protegemos lo que mas te importa papá",
-      "background_image": "/images/hero-home.webp",
-      "phone": "+56930000010",
-      "badge_image": "/images/escudo-os10.webp"
+      "heading": "Seguridad Privada Profesional en Santiago y la Región Metropolitana",
+      "subheading": "Protegemos su empresa, condominio o evento con 8+ años de experiencia, 500+ guardias certificados OS-10 y centro de monitoreo propio 24/7.",
+      "image": "/images/service-homepage.webp"
     },
     "nosotros": {
       "badge": "Grupo GuardMan Chile",
@@ -136,6 +135,90 @@
       "cta2_text": "Conoce nuestra trayectoria",
       "cta2_link": "/nosotros",
       "badge_image": "/images/escudo-os10.webp"
+    },
+    "intro": {
+      "heading": "¿Por qué elegir GuardMan Chile?",
+      "paragraphs": [
+        "En GuardMan Chile, entendemos que la seguridad de su propiedad y de las personas que la habitan o trabajan en ella es una prioridad. Por eso, ofrecemos servicios de seguridad privada integrales, respaldados por 8+ años de experiencia en el rubro y un equipo de más de 500 guardias con certificación OS-10 vigente. Nuestro centro de monitoreo propio, con redundancia y supervisión 24/7, nos permite garantizar una respuesta inmediata y efectiva ante cualquier eventualidad.",
+        "Nos diferenciamos por nuestra cobertura en 14 comunas de la Región Metropolitana, además de Los Andes y San Felipe, lo que nos otorga una escala única para atender a más de 200 clientes satisfechos. Contamos con instaladores oficiales de Ajax Systems, tecnología de punta como nuestra Unidad Autónoma de Vigilancia GuardPod V1 (desarrollada internamente durante 15 meses), y una academia propia para la certificación OS-10 de nuestro personal. Todo ello, sumado a una supervisión nocturna preventiva que monitorea conductas sospechosas de manera proactiva.",
+        "Nuestro compromiso es ofrecerle tranquilidad. Cada guardia pasa por rigurosos procesos de verificación de antecedentes y recibe capacitación continua en protocolos certificados por Carabineros de Chile. Además, contamos con seguro de responsabilidad civil obligatorio. No solo protegemos sus bienes, protegemos lo que más le importa."
+      ]
+    },
+    "features": {
+      "heading": "Nuestros servicios de seguridad privada",
+      "items": [
+        "Guardias de seguridad con certificación OS-10 vigente, capacitados en nuestra academia propia.",
+        "Centro de monitoreo propio 24/7 con redundancia y supervisión constante, no tercerizado.",
+        "Instalación de sistemas de alarma y sensores inteligentes Ajax Systems, como instaladores oficiales en Chile.",
+        "Unidad Autónoma de Vigilancia GuardPod V1, desarrollada internamente para vigilancia continua 24/7.",
+        "Respuesta inmediata certificada con tiempos de reacción garantizados ante emergencias.",
+        "Supervisión nocturna preventiva: monitoreo proactivo de conductas sospechosas en horario crítico."
+      ]
+    },
+    "issues": {
+      "heading": "Problemas comunes que resolvemos",
+      "items": [
+        "Robos y hurtos en condominios, empresas y eventos, que afectan la tranquilidad de las personas.",
+        "Falta de personal de seguridad confiable y certificado, con antecedentes verificados.",
+        "Sistemas de seguridad obsoletos o mal configurados que no disuaden la delincuencia.",
+        "Cobertura limitada en comunas periféricas o zonas rurales, dejando propiedades desprotegidas."
+      ]
+    },
+    "stats": {
+      "heading": "Cifras que respaldan nuestra experiencia",
+      "items": [
+        {
+          "label": "Años de experiencia",
+          "value": "8+"
+        },
+        {
+          "label": "Guardias certificados OS-10",
+          "value": "500+"
+        },
+        {
+          "label": "Clientes satisfechos",
+          "value": "200+"
+        },
+        {
+          "label": "Comunas cubiertas en RM",
+          "value": "14"
+        },
+        {
+          "label": "Calificación promedio",
+          "value": "4.8"
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Preguntas frecuentes sobre seguridad privada",
+      "items": [
+        {
+          "question": "¿Qué es la certificación OS-10 y por qué es importante?",
+          "answer": "La certificación OS-10 es un requisito legal en Chile para todo el personal de seguridad privada. Es otorgada por la Autoridad Administrativa Laboral y acredita que el guardia ha completado un curso de formación en materias como defensa personal, primeros auxilios, legislación y uso de elementos de seguridad. En GuardMan Chile, todos nuestros guardias cuentan con certificación OS-10 vigente, y además tenemos una academia propia para impartir esta capacitación, lo que garantiza un estándar de calidad superior."
+        },
+        {
+          "question": "¿Cómo funciona su centro de monitoreo propio?",
+          "answer": "Nuestro centro de monitoreo propio opera las 24 horas del día, los 7 días de la semana, con personal capacitado y sistemas redundantes para asegurar continuidad. Recibimos señales de alarmas, sensores y cámaras en tiempo real, y ante cualquier evento, activamos protocolos de respuesta inmediata. A diferencia de empresas que tercerizan este servicio, nosotros controlamos todo el proceso, lo que nos permite ofrecer tiempos de reacción garantizados y una supervisión más efectiva."
+        },
+        {
+          "question": "¿En qué comunas prestan servicios?",
+          "answer": "Tenemos presencia en 14 comunas de la Región Metropolitana, incluyendo Providencia, Las Condes, Vitacura, Santiago Centro, Ñuñoa, La Reina, Lo Barnechea, Maipú, Puente Alto, San Bernardo, entre otras. Además, extendemos nuestra cobertura a las comunas de Los Andes y San Felipe en la región de Valparaíso. Esto nos permite atender tanto a clientes urbanos como a aquellos en zonas más alejadas."
+        },
+        {
+          "question": "¿Qué es el GuardPod V1 y cómo puede ayudar a mi propiedad?",
+          "answer": "El GuardPod V1 es una Unidad Autónoma de Vigilancia desarrollada internamente por GuardMan Chile durante 15 meses. Se trata de un sistema de vigilancia móvil que opera 24/7, equipado con cámaras de alta definición, sensores de movimiento, iluminación y comunicación bidireccional. Es ideal para terrenos extensos, obras en construcción, estacionamientos o eventos temporales, ya que no requiere infraestructura fija y puede desplazarse según las necesidades. Su diseño robusto y autónomo disuade la delincuencia y proporciona monitoreo continuo sin depender de guardias presenciales en todo momento."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Solicite una cotización sin compromiso",
+      "subheading": "Proteja su empresa, condominio o evento con la seguridad privada que Chile necesita. Contáctenos hoy y reciba una propuesta personalizada.",
+      "button": "Cotice ahora",
+      "image": "homepage-cta.jpg"
+    },
+    "meta": {
+      "title": "GuardMan Chile | Seguridad Privada Profesional en Santiago",
+      "description": "Empresa de seguridad privada con 8+ años, 500+ guardias certificados OS-10 y centro de monitoreo propio. Protegemos empresas, condominios y eventos en 14 comunas de RM. Cotice ahora."
     }
   },
   "meta": {
